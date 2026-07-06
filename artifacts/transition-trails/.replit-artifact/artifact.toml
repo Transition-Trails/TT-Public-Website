@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Transition Trails"
+version = "1.0.0"
+id = "artifacts/transition-trails"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21247
+
+[services.development]
+run = "pnpm --filter @workspace/transition-trails run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/transition-trails", "run", "build" ]
+publicDir = "artifacts/transition-trails/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21247"
+BASE_PATH = "/"
