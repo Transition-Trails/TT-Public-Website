@@ -41,7 +41,7 @@ export default function ExplorersTrail() {
                 <li className="flex gap-3"><Check className="w-5 h-5 text-[#7FAFC6] shrink-0" /> Community forums</li>
               </ul>
               <div className="mt-auto w-full">
-                <CTAButton href={LINKS.programWaitlist} variant="dark" external className="w-full !bg-[#7FAFC6] hover:!bg-[#6a9eb5]">
+                <CTAButton href={LINKS.waitlist} variant="dark" className="w-full !bg-[#7FAFC6] hover:!bg-[#6a9eb5]">
                   Join the Waitlist
                 </CTAButton>
               </div>
@@ -61,7 +61,7 @@ export default function ExplorersTrail() {
                 <li className="flex gap-3"><Check className="w-5 h-5 text-[#F5A623] shrink-0" /> Priority event registration</li>
               </ul>
               <div className="mt-auto w-full">
-                <CTAButton href={LINKS.programWaitlist} variant="amber" external className="w-full">
+                <CTAButton href={LINKS.waitlist} variant="amber" className="w-full">
                   Join the Waitlist
                 </CTAButton>
               </div>
@@ -77,7 +77,7 @@ export default function ExplorersTrail() {
                 <li className="flex gap-3"><Check className="w-5 h-5 text-[#7FAFC6] shrink-0" /> Resume review</li>
               </ul>
               <div className="mt-auto w-full">
-                <CTAButton href={LINKS.programWaitlist} variant="dark" external className="w-full !bg-[#7FAFC6] hover:!bg-[#6a9eb5]">
+                <CTAButton href={LINKS.waitlist} variant="dark" className="w-full !bg-[#7FAFC6] hover:!bg-[#6a9eb5]">
                   Join the Waitlist
                 </CTAButton>
               </div>

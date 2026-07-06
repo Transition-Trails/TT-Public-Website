@@ -100,7 +100,7 @@ export default function TrailOfMastery() {
 
             <div className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] mb-6 text-center">or 4 × $549 payment plan</div>
 
-            <CTAButton href={LINKS.programWaitlist} variant="dark" external className="w-full !bg-[#2F6F7E] hover:!bg-[#1a3a47]" size="lg">
+            <CTAButton href={LINKS.waitlist} variant="dark" className="w-full !bg-[#2F6F7E] hover:!bg-[#1a3a47]" size="lg">
               Join the Waitlist
             </CTAButton>
           </div>
@@ -251,7 +251,7 @@ export default function TrailOfMastery() {
       <section className="bg-[#2F6F7E] py-16 px-5 text-center text-white">
         <div className="max-w-[800px] mx-auto">
           <h2 className="font-['Poppins'] font-bold text-[36px] mb-6">Advance your career.</h2>
-          <CTAButton href={LINKS.programWaitlist} variant="outline" external size="lg" className="border-white text-white hover:bg-white/10">
+          <CTAButton href={LINKS.waitlist} variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
             Join the Waitlist
           </CTAButton>
         </div>

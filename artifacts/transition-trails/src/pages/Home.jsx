@@ -30,7 +30,7 @@ export default function Home() {
               Transition Trails connects certified Salesforce professionals with real nonprofit client work — so you build the portfolio that actually gets you hired. Five programs. One ecosystem. Built for every stage of the journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <CTAButton href={LINKS.programWaitlist} size="lg" external>
+              <CTAButton href={LINKS.waitlist} size="lg">
                 Join the Waitlist
               </CTAButton>
               <CTAButton href="/programs/digital-compass" variant="outline" size="lg" className="text-white hover:bg-white/10">
@@ -244,7 +244,7 @@ export default function Home() {
                 <li className="flex gap-2 font-semibold text-[#2A2E2C]"><Check className="w-4 h-4 text-[#2F6F7E] shrink-0 mt-0.5" /> Project support (mid-level)</li>
                 <li className="flex gap-2"><Check className="w-4 h-4 text-[#2F6F7E] shrink-0 mt-0.5" /> Penny AI access</li>
               </ul>
-              <CTAButton href={LINKS.npFreeAssessment} external className="w-full">
+              <CTAButton href={LINKS.nonprofitAssessment} className="w-full">
                 Book Free Assessment
               </CTAButton>
             </div>
@@ -265,7 +265,7 @@ export default function Home() {
             <p className="font-['Open_Sans'] text-[16px] text-white m-0 text-center md:text-left max-w-2xl">
               Not sure where to start? Book a free 30-minute Salesforce assessment — no pitch, just clarity.
             </p>
-            <CTAButton href={LINKS.npFreeAssessment} external className="shrink-0 whitespace-nowrap">
+            <CTAButton href={LINKS.nonprofitAssessment} className="shrink-0 whitespace-nowrap">
               Book Free Assessment
             </CTAButton>
           </div>
@@ -386,7 +386,7 @@ export default function Home() {
             </p>
           </div>
           <div className="shrink-0">
-            <CTAButton href={LINKS.programWaitlist} variant="dark" size="lg" external>
+            <CTAButton href={LINKS.waitlist} variant="dark" size="lg">
               Join the Waitlist
             </CTAButton>
           </div>

@@ -1,3 +1,4 @@
+import { Link } from "wouter";
 import { FaLinkedin, FaFacebook } from "react-icons/fa";
 import { CTAButton } from "../components/CTAButton";
 import { PageMeta } from "../components/PageMeta";
@@ -31,10 +32,10 @@ export default function Contact() {
                 <h3 className="font-['Poppins'] font-bold text-[18px] text-[#2F6B3F] mb-2">For Learners</h3>
                 <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D]">Questions about programs, pricing, or enrollment</p>
               </div>
-              <div className="bg-white border border-[#E2E4E1] p-6 rounded-xl">
-                <h3 className="font-['Poppins'] font-bold text-[18px] text-[#2F6F7E] mb-2">For Nonprofits</h3>
-                <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D]">Digital Compass assessment or partnership</p>
-              </div>
+              <Link href="/nonprofit-assessment" className="bg-white border border-[#E2E4E1] p-6 rounded-xl block hover:border-[#2F6F7E] transition-colors">
+                <h3 className="font-['Poppins'] font-bold text-[18px] text-[#2F6F7E] mb-2">For Nonprofits →</h3>
+                <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D]">Book a free Digital Compass assessment</p>
+              </Link>
               <div className="bg-white border border-[#E2E4E1] p-6 rounded-xl">
                 <h3 className="font-['Poppins'] font-bold text-[18px] text-[#F5A623] mb-2">For Partners & Employers</h3>
                 <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D]">Employer sponsorships, corporate partnerships</p>

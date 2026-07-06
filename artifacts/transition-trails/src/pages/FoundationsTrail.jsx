@@ -44,7 +44,7 @@ export default function FoundationsTrail() {
               <div className="font-['Open_Sans'] text-[12px] text-[#2F6B3F]/80">Available based on need</div>
             </div>
 
-            <CTAButton href={LINKS.programWaitlist} variant="dark" external className="w-full !bg-[#2F6B3F] hover:!bg-[#1E4A2A]" size="lg">
+            <CTAButton href={LINKS.waitlist} variant="dark" className="w-full !bg-[#2F6B3F] hover:!bg-[#1E4A2A]" size="lg">
               Join the Waitlist
             </CTAButton>
           </div>
@@ -124,7 +124,7 @@ export default function FoundationsTrail() {
             <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] mb-8">
               Foundations Trail is self-paced but structured over 12 weeks. Enroll today and get immediate access to Week 1.
             </p>
-            <CTAButton href={LINKS.programWaitlist} variant="dark" external className="w-full !bg-[#2F6B3F] hover:!bg-[#1E4A2A]">
+            <CTAButton href={LINKS.waitlist} variant="dark" className="w-full !bg-[#2F6B3F] hover:!bg-[#1E4A2A]">
               Join the Waitlist
             </CTAButton>
           </div>

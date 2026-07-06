@@ -17,13 +17,20 @@
  */
 
 export const LINKS = {
-  // Unified program waitlist — all trail enrollments funnel here
+  // Internal page — use this for ALL program waitlist CTAs site-wide
+  waitlist: "/waitlist",
+
+  // Internal page — use this for ALL nonprofit assessment CTAs site-wide
+  nonprofitAssessment: "/nonprofit-assessment",
+
+  // External fallback references — do NOT use for site CTAs
+  // Use links.waitlist (internal page) for all trail enrollment CTAs
   programWaitlist: "https://form.jotform.com/261684070494058",
 
-  // Digital Compass nonprofit assessment — do NOT replace with programWaitlist
+  // Use links.nonprofitAssessment (internal page) for all assessment CTAs
   npFreeAssessment: "https://form.jotform.com/261683366693066",
 
-  // Angela Landrith calendar — do NOT replace with programWaitlist
+  // Angela Landrith calendar — do NOT replace
   angelaCalendar: "https://calendar.app.google/t1THqhnCWacFyCu2A",
 
   volunteer:

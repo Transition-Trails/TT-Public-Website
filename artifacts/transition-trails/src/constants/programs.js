@@ -16,8 +16,8 @@
  * Transition Trails is prohibited from using them.
  */
 
-// Unified program waitlist URL — all trail enrollments
-const WAITLIST = "https://form.jotform.com/261684070494058";
+// Internal route — all trail enrollments funnel to the on-site waitlist page
+const WAITLIST = "/waitlist";
 
 export const PROGRAMS = [
   {
@@ -30,7 +30,6 @@ export const PROGRAMS = [
     highlight: "No prerequisites",
     cta: "Join the Waitlist",
     ctaHref: WAITLIST,
-    ctaExternal: true,
     ctaAmber: false,
     whoFor: "No prerequisites — curious about Salesforce",
   },
@@ -44,7 +43,6 @@ export const PROGRAMS = [
     highlight: "12 weeks · HCH capstone build",
     cta: "Join the Waitlist",
     ctaHref: WAITLIST,
-    ctaExternal: true,
     ctaAmber: false,
     whoFor: "Platform Foundations cert (or in progress)",
   },
@@ -58,7 +56,6 @@ export const PROGRAMS = [
     highlight: "Real nonprofit client · 12 weeks",
     cta: "Join the Waitlist",
     ctaHref: WAITLIST,
-    ctaExternal: true,
     ctaAmber: true,
     mostPopular: true,
     whoFor: "Salesforce certified, not yet employed",
@@ -73,7 +70,6 @@ export const PROGRAMS = [
     highlight: "Real DC clients · RESOLVE pipeline",
     cta: "Join the Waitlist",
     ctaHref: WAITLIST,
-    ctaExternal: true,
     ctaAmber: false,
     whoFor: "Certified AND currently employed in Salesforce",
   },
@@ -86,9 +82,8 @@ export const PROGRAMS = [
     priceNote: "Entry · Mid $349 · Full $749",
     highlight: "Membership · Project support",
     cta: "Free Assessment",
-    // Digital Compass keeps its own assessment URL — do NOT change to programWaitlist
-    ctaHref: "https://form.jotform.com/261683366693066",
-    ctaExternal: true,
+    // Internal page — do NOT use the external JotForm URL for site CTAs
+    ctaHref: "/nonprofit-assessment",
     ctaAmber: false,
     whoFor: "Nonprofit organizations",
   },

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { LINKS } from "../constants/links";
 
 export function Nav() {
   const [location] = useLocation();
@@ -48,6 +47,10 @@ export function Nav() {
                 <Link href="/programs/trail-of-mastery" className="block px-4 py-3 text-sm font-['Open_Sans'] text-[#4A4F4D] hover:bg-[#FAFAF7] hover:text-[#2F6B3F]">Trail of Mastery</Link>
                 <div className="h-px bg-[#E2E4E1] my-1" />
                 <Link href="/programs/digital-compass" className="block px-4 py-3 text-sm font-['Open_Sans'] text-[#4A4F4D] hover:bg-[#FAFAF7] hover:text-[#2F6B3F]">Digital Compass (Nonprofits)</Link>
+                <div className="h-px bg-[#E2E4E1] my-1" />
+                <Link href="/nonprofit-assessment" className="block px-4 py-3 text-sm font-['Open_Sans'] font-semibold text-[#2F6F7E] hover:bg-[#FAFAF7]">Free Nonprofit Assessment →</Link>
+                <div className="h-px bg-[#E2E4E1] my-1" />
+                <Link href="/waitlist" className="block px-4 py-3 text-sm font-['Open_Sans'] font-semibold text-[#D4890A] hover:bg-[#FAFAF7]">Join the Waitlist →</Link>
               </div>
             </div>
 
@@ -57,14 +60,12 @@ export function Nav() {
             <Link href="/donate" className={`font-['Open_Sans'] font-semibold text-[15px] transition-colors ${isActive("/donate") ? "text-white" : "text-white/70 hover:text-white"}`}>Donate</Link>
           </div>
 
-          <a 
-            href={LINKS.programWaitlist}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/waitlist"
             className="bg-[#F5A623] hover:bg-[#D4890A] text-[#2A2E2C] font-['Open_Sans'] font-semibold text-[15px] h-[44px] px-6 rounded-lg flex items-center justify-center transition-colors"
           >
             Join the Waitlist
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Toggle */}
@@ -90,7 +91,7 @@ export function Nav() {
               Programs
               <ChevronDown className={`w-5 h-5 transition-transform ${isProgramsOpen ? "rotate-180" : ""}`} />
             </button>
-            <div className={`flex flex-col gap-3 pl-4 overflow-hidden transition-all duration-300 ${isProgramsOpen ? "mt-4 max-h-[400px]" : "max-h-0"}`}>
+            <div className={`flex flex-col gap-3 pl-4 overflow-hidden transition-all duration-300 ${isProgramsOpen ? "mt-4 max-h-[480px]" : "max-h-0"}`}>
               <Link href="/programs" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-base py-1">All Programs</Link>
               <Link href="/programs/explorers-trail" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-base py-1">Explorer's Trail</Link>
               <Link href="/programs/foundations-trail" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-base py-1">Foundations Trail</Link>
@@ -99,6 +100,9 @@ export function Nav() {
               </Link>
               <Link href="/programs/trail-of-mastery" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-base py-1">Trail of Mastery</Link>
               <Link href="/programs/digital-compass" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-base py-1">Digital Compass</Link>
+              <div className="h-px bg-white/10 my-1" />
+              <Link href="/nonprofit-assessment" onClick={closeMenu} className="text-[#7FCEE0] font-['Open_Sans'] font-semibold text-base py-1">Free Nonprofit Assessment →</Link>
+              <Link href="/waitlist" onClick={closeMenu} className="text-[#F5A623] font-['Open_Sans'] font-semibold text-base py-1">Join the Waitlist →</Link>
             </div>
           </div>
 
@@ -107,15 +111,13 @@ export function Nav() {
           <Link href="/blog" onClick={closeMenu} className="font-['Open_Sans'] font-semibold text-[18px] text-white/90 py-2 border-b border-white/10">Blog</Link>
           <Link href="/donate" onClick={closeMenu} className="font-['Open_Sans'] font-semibold text-[18px] text-white/90 py-2 border-b border-white/10">Donate</Link>
 
-          <a 
-            href={LINKS.programWaitlist}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/waitlist"
             onClick={closeMenu}
             className="mt-4 bg-[#F5A623] text-[#2A2E2C] font-['Open_Sans'] font-semibold text-[16px] h-[56px] rounded-lg flex items-center justify-center w-full"
           >
             Join the Waitlist
-          </a>
+          </Link>
         </div>
       </div>
     </nav>

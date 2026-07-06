@@ -29,7 +29,7 @@ export default function DigitalCompass() {
           </div>
           
           <div className="w-full md:w-auto shrink-0">
-            <CTAButton href={LINKS.npFreeAssessment} variant="amber" size="lg" external>
+            <CTAButton href={LINKS.nonprofitAssessment} variant="amber" size="lg">
               Book Free Assessment
             </CTAButton>
           </div>
