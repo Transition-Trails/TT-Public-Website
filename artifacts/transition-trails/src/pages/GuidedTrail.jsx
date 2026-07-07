@@ -209,6 +209,20 @@ export default function GuidedTrail() {
               On graduation, you earn annual access to Explorer's Trail — the community that keeps you connected.
             </p>
           </div>
+
+          <div className="mt-6 rounded-xl p-7" style={{ background: "rgba(245,166,35,0.08)", borderTop: "3px solid rgba(245,166,35,0.50)", border: "1px solid rgba(245,166,35,0.25)" }}>
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div>
+                <div className="text-[22px] mb-2">🏔️</div>
+                <p className="font-['Open_Sans'] text-[14px] text-white/70 leading-[1.65]">
+                  Guided Trail graduates are eligible to participate in <span className="font-semibold text-white">The TT Expedition Series</span> — alongside Trail of Mastery learners, solving real nonprofit Salesforce challenges over a single weekend. Launching Fall 2027.
+                </p>
+              </div>
+              <a href="/expedition" className="font-['Open_Sans'] font-semibold text-[13px] text-[#F5A623] hover:underline whitespace-nowrap shrink-0">
+                Learn more →
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 

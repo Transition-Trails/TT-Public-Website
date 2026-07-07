@@ -53,6 +53,9 @@ export const LINKS = {
   partnersRecruiters: "/partners/recruiters",
   partnersEmployers: "/partners/employers",
 
+  // Expedition
+  expedition: "/expedition",
+
   // TODO: Replace with JotForm scholarship application URL — new form to be created in future session
   scholarshipApplication: "#",
 };

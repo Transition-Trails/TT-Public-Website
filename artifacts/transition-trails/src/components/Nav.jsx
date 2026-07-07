@@ -78,6 +78,10 @@ export function Nav() {
               </div>
             </div>
 
+            <Link href="/expedition" className={`font-['Open_Sans'] font-semibold text-[15px] flex items-center gap-1.5 transition-colors ${isActive("/expedition") ? "text-white" : "text-white/70 hover:text-white"}`}>
+              <span style={{ color: "rgba(245,166,35,0.85)", fontSize: "7px", lineHeight: 1 }}>●</span>
+              The Expedition
+            </Link>
             <Link href="/blog" className={`font-['Open_Sans'] font-semibold text-[15px] transition-colors ${isActive("/blog") ? "text-white" : "text-white/70 hover:text-white"}`}>Blog</Link>
             <Link href="/donate" className={`font-['Open_Sans'] font-semibold text-[15px] transition-colors ${isActive("/donate") ? "text-white" : "text-white/70 hover:text-white"}`}>Donate</Link>
           </div>
@@ -148,6 +152,10 @@ export function Nav() {
             </div>
           </div>
 
+          <Link href="/expedition" onClick={closeMenu} className="font-['Open_Sans'] font-semibold text-[18px] text-white/90 py-2 border-b border-white/10 flex items-center gap-2">
+            <span style={{ color: "rgba(245,166,35,0.85)", fontSize: "8px" }}>●</span>
+            The Expedition
+          </Link>
           <Link href="/blog" onClick={closeMenu} className="font-['Open_Sans'] font-semibold text-[18px] text-white/90 py-2 border-b border-white/10">Blog</Link>
           <Link href="/donate" onClick={closeMenu} className="font-['Open_Sans'] font-semibold text-[18px] text-white/90 py-2 border-b border-white/10">Donate</Link>
 

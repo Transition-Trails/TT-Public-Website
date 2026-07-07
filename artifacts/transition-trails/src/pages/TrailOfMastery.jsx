@@ -663,6 +663,17 @@ export default function TrailOfMastery() {
               </div>
             ))}
           </div>
+          <div className="mt-8 rounded-xl px-7 py-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4" style={{ background: "rgba(245,166,35,0.08)", borderTop: "3px solid rgba(245,166,35,0.50)", border: "1px solid rgba(245,166,35,0.25)" }}>
+            <div className="flex gap-4 items-start">
+              <span className="text-[24px] shrink-0">🏔️</span>
+              <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65]">
+                Trail of Mastery learners are eligible to participate in <span className="font-semibold text-[#2A2E2C]">The TT Expedition Series</span> — a twice-yearly 72-hour virtual build event where teams solve real Salesforce challenges for real nonprofits. Launching Fall 2027.
+              </p>
+            </div>
+            <a href="/expedition" className="font-['Open_Sans'] font-semibold text-[13px] text-[#D4890A] hover:underline whitespace-nowrap shrink-0">
+              Learn more →
+            </a>
+          </div>
         </div>
       </section>
 

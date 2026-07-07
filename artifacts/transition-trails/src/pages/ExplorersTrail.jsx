@@ -413,6 +413,26 @@ export default function ExplorersTrail() {
             </p>
           </div>
 
+          <div className="mt-6 rounded-xl overflow-hidden" style={{ background: "rgba(245,166,35,0.06)", border: "1px solid rgba(245,166,35,0.25)", borderTop: "3px solid #F5A623" }}>
+            <div className="p-7">
+              <div className="text-[24px] mb-3">🏔️</div>
+              <div className="flex flex-col sm:flex-row sm:items-start sm:gap-6">
+                <div className="flex-1">
+                  <h4 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-2">The TT Expedition Series — Observer Access</h4>
+                  <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65] mb-3">
+                    Explorer's Trail Annual members get observer access to every TT Expedition — watch professional Salesforce teams build real solutions for real nonprofits over a single weekend. Coming Fall 2027.
+                  </p>
+                  <a href="/expedition" className="font-['Open_Sans'] font-semibold text-[13px] text-[#D4890A] hover:underline">
+                    Learn about The Expedition →
+                  </a>
+                </div>
+                <span className="inline-block font-['Open_Sans'] font-semibold text-[9px] uppercase tracking-[1.5px] px-3 py-1.5 rounded shrink-0 mt-2 sm:mt-1" style={{ background: "rgba(245,166,35,0.15)", color: "#D4890A" }}>
+                  ANNUAL MEMBERS · COMING 2027
+                </span>
+              </div>
+            </div>
+          </div>
+
           <div className="mt-6 bg-[#E0F0F7] border-l-4 border-[#7FAFC6] rounded-xl p-7">
             <h4 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-2">Graduate Recruiter Network</h4>
             <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65] mb-3">
