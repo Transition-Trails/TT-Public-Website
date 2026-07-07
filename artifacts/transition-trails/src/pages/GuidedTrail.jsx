@@ -47,6 +47,7 @@ export default function GuidedTrail() {
       <section className="bg-white py-20 px-5">
         <div className="max-w-[1024px] mx-auto">
           <div className="text-center mb-12">
+            <span className="inline-block bg-[#2F6B3F] text-white font-['Open_Sans'] font-bold text-[11px] tracking-[1.5px] uppercase px-3 py-1 rounded mb-5">BUILT FOR CAREER BUILDERS</span>
             <h2 className="font-['Poppins'] font-bold text-[36px] text-[#2A2E2C]">Prerequisites</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[800px] mx-auto">
@@ -67,6 +68,9 @@ export default function GuidedTrail() {
               </div>
             </div>
           </div>
+          <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] text-center mt-8 max-w-[600px] mx-auto">
+            If you are pivoting from another career and have recently earned your certification, this is exactly the right next step.
+          </p>
         </div>
       </section>
 

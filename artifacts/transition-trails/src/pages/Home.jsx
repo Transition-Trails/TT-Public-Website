@@ -27,7 +27,7 @@ export default function Home() {
               You passed the exam. Now get the experience.
             </h1>
             <p className="font-['Open_Sans'] text-[18px] md:text-[20px] text-white/90 leading-[1.6] mb-10">
-              Transition Trails connects certified Salesforce professionals with real nonprofit client work — so you build the portfolio that actually gets you hired. Five programs. One ecosystem. Built for every stage of the journey.
+              Whether you are just discovering Salesforce, turning your certification into your first role, or pivoting from a completely different career — Transition Trails gives you real project experience, real clients, and a professional delivery methodology that makes you stand out. Five programs. One ecosystem. Built for every stage of the journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <CTAButton href={LINKS.waitlist} size="lg">
@@ -87,34 +87,47 @@ export default function Home() {
         <div className="max-w-[1280px] mx-auto flex flex-col xl:flex-row gap-16 items-center xl:items-start">
           <div className="flex-1 max-w-[560px]">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">THE EXPERIENCE GAP</div>
-            <h2 className="font-['Poppins'] font-bold text-[36px] md:text-[40px] text-[#2A2E2C] tracking-[-0.8px] leading-tight mb-6">
+            <h2 className="font-['Poppins'] font-bold text-[36px] md:text-[40px] text-[#2A2E2C] tracking-[-0.8px] leading-tight mb-4">
               Certified. Qualified. Still waiting for a chance.
             </h2>
+            <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] mb-6">
+              <span className="font-semibold text-[#7FAFC6]">Career Starters</span>
+              <span className="mx-2 text-[#C8CAC8]">·</span>
+              <span className="font-semibold text-[#2F6B3F]">Career Builders</span>
+              <span className="mx-2 text-[#C8CAC8]">·</span>
+              <span className="font-semibold text-[#1E4A2A]">Career Pivoters</span>
+            </p>
             <p className="font-['Open_Sans'] text-[17px] text-[#4A4F4D] leading-[1.65]">
-              You can pass every certification. Build a perfect resume. Study every module. And still not get hired — because employers want proof you can do the work. Not proof you studied it. The gap isn't knowledge. It's experience. That's what Transition Trails exists to close.
+              Maybe you are just starting — trying to figure out if Salesforce is the right path. Maybe you passed the exam and cannot get your first role because every job posting asks for experience you have not had a chance to build yet. Maybe you are like Hugh — 16 years in a completely different career, starting over, wondering if it is too late.
+            </p>
+            <p className="font-['Open_Sans'] text-[17px] text-[#4A4F4D] leading-[1.65] mt-4">
+              It is not too late. The gap is not your fault. And Transition Trails exists to close it — for all three of you.
             </p>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-6 w-full xl:w-auto overflow-x-auto pb-4 sm:pb-0">
-            <div className="bg-white border border-[#E2E4E1] rounded-xl w-[260px] sm:w-[176px] h-auto sm:h-[360px] p-6 shrink-0 flex flex-col">
-              <Clipboard className="w-8 h-8 text-[#2F6B3F] mb-4" />
-              <div className="font-['Poppins'] font-bold text-[18px] text-[#2F6B3F] mb-3">Entry-level</div>
+            <div className="bg-white border border-[#E2E4E1] rounded-xl w-[260px] sm:w-[220px] h-auto p-6 shrink-0 flex flex-col">
+              <div className="text-[28px] mb-3">🧭</div>
+              <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-[#7FAFC6] mb-2">CAREER STARTERS</div>
+              <div className="font-['Poppins'] font-bold text-[17px] text-[#2A2E2C] mb-3">Where do I even begin?</div>
               <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.6]">
-                Salesforce jobs requiring 1–2 years experience — but who gives the first chance?
+                You know Salesforce is a valuable skill. You are not sure where to start, whether you are cut out for it, or how long it will take. Explorer's Trail and Foundations Trail are built for exactly this moment.
               </p>
             </div>
-            <div className="bg-white border border-[#E2E4E1] rounded-xl w-[260px] sm:w-[176px] h-auto sm:h-[360px] p-6 shrink-0 flex flex-col">
-              <RefreshCw className="w-8 h-8 text-[#2F6B3F] mb-4" />
-              <div className="font-['Poppins'] font-bold text-[18px] text-[#2F6B3F] mb-3">The paradox</div>
+            <div className="bg-white border border-[#E2E4E1] rounded-xl w-[260px] sm:w-[220px] h-auto p-6 shrink-0 flex flex-col">
+              <div className="text-[28px] mb-3">🎯</div>
+              <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-[#2F6B3F] mb-2">CAREER BUILDERS</div>
+              <div className="font-['Poppins'] font-bold text-[17px] text-[#2A2E2C] mb-3">I have the cert. I cannot get hired.</div>
               <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.6]">
-                You need experience to get hired. You need a job to get experience. We break the cycle.
+                The paradox of the Salesforce ecosystem: every entry-level role requires experience you cannot get without a job. The Guided Trail breaks that cycle with real client work and a real portfolio.
               </p>
             </div>
-            <div className="bg-white border border-[#E2E4E1] rounded-xl w-[260px] sm:w-[176px] h-auto sm:h-[360px] p-6 shrink-0 flex flex-col">
-              <Target className="w-8 h-8 text-[#2F6B3F] mb-4" />
-              <div className="font-['Poppins'] font-bold text-[18px] text-[#2F6B3F] mb-3">One project</div>
+            <div className="bg-white border border-[#E2E4E1] rounded-xl w-[260px] sm:w-[220px] h-auto p-6 shrink-0 flex flex-col">
+              <div className="text-[28px] mb-3">🔄</div>
+              <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-[#1E4A2A] mb-2">CAREER PIVOTERS</div>
+              <div className="font-['Poppins'] font-bold text-[17px] text-[#2A2E2C] mb-3">I am starting over. On purpose.</div>
               <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.6]">
-                That's the unlock. One real client implementation changes everything.
+                Hugh drove trucks for 16 years. He is now a Solutions Architect at Salesforce. The pivot is possible — and Transition Trails was built specifically to make it happen for people who are willing to do the work.
               </p>
             </div>
           </div>

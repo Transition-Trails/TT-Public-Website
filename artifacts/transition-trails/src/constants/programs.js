@@ -31,7 +31,7 @@ export const PROGRAMS = [
     cta: "Join the Waitlist",
     ctaHref: WAITLIST,
     ctaAmber: false,
-    whoFor: "No prerequisites — curious about Salesforce",
+    whoFor: "Career Starters — curious about Salesforce with no prerequisites",
   },
   {
     slug: "foundations-trail",
@@ -44,7 +44,7 @@ export const PROGRAMS = [
     cta: "Join the Waitlist",
     ctaHref: WAITLIST,
     ctaAmber: false,
-    whoFor: "Platform Foundations cert (or in progress)",
+    whoFor: "Career Starters — working toward or recently earned Platform Foundations cert",
   },
   {
     slug: "guided-trail",
@@ -58,7 +58,7 @@ export const PROGRAMS = [
     ctaHref: WAITLIST,
     ctaAmber: true,
     mostPopular: true,
-    whoFor: "Salesforce certified, not yet employed",
+    whoFor: "Career Builders — Salesforce certified, ready to turn it into a career",
   },
   {
     slug: "trail-of-mastery",
@@ -71,7 +71,7 @@ export const PROGRAMS = [
     cta: "Join the Waitlist",
     ctaHref: WAITLIST,
     ctaAmber: false,
-    whoFor: "Certified AND currently employed in Salesforce",
+    whoFor: "Career Builders — certified and employed, advancing to the next level",
   },
   {
     slug: "digital-compass",
@@ -85,6 +85,6 @@ export const PROGRAMS = [
     // Internal page — do NOT use the external JotForm URL for site CTAs
     ctaHref: "/nonprofit-assessment",
     ctaAmber: false,
-    whoFor: "Nonprofit organizations",
+    whoFor: "Nonprofit organizations — mission-driven teams that need Salesforce support",
   },
 ];

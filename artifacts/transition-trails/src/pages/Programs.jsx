@@ -32,6 +32,36 @@ export default function Programs() {
         </div>
       </section>
 
+      <section className="bg-white border-b border-[#E2E4E1] py-6 px-5 md:px-20">
+        <div className="max-w-[1024px] mx-auto">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-10 sm:gap-16">
+            <div className="flex flex-col items-center text-center gap-1.5">
+              <div className="flex items-center gap-2">
+                <span className="text-[18px]">🧭</span>
+                <span className="font-['Open_Sans'] font-semibold text-[14px] text-[#7FAFC6]">Career Starters</span>
+              </div>
+              <span className="font-['Open_Sans'] text-[12px] text-[#4A4F4D]">New to Salesforce or working toward your first cert</span>
+            </div>
+            <div className="hidden sm:block w-px h-8 bg-[#E2E4E1]" />
+            <div className="flex flex-col items-center text-center gap-1.5">
+              <div className="flex items-center gap-2">
+                <span className="text-[18px]">🎯</span>
+                <span className="font-['Open_Sans'] font-semibold text-[14px] text-[#2F6B3F]">Career Builders</span>
+              </div>
+              <span className="font-['Open_Sans'] text-[12px] text-[#4A4F4D]">Certified and ready to turn it into a career</span>
+            </div>
+            <div className="hidden sm:block w-px h-8 bg-[#E2E4E1]" />
+            <div className="flex flex-col items-center text-center gap-1.5">
+              <div className="flex items-center gap-2">
+                <span className="text-[18px]">🔄</span>
+                <span className="font-['Open_Sans'] font-semibold text-[14px] text-[#1E4A2A]">Career Pivoters</span>
+              </div>
+              <span className="font-['Open_Sans'] text-[12px] text-[#4A4F4D]">Changing careers — every trail is open to you</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-[#FAFAF7] py-16 px-5 border-b border-[#E2E4E1]">
         <div className="max-w-[800px] mx-auto bg-white rounded-2xl border border-[#E2E4E1] shadow-sm p-8 md:p-12">
           <h2 className="font-['Poppins'] font-semibold text-[24px] text-[#2A2E2C] text-center mb-8">Which program is right for you?</h2>

@@ -20,10 +20,10 @@ export default function ExplorersTrail() {
             Explorer's Trail.
           </h1>
           <p className="font-['Poppins'] font-medium text-[24px] text-white/90 mb-6">
-            Your Salesforce journey starts here.
+            The first step for Career Starters — and a home for curious minds at every level.
           </p>
           <p className="font-['Open_Sans'] text-[18px] md:text-[20px] text-white/80 leading-[1.6] max-w-2xl mx-auto mb-10">
-            A subscription membership — not a cohort. Learn at your own pace, explore every skill level, and stay connected to the community.
+            Not sure if Salesforce is for you? Starting from zero? Pivoting from a completely different career and need to build your foundation before committing to a full program? Explorer's Trail is a subscription membership — not a cohort — so you learn at your own pace, explore every skill level, and find out what you are capable of without pressure.
           </p>
         </div>
       </section>
