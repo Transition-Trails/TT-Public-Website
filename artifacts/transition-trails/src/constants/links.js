@@ -40,8 +40,9 @@ export const LINKS = {
   linkedin: "https://www.linkedin.com/company/transition-trails",
   facebook: "https://www.facebook.com/TransitionTrailsAcademy",
 
-  // TODO: Replace with live payment processor URL when connected (Stripe/PayPal/Salesforce Elevate)
-  donateProcessor: "#",
+  // Current: Give Lively — transitioning to Stripe/Commerce Cloud in 2027
+  // Update this URL when Stripe is live
+  donateProcessor: "https://secure.givelively.org/donate/transition-trails",
 
   // Live JotForm contact form
   contactForm: "https://form.jotform.com/261877821935066",
