@@ -1,3 +1,4 @@
+import { Link } from "wouter";
 import { FounderCard } from "../components/FounderCard";
 import { FOUNDERS } from "../constants/founders";
 import { CTAButton } from "../components/CTAButton";
