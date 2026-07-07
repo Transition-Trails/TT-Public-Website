@@ -28,7 +28,7 @@ export default function Donate() {
               <h3 className="font-['Poppins'] font-bold text-[20px] text-[#2A2E2C] mb-3">Fund a Scholarship Seat</h3>
               <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.6]">
                 $497 covers one Foundations Trail scholarship.<br/>
-                $747 covers one Guided Trail scholarship.
+                $1,547 covers one Guided Trail scholarship.
               </p>
             </div>
 

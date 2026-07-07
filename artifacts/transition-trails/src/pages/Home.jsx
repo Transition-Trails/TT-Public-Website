@@ -57,7 +57,7 @@ export default function Home() {
               </div>
               <div className="h-px bg-white/10 w-full" />
               <div>
-                <div className="font-['Poppins'] font-bold text-[28px] text-[#F5A623] leading-none mb-1">$747</div>
+                <div className="font-['Poppins'] font-bold text-[28px] text-[#F5A623] leading-none mb-1">$1,547</div>
                 <div className="font-['Open_Sans'] text-[15px] text-white/85">Cost of one scholarship seat</div>
               </div>
             </div>
