@@ -1,139 +1,531 @@
-import { Check, Database, Users, DollarSign } from "lucide-react";
-import { CTAButton } from "../components/CTAButton";
-import { LINKS } from "../constants/links";
+import { Link } from "wouter";
 import { PageMeta } from "../components/PageMeta";
+import { LINKS } from "../constants/links";
+
+const UNIVERSAL_BENEFITS = [
+  {
+    icon: "📅",
+    title: "Weekly Office Hours",
+    badge: "ALL TIERS · WEEKLY",
+    body: "Live weekly group sessions with the TT team — bring your Salesforce questions, challenges, and roadblocks. Entry members join the shared weekly group session. Mid members get the weekly group session plus one private monthly session with their team. Full Partner members have their own dedicated weekly private session.",
+  },
+  {
+    icon: "📚",
+    title: "TrailKit Content Library",
+    badge: "ALL TIERS",
+    body: "Access to TT's library of Salesforce how-to content — guides, walkthroughs, and resources built specifically for nonprofits navigating the Salesforce ecosystem.",
+  },
+  {
+    icon: "💬",
+    title: "Slack Community",
+    badge: "ALL TIERS",
+    body: "A members-only Slack workspace connecting Digital Compass nonprofits with the TT team, TT coaches, and each other. Ask questions between sessions, share what you're learning, and tap into the collective expertise of the community.",
+  },
+  {
+    icon: "🤖",
+    title: "AI-Assisted Support Tools",
+    badge: "ALL TIERS · EXPANDING",
+    body: "Access to TT's AI-assisted support tools to help your team navigate Salesforce questions and processes between sessions. More to be announced.",
+  },
+];
+
+const WHO_CARDS = [
+  {
+    icon: "🌱",
+    title: "Just getting started",
+    body: "Your nonprofit has Salesforce — or is about to get it through the Power of Us grant — but you do not have dedicated Salesforce staff. Digital Compass gives you expert guidance and support without the cost of a full-time admin or a consulting retainer.",
+  },
+  {
+    icon: "⚙️",
+    title: "Growing and stuck",
+    body: "You have been using Salesforce for a while but it is not doing what you need it to do. Data is inconsistent. Processes are manual. Reports do not reflect reality. Digital Compass helps you diagnose what is wrong and fix it systematically.",
+  },
+  {
+    icon: "🚀",
+    title: "Ready to scale",
+    body: "Your Salesforce org is working but you need a strategic partner to help you grow it alongside your mission. Digital Compass Full Partner gives you ongoing project delivery, priority access to TT's learner teams, and a monthly strategic review.",
+  },
+];
+
+const PROJECT_COLS = [
+  {
+    icon: "📋",
+    title: "What counts as a project request",
+    body: "Configuration-based Salesforce work: adding fields and updating page layouts, building flows to automate a process, setting up reports and dashboards, configuring permission sets, building a web-to-case intake form, data cleanup and deduplication, and more. Always declarative — no Apex code, no custom development.",
+  },
+  {
+    icon: "👥",
+    title: "Who does the work",
+    body: "Project requests are delivered by TT coaches and, where appropriate, matched to Guided Trail or Trail of Mastery learner teams under coach supervision. Full Partner members receive priority matching to learner teams — giving them both faster delivery and the benefit of supporting TT's learner pipeline.",
+  },
+  {
+    icon: "⚡",
+    title: "Scope and timeline",
+    body: "TT reviews every project request for scope before beginning. Requests that fall within the membership model are delivered within an agreed timeline. Requests that are too large in scope for the membership model will be flagged — TT will advise on options including a dedicated project engagement.",
+  },
+];
+
+const ASSESSMENT_COVERS = [
+  "Your organization's current Salesforce setup",
+  "What is working and what is not",
+  "Your team's Salesforce capacity",
+  "What you actually need — not what we want to sell you",
+  "Which Digital Compass tier fits your situation",
+];
+
+const TRAIL_OS_COVERS = [
+  "Org health review — configuration, data quality, security",
+  "Current-state process mapping — how your team uses Salesforce today",
+  "Gap analysis — what is missing or not working",
+  "Prioritized action plan — documented steps your team can follow",
+  "Delivered as a written report with a follow-up session to walk through it",
+];
+
+function Check({ color = "#2F6F7E" }) {
+  return <span className="shrink-0 font-bold" style={{ color }}> ✓</span>;
+}
+function Cross() {
+  return <span className="shrink-0 font-bold text-[#8C8882]">×</span>;
+}
 
 export default function DigitalCompass() {
   return (
     <div className="flex flex-col min-h-screen">
       <PageMeta
-        title="Digital Compass | Nonprofit Salesforce Support | Transition Trails"
-        description="Affordable Salesforce guidance for nonprofits. Weekly Office Hours, TrailKit resources, and coached project support from certified professionals. Starting at $149/month."
+        title="Digital Compass | Nonprofit Salesforce Support Membership | Transition Trails"
+        description="Ongoing Salesforce support for nonprofits. Weekly office hours, project delivery, and expert guidance from $149/month. Led by Kim Barnes, Co-Founder of Transition Trails. Free assessment available."
         path="/programs/digital-compass"
       />
-      <section className="bg-gradient-to-br from-[#1E4F5C] to-[#2F6F7E] pt-24 pb-20 px-5 md:px-10">
-        <div className="max-w-[1024px] mx-auto flex flex-col md:flex-row gap-12 items-center">
-          <div className="flex-1">
-            <div className="inline-block bg-[#F5A623]/20 border border-[#F5A623]/30 text-[#F5A623] font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-6 backdrop-blur-sm">
-              FOR NONPROFITS
-            </div>
-            <h1 className="font-['Poppins'] font-bold text-[48px] md:text-[56px] text-white tracking-[-1.5px] leading-[1.15] mb-6">
-              Digital Compass.
-            </h1>
-            <p className="font-['Poppins'] font-medium text-[24px] text-white/90 mb-6">
-              Salesforce support built for nonprofits — starting at $149/mo.
-            </p>
-            <p className="font-['Open_Sans'] text-[18px] text-white/80 leading-[1.6]">
-              Kim Barnes leads our nonprofit services team. We pair Digital Compass member organizations with Guided Trail learners — your real projects become their portfolio work.
-            </p>
-          </div>
-          
-          <div className="w-full md:w-auto shrink-0">
-            <CTAButton href={LINKS.nonprofitAssessment} variant="amber" size="lg">
-              Book Free Assessment
-            </CTAButton>
-          </div>
-        </div>
-      </section>
 
-      <section className="bg-[#FAFAF7] py-20 px-5 border-b border-[#E2E4E1]">
+      {/* SECTION 2: Hero */}
+      <section
+        className="pt-24 pb-20 px-5 md:px-10"
+        style={{ background: "linear-gradient(135deg, #1E4F5C 0%, #2F6F7E 55%, #1E4A2A 100%)" }}
+      >
         <div className="max-w-[1280px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white border border-[#E2E4E1] rounded-2xl p-8 flex flex-col">
-              <h4 className="font-['Poppins'] font-bold text-[24px] text-[#2A2E2C] mb-2">Entry</h4>
-              <div className="font-['Poppins'] font-bold text-[40px] text-[#2A2E2C] mb-6">$149<span className="text-xl text-[#4A4F4D] font-normal">/mo</span></div>
-              <ul className="flex flex-col gap-4 font-['Open_Sans'] text-[15px] text-[#4A4F4D] mb-8 flex-grow">
-                <li className="flex gap-3"><Check className="w-5 h-5 text-[#2F6F7E] shrink-0" /> Weekly Office Hours</li>
-                <li className="flex gap-3"><Check className="w-5 h-5 text-[#2F6F7E] shrink-0" /> TrailKit Library access</li>
-                <li className="flex gap-3"><Check className="w-5 h-5 text-[#2F6F7E] shrink-0" /> Trail OS Installation</li>
-                <li className="flex gap-3"><Check className="w-5 h-5 text-[#2F6F7E] shrink-0" /> AI-assisted support tools</li>
-              </ul>
-              <div className="text-[13px] text-[#4A4F4D] text-center bg-[#FAFAF7] py-2 rounded-lg">Annual: $1,490/yr (2 mos free)</div>
-            </div>
-            
-            <div className="bg-white border-2 border-[#F5A623] rounded-2xl p-8 relative flex flex-col transform md:-translate-y-4 shadow-md">
-              <div className="absolute top-0 right-1/2 transform translate-x-1/2 -translate-y-1/2 bg-[#F5A623] text-[#2A2E2C] font-['Poppins'] font-bold text-[11px] px-4 py-1.5 rounded-sm uppercase tracking-wide">
-                MOST POPULAR
+          <div className="font-['Open_Sans'] text-[12px] text-white/50 mb-8 flex items-center gap-2">
+            <Link href="/" className="hover:text-white/80 transition-colors">Home</Link>
+            <span>/</span>
+            <span className="text-white/80">Digital Compass</span>
+          </div>
+
+          <div className="flex flex-col xl:flex-row gap-14 xl:gap-20 items-start">
+            {/* Left copy */}
+            <div className="flex-1 max-w-[700px]">
+              <div
+                className="inline-block font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-7"
+                style={{ color: "#F5A623", background: "rgba(245,166,35,0.15)", border: "1px solid rgba(245,166,35,0.4)" }}
+              >
+                NONPROFIT MEMBERSHIP  ·  ONGOING SALESFORCE SUPPORT  ·  NO LONG-TERM CONTRACT
               </div>
-              <h4 className="font-['Poppins'] font-bold text-[24px] text-[#2A2E2C] mb-2">Mid</h4>
-              <div className="font-['Poppins'] font-bold text-[40px] text-[#2A2E2C] mb-6">$349<span className="text-xl text-[#4A4F4D] font-normal">/mo</span></div>
-              <ul className="flex flex-col gap-4 font-['Open_Sans'] text-[15px] text-[#4A4F4D] mb-8 flex-grow">
-                <li className="flex gap-3"><Check className="w-5 h-5 text-[#2F6F7E] shrink-0" /> All Entry features</li>
-                <li className="flex gap-3 font-semibold text-[#2A2E2C]"><Check className="w-5 h-5 text-[#2F6F7E] shrink-0" /> Project support (mid-level complexity)</li>
-              </ul>
-              <div className="text-[13px] text-[#4A4F4D] text-center bg-[#FAFAF7] py-2 rounded-lg">Annual: $3,490/yr (2 mos free)</div>
+
+              <h1
+                className="font-['Poppins'] font-bold text-[52px] text-white leading-[1.1] mb-5"
+                style={{ letterSpacing: "-1.5px" }}
+              >
+                Digital Compass.
+              </h1>
+
+              <p className="font-['Poppins'] font-semibold text-[20px] leading-[1.5] mb-7" style={{ color: "rgba(255,255,255,0.85)" }}>
+                Ongoing Salesforce support for nonprofits — without the consulting retainer price tag.
+              </p>
+
+              <div className="font-['Open_Sans'] text-[17px] leading-[1.65] max-w-[720px] space-y-4 mb-10" style={{ color: "rgba(255,255,255,0.72)" }}>
+                <p>Traditional Salesforce consulting runs $75–$150 per hour, or $1,000–$3,000 per month in retainer fees. Digital Compass delivers consistent, expert-level Salesforce support for a fraction of that cost — with weekly access, real project delivery, and a team that understands how nonprofits actually work.</p>
+                <p>Digital Compass is led by Kim Barnes, Co-Founder and COO of Transition Trails.</p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/nonprofit-assessment"
+                  className="h-[52px] px-7 rounded-[8px] font-['Poppins'] font-semibold text-[15px] inline-flex items-center justify-center transition-colors"
+                  style={{ background: "#F5A623", color: "#2A2E2C" }}
+                >
+                  Book a Free Assessment →
+                </Link>
+                <a
+                  href="#tiers"
+                  className="h-[52px] px-7 rounded-[8px] border border-white text-white hover:bg-white/10 font-['Poppins'] font-semibold text-[15px] inline-flex items-center justify-center transition-colors"
+                >
+                  See membership tiers ↓
+                </a>
+              </div>
             </div>
-            
-            <div className="bg-white border border-[#E2E4E1] rounded-2xl p-8 flex flex-col">
-              <h4 className="font-['Poppins'] font-bold text-[24px] text-[#2A2E2C] mb-2">Full</h4>
-              <div className="font-['Poppins'] font-bold text-[40px] text-[#2A2E2C] mb-6">$749<span className="text-xl text-[#4A4F4D] font-normal">/mo</span></div>
-              <ul className="flex flex-col gap-4 font-['Open_Sans'] text-[15px] text-[#4A4F4D] mb-8 flex-grow">
-                <li className="flex gap-3"><Check className="w-5 h-5 text-[#2F6F7E] shrink-0" /> All Mid features</li>
-                <li className="flex gap-3 font-semibold text-[#2A2E2C]"><Check className="w-5 h-5 text-[#2F6F7E] shrink-0" /> Full project support</li>
-                <li className="flex gap-3"><Check className="w-5 h-5 text-[#2F6F7E] shrink-0" /> Dedicated advisor</li>
-              </ul>
-              <div className="text-[13px] text-[#4A4F4D] text-center bg-[#FAFAF7] py-2 rounded-lg">Annual: $7,490/yr (2 mos free)</div>
+
+            {/* Right stat boxes */}
+            <div className="flex flex-row xl:flex-col gap-4 w-full xl:w-[240px]">
+              {[
+                { value: "$149/mo", label: "Entry membership — less than 2hrs of consulting", color: "#2F6F7E" },
+                { value: "3 tiers", label: "Entry · Mid · Full Partner", color: "#2F6B3F" },
+                { value: "Free", label: "Initial Salesforce assessment", color: "#F5A623" },
+              ].map(s => (
+                <div
+                  key={s.label}
+                  className="flex-1 xl:flex-none rounded-xl p-6"
+                  style={{ background: "rgba(255,255,255,0.08)", borderTop: `4px solid ${s.color}`, border: "1px solid rgba(255,255,255,0.15)" }}
+                >
+                  <div className="font-['Poppins'] font-bold text-[24px] text-white mb-1">{s.value}</div>
+                  <div className="font-['Open_Sans'] text-[12px]" style={{ color: "rgba(255,255,255,0.60)" }}>{s.label}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-white py-20 px-5">
-        <div className="max-w-[1024px] mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="font-['Poppins'] font-bold text-[36px] text-[#2A2E2C] mb-4">What Every Member Gets</h2>
+      {/* SECTION 3: Who It Serves */}
+      <section className="bg-white py-20 px-5 md:px-10">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="mb-12">
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6F7E] mb-4">WHO IT SERVES</div>
+            <h2 className="font-['Poppins'] font-bold text-[34px] text-[#2A2E2C] mb-4">Built for nonprofits that run on Salesforce — or want to.</h2>
+            <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] max-w-[760px] leading-[1.65]">
+              Digital Compass is for nonprofit organizations at any stage of their Salesforce journey — from just getting started to managing a complex multi-program org.
+            </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="border border-[#E2E4E1] rounded-xl p-8">
-              <h3 className="font-['Poppins'] font-bold text-[20px] text-[#2A2E2C] mb-3">Weekly Office Hours</h3>
-              <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.6]">
-                Drop in and ask questions to our Salesforce experts. Perfect for quick "how do I do this?" moments that don't need a full project scope.
-              </p>
-            </div>
-            <div className="border border-[#E2E4E1] rounded-xl p-8">
-              <h3 className="font-['Poppins'] font-bold text-[20px] text-[#2A2E2C] mb-3">TrailKit Library</h3>
-              <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.6]">
-                Access to our curated repository of nonprofit-specific templates, flows, and reports that you can install directly into your org.
-              </p>
-            </div>
-            <div className="border border-[#E2E4E1] rounded-xl p-8">
-              <h3 className="font-['Poppins'] font-bold text-[20px] text-[#2A2E2C] mb-3">Trail OS Installation</h3>
-              <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.6]">
-                Our optimized baseline configuration for nonprofits, ensuring your org follows best practices from day one.
-              </p>
-            </div>
-            <div className="border border-[#E2E4E1] rounded-xl p-8">
-              <h3 className="font-['Poppins'] font-bold text-[20px] text-[#2A2E2C] mb-3">Project Support</h3>
-              <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.6]">
-                Mid and Full tier members get matched with Guided Trail learners for real implementation work — overseen by our architects.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section className="bg-[#FAFAF7] py-20 px-5 border-t border-[#E2E4E1]">
-        <div className="max-w-[1024px] mx-auto text-center">
-          <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6F7E] mb-4">OUR PHILOSOPHY</div>
-          <h2 className="font-['Poppins'] font-bold text-[36px] text-[#2A2E2C] mb-12">The Nine Pillars Framework</h2>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-[800px] mx-auto">
-            {["Strategic Planning", "Board Governance", "Human Resources", "Volunteer Management", "Collaboration & Partnerships", "Fundraising", "Legal & Financial Management"].map((pillar, i) => (
-              <div key={i} className="bg-white border border-[#E2E4E1] p-6 rounded-xl flex items-center justify-center font-['Open_Sans'] font-semibold text-[14px] text-[#4A4F4D] h-[100px]">
-                {pillar}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
+            {WHO_CARDS.map(c => (
+              <div
+                key={c.title}
+                className="bg-white border border-[#E2E4E1] rounded-xl p-7"
+                style={{ borderLeft: "4px solid #2F6F7E" }}
+              >
+                <div className="text-[28px] mb-3">{c.icon}</div>
+                <h3 className="font-['Open_Sans'] font-bold text-[15px] text-[#2F6F7E] mb-2">{c.title}</h3>
+                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">{c.body}</p>
               </div>
             ))}
-            <div className="bg-[#2F6B3F] text-white border border-[#2F6B3F] p-6 rounded-xl flex items-center justify-center font-['Poppins'] font-bold text-[18px] h-[100px] shadow-lg transform scale-105 z-10">
-              Technology
+          </div>
+
+          {/* ROI callout */}
+          <div
+            className="rounded-xl p-7 flex flex-col md:flex-row items-center gap-8"
+            style={{ background: "#E0F0F3", borderTop: "3px solid #2F6F7E" }}
+          >
+            <div className="shrink-0 text-center md:text-left">
+              <div className="font-['Poppins'] font-bold text-[28px] text-[#2F6F7E]">1/7th the cost</div>
+              <div className="font-['Open_Sans'] text-[14px] text-[#4A4F4D]">of the cheapest traditional Salesforce consulting retainer</div>
             </div>
-            <div className="bg-white border border-[#E2E4E1] p-6 rounded-xl flex items-center justify-center font-['Open_Sans'] font-semibold text-[14px] text-[#4A4F4D] h-[100px]">
-              Marketing
+            <div className="hidden md:block w-px h-12 bg-[#2F6F7E]/20 shrink-0" />
+            <p className="font-['Open_Sans'] italic text-[14px] text-[#4A4F4D] leading-[1.65] max-w-[480px]">
+              Full Partner at $749/mo vs. a freelance Salesforce consultant at $45–$150/hr × 10hrs/month = $450–$1,500. Digital Compass delivers more consistent value at lower or comparable cost.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 4: Universal Benefits */}
+      <section className="bg-[#FAFAF7] py-20 px-5 md:px-10">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="mb-12">
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6F7E] mb-4">UNIVERSAL BENEFITS</div>
+            <h2 className="font-['Poppins'] font-bold text-[34px] text-[#2A2E2C]">Every Digital Compass member gets this.</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
+            {UNIVERSAL_BENEFITS.map(b => (
+              <div
+                key={b.title}
+                className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden"
+                style={{ borderTop: "4px solid #2F6F7E" }}
+              >
+                <div className="p-7">
+                  <div className="text-[28px] mb-3">{b.icon}</div>
+                  <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">{b.title}</h3>
+                  <span className="inline-block font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase text-[#2F6F7E] bg-[#E0F0F3] px-2 py-0.5 rounded mb-3">{b.badge}</span>
+                  <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">{b.body}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 5: Membership Tiers */}
+      <section id="tiers" className="bg-white py-20 px-5 md:px-10">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="mb-12">
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6F7E] mb-4">MEMBERSHIP TIERS</div>
+            <h2 className="font-['Poppins'] font-bold text-[34px] text-[#2A2E2C] mb-4">Choose the level of support your organization needs.</h2>
+            <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] max-w-[760px] leading-[1.65]">
+              All tiers are month-to-month — no long-term contract required. Annual plans save two months. Start with Entry and upgrade as your needs grow.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-6">
+            {/* Tier 1 — Entry Community */}
+            <div className="bg-white border-[1.5px] border-[#E2E4E1] rounded-2xl overflow-hidden flex flex-col" style={{ borderTop: "6px solid #2F6F7E" }}>
+              <div className="p-8 flex flex-col flex-1">
+                <span className="font-['Open_Sans'] font-bold text-[11px] tracking-[1px] uppercase text-[#2F6F7E] mb-3">ENTRY</span>
+                <h3 className="font-['Poppins'] font-bold text-[24px] text-[#2A2E2C] mb-4">Community</h3>
+                <div className="flex items-baseline gap-1 mb-1">
+                  <span className="font-['Poppins'] font-bold text-[36px] text-[#2F6F7E]">$149</span>
+                  <span className="font-['Open_Sans'] text-[14px] text-[#4A4F4D]">/month</span>
+                </div>
+                <p className="font-['Open_Sans'] text-[12px] text-[#8C8882] mb-6">$1,490/yr — 2 months free</p>
+
+                <div className="h-px bg-[#E2E4E1] mb-5" />
+
+                <ul className="space-y-2.5 mb-5 flex-1">
+                  {[
+                    "Weekly group Office Hours session (shared)",
+                    "TrailKit content library",
+                    "Members-only Slack community",
+                    "AI-assisted support tools",
+                    "Month-to-month — cancel anytime",
+                  ].map(item => (
+                    <li key={item} className="flex gap-2 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
+                      <Check />{item}
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="h-px bg-[#E2E4E1] mb-4" />
+
+                <ul className="space-y-2 mb-6">
+                  {[
+                    "Private office hours session",
+                    "Project requests",
+                    "Trail OS Lite Assessment",
+                    "Priority learner team matching",
+                    "Monthly strategic review call",
+                  ].map(item => (
+                    <li key={item} className="flex gap-2 font-['Open_Sans'] text-[12px] text-[#8C8882]">
+                      <Cross />{item}
+                    </li>
+                  ))}
+                </ul>
+
+                <Link
+                  href="/nonprofit-assessment"
+                  className="w-full h-[44px] rounded-[8px] font-['Open_Sans'] font-semibold text-[14px] flex items-center justify-center transition-colors"
+                  style={{ background: "#E0F0F3", color: "#2F6F7E" }}
+                >
+                  Get Started →
+                </Link>
+                <p className="font-['Open_Sans'] text-[12px] text-center text-[#4A4F4D] mt-3">
+                  <Link href="/nonprofit-assessment" className="text-[#2F6F7E] hover:underline">Start with a free assessment →</Link>
+                </p>
+              </div>
+            </div>
+
+            {/* Tier 2 — Mid Guided */}
+            <div className="bg-white border-[2px] border-[#2F6B3F] rounded-2xl overflow-hidden flex flex-col" style={{ borderTop: "6px solid #2F6B3F" }}>
+              <div className="p-8 flex flex-col flex-1">
+                <span className="font-['Open_Sans'] font-bold text-[11px] tracking-[1px] uppercase text-[#2F6B3F] mb-3">MID · GUIDED</span>
+                <h3 className="font-['Poppins'] font-bold text-[24px] text-[#2A2E2C] mb-4">Guided</h3>
+                <div className="flex items-baseline gap-1 mb-1">
+                  <span className="font-['Poppins'] font-bold text-[36px] text-[#2F6B3F]">$349</span>
+                  <span className="font-['Open_Sans'] text-[14px] text-[#4A4F4D]">/month</span>
+                </div>
+                <p className="font-['Open_Sans'] text-[12px] text-[#8C8882] mb-6">$3,490/yr — 2 months free</p>
+
+                <div className="h-px bg-[#E2E4E1] mb-5" />
+
+                <ul className="space-y-2.5 mb-5 flex-1">
+                  {[
+                    "Everything in Community",
+                    "Weekly group Office Hours session (shared)",
+                    "1 monthly private Office Hours session — your team only",
+                    "1 active project request per quarter",
+                    "Trail OS Lite Assessment — org review + documented action plan",
+                  ].map(item => (
+                    <li key={item} className="flex gap-2 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
+                      <Check color="#2F6B3F" />{item}
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="h-px bg-[#E2E4E1] mb-4" />
+
+                <ul className="space-y-2 mb-6">
+                  {[
+                    "Unlimited project requests",
+                    "Priority learner team matching",
+                    "Monthly strategic review call",
+                    "Trail OS installation (2027)",
+                  ].map(item => (
+                    <li key={item} className="flex gap-2 font-['Open_Sans'] text-[12px] text-[#8C8882]">
+                      <Cross />{item}
+                    </li>
+                  ))}
+                </ul>
+
+                <Link
+                  href="/nonprofit-assessment"
+                  className="w-full h-[44px] rounded-[8px] font-['Open_Sans'] font-semibold text-[14px] flex items-center justify-center text-white transition-colors hover:opacity-90"
+                  style={{ background: "#2F6B3F" }}
+                >
+                  Get Started →
+                </Link>
+              </div>
+            </div>
+
+            {/* Tier 3 — Full Partner */}
+            <div className="bg-white border-[1.5px] border-[#E2E4E1] rounded-2xl overflow-hidden flex flex-col" style={{ borderTop: "6px solid #1E4A2A" }}>
+              <div className="p-8 flex flex-col flex-1">
+                <span className="font-['Open_Sans'] font-bold text-[11px] tracking-[1px] uppercase text-[#1E4A2A] mb-3">FULL PARTNER</span>
+                <h3 className="font-['Poppins'] font-bold text-[24px] text-[#2A2E2C] mb-4">Full Partner</h3>
+                <div className="flex items-baseline gap-1 mb-1">
+                  <span className="font-['Poppins'] font-bold text-[36px] text-[#1E4A2A]">$749</span>
+                  <span className="font-['Open_Sans'] text-[14px] text-[#4A4F4D]">/month</span>
+                </div>
+                <p className="font-['Open_Sans'] text-[12px] text-[#8C8882] mb-6">$7,490/yr — 2 months free</p>
+
+                <div className="h-px bg-[#E2E4E1] mb-5" />
+
+                <ul className="space-y-2.5 mb-5 flex-1">
+                  {[
+                    "Everything in Guided",
+                    "Weekly private Office Hours session — your team only (no group session needed)",
+                    "Unlimited project requests*",
+                    "Priority matching to Guided Trail and Trail of Mastery learner teams",
+                    "Monthly strategic review call with TT leadership",
+                  ].map(item => (
+                    <li key={item} className="flex gap-2 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
+                      <Check color="#1E4A2A" />{item}
+                    </li>
+                  ))}
+                  <li className="flex gap-2 font-['Open_Sans'] text-[13px] text-[#8C8882] italic">
+                    <span className="shrink-0">🔜</span>Trail OS installation — Full org implementation using TT's Trail OS framework · Coming 2027
+                  </li>
+                </ul>
+
+                <p className="font-['Open_Sans'] italic text-[11px] text-[#8C8882] mb-4">*TT reserves the right to scope-gate requests that require a dedicated project engagement beyond the membership model.</p>
+
+                <Link
+                  href="/nonprofit-assessment"
+                  className="w-full h-[44px] rounded-[8px] font-['Open_Sans'] font-semibold text-[14px] flex items-center justify-center text-white transition-colors hover:opacity-90"
+                  style={{ background: "#1E4A2A" }}
+                >
+                  Get Started →
+                </Link>
+              </div>
             </div>
           </div>
-          <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] max-w-2xl mx-auto mt-12">
-            Technology is just one pillar of a healthy nonprofit — but it supports all the others. We fortify your tech pillar so you can focus on the mission.
-          </p>
+
+          {/* Annual savings callout */}
+          <div className="rounded-xl p-6 text-center" style={{ background: "#E6F3EA", borderTop: "3px solid #2F6B3F" }}>
+            <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] mb-4">All tiers available annually at 10× the monthly price — equivalent to 2 months free.</p>
+            <div className="flex flex-wrap justify-center gap-3">
+              {["Entry: $1,490/yr", "Guided: $3,490/yr", "Full Partner: $7,490/yr"].map(p => (
+                <span
+                  key={p}
+                  className="bg-white border border-[#E2E4E1] font-['Open_Sans'] font-semibold text-[13px] text-[#2A2E2C] rounded-lg px-4 py-1.5"
+                >
+                  {p}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 6: Trail OS Lite Assessment */}
+      <section className="py-20 px-5 md:px-10" style={{ background: "#E0F0F3" }}>
+        <div className="max-w-[1100px] mx-auto">
+          <div className="mb-10">
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6F7E] mb-4">INCLUDED WITH MID + FULL PARTNER</div>
+            <h2 className="font-['Poppins'] font-bold text-[34px] mb-3" style={{ color: "#1E4F5C" }}>Trail OS Lite Assessment</h2>
+            <p className="font-['Poppins'] font-semibold text-[18px] text-[#2F6F7E]">A review of your Salesforce org with a clear, actionable plan.</p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+            <div className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] leading-[1.65] space-y-4">
+              <p>Many nonprofits have Salesforce — but are not sure if it is set up correctly, why it feels hard to use, or what they should focus on next.</p>
+              <p>The Trail OS Lite Assessment is a structured review of your organization's Salesforce org conducted by the TT team. We look at your current configuration, your data model, your automation, and how your team is actually using the platform.</p>
+              <p>At the end, you receive a documented action plan — specific, prioritized steps your own admin or volunteer can follow to improve your org. No implementation required from TT. Just clarity on where you stand and what to do next.</p>
+            </div>
+
+            <div className="bg-white rounded-xl p-8" style={{ borderLeft: "5px solid #2F6F7E" }}>
+              <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2F6F7E] mb-5">The assessment covers:</h3>
+              <ul className="space-y-3">
+                {TRAIL_OS_COVERS.map(item => (
+                  <li key={item} className="flex gap-2 font-['Open_Sans'] text-[13px] text-[#4A4F4D]">
+                    <Check />{item}
+                  </li>
+                ))}
+              </ul>
+              <p className="font-['Open_Sans'] italic text-[12px] text-[#4A4F4D] mt-5 pt-4 border-t border-[#E2E4E1]">
+                Included with Mid — Guided and Full Partner tiers. Conducted within the first 60 days of membership.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 7: Project Requests */}
+      <section className="bg-white py-20 px-5 md:px-10">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="mb-12">
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6F7E] mb-4">PROJECT DELIVERY</div>
+            <h2 className="font-['Poppins'] font-bold text-[34px] text-[#2A2E2C] mb-4">Real Salesforce work. Delivered by real people.</h2>
+            <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] max-w-[760px] leading-[1.65]">
+              Mid and Full Partner members can submit project requests — specific Salesforce configuration work that TT delivers within the membership. All work is declarative configuration — no code, ever.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {PROJECT_COLS.map(c => (
+              <div key={c.title} className="p-7 rounded-xl border border-[#E2E4E1]">
+                <div className="text-[28px] mb-4">{c.icon}</div>
+                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-3">{c.title}</h3>
+                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">{c.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 8: Free Assessment */}
+      <section className="bg-[#2A2E2C] py-20 px-5 md:px-10">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="text-center mb-12">
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase mb-4" style={{ color: "rgba(255,255,255,0.45)" }}>START HERE</div>
+            <h2 className="font-['Poppins'] font-bold text-[34px] text-white mb-5">Not sure where to start? That is what the free assessment is for.</h2>
+            <p className="font-['Open_Sans'] text-[16px] max-w-[760px] mx-auto leading-[1.65]" style={{ color: "rgba(255,255,255,0.72)" }}>
+              Before you choose a membership tier, we want to understand your organization and your Salesforce situation. The free 30-minute assessment with the TT team gives you clarity on where your org stands, what would actually help, and which Digital Compass tier — if any — is the right fit.
+              <br /><br />
+              No pitch. No obligation. Just a real conversation with someone who understands nonprofit Salesforce.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+            <div className="bg-white rounded-xl p-8">
+              <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-5">In 30 minutes we cover:</h3>
+              <ul className="space-y-3">
+                {ASSESSMENT_COVERS.map(item => (
+                  <li key={item} className="flex gap-2 font-['Open_Sans'] text-[13px] text-[#4A4F4D]">
+                    <Check />{item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="flex flex-col justify-center px-4">
+              <h3 className="font-['Poppins'] font-semibold text-[16px] mb-3" style={{ color: "rgba(255,255,255,0.85)" }}>Led by Kim Barnes</h3>
+              <p className="font-['Open_Sans'] text-[14px] leading-[1.65] mb-5" style={{ color: "rgba(255,255,255,0.60)" }}>
+                Kim Barnes is the Co-Founder and COO of Transition Trails and the lead of Digital Compass. She works directly with nonprofit organizations to understand their technology needs and build practical Salesforce solutions that serve their mission.
+              </p>
+              <a
+                href="mailto:kim@transitiontrails.org"
+                className="font-['Open_Sans'] font-semibold text-[14px] text-[#F5A623] hover:underline"
+              >
+                kim@transitiontrails.org
+              </a>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Link
+              href="/nonprofit-assessment"
+              className="h-[56px] px-10 rounded-[8px] font-['Poppins'] font-bold text-[15px] inline-flex items-center justify-center transition-colors"
+              style={{ background: "#F5A623", color: "#2A2E2C" }}
+            >
+              Book Your Free Assessment →
+            </Link>
+          </div>
         </div>
       </section>
     </div>

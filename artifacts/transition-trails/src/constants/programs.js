@@ -81,12 +81,13 @@ export const PROGRAMS = [
     accent: "#2F6F7E",
     tier: "NONPROFIT MEMBERSHIP",
     price: "$149/mo",
-    priceNote: "Entry · Mid $349 · Full $749",
-    highlight: "Membership · Project support",
-    cta: "Free Assessment",
+    priceNote: "or $349/mo (Guided) · $749/mo (Full Partner) · Annual = 10× monthly (2 months free)",
+    highlight: "Weekly Office Hours · Project Delivery · Trail OS Lite Assessment",
+    cta: "Book Free Assessment",
     // Internal page — do NOT use the external JotForm URL for site CTAs
     ctaHref: "/nonprofit-assessment",
     ctaAmber: false,
-    whoFor: "Nonprofit organizations — mission-driven teams that need Salesforce support",
+    whoFor: "Nonprofit organizations — any stage of Salesforce maturity",
+    description: "Ongoing Salesforce support membership for nonprofit organizations. Weekly office hours, TrailKit library, Slack community, and project delivery — from $149/month. Led by Kim Barnes, Co-Founder and COO.",
   },
 ];
