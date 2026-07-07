@@ -9,7 +9,7 @@ export default function About() {
     <div className="flex flex-col min-h-screen">
       <PageMeta
         title="About Transition Trails | Our Mission & Founding Team | Dallas TX"
-        description="Founded in 2020 by Angela Landrith, Kim Barnes, Hugh Richardson, and Kel Landrith. A 501(c)(3) nonprofit building Salesforce career pathways in Dallas, TX."
+        description="Transition Trails is a 501(c)(3) nonprofit assisting people in transitioning to the digital economy through education, mentoring and training in the Salesforce ecosystem. Founded 2020, Dallas TX. EIN 88-2746412."
         path="/about"
       />
       <section className="bg-[#FAFAF7] py-20 px-5 md:px-10 border-b border-[#E2E4E1]">
@@ -17,6 +17,20 @@ export default function About() {
           <h1 className="font-['Poppins'] font-bold text-[40px] md:text-[48px] text-[#2A2E2C] leading-tight max-w-3xl mx-auto mb-8">
             Built by people who know what it costs to break in.
           </h1>
+        </div>
+      </section>
+
+      <section className="bg-white py-16 px-5 md:px-10">
+        <div className="max-w-[860px] mx-auto">
+          <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-6">OUR MISSION</div>
+          <div className="border-l-[5px] border-[#2F6B3F] bg-[#E6F3EA] px-10 py-8 rounded-r-xl mb-4">
+            <p className="font-['Poppins'] font-semibold text-[20px] text-[#1E4A2A] leading-[1.6] tracking-[-0.2px]">
+              To assist people in transitioning to the digital economy through education, mentoring and training. Our primary focus is within the Salesforce ecosystem, providing a system of online and real world education and experience.
+            </p>
+          </div>
+          <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D]">
+            Registered mission statement · Transition Trails · EIN 88-2746412 · 501(c)(3) effective May 15, 2022
+          </p>
         </div>
       </section>
 

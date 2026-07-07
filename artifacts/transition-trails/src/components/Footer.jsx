@@ -13,6 +13,9 @@ export function Footer() {
           <p className="font-['Open_Sans'] text-sm text-white/70">
             Empowering nonprofits and building digital careers — Together.
           </p>
+          <p className="font-['Open_Sans'] text-[12px] mt-2" style={{ color: "rgba(255,255,255,0.45)" }}>
+            To assist people in transitioning to the digital economy through education, mentoring and training. Our primary focus is within the Salesforce ecosystem, providing a system of online and real world education and experience.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 w-full md:w-auto">
