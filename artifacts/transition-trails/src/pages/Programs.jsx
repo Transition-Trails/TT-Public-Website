@@ -149,6 +149,33 @@ export default function Programs() {
         </div>
       </section>
 
+      {/* Path to Coach */}
+      <section className="bg-white py-20 px-5 md:px-10 border-t border-[#E2E4E1]">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="mb-10 text-center">
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">WHERE THE TRAIL LEADS</div>
+            <h2 className="font-['Poppins'] font-bold text-[28px] text-[#2A2E2C]">The coaching pathway is open to Guided Trail graduates.</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div className="bg-[#E0F0F7] border border-[#7FAFC6]/40 rounded-xl p-6 text-center">
+              <div className="font-['Poppins'] font-bold text-[16px] text-[#2A2E2C] mb-2">Coach's Assistant</div>
+              <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D]">6 months after your first role post-Guided Trail</p>
+            </div>
+            <div className="bg-[#E6F3EA] border border-[#2F6B3F]/40 rounded-xl p-6 text-center">
+              <div className="font-['Poppins'] font-bold text-[16px] text-[#2A2E2C] mb-2">Associate Coach</div>
+              <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D]">2–3 years field experience</p>
+            </div>
+            <div className="bg-[#d4e8d8] border border-[#1E4A2A]/40 rounded-xl p-6 text-center">
+              <div className="font-['Poppins'] font-bold text-[16px] text-[#2A2E2C] mb-2">Advanced TT Coach + Lifetime Membership</div>
+              <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D]">6 completed cohorts</p>
+            </div>
+          </div>
+          <p className="font-['Open_Sans'] italic text-[13px] text-[#4A4F4D] text-center">
+            The coaching pathway is open to Guided Trail graduates and external Salesforce professionals with 2–3 years experience. Two pathways in. One community.
+          </p>
+        </div>
+      </section>
+
       <section className="bg-white py-20 px-5 border-t border-[#E2E4E1]">
         <div className="max-w-[800px] mx-auto bg-gradient-to-br from-[#1E4F5C] to-[#2F6F7E] rounded-2xl p-10 md:p-14 text-center">
           <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#F5A623] mb-4">FOR NONPROFIT ORGANIZATIONS</div>

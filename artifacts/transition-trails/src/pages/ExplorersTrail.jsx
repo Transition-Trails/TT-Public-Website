@@ -235,6 +235,35 @@ export default function ExplorersTrail() {
                 </p>
               </div>
             </div>
+
+            {/* Feature 8 — Annual only */}
+            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
+              <div className="h-1 bg-[#2F6B3F]" />
+              <div className="p-7 flex flex-col flex-1">
+                <div className="text-[28px] mb-3">🤝</div>
+                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">Alumni Mentor Matching</h3>
+                <span className="inline-block bg-[#E6F3EA] text-[#2F6B3F] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">ANNUAL MEMBERS · QUARTERLY MATCH</span>
+                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
+                  Annual members are matched with a TT program graduate — someone who was in your position and is now working in Salesforce. One match per quarter, structured around a topic you choose. Ask the questions you cannot find answers to anywhere else. This is the human connection no content library can replicate.
+                </p>
+              </div>
+            </div>
+
+            {/* Feature 9 — Annual only */}
+            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
+              <div className="h-1 bg-[#2F6B3F]" />
+              <div className="p-7 flex flex-col flex-1">
+                <div className="text-[28px] mb-3">🧭</div>
+                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">RESOLVE Practitioner Series</h3>
+                <span className="inline-block bg-[#E6F3EA] text-[#2F6B3F] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">ANNUAL MEMBERS ONLY</span>
+                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
+                  A structured multi-part workshop series exploring the professional mindset behind great Salesforce delivery: how to think about client problems, how to document decisions, how to lead a discovery conversation. Monthly members can see the series exists. Annual members get full access. This is the first step on the Path to Coach.
+                </p>
+                <p className="font-['Open_Sans'] italic text-[11px] text-[#8C8882] leading-[1.6] mt-4">
+                  RESOLVE is TT's proprietary delivery methodology — taught in every program, applied in every client engagement.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -257,7 +286,17 @@ export default function ExplorersTrail() {
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] mb-5">Cancel or pause anytime</p>
                 <div className="h-px bg-[#E2E4E1] mb-5" />
                 <ul className="space-y-2.5 mb-5 flex-1">
-                  {["Private Slack community", "Monthly Trail Talk (discussion, Q&A, community building)", "Weekly Build Challenges", "Members-only workshops and webinars (free or reduced pricing)", "Current month's Build With Me content", "Async coaching access (message-based, no live sessions)", "Member merchandise discounts"].map(item => (
+                  {[
+                    "Private Slack community",
+                    "Monthly Trail Talk (discussion, Q&A, community building)",
+                    "Weekly Build Challenges (all skill levels)",
+                    "Members-only workshops and webinars (free or reduced TT pricing)",
+                    "Current month's Build With Me skill content",
+                    "Async coaching access",
+                    "Member merchandise discounts",
+                    "Basic progress visibility",
+                    "Program Preview Sessions — intro level",
+                  ].map(item => (
                     <li key={item} className="flex gap-2.5 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
                       <span className="text-[#7FAFC6] shrink-0 font-bold">✓</span>
                       {item}
@@ -266,17 +305,24 @@ export default function ExplorersTrail() {
                 </ul>
                 <div className="h-px bg-[#E2E4E1] mb-4" />
                 <ul className="space-y-2 mb-7">
-                  {["Content archive (past videos)", "Quarterly coaching session"].map(item => (
+                  {[
+                    "Content archive",
+                    "Quarterly coaching session",
+                    "Full Path to Coach roadmap",
+                    "Alumni Mentor Matching",
+                    "Annual limited edition merchandise drop",
+                    "Cohort Priority Placement",
+                    "$397 program credit",
+                    "RESOLVE Practitioner Series",
+                    "Annual Member Spotlight eligibility",
+                  ].map(item => (
                     <li key={item} className="flex gap-2.5 font-['Open_Sans'] text-[12px] text-[#8C8882]">
                       <span className="shrink-0">×</span>
                       {item}
                     </li>
                   ))}
                 </ul>
-                <a
-                  href={LINKS.waitlist}
-                  className="w-full h-[44px] rounded-[8px] bg-[#E0F0F7] text-[#7FAFC6] font-['Poppins'] font-semibold text-[14px] flex items-center justify-center hover:bg-[#cce5f2] transition-colors"
-                >
+                <a href={LINKS.waitlist} className="w-full h-[44px] rounded-[8px] bg-[#E0F0F7] text-[#7FAFC6] font-['Poppins'] font-semibold text-[14px] flex items-center justify-center hover:bg-[#cce5f2] transition-colors">
                   Join Monthly
                 </a>
               </div>
@@ -289,16 +335,26 @@ export default function ExplorersTrail() {
               <div className="p-8 flex flex-col flex-1">
                 <h3 className="font-['Poppins'] font-semibold text-[20px] text-[#2A2E2C] mb-2">Annual</h3>
                 <div className="font-['Poppins'] font-bold text-[32px] text-[#2F6B3F] leading-none mb-1">$397<span className="font-['Open_Sans'] font-normal text-[15px] text-[#4A4F4D]">/yr</span></div>
-                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] mb-1">~$33/mo · 2 months free vs monthly</p>
+                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] mb-1">~$33/mo · 2 months free</p>
                 <p className="font-['Open_Sans'] text-[12px] text-[#4A4F4D] mb-5">Pay once, access all year</p>
                 <div className="h-px bg-[#E2E4E1] mb-5" />
                 <ul className="space-y-2.5 mb-5 flex-1">
                   {[
                     "Everything in Monthly",
-                    "Full content archive — all past Build With Me videos",
-                    "All future content as it is created",
-                    "Priority access to workshop registration",
-                    "Discounts on additional TT coaching sessions",
+                    "Full Build With Me content archive",
+                    "All future content as created",
+                    "Annual member tenure badge (Year 1, 2, 3+) in Slack",
+                    "Full progress visibility including coaching pathway position",
+                    "Program Preview Sessions — full deep-dive with current learners",
+                    "Annual limited edition merchandise drop (time-limited window)",
+                    "Early access to new capstone projects",
+                    "Annual Member Spotlight eligibility",
+                    "Full Path to Coach roadmap",
+                    "Coach Interest Registration",
+                    "Alumni Mentor Matching — quarterly match with TT graduate",
+                    "RESOLVE Practitioner Series — full multi-part workshop access",
+                    "$397 annual fee credited toward one TT program enrollment*",
+                    "Cohort Priority Placement — first access before public waitlist",
                   ].map(item => (
                     <li key={item} className="flex gap-2.5 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
                       <span className="text-[#2F6B3F] shrink-0 font-bold">✓</span>
@@ -307,16 +363,13 @@ export default function ExplorersTrail() {
                   ))}
                 </ul>
                 <div className="h-px bg-[#E2E4E1] mb-4" />
-                <ul className="space-y-2 mb-7">
+                <ul className="space-y-2 mb-5">
                   <li className="flex gap-2.5 font-['Open_Sans'] text-[12px] text-[#8C8882]">
                     <span className="shrink-0">×</span>
                     Quarterly coaching session
                   </li>
                 </ul>
-                <a
-                  href={LINKS.waitlist}
-                  className="w-full h-[44px] rounded-[8px] bg-[#2F6B3F] text-white font-['Poppins'] font-semibold text-[14px] flex items-center justify-center hover:bg-[#245530] transition-colors"
-                >
+                <a href={LINKS.waitlist} className="w-full h-[44px] rounded-[8px] bg-[#2F6B3F] text-white font-['Poppins'] font-semibold text-[14px] flex items-center justify-center hover:bg-[#245530] transition-colors">
                   Get Annual
                 </a>
               </div>
@@ -328,14 +381,13 @@ export default function ExplorersTrail() {
               <div className="p-8 flex flex-col flex-1">
                 <h3 className="font-['Poppins'] font-semibold text-[20px] text-[#2A2E2C] mb-2">Annual + Coaching</h3>
                 <div className="font-['Poppins'] font-bold text-[32px] text-[#1E4A2A] leading-none mb-1">$597<span className="font-['Open_Sans'] font-normal text-[15px] text-[#4A4F4D]">/yr</span></div>
-                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] mb-5">For members who want more consistent coaching touchpoints</p>
+                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] mb-5">Quarterly coaching included</p>
                 <div className="h-px bg-[#E2E4E1] mb-5" />
                 <ul className="space-y-2.5 mb-7 flex-1">
                   {[
                     "Everything in Annual",
-                    "Quarterly coaching session included",
-                    "With a TT Founder or advanced TT coach",
-                    "Reduced pricing on additional sessions beyond the quarterly cadence",
+                    "Quarterly coaching session — with a TT Founder or advanced TT coach",
+                    "Reduced pricing on additional sessions",
                   ].map(item => (
                     <li key={item} className="flex gap-2.5 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
                       <span className="text-[#1E4A2A] shrink-0 font-bold">✓</span>
@@ -343,19 +395,259 @@ export default function ExplorersTrail() {
                     </li>
                   ))}
                 </ul>
-                <a
-                  href={LINKS.waitlist}
-                  className="w-full h-[44px] rounded-[8px] bg-[#1E4A2A] text-white font-['Poppins'] font-semibold text-[14px] flex items-center justify-center hover:bg-[#163820] transition-colors"
-                >
+                <a href={LINKS.waitlist} className="w-full h-[44px] rounded-[8px] bg-[#1E4A2A] text-white font-['Poppins'] font-semibold text-[14px] flex items-center justify-center hover:bg-[#163820] transition-colors">
                   Get Annual + Coaching
                 </a>
               </div>
             </div>
           </div>
 
-          <p className="font-['Open_Sans'] italic text-[12px] text-[#4A4F4D] text-center mt-8">
-            Guided Trail graduates receive 1 year of Annual membership included with program completion. Trail of Mastery graduates receive Lifetime Annual access. Coaching sessions are with a TT Founder or advanced TT coach.
+          {/* Program Credit callout */}
+          <div className="mt-10 bg-[#E6F3EA] border-l-4 border-[#2F6B3F] rounded-xl p-7">
+            <h4 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-2">The $397 Credit</h4>
+            <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65]">
+              Your Annual Explorer's Trail membership fee is credited toward your first TT program enrollment — applied at checkout. Valid within your current membership year. Applies to one program. Since every TT program includes one year of Annual Explorer's Trail membership on completion, your investment in the community is also your first step toward a program.
+            </p>
+            <p className="font-['Open_Sans'] italic text-[12px] text-[#4A4F4D] mt-3">
+              *Credit valid within same membership year · one program only · not stackable
+            </p>
+          </div>
+
+          <p className="font-['Open_Sans'] italic text-[12px] text-[#4A4F4D] text-center mt-6">
+            Guided Trail graduates receive 1 year of Annual membership included with program completion. Coaching sessions are with a TT Founder or advanced TT coach.
           </p>
+        </div>
+      </section>
+
+      {/* SECTION: Ways to Earn Your Membership */}
+      <section className="bg-[#FAFAF7] py-20 px-5 md:px-10 border-y border-[#E2E4E1]">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="mb-12">
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">THE RECIPROCAL MODEL</div>
+            <h2 className="font-['Poppins'] font-bold text-[32px] text-[#2A2E2C]">The more you contribute, the more TT gives back.</h2>
+          </div>
+          <div className="overflow-x-auto">
+            <table className="w-full min-w-[560px] border-collapse">
+              <thead>
+                <tr className="border-b-2 border-[#E2E4E1]">
+                  <th className="font-['Poppins'] font-semibold text-[13px] text-[#2A2E2C] text-left py-3 pr-8">How You Earn</th>
+                  <th className="font-['Poppins'] font-semibold text-[13px] text-[#2A2E2C] text-left py-3">What You Get</th>
+                </tr>
+              </thead>
+              <tbody className="font-['Open_Sans'] text-[14px] text-[#4A4F4D]">
+                {[
+                  ["Complete Guided Trail", "1 year Annual membership included"],
+                  ["Complete Trail of Mastery", "1 year Annual membership included"],
+                  ["Coach's Assistant — per cohort", "1 month Explorer's Trail credit"],
+                  ["Associate Coach — per cohort", "3 months Explorer's Trail credit"],
+                  ["Complete 6 coaching cohorts", "Lifetime Annual membership*"],
+                ].map(([earn, get], i) => (
+                  <tr key={i} className="border-b border-[#E2E4E1]">
+                    <td className="py-4 pr-8 font-semibold text-[#2A2E2C]">{earn}</td>
+                    <td className="py-4 text-[#2F6B3F] font-semibold">{get}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="mt-6 bg-white border border-[#E2E4E1] rounded-xl p-6">
+            <p className="font-['Open_Sans'] text-[14px] text-[#2A2E2C] leading-[1.65]">
+              <strong>*Lifetime Annual membership</strong> is our highest recognition — reserved for coaches who have given six cohorts of sustained commitment back to the TT community.
+            </p>
+            <p className="font-['Open_Sans'] italic text-[13px] text-[#8C8882] mt-2">
+              Future stipend for coaching commitment — coming soon.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION: The Coaching Pathway */}
+      <section className="bg-white py-20 px-5 md:px-10">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="mb-4">
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">THE COACHING PATHWAY</div>
+            <h2 className="font-['Poppins'] font-bold text-[32px] text-[#2A2E2C] mb-3">From learner to coach. The path is open.</h2>
+            <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] max-w-[680px]">Explorer's Trail is where the coaching pipeline starts. Here is what the journey looks like.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 items-start">
+            {/* Stage 1 */}
+            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
+              <div className="h-1 bg-[#7FAFC6]" />
+              <div className="p-7 flex flex-col flex-1">
+                <span className="inline-block bg-[#E0F0F7] text-[#7FAFC6] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-4">ENTRY</span>
+                <h3 className="font-['Poppins'] font-semibold text-[18px] text-[#2A2E2C] mb-4">Stage 1 — Coach's Assistant</h3>
+                <div className="font-['Open_Sans'] font-semibold text-[11px] tracking-[1px] uppercase text-[#4A4F4D] mb-2">Requirements</div>
+                <ul className="space-y-1.5 font-['Open_Sans'] text-[13px] text-[#4A4F4D] mb-5">
+                  <li className="flex gap-2"><span className="text-[#7FAFC6] shrink-0">·</span>Completed Guided Trail</li>
+                  <li className="flex gap-2"><span className="text-[#7FAFC6] shrink-0">·</span>Employed in a Salesforce role for 6+ months</li>
+                  <li className="flex gap-2"><span className="text-[#7FAFC6] shrink-0">·</span>Ready to commit to a 12-week cohort</li>
+                </ul>
+                <div className="font-['Open_Sans'] font-semibold text-[11px] tracking-[1px] uppercase text-[#4A4F4D] mb-2">What you do</div>
+                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.6] mb-5">Support the lead coach, assist learners, participate in sessions, learn the coaching process from the inside.</p>
+                <div className="font-['Open_Sans'] font-semibold text-[11px] tracking-[1px] uppercase text-[#4A4F4D] mb-2">What you get</div>
+                <ul className="space-y-1.5 font-['Open_Sans'] text-[13px] text-[#2A2E2C] mb-5">
+                  <li className="flex gap-2"><span className="text-[#2F6B3F] shrink-0 font-bold">✓</span>1 month Explorer's Trail credit per cohort</li>
+                  <li className="flex gap-2"><span className="text-[#2F6B3F] shrink-0 font-bold">✓</span>Resume-worthy leadership experience</li>
+                  <li className="flex gap-2"><span className="text-[#2F6B3F] shrink-0 font-bold">✓</span>Stay connected to TT while building field experience</li>
+                </ul>
+                <p className="font-['Open_Sans'] italic text-[12px] text-[#8C8882] leading-[1.6]">Trail of Mastery is not required — Coach's Assistant is available after Guided Trail completion.</p>
+              </div>
+            </div>
+
+            {/* Stage 2 */}
+            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
+              <div className="h-1 bg-[#2F6B3F]" />
+              <div className="p-7 flex flex-col flex-1">
+                <span className="inline-block bg-[#E6F3EA] text-[#2F6B3F] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-4">INTERMEDIATE</span>
+                <h3 className="font-['Poppins'] font-semibold text-[18px] text-[#2A2E2C] mb-4">Stage 2 — Associate Coach</h3>
+                <div className="font-['Open_Sans'] font-semibold text-[11px] tracking-[1px] uppercase text-[#4A4F4D] mb-2">Requirements</div>
+                <ul className="space-y-1.5 font-['Open_Sans'] text-[13px] text-[#4A4F4D] mb-5">
+                  <li className="flex gap-2"><span className="text-[#2F6B3F] shrink-0">·</span>2–3 years practical Salesforce experience</li>
+                  <li className="flex gap-2"><span className="text-[#2F6B3F] shrink-0">·</span>Coach's Assistant experience OR volunteer pathway</li>
+                </ul>
+                <div className="font-['Open_Sans'] font-semibold text-[11px] tracking-[1px] uppercase text-[#4A4F4D] mb-2">What you do</div>
+                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.6] mb-5">Lead a 12-week cohort with support. Primary responsibility for learner outcomes.</p>
+                <div className="font-['Open_Sans'] font-semibold text-[11px] tracking-[1px] uppercase text-[#4A4F4D] mb-2">What you get</div>
+                <ul className="space-y-1.5 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
+                  <li className="flex gap-2"><span className="text-[#2F6B3F] shrink-0 font-bold">✓</span>3 months Explorer's Trail credit per cohort</li>
+                  <li className="flex gap-2"><span className="text-[#2F6B3F] shrink-0 font-bold">✓</span>Future coaching stipend (coming soon)</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Stage 3 */}
+            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
+              <div className="h-1 bg-[#1E4A2A]" />
+              <div className="p-7 flex flex-col flex-1">
+                <span className="inline-block bg-[#d4e8d8] text-[#1E4A2A] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-4">ADVANCED</span>
+                <h3 className="font-['Poppins'] font-semibold text-[18px] text-[#2A2E2C] mb-4">Stage 3 — Advanced TT Coach</h3>
+                <div className="font-['Open_Sans'] font-semibold text-[11px] tracking-[1px] uppercase text-[#4A4F4D] mb-2">Requirements</div>
+                <ul className="space-y-1.5 font-['Open_Sans'] text-[13px] text-[#4A4F4D] mb-5">
+                  <li className="flex gap-2"><span className="text-[#1E4A2A] shrink-0">·</span>Demonstrated coaching track record within TT</li>
+                  <li className="flex gap-2"><span className="text-[#1E4A2A] shrink-0">·</span>Deep platform expertise</li>
+                  <li className="flex gap-2"><span className="text-[#1E4A2A] shrink-0">·</span>Full RESOLVE methodology alignment</li>
+                </ul>
+                <div className="font-['Open_Sans'] font-semibold text-[11px] tracking-[1px] uppercase text-[#4A4F4D] mb-2">What you do</div>
+                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.6] mb-5">Lead cohorts independently · Mentor Coach's Assistants · Lead RESOLVE Practitioner Series sessions</p>
+                <div className="font-['Open_Sans'] font-semibold text-[11px] tracking-[1px] uppercase text-[#4A4F4D] mb-2">What you get</div>
+                <ul className="space-y-1.5 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
+                  <li className="flex gap-2"><span className="text-[#2F6B3F] shrink-0 font-bold">✓</span>Compensation model in development</li>
+                  <li className="flex gap-2"><span className="text-[#2F6B3F] shrink-0 font-bold">✓</span>Complete 6 total cohorts → Lifetime Annual Explorer's Trail membership</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <p className="font-['Open_Sans'] italic text-[13px] text-[#4A4F4D] text-center mt-10 max-w-[720px] mx-auto">
+            Two pathways into coaching: TT program graduates (Guided Trail + 6 months employed) and external Salesforce professionals (2–3 years experience) who want to build leadership skills. Both pathways are welcome.
+          </p>
+        </div>
+      </section>
+
+      {/* SECTION: Trail Navigator */}
+      <section className="bg-[#FAFAF7] py-20 px-5 md:px-10 border-y border-[#E2E4E1]">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="mb-12">
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">THE TRAIL NAVIGATOR</div>
+            <h2 className="font-['Poppins'] font-bold text-[32px] text-[#2A2E2C] mb-4">Earned. Never purchased.</h2>
+            <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] max-w-[680px] leading-[1.65]">
+              Every Guided Trail graduate receives a Trail Navigator at program completion — a physical artifact of the work they did and the community they joined. Choose the one that fits you:
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+            {/* Option A */}
+            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8">
+              <div className="text-[36px] mb-4">🧥</div>
+              <h3 className="font-['Poppins'] font-semibold text-[18px] text-[#2A2E2C] mb-3">The Trail Hoodie</h3>
+              <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65] mb-5">
+                A custom embroidered zip-up hoodie with velcro patch zones for every milestone you earn — program completions, coaching stints, tenure badges. Cohort-specific accent color embroidered into the design. Cohort 1 accent color: Sun Amber. Wear it to a Salesforce meetup. People will ask about it.
+              </p>
+              <span className="inline-block bg-[#1E4A2A] text-white font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-3 py-1 rounded">GUIDED TRAIL GRADUATES ONLY · NEVER SOLD SEPARATELY</span>
+            </div>
+            {/* Option B */}
+            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8">
+              <div className="text-[36px] mb-4">📓</div>
+              <h3 className="font-['Poppins'] font-semibold text-[18px] text-[#2A2E2C] mb-3">The Trail Journal</h3>
+              <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65] mb-5">
+                A custom-designed journal with a patch-compatible fabric cover. Same badge system. Same cohort-specific design. For members who prefer a non-wearable alternative — equally earned, equally honored.
+              </p>
+              <span className="inline-block bg-[#1E4A2A] text-white font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-3 py-1 rounded">GUIDED TRAIL GRADUATES ONLY · NEVER SOLD SEPARATELY</span>
+            </div>
+          </div>
+
+          {/* Patch progression */}
+          <div className="bg-white border border-[#E2E4E1] rounded-xl p-6 mb-6">
+            <div className="font-['Open_Sans'] font-semibold text-[11px] tracking-[1.5px] uppercase text-[#4A4F4D] mb-4">PATCH PROGRESSION</div>
+            <div className="flex flex-wrap gap-2 items-center font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
+              {["Guided Trail", "Foundations Trail", "Trail of Mastery (BA/PO/Admin Lead)", "Coach's Assistant", "Associate Coach", "Advanced TT Coach", "Lifetime"].map((patch, i, arr) => (
+                <span key={patch} className="flex items-center gap-2">
+                  <span className="bg-[#E6F3EA] text-[#2F6B3F] px-3 py-1 rounded-full text-[12px] font-semibold">{patch}</span>
+                  {i < arr.length - 1 && <span className="text-[#8C8882]">→</span>}
+                </span>
+              ))}
+            </div>
+            <p className="font-['Open_Sans'] italic text-[12px] text-[#8C8882] mt-4">
+              Patches are velcro — earned at each milestone, carried across every program. Digital credentials issued via Credly for LinkedIn at every milestone.
+            </p>
+          </div>
+
+          {/* Cohort 1 callout */}
+          <div className="bg-[#FEF3DB] border border-[#F5A623] rounded-xl p-7">
+            <p className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-2">
+              Cohort 1 members receive something no future cohort will. We'll share more when the waitlist closes.
+            </p>
+            <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] mb-4">Join the waitlist now to secure your Cohort 1 status.</p>
+            <a href={LINKS.waitlist} className="inline-flex items-center font-['Poppins'] font-semibold text-[14px] text-[#2A2E2C] hover:text-[#1E4A2A] transition-colors">
+              Join the Cohort 1 Waitlist →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION: Community Identity */}
+      <section className="bg-white py-20 px-5 md:px-10">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="mb-12">
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">COMMUNITY IDENTITY</div>
+            <h2 className="font-['Poppins'] font-bold text-[32px] text-[#2A2E2C]">More than a membership.</h2>
+            <p className="font-['Poppins'] font-semibold text-[18px] text-[#4A4F4D] mt-2">You are not just a subscriber. You are a Trail Member.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8">
+              <div className="text-[28px] mb-3">🌟</div>
+              <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-3">Monthly Member Spotlight</h3>
+              <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65]">
+                One member featured every month in Trail Talk and across TT social channels. Career Starters who landed their first Salesforce job. Career Builders who doubled their salary. Career Pivoters who left everything behind and built something new. Your story — told by TT, shareable to LinkedIn. Annual members eligible.
+              </p>
+              <div className="mt-4 space-y-2 font-['Open_Sans'] text-[13px] text-[#4A4F4D] italic border-l-2 border-[#E2E4E1] pl-4">
+                <p>"I got my first Salesforce job — here is what it took and what the first day felt like"</p>
+                <p>"I increased my salary / landed a better role — the skills that made the difference"</p>
+                <p>"I left [previous career] behind — the fear, the pivot, and what came after"</p>
+              </div>
+            </div>
+            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8">
+              <div className="text-[28px] mb-3">🎯</div>
+              <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-3">Annual Limited Edition Drop</h3>
+              <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65]">
+                Once a year, current Annual members get access to a limited edition TT item — available for a defined window only. Miss the renewal, miss the drop. These are not catalog items. They are markers of when you were here.
+              </p>
+            </div>
+            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8">
+              <div className="text-[28px] mb-3">📊</div>
+              <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-3">Your Trail Dashboard</h3>
+              <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65]">
+                Annual members see their full TT journey — content completed, coaching pathway position, milestones earned, patches collected, time in community. Monthly members see a summary. Annual members see the map.
+              </p>
+            </div>
+            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8">
+              <div className="text-[28px] mb-3">💬</div>
+              <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-3">Tenure Recognition</h3>
+              <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65]">
+                Your Slack role reflects your journey — Explorer Year 1, Explorer Year 2, Coach's Assistant, Associate Coach. The community sees where you've been. That visibility matters more than you'd expect.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

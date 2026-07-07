@@ -212,6 +212,35 @@ export default function GuidedTrail() {
         </div>
       </section>
 
+      {/* Trail Navigator Section */}
+      <section className="bg-[#FAFAF7] py-20 px-5 md:px-10 border-y border-[#E2E4E1]">
+        <div className="max-w-[1024px] mx-auto">
+          <div className="mb-10">
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">YOUR TRAIL NAVIGATOR</div>
+            <h2 className="font-['Poppins'] font-bold text-[32px] text-[#2A2E2C] mb-4">Every Guided Trail graduate receives one.</h2>
+            <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] max-w-[640px] leading-[1.65]">
+              At program completion, you choose your Trail Navigator — a physical artifact of the work you did, the community you joined, and the milestone you earned. The Trail Hoodie or the Trail Journal. Velcro patch zones for every milestone ahead. Cohort-specific design that makes yours one of a kind.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div className="bg-white border border-[#E2E4E1] rounded-xl p-7">
+              <div className="text-[32px] mb-3">🧥</div>
+              <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-2">The Trail Hoodie</h3>
+              <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65]">Custom embroidered zip-up hoodie with velcro patch zones for every milestone — cohort-specific accent color embroidered into the design.</p>
+            </div>
+            <div className="bg-white border border-[#E2E4E1] rounded-xl p-7">
+              <div className="text-[32px] mb-3">📓</div>
+              <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-2">The Trail Journal</h3>
+              <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65]">Custom-designed journal with a patch-compatible fabric cover. Same badge system. Same cohort-specific design. Equally earned, equally honored.</p>
+            </div>
+          </div>
+          <div className="bg-[#FEF3DB] border border-[#F5A623] rounded-xl p-6">
+            <p className="font-['Poppins'] font-semibold text-[15px] text-[#2A2E2C] mb-2">Cohort 1 Trail Navigators are the founding edition — Sun Amber accent, never repeated.</p>
+            <a href="/waitlist" className="font-['Open_Sans'] font-semibold text-[14px] text-[#2A2E2C] hover:text-[#1E4A2A] transition-colors">Join the waitlist. →</a>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-[#F5A623] py-16 px-5 text-center">
         <div className="max-w-[800px] mx-auto">
           <h2 className="font-['Poppins'] font-bold text-[36px] text-[#2A2E2C] mb-6">Ready to cross the gap?</h2>

@@ -68,7 +68,7 @@ export default function Waitlist() {
           </p>
 
           {/* Program pills */}
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-3 mb-10">
             {PROGRAM_PILLS.map((p) => (
               <div
                 key={p.name}
@@ -85,6 +85,19 @@ export default function Waitlist() {
                 <span>{p.name}</span>
               </div>
             ))}
+          </div>
+
+          {/* Cohort 1 callout */}
+          <div
+            className="max-w-[640px] mx-auto rounded-[8px] px-7 py-5 text-left"
+            style={{ backgroundColor: "#FEF3DB", border: "1px solid #F5A623" }}
+          >
+            <p className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">
+              Cohort 1 members receive something no future cohort will. We'll share more when the waitlist closes.
+            </p>
+            <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D]">
+              Join the waitlist now to secure your Cohort 1 status.
+            </p>
           </div>
         </div>
       </section>
