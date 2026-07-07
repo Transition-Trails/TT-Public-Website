@@ -56,6 +56,10 @@ export const LINKS = {
   // Expedition
   expedition: "/expedition",
 
+  // Coaches
+  coaches: "/coaches",
+  coachApplication: "https://form.jotform.com/261876005299062",
+
   // TODO: Replace with JotForm scholarship application URL — new form to be created in future session
   scholarshipApplication: "#",
 };

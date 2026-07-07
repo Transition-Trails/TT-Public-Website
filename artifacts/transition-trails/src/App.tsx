@@ -28,6 +28,7 @@ import Scholarships from "./pages/Scholarships";
 import PartnersRecruiters from "./pages/PartnersRecruiters";
 import PartnersEmployers from "./pages/PartnersEmployers";
 import Expedition from "./pages/Expedition";
+import Coaches from "./pages/Coaches";
 import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient();
@@ -56,6 +57,7 @@ function Router() {
       <Route path="/partners/recruiters" component={PartnersRecruiters} />
       <Route path="/partners/employers" component={PartnersEmployers} />
       <Route path="/expedition" component={Expedition} />
+      <Route path="/coaches" component={Coaches} />
 
       {/* Legacy URL redirects from old Salesforce Experience Cloud site */}
       <Route path="/contact-us">

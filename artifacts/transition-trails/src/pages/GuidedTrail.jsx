@@ -223,6 +223,20 @@ export default function GuidedTrail() {
               </a>
             </div>
           </div>
+
+          <div className="mt-4 rounded-xl p-7" style={{ background: "rgba(47,107,63,0.12)", borderTop: "3px solid rgba(47,107,63,0.50)", border: "1px solid rgba(47,107,63,0.25)" }}>
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div>
+                <div className="text-[22px] mb-2">🤝</div>
+                <p className="font-['Open_Sans'] text-[14px] text-white/70 leading-[1.65]">
+                  Guided Trail graduates with 6+ months of field experience can apply to become a <span className="font-semibold text-white">TT Coach's Assistant</span> — stay connected to the community while building leadership skills alongside your day job.
+                </p>
+              </div>
+              <a href="/coaches" className="font-['Open_Sans'] font-semibold text-[13px] text-[#6BBF85] hover:underline whitespace-nowrap shrink-0">
+                Apply to coach →
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 

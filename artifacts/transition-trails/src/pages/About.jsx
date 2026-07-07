@@ -35,6 +35,10 @@ export default function About() {
             The Trail Forward Scholarship — one fully funded Guided Trail seat per cohort — is a direct expression of this mission.{" "}
             <Link href="/scholarships" className="text-[#2F6B3F] font-semibold hover:underline">Learn more →</Link>
           </p>
+          <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.65] mt-4">
+            Our coaches are Salesforce professionals who have done the work — and come back to help others do it too.{" "}
+            <Link href="/coaches" className="text-[#2F6B3F] font-semibold hover:underline">Become a TT coach →</Link>
+          </p>
         </div>
       </section>
 

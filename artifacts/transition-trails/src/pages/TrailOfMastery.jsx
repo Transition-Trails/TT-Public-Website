@@ -674,6 +674,18 @@ export default function TrailOfMastery() {
               Learn more →
             </a>
           </div>
+
+          <div className="mt-4 rounded-xl px-7 py-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4" style={{ background: "rgba(47,107,63,0.06)", borderTop: "3px solid rgba(47,107,63,0.40)", border: "1px solid rgba(47,107,63,0.20)" }}>
+            <div className="flex gap-4 items-start">
+              <span className="text-[24px] shrink-0">🎯</span>
+              <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65]">
+                Experienced Salesforce professionals with 2–3 years of field experience can apply to coach TT cohorts — <span className="font-semibold text-[#2A2E2C]">no program completion required</span>. Coach's Assistant and Associate Coach roles available now for Cohort 1.
+              </p>
+            </div>
+            <a href="/coaches" className="font-['Open_Sans'] font-semibold text-[13px] text-[#2F6B3F] hover:underline whitespace-nowrap shrink-0">
+              Learn about coaching with TT →
+            </a>
+          </div>
         </div>
       </section>
 

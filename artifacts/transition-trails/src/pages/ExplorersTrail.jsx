@@ -350,7 +350,6 @@ export default function ExplorersTrail() {
                     "Early access to new capstone projects",
                     "Annual Member Spotlight eligibility",
                     "Full Path to Coach roadmap",
-                    "Coach Interest Registration",
                     "Alumni Mentor Matching — quarterly match with TT graduate",
                     "RESOLVE Practitioner Series — full multi-part workshop access",
                     "$397 annual fee credited toward one TT program enrollment*",
@@ -361,6 +360,10 @@ export default function ExplorersTrail() {
                       {item}
                     </li>
                   ))}
+                  <li className="flex gap-2.5 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
+                    <span className="text-[#2F6B3F] shrink-0 font-bold">✓</span>
+                    <a href="/coaches" className="text-[#2F6B3F] font-semibold hover:underline">Interested in coaching? See the full coaching pathway and apply →</a>
+                  </li>
                 </ul>
                 <div className="h-px bg-[#E2E4E1] mb-4" />
                 <ul className="space-y-2 mb-5">

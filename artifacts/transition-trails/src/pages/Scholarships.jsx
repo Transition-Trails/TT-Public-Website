@@ -356,7 +356,7 @@ export default function Scholarships() {
             <p className="font-['Open_Sans'] text-[15px] leading-[1.65] mb-8" style={{ color: "rgba(255,255,255,0.72)" }}>
               Applications are reviewed for each upcoming Guided Trail cohort. There is no single deadline — applications are accepted on a rolling basis and reviewed against the next available cohort. The earlier you apply, the more time you have for the screening call and selection process.
               <br /><br />
-              No membership required. No prior Salesforce experience required. The Guided Trail prerequisite is a Salesforce Platform Foundations certification — or being actively enrolled and preparing for it.
+              No membership required. The Trail Forward Scholarship is for the Guided Trail program. To be eligible, you must hold a Salesforce Platform Administrator certification and not be currently employed in a Salesforce role.
             </p>
             <a
               href={LINKS.scholarshipApplication}
