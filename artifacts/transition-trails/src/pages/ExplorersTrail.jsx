@@ -1,4 +1,4 @@
-import { Check } from "lucide-react";
+import { Link } from "wouter";
 import { CTAButton } from "../components/CTAButton";
 import { LINKS } from "../constants/links";
 import { PageMeta } from "../components/PageMeta";
@@ -7,157 +7,356 @@ export default function ExplorersTrail() {
   return (
     <div className="flex flex-col min-h-screen">
       <PageMeta
-        title="Explorer's Trail | Salesforce Learning Subscription | Transition Trails"
-        description="A monthly Salesforce learning membership with four skill tracks, Trail Missions, and community. No prerequisites. Starting at $47/month."
+        title="Explorer's Trail | Salesforce Community Membership | Transition Trails"
+        description="A membership community for Career Starters, Career Builders, and Career Pivoters in the Salesforce ecosystem. Private Slack, workshops, coaching, and Build With Me content. From $47/mo."
         path="/programs/explorers-trail"
       />
-      <section className="bg-gradient-to-br from-[#3a6b8a] to-[#7FAFC6] pt-24 pb-20 px-5 md:px-10">
-        <div className="max-w-[800px] mx-auto text-center">
-          <div className="inline-block bg-white/20 border border-white/30 text-white font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-6 backdrop-blur-sm">
-            AWARENESS TIER · SUBSCRIPTION · NO PREREQUISITES
+
+      {/* SECTION 2: Hero */}
+      <section className="bg-gradient-to-br from-[#1E4A2A] via-[#2F6B3F] to-[#7FAFC6] pt-24 pb-20 px-5 md:px-10">
+        <div className="max-w-[1280px] mx-auto">
+
+          {/* Breadcrumb */}
+          <div className="font-['Open_Sans'] text-[12px] text-white/50 mb-8 flex items-center gap-2">
+            <Link href="/" className="hover:text-white/80 transition-colors">Home</Link>
+            <span>/</span>
+            <Link href="/programs" className="hover:text-white/80 transition-colors">Programs</Link>
+            <span>/</span>
+            <span className="text-white/80">Explorer's Trail</span>
           </div>
-          <h1 className="font-['Poppins'] font-bold text-[48px] md:text-[56px] text-white tracking-[-1.5px] leading-[1.15] mb-6">
-            Explorer's Trail.
-          </h1>
-          <p className="font-['Poppins'] font-medium text-[24px] text-white/90 mb-6">
-            The first step for Career Starters — and a home for curious minds at every level.
-          </p>
-          <p className="font-['Open_Sans'] text-[18px] md:text-[20px] text-white/80 leading-[1.6] max-w-2xl mx-auto mb-10">
-            Not sure if Salesforce is for you? Starting from zero? Pivoting from a completely different career and need to build your foundation before committing to a full program? Explorer's Trail is a subscription membership — not a cohort — so you learn at your own pace, explore every skill level, and find out what you are capable of without pressure.
-          </p>
-        </div>
-      </section>
 
-      <section className="bg-[#FAFAF7] py-20 px-5 -mt-10">
-        <div className="max-w-[1024px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Tier 1 */}
-            <div className="bg-white border border-[#E2E4E1] rounded-2xl p-8 flex flex-col items-center text-center shadow-sm">
-              <h3 className="font-['Poppins'] font-bold text-[20px] text-[#2A2E2C] mb-2">Monthly</h3>
-              <div className="font-['Poppins'] font-bold text-[40px] text-[#2A2E2C] mb-6">$47<span className="text-xl text-[#4A4F4D] font-normal">/mo</span></div>
-              <ul className="flex flex-col gap-3 font-['Open_Sans'] text-[15px] text-[#4A4F4D] mb-8 w-full text-left">
-                <li className="flex gap-3"><Check className="w-5 h-5 text-[#7FAFC6] shrink-0" /> Full platform access</li>
-                <li className="flex gap-3"><Check className="w-5 h-5 text-[#7FAFC6] shrink-0" /> Monthly content drops</li>
-                <li className="flex gap-3"><Check className="w-5 h-5 text-[#7FAFC6] shrink-0" /> Community forums</li>
-              </ul>
-              <div className="mt-auto w-full">
-                <CTAButton href={LINKS.waitlist} variant="dark" className="w-full !bg-[#7FAFC6] hover:!bg-[#6a9eb5]">
-                  Join the Waitlist
+          <div className="flex flex-col xl:flex-row gap-14 xl:gap-20 items-start">
+
+            {/* Left: copy */}
+            <div className="flex-1 max-w-[680px]">
+              <div className="inline-block bg-[rgba(127,175,198,0.15)] border border-[rgba(127,175,198,0.4)] text-[#7FAFC6] font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-7">
+                AWARENESS TIER  ·  COMMUNITY MEMBERSHIP  ·  NO PREREQUISITES
+              </div>
+              <h1 className="font-['Poppins'] font-bold text-[52px] text-white tracking-[-1.5px] leading-[1.1] mb-5">
+                Explorer's Trail.
+              </h1>
+              <p className="font-['Poppins'] font-semibold text-[22px] text-[#7FAFC6] mb-6 leading-[1.3]">
+                The Salesforce community built for people who are serious about where they're going.
+              </p>
+              <div className="font-['Open_Sans'] text-[17px] text-white/75 leading-[1.65] max-w-[680px] space-y-4 mb-10">
+                <p>Not a course. Not a cohort. A membership community — with real coaching, real skill-building content, real events, and real connections to people who are on the same path.</p>
+                <p>Whether you are just discovering Salesforce, preparing to join a TT program, or a graduate staying connected after your program ends — Explorer's Trail is where the TT ecosystem lives between programs.</p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <CTAButton href={LINKS.waitlist} variant="amber" size="lg">
+                  Join the Waitlist →
                 </CTAButton>
+                <a
+                  href="#whats-included"
+                  onClick={e => { e.preventDefault(); document.getElementById('whats-included')?.scrollIntoView({ behavior: 'smooth' }); }}
+                  className="h-[52px] px-7 rounded-[8px] border border-white text-white font-['Poppins'] font-semibold text-[15px] flex items-center justify-center hover:bg-white/10 transition-colors cursor-pointer"
+                >
+                  See what's included ↓
+                </a>
               </div>
             </div>
 
-            {/* Tier 2 */}
-            <div className="bg-white border-2 border-[#F5A623] rounded-2xl p-8 flex flex-col items-center text-center shadow-md relative transform md:-translate-y-4">
-              <div className="absolute top-0 right-1/2 transform translate-x-1/2 -translate-y-1/2 bg-[#F5A623] text-[#2A2E2C] font-['Poppins'] font-bold text-[11px] px-3 py-1 rounded-sm uppercase tracking-wide whitespace-nowrap">
-                BEST VALUE
+            {/* Right: price boxes */}
+            <div className="flex flex-col gap-4 w-full xl:w-[300px] shrink-0">
+              {/* Monthly */}
+              <div className="bg-white/10 border border-[#7FAFC6]/40 rounded-xl p-6 backdrop-blur-sm">
+                <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-[#7FAFC6] mb-2">MONTHLY</div>
+                <div className="font-['Poppins'] font-bold text-[32px] text-white leading-none mb-1">$47<span className="font-['Open_Sans'] font-normal text-[16px] text-white/60">/mo</span></div>
+                <div className="font-['Open_Sans'] text-[12px] text-white/55">Cancel anytime</div>
               </div>
-              <h3 className="font-['Poppins'] font-bold text-[20px] text-[#2A2E2C] mb-2">Annual</h3>
-              <div className="font-['Poppins'] font-bold text-[40px] text-[#2A2E2C] mb-2">$397<span className="text-xl text-[#4A4F4D] font-normal">/yr</span></div>
-              <div className="font-['Open_Sans'] text-[13px] text-[#2F6B3F] font-semibold mb-6">Save $167 annually</div>
-              <ul className="flex flex-col gap-3 font-['Open_Sans'] text-[15px] text-[#4A4F4D] mb-8 w-full text-left">
-                <li className="flex gap-3"><Check className="w-5 h-5 text-[#F5A623] shrink-0" /> Everything in Monthly</li>
-                <li className="flex gap-3 font-semibold text-[#2A2E2C]"><Check className="w-5 h-5 text-[#F5A623] shrink-0" /> 2 months free</li>
-                <li className="flex gap-3"><Check className="w-5 h-5 text-[#F5A623] shrink-0" /> Priority event registration</li>
-              </ul>
-              <div className="mt-auto w-full">
-                <CTAButton href={LINKS.waitlist} variant="amber" className="w-full">
-                  Join the Waitlist
-                </CTAButton>
+              {/* Annual */}
+              <div className="bg-white/10 border-2 border-[#2F6B3F] rounded-xl p-6 backdrop-blur-sm relative">
+                <div className="absolute top-3 right-3 bg-[#F5A623] text-[#2A2E2C] font-['Poppins'] font-bold text-[9px] uppercase tracking-wide px-2 py-0.5 rounded-sm">BEST VALUE</div>
+                <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-[#2F6B3F] mb-2">ANNUAL</div>
+                <div className="font-['Poppins'] font-bold text-[32px] text-white leading-none mb-1">$397<span className="font-['Open_Sans'] font-normal text-[16px] text-white/60">/yr</span></div>
+                <div className="font-['Open_Sans'] text-[12px] text-white/55">~$33/mo · 2 months free</div>
               </div>
-            </div>
-
-            {/* Tier 3 */}
-            <div className="bg-white border border-[#E2E4E1] rounded-2xl p-8 flex flex-col items-center text-center shadow-sm">
-              <h3 className="font-['Poppins'] font-bold text-[20px] text-[#2A2E2C] mb-2">Annual + Coaching</h3>
-              <div className="font-['Poppins'] font-bold text-[40px] text-[#2A2E2C] mb-6">$597<span className="text-xl text-[#4A4F4D] font-normal">/yr</span></div>
-              <ul className="flex flex-col gap-3 font-['Open_Sans'] text-[15px] text-[#4A4F4D] mb-8 w-full text-left">
-                <li className="flex gap-3"><Check className="w-5 h-5 text-[#7FAFC6] shrink-0" /> Everything in Annual</li>
-                <li className="flex gap-3 font-semibold text-[#2A2E2C]"><Check className="w-5 h-5 text-[#7FAFC6] shrink-0" /> 2 Private Coaching Sessions</li>
-                <li className="flex gap-3"><Check className="w-5 h-5 text-[#7FAFC6] shrink-0" /> Resume review</li>
-              </ul>
-              <div className="mt-auto w-full">
-                <CTAButton href={LINKS.waitlist} variant="dark" className="w-full !bg-[#7FAFC6] hover:!bg-[#6a9eb5]">
-                  Join the Waitlist
-                </CTAButton>
+              {/* Annual + Coaching */}
+              <div className="bg-white/10 border border-[#1E4A2A]/60 rounded-xl p-6 backdrop-blur-sm">
+                <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-white/50 mb-2">ANNUAL + COACHING</div>
+                <div className="font-['Poppins'] font-bold text-[32px] text-white leading-none mb-1">$597<span className="font-['Open_Sans'] font-normal text-[16px] text-white/60">/yr</span></div>
+                <div className="font-['Open_Sans'] text-[12px] text-white/55">2 private sessions included</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-white py-20 px-5">
-        <div className="max-w-[1024px] mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="font-['Poppins'] font-bold text-[36px] text-[#2A2E2C] mb-4">Four Skill Tracks. One Platform.</h2>
-            <p className="font-['Open_Sans'] text-[18px] text-[#4A4F4D] max-w-2xl mx-auto">
-              Whether you're just discovering Salesforce or prepping for your Architect exams, there's content built for you.
+      {/* SECTION 3: Who It's For */}
+      <section className="bg-white py-20 px-5 md:px-10">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="mb-12">
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">WHO IT'S FOR</div>
+            <h2 className="font-['Poppins'] font-bold text-[32px] text-[#2A2E2C]">Four reasons people join. One community.</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            {/* Card 1 */}
+            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8">
+              <div className="text-[28px] mb-3">🧭</div>
+              <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-[#7FAFC6] mb-2">CAREER STARTERS</div>
+              <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-3">Not sure yet. That's okay.</h3>
+              <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65]">
+                You know Salesforce is worth exploring. You are not ready to commit to a full certification program or a 12-week cohort. Explorer's Trail is where you come to figure out if this is the right path — with real community, real events, and no pressure to move faster than you are ready to.
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8">
+              <div className="text-[28px] mb-3">📋</div>
+              <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-[#2F6B3F] mb-2">CAREER BUILDERS</div>
+              <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-3">Getting ready for a TT program.</h3>
+              <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65]">
+                You are planning to join the Foundations Trail or Guided Trail and want to build your foundation first. Explorer's Trail gives you access to skill-building content, workshops, and — most importantly — the ability to interact with current program learners so you know exactly what you are getting into before you enroll.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8">
+              <div className="text-[28px] mb-3">🎓</div>
+              <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-[#1E4A2A] mb-2">PROGRAM ALUMNI</div>
+              <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-3">You finished a program. Now what?</h3>
+              <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65]">
+                Graduates of the Guided Trail receive one year of Explorer's Trail membership included with their program. Explorer's Trail is how you stay connected to the TT ecosystem after your cohort ends — for the events, the community, the ongoing coaching discounts, and the people who are going through what you already went through.
+              </p>
+            </div>
+
+            {/* Card 4 */}
+            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8">
+              <div className="text-[28px] mb-3">🌱</div>
+              <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-[#1E4A2A] mb-2">CAREER PIVOTERS</div>
+              <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-3">You are in it for the long haul.</h3>
+              <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65]">
+                You finished your included year as a graduate — or you joined on your own and kept renewing. Explorer's Trail is your ongoing professional home in the Salesforce ecosystem. New content every month. Quarterly coaching if you're on an annual plan. The community does not have a finish line.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 4: What's Included */}
+      <section id="whats-included" className="bg-[#FAFAF7] py-20 px-5 md:px-10 border-y border-[#E2E4E1]">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="mb-12">
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">WHAT'S INCLUDED</div>
+            <h2 className="font-['Poppins'] font-bold text-[32px] text-[#2A2E2C] mb-3">Community. Coaching. Content.</h2>
+            <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D]">Everything inside Explorer's Trail is built by Transition Trails — not curated from third-party platforms.</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
+
+            {/* Feature 1 */}
+            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
+              <div className="h-1 bg-[#7FAFC6]" />
+              <div className="p-7 flex flex-col flex-1">
+                <div className="text-[28px] mb-4">💬</div>
+                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-3">Private Slack Community</h3>
+                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
+                  A members-only Slack workspace where Career Starters, Career Builders, Career Pivoters, current program learners, and TT alumni all connect. Ask questions, share wins, find accountability partners, and see what life inside a TT program actually looks like — from people who are living it.
+                </p>
+              </div>
+            </div>
+
+            {/* Feature 2 */}
+            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
+              <div className="h-1 bg-[#2F6B3F]" />
+              <div className="p-7 flex flex-col flex-1">
+                <div className="text-[28px] mb-4">🎯</div>
+                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-3">Workshops and Webinars</h3>
+                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
+                  Members-only live events hosted by TT — skill-building workshops, Salesforce topic deep-dives, career sessions, and Q&As with the TT team and coaches. Free or reduced pricing for Explorer's Trail members. All hosted and produced by Transition Trails.
+                </p>
+              </div>
+            </div>
+
+            {/* Feature 3 */}
+            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
+              <div className="h-1 bg-[#2F6B3F]" />
+              <div className="p-7 flex flex-col flex-1">
+                <div className="text-[28px] mb-4">🎬</div>
+                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-3">Build With Me Content Library</h3>
+                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
+                  Skill-building Build With Me videos covering Salesforce concepts, configuration techniques, and practical exercises — created by the TT team. Monthly members access current content. Annual members get the full archive plus everything created in the future as the library grows.
+                </p>
+                <p className="font-['Open_Sans'] italic text-[11px] text-[#8C8882] leading-[1.6] mt-4">
+                  Note: Explorer's Trail Build With Me content covers general skill development. Foundations Trail includes separate cert-aligned Build With Me videos specific to the HCH capstone.
+                </p>
+              </div>
+            </div>
+
+            {/* Feature 4 */}
+            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
+              <div className="h-1 bg-[#7FAFC6]" />
+              <div className="p-7 flex flex-col flex-1">
+                <div className="text-[28px] mb-4">🤝</div>
+                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-3">Coaching Access</h3>
+                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
+                  Async coaching access for all members. Annual members receive one quarterly coaching session included (4 sessions per year) with a TT Founder or advanced coach. Annual + Coaching members receive 2 private dedicated coaching sessions on top of the quarterly sessions. Additional sessions available at reduced member pricing.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 5: Membership Tiers */}
+      <section className="bg-white py-20 px-5 md:px-10">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="mb-12">
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">CHOOSE YOUR TIER</div>
+            <h2 className="font-['Poppins'] font-bold text-[32px] text-[#2A2E2C]">Start where you are. Upgrade when you're ready.</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+
+            {/* Tier 1: Monthly */}
+            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
+              <div className="h-1 bg-[#7FAFC6]" />
+              <div className="p-8 flex flex-col flex-1">
+                <h3 className="font-['Poppins'] font-semibold text-[20px] text-[#2A2E2C] mb-2">Monthly</h3>
+                <div className="font-['Poppins'] font-bold text-[32px] text-[#7FAFC6] leading-none mb-1">$47<span className="font-['Open_Sans'] font-normal text-[15px] text-[#4A4F4D]">/mo</span></div>
+                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] mb-5">Cancel or pause anytime</p>
+                <div className="h-px bg-[#E2E4E1] mb-5" />
+                <ul className="space-y-2.5 mb-5 flex-1">
+                  {["Private Slack community", "Members-only workshops and webinars (free or reduced pricing)", "Current month's Build With Me content", "Async coaching access", "Discounts on TT coaching sessions"].map(item => (
+                    <li key={item} className="flex gap-2.5 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
+                      <span className="text-[#7FAFC6] shrink-0 font-bold">✓</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <div className="h-px bg-[#E2E4E1] mb-4" />
+                <ul className="space-y-2 mb-7">
+                  {["Content archive (past videos)", "Quarterly coaching session", "Private coaching sessions"].map(item => (
+                    <li key={item} className="flex gap-2.5 font-['Open_Sans'] text-[12px] text-[#8C8882]">
+                      <span className="shrink-0">×</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href={LINKS.waitlist}
+                  className="w-full h-[44px] rounded-[8px] bg-[#E0F0F7] text-[#7FAFC6] font-['Poppins'] font-semibold text-[14px] flex items-center justify-center hover:bg-[#cce5f2] transition-colors"
+                >
+                  Join Monthly
+                </a>
+              </div>
+            </div>
+
+            {/* Tier 2: Annual — featured */}
+            <div className="bg-white border-2 border-[#2F6B3F] rounded-xl overflow-hidden flex flex-col relative">
+              <div className="h-1 bg-[#2F6B3F]" />
+              <div className="absolute top-4 right-4 bg-[#F5A623] text-[#2A2E2C] font-['Poppins'] font-bold text-[9px] uppercase tracking-wide px-2.5 py-1 rounded-sm">BEST VALUE</div>
+              <div className="p-8 flex flex-col flex-1">
+                <h3 className="font-['Poppins'] font-semibold text-[20px] text-[#2A2E2C] mb-2">Annual</h3>
+                <div className="font-['Poppins'] font-bold text-[32px] text-[#2F6B3F] leading-none mb-1">$397<span className="font-['Open_Sans'] font-normal text-[15px] text-[#4A4F4D]">/yr</span></div>
+                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] mb-1">~$33/mo · 2 months free vs monthly</p>
+                <p className="font-['Open_Sans'] text-[12px] text-[#4A4F4D] mb-5">Pay once, access all year</p>
+                <div className="h-px bg-[#E2E4E1] mb-5" />
+                <ul className="space-y-2.5 mb-7 flex-1">
+                  {[
+                    "Everything in Monthly",
+                    "Full content archive — all past Build With Me videos",
+                    "All future content as it is created",
+                    "1 quarterly coaching session included (4 per year)",
+                    "Reduced pricing on additional coaching sessions",
+                    "Priority access to workshop registration",
+                  ].map(item => (
+                    <li key={item} className="flex gap-2.5 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
+                      <span className="text-[#2F6B3F] shrink-0 font-bold">✓</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href={LINKS.waitlist}
+                  className="w-full h-[44px] rounded-[8px] bg-[#2F6B3F] text-white font-['Poppins'] font-semibold text-[14px] flex items-center justify-center hover:bg-[#245530] transition-colors"
+                >
+                  Get Annual
+                </a>
+              </div>
+            </div>
+
+            {/* Tier 3: Annual + Coaching */}
+            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
+              <div className="h-1 bg-[#1E4A2A]" />
+              <div className="p-8 flex flex-col flex-1">
+                <h3 className="font-['Poppins'] font-semibold text-[20px] text-[#2A2E2C] mb-2">Annual + Coaching</h3>
+                <div className="font-['Poppins'] font-bold text-[32px] text-[#1E4A2A] leading-none mb-1">$597<span className="font-['Open_Sans'] font-normal text-[15px] text-[#4A4F4D]">/yr</span></div>
+                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] mb-5">For learners who want accountability built in</p>
+                <div className="h-px bg-[#E2E4E1] mb-5" />
+                <ul className="space-y-2.5 mb-7 flex-1">
+                  {[
+                    "Everything in Annual",
+                    "2 private coaching sessions with a TT Founder or advanced coach",
+                    "Sessions scheduled on your timeline",
+                    "Ideal for career pivoters and anyone who wants dedicated 1:1 support",
+                  ].map(item => (
+                    <li key={item} className="flex gap-2.5 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
+                      <span className="text-[#1E4A2A] shrink-0 font-bold">✓</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href={LINKS.waitlist}
+                  className="w-full h-[44px] rounded-[8px] bg-[#1E4A2A] text-white font-['Poppins'] font-semibold text-[14px] flex items-center justify-center hover:bg-[#163820] transition-colors"
+                >
+                  Get Annual + Coaching
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <p className="font-['Open_Sans'] italic text-[12px] text-[#4A4F4D] text-center mt-8">
+            Guided Trail graduates receive 1 year of Annual membership included with program completion. Trail of Mastery graduates receive Lifetime Annual access.
+          </p>
+        </div>
+      </section>
+
+      {/* SECTION 6: Community Preview */}
+      <section className="bg-[#2A2E2C] py-20 px-5 md:px-10">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-white/45 mb-4">THE COMMUNITY</div>
+          <h2 className="font-['Poppins'] font-bold text-[30px] text-white mb-6">You will not figure this out alone.</h2>
+          <p className="font-['Open_Sans'] text-[16px] text-white/75 leading-[1.65] max-w-[680px] mb-12">
+            The Explorer's Trail Slack community connects every tier of the TT ecosystem in one place: people who are just starting, people who are mid-program, graduates who are now working in Salesforce, and the TT team itself.
+          </p>
+          <p className="font-['Open_Sans'] text-[16px] text-white/75 leading-[1.65] max-w-[680px] mb-12">
+            Ask a question on a Tuesday. Get an answer from someone who was in your position six months ago — and now has the role you are working toward. That is not something a video course can replicate.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {[
+              { label: "Career Starters", desc: "Exploring and building their foundation", value: "Curious minds" },
+              { label: "Active Program Learners", desc: "In Foundations Trail, Guided Trail, or Trail of Mastery right now", value: "Active learners" },
+              { label: "Alumni", desc: "Working in Salesforce — available to answer your questions", value: "Working alumni" },
+            ].map(card => (
+              <div key={card.label} className="bg-white/[0.06] border border-white/[0.12] rounded-xl p-7">
+                <div className="font-['Poppins'] font-bold text-[28px] text-[#F5A623] mb-2">{card.value}</div>
+                <div className="font-['Poppins'] font-semibold text-[15px] text-white mb-2">{card.label}</div>
+                <p className="font-['Open_Sans'] text-[13px] text-white/60 leading-[1.55]">{card.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 7: CTA Banner */}
+      <section className="bg-[#7FAFC6] py-16 px-5 md:px-10">
+        <div className="max-w-[1100px] mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-16">
+          <div className="flex-1">
+            <h2 className="font-['Poppins'] font-bold text-[36px] text-[#1E4A2A] leading-tight mb-4">
+              The trail does not have a finish line. Come find your pace.
+            </h2>
+            <p className="font-['Open_Sans'] text-[16px] text-[#1E4A2A]/80">
+              Start with Monthly. Upgrade to Annual when you're ready. Stay as long as the community serves you.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-[#FAFAF7] border border-[#E2E4E1] p-8 rounded-xl">
-              <h3 className="font-['Poppins'] font-bold text-[22px] text-[#7FAFC6] mb-4">Level 1: Beginner</h3>
-              <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] mb-4">Platform basics, navigation, and understanding the ecosystem.</p>
-              <ul className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] space-y-2">
-                <li>• What is a CRM?</li>
-                <li>• Salesforce platform learning strategies</li>
-                <li>• Basic data modeling concepts</li>
-              </ul>
-            </div>
-            
-            <div className="bg-[#FAFAF7] border border-[#E2E4E1] p-8 rounded-xl">
-              <h3 className="font-['Poppins'] font-bold text-[22px] text-[#2F6B3F] mb-4">Level 2: Intermediate</h3>
-              <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] mb-4">Admin certification prep and configuration fundamentals.</p>
-              <ul className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] space-y-2">
-                <li>• Security & Sharing deep dives</li>
-                <li>• Flow building basics</li>
-                <li>• Reports & Dashboards mastery</li>
-              </ul>
-            </div>
-            
-            <div className="bg-[#FAFAF7] border border-[#E2E4E1] p-8 rounded-xl">
-              <h3 className="font-['Poppins'] font-bold text-[22px] text-[#1E4A2A] mb-4">Level 3: Advanced</h3>
-              <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] mb-4">Complex automation, integration prep, and implementation strategy.</p>
-              <ul className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] space-y-2">
-                <li>• Advanced Flow architectures</li>
-                <li>• Requirements gathering templates</li>
-                <li>• Data migration strategies</li>
-              </ul>
-            </div>
-            
-            <div className="bg-[#FAFAF7] border border-[#E2E4E1] p-8 rounded-xl">
-              <h3 className="font-['Poppins'] font-bold text-[22px] text-[#2F6F7E] mb-4">Level 4: Expert</h3>
-              <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] mb-4">Architect-level concepts and technical leadership.</p>
-              <ul className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] space-y-2">
-                <li>• Enterprise architecture patterns</li>
-                <li>• Complex integration design</li>
-                <li>• Governance & COE establishment</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-[#2A2E2C] py-16 px-5 border-t border-[#4A4F4D]">
-        <div className="max-w-[1024px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          <div>
-            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#7FAFC6] mb-3">TRAIL MISSIONS</div>
-            <h2 className="font-['Poppins'] font-bold text-[32px] text-white mb-4">Monthly content drops at all 4 levels.</h2>
-            <p className="font-['Open_Sans'] text-[16px] text-white/70">
-              The ecosystem changes constantly. So do we. Every month, we release new missions across all four levels to keep your skills sharp and relevant.
-            </p>
-          </div>
-          <div className="bg-white/5 border border-white/10 rounded-xl p-8">
-            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#F5A623] mb-4">GRADUATE PERKS</div>
-            <ul className="space-y-4">
-              <li className="font-['Open_Sans'] text-[16px] text-white/90">
-                <strong className="text-white">Guided Trail graduates</strong> earn Annual access to Explorer's Trail.
-              </li>
-              <li className="font-['Open_Sans'] text-[16px] text-white/90">
-                <strong className="text-white">Trail of Mastery graduates</strong> earn Lifetime access.
-              </li>
-            </ul>
+          <div className="shrink-0">
+            <a
+              href={LINKS.waitlist}
+              className="h-[52px] px-8 rounded-[8px] bg-[#1E4A2A] text-white font-['Poppins'] font-bold text-[15px] flex items-center justify-center hover:bg-[#163820] transition-colors whitespace-nowrap"
+            >
+              Join Explorer's Trail →
+            </a>
           </div>
         </div>
       </section>
