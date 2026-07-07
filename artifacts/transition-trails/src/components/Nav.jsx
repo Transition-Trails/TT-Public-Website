@@ -7,14 +7,17 @@ export function Nav() {
   const [location] = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProgramsOpen, setIsProgramsOpen] = useState(false);
+  const [isPartnersOpen, setIsPartnersOpen] = useState(false);
 
   const isActive = (path) => location === path;
   const isProgramsActive = location.startsWith("/programs") && location !== "/programs/digital-compass";
   const isDcActive = location === "/programs/digital-compass";
+  const isPartnersActive = location.startsWith("/partners");
 
   const closeMenu = () => {
     setIsMobileMenuOpen(false);
     setIsProgramsOpen(false);
+    setIsPartnersOpen(false);
   };
 
   return (
@@ -61,6 +64,20 @@ export function Nav() {
 
             <Link href="/about" className={`font-['Open_Sans'] font-semibold text-[15px] transition-colors ${isActive("/about") ? "text-white" : "text-white/70 hover:text-white"}`}>About</Link>
             <Link href="/programs/digital-compass" className={`font-['Open_Sans'] font-semibold text-[15px] transition-colors ${isDcActive ? "text-white" : "text-white/70 hover:text-white"}`}>For Nonprofits</Link>
+
+            {/* Partners Dropdown */}
+            <div className="relative h-full flex items-center group">
+              <button className={`font-['Open_Sans'] font-semibold text-[15px] flex items-center gap-1 transition-colors ${isPartnersActive ? "text-white" : "text-white/70 hover:text-white"}`}>
+                Partners <ChevronDown className="w-4 h-4 opacity-70 group-hover:rotate-180 transition-transform" />
+              </button>
+              <div className="absolute top-[80px] left-1/2 -translate-x-1/2 w-56 bg-white rounded-xl shadow-lg border border-[#E2E4E1] py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <Link href="/partners/recruiters" className="block px-4 py-3 text-sm font-['Open_Sans'] text-[#4A4F4D] hover:bg-[#FAFAF7] hover:text-[#2F6B3F]">For Recruiters</Link>
+                <Link href="/partners/employers" className="block px-4 py-3 text-sm font-['Open_Sans'] text-[#4A4F4D] hover:bg-[#FAFAF7] hover:text-[#2F6B3F]">For Employers</Link>
+                <div className="h-px bg-[#E2E4E1] my-1" />
+                <Link href="/scholarships" className="block px-4 py-2.5 text-[12px] font-['Open_Sans'] text-[#4A4F4D]/70 hover:bg-[#FAFAF7] hover:text-[#2F6B3F]">🏅 Trail Forward Scholarship</Link>
+              </div>
+            </div>
+
             <Link href="/blog" className={`font-['Open_Sans'] font-semibold text-[15px] transition-colors ${isActive("/blog") ? "text-white" : "text-white/70 hover:text-white"}`}>Blog</Link>
             <Link href="/donate" className={`font-['Open_Sans'] font-semibold text-[15px] transition-colors ${isActive("/donate") ? "text-white" : "text-white/70 hover:text-white"}`}>Donate</Link>
           </div>
@@ -114,6 +131,23 @@ export function Nav() {
 
           <Link href="/about" onClick={closeMenu} className="font-['Open_Sans'] font-semibold text-[18px] text-white/90 py-2 border-b border-white/10">About</Link>
           <Link href="/programs/digital-compass" onClick={closeMenu} className="font-['Open_Sans'] font-semibold text-[18px] text-white/90 py-2 border-b border-white/10">For Nonprofits</Link>
+
+          <div>
+            <button
+              className="flex items-center justify-between w-full font-['Open_Sans'] font-semibold text-[18px] text-white/90 py-2 border-b border-white/10"
+              onClick={() => setIsPartnersOpen(!isPartnersOpen)}
+            >
+              Partners
+              <ChevronDown className={`w-5 h-5 transition-transform ${isPartnersOpen ? "rotate-180" : ""}`} />
+            </button>
+            <div className={`flex flex-col gap-3 pl-4 overflow-hidden transition-all duration-300 ${isPartnersOpen ? "mt-4 max-h-[200px]" : "max-h-0"}`}>
+              <Link href="/partners/recruiters" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-base py-1">For Recruiters</Link>
+              <Link href="/partners/employers" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-base py-1">For Employers</Link>
+              <div className="h-px bg-white/10 my-1" />
+              <Link href="/scholarships" onClick={closeMenu} className="text-white/50 font-['Open_Sans'] text-sm py-1">🏅 Trail Forward Scholarship</Link>
+            </div>
+          </div>
+
           <Link href="/blog" onClick={closeMenu} className="font-['Open_Sans'] font-semibold text-[18px] text-white/90 py-2 border-b border-white/10">Blog</Link>
           <Link href="/donate" onClick={closeMenu} className="font-['Open_Sans'] font-semibold text-[18px] text-white/90 py-2 border-b border-white/10">Donate</Link>
 

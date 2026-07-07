@@ -49,6 +49,10 @@ export const LINKS = {
   // Internal scholarship page
   scholarships: "/scholarships",
 
+  // Partner pages
+  partnersRecruiters: "/partners/recruiters",
+  partnersEmployers: "/partners/employers",
+
   // TODO: Replace with JotForm scholarship application URL — new form to be created in future session
   scholarshipApplication: "#",
 };

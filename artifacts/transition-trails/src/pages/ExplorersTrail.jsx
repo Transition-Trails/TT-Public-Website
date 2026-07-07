@@ -413,6 +413,16 @@ export default function ExplorersTrail() {
             </p>
           </div>
 
+          <div className="mt-6 bg-[#E0F0F7] border-l-4 border-[#7FAFC6] rounded-xl p-7">
+            <h4 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-2">Graduate Recruiter Network</h4>
+            <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65] mb-3">
+              Any TT program graduate can opt in to TT's recruiter partner network, making their portfolio visible to vetted partner recruiters. This is a program benefit available to all graduates regardless of Explorer's Trail membership.
+            </p>
+            <Link href="/partners/recruiters" className="font-['Open_Sans'] font-semibold text-[13px] text-[#2F6F7E] hover:underline">
+              Learn about recruiter partnerships →
+            </Link>
+          </div>
+
           <p className="font-['Open_Sans'] italic text-[12px] text-[#4A4F4D] text-center mt-6">
             Guided Trail graduates receive 1 year of Annual membership included with program completion. Coaching sessions are with a TT Founder or advanced TT coach.
           </p>

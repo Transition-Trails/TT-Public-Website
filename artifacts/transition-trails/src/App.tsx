@@ -25,6 +25,8 @@ import TermsOfService from "./pages/TermsOfService";
 import Waitlist from "./pages/Waitlist";
 import NonprofitAssessment from "./pages/NonprofitAssessment";
 import Scholarships from "./pages/Scholarships";
+import PartnersRecruiters from "./pages/PartnersRecruiters";
+import PartnersEmployers from "./pages/PartnersEmployers";
 import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient();
@@ -50,6 +52,8 @@ function Router() {
       <Route path="/waitlist" component={Waitlist} />
       <Route path="/nonprofit-assessment" component={NonprofitAssessment} />
       <Route path="/scholarships" component={Scholarships} />
+      <Route path="/partners/recruiters" component={PartnersRecruiters} />
+      <Route path="/partners/employers" component={PartnersEmployers} />
 
       {/* Legacy URL redirects from old Salesforce Experience Cloud site */}
       <Route path="/contact-us">
