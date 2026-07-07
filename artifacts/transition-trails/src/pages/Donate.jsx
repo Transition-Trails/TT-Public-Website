@@ -71,7 +71,10 @@ export default function Donate() {
             >
               Email hello@transitiontrails.org
             </a>
-            <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D]/70 mt-4">
+            <p className="font-['Open_Sans'] italic text-[12px] text-[#4A4F4D]/60 mt-3">
+              Secure online giving coming soon — contact us to donate now
+            </p>
+            <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D]/70 mt-3">
               Transition Trails is a 501(c)(3) public charity — EIN 88-2746412. Donations are tax-deductible to the extent permitted by law.
             </p>
           </div>
@@ -110,7 +113,7 @@ export default function Donate() {
             </div>
             <div className="bg-[#E6F3EA] border border-[#2F6B3F]/20 p-6 rounded-xl text-center">
               <h4 className="font-['Poppins'] font-bold text-[18px] text-[#1E4A2A] mb-2">Employer Sponsorship</h4>
-              <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] mb-4">Send 3+ employees to Trail of Mastery at $1,597/seat (vs $1,997).</p>
+              <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] mb-4">Contact us — pricing in progress for employer-sponsored Trail of Mastery seats.</p>
               <CTAButton href="/contact" variant="outline" className="w-full border-[#2F6B3F] text-[#2F6B3F] hover:bg-[#2F6B3F] hover:text-white">Inquire</CTAButton>
             </div>
           </div>

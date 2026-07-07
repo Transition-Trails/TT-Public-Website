@@ -59,6 +59,11 @@ function Router() {
       <Route path="/expedition" component={Expedition} />
       <Route path="/coaches" component={Coaches} />
 
+      {/* Alias routes */}
+      <Route path="/scholarship-application">
+        <Redirect to="/scholarships" />
+      </Route>
+
       {/* Legacy URL redirects from old Salesforce Experience Cloud site */}
       <Route path="/contact-us">
         <Redirect to="/contact" />

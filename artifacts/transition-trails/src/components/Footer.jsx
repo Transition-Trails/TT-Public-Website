@@ -41,7 +41,7 @@ export function Footer() {
               <li><Link href="/programs/explorers-trail" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Explorer's Trail <span className="opacity-60 text-xs ml-1">$47/mo</span></Link></li>
               <li><Link href="/programs/foundations-trail" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Foundations Trail <span className="opacity-60 text-xs ml-1">$997</span></Link></li>
               <li><Link href="/programs/guided-trail" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Guided Trail <span className="opacity-60 text-xs ml-1">$1,497</span></Link></li>
-              <li><Link href="/programs/trail-of-mastery" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Trail of Mastery <span className="opacity-60 text-xs ml-1">$1,997</span></Link></li>
+              <li><Link href="/programs/trail-of-mastery" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Trail of Mastery <span className="opacity-60 text-xs ml-1">Contact us</span></Link></li>
               <li><Link href="/programs/digital-compass" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Digital Compass <span className="opacity-60 text-xs ml-1">$149/mo</span></Link></li>
             </ul>
           </div>

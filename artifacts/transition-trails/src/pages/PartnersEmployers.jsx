@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "wouter";
 import { PageMeta } from "../components/PageMeta";
 
@@ -50,6 +51,28 @@ const VALUE_CARDS = [
 ];
 
 export default function PartnersEmployers() {
+  useEffect(() => {
+    const handlerSrc = "https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js";
+    const callHandler = () => {
+      if (typeof window.jotformEmbedHandler === "function") {
+        window.jotformEmbedHandler(
+          "iframe[id='JotFormIFrame-261876908147066']",
+          "https://form.jotform.com/"
+        );
+      }
+    };
+    const existing = document.querySelector(`script[src="${handlerSrc}"]`);
+    if (existing) {
+      callHandler();
+    } else {
+      const s = document.createElement("script");
+      s.src = handlerSrc;
+      s.async = true;
+      s.onload = callHandler;
+      document.body.appendChild(s);
+    }
+  }, []);
+
   return (
     <div className="flex flex-col min-h-screen">
       <PageMeta
@@ -230,34 +253,28 @@ export default function PartnersEmployers() {
           >
             <h3 className="font-['Poppins'] font-semibold text-[18px] text-white mb-3">Employer Partnership Inquiry</h3>
             <p className="font-['Open_Sans'] text-[14px] leading-[1.65] mb-6" style={{ color: "rgba(255,255,255,0.70)" }}>
-              Tell us about your organization, your Salesforce team, and what you are looking to accomplish. We respond within 3 business days.
+              Fill out the form below and we will be in touch within 3 business days.
             </p>
 
-            {/* Visual-only quick-select pills */}
-            <div className="flex flex-wrap gap-2 mb-7">
-              {["Sponsored seats", "Private cohort", "Workforce development"].map(label => (
-                <span
-                  key={label}
-                  className="font-['Open_Sans'] text-[12px] text-white/70 px-4 py-2 rounded-full cursor-default"
-                  style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.20)" }}
-                >
-                  {label}
-                </span>
-              ))}
-            </div>
+            <iframe
+              id="JotFormIFrame-261876908147066"
+              title="TT Employer Partnership Inquiry"
+              onLoad={() => window.parent.scrollTo(0, 0)}
+              allowTransparency={true}
+              allow="geolocation; microphone; camera; fullscreen; payment"
+              src="https://form.jotform.com/261876908147066"
+              frameBorder="0"
+              style={{
+                minWidth: "100%",
+                maxWidth: "100%",
+                height: "539px",
+                border: "none",
+                display: "block",
+              }}
+              scrolling="no"
+            />
 
-            {/* TODO: Replace mailto with dedicated JotForm employer inquiry form when ready. */}
-            <a
-              href="mailto:hello@transitiontrails.org?subject=Employer%20Partnership%20Inquiry"
-              className="h-[52px] px-7 rounded-[8px] bg-[#F5A623] hover:bg-[#D4890A] text-[#2A2E2C] font-['Poppins'] font-semibold text-[15px] inline-flex items-center justify-center transition-colors w-full mb-3"
-            >
-              Send Us a Message →
-            </a>
-            <p className="font-['Open_Sans'] italic text-[12px] text-center mb-5" style={{ color: "rgba(255,255,255,0.45)" }}>
-              Or email us directly: hello@transitiontrails.org
-            </p>
-
-            <div className="border-t border-white/10 pt-5 text-center">
+            <div className="border-t border-white/10 pt-5 mt-5 text-center">
               <a
                 href="https://calendar.app.google/t1THqhnCWacFyCu2A"
                 target="_blank"

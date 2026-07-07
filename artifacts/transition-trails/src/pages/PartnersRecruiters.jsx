@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "wouter";
 import { PageMeta } from "../components/PageMeta";
 
@@ -70,6 +71,28 @@ const CANDIDATE_PROFILES = [
 ];
 
 export default function PartnersRecruiters() {
+  useEffect(() => {
+    const handlerSrc = "https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js";
+    const callHandler = () => {
+      if (typeof window.jotformEmbedHandler === "function") {
+        window.jotformEmbedHandler(
+          "iframe[id='JotFormIFrame-261877200550050']",
+          "https://form.jotform.com/"
+        );
+      }
+    };
+    const existing = document.querySelector(`script[src="${handlerSrc}"]`);
+    if (existing) {
+      callHandler();
+    } else {
+      const s = document.createElement("script");
+      s.src = handlerSrc;
+      s.async = true;
+      s.onload = callHandler;
+      document.body.appendChild(s);
+    }
+  }, []);
+
   return (
     <div className="flex flex-col min-h-screen">
       <PageMeta
@@ -250,19 +273,26 @@ export default function PartnersRecruiters() {
 
           <div className="bg-white border border-[#E2E4E1] rounded-xl p-10 max-w-[600px] mx-auto text-left">
             <h3 className="font-['Poppins'] font-semibold text-[18px] text-[#2A2E2C] mb-3">Recruiter Partnership Inquiry</h3>
-            <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65] mb-7">
-              Tell us about your firm, the types of roles you place, and what you are looking for in a candidate pipeline partnership. We will respond within 3 business days.
+            <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65] mb-6">
+              Fill out the form below and we will be in touch within 3 business days.
             </p>
-            {/* TODO: Replace mailto link with a dedicated JotForm recruiter inquiry form when ready. Route to partnerships@transitiontrails.org when that inbox is created. */}
-            <a
-              href="mailto:hello@transitiontrails.org?subject=Recruiter%20Partnership%20Inquiry"
-              className="h-[52px] px-7 rounded-[8px] bg-[#2F6B3F] hover:bg-[#1E4A2A] text-white font-['Poppins'] font-semibold text-[15px] inline-flex items-center justify-center transition-colors w-full"
-            >
-              Send Us a Message →
-            </a>
-            <p className="font-['Open_Sans'] italic text-[12px] text-[#4A4F4D] mt-4 text-center">
-              Or email us directly: hello@transitiontrails.org
-            </p>
+            <iframe
+              id="JotFormIFrame-261877200550050"
+              title="TT Recruiter Partnership Inquiry"
+              onLoad={() => window.parent.scrollTo(0, 0)}
+              allowTransparency={true}
+              allow="geolocation; microphone; camera; fullscreen; payment"
+              src="https://form.jotform.com/261877200550050"
+              frameBorder="0"
+              style={{
+                minWidth: "100%",
+                maxWidth: "100%",
+                height: "539px",
+                border: "none",
+                display: "block",
+              }}
+              scrolling="no"
+            />
           </div>
         </div>
       </section>

@@ -1,7 +1,5 @@
+import { useEffect } from "react";
 import { PageMeta } from "../components/PageMeta";
-
-// TODO: Replace all three mailto links with JotForm when expedition intake form is created
-
 
 const STAGES = [
   {
@@ -163,6 +161,28 @@ const CTA_CARDS = [
 ];
 
 export default function Expedition() {
+  useEffect(() => {
+    const handlerSrc = "https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js";
+    const callHandler = () => {
+      if (typeof window.jotformEmbedHandler === "function") {
+        window.jotformEmbedHandler(
+          "iframe[id='JotFormIFrame-261877267351062']",
+          "https://form.jotform.com/"
+        );
+      }
+    };
+    const existing = document.querySelector(`script[src="${handlerSrc}"]`);
+    if (existing) {
+      callHandler();
+    } else {
+      const s = document.createElement("script");
+      s.src = handlerSrc;
+      s.async = true;
+      s.onload = callHandler;
+      document.body.appendChild(s);
+    }
+  }, []);
+
   return (
     <div className="flex flex-col min-h-screen" style={{ background: "#1A1A1A" }}>
       <PageMeta
@@ -227,7 +247,7 @@ export default function Expedition() {
         </div>
 
         <a
-          href="mailto:hello@transitiontrails.org?subject=TT%20Expedition%20Series%20-%20Notify%20Me"
+          href="#interest-form"
           className="h-[56px] px-10 font-['Poppins'] font-bold text-[16px] text-[#2A2E2C] inline-flex items-center justify-center transition-colors mb-4"
           style={{ background: "#F5A623", borderRadius: "12px" }}
           onMouseEnter={e => e.currentTarget.style.background = "#D4890A"}
@@ -442,8 +462,8 @@ export default function Expedition() {
         </div>
       </section>
 
-      {/* SECTION 7: Three CTAs */}
-      <section className="py-20 px-5 md:px-10" style={{ background: "#111111" }}>
+      {/* SECTION 7: Get Involved */}
+      <section id="interest-form" className="py-20 px-5 md:px-10" style={{ background: "#111111" }}>
         <div className="max-w-[1100px] mx-auto">
           <div className="text-center mb-12">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase mb-4" style={{ color: "rgba(255,255,255,0.40)" }}>GET INVOLVED</div>
@@ -451,7 +471,7 @@ export default function Expedition() {
             <p className="font-['Open_Sans'] text-[16px]" style={{ color: "rgba(255,255,255,0.55)" }}>We are building this. Be part of it from the beginning.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-12">
             {CTA_CARDS.map(card => (
               <div
                 key={card.title}
@@ -460,16 +480,35 @@ export default function Expedition() {
               >
                 <div className="text-[32px] mb-4">{card.icon}</div>
                 <h3 className="font-['Poppins'] font-semibold text-[16px] text-white mb-3">{card.title}</h3>
-                <p className="font-['Open_Sans'] text-[14px] leading-[1.65] flex-1 mb-6" style={{ color: "rgba(255,255,255,0.55)" }}>{card.body}</p>
-                <a
-                  href={card.href}
-                  className="h-[48px] px-6 rounded-[8px] font-['Poppins'] font-semibold text-[14px] inline-flex items-center justify-center transition-opacity hover:opacity-90"
-                  style={card.buttonStyle}
-                >
-                  {card.buttonLabel}
-                </a>
+                <p className="font-['Open_Sans'] text-[14px] leading-[1.65] flex-1" style={{ color: "rgba(255,255,255,0.55)" }}>{card.body}</p>
               </div>
             ))}
+          </div>
+
+          <div className="text-center mb-8">
+            <p className="font-['Poppins'] font-semibold text-[18px] text-white">
+              Register your interest below — select all that apply to you.
+            </p>
+          </div>
+
+          <div className="max-w-[760px] mx-auto">
+            <iframe
+              id="JotFormIFrame-261877267351062"
+              title="TT Expedition Series — Express Interest"
+              onLoad={() => window.parent.scrollTo(0, 0)}
+              allowTransparency={true}
+              allow="geolocation; microphone; camera; fullscreen; payment"
+              src="https://form.jotform.com/261877267351062"
+              frameBorder="0"
+              style={{
+                minWidth: "100%",
+                maxWidth: "100%",
+                height: "539px",
+                border: "none",
+                display: "block",
+              }}
+              scrolling="no"
+            />
           </div>
         </div>
       </section>

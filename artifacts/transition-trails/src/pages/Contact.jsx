@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "wouter";
 import { FaLinkedin, FaFacebook } from "react-icons/fa";
 import { CTAButton } from "../components/CTAButton";
@@ -5,6 +6,28 @@ import { PageMeta } from "../components/PageMeta";
 import { LINKS } from "../constants/links";
 
 export default function Contact() {
+  useEffect(() => {
+    const handlerSrc = "https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js";
+    const callHandler = () => {
+      if (typeof window.jotformEmbedHandler === "function") {
+        window.jotformEmbedHandler(
+          "iframe[id='JotFormIFrame-261877821935066']",
+          "https://form.jotform.com/"
+        );
+      }
+    };
+    const existing = document.querySelector(`script[src="${handlerSrc}"]`);
+    if (existing) {
+      callHandler();
+    } else {
+      const s = document.createElement("script");
+      s.src = handlerSrc;
+      s.async = true;
+      s.onload = callHandler;
+      document.body.appendChild(s);
+    }
+  }, []);
+
   return (
     <div className="flex flex-col min-h-screen">
       <PageMeta
@@ -49,48 +72,23 @@ export default function Contact() {
             {/* Contact Form */}
             <div className="bg-white border border-[#E2E4E1] rounded-2xl p-8 shadow-sm">
               <h2 className="font-['Poppins'] font-bold text-[22px] text-[#2A2E2C] mb-6">Send us a message</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <label htmlFor="name" className="block font-['Open_Sans'] text-[14px] font-semibold text-[#2A2E2C] mb-2">Name</label>
-                  <input type="text" id="name" className="w-full bg-[#FAFAF7] border border-[#E2E4E1] rounded-lg px-4 py-3 focus:outline-none focus:border-[#2F6B3F]" placeholder="Jane Doe" />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block font-['Open_Sans'] text-[14px] font-semibold text-[#2A2E2C] mb-2">Email</label>
-                  <input type="email" id="email" className="w-full bg-[#FAFAF7] border border-[#E2E4E1] rounded-lg px-4 py-3 focus:outline-none focus:border-[#2F6B3F]" placeholder="jane@example.com" />
-                </div>
-              </div>
-
-              <div className="mb-6">
-                <label htmlFor="org" className="block font-['Open_Sans'] text-[14px] font-semibold text-[#2A2E2C] mb-2">Organization (Optional)</label>
-                <input type="text" id="org" className="w-full bg-[#FAFAF7] border border-[#E2E4E1] rounded-lg px-4 py-3 focus:outline-none focus:border-[#2F6B3F]" placeholder="Your company or nonprofit" />
-              </div>
-
-              <div className="mb-6">
-                <label htmlFor="subject" className="block font-['Open_Sans'] text-[14px] font-semibold text-[#2A2E2C] mb-2">Subject</label>
-                <select id="subject" className="w-full bg-[#FAFAF7] border border-[#E2E4E1] rounded-lg px-4 py-3 focus:outline-none focus:border-[#2F6B3F] text-[#4A4F4D]">
-                  <option>Program Inquiry</option>
-                  <option>Nonprofit Services</option>
-                  <option>Partnership</option>
-                  <option>Other</option>
-                </select>
-              </div>
-
-              <div className="mb-8">
-                <label htmlFor="message" className="block font-['Open_Sans'] text-[14px] font-semibold text-[#2A2E2C] mb-2">Message</label>
-                <textarea id="message" rows={5} className="w-full bg-[#FAFAF7] border border-[#E2E4E1] rounded-lg px-4 py-3 focus:outline-none focus:border-[#2F6B3F]" placeholder="How can we help?"></textarea>
-              </div>
-
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                <a
-                  href="mailto:hello@transitiontrails.org?subject=Inquiry from Transition Trails Website"
-                  className="inline-flex items-center justify-center bg-[#2F6B3F] hover:bg-[#1E4A2A] text-white font-['Open_Sans'] font-semibold text-[15px] h-[48px] px-8 rounded-lg transition-colors"
-                >
-                  Send via Email
-                </a>
-                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D]">
-                  Opens your email client with your message pre-addressed.
-                </p>
-              </div>
+              <iframe
+                id="JotFormIFrame-261877821935066"
+                title="Contact Transition Trails"
+                onLoad={() => window.parent.scrollTo(0, 0)}
+                allowTransparency={true}
+                allow="geolocation; microphone; camera; fullscreen; payment"
+                src="https://form.jotform.com/261877821935066"
+                frameBorder="0"
+                style={{
+                  minWidth: "100%",
+                  maxWidth: "100%",
+                  height: "539px",
+                  border: "none",
+                  display: "block",
+                }}
+                scrolling="no"
+              />
             </div>
           </div>
 

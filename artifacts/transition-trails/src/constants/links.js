@@ -40,11 +40,11 @@ export const LINKS = {
   linkedin: "https://www.linkedin.com/company/transition-trails",
   facebook: "https://www.facebook.com/TransitionTrailsAcademy",
 
-  // TODO: Replace with payment processor URL (Stripe/PayPal/Salesforce Elevate)
+  // TODO: Replace with live payment processor URL when connected (Stripe/PayPal/Salesforce Elevate)
   donateProcessor: "#",
 
-  // TODO: Replace with contact form embed URL
-  contactForm: "#",
+  // Live JotForm contact form
+  contactForm: "https://form.jotform.com/261877821935066",
 
   // Internal scholarship page
   scholarships: "/scholarships",
@@ -60,6 +60,13 @@ export const LINKS = {
   coaches: "/coaches",
   coachApplication: "https://form.jotform.com/261876005299062",
 
-  // TODO: Replace with JotForm scholarship application URL — new form to be created in future session
-  scholarshipApplication: "#",
+  // Live JotForm scholarship application
+  scholarshipApplication: "https://form.jotform.com/261877164594067",
+
+  // Live JotForm partner inquiry forms
+  recruiterInquiry: "https://form.jotform.com/261877200550050",
+  employerInquiry: "https://form.jotform.com/261876908147066",
+
+  // Live JotForm expedition interest form
+  expeditionInterest: "https://form.jotform.com/261877267351062",
 };
