@@ -13,7 +13,7 @@ export default function ExplorersTrail() {
       />
 
       {/* SECTION 2: Hero */}
-      <section className="bg-gradient-to-br from-[#1E4A2A] via-[#2F6B3F] to-[#7FAFC6] pt-24 pb-20 px-5 md:px-10">
+      <section className="pt-24 pb-20 px-5 md:px-10" style={{ background: 'linear-gradient(135deg, #2F6B3F 0%, #4A8A6E 50%, #7FAFC6 100%)' }}>
         <div className="max-w-[1280px] mx-auto">
 
           {/* Breadcrumb */}
@@ -69,13 +69,13 @@ export default function ExplorersTrail() {
                 <div className="absolute top-3 right-3 bg-[#F5A623] text-[#2A2E2C] font-['Poppins'] font-bold text-[9px] uppercase tracking-wide px-2 py-0.5 rounded-sm">BEST VALUE</div>
                 <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-[#2F6B3F] mb-2">ANNUAL</div>
                 <div className="font-['Poppins'] font-bold text-[32px] text-white leading-none mb-1">$397<span className="font-['Open_Sans'] font-normal text-[16px] text-white/60">/yr</span></div>
-                <div className="font-['Open_Sans'] text-[12px] text-white/55">~$33/mo · 2 months free</div>
+                <div className="font-['Open_Sans'] text-[12px] text-white/55">~$33/mo · Quarterly coaching included</div>
               </div>
               {/* Annual + Coaching */}
               <div className="bg-white/10 border border-[#1E4A2A]/60 rounded-xl p-6 backdrop-blur-sm">
                 <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-white/50 mb-2">ANNUAL + COACHING</div>
                 <div className="font-['Poppins'] font-bold text-[32px] text-white leading-none mb-1">$597<span className="font-['Open_Sans'] font-normal text-[16px] text-white/60">/yr</span></div>
-                <div className="font-['Open_Sans'] text-[12px] text-white/55">2 private sessions included</div>
+                <div className="font-['Open_Sans'] text-[12px] text-white/55">More coaching touchpoints</div>
               </div>
             </div>
           </div>
@@ -190,7 +190,7 @@ export default function ExplorersTrail() {
                 <div className="text-[28px] mb-4">🤝</div>
                 <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-3">Coaching Access</h3>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
-                  Async coaching access for all members. Annual members receive one quarterly coaching session included (4 sessions per year) with a TT Founder or advanced coach. Annual + Coaching members receive 2 private dedicated coaching sessions on top of the quarterly sessions. Additional sessions available at reduced member pricing.
+                  Async coaching access is available to all members. Annual members receive one 1-hour coaching session per quarter — 4 sessions per year — with a TT Founder or advanced TT coach, included with your membership. Annual + Coaching members receive the same quarterly sessions plus one additional dedicated session per quarter, giving you consistent monthly touchpoints with your coach. Additional sessions beyond your plan are available to all members at reduced member pricing.
                 </p>
               </div>
             </div>
@@ -256,7 +256,7 @@ export default function ExplorersTrail() {
                     "Everything in Monthly",
                     "Full content archive — all past Build With Me videos",
                     "All future content as it is created",
-                    "1 quarterly coaching session included (4 per year)",
+                    "1-hour coaching session each quarter (4 sessions per year)",
                     "Reduced pricing on additional coaching sessions",
                     "Priority access to workshop registration",
                   ].map(item => (
@@ -281,14 +281,14 @@ export default function ExplorersTrail() {
               <div className="p-8 flex flex-col flex-1">
                 <h3 className="font-['Poppins'] font-semibold text-[20px] text-[#2A2E2C] mb-2">Annual + Coaching</h3>
                 <div className="font-['Poppins'] font-bold text-[32px] text-[#1E4A2A] leading-none mb-1">$597<span className="font-['Open_Sans'] font-normal text-[15px] text-[#4A4F4D]">/yr</span></div>
-                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] mb-5">For learners who want accountability built in</p>
+                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] mb-5">For members who want more consistent coaching touchpoints</p>
                 <div className="h-px bg-[#E2E4E1] mb-5" />
                 <ul className="space-y-2.5 mb-7 flex-1">
                   {[
-                    "Everything in Annual",
-                    "2 private coaching sessions with a TT Founder or advanced coach",
-                    "Sessions scheduled on your timeline",
-                    "Ideal for career pivoters and anyone who wants dedicated 1:1 support",
+                    "Everything in Annual (including quarterly coaching sessions)",
+                    "Additional coaching sessions beyond the quarterly cadence",
+                    "Coaching sessions with a TT Founder or advanced TT coach",
+                    "Ideal for career pivoters and anyone who wants more consistent 1:1 touchpoints",
                   ].map(item => (
                     <li key={item} className="flex gap-2.5 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
                       <span className="text-[#1E4A2A] shrink-0 font-bold">✓</span>
