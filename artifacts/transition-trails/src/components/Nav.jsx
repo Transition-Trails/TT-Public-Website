@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X, ChevronDown } from "lucide-react";
-import ttBadge from "../assets/TT_Badge_1024px_transparent.png";
+import ttLogoWhite from "../assets/TT_Stacked_White_NoTag.png";
 
 export function Nav() {
   const [location] = useLocation();
@@ -21,17 +21,11 @@ export function Nav() {
     <nav className="bg-[#2F6F7E] h-[80px] sticky top-0 z-[200] w-full border-b border-white/10">
       <div className="max-w-[1280px] h-full mx-auto px-5 md:px-10 flex items-center justify-between">
         <Link href="/" onClick={closeMenu} className="z-50 flex items-center">
-          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-            <img
-              src={ttBadge}
-              alt=""
-              aria-hidden="true"
-              style={{ height: "52px", width: "auto" }}
-            />
-            <span style={{ fontFamily: "Poppins, sans-serif", fontWeight: "600", fontSize: "17px", color: "white", letterSpacing: "-0.01em", lineHeight: 1 }}>
-              Transition Trails
-            </span>
-          </div>
+          <img
+            src={ttLogoWhite}
+            alt="Transition Trails"
+            style={{ height: "48px", width: "auto" }}
+          />
         </Link>
 
         {/* Desktop Nav */}
