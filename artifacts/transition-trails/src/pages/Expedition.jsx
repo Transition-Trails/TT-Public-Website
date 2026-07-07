@@ -2,40 +2,6 @@ import { PageMeta } from "../components/PageMeta";
 
 // TODO: Replace all three mailto links with JotForm when expedition intake form is created
 
-const TRAIL_BOX_ITEMS = [
-  {
-    icon: "🏔️",
-    title: "Expedition Patch",
-    body: "A numbered, collector's edition velcro patch specific to that Expedition. Expedition I · Fall 2027 — the rarest patch in the TT ecosystem. Goes on your Trail Navigator hoodie or journal. Never reissued.",
-  },
-  {
-    icon: "📓",
-    title: "Expedition Notebook",
-    body: "A purpose-built notebook for the weekend — decision logs, discovery notes, architecture sketches. Expedition-specific cover design. Different every time.",
-  },
-  {
-    icon: "🎽",
-    title: "Branded Expedition Gear",
-    body: "Something wearable. Something that photographs. Something that signals you were there. Collector's edition — changes every Expedition.",
-  },
-  {
-    icon: "🥜",
-    title: "Trail Snacks",
-    body: "You are going to be building for 72 hours. We have you covered. Branded where possible. Fuel for the sprint.",
-  },
-  {
-    icon: "🔒",
-    title: "The Sealed Expedition Brief",
-    body: "One document. Sealed. Do not open it until the opening ceremony. Inside: the nonprofit, the challenge, the constraints. Everyone opens it together — and then the clock starts.",
-    amber: true,
-  },
-  {
-    icon: "❓",
-    title: "The Wildcard",
-    body: "Something unexpected. Different every Expedition. Part of the reason people come back.",
-    dim: true,
-  },
-];
 
 const STAGES = [
   {
@@ -291,21 +257,24 @@ export default function Expedition() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-            {TRAIL_BOX_ITEMS.map(item => (
-              <div
-                key={item.title}
-                className="rounded-xl p-7"
-                style={{
-                  background: item.dim ? "rgba(255,255,255,0.03)" : "rgba(255,255,255,0.04)",
-                  border: item.amber ? "1px solid #F5A623" : "1px solid rgba(255,255,255,0.10)",
-                }}
-              >
-                <div className="text-[32px] mb-4">{item.icon}</div>
-                <h3 className="font-['Poppins'] font-semibold text-[15px] text-white mb-2">{item.title}</h3>
-                <p className="font-['Open_Sans'] text-[13px] leading-[1.65]" style={{ color: "rgba(255,255,255,0.55)" }}>{item.body}</p>
-              </div>
-            ))}
+          <div className="max-w-[680px] mx-auto mb-10">
+            <p className="font-['Open_Sans'] text-[17px] leading-[1.7]" style={{ color: "rgba(255,255,255,0.65)" }}>
+              Each Trail Box is a collector's edition — branded, specific to that Expedition, and not available anywhere else. What's inside changes with every event. What doesn't change: the sealed Expedition Brief at the bottom of the box.
+            </p>
+            <p className="font-['Open_Sans'] text-[17px] leading-[1.7] mt-5" style={{ color: "rgba(255,255,255,0.65)" }}>
+              Don't open it until the opening ceremony. Everyone opens it together. That's when the clock starts.
+            </p>
+          </div>
+
+          <div
+            className="max-w-[480px] mx-auto mb-10 text-center rounded-xl px-8 py-6"
+            style={{ background: "rgba(245,166,35,0.08)", border: "1px solid rgba(245,166,35,0.25)" }}
+          >
+            <div className="text-[28px] mb-3">🔒</div>
+            <h3 className="font-['Poppins'] font-semibold text-[16px] text-white mb-2">The Sealed Expedition Brief</h3>
+            <p className="font-['Open_Sans'] text-[13px] leading-[1.65]" style={{ color: "rgba(255,255,255,0.55)" }}>
+              Inside: the nonprofit. The challenge. The constraints. Opens at the ceremony — and then the clock starts.
+            </p>
           </div>
 
           {/* Social sharing callout */}
