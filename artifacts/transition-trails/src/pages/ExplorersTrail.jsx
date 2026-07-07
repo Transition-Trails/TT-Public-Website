@@ -69,13 +69,13 @@ export default function ExplorersTrail() {
                 <div className="absolute top-3 right-3 bg-[#F5A623] text-[#2A2E2C] font-['Poppins'] font-bold text-[9px] uppercase tracking-wide px-2 py-0.5 rounded-sm">BEST VALUE</div>
                 <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-[#2F6B3F] mb-2">ANNUAL</div>
                 <div className="font-['Poppins'] font-bold text-[32px] text-white leading-none mb-1">$397<span className="font-['Open_Sans'] font-normal text-[16px] text-white/60">/yr</span></div>
-                <div className="font-['Open_Sans'] text-[12px] text-white/55">~$33/mo · Quarterly coaching included</div>
+                <div className="font-['Open_Sans'] text-[12px] text-white/55">~$33/mo · Full content archive</div>
               </div>
               {/* Annual + Coaching */}
               <div className="bg-white/10 border border-[#1E4A2A]/60 rounded-xl p-6 backdrop-blur-sm">
                 <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-white/50 mb-2">ANNUAL + COACHING</div>
                 <div className="font-['Poppins'] font-bold text-[32px] text-white leading-none mb-1">$597<span className="font-['Open_Sans'] font-normal text-[16px] text-white/60">/yr</span></div>
-                <div className="font-['Open_Sans'] text-[12px] text-white/55">More coaching touchpoints</div>
+                <div className="font-['Open_Sans'] text-[12px] text-white/55">Quarterly coaching included</div>
               </div>
             </div>
           </div>
@@ -190,7 +190,9 @@ export default function ExplorersTrail() {
                 <div className="text-[28px] mb-4">🤝</div>
                 <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-3">Coaching Access</h3>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
-                  Async coaching access is available to all members. Annual members receive one 1-hour coaching session per quarter — 4 sessions per year — with a TT Founder or advanced TT coach, included with your membership. Annual + Coaching members receive the same quarterly sessions plus one additional dedicated session per quarter, giving you consistent monthly touchpoints with your coach. Additional sessions beyond your plan are available to all members at reduced member pricing.
+                  Async coaching access is available to all members — ask questions and get guidance from the TT team through the community.
+
+                  Annual + Coaching members receive a quarterly coaching session included with their membership, with a TT Founder or advanced TT coach. Additional sessions are available to all members at reduced member pricing.
                 </p>
               </div>
             </div>
@@ -216,7 +218,7 @@ export default function ExplorersTrail() {
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] mb-5">Cancel or pause anytime</p>
                 <div className="h-px bg-[#E2E4E1] mb-5" />
                 <ul className="space-y-2.5 mb-5 flex-1">
-                  {["Private Slack community", "Members-only workshops and webinars (free or reduced pricing)", "Current month's Build With Me content", "Async coaching access", "Discounts on TT coaching sessions"].map(item => (
+                  {["Private Slack community", "Members-only workshops and webinars (free or reduced pricing)", "Current month's Build With Me content", "Async coaching access (message-based, no live sessions)", "Discounts on TT coaching sessions"].map(item => (
                     <li key={item} className="flex gap-2.5 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
                       <span className="text-[#7FAFC6] shrink-0 font-bold">✓</span>
                       {item}
@@ -225,7 +227,7 @@ export default function ExplorersTrail() {
                 </ul>
                 <div className="h-px bg-[#E2E4E1] mb-4" />
                 <ul className="space-y-2 mb-7">
-                  {["Content archive (past videos)", "Quarterly coaching session", "Private coaching sessions"].map(item => (
+                  {["Content archive (past videos)", "Quarterly coaching session"].map(item => (
                     <li key={item} className="flex gap-2.5 font-['Open_Sans'] text-[12px] text-[#8C8882]">
                       <span className="shrink-0">×</span>
                       {item}
@@ -251,20 +253,26 @@ export default function ExplorersTrail() {
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] mb-1">~$33/mo · 2 months free vs monthly</p>
                 <p className="font-['Open_Sans'] text-[12px] text-[#4A4F4D] mb-5">Pay once, access all year</p>
                 <div className="h-px bg-[#E2E4E1] mb-5" />
-                <ul className="space-y-2.5 mb-7 flex-1">
+                <ul className="space-y-2.5 mb-5 flex-1">
                   {[
                     "Everything in Monthly",
                     "Full content archive — all past Build With Me videos",
                     "All future content as it is created",
-                    "1-hour coaching session each quarter (4 sessions per year)",
-                    "Reduced pricing on additional coaching sessions",
                     "Priority access to workshop registration",
+                    "Discounts on additional TT coaching sessions",
                   ].map(item => (
                     <li key={item} className="flex gap-2.5 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
                       <span className="text-[#2F6B3F] shrink-0 font-bold">✓</span>
                       {item}
                     </li>
                   ))}
+                </ul>
+                <div className="h-px bg-[#E2E4E1] mb-4" />
+                <ul className="space-y-2 mb-7">
+                  <li className="flex gap-2.5 font-['Open_Sans'] text-[12px] text-[#8C8882]">
+                    <span className="shrink-0">×</span>
+                    Quarterly coaching session
+                  </li>
                 </ul>
                 <a
                   href={LINKS.waitlist}
@@ -285,10 +293,10 @@ export default function ExplorersTrail() {
                 <div className="h-px bg-[#E2E4E1] mb-5" />
                 <ul className="space-y-2.5 mb-7 flex-1">
                   {[
-                    "Everything in Annual (including quarterly coaching sessions)",
-                    "Additional coaching sessions beyond the quarterly cadence",
-                    "Coaching sessions with a TT Founder or advanced TT coach",
-                    "Ideal for career pivoters and anyone who wants more consistent 1:1 touchpoints",
+                    "Everything in Annual",
+                    "Quarterly coaching session included",
+                    "With a TT Founder or advanced TT coach",
+                    "Reduced pricing on additional sessions beyond the quarterly cadence",
                   ].map(item => (
                     <li key={item} className="flex gap-2.5 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
                       <span className="text-[#1E4A2A] shrink-0 font-bold">✓</span>
@@ -307,7 +315,7 @@ export default function ExplorersTrail() {
           </div>
 
           <p className="font-['Open_Sans'] italic text-[12px] text-[#4A4F4D] text-center mt-8">
-            Guided Trail graduates receive 1 year of Annual membership included with program completion. Trail of Mastery graduates receive Lifetime Annual access.
+            Guided Trail graduates receive 1 year of Annual membership included with program completion. Trail of Mastery graduates receive Lifetime Annual access. Coaching sessions are with a TT Founder or advanced TT coach.
           </p>
         </div>
       </section>
