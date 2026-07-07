@@ -24,7 +24,7 @@ export default function FoundationsTrail() {
               The certification is the door. The Foundations Trail is how you prove you can walk through it.
             </p>
             <p className="font-['Open_Sans'] text-[18px] text-white/80 leading-[1.6] mb-8">
-              You're working toward your Salesforce Administrator certification — and you want to come out the other side with more than a test result. The Foundations Trail is a 12-week guided practicum: Build With Me videos walk you through each configuration step, Penny AI connects every decision to the exam domain it covers, and you finish with a complete Salesforce implementation for Horizon Community Hub that employers can actually review. This is not a study guide. It's the portfolio that proves you're ready.
+              You're working toward your Salesforce Administrator certification — and you want to come out the other side with more than a test result. The Foundations Trail is a 12-week guided practicum: Build With Me videos walk you through each configuration step, every task and module is directly aligned to the topics and domains Salesforce tests you on, and you finish with a complete Salesforce implementation for Horizon Community Hub that employers can actually review. This is not a study guide. It's the portfolio that proves you're ready.
             </p>
             <div className="inline-flex items-center gap-3 px-4 py-3 rounded-lg" style={{ background: "rgba(127,175,198,0.15)", border: "1px solid rgba(127,175,198,0.4)" }}>
               <Check className="w-5 h-5 shrink-0" style={{ color: "#7FAFC6" }} />
@@ -45,7 +45,7 @@ export default function FoundationsTrail() {
             <ul className="space-y-2 mb-6">
               {[
                 "12 weeks · 3 Sprints × 4 weeks",
-                "Build With Me videos + Penny AI",
+                "Build With Me videos + AI-assisted learning",
                 "Weekly Office Hours included",
                 "2 private coaching sessions",
                 "Horizon Community Hub capstone",
@@ -90,9 +90,9 @@ export default function FoundationsTrail() {
             <div className="bg-white border border-[#E2E4E1] rounded-xl p-8 flex gap-5">
               <Sparkles className="w-8 h-8 text-[#2F6B3F] shrink-0" />
               <div>
-                <h3 className="font-['Poppins'] font-bold text-[18px] text-[#2A2E2C] mb-2">Penny AI Access</h3>
+                <h3 className="font-['Poppins'] font-bold text-[18px] text-[#2A2E2C] mb-2">AI-Assisted Learning Tools</h3>
                 <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.6]">
-                  Our custom Salesforce-trained AI assistant that helps unblock you when you're stuck on a configuration.
+                  AI-assisted learning support to help you work through the material and stay unblocked throughout the 12 weeks.
                 </p>
               </div>
             </div>
