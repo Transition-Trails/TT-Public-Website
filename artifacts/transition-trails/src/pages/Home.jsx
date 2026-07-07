@@ -255,7 +255,7 @@ export default function Home() {
               <ul className="flex flex-col gap-3 font-['Open_Sans'] text-[14px] text-[#4A4F4D] mb-8 flex-grow">
                 <li className="flex gap-2"><Check className="w-4 h-4 text-[#2F6F7E] shrink-0 mt-0.5" /> All Entry features</li>
                 <li className="flex gap-2 font-semibold text-[#2A2E2C]"><Check className="w-4 h-4 text-[#2F6F7E] shrink-0 mt-0.5" /> Project support (mid-level)</li>
-                <li className="flex gap-2"><Check className="w-4 h-4 text-[#2F6F7E] shrink-0 mt-0.5" /> Penny AI access</li>
+                <li className="flex gap-2"><Check className="w-4 h-4 text-[#2F6F7E] shrink-0 mt-0.5" /> AI-assisted learning tools</li>
               </ul>
               <CTAButton href={LINKS.nonprofitAssessment} className="w-full">
                 Book Free Assessment

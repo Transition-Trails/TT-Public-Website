@@ -62,20 +62,20 @@ export default function ExplorersTrail() {
               <div className="bg-white/10 border border-[#7FAFC6]/40 rounded-xl p-6 backdrop-blur-sm">
                 <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-[#7FAFC6] mb-2">MONTHLY</div>
                 <div className="font-['Poppins'] font-bold text-[32px] text-white leading-none mb-1">$47<span className="font-['Open_Sans'] font-normal text-[16px] text-white/60">/mo</span></div>
-                <div className="font-['Open_Sans'] text-[12px] text-white/55">Cancel anytime</div>
+                <div className="font-['Open_Sans'] text-[12px] text-white/55">Trail Talk · Build Challenges · Community</div>
               </div>
               {/* Annual */}
               <div className="bg-white/10 border-2 border-[#2F6B3F] rounded-xl p-6 backdrop-blur-sm relative">
                 <div className="absolute top-3 right-3 bg-[#F5A623] text-[#2A2E2C] font-['Poppins'] font-bold text-[9px] uppercase tracking-wide px-2 py-0.5 rounded-sm">BEST VALUE</div>
                 <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-[#2F6B3F] mb-2">ANNUAL</div>
                 <div className="font-['Poppins'] font-bold text-[32px] text-white leading-none mb-1">$397<span className="font-['Open_Sans'] font-normal text-[16px] text-white/60">/yr</span></div>
-                <div className="font-['Open_Sans'] text-[12px] text-white/55">~$33/mo · Full content archive</div>
+                <div className="font-['Open_Sans'] text-[12px] text-white/55">Full archive · ~$33/mo · 2 months free</div>
               </div>
               {/* Annual + Coaching */}
               <div className="bg-white/10 border border-[#1E4A2A]/60 rounded-xl p-6 backdrop-blur-sm">
                 <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-white/50 mb-2">ANNUAL + COACHING</div>
                 <div className="font-['Poppins'] font-bold text-[32px] text-white leading-none mb-1">$597<span className="font-['Open_Sans'] font-normal text-[16px] text-white/60">/yr</span></div>
-                <div className="font-['Open_Sans'] text-[12px] text-white/55">Quarterly coaching included</div>
+                <div className="font-['Open_Sans'] text-[12px] text-white/55">Everything Annual + quarterly coaching</div>
               </div>
             </div>
           </div>
@@ -196,6 +196,45 @@ export default function ExplorersTrail() {
                 </p>
               </div>
             </div>
+
+            {/* Feature 5 */}
+            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
+              <div className="h-1 bg-[#7FAFC6]" />
+              <div className="p-7 flex flex-col flex-1">
+                <div className="text-[28px] mb-3">🎙️</div>
+                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">Monthly Trail Talk</h3>
+                <span className="inline-block bg-[#E0F0F7] text-[#7FAFC6] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">ALL MEMBERS · MONTHLY</span>
+                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
+                  A monthly community session for every Explorer's Trail member. Each Trail Talk has a discussion topic, open Q&A, and time for community building — with the TT team and fellow members. Show up, ask questions, share what you're working on, and connect with people who are on the same path.
+                </p>
+              </div>
+            </div>
+
+            {/* Feature 6 */}
+            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
+              <div className="h-1 bg-[#2F6B3F]" />
+              <div className="p-7 flex flex-col flex-1">
+                <div className="text-[28px] mb-3">⚡</div>
+                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">Weekly Build Challenges</h3>
+                <span className="inline-block bg-[#E6F3EA] text-[#2F6B3F] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">ALL MEMBERS · WEEKLY</span>
+                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
+                  Every week, a new build challenge drops in the community. Short, focused, skill-specific — designed to keep your Salesforce skills sharp between sessions and give you something to share in the Slack community. Challenges range across all skill levels so there is always something relevant, whether you are just starting or preparing for an advanced role.
+                </p>
+              </div>
+            </div>
+
+            {/* Feature 7 */}
+            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
+              <div className="h-1 bg-[#7FAFC6]" />
+              <div className="p-7 flex flex-col flex-1">
+                <div className="text-[28px] mb-3">👕</div>
+                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">Member Merchandise Discounts</h3>
+                <span className="inline-block bg-[#E0F0F7] text-[#7FAFC6] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">ALL MEMBERS · EXCLUSIVE</span>
+                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
+                  Explorer's Trail members get exclusive access to discounts on Transition Trails merchandise. Member-only pricing on trail gear, apparel, and community items. A small but real perk of being part of the community.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -218,7 +257,7 @@ export default function ExplorersTrail() {
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] mb-5">Cancel or pause anytime</p>
                 <div className="h-px bg-[#E2E4E1] mb-5" />
                 <ul className="space-y-2.5 mb-5 flex-1">
-                  {["Private Slack community", "Members-only workshops and webinars (free or reduced pricing)", "Current month's Build With Me content", "Async coaching access (message-based, no live sessions)", "Discounts on TT coaching sessions"].map(item => (
+                  {["Private Slack community", "Monthly Trail Talk (discussion, Q&A, community building)", "Weekly Build Challenges", "Members-only workshops and webinars (free or reduced pricing)", "Current month's Build With Me content", "Async coaching access (message-based, no live sessions)", "Member merchandise discounts"].map(item => (
                     <li key={item} className="flex gap-2.5 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
                       <span className="text-[#7FAFC6] shrink-0 font-bold">✓</span>
                       {item}
@@ -328,8 +367,11 @@ export default function ExplorersTrail() {
           <p className="font-['Open_Sans'] text-[16px] text-white/75 leading-[1.65] max-w-[680px] mb-12">
             The Explorer's Trail Slack community connects every tier of the TT ecosystem in one place: people who are just starting, people who are mid-program, graduates who are now working in Salesforce, and the TT team itself.
           </p>
-          <p className="font-['Open_Sans'] text-[16px] text-white/75 leading-[1.65] max-w-[680px] mb-12">
+          <p className="font-['Open_Sans'] text-[16px] text-white/75 leading-[1.65] max-w-[680px] mb-6">
             Ask a question on a Tuesday. Get an answer from someone who was in your position six months ago — and now has the role you are working toward. That is not something a video course can replicate.
+          </p>
+          <p className="font-['Open_Sans'] text-[16px] text-white/75 leading-[1.65] max-w-[680px] mb-12">
+            Two things happen every week and every month without fail: Weekly Build Challenges keep your skills sharp and give the community something to rally around. Monthly Trail Talks bring the whole community together — a topic, a Q&A, and an hour of genuine connection with people who are working toward the same things you are.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[

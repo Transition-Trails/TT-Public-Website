@@ -46,7 +46,7 @@ export default function DigitalCompass() {
                 <li className="flex gap-3"><Check className="w-5 h-5 text-[#2F6F7E] shrink-0" /> Weekly Office Hours</li>
                 <li className="flex gap-3"><Check className="w-5 h-5 text-[#2F6F7E] shrink-0" /> TrailKit Library access</li>
                 <li className="flex gap-3"><Check className="w-5 h-5 text-[#2F6F7E] shrink-0" /> Trail OS Installation</li>
-                <li className="flex gap-3"><Check className="w-5 h-5 text-[#2F6F7E] shrink-0" /> Penny AI</li>
+                <li className="flex gap-3"><Check className="w-5 h-5 text-[#2F6F7E] shrink-0" /> AI-assisted support tools</li>
               </ul>
               <div className="text-[13px] text-[#4A4F4D] text-center bg-[#FAFAF7] py-2 rounded-lg">Annual: $1,490/yr (2 mos free)</div>
             </div>
