@@ -3,17 +3,17 @@ import { LINKS } from "../constants/links";
 
 export function FounderCard({ founder }) {
   const photoUrl = FOUNDER_PHOTOS[founder.key];
+  const bioLines = Array.isArray(founder.bio) ? founder.bio : [founder.bio];
 
   return (
-    <div className="bg-[#2E3330] border border-white/10 rounded-xl w-[296px] h-[440px] flex flex-col relative overflow-hidden shrink-0">
-      {/* Top Accent Bar */}
+    <div className="bg-[#2E3330] border border-white/10 rounded-xl w-[296px] flex flex-col relative overflow-hidden shrink-0">
       <div className="h-1 w-full" style={{ backgroundColor: founder.accent }} />
-      
-      <div className="p-6 flex flex-col h-full items-center text-center">
+
+      <div className="p-6 flex flex-col items-center text-center">
         {photoUrl ? (
-          <img 
-            src={photoUrl} 
-            alt={founder.name} 
+          <img
+            src={photoUrl}
+            alt={founder.name}
             className="w-16 h-16 rounded-full object-cover mb-4"
           />
         ) : (
@@ -33,26 +33,44 @@ export function FounderCard({ founder }) {
           {founder.role}
         </div>
 
-        <p className="font-['Open_Sans'] text-xs text-white/65 leading-[1.6] mb-auto">
-          {founder.bio}
-        </p>
+        <div className="space-y-2 mb-4 text-left w-full">
+          {bioLines.map((line, i) => (
+            <p key={i} className="font-['Open_Sans'] text-xs text-white/65 leading-[1.6]">
+              {line}
+            </p>
+          ))}
+        </div>
 
-        <div className="flex flex-wrap gap-2 justify-center mt-4">
+        <div className="flex flex-wrap gap-1 justify-center mt-2 mb-3 w-full">
           {founder.skills.map((skill, i) => (
-            <span key={i} className="px-2 py-1 bg-white/10 text-white/70 rounded text-[10px] font-['Open_Sans']">
+            <span
+              key={i}
+              className="font-['Open_Sans'] font-semibold text-[11px] rounded inline-flex items-center"
+              style={{ color: "#2F6B3F", background: "#E6F3EA", padding: "3px 10px", margin: "2px" }}
+            >
               {skill}
             </span>
           ))}
         </div>
 
+        {founder.contactEmail && (
+          <a
+            href={`mailto:${founder.contactEmail}`}
+            className="mt-2 font-['Open_Sans'] font-semibold text-[12px] hover:underline transition-colors"
+            style={{ color: "#7FAFC6" }}
+          >
+            {founder.contactEmail}
+          </a>
+        )}
+
         {founder.calendarLink && (
-          <a 
+          <a
             href={LINKS.angelaCalendar}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 w-full py-2 px-4 border border-[#F5A623] text-[#F5A623] font-['Open_Sans'] font-semibold text-xs rounded-lg hover:bg-[#F5A623]/10 transition-colors"
+            className="mt-3 w-full py-2 px-4 border border-[#F5A623] text-[#F5A623] font-['Open_Sans'] font-semibold text-xs rounded-lg hover:bg-[#F5A623]/10 transition-colors text-center"
           >
-            Schedule Time With Me
+            Schedule Time With Me →
           </a>
         )}
       </div>

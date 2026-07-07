@@ -127,13 +127,13 @@ export default function Donate() {
           <div className="bg-[#E0F0F3] border border-[#2F6F7E]/20 rounded-2xl p-10 max-w-[800px] mb-20 w-full relative">
             <div className="absolute top-4 left-6 font-['Poppins'] text-[80px] text-[#2F6F7E]/20 leading-none select-none">"</div>
             <p className="font-['Poppins'] font-medium text-[18px] text-[#1a3440] leading-[1.65] mb-6 relative z-10">
-              Before Digital Compass, our Salesforce org was inherited from a previous consultant and no one on our team fully understood it. We had data we couldn't trust and reports that made no sense. The Transition Trails team didn't just fix it — they taught our staff how to maintain it going forward. For a nonprofit our size, that kind of ongoing technical support was completely unthinkable at any price we could afford before.
+              Transition Trails Salesforce Experts go beyond! After working with the team, our productivity and data accuracy soared — and we felt supported every step of the way.
             </p>
             <div className="flex items-center gap-4 relative z-10">
               <div className="w-[44px] h-[44px] rounded-full bg-[#2F6F7E] text-white flex items-center justify-center font-['Poppins'] font-bold text-[15px]">HP</div>
               <div>
                 <div className="font-['Poppins'] font-semibold text-[14px] text-[#2A2E2C]">Hartford Promises</div>
-                <div className="font-['Open_Sans'] text-[13px] text-[#4A4F4D]">Digital Compass Member · Hartford, CT</div>
+                <div className="font-['Open_Sans'] text-[13px] text-[#4A4F4D]">Nonprofit Partner · Digital Compass Member · Hartford, CT</div>
               </div>
             </div>
           </div>

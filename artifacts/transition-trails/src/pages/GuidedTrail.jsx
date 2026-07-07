@@ -269,6 +269,37 @@ export default function GuidedTrail() {
         </div>
       </section>
 
+      {/* Cohort 0 Testimonials */}
+      <section className="bg-white py-16 px-5 md:px-10 border-y border-[#E2E4E1]">
+        <div className="max-w-[1024px] mx-auto">
+          <div className="mb-10">
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-3">FROM COHORT 0</div>
+            <h2 className="font-['Poppins'] font-bold text-[24px] text-[#2A2E2C] mb-2">In their own words.</h2>
+            <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] italic">
+              From our December 2025 retrospective — the cohort that shaped the Guided Trail program.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="bg-white border border-[#E2E4E1] rounded-xl p-7 relative" style={{ borderLeft: "5px solid #2F6B3F" }}>
+              <div className="absolute top-3 left-4 font-['Poppins'] text-[80px] leading-none select-none" style={{ color: "rgba(47,107,63,0.15)" }}>"</div>
+              <p className="font-['Poppins'] font-medium italic text-[16px] text-[#2A2E2C] leading-[1.6] mb-4 relative z-10">
+                The hands-on experience and the team environment were what I valued most. Working on a real project made everything click in a way that self-study never could.
+              </p>
+              <div className="font-['Open_Sans'] font-semibold text-[14px] text-[#2F6B3F]">Cohort 0 Participant</div>
+              <div className="font-['Open_Sans'] text-[12px] text-[#8C8882]">Guided Trail · Dec. 2025 Retrospective</div>
+            </div>
+            <div className="bg-white border border-[#E2E4E1] rounded-xl p-7 relative" style={{ borderLeft: "5px solid #2F6B3F" }}>
+              <div className="absolute top-3 left-4 font-['Poppins'] text-[80px] leading-none select-none" style={{ color: "rgba(47,107,63,0.15)" }}>"</div>
+              <p className="font-['Poppins'] font-medium italic text-[16px] text-[#2A2E2C] leading-[1.6] mb-4 relative z-10">
+                This program teaches you how to think like a professional — not just how to pass a test. The coaching and real-world exposure gave me a completely different kind of confidence.
+              </p>
+              <div className="font-['Open_Sans'] font-semibold text-[14px] text-[#2F6B3F]">Cohort 0 Participant</div>
+              <div className="font-['Open_Sans'] text-[12px] text-[#8C8882]">Guided Trail · Dec. 2025 Retrospective</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-[#F5A623] py-16 px-5 text-center">
         <div className="max-w-[800px] mx-auto">
           <h2 className="font-['Poppins'] font-bold text-[36px] text-[#2A2E2C] mb-6">Ready to cross the gap?</h2>

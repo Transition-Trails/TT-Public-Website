@@ -478,6 +478,34 @@ export default function DigitalCompass() {
         </div>
       </section>
 
+      {/* Hartford Promises Testimonial */}
+      <section className="bg-white px-5 md:px-10 py-12">
+        <div className="max-w-[1100px] mx-auto">
+          <div
+            className="relative"
+            style={{
+              background: "#E0F0F3",
+              borderLeft: "5px solid #2F6F7E",
+              borderRadius: "12px",
+              padding: "32px 40px",
+            }}
+          >
+            <div
+              className="absolute font-['Poppins'] leading-none select-none"
+              style={{ top: "12px", left: "20px", fontSize: "80px", color: "rgba(47,111,126,0.20)" }}
+            >"</div>
+            <p
+              className="font-['Poppins'] font-medium italic leading-[1.6] mb-5 relative z-10 max-w-[840px]"
+              style={{ fontSize: "18px", color: "#1E4F5C" }}
+            >
+              Transition Trails Salesforce Experts go beyond! After working with the team, our productivity and data accuracy soared — and we felt supported every step of the way.
+            </p>
+            <div className="font-['Open_Sans'] font-semibold text-[14px] text-[#2F6F7E]">Hartford Promises</div>
+            <div className="font-['Open_Sans'] text-[12px] text-[#4A4F4D]">Nonprofit Partner · Digital Compass Member · Hartford, CT</div>
+          </div>
+        </div>
+      </section>
+
       {/* SECTION 8: Free Assessment */}
       <section className="bg-[#2A2E2C] py-20 px-5 md:px-10">
         <div className="max-w-[1100px] mx-auto">
