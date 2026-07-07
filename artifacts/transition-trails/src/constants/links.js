@@ -45,4 +45,10 @@ export const LINKS = {
 
   // TODO: Replace with contact form embed URL
   contactForm: "#",
+
+  // Internal scholarship page
+  scholarships: "/scholarships",
+
+  // TODO: Replace with JotForm scholarship application URL — new form to be created in future session
+  scholarshipApplication: "#",
 };

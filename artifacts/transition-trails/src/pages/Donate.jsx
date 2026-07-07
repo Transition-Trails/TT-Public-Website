@@ -23,13 +23,15 @@ export default function Donate() {
       <section className="bg-[#FAFAF7] py-20 px-5">
         <div className="max-w-[1024px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-            <div className="bg-white border border-[#E2E4E1] p-8 rounded-2xl">
+            <div className="bg-white border border-[#2F6B3F]/30 p-8 rounded-2xl">
               <GraduationCap className="w-8 h-8 text-[#2F6B3F] mb-4" />
-              <h3 className="font-['Poppins'] font-bold text-[20px] text-[#2A2E2C] mb-3">Fund a Scholarship Seat</h3>
-              <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.6]">
-                $497 covers one Foundations Trail scholarship.<br/>
-                $1,547 covers one Guided Trail scholarship.
+              <h3 className="font-['Poppins'] font-bold text-[20px] text-[#2A2E2C] mb-3">Fund a Trail Forward Scholarship Seat</h3>
+              <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.6] mb-4">
+                $1,547 covers the full cost of one Guided Trail seat for a learner from a historically underserved population in technology. Veterans, women, underrepresented minorities, individuals facing economic barriers — your gift puts one person in that seat.
               </p>
+              <a href="/scholarships" className="font-['Open_Sans'] font-semibold text-[13px] text-[#2F6B3F] hover:underline">
+                Learn about the Trail Forward Scholarship →
+              </a>
             </div>
 
             <div className="bg-white border border-[#E2E4E1] p-8 rounded-2xl">

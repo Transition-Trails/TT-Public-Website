@@ -137,6 +137,18 @@ export default function Programs() {
         </div>
       </section>
 
+      <div className="bg-[#E6F3EA] border-y border-[#2F6B3F]/20 py-4 px-5 md:px-10">
+        <div className="max-w-[1280px] mx-auto flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-center sm:text-left">
+          <span className="text-[18px]">🏅</span>
+          <p className="font-['Open_Sans'] text-[13px] text-[#2A2E2C] leading-[1.6]">
+            <span className="font-semibold text-[#1E4A2A]">The Trail Forward Scholarship</span> — one fully funded Guided Trail seat per cohort for historically underserved populations in technology. No membership required to apply.
+          </p>
+          <a href="/scholarships" className="font-['Open_Sans'] font-semibold text-[13px] text-[#2F6B3F] hover:underline whitespace-nowrap shrink-0">
+            Learn more →
+          </a>
+        </div>
+      </div>
+
       <section className="bg-[#FAFAF7] py-20 px-5">
         <div className="max-w-[1280px] mx-auto">
           <div className="flex gap-6 overflow-x-auto pb-8 items-end snap-x snap-mandatory">

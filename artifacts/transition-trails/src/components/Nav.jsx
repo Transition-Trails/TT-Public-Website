@@ -51,6 +51,8 @@ export function Nav() {
                 <div className="h-px bg-[#E2E4E1] my-1" />
                 <Link href="/programs/digital-compass" className="block px-4 py-3 text-sm font-['Open_Sans'] text-[#4A4F4D] hover:bg-[#FAFAF7] hover:text-[#2F6B3F]">Digital Compass (Nonprofits)</Link>
                 <div className="h-px bg-[#E2E4E1] my-1" />
+                <Link href="/scholarships" className="block px-4 py-3 text-sm font-['Open_Sans'] font-semibold text-[#2F6B3F] hover:bg-[#FAFAF7]">🏅 Trail Forward Scholarship</Link>
+                <div className="h-px bg-[#E2E4E1] my-1" />
                 <Link href="/nonprofit-assessment" className="block px-4 py-3 text-sm font-['Open_Sans'] font-semibold text-[#2F6F7E] hover:bg-[#FAFAF7]">Free Nonprofit Assessment →</Link>
                 <div className="h-px bg-[#E2E4E1] my-1" />
                 <Link href="/waitlist" className="block px-4 py-3 text-sm font-['Open_Sans'] font-semibold text-[#D4890A] hover:bg-[#FAFAF7]">Join the Waitlist →</Link>
@@ -104,6 +106,7 @@ export function Nav() {
               <Link href="/programs/trail-of-mastery" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-base py-1">Trail of Mastery</Link>
               <Link href="/programs/digital-compass" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-base py-1">Digital Compass</Link>
               <div className="h-px bg-white/10 my-1" />
+              <Link href="/scholarships" onClick={closeMenu} className="text-[#6BBF85] font-['Open_Sans'] font-semibold text-base py-1">🏅 Trail Forward Scholarship</Link>
               <Link href="/nonprofit-assessment" onClick={closeMenu} className="text-[#7FCEE0] font-['Open_Sans'] font-semibold text-base py-1">Free Nonprofit Assessment →</Link>
               <Link href="/waitlist" onClick={closeMenu} className="text-[#F5A623] font-['Open_Sans'] font-semibold text-base py-1">Join the Waitlist →</Link>
             </div>

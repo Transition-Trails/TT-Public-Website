@@ -28,8 +28,12 @@ export default function About() {
               To assist people in transitioning to the digital economy through education, mentoring and training. Our primary focus is within the Salesforce ecosystem, providing a system of online and real world education and experience.
             </p>
           </div>
-          <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D]">
+          <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] mb-5">
             Registered mission statement · Transition Trails · EIN 88-2746412 · 501(c)(3) effective May 15, 2022
+          </p>
+          <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.65]">
+            The Trail Forward Scholarship — one fully funded Guided Trail seat per cohort — is a direct expression of this mission.{" "}
+            <Link href="/scholarships" className="text-[#2F6B3F] font-semibold hover:underline">Learn more →</Link>
           </p>
         </div>
       </section>
