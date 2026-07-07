@@ -6,9 +6,8 @@ export function Footer() {
     <footer className="bg-[#2F6F7E] pt-16 px-5 md:px-10 mt-auto">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12 mb-16">
         <div className="max-w-xs">
-          {/* TODO: Swap to TT_Stacked_White_NoTag.png when available */}
-          <Link href="/" className="font-['Poppins'] font-bold text-xl text-white block mb-4">
-            Transition Trails
+          <Link href="/" className="block mb-4">
+            <img src="/logos/TT_Stacked_White_NoTag.png" alt="Transition Trails" style={{ height: "48px", width: "auto" }} />
           </Link>
           <p className="font-['Open_Sans'] text-sm text-white/70">
             Empowering nonprofits and building digital careers — Together.

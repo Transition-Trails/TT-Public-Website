@@ -20,9 +20,8 @@ export function Nav() {
     <nav className="bg-[#2F6F7E] h-[80px] sticky top-0 z-[200] w-full border-b border-white/10">
       <div className="max-w-[1280px] h-full mx-auto px-5 md:px-10 flex items-center justify-between">
         {/* Logo */}
-        {/* TODO: Swap to TT_Stacked_White_NoTag.png when available */}
-        <Link href="/" onClick={closeMenu} className="font-['Poppins'] font-semibold text-[18px] text-white z-50">
-          Transition Trails
+        <Link href="/" onClick={closeMenu} className="z-50 flex items-center">
+          <img src="/logos/TT_Stacked_White_NoTag.png" alt="Transition Trails" style={{ height: "40px", width: "auto" }} />
         </Link>
 
         {/* Desktop Nav */}

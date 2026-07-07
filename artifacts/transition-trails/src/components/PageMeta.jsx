@@ -40,10 +40,13 @@ export function PageMeta({ title, description, path = "/" }) {
     upsertMeta("property", "og:type", "website");
     upsertMeta("property", "og:site_name", SITE_NAME);
 
+    upsertMeta("property", "og:image", `${DOMAIN}/logos/TT_Badge_1024px_transparent.png`);
+
     upsertMeta("name", "twitter:card", "summary_large_image");
     upsertMeta("name", "twitter:site", TWITTER_SITE);
     if (title) upsertMeta("name", "twitter:title", title);
     if (description) upsertMeta("name", "twitter:description", description);
+    upsertMeta("name", "twitter:image", `${DOMAIN}/logos/TT_Badge_1024px_transparent.png`);
   }, [title, description, canonicalUrl]);
 
   return null;
