@@ -140,19 +140,25 @@ export default function Donate() {
 
           <h2 className="font-['Poppins'] font-bold text-[32px] text-[#2A2E2C] mb-8">Other ways to give</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-            <div className="bg-[#FAFAF7] border border-[#E2E4E1] p-6 rounded-xl text-center">
-              <h4 className="font-['Poppins'] font-bold text-[18px] text-[#2A2E2C] mb-2">Volunteer</h4>
-              <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] mb-4">Time is just as valuable as funding.</p>
+            <div className="bg-[#FAFAF7] border border-[#E2E4E1] p-6 rounded-xl text-center flex flex-col">
+              <div className="flex-1">
+                <h4 className="font-['Poppins'] font-bold text-[18px] text-[#2A2E2C] mb-2">Volunteer</h4>
+                <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] mb-4">Time is just as valuable as funding.</p>
+              </div>
               <CTAButton href="/volunteer" variant="outline" className="w-full border-[#E2E4E1] text-[#2A2E2C]">View Roles</CTAButton>
             </div>
-            <div className="bg-[#FAFAF7] border border-[#E2E4E1] p-6 rounded-xl text-center">
-              <h4 className="font-['Poppins'] font-bold text-[18px] text-[#2A2E2C] mb-2">Partner</h4>
-              <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] mb-4">Corporate or community partnerships.</p>
+            <div className="bg-[#FAFAF7] border border-[#E2E4E1] p-6 rounded-xl text-center flex flex-col">
+              <div className="flex-1">
+                <h4 className="font-['Poppins'] font-bold text-[18px] text-[#2A2E2C] mb-2">Partner</h4>
+                <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] mb-4">Corporate or community partnerships.</p>
+              </div>
               <CTAButton href="/contact" variant="outline" className="w-full border-[#E2E4E1] text-[#2A2E2C]">Contact Us</CTAButton>
             </div>
-            <div className="bg-[#E6F3EA] border border-[#2F6B3F]/20 p-6 rounded-xl text-center">
-              <h4 className="font-['Poppins'] font-bold text-[18px] text-[#1E4A2A] mb-2">Employer Sponsorship</h4>
-              <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] mb-4">Contact us — pricing in progress for employer-sponsored Trail of Mastery seats.</p>
+            <div className="bg-[#E6F3EA] border border-[#2F6B3F]/20 p-6 rounded-xl text-center flex flex-col">
+              <div className="flex-1">
+                <h4 className="font-['Poppins'] font-bold text-[18px] text-[#1E4A2A] mb-2">Employer Sponsorship</h4>
+                <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] mb-4">Contact us — pricing in progress for employer-sponsored Trail of Mastery seats.</p>
+              </div>
               <CTAButton href="/contact" variant="outline" className="w-full border-[#2F6B3F] text-[#2F6B3F] hover:bg-[#2F6B3F] hover:text-white">Inquire</CTAButton>
             </div>
           </div>

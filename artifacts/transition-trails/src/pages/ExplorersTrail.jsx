@@ -275,7 +275,7 @@ export default function ExplorersTrail() {
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">CHOOSE YOUR TIER</div>
             <h2 className="font-['Poppins'] font-bold text-[32px] text-[#2A2E2C]">Start where you are. Upgrade when you're ready.</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
             {/* Tier 1: Monthly */}
             <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
