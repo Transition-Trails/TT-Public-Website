@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X, ChevronDown } from "lucide-react";
+import ttLogoWhite from "../assets/TT_Stacked_White_NoTag.png";
 
 export function Nav() {
   const [location] = useLocation();
@@ -19,20 +20,8 @@ export function Nav() {
   return (
     <nav className="bg-[#2F6F7E] h-[80px] sticky top-0 z-[200] w-full border-b border-white/10">
       <div className="max-w-[1280px] h-full mx-auto px-5 md:px-10 flex items-center justify-between">
-        {/* ================================================================
-            LOGO — Hugh: upload TT_Stacked_White_NoTag.png to src/assets/
-            then replace the SVG below with:
-              import ttLogoWhite from '../assets/TT_Stacked_White_NoTag.png'
-              <img src={ttLogoWhite} alt="Transition Trails" style={{ height: "40px", width: "auto" }} />
-            ================================================================ */}
-        <Link href="/" onClick={closeMenu} className="z-50 flex items-center gap-[10px]">
-          <svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="100" height="100" rx="16" fill="#2F6F7E"/>
-            <text x="50" y="65" textAnchor="middle" fontSize="52" fontWeight="bold" fill="white">T</text>
-          </svg>
-          <span style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: "18px", color: "white", letterSpacing: "-0.01em" }}>
-            Transition Trails
-          </span>
+        <Link href="/" onClick={closeMenu} className="z-50 flex items-center">
+          <img src={ttLogoWhite} alt="Transition Trails" style={{ height: "40px", width: "auto" }} />
         </Link>
 
         {/* Desktop Nav */}

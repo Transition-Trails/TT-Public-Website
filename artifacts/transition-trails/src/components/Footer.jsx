@@ -1,25 +1,14 @@
 import { Link } from "wouter";
 import { LINKS } from "../constants/links";
+import ttLogoWhite from "../assets/TT_Stacked_White_NoTag.png";
 
 export function Footer() {
   return (
     <footer className="bg-[#2F6F7E] pt-16 px-5 md:px-10 mt-auto">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12 mb-16">
         <div className="max-w-xs">
-          {/* ================================================================
-              LOGO — Hugh: upload TT_Stacked_White_NoTag.png to src/assets/
-              then replace the SVG below with:
-                import ttLogoWhite from '../assets/TT_Stacked_White_NoTag.png'
-                <img src={ttLogoWhite} alt="Transition Trails" style={{ height: "48px", width: "auto" }} />
-              ================================================================ */}
-          <Link href="/" className="flex items-center gap-[10px] mb-4">
-            <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="100" height="100" rx="16" fill="white" fillOpacity="0.15"/>
-              <text x="50" y="65" textAnchor="middle" fontSize="52" fontWeight="bold" fill="white">T</text>
-            </svg>
-            <span style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: "18px", color: "white", letterSpacing: "-0.01em" }}>
-              Transition Trails
-            </span>
+          <Link href="/" className="block mb-4">
+            <img src={ttLogoWhite} alt="Transition Trails" style={{ height: "48px", width: "auto" }} />
           </Link>
           <p className="font-['Open_Sans'] text-sm text-white/70">
             Empowering nonprofits and building digital careers — Together.
