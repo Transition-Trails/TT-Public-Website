@@ -69,7 +69,7 @@ export default function ExplorersTrail() {
                 <div className="absolute top-3 right-3 bg-[#2F6B3F] text-white font-['Poppins'] font-bold text-[9px] uppercase tracking-wide px-2 py-0.5 rounded-sm">MOST POPULAR</div>
                 <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-[#4ADF7C] mb-2">FULL MEMBERSHIP</div>
                 <div className="font-['Poppins'] font-bold text-[32px] text-white leading-none mb-1">$97<span className="font-['Open_Sans'] font-normal text-[16px] text-white/60">/mo</span></div>
-                <div className="font-['Open_Sans'] text-[12px] text-white/55">$1,164/yr · full archive · Penny AI · coaching rate</div>
+                <div className="font-['Open_Sans'] text-[12px] text-white/55">$1,164/yr · full archive · async coaching · coaching rate</div>
               </div>
               {/* Full + Coaching */}
               <div className="bg-white/10 border border-[rgba(47,111,126,0.6)] rounded-xl p-6 backdrop-blur-sm">
@@ -244,10 +244,10 @@ export default function ExplorersTrail() {
               <div className="h-1 bg-[#2F6B3F]" />
               <div className="p-7 flex flex-col flex-1">
                 <div className="text-[28px] mb-3">🤖</div>
-                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">Penny AI</h3>
+                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">Alumni Mentor Matching</h3>
                 <span className="inline-block bg-[#E6F3EA] text-[#2F6B3F] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">FULL · FULL + COACHING</span>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
-                  Available 24/7 for questions, practice scenarios, and guidance through Salesforce concepts. Full Membership and Full + Coaching members only.
+                  Full Membership members are matched with a TT program graduate — someone who was in your position and is now working in Salesforce. One match per quarter, structured around a topic you choose.
                 </p>
               </div>
             </div>
@@ -309,7 +309,6 @@ export default function ExplorersTrail() {
                 <ul className="space-y-2 mb-5">
                   {[
                     "Trail Mission archive",
-                    "Penny AI",
                     "Async coaching access",
                     "Live webinars beyond Trail Talk",
                   ].map(item => (
@@ -356,7 +355,6 @@ export default function ExplorersTrail() {
                     "Full Trail Mission archive (all past missions, always accessible while active)",
                     "Full video archive — Build With Me, Troubleshoot With Me, all content",
                     "Monthly Virtual Trail Talk recording — permanent archive access",
-                    "Penny AI access",
                     "Async coaching access (submit a question, response within 48 business hours)",
                     "Live webinars (2–4/month beyond Trail Talk)",
                     "Weekly/biweekly Slack challenges",
@@ -550,15 +548,6 @@ export default function ExplorersTrail() {
                 tiers: "ALL TIERS",
                 tierColor: "#7FAFC6",
                 tierBg: "#E0F0F7",
-              },
-              {
-                icon: "🤖",
-                timing: "Ongoing — 24/7",
-                title: "Penny AI",
-                desc: "Available any time for questions, practice, and guidance through Salesforce concepts.",
-                tiers: "FULL · FULL + COACHING",
-                tierColor: "#2F6B3F",
-                tierBg: "#E6F3EA",
               },
               {
                 icon: "🤝",
