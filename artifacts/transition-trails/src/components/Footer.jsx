@@ -72,6 +72,7 @@ export function Footer() {
             <ul className="flex flex-col gap-3">
               <li><Link href="/donate" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Donate</Link></li>
               <li><Link href="/volunteer" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Volunteer</Link></li>
+              <li><Link href="/board" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Join Our Board</Link></li>
               <li><Link href="/contact" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Contact Us</Link></li>
               <li><a href={LINKS.angelaCalendar} target="_blank" rel="noopener noreferrer" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Schedule time with us</a></li>
             </ul>

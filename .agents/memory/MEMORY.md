@@ -1,0 +1,1 @@
+- [Transition Trails pre-existing typecheck errors](transition-trails-typecheck.md) — TS7016 on every .jsx import in App.tsx is repo-wide/pre-existing, not caused by your edits.

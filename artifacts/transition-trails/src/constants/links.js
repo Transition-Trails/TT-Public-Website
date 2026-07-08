@@ -33,8 +33,12 @@ export const LINKS = {
   // Angela Landrith calendar — do NOT replace
   angelaCalendar: "https://calendar.app.google/t1THqhnCWacFyCu2A",
 
-  volunteer:
-    "https://www.idealist.org/en/nonprofit/8b10ce8870b246f8a0d65687d51a9e79-transition-trails-dallas",
+  volunteer: "/volunteer",
+  volunteerApplication: "https://form.jotform.com/261885593929074",
+  volunteerCPAIdealist:
+    "https://www.idealist.org/admin/8b10ce8870b246f8a0d65687d51a9e79/volops/a5df3df502b34d9e8b71b8a8e2ee6c6e",
+  board: "/board",
+  boardInterest: "https://form.jotform.com/261884676222061",
   substack: "https://transitiontrails.substack.com",
   substackCompass: "https://transitiontrailsthecompass.substack.com",
   linkedin: "https://www.linkedin.com/company/transition-trails",

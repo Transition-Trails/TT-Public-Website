@@ -16,7 +16,7 @@ export function Nav() {
   const isDcActive = location === "/programs/digital-compass";
   const isPartnersActive = location.startsWith("/partners");
   const isServicesActive = location === "/coaching" || location === "/consulting";
-  const isSupportActive = location === "/donate" || location === "/volunteer";
+  const isSupportActive = location === "/donate" || location === "/volunteer" || location === "/board";
 
   const closeMenu = () => {
     setIsMobileMenuOpen(false);
@@ -110,6 +110,7 @@ export function Nav() {
               <div className="absolute top-[80px] left-1/2 -translate-x-1/2 w-56 bg-white rounded-xl shadow-lg border border-[#E2E4E1] py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 <Link href="/donate" className="block px-4 py-3 text-sm font-['Open_Sans'] text-[#4A4F4D] hover:bg-[#FAFAF7] hover:text-[#2F6B3F]">❤️ Donate</Link>
                 <Link href="/volunteer" className="block px-4 py-3 text-sm font-['Open_Sans'] text-[#4A4F4D] hover:bg-[#FAFAF7] hover:text-[#2F6B3F]">🤝 Volunteer</Link>
+                <Link href="/board" className="block px-4 py-3 text-sm font-['Open_Sans'] text-[#4A4F4D] hover:bg-[#FAFAF7] hover:text-[#2F6B3F]">🏛️ Join Our Board</Link>
               </div>
             </div>
           </div>
@@ -212,6 +213,7 @@ export function Nav() {
             <div className={`flex flex-col gap-3 pl-4 overflow-hidden transition-all duration-300 ${isSupportOpen ? "mt-4 max-h-[200px]" : "max-h-0"}`}>
               <Link href="/donate" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-base py-1">❤️ Donate</Link>
               <Link href="/volunteer" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-base py-1">🤝 Volunteer</Link>
+              <Link href="/board" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-base py-1">🏛️ Join Our Board</Link>
             </div>
           </div>
 
