@@ -1,18 +1,17 @@
 import { Link } from "wouter";
 import { PageMeta } from "../components/PageMeta";
-import { LINKS } from "../constants/links";
 
-const TEAM_FOUNDERS = [
+const FOUNDERS = [
   {
     key: "AL",
     name: "Angela Landrith",
     title: "Co-Founder & CEO",
     role: "The Visionary",
-    accent: "#2F6B3F",
+    color: "#2F6B3F",
     initials: "AL",
     bio: [
-      "Angela founded Transition Trails after watching talented people get locked out of Salesforce careers not because they lacked ability, but because they lacked access to the right experience. As CEO, she leads program strategy, partner relationships, and the vision for what TT can become. She brings deep expertise in Salesforce product management, career development, and building systems that actually serve the people using them.",
-      "Angela believes the gap between certification and employment is a design problem — and Transition Trails is the solution she wished existed when she was navigating her own career pivot.",
+      "Angela founded Transition Trails after watching talented people get locked out of Salesforce careers not because they lacked ability, but because they lacked access to the right experience. As CEO, she leads program strategy, partner relationships, and the vision for what Transition Trails can become.",
+      "She brings deep expertise in Salesforce product management, career development, and building systems that actually serve the people using them. Angela believes the gap between certification and employment is a design problem — and Transition Trails is the solution she wished existed when she was navigating her own career pivot.",
     ],
     skills: [
       "Salesforce Product Management",
@@ -26,19 +25,22 @@ const TEAM_FOUNDERS = [
       "AI Adoption and Usage",
       "Requirements and Process Mapping",
     ],
-    calendarHref: "https://calendar.app.google/t1THqhnCWacFyCu2A",
-    calendarLabel: "Schedule time with Angela",
+    link: {
+      href: "https://calendar.app.google/t1THqhnCWacFyCu2A",
+      label: "Schedule time with Angela",
+      external: true,
+    },
   },
   {
     key: "KB",
     name: "Kim Barnes",
     title: "Co-Founder & COO",
     role: "The Builder",
-    accent: "#2F6F7E",
+    color: "#2F6F7E",
     initials: "KB",
     bio: [
-      "Kim is the operational backbone of Transition Trails. As COO, she leads the Digital Compass program, manages partner relationships with nonprofit clients, and ensures that every learner and organization TT serves receives a consistently excellent experience. Kim brings deep expertise in Salesforce solution design and nonprofit technology, with a particular focus on making complex systems work for the people who depend on them.",
-      "She is the architect of many of TT's internal processes and is the reason things actually get done.",
+      "Kim is the operational backbone of Transition Trails. As COO, she leads the Digital Compass program, manages partner relationships with nonprofit clients, and ensures that every learner and organization Transition Trails serves receives a consistently excellent experience.",
+      "Kim brings deep expertise in Salesforce solution design and nonprofit technology, with a particular focus on making complex systems work for the people who depend on them. She is the architect of many of Transition Trails' internal processes — and the reason things actually get done.",
     ],
     skills: [
       "Salesforce Solution Design",
@@ -51,18 +53,21 @@ const TEAM_FOUNDERS = [
       "RESOLVE Trainer",
       "Salesforce Troubleshooting",
     ],
-    contactEmail: "hello@transitiontrails.org",
-    contactLabel: "Contact Kim",
+    link: {
+      href: "mailto:hello@transitiontrails.org",
+      label: "Contact Kim",
+      external: false,
+    },
   },
   {
     key: "HR",
     name: "Hugh Richardson",
     title: "Co-Founder & CTO · Solutions Architect",
     role: "The Champion",
-    accent: "#1E4A2A",
+    color: "#2A5C3F",
     initials: "HR",
     bio: [
-      "Hugh is Transition Trails' proof of concept. He made the pivot himself — from a non-technical career into Salesforce — and now serves as CTO and Solutions Architect for TT's technology infrastructure. He built the Trail OS platform, oversees the DevOps pipeline, and brings the technical credibility that makes TT's programs defensible to employers.",
+      "Hugh is Transition Trails' proof of concept. He made the pivot himself — from a non-technical career into Salesforce — and now serves as CTO and Solutions Architect for Transition Trails' technology infrastructure. He built the Trail OS platform, oversees the DevOps pipeline, and brings the technical credibility that makes Transition Trails' programs defensible to employers.",
       "Hugh coaches from lived experience. When he tells a learner that the path from certification to employment is real and navigable, he means it — because he walked it.",
     ],
     skills: [
@@ -77,17 +82,18 @@ const TEAM_FOUNDERS = [
       "Mentoring and Coaching",
       "RESOLVE Trainer",
     ],
+    link: null,
   },
   {
     key: "KL",
     name: "Kel Landrith",
     title: "Co-Founder & Finance Director",
     role: "The Steward",
-    accent: "#7FAFC6",
+    color: "#7FAFC6",
     initials: "KL",
     bio: [
-      "Kel keeps Transition Trails financially grounded and mission-focused. As Finance Director, he oversees financial stewardship, nonprofit compliance, and business development — ensuring that every dollar TT spends is working toward the mission. He brings specialist expertise in nonprofit startup operations, account and donation management, and the financial structures that allow a young nonprofit to grow without losing its integrity.",
-      "Kel does not offer individual coaching — his focus is on the organizational health that makes everything else possible.",
+      "Kel keeps Transition Trails financially grounded and mission-focused. As Finance Director, he oversees financial stewardship, nonprofit compliance, and business development — ensuring that every dollar Transition Trails spends is working toward the mission.",
+      "He brings specialist expertise in nonprofit startup operations, account and donation management, and the financial structures that allow a young nonprofit to grow without losing its integrity. Kel does not offer individual coaching — his focus is on the organizational health that makes everything else possible.",
     ],
     skills: [
       "Nonprofit Startup Specialist",
@@ -95,19 +101,20 @@ const TEAM_FOUNDERS = [
       "Business Development",
       "Financial Stewardship",
     ],
+    link: null,
   },
 ];
 
 function FounderSection({ founder, index }) {
-  const isOdd = index % 2 === 0;
+  const initialsLeft = index % 2 === 0;
 
   const avatar = (
-    <div className="shrink-0 flex justify-center">
+    <div className="shrink-0 flex justify-center md:justify-start">
       <div
         className="w-[120px] h-[120px] rounded-full flex items-center justify-center"
-        style={{ backgroundColor: founder.accent }}
+        style={{ backgroundColor: founder.color }}
       >
-        <span className="font-['Poppins'] font-bold text-white text-[36px]">
+        <span className="font-['Poppins'] font-bold text-white text-[38px] leading-none">
           {founder.initials}
         </span>
       </div>
@@ -115,29 +122,29 @@ function FounderSection({ founder, index }) {
   );
 
   const content = (
-    <div className="flex-1">
-      <h2 className="font-['Poppins'] font-bold text-[32px] md:text-[36px] text-[#2A2E2C] mb-1">
+    <div className="flex-1 min-w-0">
+      <h2 className="font-['Poppins'] font-bold text-[34px] md:text-[40px] text-[#2A2E2C] leading-tight mb-1">
         {founder.name}
       </h2>
-      <p className="font-['Open_Sans'] font-semibold text-[16px] mb-4" style={{ color: founder.accent }}>
+      <p className="font-['Open_Sans'] font-semibold text-[16px] mb-4" style={{ color: founder.color }}>
         {founder.title}
       </p>
       <span
-        className="inline-block px-4 py-1.5 rounded-full font-['Open_Sans'] font-semibold text-[12px] uppercase tracking-wider text-white mb-6"
-        style={{ backgroundColor: founder.accent }}
+        className="inline-block px-4 py-1.5 rounded-full font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-wider text-white mb-8"
+        style={{ backgroundColor: founder.color }}
       >
         {founder.role}
       </span>
 
-      <div className="space-y-4 mb-8">
+      <div className="space-y-5 mb-8">
         {founder.bio.map((para, i) => (
-          <p key={i} className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] leading-[1.7]">
+          <p key={i} className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] leading-[1.75]">
             {para}
           </p>
         ))}
       </div>
 
-      <div className="mb-6">
+      <div className="mb-7">
         <div className="font-['Open_Sans'] font-semibold text-[11px] tracking-[2px] uppercase text-[#8C8882] mb-3">
           Areas of Focus
         </div>
@@ -146,7 +153,7 @@ function FounderSection({ founder, index }) {
             <span
               key={i}
               className="font-['Open_Sans'] font-semibold text-[12px] rounded-full px-3 py-1"
-              style={{ color: founder.accent, backgroundColor: founder.accent + "18" }}
+              style={{ color: founder.color, backgroundColor: founder.color + "18" }}
             >
               {skill}
             </span>
@@ -154,45 +161,48 @@ function FounderSection({ founder, index }) {
         </div>
       </div>
 
-      {founder.calendarHref && (
-        <a
-          href={founder.calendarHref}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 font-['Open_Sans'] font-semibold text-[14px] hover:underline transition-colors"
-          style={{ color: founder.accent }}
-        >
-          {founder.calendarLabel} →
-        </a>
-      )}
-      {founder.contactEmail && (
-        <a
-          href={`mailto:${founder.contactEmail}`}
-          className="inline-flex items-center gap-2 font-['Open_Sans'] font-semibold text-[14px] hover:underline transition-colors"
-          style={{ color: founder.accent }}
-        >
-          {founder.contactLabel} →
-        </a>
+      {founder.link && (
+        founder.link.external ? (
+          <a
+            href={founder.link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center font-['Open_Sans'] font-semibold text-[14px] hover:underline transition-colors"
+            style={{ color: founder.color }}
+          >
+            {founder.link.label} →
+          </a>
+        ) : (
+          <a
+            href={founder.link.href}
+            className="inline-flex items-center font-['Open_Sans'] font-semibold text-[14px] hover:underline transition-colors"
+            style={{ color: founder.color }}
+          >
+            {founder.link.label} →
+          </a>
+        )
       )}
     </div>
   );
 
   return (
-    <div className="py-16 md:py-20 px-5 md:px-10">
-      <div className="max-w-[900px] mx-auto flex flex-col md:flex-row gap-12 md:gap-16 items-start">
-        {isOdd ? (
-          <>
-            {avatar}
-            {content}
-          </>
-        ) : (
-          <>
-            <div className="md:order-2">{avatar}</div>
-            <div className="md:order-1 flex-1">{content}</div>
-          </>
-        )}
+    <section className="bg-white py-16 md:py-20 px-5 md:px-10">
+      <div className="max-w-[960px] mx-auto">
+        <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-start">
+          {initialsLeft ? (
+            <>
+              {avatar}
+              {content}
+            </>
+          ) : (
+            <>
+              <div className="md:order-2 md:shrink-0">{avatar}</div>
+              <div className="md:order-1 flex-1 min-w-0">{content}</div>
+            </>
+          )}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 
@@ -220,20 +230,22 @@ export default function AboutTeam() {
         </div>
       </section>
 
-      {/* Founder sections */}
-      {TEAM_FOUNDERS.map((founder, index) => (
+      {/* Founder sections with dividers */}
+      {FOUNDERS.map((founder, index) => (
         <div key={founder.key}>
-          <FounderSection founder={founder} index={index} />
-          {index < TEAM_FOUNDERS.length - 1 && (
-            <div className="max-w-[900px] mx-auto px-5 md:px-10">
-              <div className="border-t border-[#E2E4E1]" />
+          {index > 0 && (
+            <div className="bg-white">
+              <div className="max-w-[960px] mx-auto px-5 md:px-10">
+                <div className="border-t border-[#E2E4E1]" />
+              </div>
             </div>
           )}
+          <FounderSection founder={founder} index={index} />
         </div>
       ))}
 
       {/* Footer CTA */}
-      <section className="bg-[#2F6B3F] py-20 px-5 text-center mt-8">
+      <section className="bg-[#2F6B3F] py-20 px-5 text-center">
         <div className="max-w-[700px] mx-auto">
           <h2 className="font-['Poppins'] font-bold text-[36px] text-white mb-4">
             Ready to start your trail?
@@ -243,7 +255,7 @@ export default function AboutTeam() {
           </p>
           <Link
             href="/waitlist"
-            className="inline-flex items-center justify-center h-[52px] px-10 rounded-[8px] font-['Poppins'] font-bold text-[15px] transition-colors"
+            className="inline-flex items-center justify-center h-[52px] px-10 rounded-[8px] font-['Poppins'] font-bold text-[15px] transition-colors hover:brightness-95"
             style={{ backgroundColor: "#F5A623", color: "#2A2E2C" }}
           >
             Join the Waitlist
