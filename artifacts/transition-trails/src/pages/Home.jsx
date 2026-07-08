@@ -257,7 +257,7 @@ export default function Home() {
                 <li className="flex gap-2 font-semibold text-[#2A2E2C]"><Check className="w-4 h-4 text-[#2F6F7E] shrink-0 mt-0.5" /> Project support (mid-level)</li>
                 <li className="flex gap-2"><Check className="w-4 h-4 text-[#2F6F7E] shrink-0 mt-0.5" /> AI-assisted learning tools</li>
               </ul>
-              <CTAButton href={LINKS.nonprofitAssessment} className="w-full">
+              <CTAButton href={LINKS.nonprofitAssessment} variant="dark" className="w-full !bg-[#2F6F7E] hover:!bg-[#1a3440]">
                 Book Free Assessment
               </CTAButton>
             </div>
@@ -278,7 +278,7 @@ export default function Home() {
             <p className="font-['Open_Sans'] text-[16px] text-white m-0 text-center md:text-left max-w-2xl">
               Not sure where to start? Book a free Salesforce assessment (up to 1 hour) — no pitch, just clarity.
             </p>
-            <CTAButton href={LINKS.nonprofitAssessment} className="shrink-0 whitespace-nowrap">
+            <CTAButton href={LINKS.nonprofitAssessment} variant="dark" className="shrink-0 whitespace-nowrap !bg-[#2F6F7E] hover:!bg-[#1a3440]">
               Book Free Assessment
             </CTAButton>
           </div>
@@ -320,7 +320,7 @@ export default function Home() {
                   { label: "47 jobs", desc: "Applications Sent", bg: "bg-[#BF2E2E]" },
                   { label: "1 project", desc: "Real Nonprofit Implementation", bg: "bg-[#F5A623]" },
                   { label: "Hired", desc: "Business Analyst at Salesforce", bg: "bg-[#1E4A2A]" },
-                  { label: "5 years", desc: "Solutions Architect + TT Co-Founder", bg: "bg-[#1E4A2A]" }
+                  { label: "5 years", desc: "Co-Founder & CTO · Solutions Architect", bg: "bg-[#1E4A2A]" }
                 ].map((node, i) => (
                   <div key={i} className="flex flex-col items-center text-center px-2">
                     <div className="font-['Poppins'] font-bold text-[13px] text-[#2A2E2C] h-6 mb-2 flex items-end">{node.label}</div>
@@ -346,7 +346,7 @@ export default function Home() {
               <div className="w-[44px] h-[44px] rounded-full bg-[#2F6B3F] text-white flex items-center justify-center font-['Poppins'] font-bold">HR</div>
               <div>
                 <div className="font-['Poppins'] font-semibold text-[14px] text-[#2A2E2C]">Hugh Richardson</div>
-                <div className="font-['Open_Sans'] text-[13px] text-[#4A4F4D]">Solutions Architect · Salesforce · TT Co-Founder</div>
+                <div className="font-['Open_Sans'] text-[13px] text-[#4A4F4D]">Co-Founder & CTO · Transition Trails · Solutions Architect</div>
               </div>
             </div>
           </div>
@@ -398,8 +398,8 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            {/* Row 1: Nonprofit Partners — Deep Teal */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {/* Nonprofit Partner — Deep Teal */}
             <div className="bg-white border border-[#E2E4E1] rounded-xl p-7 relative" style={{ borderLeft: "5px solid #2F6F7E" }}>
               <div className="absolute top-3 left-4 font-['Poppins'] text-[80px] leading-none select-none" style={{ color: "rgba(47,111,126,0.15)" }}>"</div>
               <p className="font-['Poppins'] font-medium italic text-[16px] text-[#2A2E2C] leading-[1.6] mb-4 relative z-10">
@@ -409,16 +409,7 @@ export default function Home() {
               <div className="font-['Open_Sans'] text-[12px] text-[#8C8882]">Nonprofit Partner · Digital Compass Member · Hartford, CT</div>
             </div>
 
-            {/* TODO: Replace with approved CLYLP testimonial when received */}
-            <div className="bg-white border border-[#E2E4E1] rounded-xl p-7 relative" style={{ borderLeft: "5px solid #E2E4E1" }}>
-              <p className="font-['Poppins'] font-medium italic text-[16px] text-[#8C8882] leading-[1.6] mb-4">
-                Testimonial coming soon
-              </p>
-              <div className="font-['Open_Sans'] font-semibold text-[14px] text-[#8C8882]">CLYLP</div>
-              <div className="font-['Open_Sans'] text-[12px] text-[#8C8882]">Nonprofit Partner · Digital Compass Member</div>
-            </div>
-
-            {/* Row 2: Program Learners — Trail Green */}
+            {/* Program Learners — Trail Green */}
             <div className="bg-white border border-[#E2E4E1] rounded-xl p-7 relative" style={{ borderLeft: "5px solid #2F6B3F" }}>
               <div className="absolute top-3 left-4 font-['Poppins'] text-[80px] leading-none select-none" style={{ color: "rgba(47,107,63,0.15)" }}>"</div>
               <p className="font-['Poppins'] font-medium italic text-[16px] text-[#2A2E2C] leading-[1.6] mb-4 relative z-10">
@@ -441,18 +432,18 @@ export default function Home() {
       </section>
 
       {/* Section 10: Action Banner */}
-      <section className="bg-[#F5A623] py-16 px-5 md:px-10">
+      <section className="bg-[#2F6B3F] py-16 px-5 md:px-10">
         <div className="max-w-[1024px] mx-auto flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
           <div className="flex-1">
-            <h2 className="font-['Poppins'] font-bold text-[32px] md:text-[40px] text-[#2A2E2C] mb-2 leading-tight">
+            <h2 className="font-['Poppins'] font-bold text-[32px] md:text-[40px] text-white mb-2 leading-tight">
               Your trail starts with one real project.
             </h2>
-            <p className="font-['Open_Sans'] text-[18px] text-[#4A4F4D]">
+            <p className="font-['Open_Sans'] text-[18px] text-white/80">
               Guided Trail Cohort 1 waitlist is open. 8–12 seats. Application required.
             </p>
           </div>
           <div className="shrink-0">
-            <CTAButton href={LINKS.waitlist} variant="dark" size="lg">
+            <CTAButton href={LINKS.waitlist} variant="outline" size="lg" className="text-white border-white hover:bg-white/10">
               Join the Waitlist
             </CTAButton>
           </div>

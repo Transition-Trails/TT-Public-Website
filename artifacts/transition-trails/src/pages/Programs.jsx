@@ -143,9 +143,9 @@ export default function Programs() {
           <p className="font-['Open_Sans'] text-[13px] text-[#2A2E2C] leading-[1.6]">
             <span className="font-semibold text-[#1E4A2A]">The Trail Forward Scholarship</span> — one fully funded Guided Trail seat per cohort for historically underserved populations in technology. No membership required to apply.
           </p>
-          <a href="/scholarships" className="font-['Open_Sans'] font-semibold text-[13px] text-[#2F6B3F] hover:underline whitespace-nowrap shrink-0">
+          <Link href="/scholarships" className="font-['Open_Sans'] font-semibold text-[13px] text-[#2F6B3F] hover:underline whitespace-nowrap shrink-0">
             Learn more →
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -166,7 +166,7 @@ export default function Programs() {
         <div className="max-w-[1100px] mx-auto">
           <div className="mb-10 text-center">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">WHERE THE TRAIL LEADS</div>
-            <h2 className="font-['Poppins'] font-bold text-[28px] text-[#2A2E2C]">The coaching pathway is open to Guided Trail graduates.</h2>
+            <h2 className="font-['Poppins'] font-bold text-[28px] text-[#2A2E2C]">The coaching pathway is open to Guided Trail graduates (6+ months employed) and external Salesforce professionals with 2–3 years of field experience. Two pathways in. One community.</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
             <div className="bg-[#E0F0F7] border border-[#7FAFC6]/40 rounded-xl p-6 text-center">

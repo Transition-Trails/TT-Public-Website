@@ -99,7 +99,10 @@ export default function About() {
                 That one project changed everything. Hugh landed his first role as a Business Analyst, and five years later, he's a Solutions Architect at Salesforce.
               </p>
               <p>
-                Angela and Hugh realized this wasn't just a mentorship success story — it was a scalable model. In 2020, along with Kim Barnes and Kel Landrith, they founded Transition Trails in Dallas, TX, to make that pathway available to everyone.
+                Angela and Hugh realized this wasn't just a mentorship success story — it was a scalable model. In 2020, along with Kim Barnes and Kel Landrith, they founded Transition Trails in Dallas, TX, to make that pathway available to everyone. Angela and Kel Landrith are married — Kel's commitment to the mission is both professional and personal.
+              </p>
+              <p>
+                Today, Angela leads Transition Trails as CEO and Co-Founder — full time, building what she spent 20 years wishing existed.
               </p>
             </div>
           </div>
@@ -131,7 +134,7 @@ export default function About() {
           <div className="max-w-[800px] mx-auto mt-12 text-center">
             <p className="font-['Open_Sans'] text-[15px] leading-[1.65]" style={{ color: "rgba(255,255,255,0.65)" }}>
               Our founders also lead Transition Trails' Salesforce consulting practice — bringing the same expertise to nonprofits and small businesses that need dedicated project or retainer support.{" "}
-              <Link href="/consulting" className="font-semibold text-white hover:underline">Learn about consulting →</Link>
+              <Link href={LINKS.consulting} className="font-semibold text-white hover:underline">Learn about consulting →</Link>
             </p>
           </div>
         </div>
@@ -147,7 +150,7 @@ export default function About() {
               From the nonprofits we serve and the learners who have done the work.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="max-w-[600px] mx-auto">
             <div className="bg-white border border-[#E2E4E1] rounded-xl p-7 relative" style={{ borderLeft: "5px solid #2F6F7E" }}>
               <div className="absolute top-3 left-4 font-['Poppins'] text-[80px] leading-none select-none" style={{ color: "rgba(47,111,126,0.15)" }}>"</div>
               <p className="font-['Poppins'] font-medium italic text-[16px] text-[#2A2E2C] leading-[1.6] mb-4 relative z-10">
@@ -155,15 +158,6 @@ export default function About() {
               </p>
               <div className="font-['Open_Sans'] font-semibold text-[14px] text-[#2F6F7E]">Hartford Promises</div>
               <div className="font-['Open_Sans'] text-[12px] text-[#8C8882]">Nonprofit Partner · Digital Compass Member · Hartford, CT</div>
-            </div>
-
-            {/* TODO: Replace with approved CLYLP testimonial when received */}
-            <div className="bg-white border border-[#E2E4E1] rounded-xl p-7 relative" style={{ borderLeft: "5px solid #E2E4E1" }}>
-              <p className="font-['Poppins'] font-medium italic text-[16px] text-[#8C8882] leading-[1.6] mb-4">
-                Testimonial coming soon
-              </p>
-              <div className="font-['Open_Sans'] font-semibold text-[14px] text-[#8C8882]">CLYLP</div>
-              <div className="font-['Open_Sans'] text-[12px] text-[#8C8882]">Nonprofit Partner · Digital Compass Member</div>
             </div>
           </div>
         </div>

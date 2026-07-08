@@ -105,16 +105,16 @@ export default function ExplorersTrail() {
             <div className="bg-white border border-[#E2E4E1] rounded-xl p-8">
               <div className="text-[28px] mb-3">📋</div>
               <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-[#2F6B3F] mb-2">CAREER BUILDERS</div>
-              <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-3">Getting ready for a TT program.</h3>
+              <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-3">Building toward your first role or your next one.</h3>
               <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65]">
-                You are planning to join the Foundations Trail or Guided Trail and want to build your foundation first. Explorer's Trail gives you access to skill-building content, workshops, and — most importantly — the ability to interact with current program learners so you know exactly what you are getting into before you enroll.
+                You have your Salesforce certification or are close to earning it. You want to stay connected to the TT community, access coaching, and build toward your first role or your next one. Explorer's Trail gives you the community, the content, and the coaching access to keep moving — and priority placement when the next Guided Trail cohort opens.
               </p>
             </div>
 
             {/* Card 3 */}
             <div className="bg-white border border-[#E2E4E1] rounded-xl p-8">
               <div className="text-[28px] mb-3">🎓</div>
-              <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-[#1E4A2A] mb-2">PROGRAM ALUMNI</div>
+              <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-[#2F6F7E] mb-2">PROGRAM ALUMNI</div>
               <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-3">You finished a program. Now what?</h3>
               <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65]">
                 Graduates of the Guided Trail receive one year of Explorer's Trail membership included with their program. Explorer's Trail is how you stay connected to the TT ecosystem after your cohort ends — for the events, the community, the ongoing coaching discounts, and the people who are going through what you already went through.
@@ -149,7 +149,8 @@ export default function ExplorersTrail() {
               <div className="h-1 bg-[#7FAFC6]" />
               <div className="p-7 flex flex-col flex-1">
                 <div className="text-[28px] mb-4">💬</div>
-                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-3">Private Slack Community</h3>
+                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">Private Slack Community</h3>
+                <span className="inline-block bg-[#E0F0F7] text-[#7FAFC6] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">ALL MEMBERS</span>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
                   A members-only Slack workspace where Career Starters, Career Builders, Career Pivoters, current program learners, and TT alumni all connect. Ask questions, share wins, find accountability partners, and see what life inside a TT program actually looks like — from people who are living it.
                 </p>
@@ -158,10 +159,11 @@ export default function ExplorersTrail() {
 
             {/* Feature 2 */}
             <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
-              <div className="h-1 bg-[#2F6B3F]" />
+              <div className="h-1 bg-[#7FAFC6]" />
               <div className="p-7 flex flex-col flex-1">
                 <div className="text-[28px] mb-4">🎯</div>
-                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-3">Workshops and Webinars</h3>
+                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">Workshops and Webinars</h3>
+                <span className="inline-block bg-[#E0F0F7] text-[#7FAFC6] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">ALL MEMBERS</span>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
                   Members-only live events hosted by TT — skill-building workshops, Salesforce topic deep-dives, career sessions, and Q&As with the TT team and coaches. Free or reduced pricing for Explorer's Trail members. All hosted and produced by Transition Trails.
                 </p>
@@ -173,7 +175,8 @@ export default function ExplorersTrail() {
               <div className="h-1 bg-[#2F6B3F]" />
               <div className="p-7 flex flex-col flex-1">
                 <div className="text-[28px] mb-4">🎬</div>
-                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-3">Build With Me Content Library</h3>
+                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">Build With Me Content Library</h3>
+                <span className="inline-block bg-[#E6F3EA] text-[#2F6B3F] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">ANNUAL · ANNUAL + COACHING</span>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
                   Skill-building Build With Me videos covering Salesforce concepts, configuration techniques, and practical exercises — created by the TT team. Monthly members access current content. Annual members get the full archive plus everything created in the future as the library grows.
                 </p>
@@ -188,7 +191,8 @@ export default function ExplorersTrail() {
               <div className="h-1 bg-[#7FAFC6]" />
               <div className="p-7 flex flex-col flex-1">
                 <div className="text-[28px] mb-4">🤝</div>
-                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-3">Coaching Access</h3>
+                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">Coaching Access</h3>
+                <span className="inline-block bg-[#E0F0F7] text-[#7FAFC6] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">ALL MEMBERS</span>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
                   Async coaching access is available to all members — ask questions and get guidance from the TT team through the community.
 
@@ -213,11 +217,11 @@ export default function ExplorersTrail() {
 
             {/* Feature 6 */}
             <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
-              <div className="h-1 bg-[#2F6B3F]" />
+              <div className="h-1 bg-[#7FAFC6]" />
               <div className="p-7 flex flex-col flex-1">
                 <div className="text-[28px] mb-3">⚡</div>
                 <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">Weekly Build Challenges</h3>
-                <span className="inline-block bg-[#E6F3EA] text-[#2F6B3F] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">ALL MEMBERS · WEEKLY</span>
+                <span className="inline-block bg-[#E0F0F7] text-[#7FAFC6] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">ALL MEMBERS · WEEKLY</span>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
                   Every week, a new build challenge drops in the community. Short, focused, skill-specific — designed to keep your Salesforce skills sharp between sessions and give you something to share in the Slack community. Challenges range across all skill levels so there is always something relevant, whether you are just starting or preparing for an advanced role.
                 </p>
@@ -243,7 +247,7 @@ export default function ExplorersTrail() {
               <div className="p-7 flex flex-col flex-1">
                 <div className="text-[28px] mb-3">🤝</div>
                 <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">Alumni Mentor Matching</h3>
-                <span className="inline-block bg-[#E6F3EA] text-[#2F6B3F] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">ANNUAL MEMBERS · QUARTERLY MATCH</span>
+                <span className="inline-block bg-[#E6F3EA] text-[#2F6B3F] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">ANNUAL · ANNUAL + COACHING</span>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
                   Annual members are matched with a TT program graduate — someone who was in your position and is now working in Salesforce. One match per quarter, structured around a topic you choose. Ask the questions you cannot find answers to anywhere else. This is the human connection no content library can replicate.
                 </p>
@@ -256,7 +260,7 @@ export default function ExplorersTrail() {
               <div className="p-7 flex flex-col flex-1">
                 <div className="text-[28px] mb-3">🧭</div>
                 <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">RESOLVE Practitioner Series</h3>
-                <span className="inline-block bg-[#E6F3EA] text-[#2F6B3F] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">ANNUAL MEMBERS ONLY</span>
+                <span className="inline-block bg-[#E6F3EA] text-[#2F6B3F] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">ANNUAL · ANNUAL + COACHING</span>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
                   A structured multi-part workshop series exploring the professional mindset behind great Salesforce delivery: how to think about client problems, how to document decisions, how to lead a discovery conversation. Monthly members can see the series exists. Annual members get full access. This is the first step on the Path to Coach.
                 </p>

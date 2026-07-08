@@ -38,6 +38,8 @@ export const LINKS = {
   volunteerCPAIdealist:
     "https://www.idealist.org/admin/8b10ce8870b246f8a0d65687d51a9e79/volops/a5df3df502b34d9e8b71b8a8e2ee6c6e",
   board: "/board",
+  // Internal use only — use LINKS.boardApplication for all public-facing CTAs
+  // boardInterest is the raw JotForm URL, retained for reference only
   boardInterest: "https://form.jotform.com/261884676222061",
   boardApplication: "/board-application",
   substack: "https://transitiontrails.substack.com",

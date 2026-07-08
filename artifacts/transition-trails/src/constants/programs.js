@@ -87,7 +87,7 @@ export const PROGRAMS = [
     // Internal page — do NOT use the external JotForm URL for site CTAs
     ctaHref: "/nonprofit-assessment",
     ctaAmber: false,
-    whoFor: "Nonprofit organizations — any stage of Salesforce maturity",
-    description: "Ongoing Salesforce support membership for nonprofit organizations. Weekly office hours, TrailKit library, Slack community, and project delivery — from $149/month. Led by Kim Barnes, Co-Founder and COO.",
+    whoFor: "Nonprofit organizations at any stage of their Salesforce journey.",
+    description: "Ongoing Salesforce support membership for nonprofits. Weekly office hours, project delivery, and expert guidance from the TT leadership team — from $149/month.",
   },
 ];
