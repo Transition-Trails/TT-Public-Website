@@ -13,18 +13,12 @@ const ELIGIBILITY_CARDS = [
   },
   {
     border: "#2F6F7E",
-    icon: "⚡",
-    title: "Women and Non-Binary Individuals",
-    body: "Women hold approximately 26% of computing roles nationally — a persistent gap with real economic consequences. The Salesforce ecosystem reflects this same imbalance. The Trail Forward Scholarship actively works to change that.",
-  },
-  {
-    border: "#2F6B3F",
     icon: "🌎",
-    title: "Racially and Ethnically Underrepresented Groups",
+    title: "Underrepresented Groups in Tech",
     body: "Black and African American, Hispanic and Latino, Native American and Alaska Native, and Native Hawaiian and Pacific Islander individuals who are underrepresented in technology careers at every level — including within the Salesforce ecosystem.",
   },
   {
-    border: "#2F6F7E",
+    border: "#7FAFC6",
     icon: "🚀",
     title: "Economic Barriers to Tech Entry",
     body: "First-generation college students and non-traditional learners, individuals experiencing unemployment or underemployment, and people in the process of career transition from low-wage industries. Cost should not be the reason someone cannot access a high-demand tech career.",
@@ -172,7 +166,7 @@ export default function Scholarships() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
             {ELIGIBILITY_CARDS.map(card => (
               <div
                 key={card.title}
@@ -188,22 +182,8 @@ export default function Scholarships() {
             ))}
           </div>
 
-          {/* Full-width fifth card */}
-          <div
-            className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden mb-8"
-            style={{ borderLeft: "4px solid #7FAFC6" }}
-          >
-            <div className="p-7">
-              <div className="text-[26px] mb-3">🤝</div>
-              <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-3">Additional Underserved Groups</h3>
-              <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
-                Individuals with disabilities, justice-involved individuals seeking workforce reentry, and individuals aging out of foster care or similar systems. If you face barriers to technology career access that are not captured above, we encourage you to apply and describe your situation in your written application.
-              </p>
-            </div>
-          </div>
-
           <p className="font-['Open_Sans'] italic text-[13px] text-[#4A4F4D] text-center">
-            Applicants may belong to more than one eligible category. Eligibility in any one category qualifies you to apply. You do not need to identify in every category.
+            Applicants may belong to more than one eligible category. Eligibility in any one category qualifies you to apply.
           </p>
         </div>
       </section>
