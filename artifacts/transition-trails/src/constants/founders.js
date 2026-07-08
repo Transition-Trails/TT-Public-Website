@@ -89,7 +89,7 @@ export const FOUNDERS = [
   {
     key: "KL",
     name: "Kel Landrith",
-    title: "Co-Founder & CFO",
+    title: "Co-Founder & Finance Director",
     role: "The Steward",
     accent: "#2F6F7E",
     initials: "KL",
@@ -98,10 +98,8 @@ export const FOUNDERS = [
     ],
     skills: [
       "Nonprofit Startup Specialist",
-      "Salesforce Nonprofit Cloud",
       "Account and Donation Management",
       "Business Development",
-      "Partnerships",
       "Financial Stewardship",
     ],
     calendarLink: false,

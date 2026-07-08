@@ -62,7 +62,7 @@ const BOARD_ROLES = {
   AL: "Board Chair · Co-Founder & CEO",
   KB: "Board Member · Co-Founder & COO",
   HR: "Board Member · Co-Founder & CTO",
-  KL: "Board Member · Co-Founder & CFO",
+  KL: "Board Member · Co-Founder & Finance Director",
 };
 
 export default function Board() {
@@ -175,8 +175,8 @@ export default function Board() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            {FOUNDERS.map((founder) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            {FOUNDERS.filter((founder) => founder.key !== "HR").map((founder) => (
               <div key={founder.key} className="bg-white border border-[#E2E4E1] rounded-xl p-6 flex flex-col items-center text-center">
                 <div
                   className="w-14 h-14 rounded-full flex items-center justify-center mb-4"
