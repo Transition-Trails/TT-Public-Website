@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Link } from "wouter";
 import { FOUNDERS } from "../constants/founders";
 import { PageMeta } from "../components/PageMeta";
@@ -66,28 +65,6 @@ const BOARD_ROLES = {
 };
 
 export default function Board() {
-  useEffect(() => {
-    const handlerSrc = "https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js";
-    const callHandler = () => {
-      if (typeof window.jotformEmbedHandler === "function") {
-        window.jotformEmbedHandler(
-          "iframe[id='JotFormIFrame-261884676222061']",
-          "https://form.jotform.com/"
-        );
-      }
-    };
-    const existing = document.querySelector(`script[src="${handlerSrc}"]`);
-    if (existing) {
-      callHandler();
-    } else {
-      const s = document.createElement("script");
-      s.src = handlerSrc;
-      s.async = true;
-      s.onload = callHandler;
-      document.body.appendChild(s);
-    }
-  }, []);
-
   return (
     <div className="flex flex-col min-h-screen">
       <PageMeta
@@ -267,33 +244,22 @@ export default function Board() {
 
       {/* Apply */}
       <section id="apply" className="bg-[#FAFAF7] py-20 px-5 md:px-10">
-        <div className="max-w-[860px] mx-auto text-center flex flex-col items-center">
+        <div className="max-w-[560px] mx-auto text-center flex flex-col items-center">
           <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">EXPRESS INTEREST</div>
-          <h2 className="font-['Poppins'] font-bold text-[34px] text-[#2A2E2C] mb-6">Tell us about yourself.</h2>
-          <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] max-w-[680px] leading-[1.65] mb-10">
+          <h2 className="font-['Poppins'] font-semibold text-[20px] text-[#2A2E2C] mb-6">Tell us about yourself.</h2>
+          <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.65] mb-8">
             Board recruitment is led by our founding team. We review every application and respond within 5 business days to schedule an introductory conversation. There is no formal deadline — we are recruiting on a rolling basis.
           </p>
 
-          <iframe
-            id="JotFormIFrame-261884676222061"
-            title="TT Board Member Interest"
-            onLoad={() => window.parent.scrollTo(0, 0)}
-            allowTransparency={true}
-            allow="geolocation; microphone; camera; fullscreen; payment"
-            src="https://form.jotform.com/261884676222061"
-            frameBorder="0"
-            style={{
-              minWidth: "100%",
-              maxWidth: "100%",
-              height: "539px",
-              border: "none",
-              display: "block",
-            }}
-            scrolling="no"
-          />
+          <Link
+            href="/board-application"
+            className="w-full h-[52px] rounded-[8px] bg-[#2F6B3F] hover:bg-[#1E4A2A] text-white font-['Poppins'] font-bold text-[15px] flex items-center justify-center transition-colors"
+          >
+            Express Board Interest →
+          </Link>
 
-          <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] mt-8">
-            Questions? Email hello@transitiontrails.org · Board inquiries are handled directly by Angela Landrith, Co-Founder & CEO
+          <p className="font-['Open_Sans'] text-[12px] text-[#8C8882] italic mt-4">
+            Questions? Email hello@transitiontrails.org
           </p>
         </div>
       </section>

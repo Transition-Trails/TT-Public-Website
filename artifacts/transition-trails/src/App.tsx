@@ -18,6 +18,7 @@ import DigitalCompass from "./pages/DigitalCompass";
 import About from "./pages/About";
 import Volunteer from "./pages/Volunteer";
 import Board from "./pages/Board";
+import BoardApplication from "./pages/BoardApplication";
 import Donate from "./pages/Donate";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
@@ -51,6 +52,7 @@ function Router() {
       <Route path="/about" component={About} />
       <Route path="/volunteer" component={Volunteer} />
       <Route path="/board" component={Board} />
+      <Route path="/board-application" component={BoardApplication} />
       <Route path="/donate" component={Donate} />
       <Route path="/contact" component={Contact} />
       <Route path="/blog" component={Blog} />
