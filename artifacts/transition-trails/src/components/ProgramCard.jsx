@@ -47,7 +47,7 @@ export function ProgramCard({ program, height = "standard" }) {
           <CTAButton 
             href={program.ctaHref}
             variant={program.ctaAmber ? "amber" : "dark"}
-            className={!program.ctaAmber ? "!bg-[#2F6B3F] hover:!bg-[#1E4A2A] !text-white !h-10 rounded-md" : "!h-10 rounded-md"}
+            className={!program.ctaAmber ? "!bg-[#2F6B3F] hover:!bg-[#1E4A2A] !text-white !h-10 rounded-md whitespace-nowrap" : "!h-10 rounded-md whitespace-nowrap"}
             external={program.ctaHref.startsWith("http")}
           >
             {program.cta}
