@@ -266,6 +266,14 @@ export default function Home() {
               <FounderCard key={founder.key} founder={founder} />
             ))}
           </div>
+          <div className="flex justify-center mt-10">
+            <a
+              href="/about"
+              className="h-[48px] px-8 rounded-[8px] border border-white/50 text-white font-['Poppins'] font-semibold text-[15px] flex items-center justify-center hover:bg-white/10 hover:border-white transition-colors"
+            >
+              Meet the Founding Team →
+            </a>
+          </div>
         </div>
       </section>
 
