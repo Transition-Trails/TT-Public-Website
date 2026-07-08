@@ -818,7 +818,7 @@ export default function ExplorersTrail() {
               href={LINKS.waitlist}
               className="h-[52px] px-8 rounded-[8px] bg-[#1E4A2A] text-white font-['Poppins'] font-bold text-[15px] flex items-center justify-center hover:bg-[#163820] transition-colors whitespace-nowrap"
             >
-              Join Explorer's Trail →
+              Join the Waitlist →
             </a>
           </div>
         </div>
