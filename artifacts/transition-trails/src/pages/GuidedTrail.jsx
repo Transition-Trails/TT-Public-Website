@@ -30,7 +30,6 @@ export default function GuidedTrail() {
           
           <div className="w-full md:w-[380px] bg-white rounded-2xl p-8 shadow-xl shrink-0">
             <div className="font-['Poppins'] font-bold text-[36px] text-[#2A2E2C] mb-2">$1,497</div>
-            <div className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] mb-1">or $747 scholarship</div>
             <div className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] mb-6">or 3 × $549 payment plan</div>
             
             <CTAButton href={LINKS.waitlist} variant="amber" className="w-full mb-4" size="lg">
@@ -41,6 +40,34 @@ export default function GuidedTrail() {
               Cohort 1 · 8–12 seats · Application required
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Trail Forward Scholarship */}
+      <section className="bg-[#E6F3EA] py-14 px-5 md:px-10 border-y border-[#2F6B3F]/20">
+        <div className="max-w-[800px] mx-auto">
+          <div className="flex items-center gap-3 mb-4">
+            <span className="text-[20px]">🏅</span>
+            <div className="font-['Open_Sans'] font-bold text-[11px] tracking-[2px] uppercase text-[#2F6B3F]">TRAIL FORWARD SCHOLARSHIP</div>
+          </div>
+          <h2 className="font-['Poppins'] font-bold text-[28px] text-[#1E4A2A] mb-4">
+            Trail Forward Scholarship
+          </h2>
+          <p className="font-['Open_Sans'] text-[16px] text-[#2A2E2C] leading-[1.7] mb-4">
+            One fully funded seat is available per cohort for qualifying applicants. There is no cost to the recipient — Transition Trails covers the full program fee.
+          </p>
+          <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.65] mb-4">
+            <strong className="text-[#1E4A2A]">Who qualifies:</strong> Members of the military community, underrepresented groups in tech, and individuals facing economic barriers to entering the technology sector.
+          </p>
+          <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.65] mb-8">
+            Applications open approximately 4 weeks before each cohort begins.
+          </p>
+          <a
+            href="/scholarship-application"
+            className="inline-flex items-center justify-center h-[48px] px-8 rounded-[8px] bg-[#1E4A2A] text-white font-['Poppins'] font-semibold text-[15px] hover:bg-[#163820] transition-colors"
+          >
+            Apply for the Trail Forward Scholarship →
+          </a>
         </div>
       </section>
 

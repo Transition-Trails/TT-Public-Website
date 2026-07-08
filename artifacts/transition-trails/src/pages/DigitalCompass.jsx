@@ -241,7 +241,7 @@ export default function DigitalCompass() {
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6F7E] mb-4">MEMBERSHIP TIERS</div>
             <h2 className="font-['Poppins'] font-bold text-[34px] text-[#2A2E2C] mb-4">Choose the level of support your organization needs.</h2>
             <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] max-w-[760px] leading-[1.65]">
-              All tiers are month-to-month — no long-term contract required. Annual plans save two months. Start with Entry and upgrade as your needs grow.
+              Entry membership is month-to-month — join and cancel anytime. Mid and Full Partner memberships are annual service contracts, billed yearly. Annual contracts are recommended for grant-funded purchases.
             </p>
           </div>
 

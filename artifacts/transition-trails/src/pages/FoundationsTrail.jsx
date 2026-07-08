@@ -36,8 +36,9 @@ export default function FoundationsTrail() {
             <div className="font-['Poppins'] font-bold text-[40px] text-[#2A2E2C] mb-1">$997 <span className="text-[18px] font-medium text-[#4A4F4D]">one-time</span></div>
             <div className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] mb-4">Or 3 × $367/mo ($1,101 total)</div>
 
-            <div className="bg-[#EBF4F9] rounded-lg px-4 py-3 mb-5">
-              <div className="font-['Poppins'] font-semibold text-[13px] text-[#1E4F5C] mb-0.5">$497 scholarship — application required</div>
+            <div className="bg-[#F5F5F4] border border-[#E2E4E1] rounded-lg px-4 py-3 mb-5">
+              <div className="font-['Open_Sans'] font-semibold text-[12px] text-[#8C8882] mb-1">Scholarship — Coming Soon</div>
+              <div className="font-['Open_Sans'] text-[12px] text-[#8C8882] leading-[1.55]">Need-based scholarship funding is in development. Check back for updates or <a href="/contact" className="underline hover:text-[#4A4F4D]">contact us</a> to learn more.</div>
             </div>
 
             <div className="h-px bg-[#E2E4E1] w-full mb-5" />

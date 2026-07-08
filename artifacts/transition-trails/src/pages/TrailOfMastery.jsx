@@ -738,37 +738,29 @@ export default function TrailOfMastery() {
             <div>
               <div className="bg-white border border-[#E2E4E1] rounded-xl p-7 mb-5">
                 <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-4">Pricing</h3>
-                <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65] mb-5">
-                  Pricing analysis in progress — final pricing to be confirmed. Scholarship applications available — no membership required to apply.
-                </p>
-                <ul className="space-y-3">
+                <ul className="space-y-3 mb-5">
                   {[
-                    ["8-week tracks (Admin Mastery)", "Contact us"],
-                    ["12-week tracks (BA, PO Mastery)", "Contact us"],
-                    ["16-week tracks (Advanced Admin, Solutions Consultant)", "Contact us"],
-                    ["Customized Path", "Assessed at enrollment"],
-                  ].map(([label, price]) => (
-                    <li key={label} className="flex items-center justify-between gap-4 border-b border-[#E2E4E1] pb-3 last:border-0 last:pb-0">
+                    ["Admin Mastery (8 weeks)", "$1,497", "4 × $400/mo"],
+                    ["BA Mastery (12 weeks)", "$1,997", "4 × $525/mo"],
+                    ["PO Mastery (12 weeks)", "$1,997", "4 × $525/mo"],
+                    ["Advanced Admin Mastery (16 weeks)", "$2,497", "4 × $650/mo"],
+                    ["Solutions Consultant Mastery (16 weeks)", "$2,497", "4 × $650/mo"],
+                  ].map(([label, price, plan]) => (
+                    <li key={label} className="flex items-start justify-between gap-4 border-b border-[#E2E4E1] pb-3 last:border-0 last:pb-0">
                       <span className="font-['Open_Sans'] text-[13px] text-[#4A4F4D]">{label}</span>
-                      <span className="font-['Poppins'] font-semibold text-[13px] text-[#2A2E2C] shrink-0">{price}</span>
+                      <div className="text-right shrink-0">
+                        <div className="font-['Poppins'] font-semibold text-[13px] text-[#2A2E2C]">{price}</div>
+                        <div className="font-['Open_Sans'] text-[11px] text-[#8C8882]">{plan}</div>
+                      </div>
                     </li>
                   ))}
                 </ul>
+                <p className="font-['Open_Sans'] text-[12px] text-[#8C8882] leading-[1.55]">Payment plans split the full program fee into 4 monthly installments. No interest — full fee applies.</p>
               </div>
               <div className="space-y-4">
                 <div className="bg-[#E6F3EA] border border-[#2F6B3F]/30 rounded-xl p-5">
                   <p className="font-['Open_Sans'] text-[13px] text-[#2A2E2C] leading-[1.65]">
-                    <strong>Employer-sponsored:</strong> Trail of Mastery is designed to be employer-fundable. We provide the invoice language your HR or L&D team needs to get this approved as a professional development investment. Groups of 3+ seats available at reduced per-seat pricing.
-                  </p>
-                </div>
-                <div className="bg-[#E0F0F7] border border-[#7FAFC6]/30 rounded-xl p-5">
-                  <p className="font-['Open_Sans'] text-[13px] text-[#2A2E2C] leading-[1.65]">
-                    <strong>Explorer's Trail credit:</strong> Annual Explorer's Trail members ($397/yr): membership fee credited toward enrollment within the same membership year. One program only.
-                  </p>
-                </div>
-                <div className="bg-[#FEF3DB] border border-[#F5A623]/30 rounded-xl p-5">
-                  <p className="font-['Open_Sans'] text-[13px] text-[#2A2E2C] leading-[1.65]">
-                    <strong>Scholarship seats available</strong> — apply on this page. No membership required. Applications reviewed individually.
+                    <strong>Employer sponsorship available</strong> for groups of 3 or more seats — 20% discount, invoiced directly to your employer. Contact us for group invoicing.
                   </p>
                 </div>
               </div>
