@@ -192,8 +192,11 @@ export default function Coaches() {
           <div className="mb-12">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">THE TWO ROLES</div>
             <h2 className="font-['Poppins'] font-bold text-[34px] text-[#2A2E2C] mb-4">Start where you are. Grow from there.</h2>
-            <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] max-w-[760px] leading-[1.65]">
+            <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] max-w-[760px] leading-[1.65] mb-4">
               There are two coaching roles at Transition Trails. Your experience level determines which one is right for you — and the application process helps us figure that out together.
+            </p>
+            <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D]">
+              Looking for individual coaching sessions rather than becoming a TT coach? <a href="/coaching" className="text-[#2F6B3F] font-semibold hover:underline">See individual coaching →</a>
             </p>
           </div>
 

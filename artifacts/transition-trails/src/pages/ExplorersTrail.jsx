@@ -192,8 +192,9 @@ export default function ExplorersTrail() {
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
                   Async coaching access is available to all members — ask questions and get guidance from the TT team through the community.
 
-                  Annual + Coaching members receive a quarterly coaching session included with their membership, with a TT Founder or advanced TT coach. Additional sessions are available to all members at reduced member pricing.
+                  Explorer's Trail members receive discounted rates on all individual coaching packages. Annual + Coaching members receive a quarterly coaching session included with their membership, with a TT Founder or advanced TT coach.
                 </p>
+                <a href="/coaching" className="font-['Open_Sans'] font-semibold text-[13px] text-[#2F6B3F] hover:underline mt-3 inline-block">See coaching packages →</a>
               </div>
             </div>
 
@@ -363,6 +364,10 @@ export default function ExplorersTrail() {
                   <li className="flex gap-2.5 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
                     <span className="text-[#2F6B3F] shrink-0 font-bold">✓</span>
                     <a href="/coaches" className="text-[#2F6B3F] font-semibold hover:underline">Interested in coaching? See the full coaching pathway and apply →</a>
+                  </li>
+                  <li className="flex gap-2.5 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
+                    <span className="text-[#2F6B3F] shrink-0 font-bold">✓</span>
+                    <a href="/coaching" className="text-[#2F6B3F] font-semibold hover:underline">See coaching packages →</a>
                   </li>
                 </ul>
                 <div className="h-px bg-[#E2E4E1] mb-4" />

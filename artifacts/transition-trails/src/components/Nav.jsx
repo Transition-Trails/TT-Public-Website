@@ -56,6 +56,7 @@ export function Nav() {
                 <div className="h-px bg-[#E2E4E1] my-1" />
                 <Link href="/scholarships" className="block px-4 py-3 text-sm font-['Open_Sans'] font-semibold text-[#2F6B3F] hover:bg-[#FAFAF7]">🏅 Trail Forward Scholarship</Link>
                 <Link href="/coaches" className="block px-4 py-3 text-sm font-['Open_Sans'] font-semibold text-[#2F6B3F] hover:bg-[#FAFAF7]">🎓 Become a Coach</Link>
+                <Link href="/coaching" className="block px-4 py-3 text-sm font-['Open_Sans'] font-semibold text-[#2F6B3F] hover:bg-[#FAFAF7]">💬 Individual Coaching</Link>
                 <div className="h-px bg-[#E2E4E1] my-1" />
                 <Link href="/nonprofit-assessment" className="block px-4 py-3 text-sm font-['Open_Sans'] font-semibold text-[#2F6F7E] hover:bg-[#FAFAF7]">Free Nonprofit Assessment →</Link>
                 <div className="h-px bg-[#E2E4E1] my-1" />
@@ -130,6 +131,7 @@ export function Nav() {
               <div className="h-px bg-white/10 my-1" />
               <Link href="/scholarships" onClick={closeMenu} className="text-[#6BBF85] font-['Open_Sans'] font-semibold text-base py-1">🏅 Trail Forward Scholarship</Link>
               <Link href="/coaches" onClick={closeMenu} className="text-[#6BBF85] font-['Open_Sans'] font-semibold text-base py-1">🎓 Become a Coach</Link>
+              <Link href="/coaching" onClick={closeMenu} className="text-[#6BBF85] font-['Open_Sans'] font-semibold text-base py-1">💬 Individual Coaching</Link>
               <Link href="/nonprofit-assessment" onClick={closeMenu} className="text-[#7FCEE0] font-['Open_Sans'] font-semibold text-base py-1">Free Nonprofit Assessment →</Link>
               <Link href="/waitlist" onClick={closeMenu} className="text-[#F5A623] font-['Open_Sans'] font-semibold text-base py-1">Join the Waitlist →</Link>
             </div>

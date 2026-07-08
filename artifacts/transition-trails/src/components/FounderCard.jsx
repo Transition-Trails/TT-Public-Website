@@ -73,6 +73,16 @@ export function FounderCard({ founder }) {
             Schedule Time With Me →
           </a>
         )}
+
+        {founder.coachingLink && (
+          <a
+            href={LINKS.coaching}
+            className="mt-2 font-['Open_Sans'] font-semibold text-[11px] hover:underline transition-colors"
+            style={{ color: "#2F6B3F" }}
+          >
+            Available for individual coaching →
+          </a>
+        )}
       </div>
     </div>
   );

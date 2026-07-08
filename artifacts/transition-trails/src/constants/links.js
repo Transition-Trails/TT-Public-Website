@@ -61,6 +61,9 @@ export const LINKS = {
   coaches: "/coaches",
   coachApplication: "https://form.jotform.com/261876005299062",
 
+  // Individual coaching (standalone, purchasable sessions)
+  coaching: "/coaching",
+
   // Live JotForm scholarship application
   scholarshipApplication: "https://form.jotform.com/261877164594067",
 

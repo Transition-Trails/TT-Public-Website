@@ -32,6 +32,7 @@ export const FOUNDERS = [
       "AI Integration",
     ],
     calendarLink: true,
+    coachingLink: true,
   },
   {
     key: "KB",
@@ -58,6 +59,7 @@ export const FOUNDERS = [
     ],
     contactEmail: "kim@transitiontrails.org",
     calendarLink: false,
+    coachingLink: true,
   },
   {
     key: "HR",
@@ -83,6 +85,7 @@ export const FOUNDERS = [
       "RESOLVE Trainer",
     ],
     calendarLink: false,
+    coachingLink: true,
   },
   {
     key: "KL",

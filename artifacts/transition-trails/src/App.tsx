@@ -29,6 +29,7 @@ import PartnersRecruiters from "./pages/PartnersRecruiters";
 import PartnersEmployers from "./pages/PartnersEmployers";
 import Expedition from "./pages/Expedition";
 import Coaches from "./pages/Coaches";
+import Coaching from "./pages/Coaching";
 import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient();
@@ -58,6 +59,7 @@ function Router() {
       <Route path="/partners/employers" component={PartnersEmployers} />
       <Route path="/expedition" component={Expedition} />
       <Route path="/coaches" component={Coaches} />
+      <Route path="/coaching" component={Coaching} />
 
       {/* Alias routes */}
       <Route path="/scholarship-application">
