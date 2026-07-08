@@ -7,6 +7,7 @@ export function Nav() {
   const [location] = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProgramsOpen, setIsProgramsOpen] = useState(false);
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isPartnersOpen, setIsPartnersOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSupportOpen, setIsSupportOpen] = useState(false);
@@ -14,6 +15,7 @@ export function Nav() {
   const isActive = (path) => location === path;
   const isProgramsActive = location.startsWith("/programs") && location !== "/programs/digital-compass";
   const isDcActive = location === "/programs/digital-compass";
+  const isAboutActive = location === "/about" || location === "/about/team";
   const isPartnersActive = location.startsWith("/partners");
   const isServicesActive = location === "/coaching" || location === "/consulting";
   const isSupportActive = location === "/donate" || location === "/volunteer" || location === "/board";
@@ -21,6 +23,7 @@ export function Nav() {
   const closeMenu = () => {
     setIsMobileMenuOpen(false);
     setIsProgramsOpen(false);
+    setIsAboutOpen(false);
     setIsPartnersOpen(false);
     setIsServicesOpen(false);
     setIsSupportOpen(false);
@@ -69,8 +72,16 @@ export function Nav() {
               </div>
             </div>
 
-            <Link href="/about" className={`font-['Open_Sans'] font-semibold text-[15px] transition-colors ${isActive("/about") ? "text-white" : "text-white/70 hover:text-white"}`}>About</Link>
-            <Link href="/about/team" className={`font-['Open_Sans'] font-semibold text-[15px] transition-colors ${isActive("/about/team") ? "text-white" : "text-white/70 hover:text-white"}`}>Meet the Team</Link>
+            {/* About Dropdown */}
+            <div className="relative h-full flex items-center group">
+              <button className={`font-['Open_Sans'] font-semibold text-[15px] flex items-center gap-1 transition-colors ${isAboutActive ? "text-white" : "text-white/70 hover:text-white"}`}>
+                About <ChevronDown className="w-4 h-4 opacity-70 group-hover:rotate-180 transition-transform" />
+              </button>
+              <div className="absolute top-[80px] left-1/2 -translate-x-1/2 w-48 bg-white rounded-xl shadow-lg border border-[#E2E4E1] py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <Link href="/about" className="block px-4 py-3 text-sm font-['Open_Sans'] text-[#4A4F4D] hover:bg-[#FAFAF7] hover:text-[#2F6B3F]">Our Story</Link>
+                <Link href="/about/team" className="block px-4 py-3 text-sm font-['Open_Sans'] text-[#4A4F4D] hover:bg-[#FAFAF7] hover:text-[#2F6B3F]">Meet the Team</Link>
+              </div>
+            </div>
             <Link href="/programs/digital-compass" className={`font-['Open_Sans'] font-semibold text-[15px] transition-colors ${isDcActive ? "text-white" : "text-white/70 hover:text-white"}`}>For Nonprofits</Link>
 
             {/* Partners Dropdown */}
@@ -162,8 +173,19 @@ export function Nav() {
             </div>
           </div>
 
-          <Link href="/about" onClick={closeMenu} className="font-['Open_Sans'] font-semibold text-[18px] text-white/90 py-2 border-b border-white/10">About</Link>
-          <Link href="/about/team" onClick={closeMenu} className="font-['Open_Sans'] font-semibold text-[18px] text-white/90 py-2 border-b border-white/10">Meet the Team</Link>
+          <div>
+            <button
+              className="flex items-center justify-between w-full font-['Open_Sans'] font-semibold text-[18px] text-white/90 py-2 border-b border-white/10"
+              onClick={() => setIsAboutOpen(!isAboutOpen)}
+            >
+              About
+              <ChevronDown className={`w-5 h-5 transition-transform ${isAboutOpen ? "rotate-180" : ""}`} />
+            </button>
+            <div className={`flex flex-col gap-3 pl-4 overflow-hidden transition-all duration-300 ${isAboutOpen ? "mt-4 max-h-[120px]" : "max-h-0"}`}>
+              <Link href="/about" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-base py-1">Our Story</Link>
+              <Link href="/about/team" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-base py-1">Meet the Team</Link>
+            </div>
+          </div>
           <Link href="/programs/digital-compass" onClick={closeMenu} className="font-['Open_Sans'] font-semibold text-[18px] text-white/90 py-2 border-b border-white/10">For Nonprofits</Link>
 
           <div>
