@@ -71,8 +71,8 @@ export const LINKS = {
   // Salesforce consulting (project-based and retainer)
   consulting: "/consulting",
 
-  // Live JotForm scholarship application
-  scholarshipApplication: "https://form.jotform.com/261877164594067",
+  // Dedicated scholarship application page
+  scholarshipApplication: "/scholarship-application",
 
   // Live JotForm partner inquiry forms
   recruiterInquiry: "https://form.jotform.com/261877200550050",

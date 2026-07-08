@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Link } from "wouter";
 import { CTAButton } from "../components/CTAButton";
 import { LINKS } from "../constants/links";
@@ -69,28 +68,6 @@ const APPLICATION_STEPS = [
 ];
 
 export default function Scholarships() {
-  useEffect(() => {
-    const handlerSrc = "https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js";
-    const callHandler = () => {
-      if (typeof window.jotformEmbedHandler === "function") {
-        window.jotformEmbedHandler(
-          "iframe[id='JotFormIFrame-261877164594067']",
-          "https://form.jotform.com/"
-        );
-      }
-    };
-    const existing = document.querySelector(`script[src="${handlerSrc}"]`);
-    if (existing) {
-      callHandler();
-    } else {
-      const s = document.createElement("script");
-      s.src = handlerSrc;
-      s.async = true;
-      s.onload = callHandler;
-      document.body.appendChild(s);
-    }
-  }, []);
-
   return (
     <div className="flex flex-col min-h-screen">
       <PageMeta
@@ -355,29 +332,35 @@ export default function Scholarships() {
             <div className="font-['Open_Sans'] font-semibold text-[11px] tracking-[2px] uppercase mb-4" style={{ color: "rgba(255,255,255,0.45)" }}>
               APPLY FOR THE TRAIL FORWARD SCHOLARSHIP
             </div>
-            <h2 className="font-['Poppins'] font-bold text-[28px] text-white mb-5">Apply now — applications reviewed on a rolling basis.</h2>
-            <p className="font-['Open_Sans'] text-[15px] leading-[1.65] mb-8" style={{ color: "rgba(255,255,255,0.72)" }}>
-              Applications are reviewed for each upcoming Guided Trail cohort. There is no single deadline — applications are accepted on a rolling basis and reviewed against the next available cohort. The earlier you apply, the more time you have for the screening call and selection process.
-              <br /><br />
-              No membership required. The Trail Forward Scholarship is for the Guided Trail program. To be eligible, you must hold a Salesforce Platform Administrator certification and not be currently employed in a Salesforce role.
-            </p>
-            <iframe
-              id="JotFormIFrame-261877164594067"
-              title="Trail Forward Scholarship Application"
-              onLoad={() => window.parent.scrollTo(0, 0)}
-              allowTransparency={true}
-              allow="geolocation; microphone; camera; fullscreen; payment"
-              src="https://form.jotform.com/261877164594067"
-              frameBorder="0"
-              style={{
-                minWidth: "100%",
-                maxWidth: "100%",
-                height: "539px",
-                border: "none",
-                display: "block",
-              }}
-              scrolling="no"
-            />
+
+            <div className="bg-white rounded-xl p-8 max-w-[560px] mx-auto lg:mx-0">
+              <h3 className="font-['Poppins'] font-semibold text-[20px] text-[#2A2E2C] mb-4">
+                Applications are open on a rolling basis.
+              </h3>
+              <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.65] mb-5">
+                Applications are reviewed for each upcoming Guided Trail cohort. There is no single deadline — apply when you are ready and we will review your application against the next available cohort. The earlier you apply, the more time you have for the screening call and selection process.
+              </p>
+
+              <div
+                className="rounded-[8px] px-5 py-4 mb-6"
+                style={{ backgroundColor: "#E6F3EA", borderLeft: "3px solid #2F6B3F" }}
+              >
+                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D]">
+                  Eligibility requires a Salesforce Platform Administrator certification and not being currently employed in a Salesforce role.
+                </p>
+              </div>
+
+              <Link
+                href={LINKS.scholarshipApplication}
+                className="w-full h-[52px] rounded-[8px] bg-[#2F6B3F] hover:bg-[#1E4A2A] text-white font-['Poppins'] font-bold text-[15px] flex items-center justify-center transition-colors"
+              >
+                Apply for the Trail Forward Scholarship →
+              </Link>
+
+              <p className="font-['Open_Sans'] text-[12px] text-[#8C8882] italic text-center mt-4">
+                Questions about eligibility or the process? Email hello@transitiontrails.org
+              </p>
+            </div>
           </div>
 
           {/* Right — Support */}

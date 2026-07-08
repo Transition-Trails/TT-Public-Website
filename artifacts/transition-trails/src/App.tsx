@@ -26,6 +26,7 @@ import TermsOfService from "./pages/TermsOfService";
 import Waitlist from "./pages/Waitlist";
 import NonprofitAssessment from "./pages/NonprofitAssessment";
 import Scholarships from "./pages/Scholarships";
+import ScholarshipApplication from "./pages/ScholarshipApplication";
 import PartnersRecruiters from "./pages/PartnersRecruiters";
 import PartnersEmployers from "./pages/PartnersEmployers";
 import Expedition from "./pages/Expedition";
@@ -58,17 +59,13 @@ function Router() {
       <Route path="/waitlist" component={Waitlist} />
       <Route path="/nonprofit-assessment" component={NonprofitAssessment} />
       <Route path="/scholarships" component={Scholarships} />
+      <Route path="/scholarship-application" component={ScholarshipApplication} />
       <Route path="/partners/recruiters" component={PartnersRecruiters} />
       <Route path="/partners/employers" component={PartnersEmployers} />
       <Route path="/expedition" component={Expedition} />
       <Route path="/coaches" component={Coaches} />
       <Route path="/coaching" component={Coaching} />
       <Route path="/consulting" component={Consulting} />
-
-      {/* Alias routes */}
-      <Route path="/scholarship-application">
-        <Redirect to="/scholarships" />
-      </Route>
 
       {/* Legacy URL redirects from old Salesforce Experience Cloud site */}
       <Route path="/contact-us">
