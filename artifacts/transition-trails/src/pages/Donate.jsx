@@ -41,7 +41,7 @@ export default function Donate() {
           <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.65] mb-8">
             Transition Trails is a 501(c)(3) nonprofit — every donation is tax-deductible and goes directly to program delivery, coaching, and scholarship funding.
             <br /><br />
-            No large overhead. No executive salaries inflated by donations. Just a small founding team building something that matters, one cohort at a time.
+            No large overhead. Just a small founding team building something that matters, one cohort at a time.
           </p>
 
           <ul className="space-y-3 mb-8">
