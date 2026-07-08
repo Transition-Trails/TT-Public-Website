@@ -21,12 +21,6 @@ const UNIVERSAL_BENEFITS = [
     badge: "ALL TIERS",
     body: "A members-only Slack workspace connecting Digital Compass nonprofits with the TT team, TT coaches, and each other. Ask questions between sessions, share what you're learning, and tap into the collective expertise of the community.",
   },
-  {
-    icon: "🤖",
-    title: "AI-Assisted Support Tools",
-    badge: "ALL TIERS · EXPANDING",
-    body: "Access to TT's AI-assisted support tools to help your team navigate Salesforce questions and processes between sessions. More to be announced.",
-  },
 ];
 
 const WHO_CARDS = [
@@ -270,7 +264,6 @@ export default function DigitalCompass() {
                     "Weekly group Office Hours session (shared)",
                     "TrailKit content library",
                     "Members-only Slack community",
-                    "AI-assisted support tools",
                     "Month-to-month — cancel anytime",
                   ].map(item => (
                     <li key={item} className="flex gap-2 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
@@ -340,7 +333,6 @@ export default function DigitalCompass() {
                     "Unlimited project requests",
                     "Priority learner team matching",
                     "Monthly strategic review call",
-                    "Trail OS installation (2027)",
                   ].map(item => (
                     <li key={item} className="flex gap-2 font-['Open_Sans'] text-[12px] text-[#8C8882]">
                       <Cross />{item}
@@ -383,11 +375,7 @@ export default function DigitalCompass() {
                       <Check color="#1E4A2A" />{item}
                     </li>
                   ))}
-                  <li className="flex gap-2 font-['Open_Sans'] text-[13px] text-[#8C8882] italic">
-                    <span className="shrink-0">🔜</span>Trail OS installation — Full org implementation using TT's Trail OS framework · Coming 2027
-                  </li>
                 </ul>
-                {/* Trail OS Lite Assessment removed */}
 
                 <p className="font-['Open_Sans'] italic text-[11px] text-[#8C8882] mb-4">*TT reserves the right to scope-gate requests that require a dedicated project engagement beyond the membership model.</p>
 
