@@ -16,6 +16,7 @@ import GuidedTrail from "./pages/GuidedTrail";
 import TrailOfMastery from "./pages/TrailOfMastery";
 import DigitalCompass from "./pages/DigitalCompass";
 import About from "./pages/About";
+import AboutTeam from "./pages/AboutTeam";
 import Volunteer from "./pages/Volunteer";
 import Board from "./pages/Board";
 import BoardApplication from "./pages/BoardApplication";
@@ -50,6 +51,7 @@ function Router() {
       <Route path="/programs/trail-of-mastery" component={TrailOfMastery} />
       <Route path="/programs/digital-compass" component={DigitalCompass} />
       <Route path="/about" component={About} />
+      <Route path="/about/team" component={AboutTeam} />
       <Route path="/volunteer" component={Volunteer} />
       <Route path="/board" component={Board} />
       <Route path="/board-application" component={BoardApplication} />

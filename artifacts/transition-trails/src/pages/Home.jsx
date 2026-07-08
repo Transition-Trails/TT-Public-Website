@@ -3,7 +3,6 @@ import { Check, Clipboard, RefreshCw, Target, Database, Users, DollarSign } from
 import { PageMeta } from "../components/PageMeta";
 import { CTAButton } from "../components/CTAButton";
 import { ProgramCard } from "../components/ProgramCard";
-import { FounderCard } from "../components/FounderCard";
 import { PROGRAMS } from "../constants/programs";
 import { FOUNDERS } from "../constants/founders";
 import { LINKS } from "../constants/links";
@@ -261,14 +260,28 @@ export default function Home() {
             <h2 className="font-['Poppins'] font-bold text-[36px] text-white">Meet the founding team.</h2>
           </div>
           
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="flex flex-wrap justify-center gap-4">
             {FOUNDERS.map(founder => (
-              <FounderCard key={founder.key} founder={founder} />
+              <div key={founder.key} className="bg-[#2E3330] border border-white/10 rounded-xl overflow-hidden flex items-center gap-4 p-5 w-full sm:w-[296px]">
+                <div
+                  className="w-[52px] h-[52px] rounded-full shrink-0 flex items-center justify-center"
+                  style={{ backgroundColor: founder.accent }}
+                >
+                  <span className="font-['Poppins'] font-bold text-white text-[16px]">{founder.initials}</span>
+                </div>
+                <div className="min-w-0">
+                  <div className="font-['Poppins'] font-bold text-[16px] text-white leading-snug">{founder.name}</div>
+                  <div className="font-['Open_Sans'] text-[13px] mb-2 truncate" style={{ color: founder.accent }}>{founder.title}</div>
+                  <span className="inline-block px-3 py-0.5 rounded-full font-['Open_Sans'] font-semibold text-[10px] uppercase tracking-wider text-white/80 bg-white/10">
+                    {founder.role}
+                  </span>
+                </div>
+              </div>
             ))}
           </div>
           <div className="flex justify-center mt-10">
             <a
-              href="/about"
+              href="/about/team"
               className="h-[48px] px-8 rounded-[8px] border border-white/50 text-white font-['Poppins'] font-semibold text-[15px] flex items-center justify-center hover:bg-white/10 hover:border-white transition-colors"
             >
               Meet the Founding Team →
