@@ -234,53 +234,21 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            <div className="bg-white/5 rounded-xl p-8 flex flex-col">
-              <h4 className="font-['Poppins'] font-bold text-[20px] text-white mb-2">Entry</h4>
-              <div className="font-['Poppins'] font-bold text-[36px] text-white mb-6">$149<span className="text-xl text-white/60">/mo</span></div>
-              <ul className="flex flex-col gap-3 font-['Open_Sans'] text-[14px] text-white/80 mb-8 flex-grow">
-                <li className="flex gap-2"><Check className="w-4 h-4 text-[#7FAFC6] shrink-0 mt-0.5" /> Weekly Office Hours</li>
-                <li className="flex gap-2"><Check className="w-4 h-4 text-[#7FAFC6] shrink-0 mt-0.5" /> TrailKit Library access</li>
-                <li className="flex gap-2"><Check className="w-4 h-4 text-[#7FAFC6] shrink-0 mt-0.5" /> Trail OS Installation</li>
-              </ul>
-              <div className="text-[12px] text-white/50 text-center">Annual: $1,490/yr (2 mos free)</div>
-            </div>
-            
-            <div className="bg-white border-2 border-[#F5A623] rounded-xl p-8 relative flex flex-col transform md:-translate-y-4 shadow-lg shadow-black/20">
-              <div className="absolute top-0 right-8 transform -translate-y-1/2 bg-[#F5A623] text-[#2A2E2C] font-['Poppins'] font-bold text-[11px] px-3 py-1 rounded-sm uppercase tracking-wide">
-                MOST POPULAR
-              </div>
-              <h4 className="font-['Poppins'] font-bold text-[20px] text-[#2A2E2C] mb-2">Mid</h4>
-              <div className="font-['Poppins'] font-bold text-[36px] text-[#2A2E2C] mb-6">$349<span className="text-xl text-[#4A4F4D]">/mo</span></div>
-              <ul className="flex flex-col gap-3 font-['Open_Sans'] text-[14px] text-[#4A4F4D] mb-8 flex-grow">
-                <li className="flex gap-2"><Check className="w-4 h-4 text-[#2F6F7E] shrink-0 mt-0.5" /> All Entry features</li>
-                <li className="flex gap-2 font-semibold text-[#2A2E2C]"><Check className="w-4 h-4 text-[#2F6F7E] shrink-0 mt-0.5" /> Project support (mid-level)</li>
-                <li className="flex gap-2"><Check className="w-4 h-4 text-[#2F6F7E] shrink-0 mt-0.5" /> AI-assisted learning tools</li>
-              </ul>
-              <CTAButton href={LINKS.nonprofitAssessment} variant="dark" className="w-full !bg-[#2F6F7E] hover:!bg-[#1a3440]">
-                Book Free Assessment
-              </CTAButton>
-            </div>
-            
-            <div className="bg-white/5 rounded-xl p-8 flex flex-col">
-              <h4 className="font-['Poppins'] font-bold text-[20px] text-white mb-2">Full</h4>
-              <div className="font-['Poppins'] font-bold text-[36px] text-white mb-6">$749<span className="text-xl text-white/60">/mo</span></div>
-              <ul className="flex flex-col gap-3 font-['Open_Sans'] text-[14px] text-white/80 mb-8 flex-grow">
-                <li className="flex gap-2"><Check className="w-4 h-4 text-[#7FAFC6] shrink-0 mt-0.5" /> All Mid features</li>
-                <li className="flex gap-2 font-semibold text-white"><Check className="w-4 h-4 text-[#7FAFC6] shrink-0 mt-0.5" /> Full project support</li>
-                <li className="flex gap-2"><Check className="w-4 h-4 text-[#7FAFC6] shrink-0 mt-0.5" /> Dedicated advisor</li>
-              </ul>
-              <div className="text-[12px] text-white/50 text-center">Annual: $7,490/yr (2 mos free)</div>
-            </div>
-          </div>
-
-          <div className="bg-white/10 border border-white/20 rounded-xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 backdrop-blur-sm">
-            <p className="font-['Open_Sans'] text-[16px] text-white m-0 text-center md:text-left max-w-2xl">
-              Not sure where to start? Book a free Salesforce assessment (up to 1 hour) — no pitch, just clarity.
+          <div style={{ maxWidth: '680px', margin: '0 auto', padding: '48px 0', textAlign: 'center' }}>
+            <p style={{ fontFamily: 'Open Sans, sans-serif', fontSize: '16px', color: 'rgba(255,255,255,0.80)', lineHeight: '1.65', marginBottom: '32px' }}>
+              Digital Compass is TT's nonprofit Salesforce membership — weekly office hours, project delivery, and expert guidance from $149/month. No consulting retainer. No long-term contract. Just consistent support from people who understand how nonprofits use Salesforce.
             </p>
-            <CTAButton href={LINKS.nonprofitAssessment} variant="dark" className="shrink-0 whitespace-nowrap !bg-[#2F6F7E] hover:!bg-[#1a3440]">
-              Book Free Assessment
-            </CTAButton>
+            <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '16px' }}>
+              <Link href="/nonprofit-assessment" style={{ backgroundColor: '#2F6F7E', color: 'white', fontFamily: 'Poppins, sans-serif', fontWeight: '700', fontSize: '14px', padding: '14px 28px', borderRadius: '8px', textDecoration: 'none', display: 'inline-block' }}>
+                Book a Free Assessment →
+              </Link>
+              <Link href="/programs/digital-compass" style={{ backgroundColor: 'transparent', color: 'white', fontFamily: 'Poppins, sans-serif', fontWeight: '700', fontSize: '14px', padding: '14px 28px', borderRadius: '8px', textDecoration: 'none', border: '2px solid rgba(255,255,255,0.60)', display: 'inline-block' }}>
+                Learn About Digital Compass →
+              </Link>
+            </div>
+            <p style={{ fontFamily: 'Open Sans, sans-serif', fontSize: '12px', color: 'rgba(255,255,255,0.50)', fontStyle: 'italic' }}>
+              Free assessment — up to 1 hour. No pitch. No obligation.
+            </p>
           </div>
         </div>
       </section>
