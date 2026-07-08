@@ -70,6 +70,7 @@ export function Nav() {
             </div>
 
             <Link href="/about" className={`font-['Open_Sans'] font-semibold text-[15px] transition-colors ${isActive("/about") ? "text-white" : "text-white/70 hover:text-white"}`}>About</Link>
+            <Link href="/about/team" className={`font-['Open_Sans'] font-semibold text-[15px] transition-colors ${isActive("/about/team") ? "text-white" : "text-white/70 hover:text-white"}`}>Meet the Team</Link>
             <Link href="/programs/digital-compass" className={`font-['Open_Sans'] font-semibold text-[15px] transition-colors ${isDcActive ? "text-white" : "text-white/70 hover:text-white"}`}>For Nonprofits</Link>
 
             {/* Partners Dropdown */}
@@ -162,6 +163,7 @@ export function Nav() {
           </div>
 
           <Link href="/about" onClick={closeMenu} className="font-['Open_Sans'] font-semibold text-[18px] text-white/90 py-2 border-b border-white/10">About</Link>
+          <Link href="/about/team" onClick={closeMenu} className="font-['Open_Sans'] font-semibold text-[18px] text-white/90 py-2 border-b border-white/10">Meet the Team</Link>
           <Link href="/programs/digital-compass" onClick={closeMenu} className="font-['Open_Sans'] font-semibold text-[18px] text-white/90 py-2 border-b border-white/10">For Nonprofits</Link>
 
           <div>

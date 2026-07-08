@@ -1,5 +1,4 @@
 import { Link } from "wouter";
-import { FOUNDERS } from "../constants/founders";
 import { CTAButton } from "../components/CTAButton";
 import { LINKS } from "../constants/links";
 import { PageMeta } from "../components/PageMeta";
@@ -113,52 +112,6 @@ export default function About() {
                 "We are structured as a 501(c)(3) because impact is the product. The Dual Impact Model is the engine: learners need real experience, nonprofits need real support. We connect the two."
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-[#2A2E2C] py-20 px-5">
-        <div className="max-w-[1024px] mx-auto">
-          <div className="text-center mb-12">
-            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#F5A623] mb-4">THE TEAM</div>
-            <h2 className="font-['Poppins'] font-bold text-[36px] text-white">Meet the Founders</h2>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
-            {FOUNDERS.map(founder => (
-              <div key={founder.key} className="bg-[#2E3330] border border-white/10 rounded-xl overflow-hidden flex items-center gap-4 p-5">
-                <div
-                  className="w-[52px] h-[52px] rounded-full shrink-0 flex items-center justify-center"
-                  style={{ backgroundColor: founder.accent }}
-                >
-                  <span className="font-['Poppins'] font-bold text-white text-[16px]">{founder.initials}</span>
-                </div>
-                <div className="min-w-0">
-                  <div className="font-['Poppins'] font-bold text-[16px] text-white leading-snug">{founder.name}</div>
-                  <div className="font-['Open_Sans'] text-[13px] mb-2 truncate" style={{ color: founder.accent }}>{founder.title}</div>
-                  <span
-                    className="inline-block px-3 py-0.5 rounded-full font-['Open_Sans'] font-semibold text-[10px] uppercase tracking-wider text-white/80 bg-white/10"
-                  >
-                    {founder.role}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="max-w-[760px] mx-auto text-center mb-10">
-            <p className="font-['Open_Sans'] text-[15px] leading-[1.65]" style={{ color: "rgba(255,255,255,0.65)" }}>
-              Transition Trails was founded by four professionals who each bring a distinct perspective to workforce development — strategic vision, operational execution, technical depth, and financial stewardship. Together they built the programs, the infrastructure, and the culture that makes TT work.
-            </p>
-          </div>
-
-          <div className="flex justify-center">
-            <Link
-              href="/about/team"
-              className="h-[48px] px-8 rounded-[8px] border border-[#2F6B3F] text-[#2F6B3F] font-['Poppins'] font-semibold text-[15px] flex items-center justify-center hover:bg-[#2F6B3F]/10 transition-colors"
-            >
-              Meet the full team →
-            </Link>
           </div>
         </div>
       </section>
