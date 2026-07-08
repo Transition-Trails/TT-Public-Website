@@ -41,14 +41,17 @@ export default function Donate() {
           <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.65] mb-8">
             Transition Trails is a 501(c)(3) nonprofit — every donation is tax-deductible and goes directly to program delivery, coaching, and scholarship funding.
             <br /><br />
+            Help fund scholarship access for career-changing learners. We are currently forming Cohort 1, and as the program launches, we will report scholarship and project outcomes transparently.
+            <br /><br />
             No large overhead. Just a small founding team building something that matters, one cohort at a time.
           </p>
 
           <ul className="space-y-3 mb-8">
             {[
+              "$1,547 funds one complete scholarship seat for a career-changing learner",
+              "Your support helps learners gain supervised, real-world Salesforce experience while expanding nonprofit capacity",
               "Monthly giving sustains our coaching and program operations",
-              "One-time gifts fund scholarship seats and program development",
-              "Every amount moves the mission forward",
+              "As Cohort 1 launches, we will report scholarship and project outcomes transparently",
             ].map(item => (
               <li key={item} className="flex items-start gap-3">
                 <span className="font-bold text-[#2F6B3F] mt-0.5">✓</span>
@@ -59,6 +62,7 @@ export default function Donate() {
 
           <p className="font-['Open_Sans'] italic text-[12px] text-[#8C8882] mb-4">
             Transition Trails · EIN 88-2746412 · 501(c)(3) Public Charity · Effective May 15, 2022<br />
+            1228 Hollywood Ave, Dallas, TX 75208<br />
             Donations are tax-deductible to the extent permitted by law.
           </p>
 

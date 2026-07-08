@@ -1,0 +1,160 @@
+Please update the Transition Trails public website to improve Google Ad Grants readiness, accessibility, navigation clarity, and visual cohesion. Do not change the core mission, brand voice, or program structure.
+
+Primary goals:
+
+1. Improve readiness for a Google Ad Grants audit.
+2. Make the site feel less like a collection of separate boxes.
+3. Simplify navigation.
+4. Be transparent that Transition Trails is preparing for Cohort 1 and does not yet have completed cohort outcomes.
+
+Specific changes:
+
+1. Add physical mailing address
+   Add the following mailing address anywhere nonprofit legitimacy/contact information appears:
+   1228 Hollywood Ave
+   Dallas, TX 75208
+
+Add it to:
+
+* Site footer
+* Contact page
+* Privacy Policy if appropriate
+* Donate page if nonprofit/legal information is shown there
+
+Keep EIN 88-2746412 and 501(c)(3) status visible.
+
+2. Fix navigation accessibility
+   Update all desktop dropdown menus so they are accessible by keyboard, not only mouse hover.
+   Dropdowns should:
+
+* open on keyboard focus and/or click
+* support Tab navigation through dropdown links
+* include appropriate ARIA attributes where applicable
+* use semantic navigation structure
+* preserve current mobile accordion behavior
+
+Also verify the main navigation has an accessible label.
+
+3. Simplify top-level navigation
+   Reduce the primary navigation to a clearer structure. Suggested top-level items:
+
+* Programs
+* For Nonprofits
+* About
+* Get Involved
+* Resources
+
+Remove Blog from the primary navigation for now. If the Blog page exists but has no posts, either hide it from navigation or ensure it is not prominent until content is ready.
+
+Remove redundant or unclear nav items:
+
+* Remove or deprioritize “The Expedition” from the top-level nav unless it has a short explanatory label.
+* Avoid duplicating “For Nonprofits” if it points to the same place as Digital Compass without additional context.
+
+4. Improve visual cohesion and reduce the “box grid” feeling
+   Adjust the homepage and major landing pages so they feel like a guided story rather than many isolated cards.
+
+Design direction:
+
+* Use mostly white sections with occasional #FAFAF7 background bands.
+* Limit dark charcoal sections to one high-impact moment per page.
+* Reduce frequent background color switching.
+* Remove unnecessary borders around testimonial cards.
+* Use more open layouts, two-column storytelling sections, timelines, dividers, and trail/path motifs.
+* Reduce overuse of three-column card grids.
+* Convert some card-heavy sections into flowing narrative sections.
+* Use a subtle “trail” visual thread where appropriate to connect sections.
+
+Keep the site clean, professional, warm, and accessible.
+
+5. Add Cohort 1 transparency language
+   Because Transition Trails is new and preparing for its first cohort, add honest language where needed so the site does not imply completed outcomes that do not yet exist.
+
+Add language such as:
+“Transition Trails is currently forming its first cohort. Program outcomes, learner stories, and nonprofit project results will be shared as cohorts launch and complete.”
+
+Place similar language on:
+
+* Homepage where impact or program claims appear
+* Programs overview
+* Guided Trail page
+* Scholarships page if outcomes are referenced
+* Donate page if scholarship impact is discussed
+
+Keep the tone confident, not apologetic.
+
+6. Create or revise an Impact section as an “Impact Roadmap”
+   Do not claim completed impact yet. Instead, add an “Impact Roadmap” section or page that explains:
+
+* Cohort 1 is in formation
+* What Transition Trails will measure
+* Number of learners supported
+* Scholarships awarded
+* Nonprofit projects completed
+* Volunteer coach participation
+* Salesforce skills gained
+* Job placement or career progression once available
+
+Suggested section headings:
+
+* Where We Are Now
+* Cohort 1 in Formation
+* What We Will Measure
+* How Support Creates Impact
+* Future Learner and Nonprofit Stories
+
+7. Improve Donate page outcome framing
+   Add clearer donation impact language without overstating current results.
+
+Include:
+
+* “Help fund scholarship access for career-changing learners.”
+* “Your support helps learners gain supervised, real-world Salesforce experience while expanding nonprofit capacity.”
+* “As Cohort 1 launches, we will report scholarship and project outcomes transparently.”
+
+If scholarship cost is currently listed as $1,547, connect that amount clearly to one scholarship seat only if that is accurate.
+
+8. Add Organization structured data / JSON-LD
+   Add nonprofit Organization schema to the site, preferably globally or on the homepage.
+
+Include:
+
+* Organization name: Transition Trails
+* Legal nonprofit status if supported
+* EIN: 88-2746412
+* Address: 1228 Hollywood Ave, Dallas, TX 75208
+* Founding/effective date if appropriate: May 15, 2022
+* URL
+* Logo
+* Contact email
+* SameAs social links if available
+
+Do not expose anything private beyond the address already requested.
+
+9. Handle limited photography
+   Do not use fake or generic stock photography that makes the organization look less credible.
+   Instead:
+
+* Use tasteful abstract trail, map, path, compass, or journey visuals.
+* Use founder/team photos only if already available.
+* Use icons and illustrations sparingly.
+* Add placeholders or sections designed to accept future Cohort 1 photos, learner stories, nonprofit project images, and partner logos later.
+* Avoid making the site feel anonymous by overusing initials-only circles.
+
+10. Remove or hide the Blog for now
+    Remove Blog from the main navigation and footer if it has no posts.
+    If the route remains, make sure it is not indexed or promoted until posts are published.
+    We will revisit the blog strategy later.
+
+11. Verify key compliance basics
+    Please verify:
+
+* Privacy Policy and Terms are linked in the footer.
+* Contact page has email, mailing address, and clear contact method.
+* No broken links in primary navigation.
+* Scholarship application links are consistent and point to the same destination.
+* Each major page has a unique title and meta description.
+* H1 heading exists and is unique on each page.
+* Site remains mobile responsive.
+
+Please make these updates in a careful, production-ready way without changing the mission, programs, or core content more than necessary.

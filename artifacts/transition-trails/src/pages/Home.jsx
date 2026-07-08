@@ -291,7 +291,7 @@ export default function Home() {
       </section>
 
       {/* Section 8: Social Proof */}
-      <section className="bg-[#FAFAF7] py-20 px-5 md:px-10">
+      <section className="bg-white py-20 px-5 md:px-10">
         <div className="max-w-[1024px] mx-auto">
           
           {/* Hugh's Story Timeline */}
@@ -349,7 +349,7 @@ export default function Home() {
               <div className="w-[44px] h-[44px] rounded-full bg-[#2F6B3F] text-white flex items-center justify-center font-['Poppins'] font-bold">MC</div>
               <div>
                 <div className="font-['Poppins'] font-semibold text-[14px] text-[#2A2E2C]">M. Chen</div>
-                <div className="font-['Open_Sans'] text-[13px] text-[#4A4F4D]">Guided Trail Graduate · Salesforce Admin · Dallas, TX</div>
+                <div className="font-['Open_Sans'] text-[13px] text-[#4A4F4D]">Guided Trail Graduate · Cohort 0 · Dec. 2025 · Dallas, TX</div>
               </div>
             </div>
           </div>
@@ -357,10 +357,10 @@ export default function Home() {
       </section>
 
       {/* Section 9: Nonprofit Partners */}
-      <section className="bg-[#FAFAF7] border-y border-[#E2E4E1] py-10 px-5">
+      <section className="bg-white border-y border-[#E2E4E1] py-10 px-5">
         <div className="max-w-[1024px] mx-auto">
           <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#4A4F4D] text-center mb-8">
-            NONPROFITS WE'VE SERVED
+            NONPROFITS IN OUR NETWORK
           </div>
           <div className="flex flex-wrap justify-center gap-6">
             <div className="w-[280px] h-[56px] bg-white border border-[#E2E4E1] rounded-lg flex items-center justify-center font-['Open_Sans'] font-semibold text-[14px] text-[#4A4F4D]">
@@ -379,42 +379,49 @@ export default function Home() {
       {/* Section 9.5: Testimonials */}
       <section className="bg-white py-20 px-5 md:px-10">
         <div className="max-w-[1100px] mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-14">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">WHAT PEOPLE ARE SAYING</div>
-            <h2 className="font-['Poppins'] font-bold text-[32px] text-[#2A2E2C] mb-4">Real outcomes. Real voices.</h2>
+            <h2 className="font-['Poppins'] font-bold text-[32px] text-[#2A2E2C] mb-4">Real voices. Honest outcomes.</h2>
             <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] max-w-[640px] mx-auto">
-              From the nonprofits we serve and the learners who have done the work.
+              These reflections are from our Cohort 0 pilot (Dec. 2025) and our nonprofit network. Cohort 1 is now enrolling.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {/* Nonprofit Partner — Deep Teal */}
-            <div className="bg-white border border-[#E2E4E1] rounded-xl p-7 relative" style={{ borderLeft: "5px solid #2F6F7E" }}>
-              <div className="absolute top-3 left-4 font-['Poppins'] text-[80px] leading-none select-none" style={{ color: "rgba(47,111,126,0.15)" }}>"</div>
-              <p className="font-['Poppins'] font-medium italic text-[16px] text-[#2A2E2C] leading-[1.6] mb-4 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
+            {/* Nonprofit Partner */}
+            <div className="flex flex-col">
+              <div className="font-['Poppins'] text-[56px] leading-none mb-2 select-none" style={{ color: "rgba(47,111,126,0.3)" }}>"</div>
+              <p className="font-['Poppins'] font-medium italic text-[16px] text-[#2A2E2C] leading-[1.65] mb-5 flex-1">
                 Transition Trails Salesforce Experts go beyond! After working with the team, our productivity and data accuracy soared — and we felt supported every step of the way.
               </p>
-              <div className="font-['Open_Sans'] font-semibold text-[14px] text-[#2F6F7E]">Hartford Promises</div>
-              <div className="font-['Open_Sans'] text-[12px] text-[#8C8882]">Nonprofit Partner · Digital Compass Member · Hartford, CT</div>
+              <div>
+                <div className="font-['Open_Sans'] font-semibold text-[14px] text-[#2F6F7E]">Hartford Promises</div>
+                <div className="font-['Open_Sans'] text-[12px] text-[#8C8882]">Nonprofit Partner · Digital Compass Member · Hartford, CT</div>
+              </div>
             </div>
 
-            {/* Program Learners — Trail Green */}
-            <div className="bg-white border border-[#E2E4E1] rounded-xl p-7 relative" style={{ borderLeft: "5px solid #2F6B3F" }}>
-              <div className="absolute top-3 left-4 font-['Poppins'] text-[80px] leading-none select-none" style={{ color: "rgba(47,107,63,0.15)" }}>"</div>
-              <p className="font-['Poppins'] font-medium italic text-[16px] text-[#2A2E2C] leading-[1.6] mb-4 relative z-10">
+            {/* Cohort 0 — learner 1 */}
+            <div className="flex flex-col">
+              <div className="font-['Poppins'] text-[56px] leading-none mb-2 select-none" style={{ color: "rgba(47,107,63,0.25)" }}>"</div>
+              <p className="font-['Poppins'] font-medium italic text-[16px] text-[#2A2E2C] leading-[1.65] mb-5 flex-1">
                 The hands-on experience and the team environment were what I valued most. Working on a real project made everything click in a way that self-study never could.
               </p>
-              <div className="font-['Open_Sans'] font-semibold text-[14px] text-[#2F6B3F]">Cohort 0 Participant</div>
-              <div className="font-['Open_Sans'] text-[12px] text-[#8C8882]">Guided Trail · Dec. 2025 Retrospective</div>
+              <div>
+                <div className="font-['Open_Sans'] font-semibold text-[14px] text-[#2F6B3F]">Cohort 0 Participant</div>
+                <div className="font-['Open_Sans'] text-[12px] text-[#8C8882]">Guided Trail · Dec. 2025 Retrospective</div>
+              </div>
             </div>
 
-            <div className="bg-white border border-[#E2E4E1] rounded-xl p-7 relative" style={{ borderLeft: "5px solid #2F6B3F" }}>
-              <div className="absolute top-3 left-4 font-['Poppins'] text-[80px] leading-none select-none" style={{ color: "rgba(47,107,63,0.15)" }}>"</div>
-              <p className="font-['Poppins'] font-medium italic text-[16px] text-[#2A2E2C] leading-[1.6] mb-4 relative z-10">
+            {/* Cohort 0 — learner 2 */}
+            <div className="flex flex-col">
+              <div className="font-['Poppins'] text-[56px] leading-none mb-2 select-none" style={{ color: "rgba(47,107,63,0.25)" }}>"</div>
+              <p className="font-['Poppins'] font-medium italic text-[16px] text-[#2A2E2C] leading-[1.65] mb-5 flex-1">
                 This program teaches you how to think like a professional — not just how to pass a test. The coaching and real-world exposure gave me a completely different kind of confidence.
               </p>
-              <div className="font-['Open_Sans'] font-semibold text-[14px] text-[#2F6B3F]">Cohort 0 Participant</div>
-              <div className="font-['Open_Sans'] text-[12px] text-[#8C8882]">Guided Trail · Dec. 2025 Retrospective</div>
+              <div>
+                <div className="font-['Open_Sans'] font-semibold text-[14px] text-[#2F6B3F]">Cohort 0 Participant</div>
+                <div className="font-['Open_Sans'] text-[12px] text-[#8C8882]">Guided Trail · Dec. 2025 Retrospective</div>
+              </div>
             </div>
           </div>
         </div>

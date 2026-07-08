@@ -116,8 +116,8 @@ export default function Contact() {
                   <a href="mailto:kim@transitiontrails.org" className="hover:underline">kim@transitiontrails.org</a>
                 </div>
                 <div className="pt-4 border-t border-white/20">
-                  <div className="text-white/60 text-[12px] uppercase tracking-wider font-semibold mb-1">Location</div>
-                  <div>Dallas, Texas</div>
+                  <div className="text-white/60 text-[12px] uppercase tracking-wider font-semibold mb-1">Mailing Address</div>
+                  <div>1228 Hollywood Ave<br />Dallas, TX 75208</div>
                 </div>
               </div>
             </div>

@@ -28,7 +28,7 @@ export default function PrivacyPolicy() {
             <div>
               <h2 className="font-['Poppins'] font-bold text-[22px] text-[#2A2E2C] mb-4">Who We Are</h2>
               <p>
-                Transition Trails is a 501(c)(3) nonprofit organization (EIN: 88-2746412) headquartered in Dallas, Texas. We operate the website at transitiontrails.org and deliver Salesforce career training programs and nonprofit technology support services.
+                Transition Trails is a 501(c)(3) nonprofit organization (EIN: 88-2746412) headquartered in Dallas, Texas. Our mailing address is 1228 Hollywood Ave, Dallas, TX 75208. We operate the website at transitiontrails.org and deliver Salesforce career training programs and nonprofit technology support services.
               </p>
               <p className="mt-4">
                 For privacy questions, contact us at:{" "}

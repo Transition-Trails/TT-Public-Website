@@ -24,13 +24,15 @@ function upsertLink(rel, href) {
   el.setAttribute("href", href);
 }
 
-export function PageMeta({ title, description, path = "/" }) {
+export function PageMeta({ title, description, path = "/", robots }) {
   const canonicalUrl = `${DOMAIN}${path}`;
 
   useEffect(() => {
     if (title) document.title = title;
 
     if (description) upsertMeta("name", "description", description);
+
+    if (robots) upsertMeta("name", "robots", robots);
 
     upsertLink("canonical", canonicalUrl);
 

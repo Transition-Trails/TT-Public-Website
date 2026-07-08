@@ -35,6 +35,7 @@ import Expedition from "./pages/Expedition";
 import Coaches from "./pages/Coaches";
 import Coaching from "./pages/Coaching";
 import Consulting from "./pages/Consulting";
+import Impact from "./pages/Impact";
 import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient();
@@ -70,6 +71,7 @@ function Router() {
       <Route path="/coaches" component={Coaches} />
       <Route path="/coaching" component={Coaching} />
       <Route path="/consulting" component={Consulting} />
+      <Route path="/impact" component={Impact} />
 
       {/* Legacy URL redirects from old Salesforce Experience Cloud site */}
       <Route path="/contact-us">

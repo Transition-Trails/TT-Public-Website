@@ -83,6 +83,7 @@ export default function Blog() {
         title="Blog | Salesforce Career Insights | Transition Trails"
         description="Salesforce career guides, nonprofit technology insights, and stories from the trail. Resources for aspiring and working Salesforce professionals."
         path="/blog"
+        robots="noindex, nofollow"
       />
 
       {/* Hero */}

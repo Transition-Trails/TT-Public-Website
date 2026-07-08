@@ -16,6 +16,10 @@ export function Footer() {
           <p className="font-['Open_Sans'] text-[12px] mt-2" style={{ color: "rgba(255,255,255,0.45)" }}>
             To assist people in transitioning to the digital economy through education, mentoring and training. Our primary focus is within the Salesforce ecosystem, providing a system of online and real world education and experience.
           </p>
+          <address className="font-['Open_Sans'] text-[12px] not-italic mt-3" style={{ color: "rgba(255,255,255,0.4)" }}>
+            1228 Hollywood Ave<br />
+            Dallas, TX 75208
+          </address>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-10 w-full md:w-auto">
@@ -25,7 +29,7 @@ export function Footer() {
             </h4>
             <ul className="flex flex-col gap-3">
               <li><Link href="/about" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">About</Link></li>
-              <li><Link href="/blog" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Blog</Link></li>
+              <li><Link href="/impact" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Our Impact</Link></li>
               <li><Link href="/contact" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Contact</Link></li>
             </ul>
           </div>
