@@ -30,6 +30,7 @@ import PartnersEmployers from "./pages/PartnersEmployers";
 import Expedition from "./pages/Expedition";
 import Coaches from "./pages/Coaches";
 import Coaching from "./pages/Coaching";
+import Consulting from "./pages/Consulting";
 import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient();
@@ -60,6 +61,7 @@ function Router() {
       <Route path="/expedition" component={Expedition} />
       <Route path="/coaches" component={Coaches} />
       <Route path="/coaching" component={Coaching} />
+      <Route path="/consulting" component={Consulting} />
 
       {/* Alias routes */}
       <Route path="/scholarship-application">

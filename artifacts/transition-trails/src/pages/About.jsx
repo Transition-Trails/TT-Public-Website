@@ -127,6 +127,13 @@ export default function About() {
               <FounderCard key={founder.key} founder={founder} />
             ))}
           </div>
+
+          <div className="max-w-[800px] mx-auto mt-12 text-center">
+            <p className="font-['Open_Sans'] text-[15px] leading-[1.65]" style={{ color: "rgba(255,255,255,0.65)" }}>
+              Our founders also lead Transition Trails' Salesforce consulting practice — bringing the same expertise to nonprofits and small businesses that need dedicated project or retainer support.{" "}
+              <Link href="/consulting" className="font-semibold text-white hover:underline">Learn about consulting →</Link>
+            </p>
+          </div>
         </div>
       </section>
 

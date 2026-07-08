@@ -8,16 +8,19 @@ export function Nav() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProgramsOpen, setIsProgramsOpen] = useState(false);
   const [isPartnersOpen, setIsPartnersOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const isActive = (path) => location === path;
   const isProgramsActive = location.startsWith("/programs") && location !== "/programs/digital-compass";
   const isDcActive = location === "/programs/digital-compass";
   const isPartnersActive = location.startsWith("/partners");
+  const isServicesActive = location === "/coaching" || location === "/consulting";
 
   const closeMenu = () => {
     setIsMobileMenuOpen(false);
     setIsProgramsOpen(false);
     setIsPartnersOpen(false);
+    setIsServicesOpen(false);
   };
 
   return (
@@ -56,7 +59,6 @@ export function Nav() {
                 <div className="h-px bg-[#E2E4E1] my-1" />
                 <Link href="/scholarships" className="block px-4 py-3 text-sm font-['Open_Sans'] font-semibold text-[#2F6B3F] hover:bg-[#FAFAF7]">🏅 Trail Forward Scholarship</Link>
                 <Link href="/coaches" className="block px-4 py-3 text-sm font-['Open_Sans'] font-semibold text-[#2F6B3F] hover:bg-[#FAFAF7]">🎓 Become a Coach</Link>
-                <Link href="/coaching" className="block px-4 py-3 text-sm font-['Open_Sans'] font-semibold text-[#2F6B3F] hover:bg-[#FAFAF7]">💬 Individual Coaching</Link>
                 <div className="h-px bg-[#E2E4E1] my-1" />
                 <Link href="/nonprofit-assessment" className="block px-4 py-3 text-sm font-['Open_Sans'] font-semibold text-[#2F6F7E] hover:bg-[#FAFAF7]">Free Nonprofit Assessment →</Link>
                 <div className="h-px bg-[#E2E4E1] my-1" />
@@ -77,6 +79,17 @@ export function Nav() {
                 <Link href="/partners/employers" className="block px-4 py-3 text-sm font-['Open_Sans'] text-[#4A4F4D] hover:bg-[#FAFAF7] hover:text-[#2F6B3F]">For Employers</Link>
                 <div className="h-px bg-[#E2E4E1] my-1" />
                 <Link href="/scholarships" className="block px-4 py-2.5 text-[12px] font-['Open_Sans'] text-[#4A4F4D]/70 hover:bg-[#FAFAF7] hover:text-[#2F6B3F]">🏅 Trail Forward Scholarship</Link>
+              </div>
+            </div>
+
+            {/* Services Dropdown */}
+            <div className="relative h-full flex items-center group">
+              <button className={`font-['Open_Sans'] font-semibold text-[15px] flex items-center gap-1 transition-colors ${isServicesActive ? "text-white" : "text-white/70 hover:text-white"}`}>
+                Services <ChevronDown className="w-4 h-4 opacity-70 group-hover:rotate-180 transition-transform" />
+              </button>
+              <div className="absolute top-[80px] left-1/2 -translate-x-1/2 w-56 bg-white rounded-xl shadow-lg border border-[#E2E4E1] py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <Link href="/coaching" className="block px-4 py-3 text-sm font-['Open_Sans'] text-[#4A4F4D] hover:bg-[#FAFAF7] hover:text-[#2F6B3F]">Individual Coaching</Link>
+                <Link href="/consulting" className="block px-4 py-3 text-sm font-['Open_Sans'] text-[#4A4F4D] hover:bg-[#FAFAF7] hover:text-[#2F6B3F]">Consulting</Link>
               </div>
             </div>
 
@@ -131,7 +144,6 @@ export function Nav() {
               <div className="h-px bg-white/10 my-1" />
               <Link href="/scholarships" onClick={closeMenu} className="text-[#6BBF85] font-['Open_Sans'] font-semibold text-base py-1">🏅 Trail Forward Scholarship</Link>
               <Link href="/coaches" onClick={closeMenu} className="text-[#6BBF85] font-['Open_Sans'] font-semibold text-base py-1">🎓 Become a Coach</Link>
-              <Link href="/coaching" onClick={closeMenu} className="text-[#6BBF85] font-['Open_Sans'] font-semibold text-base py-1">💬 Individual Coaching</Link>
               <Link href="/nonprofit-assessment" onClick={closeMenu} className="text-[#7FCEE0] font-['Open_Sans'] font-semibold text-base py-1">Free Nonprofit Assessment →</Link>
               <Link href="/waitlist" onClick={closeMenu} className="text-[#F5A623] font-['Open_Sans'] font-semibold text-base py-1">Join the Waitlist →</Link>
             </div>
@@ -153,6 +165,20 @@ export function Nav() {
               <Link href="/partners/employers" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-base py-1">For Employers</Link>
               <div className="h-px bg-white/10 my-1" />
               <Link href="/scholarships" onClick={closeMenu} className="text-white/50 font-['Open_Sans'] text-sm py-1">🏅 Trail Forward Scholarship</Link>
+            </div>
+          </div>
+
+          <div>
+            <button
+              className="flex items-center justify-between w-full font-['Open_Sans'] font-semibold text-[18px] text-white/90 py-2 border-b border-white/10"
+              onClick={() => setIsServicesOpen(!isServicesOpen)}
+            >
+              Services
+              <ChevronDown className={`w-5 h-5 transition-transform ${isServicesOpen ? "rotate-180" : ""}`} />
+            </button>
+            <div className={`flex flex-col gap-3 pl-4 overflow-hidden transition-all duration-300 ${isServicesOpen ? "mt-4 max-h-[200px]" : "max-h-0"}`}>
+              <Link href="/coaching" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-base py-1">Individual Coaching</Link>
+              <Link href="/consulting" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-base py-1">Consulting</Link>
             </div>
           </div>
 

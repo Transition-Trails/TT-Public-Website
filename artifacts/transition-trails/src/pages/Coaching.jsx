@@ -205,6 +205,8 @@ export default function Coaching() {
           <div className="font-['Open_Sans'] text-[12px] text-white/50 mb-8 flex items-center gap-2">
             <Link href="/" className="hover:text-white/80 transition-colors">Home</Link>
             <span>/</span>
+            <span className="text-white/80">Services</span>
+            <span>/</span>
             <span className="text-white/80">Coaching</span>
           </div>
 

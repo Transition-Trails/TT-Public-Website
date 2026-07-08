@@ -64,6 +64,9 @@ export const LINKS = {
   // Individual coaching (standalone, purchasable sessions)
   coaching: "/coaching",
 
+  // Salesforce consulting (project-based and retainer)
+  consulting: "/consulting",
+
   // Live JotForm scholarship application
   scholarshipApplication: "https://form.jotform.com/261877164594067",
 

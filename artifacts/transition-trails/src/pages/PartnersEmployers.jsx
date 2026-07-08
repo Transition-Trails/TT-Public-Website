@@ -170,6 +170,11 @@ export default function PartnersEmployers() {
               </div>
             ))}
           </div>
+
+          <p className="text-center font-['Open_Sans'] text-[14px] text-[#4A4F4D] mt-10">
+            Need Salesforce consulting for your organization directly?{" "}
+            <Link href="/consulting" className="font-semibold text-[#2F6B3F] hover:underline">Explore our consulting services →</Link>
+          </p>
         </div>
       </section>
 

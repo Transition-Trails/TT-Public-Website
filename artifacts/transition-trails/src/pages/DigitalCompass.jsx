@@ -212,6 +212,11 @@ export default function DigitalCompass() {
               Full Partner at $749/mo vs. a freelance Salesforce consultant at $45–$150/hr × 10hrs/month = $450–$1,500. Digital Compass delivers more consistent value at lower or comparable cost.
             </p>
           </div>
+
+          <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65] mt-8">
+            Have a specific project, implementation, or architectural challenge that needs dedicated expert attention rather than ongoing membership support? TT also offers{" "}
+            <Link href="/consulting" className="text-[#2F6F7E] font-semibold hover:underline">Salesforce consulting →</Link>.
+          </p>
         </div>
       </section>
 
