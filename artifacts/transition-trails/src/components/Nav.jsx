@@ -80,8 +80,6 @@ export function Nav() {
               <div className="absolute top-[80px] left-1/2 -translate-x-1/2 w-56 bg-white rounded-xl shadow-lg border border-[#E2E4E1] py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 <Link href="/partners/recruiters" className="block px-4 py-3 text-sm font-['Open_Sans'] text-[#4A4F4D] hover:bg-[#FAFAF7] hover:text-[#2F6B3F]">For Recruiters</Link>
                 <Link href="/partners/employers" className="block px-4 py-3 text-sm font-['Open_Sans'] text-[#4A4F4D] hover:bg-[#FAFAF7] hover:text-[#2F6B3F]">For Employers</Link>
-                <div className="h-px bg-[#E2E4E1] my-1" />
-                <Link href="/scholarships" className="block px-4 py-2.5 text-[12px] font-['Open_Sans'] text-[#4A4F4D]/70 hover:bg-[#FAFAF7] hover:text-[#2F6B3F]">🏅 Trail Forward Scholarship</Link>
               </div>
             </div>
 
@@ -177,8 +175,6 @@ export function Nav() {
             <div className={`flex flex-col gap-3 pl-4 overflow-hidden transition-all duration-300 ${isPartnersOpen ? "mt-4 max-h-[200px]" : "max-h-0"}`}>
               <Link href="/partners/recruiters" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-base py-1">For Recruiters</Link>
               <Link href="/partners/employers" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-base py-1">For Employers</Link>
-              <div className="h-px bg-white/10 my-1" />
-              <Link href="/scholarships" onClick={closeMenu} className="text-white/50 font-['Open_Sans'] text-sm py-1">🏅 Trail Forward Scholarship</Link>
             </div>
           </div>
 
