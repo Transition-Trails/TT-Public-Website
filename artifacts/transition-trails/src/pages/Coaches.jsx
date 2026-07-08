@@ -21,7 +21,7 @@ const BENEFITS = [
   {
     icon: "🌱",
     title: "Explorer's Trail membership",
-    body: "Every coaching cohort earns membership credit — 1 month for Coach's Assistants, 3 months for Lead Coaches. Six cohorts earns Lifetime Annual membership. The community you are coaching in stays your community.",
+    body: "Every coaching cohort earns membership credit — 1 month for Coach's Assistants, 3 months for Associate Coaches. Six cohorts earns Lifetime Annual membership. The community you are coaching in stays your community.",
   },
   {
     icon: "🤝",
@@ -169,7 +169,7 @@ export default function Coaches() {
             <div className="flex flex-row xl:flex-col gap-4 w-full xl:w-[240px]">
               {[
                 { value: "12 weeks", label: "Per coaching commitment", color: "#2F6B3F" },
-                { value: "2 roles", label: "Coach's Assistant or Lead Coach", color: "#2F6F7E" },
+                { value: "2 roles", label: "Coach's Assistant or Associate Coach", color: "#2F6F7E" },
                 { value: "6 cohorts", label: "Path to Lifetime membership", color: "#F5A623" },
               ].map(s => (
                 <div
@@ -264,7 +264,7 @@ export default function Coaches() {
                 <div className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65] space-y-4 mb-6 flex-1">
                   <p>The Associate Coach leads a Guided Trail cohort as the primary coaching presence — responsible for learner outcomes, session facilitation, and the professional delivery of the program.</p>
                   <p>This role is for Salesforce professionals with meaningful field experience who want to develop their leadership, mentorship, and solution architecture thinking in a structured coaching environment. You bring the experience. TT provides the framework, the curriculum, and the community.</p>
-                  <p>Lead coaches also have a pathway to becoming Advanced TT Coaches — the most senior coaching role in the TT ecosystem.</p>
+                  <p>Associate Coaches also have a pathway to becoming Advanced TT Coaches — the most senior coaching role in the TT ecosystem.</p>
                 </div>
 
                 {/* Eligibility */}

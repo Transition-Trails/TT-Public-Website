@@ -71,6 +71,11 @@ export default function PrivacyPolicy() {
               <p>
                 Transition Trails does not sell, rent, trade, or otherwise transfer your personal information to third parties for their marketing purposes. We do not share your information with advertisers.
               </p>
+              <div className="mt-5 rounded-xl p-6" style={{ background: "#E6F3EA", borderLeft: "5px solid #2F6B3F" }}>
+                <p className="font-bold text-[#2A2E2C]">
+                  Transition Trails does not sell, rent, share, or trade your personal information with any third party for marketing, advertising, or commercial purposes. Ever.
+                </p>
+              </div>
             </div>
 
             <div>

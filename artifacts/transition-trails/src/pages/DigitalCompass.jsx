@@ -73,13 +73,6 @@ const ASSESSMENT_COVERS = [
   "Which Digital Compass tier fits your situation",
 ];
 
-const TRAIL_OS_COVERS = [
-  "Org health review — configuration, data quality, security",
-  "Current-state process mapping — how your team uses Salesforce today",
-  "Gap analysis — what is missing or not working",
-  "Prioritized action plan — documented steps your team can follow",
-  "Delivered as a written report with a follow-up session to walk through it",
-];
 
 function Check({ color = "#2F6F7E" }) {
   return <span className="shrink-0 font-bold" style={{ color }}> ✓</span>;
@@ -292,7 +285,6 @@ export default function DigitalCompass() {
                   {[
                     "Private office hours session",
                     "Project requests",
-                    "Trail OS Lite Assessment",
                     "Priority learner team matching",
                     "Monthly strategic review call",
                   ].map(item => (
@@ -321,10 +313,10 @@ export default function DigitalCompass() {
                 <span className="font-['Open_Sans'] font-bold text-[11px] tracking-[1px] uppercase text-[#2F6B3F] mb-3">MID · GUIDED</span>
                 <h3 className="font-['Poppins'] font-bold text-[24px] text-[#2A2E2C] mb-4">Guided</h3>
                 <div className="flex items-baseline gap-1 mb-1">
-                  <span className="font-['Poppins'] font-bold text-[36px] text-[#2F6B3F]">$349</span>
-                  <span className="font-['Open_Sans'] text-[14px] text-[#4A4F4D]">/month</span>
+                  <span className="font-['Poppins'] font-bold text-[36px] text-[#2F6B3F]">$3,490</span>
+                  <span className="font-['Open_Sans'] text-[14px] text-[#4A4F4D]">/year</span>
                 </div>
-                <p className="font-['Open_Sans'] text-[12px] text-[#8C8882] mb-6">$3,490/yr — 2 months free</p>
+                <p className="font-['Open_Sans'] text-[12px] text-[#8C8882] mb-6">Annual service contract — billed yearly</p>
 
                 <div className="h-px bg-[#E2E4E1] mb-5" />
 
@@ -333,8 +325,7 @@ export default function DigitalCompass() {
                     "Everything in Community",
                     "Weekly group Office Hours session (shared)",
                     "1 monthly private Office Hours session — your team only",
-                    "1 active project request per quarter",
-                    "Trail OS Lite Assessment — org review + documented action plan",
+                    "1 project request per quarter — must fit within standard quarterly project scope. Requests exceeding scope will be discussed as a consulting engagement.",
                   ].map(item => (
                     <li key={item} className="flex gap-2 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
                       <Check color="#2F6B3F" />{item}
@@ -373,10 +364,10 @@ export default function DigitalCompass() {
                 <span className="font-['Open_Sans'] font-bold text-[11px] tracking-[1px] uppercase text-[#1E4A2A] mb-3">FULL PARTNER</span>
                 <h3 className="font-['Poppins'] font-bold text-[24px] text-[#2A2E2C] mb-4">Full Partner</h3>
                 <div className="flex items-baseline gap-1 mb-1">
-                  <span className="font-['Poppins'] font-bold text-[36px] text-[#1E4A2A]">$749</span>
-                  <span className="font-['Open_Sans'] text-[14px] text-[#4A4F4D]">/month</span>
+                  <span className="font-['Poppins'] font-bold text-[36px] text-[#1E4A2A]">$7,490</span>
+                  <span className="font-['Open_Sans'] text-[14px] text-[#4A4F4D]">/year</span>
                 </div>
-                <p className="font-['Open_Sans'] text-[12px] text-[#8C8882] mb-6">$7,490/yr — 2 months free</p>
+                <p className="font-['Open_Sans'] text-[12px] text-[#8C8882] mb-6">Annual service contract — billed yearly</p>
 
                 <div className="h-px bg-[#E2E4E1] mb-5" />
 
@@ -396,6 +387,7 @@ export default function DigitalCompass() {
                     <span className="shrink-0">🔜</span>Trail OS installation — Full org implementation using TT's Trail OS framework · Coming 2027
                   </li>
                 </ul>
+                {/* Trail OS Lite Assessment removed */}
 
                 <p className="font-['Open_Sans'] italic text-[11px] text-[#8C8882] mb-4">*TT reserves the right to scope-gate requests that require a dedicated project engagement beyond the membership model.</p>
 
@@ -412,7 +404,7 @@ export default function DigitalCompass() {
 
           {/* Annual savings callout */}
           <div className="rounded-xl p-6 text-center" style={{ background: "#E6F3EA", borderTop: "3px solid #2F6B3F" }}>
-            <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] mb-4">All tiers available annually at 10× the monthly price — equivalent to 2 months free.</p>
+            <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] mb-4">The Community tier is available month-to-month at $149/mo. The Guided and Full Partner tiers are annual service contracts at $3,490/yr and $7,490/yr respectively.</p>
             <div className="flex flex-wrap justify-center gap-3">
               {["Entry: $1,490/yr", "Guided: $3,490/yr", "Full Partner: $7,490/yr"].map(p => (
                 <span
@@ -427,39 +419,6 @@ export default function DigitalCompass() {
         </div>
       </section>
 
-      {/* SECTION 6: Trail OS Lite Assessment */}
-      <section className="py-20 px-5 md:px-10" style={{ background: "#E0F0F3" }}>
-        <div className="max-w-[1100px] mx-auto">
-          <div className="mb-10">
-            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6F7E] mb-4">INCLUDED WITH MID + FULL PARTNER</div>
-            <h2 className="font-['Poppins'] font-bold text-[34px] mb-3" style={{ color: "#1E4F5C" }}>Trail OS Lite Assessment</h2>
-            <p className="font-['Poppins'] font-semibold text-[18px] text-[#2F6F7E]">A review of your Salesforce org with a clear, actionable plan.</p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-            <div className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] leading-[1.65] space-y-4">
-              <p>Many nonprofits have Salesforce — but are not sure if it is set up correctly, why it feels hard to use, or what they should focus on next.</p>
-              <p>The Trail OS Lite Assessment is a structured review of your organization's Salesforce org conducted by the TT team. We look at your current configuration, your data model, your automation, and how your team is actually using the platform.</p>
-              <p>At the end, you receive a documented action plan — specific, prioritized steps your own admin or volunteer can follow to improve your org. No implementation required from TT. Just clarity on where you stand and what to do next.</p>
-            </div>
-
-            <div className="bg-white rounded-xl p-8" style={{ borderLeft: "5px solid #2F6F7E" }}>
-              <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2F6F7E] mb-5">The assessment covers:</h3>
-              <ul className="space-y-3">
-                {TRAIL_OS_COVERS.map(item => (
-                  <li key={item} className="flex gap-2 font-['Open_Sans'] text-[13px] text-[#4A4F4D]">
-                    <Check />{item}
-                  </li>
-                ))}
-              </ul>
-              <p className="font-['Open_Sans'] italic text-[12px] text-[#4A4F4D] mt-5 pt-4 border-t border-[#E2E4E1]">
-                Included with Mid — Guided and Full Partner tiers. Conducted within the first 60 days of membership.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* SECTION 7: Project Requests */}
       <section className="bg-white py-20 px-5 md:px-10">
         <div className="max-w-[1100px] mx-auto">
@@ -467,7 +426,7 @@ export default function DigitalCompass() {
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6F7E] mb-4">PROJECT DELIVERY</div>
             <h2 className="font-['Poppins'] font-bold text-[34px] text-[#2A2E2C] mb-4">Real Salesforce work. Delivered by real people.</h2>
             <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] max-w-[760px] leading-[1.65]">
-              Mid and Full Partner members can submit project requests — specific Salesforce configuration work that TT delivers within the membership. All work is declarative configuration — no code, ever.
+              Guided and Full Partner members can submit project requests — specific Salesforce configuration work that TT delivers within the membership. All work is declarative configuration — no code, ever.
             </p>
           </div>
 
@@ -480,6 +439,7 @@ export default function DigitalCompass() {
               </div>
             ))}
           </div>
+          <p className="font-['Open_Sans'] italic text-[12px] text-[#8C8882] mt-6">Project requests must fit within standard quarterly project scope. Requests exceeding scope will be discussed as a consulting engagement.</p>
         </div>
       </section>
 
@@ -518,7 +478,7 @@ export default function DigitalCompass() {
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase mb-4" style={{ color: "rgba(255,255,255,0.45)" }}>START HERE</div>
             <h2 className="font-['Poppins'] font-bold text-[34px] text-white mb-5">Not sure where to start? That is what the free assessment is for.</h2>
             <p className="font-['Open_Sans'] text-[16px] max-w-[760px] mx-auto leading-[1.65]" style={{ color: "rgba(255,255,255,0.72)" }}>
-              Before you choose a membership tier, we want to understand your organization and your Salesforce situation. The free 30-minute assessment with the TT team gives you clarity on where your org stands, what would actually help, and which Digital Compass tier — if any — is the right fit.
+              Before you choose a membership tier, we want to understand your organization and your Salesforce situation. The free assessment (up to 1 hour) with the TT team gives you clarity on where your org stands, what would actually help, and which Digital Compass tier — if any — is the right fit.
               <br /><br />
               No pitch. No obligation. Just a real conversation with someone who understands nonprofit Salesforce.
             </p>
@@ -526,7 +486,7 @@ export default function DigitalCompass() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
             <div className="bg-white rounded-xl p-8">
-              <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-5">In 30 minutes we cover:</h3>
+              <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-5">In up to 1 hour we cover:</h3>
               <ul className="space-y-3">
                 {ASSESSMENT_COVERS.map(item => (
                   <li key={item} className="flex gap-2 font-['Open_Sans'] text-[13px] text-[#4A4F4D]">

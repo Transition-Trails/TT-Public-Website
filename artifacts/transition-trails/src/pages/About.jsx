@@ -137,40 +137,6 @@ export default function About() {
         </div>
       </section>
 
-      <section className="bg-[#FAFAF7] py-20 px-5 border-y border-[#E2E4E1]">
-        <div className="max-w-[800px] mx-auto">
-          <h2 className="font-['Poppins'] font-bold text-[36px] text-[#2A2E2C] text-center mb-12">Timeline</h2>
-          
-          <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-[#2F6B3F]/20">
-            
-            <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-              <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-[#FAFAF7] bg-[#2F6B3F] text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10"></div>
-              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-xl border border-[#E2E4E1] shadow-sm ml-4 md:ml-0">
-                <div className="font-['Poppins'] font-bold text-[18px] text-[#2F6B3F] mb-1">Founded 2020</div>
-                <div className="font-['Open_Sans'] text-[15px] text-[#4A4F4D]">Angela and co-founders launch Transition Trails in Dallas, TX.</div>
-              </div>
-            </div>
-            
-            <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-              <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-[#FAFAF7] bg-[#2F6F7E] text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10"></div>
-              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-xl border border-[#E2E4E1] shadow-sm ml-4 md:ml-0">
-                <div className="font-['Poppins'] font-bold text-[18px] text-[#2F6F7E] mb-1">501(c)(3) Effective May 15, 2022</div>
-                <div className="font-['Open_Sans'] text-[15px] text-[#4A4F4D]">Official public charity status achieved.</div>
-              </div>
-            </div>
-            
-            <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-              <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-[#FAFAF7] bg-[#F5A623] text-[#2A2E2C] shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10"></div>
-              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-xl border border-[#E2E4E1] shadow-sm ml-4 md:ml-0">
-                <div className="font-['Poppins'] font-bold text-[18px] text-[#D4890A] mb-1">First Nonprofit Clients</div>
-                <div className="font-['Open_Sans'] text-[15px] text-[#4A4F4D]">Hartford Promises, CLYLP, and KC Global One become our first dual-impact partners.</div>
-              </div>
-            </div>
-            
-          </div>
-        </div>
-      </section>
-
       {/* Partner Testimonials */}
       <section className="bg-white py-20 px-5 md:px-10 border-t border-[#E2E4E1]">
         <div className="max-w-[1024px] mx-auto">
@@ -207,7 +173,7 @@ export default function About() {
         <div className="max-w-[800px] mx-auto">
           <h2 className="font-['Poppins'] font-bold text-[36px] text-[#2A2E2C] mb-8">Want to be part of the story?</h2>
           <CTAButton href={LINKS.angelaCalendar} variant="amber" size="lg" external>
-            Schedule Time With Angela
+            Schedule time with us
           </CTAButton>
         </div>
       </section>

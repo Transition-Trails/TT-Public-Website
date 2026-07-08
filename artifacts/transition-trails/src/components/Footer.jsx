@@ -18,7 +18,7 @@ export function Footer() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 w-full md:w-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-10 w-full md:w-auto">
           <div>
             <h4 className="font-['Open_Sans'] font-semibold text-[11px] tracking-[2px] uppercase text-white/50 mb-4">
               Quick Links
@@ -26,35 +26,54 @@ export function Footer() {
             <ul className="flex flex-col gap-3">
               <li><Link href="/about" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">About</Link></li>
               <li><Link href="/blog" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Blog</Link></li>
-              <li><Link href="/programs" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Programs</Link></li>
-              <li><Link href="/programs/digital-compass" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">For Nonprofits</Link></li>
-              <li><Link href="/donate" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Donate</Link></li>
               <li><Link href="/contact" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Contact</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-['Open_Sans'] font-semibold text-[11px] tracking-[2px] uppercase text-white/50 mb-4">
-              Our Trails
+              Programs
             </h4>
             <ul className="flex flex-col gap-3">
-              <li><Link href="/programs/explorers-trail" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Explorer's Trail <span className="opacity-60 text-xs ml-1">$47/mo</span></Link></li>
-              <li><Link href="/programs/foundations-trail" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Foundations Trail <span className="opacity-60 text-xs ml-1">$997</span></Link></li>
-              <li><Link href="/programs/guided-trail" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Guided Trail <span className="opacity-60 text-xs ml-1">$1,497</span></Link></li>
-              <li><Link href="/programs/trail-of-mastery" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Trail of Mastery <span className="opacity-60 text-xs ml-1">Contact us</span></Link></li>
-              <li><Link href="/programs/digital-compass" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Digital Compass <span className="opacity-60 text-xs ml-1">$149/mo</span></Link></li>
+              <li><Link href="/programs/explorers-trail" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Explorer's Trail</Link></li>
+              <li><Link href="/programs/foundations-trail" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Foundations Trail</Link></li>
+              <li><Link href="/programs/guided-trail" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Guided Trail</Link></li>
+              <li><Link href="/programs/trail-of-mastery" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Trail of Mastery</Link></li>
+              <li><Link href="/programs/digital-compass" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Digital Compass</Link></li>
+              <li><Link href="/scholarships" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Trail Forward Scholarship</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-['Open_Sans'] font-semibold text-[11px] tracking-[2px] uppercase text-white/50 mb-4">
-              Support Our Mission
+              Services
+            </h4>
+            <ul className="flex flex-col gap-3">
+              <li><Link href="/coaching" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Individual Coaching</Link></li>
+              <li><Link href="/consulting" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Consulting</Link></li>
+              <li><Link href="/nonprofit-assessment" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Free Assessment</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-['Open_Sans'] font-semibold text-[11px] tracking-[2px] uppercase text-white/50 mb-4">
+              Partners
+            </h4>
+            <ul className="flex flex-col gap-3">
+              <li><Link href="/partners/recruiters" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">For Recruiters</Link></li>
+              <li><Link href="/partners/employers" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">For Employers</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-['Open_Sans'] font-semibold text-[11px] tracking-[2px] uppercase text-white/50 mb-4">
+              Support
             </h4>
             <ul className="flex flex-col gap-3">
               <li><Link href="/donate" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Donate</Link></li>
-              <li><a href={LINKS.volunteer} target="_blank" rel="noopener noreferrer" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Volunteer</a></li>
-              <li><Link href="/contact" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Partner With Us</Link></li>
-              <li><a href={LINKS.angelaCalendar} target="_blank" rel="noopener noreferrer" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Schedule Time With Angela</a></li>
+              <li><Link href="/volunteer" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Volunteer</Link></li>
+              <li><Link href="/contact" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Contact Us</Link></li>
+              <li><a href={LINKS.angelaCalendar} target="_blank" rel="noopener noreferrer" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Schedule time with us</a></li>
             </ul>
           </div>
         </div>

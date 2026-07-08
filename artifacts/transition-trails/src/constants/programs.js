@@ -81,8 +81,8 @@ export const PROGRAMS = [
     accent: "#2F6F7E",
     tier: "NONPROFIT MEMBERSHIP",
     price: "$149/mo",
-    priceNote: "or $349/mo (Guided) · $749/mo (Full Partner) · Annual = 10× monthly (2 months free)",
-    highlight: "Weekly Office Hours · Project Delivery · Trail OS Lite Assessment",
+    priceNote: "or $3,490/yr (Guided) · $7,490/yr (Full Partner) — annual service contracts",
+    highlight: "Weekly Office Hours · Project Delivery",
     cta: "Book Free Assessment",
     // Internal page — do NOT use the external JotForm URL for site CTAs
     ctaHref: "/nonprofit-assessment",

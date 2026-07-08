@@ -10,7 +10,7 @@ const SERVICES = [
     title: "Free Org Assessment",
     tagline: "You know your system could do more. We help you see exactly where to start.",
     problem: "You know your Salesforce org could be doing more — but you do not know where the gaps are, what to prioritize, or what it would take to fix.",
-    process: "We spend 30 minutes reviewing your current environment — security settings, data structure, automation, and how your team is actually using the platform.",
+    process: "We spend up to 1 hour reviewing your current environment — security settings, data structure, automation, and how your team is actually using the platform.",
     outcome: "You receive a Strategic Discovery Summary — a document you can use to justify budget, guide your next internal project, or make an informed decision about a consulting engagement.",
     cta: "Get Your Free Assessment →",
     ctaHref: "#assessment",
@@ -61,7 +61,7 @@ const CONSULTANTS = [
     initials: "AL",
     name: "Angela Landrith",
     title: "Co-Founder & CEO",
-    specialties: "CRM Business Strategy · Change Management · Platform Adoption · AI Integration · Agile Transformation · Vision and Roadmapping",
+    specialties: "CRM Business Strategy · Change Management · Platform Adoption · AI Adoption and Usage · Requirements and Process Mapping · Vision and Roadmapping",
     bestFor: "Enterprise-scale thinking applied to nonprofit and SMB context. Strategic planning, platform adoption, and organizational change management.",
   },
   {
@@ -382,7 +382,7 @@ export default function Consulting() {
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6F7E] mb-4">GET STARTED</div>
             <h2 className="font-['Poppins'] font-bold text-[34px] text-[#2A2E2C] mb-5">Start with a free assessment.</h2>
             <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] max-w-[680px] mx-auto leading-[1.65]">
-              Not sure where to begin or which service is right for your organization? Start here. A 30-minute assessment gives you a clear picture of where your Salesforce org stands and what would actually help.
+              Not sure where to begin or which service is right for your organization? Start here. A free assessment (up to 1 hour) gives you a clear picture of where your Salesforce org stands and what would actually help.
             </p>
           </div>
 
@@ -400,13 +400,13 @@ export default function Consulting() {
                     </li>
                   ))}
                 </ul>
-                <p className="font-['Open_Sans'] font-semibold text-[13px] text-[#2A2E2C]">30 minutes · Delivered within 3 business days</p>
+                <p className="font-['Open_Sans'] font-semibold text-[13px] text-[#2A2E2C]">Up to 1 hour · Delivered within 3 business days</p>
               </div>
 
               <div>
                 <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-4">Request your assessment:</h3>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65] mb-6">
-                  Tell us a little about your organization and your Salesforce situation. We will schedule a 30-minute session and deliver your Strategic Discovery Summary within 3 business days.
+                  Tell us a little about your organization and your Salesforce situation. We will schedule a session (up to 1 hour) and deliver your Strategic Discovery Summary within 3 business days.
                 </p>
 
                 <div className="flex flex-col gap-4 mb-4">

@@ -276,7 +276,7 @@ export default function Home() {
 
           <div className="bg-white/10 border border-white/20 rounded-xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 backdrop-blur-sm">
             <p className="font-['Open_Sans'] text-[16px] text-white m-0 text-center md:text-left max-w-2xl">
-              Not sure where to start? Book a free 30-minute Salesforce assessment — no pitch, just clarity.
+              Not sure where to start? Book a free Salesforce assessment (up to 1 hour) — no pitch, just clarity.
             </p>
             <CTAButton href={LINKS.nonprofitAssessment} className="shrink-0 whitespace-nowrap">
               Book Free Assessment

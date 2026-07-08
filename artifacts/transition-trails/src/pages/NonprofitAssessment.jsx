@@ -31,7 +31,7 @@ export default function NonprofitAssessment() {
     <div className="flex flex-col min-h-screen">
       <PageMeta
         title="Free Nonprofit Salesforce Assessment | Digital Compass | Transition Trails"
-        description="Book a free 30-minute Salesforce assessment with the Transition Trails team. No pitch. No obligation. Just clarity on where your org stands and what would actually help."
+        description="Book a free Salesforce assessment (up to 1 hour) with the Transition Trails team. No pitch. No obligation. Just clarity on where your org stands and what would actually help."
         path="/nonprofit-assessment"
       />
 
@@ -59,7 +59,7 @@ export default function NonprofitAssessment() {
             className="font-['Open_Sans'] text-[18px] leading-[1.6] mb-10 max-w-2xl mx-auto"
             style={{ color: "rgba(255,255,255,0.75)" }}
           >
-            Not sure where to start with Salesforce? Book a free 30-minute assessment with the
+            Not sure where to start with Salesforce? Book a free assessment (up to 1 hour) with the
             Transition Trails team. No pitch. No obligation. Just clarity on where your org stands
             and what would actually help.
           </p>
@@ -68,7 +68,7 @@ export default function NonprofitAssessment() {
           <div className="flex flex-col sm:flex-row justify-center gap-6 mb-10">
             {[
               "Free — no cost, no commitment",
-              "30 minutes with a real expert",
+              "Up to 1 hour with a real expert",
               "Specific to your org's Salesforce setup",
             ].map((point) => (
               <div key={point} className="flex items-center gap-2">
@@ -148,7 +148,7 @@ export default function NonprofitAssessment() {
                 {
                   step: "2",
                   title: "Schedule your session",
-                  desc: "Kim or a TT team member reaches out to book your free 30-minute call.",
+                  desc: "Kim or a TT team member reaches out to book your free assessment call (up to 1 hour).",
                 },
                 {
                   step: "3",

@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { Building, GraduationCap, Link2, BookOpen } from "lucide-react";
 import { CTAButton } from "../components/CTAButton";
 import { PageMeta } from "../components/PageMeta";
 
@@ -23,59 +22,8 @@ export default function Donate() {
         path="/donate"
       />
 
-      <section className="bg-gradient-to-br from-[#2F6B3F] to-[#2F6F7E] pt-24 pb-20 px-5 text-center">
-        <div className="max-w-[800px] mx-auto">
-          <h1 className="font-['Poppins'] font-bold text-[48px] md:text-[56px] text-white mb-6">Fund the journey.</h1>
-          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white font-['Open_Sans'] text-[14px] px-4 py-2 rounded-lg backdrop-blur-sm">
-            EIN: 88-2746412 <span className="text-white/40">•</span> 501(c)(3) Public Charity <span className="text-white/40">•</span> Effective May 15, 2022
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-[#FAFAF7] py-20 px-5">
-        <div className="max-w-[1024px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-            <div className="bg-white border border-[#2F6B3F]/30 p-8 rounded-2xl">
-              <GraduationCap className="w-8 h-8 text-[#2F6B3F] mb-4" />
-              <h3 className="font-['Poppins'] font-bold text-[20px] text-[#2A2E2C] mb-3">Fund a Trail Forward Scholarship Seat</h3>
-              <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.6] mb-4">
-                $1,547 covers the full cost of one Guided Trail seat for a learner from a historically underserved population in technology. Veterans, women, underrepresented minorities, individuals facing economic barriers — your gift puts one person in that seat.
-              </p>
-              <a href="/scholarships" className="font-['Open_Sans'] font-semibold text-[13px] text-[#2F6B3F] hover:underline">
-                Learn about the Trail Forward Scholarship →
-              </a>
-            </div>
-
-            <div className="bg-white border border-[#E2E4E1] p-8 rounded-2xl">
-              <Building className="w-8 h-8 text-[#2F6F7E] mb-4" />
-              <h3 className="font-['Poppins'] font-bold text-[20px] text-[#2A2E2C] mb-3">Support Digital Compass</h3>
-              <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.6]">
-                Help us expand our nonprofit Salesforce support services to more organizations across the country.
-              </p>
-            </div>
-
-            <div className="bg-white border border-[#E2E4E1] p-8 rounded-2xl">
-              <Link2 className="w-8 h-8 text-[#F5A623] mb-4" />
-              <h3 className="font-['Poppins'] font-bold text-[20px] text-[#2A2E2C] mb-3">Nonprofit Client Matching</h3>
-              <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.6]">
-                Sponsor the pairing of a Guided Trail learner with a nonprofit client, covering the overhead of the implementation.
-              </p>
-            </div>
-
-            <div className="bg-white border border-[#E2E4E1] p-8 rounded-2xl">
-              <BookOpen className="w-8 h-8 text-[#1E4A2A] mb-4" />
-              <h3 className="font-['Poppins'] font-bold text-[20px] text-[#2A2E2C] mb-3">Program Development</h3>
-              <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.6]">
-                Invest in our curriculum updates, Sandbox provisioning, and platform infrastructure.
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
       {/* Give Lively donation widget section */}
-      <section className="bg-white py-20 px-5 border-t border-[#E2E4E1]">
+      <section className="bg-white py-20 px-5">
         <div className="max-w-[680px] mx-auto">
           <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase mb-4" style={{ color: "#2F6B3F" }}>
             MAKE A GIFT TODAY
