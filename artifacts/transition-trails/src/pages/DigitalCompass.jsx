@@ -497,15 +497,17 @@ export default function DigitalCompass() {
             </div>
 
             <div className="flex flex-col justify-center px-4">
-              <h3 className="font-['Poppins'] font-semibold text-[16px] mb-3" style={{ color: "rgba(255,255,255,0.85)" }}>Led by Kim Barnes</h3>
-              <p className="font-['Open_Sans'] text-[14px] leading-[1.65] mb-5" style={{ color: "rgba(255,255,255,0.60)" }}>
-                Kim Barnes is the Co-Founder and COO of Transition Trails and the lead of Digital Compass. She works directly with nonprofit organizations to understand their technology needs and build practical Salesforce solutions that serve their mission.
+              <h3 className="font-['Poppins'] font-semibold text-[16px] mb-3" style={{ color: "rgba(255,255,255,0.85)" }}>Conducted by TT leadership.</h3>
+              <p className="font-['Open_Sans'] text-[14px] leading-[1.65] mb-5" style={{ color: "rgba(255,255,255,0.70)" }}>
+                Your free assessment is conducted by the Transition Trails leadership team — people who understand nonprofit Salesforce challenges and will give you an honest picture of where your org stands and what would actually help.
+                <br /><br />
+                No pitch. No obligation. Just a real conversation.
               </p>
               <a
-                href="mailto:kim@transitiontrails.org"
+                href="mailto:hello@transitiontrails.org"
                 className="font-['Open_Sans'] font-semibold text-[14px] text-[#F5A623] hover:underline"
               >
-                kim@transitiontrails.org
+                hello@transitiontrails.org
               </a>
             </div>
           </div>
