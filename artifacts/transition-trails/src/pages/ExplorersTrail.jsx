@@ -8,11 +8,11 @@ export default function ExplorersTrail() {
     <div className="flex flex-col min-h-screen">
       <PageMeta
         title="Explorer's Trail | Salesforce Community Membership | Transition Trails"
-        description="A membership community for Career Starters, Career Builders, and Career Pivoters in the Salesforce ecosystem. Private Slack, workshops, coaching, and Build With Me content. From $47/mo."
+        description="A membership community for Career Starters, Career Builders, Career Pivoters, and TT graduates. Three tiers — Community Pass ($27/mo), Full Membership ($97/mo annual), Full + Coaching ($1,464/yr) — with Trail Missions, Build With Me videos, Monthly Virtual Trail Talk, and optional coaching."
         path="/programs/explorers-trail"
       />
 
-      {/* SECTION 2: Hero */}
+      {/* SECTION: Hero */}
       <section className="pt-24 pb-20 px-5 md:px-10" style={{ background: 'linear-gradient(135deg, #2F6B3F 0%, #4A8A6E 50%, #7FAFC6 100%)' }}>
         <div className="max-w-[1280px] mx-auto">
 
@@ -30,7 +30,7 @@ export default function ExplorersTrail() {
             {/* Left: copy */}
             <div className="flex-1 max-w-[680px]">
               <div className="inline-block bg-[rgba(127,175,198,0.15)] border border-[rgba(127,175,198,0.4)] text-[#7FAFC6] font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-7">
-                AWARENESS TIER  ·  COMMUNITY MEMBERSHIP  ·  NO PREREQUISITES
+                COMMUNITY MEMBERSHIP  ·  THREE TIERS  ·  NO PREREQUISITES
               </div>
               <h1 className="font-['Poppins'] font-bold text-[52px] text-white tracking-[-1.5px] leading-[1.1] mb-5">
                 Explorer's Trail.
@@ -43,46 +43,46 @@ export default function ExplorersTrail() {
                 <p>Whether you are just discovering Salesforce, preparing to join a TT program, or a graduate staying connected after your program ends — Explorer's Trail is where the TT ecosystem lives between programs.</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <CTAButton href={LINKS.waitlist} variant="amber" size="lg">
+                <CTAButton href={LINKS.waitlist} variant="dark" size="lg">
                   Join the Waitlist →
                 </CTAButton>
                 <a
-                  href="#whats-included"
-                  onClick={e => { e.preventDefault(); document.getElementById('whats-included')?.scrollIntoView({ behavior: 'smooth' }); }}
+                  href="#membership-tiers"
+                  onClick={e => { e.preventDefault(); document.getElementById('membership-tiers')?.scrollIntoView({ behavior: 'smooth' }); }}
                   className="h-[52px] px-7 rounded-[8px] border border-white text-white font-['Poppins'] font-semibold text-[15px] flex items-center justify-center hover:bg-white/10 transition-colors cursor-pointer"
                 >
-                  See what's included ↓
+                  See membership tiers ↓
                 </a>
               </div>
             </div>
 
             {/* Right: price boxes */}
             <div className="flex flex-col gap-4 w-full xl:w-[300px] shrink-0">
-              {/* Monthly */}
+              {/* Community Pass */}
               <div className="bg-white/10 border border-[#7FAFC6]/40 rounded-xl p-6 backdrop-blur-sm">
-                <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-[#7FAFC6] mb-2">MONTHLY</div>
-                <div className="font-['Poppins'] font-bold text-[32px] text-white leading-none mb-1">$47<span className="font-['Open_Sans'] font-normal text-[16px] text-white/60">/mo</span></div>
-                <div className="font-['Open_Sans'] text-[12px] text-white/55">Trail Talk · Build Challenges · Community</div>
+                <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-[#7FAFC6] mb-2">COMMUNITY PASS</div>
+                <div className="font-['Poppins'] font-bold text-[32px] text-white leading-none mb-1">$27<span className="font-['Open_Sans'] font-normal text-[16px] text-white/60">/mo</span></div>
+                <div className="font-['Open_Sans'] text-[12px] text-white/55">Slack · Trail Mission · Trail Talk · Month-to-month</div>
               </div>
-              {/* Annual */}
+              {/* Full Membership */}
               <div className="bg-white/10 border-2 border-[#2F6B3F] rounded-xl p-6 backdrop-blur-sm relative">
-                <div className="absolute top-3 right-3 bg-[#F5A623] text-[#2A2E2C] font-['Poppins'] font-bold text-[9px] uppercase tracking-wide px-2 py-0.5 rounded-sm">BEST VALUE</div>
-                <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-[#2F6B3F] mb-2">ANNUAL</div>
-                <div className="font-['Poppins'] font-bold text-[32px] text-white leading-none mb-1">$397<span className="font-['Open_Sans'] font-normal text-[16px] text-white/60">/yr</span></div>
-                <div className="font-['Open_Sans'] text-[12px] text-white/55">Full archive · ~$33/mo · 2 months free</div>
+                <div className="absolute top-3 right-3 bg-[#2F6B3F] text-white font-['Poppins'] font-bold text-[9px] uppercase tracking-wide px-2 py-0.5 rounded-sm">MOST POPULAR</div>
+                <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-[#4ADF7C] mb-2">FULL MEMBERSHIP</div>
+                <div className="font-['Poppins'] font-bold text-[32px] text-white leading-none mb-1">$97<span className="font-['Open_Sans'] font-normal text-[16px] text-white/60">/mo</span></div>
+                <div className="font-['Open_Sans'] text-[12px] text-white/55">$1,164/yr · full archive · Penny AI · coaching rate</div>
               </div>
-              {/* Annual + Coaching */}
-              <div className="bg-white/10 border border-[#1E4A2A]/60 rounded-xl p-6 backdrop-blur-sm">
-                <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-white/50 mb-2">ANNUAL + COACHING</div>
-                <div className="font-['Poppins'] font-bold text-[32px] text-white leading-none mb-1">$597<span className="font-['Open_Sans'] font-normal text-[16px] text-white/60">/yr</span></div>
-                <div className="font-['Open_Sans'] text-[12px] text-white/55">Everything Annual + quarterly coaching</div>
+              {/* Full + Coaching */}
+              <div className="bg-white/10 border border-[rgba(47,111,126,0.6)] rounded-xl p-6 backdrop-blur-sm">
+                <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-white/60 mb-2">FULL + COACHING</div>
+                <div className="font-['Poppins'] font-bold text-[32px] text-white leading-none mb-1">$1,464<span className="font-['Open_Sans'] font-normal text-[16px] text-white/60">/yr</span></div>
+                <div className="font-['Open_Sans'] text-[12px] text-white/55">Full Membership + 4 quarterly coaching sessions</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 3: Who It's For */}
+      {/* SECTION: Who It's For */}
       <section className="bg-white py-20 px-5 md:px-10">
         <div className="max-w-[1200px] mx-auto">
           <div className="mb-12">
@@ -127,14 +127,14 @@ export default function ExplorersTrail() {
               <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-[#1E4A2A] mb-2">CAREER PIVOTERS</div>
               <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-3">You are in it for the long haul.</h3>
               <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65]">
-                You finished your included year as a graduate — or you joined on your own and kept renewing. Explorer's Trail is your ongoing professional home in the Salesforce ecosystem. New content every month. Quarterly coaching if you're on an annual plan. The community does not have a finish line.
+                You finished your included year as a graduate — or you joined on your own and kept renewing. Explorer's Trail is your ongoing professional home in the Salesforce ecosystem. New content every month. Quarterly coaching if you're on Full + Coaching. The community does not have a finish line.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 4: What's Included */}
+      {/* SECTION: What's Included */}
       <section id="whats-included" className="bg-[#FAFAF7] py-20 px-5 md:px-10 border-y border-[#E2E4E1]">
         <div className="max-w-[1200px] mx-auto">
           <div className="mb-12">
@@ -150,7 +150,7 @@ export default function ExplorersTrail() {
               <div className="p-7 flex flex-col flex-1">
                 <div className="text-[28px] mb-4">💬</div>
                 <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">Private Slack Community</h3>
-                <span className="inline-block bg-[#E0F0F7] text-[#7FAFC6] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">ALL MEMBERS</span>
+                <span className="inline-block bg-[#E0F0F7] text-[#7FAFC6] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">ALL TIERS</span>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
                   A members-only Slack workspace where Career Starters, Career Builders, Career Pivoters, current program learners, and TT alumni all connect. Ask questions, share wins, find accountability partners, and see what life inside a TT program actually looks like — from people who are living it.
                 </p>
@@ -162,10 +162,10 @@ export default function ExplorersTrail() {
               <div className="h-1 bg-[#7FAFC6]" />
               <div className="p-7 flex flex-col flex-1">
                 <div className="text-[28px] mb-4">🎯</div>
-                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">Workshops and Webinars</h3>
-                <span className="inline-block bg-[#E0F0F7] text-[#7FAFC6] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">ALL MEMBERS</span>
+                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">Trail Missions</h3>
+                <span className="inline-block bg-[#E0F0F7] text-[#7FAFC6] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">ALL TIERS</span>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
-                  Members-only live events hosted by TT — skill-building workshops, Salesforce topic deep-dives, career sessions, and Q&As with the TT team and coaches. Free or reduced pricing for Explorer's Trail members. All hosted and produced by Transition Trails.
+                  Monthly skill-building missions that drop on the 1st. Community Pass members access the current month's mission while active. Full Membership members get the full archive — every past mission, always accessible.
                 </p>
               </div>
             </div>
@@ -175,10 +175,10 @@ export default function ExplorersTrail() {
               <div className="h-1 bg-[#2F6B3F]" />
               <div className="p-7 flex flex-col flex-1">
                 <div className="text-[28px] mb-4">🎬</div>
-                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">Build With Me Content Library</h3>
-                <span className="inline-block bg-[#E6F3EA] text-[#2F6B3F] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">ANNUAL · ANNUAL + COACHING</span>
+                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">Build With Me / Troubleshoot With Me</h3>
+                <span className="inline-block bg-[#E6F3EA] text-[#2F6B3F] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">FULL · FULL + COACHING (archive)</span>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
-                  Skill-building Build With Me videos covering Salesforce concepts, configuration techniques, and practical exercises — created by the TT team. Monthly members access current content. Annual members get the full archive plus everything created in the future as the library grows.
+                  Skill-building videos covering Salesforce concepts, configuration techniques, and practical exercises — created by the TT team. Community Pass members access the current month's videos. Full Membership gets the complete archive plus all future content.
                 </p>
                 <p className="font-['Open_Sans'] italic text-[11px] text-[#8C8882] leading-[1.6] mt-4">
                   Note: Explorer's Trail Build With Me content covers general skill development. Foundations Trail includes separate cert-aligned Build With Me videos specific to the HCH capstone.
@@ -188,15 +188,13 @@ export default function ExplorersTrail() {
 
             {/* Feature 4 */}
             <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
-              <div className="h-1 bg-[#7FAFC6]" />
+              <div className="h-1 bg-[#2F6B3F]" />
               <div className="p-7 flex flex-col flex-1">
                 <div className="text-[28px] mb-4">🤝</div>
                 <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">Coaching Access</h3>
-                <span className="inline-block bg-[#E0F0F7] text-[#7FAFC6] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">ALL MEMBERS</span>
+                <span className="inline-block bg-[#E6F3EA] text-[#2F6B3F] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">FULL · FULL + COACHING</span>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
-                  Async coaching access is available to all members — ask questions and get guidance from the TT team through the community.
-
-                  Explorer's Trail members receive discounted rates on all individual coaching packages. Annual + Coaching members receive a quarterly coaching session included with their membership, with a TT Founder or advanced TT coach.
+                  Full Membership includes async coaching access — submit a question and receive a response within 48 business hours. Full + Coaching members receive four quarterly 1:1 sessions (60 minutes each) with a TT Founder or advanced TT coach. All ET members receive a discounted coaching rate ($100/hr vs. $150/hr standard).
                 </p>
                 <a href="/coaching" className="font-['Open_Sans'] font-semibold text-[13px] text-[#2F6B3F] hover:underline mt-3 inline-block">See coaching packages →</a>
               </div>
@@ -207,23 +205,23 @@ export default function ExplorersTrail() {
               <div className="h-1 bg-[#7FAFC6]" />
               <div className="p-7 flex flex-col flex-1">
                 <div className="text-[28px] mb-3">🎙️</div>
-                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">Monthly Trail Talk</h3>
-                <span className="inline-block bg-[#E0F0F7] text-[#7FAFC6] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">ALL MEMBERS · MONTHLY</span>
+                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">Monthly Virtual Trail Talk</h3>
+                <span className="inline-block bg-[#E0F0F7] text-[#7FAFC6] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">ALL TIERS · FIRST THURSDAY</span>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
-                  A monthly community session for every Explorer's Trail member. Each Trail Talk has a discussion topic, open Q&A, and time for community building — with the TT team and fellow members. Show up, ask questions, share what you're working on, and connect with people who are on the same path.
+                  A monthly live session for every Explorer's Trail member — campfire format with a discussion topic, open Q&A, and community building. Community Pass members access the recording while active. Full Membership gets permanent archive access.
                 </p>
               </div>
             </div>
 
             {/* Feature 6 */}
             <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
-              <div className="h-1 bg-[#7FAFC6]" />
+              <div className="h-1 bg-[#2F6B3F]" />
               <div className="p-7 flex flex-col flex-1">
                 <div className="text-[28px] mb-3">⚡</div>
-                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">Weekly Build Challenges</h3>
-                <span className="inline-block bg-[#E0F0F7] text-[#7FAFC6] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">ALL MEMBERS · WEEKLY</span>
+                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">Slack Challenges</h3>
+                <span className="inline-block bg-[#E6F3EA] text-[#2F6B3F] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">FULL · FULL + COACHING · WEEKLY</span>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
-                  Every week, a new build challenge drops in the community. Short, focused, skill-specific — designed to keep your Salesforce skills sharp between sessions and give you something to share in the Slack community. Challenges range across all skill levels so there is always something relevant, whether you are just starting or preparing for an advanced role.
+                  Weekly or biweekly build challenges in the community. Short, focused, skill-specific — build something, share your result. Designed to keep your Salesforce skills sharp and give you something to rally around with the community.
                 </p>
               </div>
             </div>
@@ -233,36 +231,36 @@ export default function ExplorersTrail() {
               <div className="h-1 bg-[#7FAFC6]" />
               <div className="p-7 flex flex-col flex-1">
                 <div className="text-[28px] mb-3">👕</div>
-                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">Member Merchandise Discounts</h3>
-                <span className="inline-block bg-[#E0F0F7] text-[#7FAFC6] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">ALL MEMBERS · EXCLUSIVE</span>
+                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">Member Merchandise &amp; Discounts</h3>
+                <span className="inline-block bg-[#E0F0F7] text-[#7FAFC6] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">ALL TIERS · EXCLUSIVE</span>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
-                  Explorer's Trail members get exclusive access to discounts on Transition Trails merchandise. Member-only pricing on trail gear, apparel, and community items. A small but real perk of being part of the community.
+                  Access to members-only merch items and TT member discounts on programs and coaching. A small but real perk of being part of the community.
                 </p>
               </div>
             </div>
 
-            {/* Feature 8 — Annual only */}
+            {/* Feature 8 — Full+ only */}
             <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
               <div className="h-1 bg-[#2F6B3F]" />
               <div className="p-7 flex flex-col flex-1">
-                <div className="text-[28px] mb-3">🤝</div>
-                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">Alumni Mentor Matching</h3>
-                <span className="inline-block bg-[#E6F3EA] text-[#2F6B3F] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">ANNUAL · ANNUAL + COACHING</span>
+                <div className="text-[28px] mb-3">🤖</div>
+                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">Penny AI</h3>
+                <span className="inline-block bg-[#E6F3EA] text-[#2F6B3F] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">FULL · FULL + COACHING</span>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
-                  Annual members are matched with a TT program graduate — someone who was in your position and is now working in Salesforce. One match per quarter, structured around a topic you choose. Ask the questions you cannot find answers to anywhere else. This is the human connection no content library can replicate.
+                  Available 24/7 for questions, practice scenarios, and guidance through Salesforce concepts. Full Membership and Full + Coaching members only.
                 </p>
               </div>
             </div>
 
-            {/* Feature 9 — Annual only */}
+            {/* Feature 9 — Full+ only */}
             <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
               <div className="h-1 bg-[#2F6B3F]" />
               <div className="p-7 flex flex-col flex-1">
                 <div className="text-[28px] mb-3">🧭</div>
                 <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">RESOLVE Practitioner Series</h3>
-                <span className="inline-block bg-[#E6F3EA] text-[#2F6B3F] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">ANNUAL · ANNUAL + COACHING</span>
+                <span className="inline-block bg-[#E6F3EA] text-[#2F6B3F] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">FULL · FULL + COACHING</span>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
-                  A structured multi-part workshop series exploring the professional mindset behind great Salesforce delivery: how to think about client problems, how to document decisions, how to lead a discovery conversation. Monthly members can see the series exists. Annual members get full access. This is the first step on the Path to Coach.
+                  A structured multi-part workshop series exploring the professional mindset behind great Salesforce delivery: how to think about client problems, how to document decisions, how to lead a discovery conversation. This is the first step on the Path to Coach.
                 </p>
                 <p className="font-['Open_Sans'] italic text-[11px] text-[#8C8882] leading-[1.6] mt-4">
                   RESOLVE is TT's proprietary delivery methodology — taught in every program, applied in every client engagement.
@@ -273,8 +271,8 @@ export default function ExplorersTrail() {
         </div>
       </section>
 
-      {/* SECTION 5: Membership Tiers */}
-      <section className="bg-white py-20 px-5 md:px-10">
+      {/* SECTION: Membership Tiers */}
+      <section id="membership-tiers" className="bg-white py-20 px-5 md:px-10">
         <div className="max-w-[1100px] mx-auto">
           <div className="mb-12">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">CHOOSE YOUR TIER</div>
@@ -282,25 +280,24 @@ export default function ExplorersTrail() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-            {/* Tier 1: Monthly */}
+            {/* Tier 1: Community Pass */}
             <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
-              <div className="h-1 bg-[#7FAFC6]" />
+              <div className="h-1.5 bg-[#7FAFC6]" />
               <div className="p-8 flex flex-col flex-1">
-                <h3 className="font-['Poppins'] font-semibold text-[20px] text-[#2A2E2C] mb-2">Monthly</h3>
-                <div className="font-['Poppins'] font-bold text-[32px] text-[#7FAFC6] leading-none mb-1">$47<span className="font-['Open_Sans'] font-normal text-[15px] text-[#4A4F4D]">/mo</span></div>
-                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] mb-5">Cancel or pause anytime</p>
+                <span className="inline-block font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase px-2.5 py-1 rounded mb-3" style={{ background: "#E0F0F7", color: "#7FAFC6" }}>GET STARTED</span>
+                <h3 className="font-['Poppins'] font-semibold text-[20px] text-[#2A2E2C] mb-2">Community Pass</h3>
+                <div className="font-['Poppins'] font-bold text-[32px] text-[#7FAFC6] leading-none mb-1">$27<span className="font-['Open_Sans'] font-normal text-[15px] text-[#4A4F4D]">/mo</span></div>
+                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] mb-5">Month-to-month · cancel anytime</p>
                 <div className="h-px bg-[#E2E4E1] mb-5" />
                 <ul className="space-y-2.5 mb-5 flex-1">
                   {[
-                    "Private Slack community",
-                    "Monthly Trail Talk (discussion, Q&A, community building)",
-                    "Weekly Build Challenges (all skill levels)",
-                    "Members-only workshops and webinars (free or reduced TT pricing)",
-                    "Current month's Build With Me skill content",
-                    "Async coaching access",
-                    "Member merchandise discounts",
-                    "Basic progress visibility",
-                    "Program Preview Sessions — intro level",
+                    "Members-only Slack community",
+                    "Current month's Trail Mission (time-gated — active months only, no archive)",
+                    "Monthly Virtual Trail Talk (live + recording available while active)",
+                    "Current month's Build With Me videos",
+                    "Current month's Troubleshoot With Me videos",
+                    "TT member discounts on programs and coaching",
+                    "Merch access (members-only items)",
                   ].map(item => (
                     <li key={item} className="flex gap-2.5 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
                       <span className="text-[#7FAFC6] shrink-0 font-bold">✓</span>
@@ -309,17 +306,12 @@ export default function ExplorersTrail() {
                   ))}
                 </ul>
                 <div className="h-px bg-[#E2E4E1] mb-4" />
-                <ul className="space-y-2 mb-7">
+                <ul className="space-y-2 mb-5">
                   {[
-                    "Content archive",
-                    "Quarterly coaching session",
-                    "Full Path to Coach roadmap",
-                    "Alumni Mentor Matching",
-                    "Annual limited edition merchandise drop",
-                    "Cohort Priority Placement",
-                    "$397 program credit",
-                    "RESOLVE Practitioner Series",
-                    "Annual Member Spotlight eligibility",
+                    "Trail Mission archive",
+                    "Penny AI",
+                    "Async coaching access",
+                    "Live webinars beyond Trail Talk",
                   ].map(item => (
                     <li key={item} className="flex gap-2.5 font-['Open_Sans'] text-[12px] text-[#8C8882]">
                       <span className="shrink-0">×</span>
@@ -327,184 +319,282 @@ export default function ExplorersTrail() {
                     </li>
                   ))}
                 </ul>
-                <a href={LINKS.waitlist} className="w-full h-[44px] rounded-[8px] bg-[#E0F0F7] text-[#7FAFC6] font-['Poppins'] font-semibold text-[14px] flex items-center justify-center hover:bg-[#cce5f2] transition-colors">
-                  Join Monthly
+                <div className="bg-[#E0F0F7] rounded-lg px-4 py-3 mb-5">
+                  <p className="font-['Open_Sans'] text-[12px] text-[#2F6F7E] leading-[1.6]">
+                    <span className="font-bold">GT Enrollment Credit:</span> $27 off GT tuition if you enroll in Guided Trail while active.
+                  </p>
+                </div>
+                <a href={LINKS.waitlist} className="w-full h-[44px] rounded-[8px] font-['Poppins'] font-semibold text-[14px] flex items-center justify-center transition-colors hover:opacity-90" style={{ background: "#E0F0F7", color: "#7FAFC6" }}>
+                  Join the Community
                 </a>
               </div>
             </div>
 
-            {/* Tier 2: Annual — featured */}
+            {/* Tier 2: Full Membership — featured */}
             <div className="bg-white border-2 border-[#2F6B3F] rounded-xl overflow-hidden flex flex-col relative">
-              <div className="h-1 bg-[#2F6B3F]" />
-              <div className="absolute top-4 right-4 bg-[#F5A623] text-[#2A2E2C] font-['Poppins'] font-bold text-[9px] uppercase tracking-wide px-2.5 py-1 rounded-sm">BEST VALUE</div>
+              <div className="h-1.5 bg-[#2F6B3F]" />
+              <div className="absolute top-4 right-4 bg-[#2F6B3F] text-white font-['Poppins'] font-bold text-[9px] uppercase tracking-wide px-2.5 py-1 rounded-sm">MOST POPULAR</div>
               <div className="p-8 flex flex-col flex-1">
-                <h3 className="font-['Poppins'] font-semibold text-[20px] text-[#2A2E2C] mb-2">Annual</h3>
-                <div className="font-['Poppins'] font-bold text-[32px] text-[#2F6B3F] leading-none mb-1">$397<span className="font-['Open_Sans'] font-normal text-[15px] text-[#4A4F4D]">/yr</span></div>
-                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] mb-1">~$33/mo · 2 months free</p>
-                <p className="font-['Open_Sans'] text-[12px] text-[#4A4F4D] mb-5">Pay once, access all year</p>
+                <span className="inline-block font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase px-2.5 py-1 rounded mb-3" style={{ background: "#E6F3EA", color: "#2F6B3F" }}>FULL MEMBERSHIP</span>
+                <h3 className="font-['Poppins'] font-semibold text-[20px] text-[#2A2E2C] mb-2">Full Membership</h3>
+                <div className="font-['Poppins'] font-bold text-[32px] text-[#2F6B3F] leading-none mb-1">$97<span className="font-['Open_Sans'] font-normal text-[15px] text-[#4A4F4D]">/mo</span></div>
+                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] mb-3">$1,164/yr billed annually</p>
+                <div className="flex flex-col gap-1.5 mb-5">
+                  <div className="flex items-center justify-between bg-[#FAFAF7] border border-[#E2E4E1] rounded-lg px-3 py-2">
+                    <span className="font-['Open_Sans'] text-[12px] text-[#2A2E2C] font-semibold">Pay in full</span>
+                    <span className="font-['Open_Sans'] text-[12px] text-[#2F6B3F] font-bold">$1,164/yr + content drop + sticker pack</span>
+                  </div>
+                  <div className="flex items-center justify-between bg-[#FAFAF7] border border-[#E2E4E1] rounded-lg px-3 py-2">
+                    <span className="font-['Open_Sans'] text-[12px] text-[#2A2E2C] font-semibold">3 installments</span>
+                    <span className="font-['Open_Sans'] text-[12px] text-[#4A4F4D]">$397 × 3 = $1,191</span>
+                  </div>
+                </div>
                 <div className="h-px bg-[#E2E4E1] mb-5" />
                 <ul className="space-y-2.5 mb-5 flex-1">
                   {[
-                    "Everything in Monthly",
-                    "Full Build With Me content archive",
-                    "All future content as created",
-                    "Annual member tenure badge (Year 1, 2, 3+) in Slack",
-                    "Full progress visibility including coaching pathway position",
-                    "Program Preview Sessions — full deep-dive with current learners",
-                    "Annual limited edition merchandise drop (time-limited window)",
-                    "Early access to new capstone projects",
-                    "Annual Member Spotlight eligibility",
-                    "Full Path to Coach roadmap",
-                    "Alumni Mentor Matching — quarterly match with TT graduate",
-                    "RESOLVE Practitioner Series — full multi-part workshop access",
-                    "$397 annual fee credited toward one TT program enrollment*",
-                    "Cohort Priority Placement — first access before public waitlist",
+                    "Everything in Community Pass",
+                    "Full Trail Mission archive (all past missions, always accessible while active)",
+                    "Full video archive — Build With Me, Troubleshoot With Me, all content",
+                    "Monthly Virtual Trail Talk recording — permanent archive access",
+                    "Penny AI access",
+                    "Async coaching access (submit a question, response within 48 business hours)",
+                    "Live webinars (2–4/month beyond Trail Talk)",
+                    "Weekly/biweekly Slack challenges",
+                    "Monthly Trail Stamp (digital completion badge — fills your trail map)",
+                    "ET member coaching rate ($100/hr vs. $150/hr standard)",
+                    "Locked-in rate guarantee at renewal",
+                    "Annual member recognition + Founding Year badge for first-cohort members",
+                    "First access to new Trail Missions before Community Pass members",
                   ].map(item => (
                     <li key={item} className="flex gap-2.5 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
                       <span className="text-[#2F6B3F] shrink-0 font-bold">✓</span>
                       {item}
                     </li>
                   ))}
-                  <li className="flex gap-2.5 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
-                    <span className="text-[#2F6B3F] shrink-0 font-bold">✓</span>
-                    <a href="/coaches" className="text-[#2F6B3F] font-semibold hover:underline">Interested in coaching? See the full coaching pathway and apply →</a>
-                  </li>
-                  <li className="flex gap-2.5 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
-                    <span className="text-[#2F6B3F] shrink-0 font-bold">✓</span>
-                    <a href="/coaching" className="text-[#2F6B3F] font-semibold hover:underline">See coaching packages →</a>
-                  </li>
                 </ul>
-                <div className="h-px bg-[#E2E4E1] mb-4" />
-                <ul className="space-y-2 mb-5">
-                  <li className="flex gap-2.5 font-['Open_Sans'] text-[12px] text-[#8C8882]">
-                    <span className="shrink-0">×</span>
-                    Quarterly coaching session
-                  </li>
-                </ul>
-                <a href={LINKS.waitlist} className="w-full h-[44px] rounded-[8px] bg-[#2F6B3F] text-white font-['Poppins'] font-semibold text-[14px] flex items-center justify-center hover:bg-[#245530] transition-colors">
-                  Get Annual
-                </a>
+                <div className="bg-[#E6F3EA] rounded-lg px-4 py-3 mb-5">
+                  <p className="font-['Open_Sans'] text-[12px] text-[#1E4A2A] leading-[1.6]">
+                    <span className="font-bold">GT Enrollment Credit:</span> Enroll in Guided Trail during your membership year and receive a prorated credit for unused months toward GT tuition.
+                  </p>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <a href={LINKS.waitlist} className="w-full h-[44px] rounded-[8px] font-['Poppins'] font-semibold text-[14px] flex items-center justify-center text-[#2A2E2C] transition-colors hover:opacity-90" style={{ background: "#F5A623" }}>
+                    Join Full — Pay in Full
+                  </a>
+                  <a href={LINKS.waitlist} className="w-full h-[44px] rounded-[8px] border-2 border-[#2F6B3F] text-[#2F6B3F] font-['Poppins'] font-semibold text-[14px] flex items-center justify-center hover:bg-[#E6F3EA] transition-colors">
+                    Join Full — 3 Payments
+                  </a>
+                </div>
               </div>
             </div>
 
-            {/* Tier 3: Annual + Coaching */}
-            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
-              <div className="h-1 bg-[#1E4A2A]" />
+            {/* Tier 3: Full + Coaching */}
+            <div className="bg-white border border-[#2F6F7E] rounded-xl overflow-hidden flex flex-col relative">
+              <div className="h-1.5 bg-[#2F6F7E]" />
+              <div className="absolute top-4 right-4 bg-[#F5A623] text-[#2A2E2C] font-['Poppins'] font-bold text-[9px] uppercase tracking-wide px-2.5 py-1 rounded-sm">BEST VALUE</div>
               <div className="p-8 flex flex-col flex-1">
-                <h3 className="font-['Poppins'] font-semibold text-[20px] text-[#2A2E2C] mb-2">Annual + Coaching</h3>
-                <div className="font-['Poppins'] font-bold text-[32px] text-[#1E4A2A] leading-none mb-1">$597<span className="font-['Open_Sans'] font-normal text-[15px] text-[#4A4F4D]">/yr</span></div>
-                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] mb-5">Quarterly coaching included</p>
+                <span className="inline-block font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase px-2.5 py-1 rounded mb-3" style={{ background: "rgba(47,111,126,0.1)", color: "#2F6F7E" }}>FULL + COACHING</span>
+                <h3 className="font-['Poppins'] font-semibold text-[20px] text-[#2A2E2C] mb-2">Full + Coaching</h3>
+                <div className="font-['Poppins'] font-bold text-[32px] text-[#2F6F7E] leading-none mb-1">$1,464<span className="font-['Open_Sans'] font-normal text-[15px] text-[#4A4F4D]">/yr</span></div>
+                <div className="flex flex-col gap-1.5 mb-5">
+                  <div className="flex items-center justify-between bg-[#FAFAF7] border border-[#E2E4E1] rounded-lg px-3 py-2">
+                    <span className="font-['Open_Sans'] text-[12px] text-[#2A2E2C] font-semibold">Pay in full</span>
+                    <span className="font-['Open_Sans'] text-[12px] text-[#2F6F7E] font-bold">$1,464/yr + content drop + sticker pack</span>
+                  </div>
+                  <div className="flex items-center justify-between bg-[#FAFAF7] border border-[#E2E4E1] rounded-lg px-3 py-2">
+                    <span className="font-['Open_Sans'] text-[12px] text-[#2A2E2C] font-semibold">3 installments</span>
+                    <span className="font-['Open_Sans'] text-[12px] text-[#4A4F4D]">$499 × 3 = $1,497</span>
+                  </div>
+                </div>
                 <div className="h-px bg-[#E2E4E1] mb-5" />
-                <ul className="space-y-2.5 mb-7 flex-1">
+                <ul className="space-y-2.5 mb-5 flex-1">
                   {[
-                    "Everything in Annual",
-                    "Quarterly coaching session — with a TT Founder or advanced TT coach",
-                    "Reduced pricing on additional sessions",
+                    "Everything in Full Membership",
+                    "4 quarterly coaching sessions (1:1, 60 minutes each)",
+                    "Sessions at approximately Month 3, 6, 9, 12",
+                    "Available to anyone: current learner, GT graduate, ToM participant, or working admin at any career stage",
                   ].map(item => (
                     <li key={item} className="flex gap-2.5 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
-                      <span className="text-[#1E4A2A] shrink-0 font-bold">✓</span>
+                      <span className="text-[#2F6F7E] shrink-0 font-bold">✓</span>
                       {item}
                     </li>
                   ))}
+                  <li className="flex gap-2.5 font-['Open_Sans'] text-[13px] text-[#4A4F4D] italic">
+                    <span className="text-[#2F6F7E] shrink-0 font-bold">→</span>
+                    Coaching arc: Where are you now · What's blocking you · What's your next target · How do we close that gap
+                  </li>
                 </ul>
-                <a href={LINKS.waitlist} className="w-full h-[44px] rounded-[8px] bg-[#1E4A2A] text-white font-['Poppins'] font-semibold text-[14px] flex items-center justify-center hover:bg-[#163820] transition-colors">
-                  Get Annual + Coaching
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Program Credit callout */}
-          <div className="mt-10 bg-[#E6F3EA] border-l-4 border-[#2F6B3F] rounded-xl p-7">
-            <h4 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-2">The $397 Credit</h4>
-            <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65]">
-              Your Annual Explorer's Trail membership fee is credited toward your first TT program enrollment — applied at checkout. Valid within your current membership year. Applies to one program. Since every TT program includes one year of Annual Explorer's Trail membership on completion, your investment in the community is also your first step toward a program.
-            </p>
-            <p className="font-['Open_Sans'] italic text-[12px] text-[#4A4F4D] mt-3">
-              *Credit valid within same membership year · one program only · not stackable
-            </p>
-          </div>
-
-          <div className="mt-6 rounded-xl overflow-hidden" style={{ background: "rgba(245,166,35,0.06)", border: "1px solid rgba(245,166,35,0.25)", borderTop: "3px solid #F5A623" }}>
-            <div className="p-7">
-              <div className="text-[24px] mb-3">🏔️</div>
-              <div className="flex flex-col sm:flex-row sm:items-start sm:gap-6">
-                <div className="flex-1">
-                  <h4 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-2">The TT Expedition Series — Observer Access</h4>
-                  <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65] mb-3">
-                    Explorer's Trail Annual members get observer access to every TT Expedition — watch professional Salesforce teams build real solutions for real nonprofits over a single weekend. Coming Fall 2027.
+                <div className="bg-[#E6F3EA] rounded-lg px-4 py-3 mb-5">
+                  <p className="font-['Open_Sans'] text-[12px] text-[#1E4A2A] leading-[1.6]">
+                    <span className="font-bold">GT Enrollment Credit:</span> Same prorated credit as Full Membership applies when you enroll in Guided Trail.
                   </p>
-                  <a href="/expedition" className="font-['Open_Sans'] font-semibold text-[13px] text-[#D4890A] hover:underline">
-                    Learn about The Expedition →
+                </div>
+                <div className="flex flex-col gap-2">
+                  <a href={LINKS.waitlist} className="w-full h-[44px] rounded-[8px] font-['Poppins'] font-semibold text-[14px] flex items-center justify-center text-white transition-colors hover:opacity-90" style={{ background: "#2F6F7E" }}>
+                    Join Full + Coaching — Pay in Full
+                  </a>
+                  <a href={LINKS.waitlist} className="w-full h-[44px] rounded-[8px] border-2 font-['Poppins'] font-semibold text-[14px] flex items-center justify-center transition-colors hover:opacity-90" style={{ borderColor: "#2F6F7E", color: "#2F6F7E" }}>
+                    Join Full + Coaching — 3 Payments
                   </a>
                 </div>
-                <span className="inline-block font-['Open_Sans'] font-semibold text-[9px] uppercase tracking-[1.5px] px-3 py-1.5 rounded shrink-0 mt-2 sm:mt-1" style={{ background: "rgba(245,166,35,0.15)", color: "#D4890A" }}>
-                  ANNUAL MEMBERS · COMING 2027
-                </span>
               </div>
             </div>
           </div>
 
-          <div className="mt-6 bg-[#E0F0F7] border-l-4 border-[#7FAFC6] rounded-xl p-7">
-            <h4 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-2">Graduate Recruiter Network</h4>
-            <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65] mb-3">
-              Any TT program graduate can opt in to TT's recruiter partner network, making their portfolio visible to vetted partner recruiters. This is a program benefit available to all graduates regardless of Explorer's Trail membership.
+          {/* Pay-in-full bonus note */}
+          <div className="mt-6 bg-[#FEF3DB] border border-[#F5A623] rounded-xl p-5">
+            <p className="font-['Open_Sans'] text-[13px] text-[#2A2E2C] leading-[1.6]">
+              <span className="font-bold">Pay-in-full bonus:</span> Full Membership and Full + Coaching annual pay-in-full options include an exclusive content drop and sticker pack. The small premium on 3-installment plans reflects the flexibility of spreading payments.
             </p>
-            <Link href="/partners/recruiters" className="font-['Open_Sans'] font-semibold text-[13px] text-[#2F6F7E] hover:underline">
-              Learn about recruiter partnerships →
-            </Link>
           </div>
 
           <p className="font-['Open_Sans'] italic text-[12px] text-[#4A4F4D] text-center mt-6">
-            Guided Trail graduates receive 1 year of Annual membership included with program completion. Coaching sessions are with a TT Founder or advanced TT coach.
+            Guided Trail graduates receive 1 year of Full Membership included with program completion. Coaching sessions are with a TT Founder or advanced TT coach.
           </p>
         </div>
       </section>
 
-      {/* SECTION: Ways to Earn Your Membership */}
+      {/* SECTION: Earned Membership */}
       <section className="bg-[#FAFAF7] py-20 px-5 md:px-10 border-y border-[#E2E4E1]">
         <div className="max-w-[1100px] mx-auto">
           <div className="mb-12">
-            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">THE RECIPROCAL MODEL</div>
-            <h2 className="font-['Poppins'] font-bold text-[32px] text-[#2A2E2C]">The more you contribute, the more TT gives back.</h2>
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">EARNED MEMBERSHIP</div>
+            <h2 className="font-['Poppins'] font-bold text-[32px] text-[#2A2E2C]">Some memberships are earned, not purchased.</h2>
           </div>
-          <div className="overflow-x-auto">
-            <table className="w-full min-w-[560px] border-collapse">
-              <thead>
-                <tr className="border-b-2 border-[#E2E4E1]">
-                  <th className="font-['Poppins'] font-semibold text-[13px] text-[#2A2E2C] text-left py-3 pr-8">How You Earn</th>
-                  <th className="font-['Poppins'] font-semibold text-[13px] text-[#2A2E2C] text-left py-3">What You Get</th>
-                </tr>
-              </thead>
-              <tbody className="font-['Open_Sans'] text-[14px] text-[#4A4F4D]">
-                {[
-                  ["Complete Guided Trail", "1 year Annual membership included"],
-                  ["Complete Trail of Mastery", "1 year Annual membership included"],
-                  ["Coach's Assistant — per cohort", "1 month Explorer's Trail credit"],
-                  ["Associate Coach — per cohort", "3 months Explorer's Trail credit"],
-                  ["Complete 6 coaching cohorts", "Lifetime Annual membership*"],
-                ].map(([earn, get], i) => (
-                  <tr key={i} className="border-b border-[#E2E4E1]">
-                    <td className="py-4 pr-8 font-semibold text-[#2A2E2C]">{earn}</td>
-                    <td className="py-4 text-[#2F6B3F] font-semibold">{get}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            {/* GT Graduate */}
+            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
+              <div className="h-1.5 bg-[#2F6B3F]" />
+              <div className="p-7 flex flex-col flex-1">
+                <div className="text-[28px] mb-4">🎓</div>
+                <span className="inline-block bg-[#E6F3EA] text-[#2F6B3F] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2.5 py-1 rounded mb-3">GT GRADUATE</span>
+                <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-3">1-Year Full Membership — Complimentary</h3>
+                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65] flex-1">
+                  Included automatically when you complete Guided Trail. Stay in the TT community while you enter the job market. No charge.
+                </p>
+              </div>
+            </div>
+
+            {/* ET Included in GT Enrollment */}
+            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
+              <div className="h-1.5 bg-[#2F6B3F]" />
+              <div className="p-7 flex flex-col flex-1">
+                <div className="text-[28px] mb-4">🔗</div>
+                <span className="inline-block bg-[#E6F3EA] text-[#2F6B3F] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2.5 py-1 rounded mb-3">GT ENROLLMENT</span>
+                <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-3">ET Included in GT</h3>
+                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65] flex-1">
+                  When you enroll in Guided Trail, 1 year of Full Membership is included. If you're already an active ET member when you enroll, you receive a credit toward GT tuition: Full annual members receive a prorated credit for unused months. Community Pass members receive $27 off GT tuition. Credit reduces what you owe at enrollment — not a future credit.
+                </p>
+              </div>
+            </div>
+
+            {/* Lifetime Full Membership */}
+            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
+              <div className="h-1.5 bg-[#1E4A2A]" />
+              <div className="p-7 flex flex-col flex-1">
+                <div className="text-[28px] mb-4">🏆</div>
+                <span className="inline-block bg-[#d4e8d8] text-[#1E4A2A] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2.5 py-1 rounded mb-3">LIFETIME</span>
+                <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-3">Lifetime Full Membership</h3>
+                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65] flex-1">
+                  Earned after completing 6 coaching cohorts (any combination of Coach's Assistant and Associate Coach stages). TT's highest community recognition.
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="mt-6 bg-white border border-[#E2E4E1] rounded-xl p-6">
-            <p className="font-['Open_Sans'] text-[14px] text-[#2A2E2C] leading-[1.65]">
-              <strong>*Lifetime Annual membership</strong> is our highest recognition — reserved for coaches who have given six cohorts of sustained commitment back to the TT community.
-            </p>
-            <p className="font-['Open_Sans'] italic text-[13px] text-[#8C8882] mt-2">
-              Future stipend for coaching commitment — coming soon.
-            </p>
+        </div>
+      </section>
+
+      {/* SECTION: Monthly Rhythm */}
+      <section className="bg-white py-20 px-5 md:px-10">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="mb-12">
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">WHAT TO EXPECT</div>
+            <h2 className="font-['Poppins'] font-bold text-[32px] text-[#2A2E2C]">Your Monthly Rhythm</h2>
+            <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] mt-3">The cadence of community. Every month, every week, every day.</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              {
+                icon: "📅",
+                timing: "1st of the month",
+                title: "New Trail Mission drops",
+                desc: "Community Pass: current month only · Full Membership: + full archive of all past missions",
+                tiers: "ALL TIERS",
+                tierColor: "#7FAFC6",
+                tierBg: "#E0F0F7",
+              },
+              {
+                icon: "🎙️",
+                timing: "First Thursday",
+                title: "Monthly Virtual Trail Talk",
+                desc: "Live campfire format for all tiers. Community Pass: recording available while active · Full Membership: permanent archive",
+                tiers: "ALL TIERS",
+                tierColor: "#7FAFC6",
+                tierBg: "#E0F0F7",
+              },
+              {
+                icon: "⚡",
+                timing: "Weekly",
+                title: "Slack Challenge",
+                desc: "Build something, share your result. Weekly or biweekly depending on the month.",
+                tiers: "FULL · FULL + COACHING",
+                tierColor: "#2F6B3F",
+                tierBg: "#E6F3EA",
+              },
+              {
+                icon: "🎬",
+                timing: "Weekly",
+                title: "Build With Me / Troubleshoot With Me",
+                desc: "Community Pass: current month's video only · Full Membership: full archive always accessible",
+                tiers: "ALL TIERS",
+                tierColor: "#7FAFC6",
+                tierBg: "#E0F0F7",
+              },
+              {
+                icon: "🤖",
+                timing: "Ongoing — 24/7",
+                title: "Penny AI",
+                desc: "Available any time for questions, practice, and guidance through Salesforce concepts.",
+                tiers: "FULL · FULL + COACHING",
+                tierColor: "#2F6B3F",
+                tierBg: "#E6F3EA",
+              },
+              {
+                icon: "🤝",
+                timing: "Quarterly",
+                title: "1:1 Coaching Session",
+                desc: "60-minute session with a TT Founder or advanced coach. Coaching arc: where you are → what's blocking you → next target → how to close the gap.",
+                tiers: "FULL + COACHING",
+                tierColor: "#2F6F7E",
+                tierBg: "rgba(47,111,126,0.1)",
+              },
+              {
+                icon: "🏅",
+                timing: "Monthly (active)",
+                title: "Trail Stamp",
+                desc: "Digital completion badge that fills your trail map. One per active month — your visual record of time in the community.",
+                tiers: "FULL · FULL + COACHING",
+                tierColor: "#2F6B3F",
+                tierBg: "#E6F3EA",
+              },
+            ].map(item => (
+              <div key={item.title} className="bg-white border border-[#E2E4E1] rounded-xl p-6 flex gap-4">
+                <div className="text-[24px] shrink-0 mt-0.5">{item.icon}</div>
+                <div className="flex-1">
+                  <div className="font-['Open_Sans'] text-[11px] font-semibold text-[#8C8882] uppercase tracking-[1px] mb-1">{item.timing}</div>
+                  <h4 className="font-['Poppins'] font-semibold text-[15px] text-[#2A2E2C] mb-1">{item.title}</h4>
+                  <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.6] mb-2">{item.desc}</p>
+                  <span className="inline-block font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded" style={{ background: item.tierBg, color: item.tierColor }}>{item.tiers}</span>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* SECTION: The Coaching Pathway */}
-      <section className="bg-white py-20 px-5 md:px-10">
+      <section className="bg-[#FAFAF7] py-20 px-5 md:px-10 border-y border-[#E2E4E1]">
         <div className="max-w-[1100px] mx-auto">
           <div className="mb-4">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">THE COACHING PATHWAY</div>
@@ -575,7 +665,7 @@ export default function ExplorersTrail() {
                 <div className="font-['Open_Sans'] font-semibold text-[11px] tracking-[1px] uppercase text-[#4A4F4D] mb-2">What you get</div>
                 <ul className="space-y-1.5 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
                   <li className="flex gap-2"><span className="text-[#2F6B3F] shrink-0 font-bold">✓</span>Compensation model in development</li>
-                  <li className="flex gap-2"><span className="text-[#2F6B3F] shrink-0 font-bold">✓</span>Complete 6 total cohorts → Lifetime Annual Explorer's Trail membership</li>
+                  <li className="flex gap-2"><span className="text-[#2F6B3F] shrink-0 font-bold">✓</span>Complete 6 total cohorts → Lifetime Full Membership</li>
                 </ul>
               </div>
             </div>
@@ -588,7 +678,7 @@ export default function ExplorersTrail() {
       </section>
 
       {/* SECTION: Trail Navigator */}
-      <section className="bg-[#FAFAF7] py-20 px-5 md:px-10 border-y border-[#E2E4E1]">
+      <section className="bg-white py-20 px-5 md:px-10">
         <div className="max-w-[1100px] mx-auto">
           <div className="mb-12">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">THE TRAIL NAVIGATOR</div>
@@ -648,7 +738,7 @@ export default function ExplorersTrail() {
       </section>
 
       {/* SECTION: Community Identity */}
-      <section className="bg-white py-20 px-5 md:px-10">
+      <section className="bg-[#FAFAF7] py-20 px-5 md:px-10 border-y border-[#E2E4E1]">
         <div className="max-w-[1100px] mx-auto">
           <div className="mb-12">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">COMMUNITY IDENTITY</div>
@@ -660,7 +750,7 @@ export default function ExplorersTrail() {
               <div className="text-[28px] mb-3">🌟</div>
               <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-3">Monthly Member Spotlight</h3>
               <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65]">
-                One member featured every month in Trail Talk and across TT social channels. Career Starters who landed their first Salesforce job. Career Builders who doubled their salary. Career Pivoters who left everything behind and built something new. Your story — told by TT, shareable to LinkedIn. Annual members eligible.
+                One member featured every month in Trail Talk and across TT social channels. Career Starters who landed their first Salesforce job. Career Builders who doubled their salary. Career Pivoters who left everything behind and built something new. Your story — told by TT, shareable to LinkedIn. Full Membership members eligible.
               </p>
               <div className="mt-4 space-y-2 font-['Open_Sans'] text-[13px] text-[#4A4F4D] italic border-l-2 border-[#E2E4E1] pl-4">
                 <p>"I got my first Salesforce job — here is what it took and what the first day felt like"</p>
@@ -672,14 +762,14 @@ export default function ExplorersTrail() {
               <div className="text-[28px] mb-3">🎯</div>
               <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-3">Annual Limited Edition Drop</h3>
               <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65]">
-                Once a year, current Annual members get access to a limited edition TT item — available for a defined window only. Miss the renewal, miss the drop. These are not catalog items. They are markers of when you were here.
+                Once a year, current annual pay-in-full members get access to a limited edition TT item — available for a defined window only. Miss the renewal, miss the drop. These are not catalog items. They are markers of when you were here.
               </p>
             </div>
             <div className="bg-white border border-[#E2E4E1] rounded-xl p-8">
               <div className="text-[28px] mb-3">📊</div>
               <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-3">Your Trail Dashboard</h3>
               <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65]">
-                Annual members see their full TT journey — content completed, coaching pathway position, milestones earned, patches collected, time in community. Monthly members see a summary. Annual members see the map.
+                Full Membership members see their full TT journey — content completed, coaching pathway position, milestones earned, patches collected, time in community. Community Pass members see a summary. Full members see the map.
               </p>
             </div>
             <div className="bg-white border border-[#E2E4E1] rounded-xl p-8">
@@ -693,7 +783,7 @@ export default function ExplorersTrail() {
         </div>
       </section>
 
-      {/* SECTION 6: Community Preview */}
+      {/* SECTION: Community Preview */}
       <section className="bg-[#2A2E2C] py-20 px-5 md:px-10">
         <div className="max-w-[1100px] mx-auto">
           <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-white/45 mb-4">THE COMMUNITY</div>
@@ -705,7 +795,7 @@ export default function ExplorersTrail() {
             Ask a question on a Tuesday. Get an answer from someone who was in your position six months ago — and now has the role you are working toward. That is not something a video course can replicate.
           </p>
           <p className="font-['Open_Sans'] text-[16px] text-white/75 leading-[1.65] max-w-[680px] mb-12">
-            Two things happen every week and every month without fail: Weekly Build Challenges keep your skills sharp and give the community something to rally around. Monthly Trail Talks bring the whole community together — a topic, a Q&A, and an hour of genuine connection with people who are working toward the same things you are.
+            Two things happen every week and every month without fail: Slack challenges keep your skills sharp and give the community something to rally around. Monthly Trail Talks bring the whole community together — a topic, a Q&A, and an hour of genuine connection with people who are working toward the same things you are.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
@@ -723,7 +813,7 @@ export default function ExplorersTrail() {
         </div>
       </section>
 
-      {/* SECTION 7: CTA Banner */}
+      {/* SECTION: CTA Banner */}
       <section className="bg-[#7FAFC6] py-16 px-5 md:px-10">
         <div className="max-w-[1100px] mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-16">
           <div className="flex-1">
@@ -731,7 +821,7 @@ export default function ExplorersTrail() {
               The trail does not have a finish line. Come find your pace.
             </h2>
             <p className="font-['Open_Sans'] text-[16px] text-[#1E4A2A]/80">
-              Start with Monthly. Upgrade to Annual when you're ready. Stay as long as the community serves you.
+              Start with Community Pass. Upgrade to Full Membership when you're ready. Stay as long as the community serves you.
             </p>
           </div>
           <div className="shrink-0">

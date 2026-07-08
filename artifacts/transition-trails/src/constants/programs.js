@@ -31,8 +31,8 @@ export const PROGRAMS = [
     ctaHref: WAITLIST,
     ctaAmber: false,
     whoFor: "Everyone — no prerequisites. Career Starters, Career Builders, Career Pivoters, and TT alumni.",
-    description: "A membership community for Career Starters, Career Builders, and Career Pivoters. Private Slack, Trail Talk, Build Challenges, coaching, content library, and the TT coaching pipeline.",
-    priceNote: "or $397/yr (archive + program credit) · $597/yr (+ quarterly coaching)",
+    description: "Your entry point into the TT ecosystem. Three membership tiers — from Community Pass ($27/mo) to Full Membership ($97/mo annual) to Full + Coaching ($1,464/yr) — with time-gated content, Trail Missions, Build With Me videos, Monthly Virtual Trail Talk, and optional coaching. Month-to-month or annual commitment.",
+    priceNote: "or $1,164/yr Full Membership · $1,464/yr Full + Coaching (4 quarterly coaching sessions)",
   },
   {
     slug: "foundations-trail",
