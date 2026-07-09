@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { PageMeta } from "../components/PageMeta";
 import { LINKS } from "../constants/links";
-import { Calendar, BookOpen, Users, Lightbulb, TrendingUp, Rocket, ClipboardList, Zap } from "lucide-react";
+import { Calendar, BookOpen, Users, Lightbulb, TrendingUp, Rocket, ClipboardList, Zap, Check, X } from "lucide-react";
 
 const UNIVERSAL_BENEFITS = [
   {
@@ -75,11 +75,11 @@ const ASSESSMENT_COVERS = [
 ];
 
 
-function Check({ color = "#2F6F7E" }) {
-  return <span className="shrink-0 font-bold" style={{ color }}> ✓</span>;
+function CheckMark() {
+  return <Check size={16} color="#2F6B3F" className="shrink-0 mt-0.5" />;
 }
-function Cross() {
-  return <span className="shrink-0 font-bold text-[#8C8882]">×</span>;
+function CrossMark() {
+  return <X size={16} color="#8C8882" className="shrink-0 mt-0.5" />;
 }
 
 export default function DigitalCompass() {
@@ -183,7 +183,6 @@ export default function DigitalCompass() {
               <div
                 key={c.title}
                 className="bg-white border border-[#E2E4E1] rounded-xl p-7 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200"
-                style={{ borderLeft: "4px solid #2F6F7E" }}
               >
                 <div className={`w-10 h-10 rounded-lg ${c.iconBg} flex items-center justify-center mb-3`}>
                   {c.icon}
@@ -197,7 +196,7 @@ export default function DigitalCompass() {
           {/* ROI callout */}
           <div
             className="rounded-xl p-7 flex flex-col md:flex-row items-center gap-8"
-            style={{ background: "#E0F0F3", borderTop: "3px solid #2F6F7E" }}
+            style={{ background: "#E0F0F3" }}
           >
             <div className="shrink-0 text-center md:text-left">
               <div className="font-['Poppins'] font-bold text-[28px] text-[#2F6F7E]">1/7th the cost</div>
@@ -224,7 +223,7 @@ export default function DigitalCompass() {
             <h2 className="font-['Poppins'] font-bold text-[34px] text-[#2A2E2C]">Every Digital Compass member gets this.</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {UNIVERSAL_BENEFITS.map(b => (
               <div
                 key={b.title}
@@ -274,7 +273,7 @@ export default function DigitalCompass() {
                     "Month-to-month — cancel anytime",
                   ].map(item => (
                     <li key={item} className="flex gap-2 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
-                      <Check />{item}
+                      <CheckMark />{item}
                     </li>
                   ))}
                 </ul>
@@ -289,7 +288,7 @@ export default function DigitalCompass() {
                     "Monthly strategic review call",
                   ].map(item => (
                     <li key={item} className="flex gap-2 font-['Open_Sans'] text-[12px] text-[#8C8882]">
-                      <Cross />{item}
+                      <CrossMark />{item}
                     </li>
                   ))}
                 </ul>
@@ -328,7 +327,7 @@ export default function DigitalCompass() {
                     "1 project request per quarter — must fit within standard quarterly project scope. Requests exceeding scope will be discussed as a consulting engagement.",
                   ].map(item => (
                     <li key={item} className="flex gap-2 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
-                      <Check color="#2F6B3F" />{item}
+                      <CheckMark />{item}
                     </li>
                   ))}
                 </ul>
@@ -342,7 +341,7 @@ export default function DigitalCompass() {
                     "Monthly strategic review call",
                   ].map(item => (
                     <li key={item} className="flex gap-2 font-['Open_Sans'] text-[12px] text-[#8C8882]">
-                      <Cross />{item}
+                      <CrossMark />{item}
                     </li>
                   ))}
                 </ul>
@@ -379,7 +378,7 @@ export default function DigitalCompass() {
                     "Monthly strategic review call with TT leadership",
                   ].map(item => (
                     <li key={item} className="flex gap-2 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
-                      <Check color="#1E4A2A" />{item}
+                      <CheckMark />{item}
                     </li>
                   ))}
                 </ul>
@@ -398,7 +397,7 @@ export default function DigitalCompass() {
           </div>
 
           {/* Annual savings callout */}
-          <div className="rounded-xl p-6 text-center" style={{ background: "#E6F3EA", borderTop: "3px solid #2F6B3F" }}>
+          <div className="rounded-xl p-6 text-center" style={{ background: "#E6F3EA" }}>
             <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] mb-4">The Community tier is available month-to-month at $149/mo. The Guided and Full Partner tiers are annual service contracts at $3,490/yr and $7,490/yr respectively.</p>
             <div className="flex flex-wrap justify-center gap-3">
               {["Entry: $1,490/yr", "Guided: $3,490/yr", "Full Partner: $7,490/yr"].map(p => (
@@ -415,7 +414,7 @@ export default function DigitalCompass() {
       </section>
 
       {/* SECTION 7: Project Requests */}
-      <section className="bg-white py-20 px-5 md:px-10">
+      <section className="bg-[#FAFAF7] py-20 px-5 md:px-10">
         <div className="max-w-[1100px] mx-auto">
           <div className="mb-12">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6F7E] mb-4">PROJECT DELIVERY</div>
@@ -447,7 +446,6 @@ export default function DigitalCompass() {
             className="relative"
             style={{
               background: "#E0F0F3",
-              borderLeft: "5px solid #2F6F7E",
               borderRadius: "12px",
               padding: "32px 40px",
             }}
@@ -487,22 +485,22 @@ export default function DigitalCompass() {
               <ul className="space-y-3">
                 {ASSESSMENT_COVERS.map(item => (
                   <li key={item} className="flex gap-2 font-['Open_Sans'] text-[13px] text-[#4A4F4D]">
-                    <Check />{item}
+                    <CheckMark />{item}
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="flex flex-col justify-center px-4">
-              <h3 className="font-['Poppins'] font-semibold text-[16px] mb-3" style={{ color: "rgba(255,255,255,0.85)" }}>Conducted by TT leadership.</h3>
-              <p className="font-['Open_Sans'] text-[14px] leading-[1.65] mb-5" style={{ color: "rgba(255,255,255,0.70)" }}>
+            <div className="bg-white rounded-xl p-8 flex flex-col justify-center">
+              <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-3">Conducted by TT leadership.</h3>
+              <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65] mb-5">
                 Your free assessment is conducted by the Transition Trails leadership team — people who understand nonprofit Salesforce challenges and will give you an honest picture of where your org stands and what would actually help.
                 <br /><br />
                 No pitch. No obligation. Just a real conversation.
               </p>
               <a
                 href="mailto:hello@transitiontrails.org"
-                className="font-['Open_Sans'] font-semibold text-[14px] text-[#F5A623] hover:underline"
+                className="font-['Open_Sans'] font-semibold text-[14px] text-[#2F6F7E] hover:underline"
               >
                 hello@transitiontrails.org
               </a>
