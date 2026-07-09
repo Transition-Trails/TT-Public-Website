@@ -51,7 +51,7 @@ export const PROGRAMS = [
     tier: "BRIDGE TIER",
     price: "$1,497",
     priceNote: "or 3 payments of $549 · Trail Forward Scholarship available",
-    highlight: "Real nonprofit client · 12 weeks · Demo Day",
+    highlight: "Real nonprofit client · 12 weeks · Portfolio",
     cta: "Learn More",
     ctaHref: "/programs/guided-trail",
     ctaAmber: true,
