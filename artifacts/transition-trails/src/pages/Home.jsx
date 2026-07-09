@@ -38,7 +38,7 @@ export default function Home() {
         path="/"
       />
 
-      {/* Section 2: Hero */}
+      {/* Section 1: Hero */}
       <section className="bg-gradient-to-r from-[#1E4A2A] via-[#2F6B3F] to-[#2F6F7E] min-h-[640px] flex items-center">
         <div className="max-w-[1280px] mx-auto px-5 md:px-10 py-20 w-full flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           <motion.div
@@ -97,7 +97,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 3: Trust Strip */}
+      {/* Section 2: Trust Strip */}
       <section className="bg-white border-b border-[#E2E4E1] py-5">
         <div className="max-w-[1280px] mx-auto px-5">
           <div className="flex flex-wrap justify-center md:justify-between items-center gap-x-8 gap-y-4 font-['Open_Sans'] font-semibold text-[14px] text-[#4A4F4D]">
@@ -114,7 +114,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 4: The Experience Gap */}
+      {/* Section 3: The Experience Gap */}
       <section className="bg-[#FAFAF7] py-20 px-5 md:px-10">
         <div className="max-w-[1280px] mx-auto flex flex-col xl:flex-row gap-16 items-center xl:items-start">
           <motion.div variants={slideLeft} initial="hidden" whileInView="visible" viewport={{ once: true }} className="flex-1 max-w-[560px]">
@@ -166,74 +166,75 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 5: Program Ecosystem */}
-      <section className="bg-[#FAFAF7] py-20 px-5 md:px-10 relative overflow-hidden">
+      {/* Section 4: A Trail Built for Two */}
+      <section className="bg-[#F5F3EE] py-24 px-5 md:px-10">
         <div className="max-w-[1280px] mx-auto">
-          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-            <div className="w-16 h-[5px] bg-[#2F6B3F] mb-8" />
-            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">FIVE PROGRAMS. ONE ECOSYSTEM.</div>
-            <h2 className="font-['Fraunces'] font-bold text-[36px] text-[#2A2E2C] mb-12">Find your trail.</h2>
+          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-14">
+            <h2 className="font-['Fraunces'] font-bold text-[36px] text-[#2A2E2C] mb-4">A Trail Built for Two</h2>
+            <p className="font-['Open_Sans'] text-[18px] text-[#4A4F4D] max-w-[640px] mx-auto">
+              Our model solves two problems at once: career changers need real experience, and nonprofits need Salesforce capacity.
+            </p>
           </motion.div>
 
-          <div className="flex gap-6 overflow-x-auto pb-8 items-end snap-x snap-mandatory">
-            {PROGRAMS.map(program => (
-              <div key={program.slug} className="snap-start shrink-0">
-                <ProgramCard program={program} height={program.mostPopular ? "featured" : "standard"} />
+          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            {/* Card 1 — Career Changers */}
+            <motion.div variants={fadeUpChild} className="bg-white border border-[#E2E4E1] rounded-xl shadow-sm p-8 flex flex-col">
+              <div className="w-12 h-12 rounded-full bg-[#2F6B3F] flex items-center justify-center mb-6 shrink-0">
+                <Users className="w-6 h-6 text-white" />
               </div>
-            ))}
-          </div>
+              <h3 className="font-['Poppins'] font-bold text-[22px] text-[#2A2E2C] mb-4">Career Changers</h3>
+              <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] leading-[1.65] mb-6">
+                You've done the modules, but employers want proof of work. Under the guidance of experienced coaches, you will deliver a real Salesforce solution for a real nonprofit client — earning the portfolio proof you need to launch your career.
+              </p>
+              <ul className="flex flex-col gap-3 mb-8">
+                {[
+                  "Supervised real project experience",
+                  "Portfolio of completed work",
+                  "Trail Forward Scholarship available for Guided Trail",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 font-['Open_Sans'] text-[15px] text-[#4A4F4D]">
+                    <Check className="w-4 h-4 text-[#2F6B3F] mt-0.5 shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <Link href="/programs" className="mt-auto font-['Poppins'] font-semibold text-[15px] text-[#2F6B3F] hover:underline flex items-center gap-1.5">
+                Explore the Trails <ArrowRight className="w-4 h-4" />
+              </Link>
+            </motion.div>
 
-          <div className="mt-8 bg-[#E6F3EA] border border-[#2F6B3F]/20 rounded-xl p-6 flex flex-col lg:flex-row items-center gap-6 lg:gap-10">
-            <div className="font-['Poppins'] font-semibold text-[15px] text-[#1E4A2A] shrink-0 text-center lg:text-left">
-              Not sure which trail is yours?
-            </div>
-            <div className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] text-center lg:text-left hidden md:block">
-              No cert yet → Explorer's Trail <span className="mx-2 text-[#2F6B3F]">•</span>
-              Working toward cert → Foundations Trail <span className="mx-2 text-[#2F6B3F]">•</span>
-              Certified, not hired → Guided Trail <span className="mx-2 text-[#2F6B3F]">•</span>
-              Employed admin → Trail of Mastery <span className="mx-2 text-[#2F6B3F]">•</span>
-              Nonprofit org → Digital Compass
-            </div>
-            <div className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] text-center lg:text-left md:hidden flex flex-col gap-2">
-              <span>No cert yet → Explorer's Trail</span>
-              <span>Working toward cert → Foundations Trail</span>
-              <span>Certified, not hired → Guided Trail</span>
-              <span>Employed admin → Trail of Mastery</span>
-              <span>Nonprofit org → Digital Compass</span>
-            </div>
-          </div>
-        </div>
-      </section>
+            {/* Card 2 — Nonprofits */}
+            <motion.div variants={fadeUpChild} className="bg-white border border-[#E2E4E1] rounded-xl shadow-sm p-8 flex flex-col">
+              <div className="w-12 h-12 rounded-full bg-[#2F6F7E] flex items-center justify-center mb-6 shrink-0">
+                <Heart className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="font-['Poppins'] font-bold text-[22px] text-[#2A2E2C] mb-4">Nonprofits</h3>
+              <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] leading-[1.65] mb-6">
+                You need a CRM that works for your mission, but implementation costs are out of reach. Partner with Transition Trails to receive scoped, professionally coached Salesforce support through Digital Compass — starting at $149/month.
+              </p>
+              <ul className="flex flex-col gap-3 mb-8">
+                {[
+                  "Professionally coached learner teams",
+                  "Scoped project deliverables",
+                  "Expanded organizational Salesforce capacity",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 font-['Open_Sans'] text-[15px] text-[#4A4F4D]">
+                    <Check className="w-4 h-4 text-[#2F6F7E] mt-0.5 shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <Link href="/nonprofit-assessment" className="mt-auto font-['Poppins'] font-semibold text-[15px] text-[#2F6F7E] hover:underline flex items-center gap-1.5">
+                Partner with us <ArrowRight className="w-4 h-4" />
+              </Link>
+            </motion.div>
 
-      {/* Section 5b: Dual Impact Bridge */}
-      <section className="bg-[#FAFAF7] py-10 px-5">
-        <div className="max-w-[1024px] mx-auto flex flex-col md:flex-row gap-6 items-stretch">
-          <motion.div variants={slideLeft} initial="hidden" whileInView="visible" viewport={{ once: true }} className="flex-1 bg-[#2F6B3F]/10 border border-[#2F6B3F]/20 rounded-xl p-8 flex flex-col justify-center">
-            <div className="font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] text-[#2F6B3F] mb-3">LEARNERS NEED</div>
-            <div className="font-['Poppins'] font-bold text-[18px] text-[#1E4A2A]">Real nonprofit projects to build their portfolio</div>
-          </motion.div>
-
-          <div className="hidden md:flex items-center justify-center">
-            <div className="font-['Poppins'] text-[#E2E4E1] text-3xl">→</div>
-          </div>
-
-          <div className="flex-[1.2] bg-[#2A2E2C] border-t-4 border-t-[#F5A623] rounded-xl p-8 flex flex-col justify-center items-center text-center">
-            <div className="font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] text-[#F5A623] mb-3">THE DUAL IMPACT MODEL</div>
-            <div className="font-['Poppins'] font-bold text-[17px] text-white">Learners need your projects. You need their work. That's the model.</div>
-          </div>
-
-          <div className="hidden md:flex items-center justify-center">
-            <div className="font-['Poppins'] text-[#E2E4E1] text-3xl">→</div>
-          </div>
-
-          <motion.div variants={slideRight} initial="hidden" whileInView="visible" viewport={{ once: true }} className="flex-1 bg-[#2F6F7E]/10 border border-[#2F6F7E]/25 rounded-xl p-8 flex flex-col justify-center">
-            <div className="font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] text-[#2F6F7E] mb-3">NONPROFITS NEED</div>
-            <div className="font-['Poppins'] font-bold text-[18px] text-[#1a3440]">Salesforce support they couldn't afford to hire</div>
           </motion.div>
         </div>
       </section>
 
-      {/* Section 5c: Trailhead Self-Selector */}
+      {/* Section 5: Where Are You Today? (Trailhead Self-Selector) */}
       <section className="bg-[#FAFAF7] py-20 px-5 md:px-10 border-t border-[#E2E4E1]">
         <div className="max-w-[1280px] mx-auto">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mb-16">
@@ -309,6 +310,7 @@ export default function Home() {
                   <ArrowRight className="w-4 h-4 text-[#2F6B3F] opacity-0 group-hover:opacity-100 transition-opacity mt-1 shrink-0" />
                 </Link>
               </motion.div>
+
             </motion.div>
           </div>
 
@@ -338,7 +340,46 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 6: For Nonprofits */}
+      {/* Section 6: Program Ecosystem */}
+      <section className="bg-[#FAFAF7] py-20 px-5 md:px-10 relative overflow-hidden">
+        <div className="max-w-[1280px] mx-auto">
+          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+            <div className="w-16 h-[5px] bg-[#2F6B3F] mb-8" />
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">FIVE PROGRAMS. ONE ECOSYSTEM.</div>
+            <h2 className="font-['Fraunces'] font-bold text-[36px] text-[#2A2E2C] mb-12">Find your trail.</h2>
+          </motion.div>
+
+          <div className="flex gap-6 overflow-x-auto pb-8 items-end snap-x snap-mandatory">
+            {PROGRAMS.map(program => (
+              <div key={program.slug} className="snap-start shrink-0">
+                <ProgramCard program={program} height={program.mostPopular ? "featured" : "standard"} />
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 bg-[#E6F3EA] border border-[#2F6B3F]/20 rounded-xl p-6 flex flex-col lg:flex-row items-center gap-6 lg:gap-10">
+            <div className="font-['Poppins'] font-semibold text-[15px] text-[#1E4A2A] shrink-0 text-center lg:text-left">
+              Not sure which trail is yours?
+            </div>
+            <div className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] text-center lg:text-left hidden md:block">
+              No cert yet → Explorer's Trail <span className="mx-2 text-[#2F6B3F]">•</span>
+              Working toward cert → Foundations Trail <span className="mx-2 text-[#2F6B3F]">•</span>
+              Certified, not hired → Guided Trail <span className="mx-2 text-[#2F6B3F]">•</span>
+              Employed admin → Trail of Mastery <span className="mx-2 text-[#2F6B3F]">•</span>
+              Nonprofit org → Digital Compass
+            </div>
+            <div className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] text-center lg:text-left md:hidden flex flex-col gap-2">
+              <span>No cert yet → Explorer's Trail</span>
+              <span>Working toward cert → Foundations Trail</span>
+              <span>Certified, not hired → Guided Trail</span>
+              <span>Employed admin → Trail of Mastery</span>
+              <span>Nonprofit org → Digital Compass</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 7: For Nonprofits */}
       <section className="bg-gradient-to-br from-[#1E4F5C] to-[#2F6F7E] py-20 px-5 md:px-10">
         <div className="max-w-[1280px] mx-auto">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
@@ -394,45 +435,49 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 7: Founding Team */}
-      <section className="bg-[#2A2E2C] py-20 px-5">
-        <div className="max-w-[1280px] mx-auto">
-          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-12">
-            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#F5A623] mb-4">CO-FOUNDED IN 2020</div>
-            <h2 className="font-['Fraunces'] font-bold text-[36px] text-white">Meet the founding team.</h2>
+      {/* Section 8: Making the Path Accessible */}
+      <section className="bg-[#2A2E2C] py-20 px-5 md:px-10">
+        <div className="max-w-[1280px] mx-auto flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+
+          <motion.div variants={slideLeft} initial="hidden" whileInView="visible" viewport={{ once: true }} className="flex-1 max-w-[560px]">
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#F5A623] mb-4">TRAIL FORWARD SCHOLARSHIP</div>
+            <h2 className="font-['Fraunces'] font-bold text-[36px] text-white mb-6 leading-tight">
+              Making the Path Accessible
+            </h2>
+            <p className="font-['Open_Sans'] text-[18px] text-white/75 leading-[1.65] mb-10">
+              We believe financial barriers should not prevent Salesforce-certified career changers from getting the supervised experience they need. The Trail Forward Scholarship provides one fully funded seat per Guided Trail cohort — at no cost to the recipient.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/scholarship-application"
+                className="inline-flex items-center justify-center h-[52px] px-8 rounded-[8px] bg-[#2F6B3F] text-white font-['Poppins'] font-bold text-[15px] hover:bg-[#265a34] transition-colors"
+              >
+                Learn More
+              </Link>
+              <Link
+                href="/donate"
+                className="inline-flex items-center justify-center h-[52px] px-8 rounded-[8px] border-2 border-white/50 text-white font-['Poppins'] font-bold text-[15px] hover:bg-white/10 hover:border-white transition-colors"
+              >
+                Fund a Scholarship
+              </Link>
+            </div>
           </motion.div>
 
-          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="flex flex-wrap justify-center gap-4">
-            {FOUNDERS.map(founder => (
-              <motion.div variants={fadeUpChild} key={founder.key} className="bg-[#2E3330] border border-white/10 rounded-xl overflow-hidden flex items-center gap-4 p-5 w-full sm:w-[296px]">
-                <div
-                  className="w-[52px] h-[52px] rounded-full shrink-0 flex items-center justify-center"
-                  style={{ backgroundColor: founder.accent }}
-                >
-                  <span className="font-['Poppins'] font-bold text-white text-[16px]">{founder.initials}</span>
-                </div>
-                <div className="min-w-0">
-                  <div className="font-['Poppins'] font-bold text-[16px] text-white leading-snug">{founder.name}</div>
-                  <div className="font-['Open_Sans'] text-[13px] mb-2 truncate" style={{ color: founder.accent }}>{founder.title}</div>
-                  <span className="inline-block px-3 py-0.5 rounded-full font-['Open_Sans'] font-semibold text-[10px] uppercase tracking-wider text-white/80 bg-white/10">
-                    {founder.role}
-                  </span>
-                </div>
-              </motion.div>
-            ))}
+          <motion.div variants={slideRight} initial="hidden" whileInView="visible" viewport={{ once: true }} className="hidden lg:flex items-center justify-center shrink-0">
+            <div className="relative flex items-center justify-center w-[280px] h-[280px]">
+              <div className="absolute w-[280px] h-[280px] rounded-full border border-dashed border-white/5" />
+              <div className="absolute w-[200px] h-[200px] rounded-full border border-white/10" />
+              <div className="absolute w-[120px] h-[120px] rounded-full border-2 border-dashed border-white/20" />
+              <div className="w-16 h-16 rounded-full bg-[#F5A623]/15 border border-[#F5A623]/30 flex items-center justify-center">
+                <Map className="w-8 h-8 text-[#F5A623]" />
+              </div>
+            </div>
           </motion.div>
-          <div className="flex justify-center mt-10">
-            <a
-              href="/about/team"
-              className="h-[48px] px-8 rounded-[8px] border border-white/50 text-white font-['Poppins'] font-semibold text-[15px] flex items-center justify-center hover:bg-white/10 hover:border-white transition-colors"
-            >
-              Meet the Founding Team →
-            </a>
-          </div>
+
         </div>
       </section>
 
-      {/* Section 8: Social Proof */}
+      {/* Section 9: Social Proof — Hugh's Journey + Quotes */}
       <section className="bg-white py-20 px-5 md:px-10">
         <div className="max-w-[1024px] mx-auto">
 
@@ -497,7 +542,45 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 9: Nonprofit Partners */}
+      {/* Section 10: Founding Team */}
+      <section className="bg-[#2A2E2C] py-20 px-5">
+        <div className="max-w-[1280px] mx-auto">
+          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-12">
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#F5A623] mb-4">CO-FOUNDED IN 2020</div>
+            <h2 className="font-['Fraunces'] font-bold text-[36px] text-white">Meet the founding team.</h2>
+          </motion.div>
+
+          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="flex flex-wrap justify-center gap-4">
+            {FOUNDERS.map(founder => (
+              <motion.div variants={fadeUpChild} key={founder.key} className="bg-[#2E3330] border border-white/10 rounded-xl overflow-hidden flex items-center gap-4 p-5 w-full sm:w-[296px]">
+                <div
+                  className="w-[52px] h-[52px] rounded-full shrink-0 flex items-center justify-center"
+                  style={{ backgroundColor: founder.accent }}
+                >
+                  <span className="font-['Poppins'] font-bold text-white text-[16px]">{founder.initials}</span>
+                </div>
+                <div className="min-w-0">
+                  <div className="font-['Poppins'] font-bold text-[16px] text-white leading-snug">{founder.name}</div>
+                  <div className="font-['Open_Sans'] text-[13px] mb-2 truncate" style={{ color: founder.accent }}>{founder.title}</div>
+                  <span className="inline-block px-3 py-0.5 rounded-full font-['Open_Sans'] font-semibold text-[10px] uppercase tracking-wider text-white/80 bg-white/10">
+                    {founder.role}
+                  </span>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+          <div className="flex justify-center mt-10">
+            <a
+              href="/about/team"
+              className="h-[48px] px-8 rounded-[8px] border border-white/50 text-white font-['Poppins'] font-semibold text-[15px] flex items-center justify-center hover:bg-white/10 hover:border-white transition-colors"
+            >
+              Meet the Founding Team →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 11: Nonprofit Partners */}
       <section className="bg-white border-y border-[#E2E4E1] py-10 px-5">
         <div className="max-w-[1024px] mx-auto">
           <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#4A4F4D] text-center mb-8">
@@ -517,7 +600,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 9.5: Testimonials */}
+      {/* Section 11 (cont): Testimonials */}
       <section className="bg-white py-20 px-5 md:px-10">
         <div className="max-w-[1100px] mx-auto">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-14">
@@ -565,7 +648,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 10: Action Banner */}
+      {/* Section 12: Action Banner */}
       <section className="bg-[#2F6B3F] py-16 px-5 md:px-10">
         <div className="max-w-[1024px] mx-auto flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
           <div className="flex-1">
