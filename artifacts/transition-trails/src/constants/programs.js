@@ -65,11 +65,11 @@ export const PROGRAMS = [
     tier: "ADVANCEMENT TIER",
     price: "From $1,497",
     priceNote: "BA/PO $1,997 · Advanced/SC $2,497 · Employer-sponsored available",
-    highlight: "Apprenticeship · 5 tracks · Real clients",
+    highlight: "In development · 5 tracks · Cohort 0 · H1 2027",
     cta: "Learn More",
     ctaHref: "/programs/trail-of-mastery",
     ctaAmber: false,
-    whoFor: "Employed Salesforce Admins ready to advance to senior, consulting, or architect roles",
+    whoFor: "Employed Salesforce professionals ready to advance — Cohort 0 coming H1 2027",
     description: "A supervised team apprenticeship — real clients, real pipeline, real roles. Five tracks across 8-16 weeks. Mixed-role cohorts of 4-5 learners. No code. Always configuration. Always RESOLVE.",
   },
   {
