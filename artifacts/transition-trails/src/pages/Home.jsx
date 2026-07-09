@@ -181,17 +181,17 @@ export default function Home() {
             {/* Card 1 — Career Changers */}
             <motion.div variants={fadeUpChild} className="bg-white border border-[#E2E4E1] rounded-xl shadow-sm p-8 flex flex-col">
               <div className="w-12 h-12 rounded-full bg-[#2F6B3F] flex items-center justify-center mb-6 shrink-0">
-                <Users className="w-6 h-6 text-white" />
+                <Map className="w-6 h-6 text-white" />
               </div>
-              <h3 className="font-['Poppins'] font-bold text-[22px] text-[#2A2E2C] mb-4">Career Changers</h3>
+              <h3 className="font-['Poppins'] font-bold text-[22px] text-[#2A2E2C] mb-4">Learners</h3>
               <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] leading-[1.65] mb-6">
-                You've done the modules, but employers want proof of work. Under the guidance of experienced coaches, you will deliver a real Salesforce solution for a real nonprofit client — earning the portfolio proof you need to launch your career.
+                Whether you're just discovering Salesforce, working toward your certification, or certified and ready to build real experience — Transition Trails meets you where you are. Under the guidance of experienced coaches, you will work on real Salesforce solutions for real nonprofit clients, earning the portfolio proof that moves careers forward.
               </p>
               <ul className="flex flex-col gap-3 mb-8">
                 {[
-                  "Supervised real project experience",
-                  "Portfolio of completed work",
-                  "Trail Forward Scholarship available for Guided Trail",
+                  "Career Starters — explore Salesforce and find your path",
+                  "Career Builders — build real project experience after cert",
+                  "Career Pivoters — make a deliberate move into a new career",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3 font-['Open_Sans'] text-[15px] text-[#4A4F4D]">
                     <Check className="w-4 h-4 text-[#2F6B3F] mt-0.5 shrink-0" />
