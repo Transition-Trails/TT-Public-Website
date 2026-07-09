@@ -191,18 +191,6 @@ export default function ScholarshipApplication() {
             ))}
           </motion.div>
 
-          <div className="text-center">
-            <a
-              href="https://form.jotform.com/261877164594067"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center h-[54px] px-10 rounded-[8px] bg-[#F5A623] text-[#2A2E2C] font-['Poppins'] font-bold text-[16px] hover:bg-[#D4890A] transition-colors">
-              Apply for the Trail Forward Scholarship
-            </a>
-            <p className="font-['Open_Sans'] italic text-[13px] text-[#8C8882] mt-4">
-              Applications are reviewed on a rolling basis for each upcoming Guided Trail cohort. One award is made per cohort. Applying does not guarantee selection.
-            </p>
-          </div>
         </div>
       </section>
 
