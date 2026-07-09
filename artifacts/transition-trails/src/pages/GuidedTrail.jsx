@@ -1,4 +1,4 @@
-import { Check } from "lucide-react";
+import { Check, Rocket, UserCheck, Award } from "lucide-react";
 import { CTAButton } from "../components/CTAButton";
 import { LINKS } from "../constants/links";
 import { PageMeta } from "../components/PageMeta";
@@ -47,7 +47,7 @@ export default function GuidedTrail() {
       <section className="bg-[#E6F3EA] py-14 px-5 md:px-10 border-y border-[#2F6B3F]/20">
         <div className="max-w-[800px] mx-auto">
           <div className="flex items-center gap-3 mb-4">
-            <span className="text-[20px]">🏅</span>
+            <Award className="w-5 h-5 text-[#2F6B3F]" />
             <div className="font-['Open_Sans'] font-bold text-[11px] tracking-[2px] uppercase text-[#2F6B3F]">TRAIL FORWARD SCHOLARSHIP</div>
           </div>
           <h2 className="font-['Poppins'] font-bold text-[28px] text-[#1E4A2A] mb-4">
@@ -230,7 +230,9 @@ export default function GuidedTrail() {
           <div className="mt-6 rounded-xl p-7" style={{ background: "rgba(245,166,35,0.08)", borderTop: "3px solid rgba(245,166,35,0.50)", border: "1px solid rgba(245,166,35,0.25)" }}>
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div>
-                <div className="text-[22px] mb-2">🏔️</div>
+                <div className="w-8 h-8 rounded-lg bg-[rgba(245,166,35,0.15)] flex items-center justify-center mb-2">
+                  <Rocket className="w-4 h-4 text-[#F5A623]" />
+                </div>
                 <p className="font-['Open_Sans'] text-[14px] text-white/70 leading-[1.65]">
                   Guided Trail graduates are eligible to participate in <span className="font-semibold text-white">The TT Expedition Series</span> — alongside Trail of Mastery learners, solving real nonprofit Salesforce challenges over a single weekend. Launching Fall 2027.
                 </p>
@@ -244,7 +246,9 @@ export default function GuidedTrail() {
           <div className="mt-4 rounded-xl p-7" style={{ background: "rgba(47,107,63,0.12)", borderTop: "3px solid rgba(47,107,63,0.50)", border: "1px solid rgba(47,107,63,0.25)" }}>
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div>
-                <div className="text-[22px] mb-2">🤝</div>
+                <div className="w-8 h-8 rounded-lg bg-[rgba(47,107,63,0.12)] flex items-center justify-center mb-2">
+                  <UserCheck className="w-4 h-4 text-[#6BBF85]" />
+                </div>
                 <p className="font-['Open_Sans'] text-[14px] text-white/70 leading-[1.65]">
                   Guided Trail graduates with 6+ months of field experience can apply to become a <span className="font-semibold text-white">TT Coach's Assistant</span> — stay connected to the community while building leadership skills alongside your day job.
                 </p>

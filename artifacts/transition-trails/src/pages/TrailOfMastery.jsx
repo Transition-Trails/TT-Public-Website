@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { PageMeta } from "../components/PageMeta";
+import { Users, TrendingUp, Rocket, Shield, ClipboardList, Layout, Code, Compass } from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -17,35 +18,40 @@ const stagger = {
 
 const TRACKS = [
   {
-    icon: "🛡️",
+    icon: <Shield size={24} color="#2F6B3F" />,
+    iconBg: "bg-[#EBF3EE]",
     name: "Admin Mastery",
     duration: "8 WEEKS",
     body: "Cement your foundation with real client configuration work under an advanced coach.",
     accent: "#2F6B3F",
   },
   {
-    icon: "📋",
+    icon: <ClipboardList size={24} color="#2F6F7E" />,
+    iconBg: "bg-[#E8F3F6]",
     name: "Business Analyst Mastery",
     duration: "12 WEEKS",
     body: "Develop the discovery, analysis, and requirements skills that make every team more effective.",
     accent: "#2F6F7E",
   },
   {
-    icon: "🎯",
+    icon: <Layout size={24} color="#2F6F7E" />,
+    iconBg: "bg-[#E8F3F6]",
     name: "Product Owner Mastery",
     duration: "12 WEEKS",
     body: "Own the backlog, write the stories, and hold approval authority over every deployment gate.",
     accent: "#2F6F7E",
   },
   {
-    icon: "⚡",
+    icon: <Code size={24} color="#1E4A2A" />,
+    iconBg: "bg-[#EBF3EE]",
     name: "Advanced Admin Mastery",
     duration: "16 WEEKS",
     body: "Go deeper into automation architecture, security models, and org strategy.",
     accent: "#1E4A2A",
   },
   {
-    icon: "🤝",
+    icon: <Compass size={24} color="#1E4A2A" />,
+    iconBg: "bg-[#EBF3EE]",
     name: "Solutions Consultant Mastery",
     duration: "16 WEEKS",
     body: "Lead the client, design the solution, and present outcomes — all through RESOLVE.",
@@ -55,17 +61,20 @@ const TRACKS = [
 
 const WHAT_CARDS = [
   {
-    icon: "👥",
+    icon: <Users size={24} color="#2F6F7E" />,
+    iconBg: "bg-[#E8F3F6]",
     title: "Real team. Real roles.",
     body: "4–5 learners per cohort in mixed roles that reflect how real Salesforce teams work.",
   },
   {
-    icon: "⚙️",
+    icon: <TrendingUp size={24} color="#2F6F7E" />,
+    iconBg: "bg-[#E8F3F6]",
     title: "Real pipeline. Real gates.",
     body: "Professional CI/CD pipeline using Salesforce DevOps Center and GitHub. Every deployment goes through formal approval gates.",
   },
   {
-    icon: "🏢",
+    icon: <Rocket size={24} color="#2F6B3F" />,
+    iconBg: "bg-[#EBF3EE]",
     title: "Real clients. Real deliverables.",
     body: "Digital Compass nonprofit clients and internal Trail OS work — always configuration, never code.",
   },
@@ -184,9 +193,11 @@ export default function TrailOfMastery() {
               <motion.div
                 key={card.title}
                 variants={fadeUpChild}
-                className="bg-white border border-[#E2E4E1] rounded-xl p-7"
+                className="bg-white border border-[#E2E4E1] rounded-xl p-8 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200"
               >
-                <div className="text-[28px] mb-4">{card.icon}</div>
+                <div className={`w-10 h-10 rounded-lg ${card.iconBg} flex items-center justify-center mb-4`}>
+                  {card.icon}
+                </div>
                 <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-3">{card.title}</h3>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">{card.body}</p>
               </motion.div>
@@ -223,12 +234,13 @@ export default function TrailOfMastery() {
               <motion.div
                 key={track.name}
                 variants={fadeUpChild}
-                className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col"
+                className="bg-white border border-[#E2E4E1] rounded-xl flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200"
               >
-                <div className="h-[5px]" style={{ background: track.accent }} />
                 <div className="p-6 flex flex-col flex-1">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="text-[24px]">{track.icon}</span>
+                    <div className={`w-10 h-10 rounded-lg ${track.iconBg} flex items-center justify-center`}>
+                      {track.icon}
+                    </div>
                     <span
                       className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase px-2 py-0.5 rounded"
                       style={{ background: `${track.accent}18`, color: track.accent }}

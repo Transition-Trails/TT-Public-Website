@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { Check, Database, Users, DollarSign, BookOpen, GraduationCap, Map, TrendingUp, Heart, Briefcase, UserCheck, Gift, ArrowRight } from "lucide-react";
+import { Check, Database, Users, DollarSign, BookOpen, GraduationCap, Map, TrendingUp, Heart, Briefcase, UserCheck, Gift, ArrowRight, Compass, Target } from "lucide-react";
 import { PageMeta } from "../components/PageMeta";
 import { CTAButton } from "../components/CTAButton";
 import { ProgramCard } from "../components/ProgramCard";
@@ -138,24 +138,30 @@ export default function Home() {
           </motion.div>
 
           <motion.div variants={slideRight} initial="hidden" whileInView="visible" viewport={{ once: true }} className="flex flex-col sm:flex-row gap-6 w-full xl:w-auto overflow-x-auto pb-4 sm:pb-0">
-            <div className="bg-white border border-[#E2E4E1] rounded-xl w-[260px] sm:w-[220px] h-auto p-6 shrink-0 flex flex-col">
-              <div className="text-[28px] mb-3">🧭</div>
+            <div className="bg-white border border-[#E2E4E1] rounded-xl w-[260px] sm:w-[220px] h-auto p-6 shrink-0 flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
+              <div className="w-10 h-10 rounded-lg bg-[#E8F3F6] flex items-center justify-center mb-3">
+                <Compass size={24} color="#7FAFC6" />
+              </div>
               <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-[#7FAFC6] mb-2">CAREER STARTERS</div>
               <div className="font-['Poppins'] font-bold text-[17px] text-[#2A2E2C] mb-3">Where do I even begin?</div>
               <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.6]">
                 You know Salesforce is a valuable skill. You are not sure where to start, whether you are cut out for it, or how long it will take. Explorer's Trail and Foundations Trail are built for exactly this moment.
               </p>
             </div>
-            <div className="bg-white border border-[#E2E4E1] rounded-xl w-[260px] sm:w-[220px] h-auto p-6 shrink-0 flex flex-col">
-              <div className="text-[28px] mb-3">🎯</div>
+            <div className="bg-white border border-[#E2E4E1] rounded-xl w-[260px] sm:w-[220px] h-auto p-6 shrink-0 flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
+              <div className="w-10 h-10 rounded-lg bg-[#EBF3EE] flex items-center justify-center mb-3">
+                <Target size={24} color="#2F6B3F" />
+              </div>
               <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-[#2F6B3F] mb-2">CAREER BUILDERS</div>
               <div className="font-['Poppins'] font-bold text-[17px] text-[#2A2E2C] mb-3">I have the cert. I cannot get hired.</div>
               <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.6]">
                 The paradox of the Salesforce ecosystem: every entry-level role requires experience you cannot get without a job. The Guided Trail breaks that cycle with real client work and a real portfolio.
               </p>
             </div>
-            <div className="bg-white border border-[#E2E4E1] rounded-xl w-[260px] sm:w-[220px] h-auto p-6 shrink-0 flex flex-col">
-              <div className="text-[28px] mb-3">🔄</div>
+            <div className="bg-white border border-[#E2E4E1] rounded-xl w-[260px] sm:w-[220px] h-auto p-6 shrink-0 flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
+              <div className="w-10 h-10 rounded-lg bg-[#EBF3EE] flex items-center justify-center mb-3">
+                <Briefcase size={24} color="#1E4A2A" />
+              </div>
               <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-[#1E4A2A] mb-2">CAREER PIVOTERS</div>
               <div className="font-['Poppins'] font-bold text-[17px] text-[#2A2E2C] mb-3">I am starting over. On purpose.</div>
               <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.6]">

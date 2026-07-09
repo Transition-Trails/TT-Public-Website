@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { CTAButton } from "../components/CTAButton";
 import { LINKS } from "../constants/links";
 import { PageMeta } from "../components/PageMeta";
+import { Users, Target, BookOpen, MessageCircle, Mic, Zap, Gift, UserCheck, Compass, ClipboardList, Award, Briefcase, Star, TrendingUp, Calendar } from "lucide-react";
 
 export default function ExplorersTrail() {
   return (
@@ -114,8 +115,10 @@ export default function ExplorersTrail() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
             {/* Card 1 */}
-            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8">
-              <div className="text-[28px] mb-3">🧭</div>
+            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
+              <div className="w-10 h-10 rounded-lg bg-[#E8F3F6] flex items-center justify-center mb-3">
+                <Compass size={24} color="#7FAFC6" />
+              </div>
               <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-[#7FAFC6] mb-2">CAREER STARTERS</div>
               <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-3">Not sure yet. That's okay.</h3>
               <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65]">
@@ -124,8 +127,10 @@ export default function ExplorersTrail() {
             </div>
 
             {/* Card 2 */}
-            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8">
-              <div className="text-[28px] mb-3">📋</div>
+            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
+              <div className="w-10 h-10 rounded-lg bg-[#EBF3EE] flex items-center justify-center mb-3">
+                <ClipboardList size={24} color="#2F6B3F" />
+              </div>
               <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-[#2F6B3F] mb-2">CAREER BUILDERS</div>
               <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-3">Building toward your first role or your next one.</h3>
               <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65]">
@@ -134,8 +139,10 @@ export default function ExplorersTrail() {
             </div>
 
             {/* Card 3 */}
-            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8">
-              <div className="text-[28px] mb-3">🎓</div>
+            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
+              <div className="w-10 h-10 rounded-lg bg-[#E8F3F6] flex items-center justify-center mb-3">
+                <Award size={24} color="#2F6F7E" />
+              </div>
               <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-[#2F6F7E] mb-2">PROGRAM ALUMNI</div>
               <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-3">You finished a program. Now what?</h3>
               <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65]">
@@ -144,8 +151,10 @@ export default function ExplorersTrail() {
             </div>
 
             {/* Card 4 */}
-            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8">
-              <div className="text-[28px] mb-3">🌱</div>
+            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
+              <div className="w-10 h-10 rounded-lg bg-[#EBF3EE] flex items-center justify-center mb-3">
+                <Briefcase size={24} color="#1E4A2A" />
+              </div>
               <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-[#1E4A2A] mb-2">CAREER PIVOTERS</div>
               <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-3">You are in it for the long haul.</h3>
               <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65]">
@@ -167,12 +176,12 @@ export default function ExplorersTrail() {
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
 
             {/* Feature 1 */}
-            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
-              <div className="h-1 bg-[#7FAFC6]" />
-              <div className="p-7 flex flex-col flex-1">
-                <div className="text-[28px] mb-4">💬</div>
-                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">Private Slack Community</h3>
-                <span className="inline-block bg-[#E0F0F7] text-[#7FAFC6] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">ALL TIERS</span>
+            <div className="bg-white border border-[#E2E4E1] rounded-xl flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
+              <div className="p-8 flex flex-col flex-1">
+                <div className="w-10 h-10 rounded-lg bg-[#E8F3F6] flex items-center justify-center mb-4">
+                  <Users size={24} color="#7FAFC6" />
+                </div>
+                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-3">Private Slack Community</h3>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
                   A members-only Slack workspace where Career Starters, Career Builders, Career Pivoters, current program learners, and TT alumni all connect. Ask questions, share wins, find accountability partners, and see what life inside a TT program actually looks like — from people who are living it.
                 </p>
@@ -180,12 +189,12 @@ export default function ExplorersTrail() {
             </div>
 
             {/* Feature 2 */}
-            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
-              <div className="h-1 bg-[#7FAFC6]" />
-              <div className="p-7 flex flex-col flex-1">
-                <div className="text-[28px] mb-4">🎯</div>
-                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">Trail Missions</h3>
-                <span className="inline-block bg-[#E0F0F7] text-[#7FAFC6] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">ALL TIERS</span>
+            <div className="bg-white border border-[#E2E4E1] rounded-xl flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
+              <div className="p-8 flex flex-col flex-1">
+                <div className="w-10 h-10 rounded-lg bg-[#E8F3F6] flex items-center justify-center mb-4">
+                  <Target size={24} color="#7FAFC6" />
+                </div>
+                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-3">Trail Missions</h3>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
                   Monthly skill-building missions that drop on the 1st. Community Pass members access the current month's mission while active. Full Membership members get the full archive — every past mission, always accessible.
                 </p>
@@ -193,12 +202,12 @@ export default function ExplorersTrail() {
             </div>
 
             {/* Feature 3 */}
-            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
-              <div className="h-1 bg-[#2F6B3F]" />
-              <div className="p-7 flex flex-col flex-1">
-                <div className="text-[28px] mb-4">🎬</div>
-                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">Build With Me / Troubleshoot With Me</h3>
-                <span className="inline-block bg-[#E6F3EA] text-[#2F6B3F] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">FULL · FULL + COACHING (archive)</span>
+            <div className="bg-white border border-[#E2E4E1] rounded-xl flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
+              <div className="p-8 flex flex-col flex-1">
+                <div className="w-10 h-10 rounded-lg bg-[#EBF3EE] flex items-center justify-center mb-4">
+                  <BookOpen size={24} color="#2F6B3F" />
+                </div>
+                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-3">Build With Me / Troubleshoot With Me</h3>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
                   Skill-building videos covering Salesforce concepts, configuration techniques, and practical exercises — created by the TT team. Community Pass members access the current month's videos. Full Membership gets the complete archive plus all future content.
                 </p>
@@ -209,12 +218,12 @@ export default function ExplorersTrail() {
             </div>
 
             {/* Feature 4 */}
-            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
-              <div className="h-1 bg-[#2F6B3F]" />
-              <div className="p-7 flex flex-col flex-1">
-                <div className="text-[28px] mb-4">🤝</div>
-                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">Coaching Access</h3>
-                <span className="inline-block bg-[#E6F3EA] text-[#2F6B3F] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">FULL · FULL + COACHING</span>
+            <div className="bg-white border border-[#E2E4E1] rounded-xl flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
+              <div className="p-8 flex flex-col flex-1">
+                <div className="w-10 h-10 rounded-lg bg-[#EBF3EE] flex items-center justify-center mb-4">
+                  <MessageCircle size={24} color="#2F6B3F" />
+                </div>
+                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-3">Coaching Access</h3>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
                   Full Membership includes async coaching access — submit a question and receive a response within 48 business hours. Full + Coaching members receive four quarterly 1:1 sessions (60 minutes each) with a TT Founder or advanced TT coach. All ET members receive a discounted coaching rate ($100/hr vs. $150/hr standard).
                 </p>
@@ -223,12 +232,12 @@ export default function ExplorersTrail() {
             </div>
 
             {/* Feature 5 */}
-            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
-              <div className="h-1 bg-[#7FAFC6]" />
-              <div className="p-7 flex flex-col flex-1">
-                <div className="text-[28px] mb-3">🎙️</div>
-                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">Monthly Virtual Trail Talk</h3>
-                <span className="inline-block bg-[#E0F0F7] text-[#7FAFC6] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">ALL TIERS · FIRST THURSDAY</span>
+            <div className="bg-white border border-[#E2E4E1] rounded-xl flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
+              <div className="p-8 flex flex-col flex-1">
+                <div className="w-10 h-10 rounded-lg bg-[#E8F3F6] flex items-center justify-center mb-4">
+                  <Mic size={24} color="#7FAFC6" />
+                </div>
+                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-3">Monthly Virtual Trail Talk</h3>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
                   A monthly live session for every Explorer's Trail member — campfire format with a discussion topic, open Q&A, and community building. Community Pass members access the recording while active. Full Membership gets permanent archive access.
                 </p>
@@ -236,12 +245,12 @@ export default function ExplorersTrail() {
             </div>
 
             {/* Feature 6 */}
-            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
-              <div className="h-1 bg-[#2F6B3F]" />
-              <div className="p-7 flex flex-col flex-1">
-                <div className="text-[28px] mb-3">⚡</div>
-                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">Slack Challenges</h3>
-                <span className="inline-block bg-[#E6F3EA] text-[#2F6B3F] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">FULL · FULL + COACHING · WEEKLY</span>
+            <div className="bg-white border border-[#E2E4E1] rounded-xl flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
+              <div className="p-8 flex flex-col flex-1">
+                <div className="w-10 h-10 rounded-lg bg-[#EBF3EE] flex items-center justify-center mb-4">
+                  <Zap size={24} color="#2F6B3F" />
+                </div>
+                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-3">Slack Challenges</h3>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
                   Weekly or biweekly build challenges in the community. Short, focused, skill-specific — build something, share your result. Designed to keep your Salesforce skills sharp and give you something to rally around with the community.
                 </p>
@@ -249,12 +258,12 @@ export default function ExplorersTrail() {
             </div>
 
             {/* Feature 7 */}
-            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
-              <div className="h-1 bg-[#7FAFC6]" />
-              <div className="p-7 flex flex-col flex-1">
-                <div className="text-[28px] mb-3">👕</div>
-                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">Member Merchandise &amp; Discounts</h3>
-                <span className="inline-block bg-[#E0F0F7] text-[#7FAFC6] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">ALL TIERS · EXCLUSIVE</span>
+            <div className="bg-white border border-[#E2E4E1] rounded-xl flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
+              <div className="p-8 flex flex-col flex-1">
+                <div className="w-10 h-10 rounded-lg bg-[#E8F3F6] flex items-center justify-center mb-4">
+                  <Gift size={24} color="#7FAFC6" />
+                </div>
+                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-3">Member Merchandise &amp; Discounts</h3>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
                   Access to members-only merch items and TT member discounts on programs and coaching. A small but real perk of being part of the community.
                 </p>
@@ -262,12 +271,12 @@ export default function ExplorersTrail() {
             </div>
 
             {/* Feature 8 — Full+ only */}
-            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
-              <div className="h-1 bg-[#2F6B3F]" />
-              <div className="p-7 flex flex-col flex-1">
-                <div className="text-[28px] mb-3">🤖</div>
-                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">Alumni Mentor Matching</h3>
-                <span className="inline-block bg-[#E6F3EA] text-[#2F6B3F] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">FULL · FULL + COACHING</span>
+            <div className="bg-white border border-[#E2E4E1] rounded-xl flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
+              <div className="p-8 flex flex-col flex-1">
+                <div className="w-10 h-10 rounded-lg bg-[#EBF3EE] flex items-center justify-center mb-4">
+                  <UserCheck size={24} color="#2F6B3F" />
+                </div>
+                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-3">Alumni Mentor Matching</h3>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
                   Full Membership members are matched with a TT program graduate — someone who was in your position and is now working in Salesforce. One match per quarter, structured around a topic you choose.
                 </p>
@@ -275,12 +284,12 @@ export default function ExplorersTrail() {
             </div>
 
             {/* Feature 9 — Full+ only */}
-            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
-              <div className="h-1 bg-[#2F6B3F]" />
-              <div className="p-7 flex flex-col flex-1">
-                <div className="text-[28px] mb-3">🧭</div>
-                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">RESOLVE Practitioner Series</h3>
-                <span className="inline-block bg-[#E6F3EA] text-[#2F6B3F] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-3">FULL · FULL + COACHING</span>
+            <div className="bg-white border border-[#E2E4E1] rounded-xl flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
+              <div className="p-8 flex flex-col flex-1">
+                <div className="w-10 h-10 rounded-lg bg-[#EBF3EE] flex items-center justify-center mb-4">
+                  <Compass size={24} color="#2F6B3F" />
+                </div>
+                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-3">RESOLVE Practitioner Series</h3>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">
                   A structured multi-part workshop series exploring the professional mindset behind great Salesforce delivery: how to think about client problems, how to document decisions, how to lead a discovery conversation. This is the first step on the Path to Coach.
                 </p>
@@ -303,8 +312,7 @@ export default function ExplorersTrail() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
             {/* Tier 1: Community Pass */}
-            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
-              <div className="h-1.5 bg-[#7FAFC6]" />
+            <div className="bg-white border border-[#E2E4E1] rounded-xl flex flex-col">
               <div className="p-8 flex flex-col flex-1">
                 <span className="inline-block font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase px-2.5 py-1 rounded mb-3" style={{ background: "#E0F0F7", color: "#7FAFC6" }}>GET STARTED</span>
                 <h3 className="font-['Poppins'] font-semibold text-[20px] text-[#2A2E2C] mb-2">Community Pass</h3>
@@ -352,8 +360,7 @@ export default function ExplorersTrail() {
             </div>
 
             {/* Tier 2: Full Membership — featured */}
-            <div className="bg-white border-2 border-[#2F6B3F] rounded-xl overflow-hidden flex flex-col relative">
-              <div className="h-1.5 bg-[#2F6B3F]" />
+            <div className="bg-white border-2 border-[#2F6B3F] rounded-xl flex flex-col relative">
               <div className="absolute top-4 right-4 bg-[#2F6B3F] text-white font-['Poppins'] font-bold text-[9px] uppercase tracking-wide px-2.5 py-1 rounded-sm">MOST POPULAR</div>
               <div className="p-8 flex flex-col flex-1">
                 <span className="inline-block font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase px-2.5 py-1 rounded mb-3" style={{ background: "#E6F3EA", color: "#2F6B3F" }}>FULL MEMBERSHIP</span>
@@ -409,8 +416,7 @@ export default function ExplorersTrail() {
             </div>
 
             {/* Tier 3: Full + Coaching */}
-            <div className="bg-white border border-[#2F6F7E] rounded-xl overflow-hidden flex flex-col relative">
-              <div className="h-1.5 bg-[#2F6F7E]" />
+            <div className="bg-white border border-[#2F6F7E] rounded-xl flex flex-col relative">
               <div className="absolute top-4 right-4 bg-[#F5A623] text-[#2A2E2C] font-['Poppins'] font-bold text-[9px] uppercase tracking-wide px-2.5 py-1 rounded-sm">BEST VALUE</div>
               <div className="p-8 flex flex-col flex-1">
                 <span className="inline-block font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase px-2.5 py-1 rounded mb-3" style={{ background: "rgba(47,111,126,0.1)", color: "#2F6F7E" }}>FULL + COACHING</span>
@@ -484,10 +490,11 @@ export default function ExplorersTrail() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
             {/* GT Graduate */}
-            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
-              <div className="h-1.5 bg-[#2F6B3F]" />
+            <div className="bg-white border border-[#E2E4E1] rounded-xl flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
               <div className="p-7 flex flex-col flex-1">
-                <div className="text-[28px] mb-4">🎓</div>
+                <div className="w-10 h-10 rounded-lg bg-[#EBF3EE] flex items-center justify-center mb-4">
+                  <Award size={24} color="#2F6B3F" />
+                </div>
                 <span className="inline-block bg-[#E6F3EA] text-[#2F6B3F] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2.5 py-1 rounded mb-3">GT GRADUATE</span>
                 <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-3">1-Year Full Membership — Complimentary</h3>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65] flex-1">
@@ -497,10 +504,11 @@ export default function ExplorersTrail() {
             </div>
 
             {/* ET Included in GT Enrollment */}
-            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
-              <div className="h-1.5 bg-[#2F6B3F]" />
+            <div className="bg-white border border-[#E2E4E1] rounded-xl flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
               <div className="p-7 flex flex-col flex-1">
-                <div className="text-[28px] mb-4">🔗</div>
+                <div className="w-10 h-10 rounded-lg bg-[#EBF3EE] flex items-center justify-center mb-4">
+                  <Users size={24} color="#2F6B3F" />
+                </div>
                 <span className="inline-block bg-[#E6F3EA] text-[#2F6B3F] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2.5 py-1 rounded mb-3">GT ENROLLMENT</span>
                 <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-3">ET Included in GT</h3>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65] flex-1">
@@ -510,10 +518,11 @@ export default function ExplorersTrail() {
             </div>
 
             {/* Lifetime Full Membership */}
-            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
-              <div className="h-1.5 bg-[#1E4A2A]" />
+            <div className="bg-white border border-[#E2E4E1] rounded-xl flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
               <div className="p-7 flex flex-col flex-1">
-                <div className="text-[28px] mb-4">🏆</div>
+                <div className="w-10 h-10 rounded-lg bg-[#EBF3EE] flex items-center justify-center mb-4">
+                  <Star size={24} color="#1E4A2A" />
+                </div>
                 <span className="inline-block bg-[#d4e8d8] text-[#1E4A2A] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2.5 py-1 rounded mb-3">LIFETIME</span>
                 <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-3">Lifetime Full Membership</h3>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65] flex-1">
@@ -536,7 +545,8 @@ export default function ExplorersTrail() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
               {
-                icon: "📅",
+                icon: <Calendar size={18} color="#7FAFC6" />,
+                iconBg: "#E0F0F7",
                 timing: "1st of the month",
                 title: "New Trail Mission drops",
                 desc: "Community Pass: current month only · Full Membership: + full archive of all past missions",
@@ -545,7 +555,8 @@ export default function ExplorersTrail() {
                 tierBg: "#E0F0F7",
               },
               {
-                icon: "🎙️",
+                icon: <Mic size={18} color="#7FAFC6" />,
+                iconBg: "#E0F0F7",
                 timing: "First Thursday",
                 title: "Monthly Virtual Trail Talk",
                 desc: "Live campfire format for all tiers. Community Pass: recording available while active · Full Membership: permanent archive",
@@ -554,7 +565,8 @@ export default function ExplorersTrail() {
                 tierBg: "#E0F0F7",
               },
               {
-                icon: "⚡",
+                icon: <Zap size={18} color="#2F6B3F" />,
+                iconBg: "#E6F3EA",
                 timing: "Weekly",
                 title: "Slack Challenge",
                 desc: "Build something, share your result. Weekly or biweekly depending on the month.",
@@ -563,7 +575,8 @@ export default function ExplorersTrail() {
                 tierBg: "#E6F3EA",
               },
               {
-                icon: "🎬",
+                icon: <BookOpen size={18} color="#7FAFC6" />,
+                iconBg: "#E0F0F7",
                 timing: "Weekly",
                 title: "Build With Me / Troubleshoot With Me",
                 desc: "Community Pass: current month's video only · Full Membership: full archive always accessible",
@@ -572,7 +585,8 @@ export default function ExplorersTrail() {
                 tierBg: "#E0F0F7",
               },
               {
-                icon: "🤝",
+                icon: <MessageCircle size={18} color="#2F6F7E" />,
+                iconBg: "rgba(47,111,126,0.1)",
                 timing: "Quarterly",
                 title: "1:1 Coaching Session",
                 desc: "60-minute session with a TT Founder or advanced coach. Coaching arc: where you are → what's blocking you → next target → how to close the gap.",
@@ -581,7 +595,8 @@ export default function ExplorersTrail() {
                 tierBg: "rgba(47,111,126,0.1)",
               },
               {
-                icon: "🏅",
+                icon: <Award size={18} color="#2F6B3F" />,
+                iconBg: "#E6F3EA",
                 timing: "Monthly (active)",
                 title: "Trail Stamp",
                 desc: "Digital completion badge that fills your trail map. One per active month — your visual record of time in the community.",
@@ -590,8 +605,10 @@ export default function ExplorersTrail() {
                 tierBg: "#E6F3EA",
               },
             ].map(item => (
-              <div key={item.title} className="bg-white border border-[#E2E4E1] rounded-xl p-6 flex gap-4">
-                <div className="text-[24px] shrink-0 mt-0.5">{item.icon}</div>
+              <div key={item.title} className="bg-white border border-[#E2E4E1] rounded-xl p-6 flex gap-4 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
+                <div className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0 mt-0.5" style={{ background: item.iconBg }}>
+                  {item.icon}
+                </div>
                 <div className="flex-1">
                   <div className="font-['Open_Sans'] text-[11px] font-semibold text-[#8C8882] uppercase tracking-[1px] mb-1">{item.timing}</div>
                   <h4 className="font-['Poppins'] font-semibold text-[15px] text-[#2A2E2C] mb-1">{item.title}</h4>
@@ -615,8 +632,7 @@ export default function ExplorersTrail() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 items-start">
             {/* Stage 1 */}
-            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
-              <div className="h-1 bg-[#7FAFC6]" />
+            <div className="bg-white border border-[#E2E4E1] rounded-xl flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
               <div className="p-7 flex flex-col flex-1">
                 <span className="inline-block bg-[#E0F0F7] text-[#7FAFC6] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-4">ENTRY</span>
                 <h3 className="font-['Poppins'] font-semibold text-[18px] text-[#2A2E2C] mb-4">Stage 1 — Coach's Assistant</h3>
@@ -639,8 +655,7 @@ export default function ExplorersTrail() {
             </div>
 
             {/* Stage 2 */}
-            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
-              <div className="h-1 bg-[#2F6B3F]" />
+            <div className="bg-white border border-[#E2E4E1] rounded-xl flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
               <div className="p-7 flex flex-col flex-1">
                 <span className="inline-block bg-[#E6F3EA] text-[#2F6B3F] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-4">INTERMEDIATE</span>
                 <h3 className="font-['Poppins'] font-semibold text-[18px] text-[#2A2E2C] mb-4">Stage 2 — Associate Coach</h3>
@@ -660,8 +675,7 @@ export default function ExplorersTrail() {
             </div>
 
             {/* Stage 3 */}
-            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col">
-              <div className="h-1 bg-[#1E4A2A]" />
+            <div className="bg-white border border-[#E2E4E1] rounded-xl flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
               <div className="p-7 flex flex-col flex-1">
                 <span className="inline-block bg-[#d4e8d8] text-[#1E4A2A] font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded mb-4">ADVANCED</span>
                 <h3 className="font-['Poppins'] font-semibold text-[18px] text-[#2A2E2C] mb-4">Stage 3 — Advanced TT Coach</h3>
@@ -697,8 +711,10 @@ export default function ExplorersTrail() {
             <p className="font-['Poppins'] font-semibold text-[18px] text-[#4A4F4D] mt-2">You are not just a subscriber. You are a Trail Member.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8">
-              <div className="text-[28px] mb-3">🌟</div>
+            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
+              <div className="w-10 h-10 rounded-lg bg-[#EBF3EE] flex items-center justify-center mb-3">
+                <Star size={24} color="#2F6B3F" />
+              </div>
               <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-3">Monthly Member Spotlight</h3>
               <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65]">
                 One member featured every month in Trail Talk and across TT social channels. Career Starters who landed their first Salesforce job. Career Builders who doubled their salary. Career Pivoters who left everything behind and built something new. Your story — told by TT, shareable to LinkedIn. Full Membership members eligible.
@@ -709,22 +725,28 @@ export default function ExplorersTrail() {
                 <p>"I left [previous career] behind — the fear, the pivot, and what came after"</p>
               </div>
             </div>
-            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8">
-              <div className="text-[28px] mb-3">🎯</div>
+            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
+              <div className="w-10 h-10 rounded-lg bg-[#E8F3F6] flex items-center justify-center mb-3">
+                <Target size={24} color="#7FAFC6" />
+              </div>
               <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-3">Annual Limited Edition Drop</h3>
               <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65]">
                 Once a year, current annual pay-in-full members get access to a limited edition TT item — available for a defined window only. Miss the renewal, miss the drop. These are not catalog items. They are markers of when you were here.
               </p>
             </div>
-            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8">
-              <div className="text-[28px] mb-3">📊</div>
+            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
+              <div className="w-10 h-10 rounded-lg bg-[#E8F3F6] flex items-center justify-center mb-3">
+                <TrendingUp size={24} color="#2F6F7E" />
+              </div>
               <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-3">Your Trail Dashboard</h3>
               <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65]">
                 Full Membership members see their full TT journey — content completed, coaching pathway position, milestones earned, patches collected, time in community. Community Pass members see a summary. Full members see the map.
               </p>
             </div>
-            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8">
-              <div className="text-[28px] mb-3">💬</div>
+            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
+              <div className="w-10 h-10 rounded-lg bg-[#EBF3EE] flex items-center justify-center mb-3">
+                <MessageCircle size={24} color="#2F6B3F" />
+              </div>
               <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-3">Tenure Recognition</h3>
               <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65]">
                 Your Slack role reflects your journey — Explorer Year 1, Explorer Year 2, Coach's Assistant, Associate Coach. The community sees where you've been. That visibility matters more than you'd expect.

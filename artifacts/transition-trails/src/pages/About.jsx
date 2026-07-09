@@ -3,6 +3,7 @@ import { CTAButton } from "../components/CTAButton";
 import { LINKS } from "../constants/links";
 import { motion } from "framer-motion";
 import { PageMeta } from "../components/PageMeta";
+import { Compass, Target, Briefcase } from "lucide-react";
 
 export default function About() {
   return (
@@ -51,35 +52,32 @@ export default function About() {
         <div className="max-w-[1024px] mx-auto">
           <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-10 text-center">WHO WE BUILD FOR</div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden">
-              <div className="h-1.5 bg-[#7FAFC6]" />
-              <div className="p-8">
-                <div className="text-[28px] mb-3">🧭</div>
-                <h3 className="font-['Poppins'] font-bold text-[20px] text-[#2A2E2C] mb-3">Career Starters</h3>
-                <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.65]">
-                  You are new to Salesforce — or new to tech entirely. You are trying to figure out if this is the right path, building foundational skills, and looking for a place to learn without feeling left behind. Explorer's Trail and Foundations Trail were built for you.
-                </p>
+            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
+              <div className="w-10 h-10 rounded-lg bg-[#E8F3F6] flex items-center justify-center mb-4">
+                <Compass size={24} color="#7FAFC6" />
               </div>
+              <h3 className="font-['Poppins'] font-bold text-[20px] text-[#2A2E2C] mb-3">Career Starters</h3>
+              <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.65]">
+                You are new to Salesforce — or new to tech entirely. You are trying to figure out if this is the right path, building foundational skills, and looking for a place to learn without feeling left behind. Explorer's Trail and Foundations Trail were built for you.
+              </p>
             </div>
-            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden">
-              <div className="h-1.5 bg-[#2F6B3F]" />
-              <div className="p-8">
-                <div className="text-[28px] mb-3">🎯</div>
-                <h3 className="font-['Poppins'] font-bold text-[20px] text-[#2A2E2C] mb-3">Career Builders</h3>
-                <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.65]">
-                  You have a Salesforce certification — or you are close to earning one. The job you want requires experience you have not had the chance to build yet. The Guided Trail and Trail of Mastery exist to close that gap with real work, real clients, and a real portfolio.
-                </p>
+            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
+              <div className="w-10 h-10 rounded-lg bg-[#EBF3EE] flex items-center justify-center mb-4">
+                <Target size={24} color="#2F6B3F" />
               </div>
+              <h3 className="font-['Poppins'] font-bold text-[20px] text-[#2A2E2C] mb-3">Career Builders</h3>
+              <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.65]">
+                You have a Salesforce certification — or you are close to earning one. The job you want requires experience you have not had the chance to build yet. The Guided Trail and Trail of Mastery exist to close that gap with real work, real clients, and a real portfolio.
+              </p>
             </div>
-            <div className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden">
-              <div className="h-1.5 bg-[#1E4A2A]" />
-              <div className="p-8">
-                <div className="text-[28px] mb-3">🔄</div>
-                <h3 className="font-['Poppins'] font-bold text-[20px] text-[#2A2E2C] mb-3">Career Pivoters</h3>
-                <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.65]">
-                  You are coming from somewhere else entirely — a different industry, a different career, a different version of your life. Hugh came from 16 years of truck driving. Transition Trails was built on the belief that the pivot is possible for anyone willing to do the work. Every trail is open to you.
-                </p>
+            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
+              <div className="w-10 h-10 rounded-lg bg-[#EBF3EE] flex items-center justify-center mb-4">
+                <Briefcase size={24} color="#1E4A2A" />
               </div>
+              <h3 className="font-['Poppins'] font-bold text-[20px] text-[#2A2E2C] mb-3">Career Pivoters</h3>
+              <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.65]">
+                You are coming from somewhere else entirely — a different industry, a different career, a different version of your life. Hugh came from 16 years of truck driving. Transition Trails was built on the belief that the pivot is possible for anyone willing to do the work. Every trail is open to you.
+              </p>
             </div>
           </div>
         </div>

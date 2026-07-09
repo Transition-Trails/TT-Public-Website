@@ -1,41 +1,45 @@
 import { Link } from "wouter";
 import { PageMeta } from "../components/PageMeta";
 import { LINKS } from "../constants/links";
+import { Calendar, BookOpen, Users, Lightbulb, TrendingUp, Rocket, ClipboardList, Zap } from "lucide-react";
 
 const UNIVERSAL_BENEFITS = [
   {
-    icon: "📅",
+    icon: <Calendar size={24} color="#2F6F7E" />,
+    iconBg: "bg-[#E8F3F6]",
     title: "Weekly Office Hours",
-    badge: "ALL TIERS · WEEKLY",
     body: "Live weekly group sessions with the TT team — bring your Salesforce questions, challenges, and roadblocks. Entry members join the shared weekly group session. Mid members get the weekly group session plus one private monthly session with their team. Full Partner members have their own dedicated weekly private session.",
   },
   {
-    icon: "📚",
+    icon: <BookOpen size={24} color="#2F6F7E" />,
+    iconBg: "bg-[#E8F3F6]",
     title: "TrailKit Content Library",
-    badge: "ALL TIERS",
     body: "Access to TT's library of Salesforce how-to content — guides, walkthroughs, and resources built specifically for nonprofits navigating the Salesforce ecosystem.",
   },
   {
-    icon: "💬",
+    icon: <Users size={24} color="#2F6F7E" />,
+    iconBg: "bg-[#E8F3F6]",
     title: "Slack Community",
-    badge: "ALL TIERS",
     body: "A members-only Slack workspace connecting Digital Compass nonprofits with the TT team, TT coaches, and each other. Ask questions between sessions, share what you're learning, and tap into the collective expertise of the community.",
   },
 ];
 
 const WHO_CARDS = [
   {
-    icon: "🌱",
+    icon: <Lightbulb size={24} color="#2F6F7E" />,
+    iconBg: "bg-[#E8F3F6]",
     title: "Just getting started",
     body: "Your nonprofit has Salesforce — or is about to get it through the Power of Us grant — but you do not have dedicated Salesforce staff. Digital Compass gives you expert guidance and support without the cost of a full-time admin or a consulting retainer.",
   },
   {
-    icon: "⚙️",
+    icon: <TrendingUp size={24} color="#2F6F7E" />,
+    iconBg: "bg-[#E8F3F6]",
     title: "Growing and stuck",
     body: "You have been using Salesforce for a while but it is not doing what you need it to do. Data is inconsistent. Processes are manual. Reports do not reflect reality. Digital Compass helps you diagnose what is wrong and fix it systematically.",
   },
   {
-    icon: "🚀",
+    icon: <Rocket size={24} color="#2F6B3F" />,
+    iconBg: "bg-[#EBF3EE]",
     title: "Ready to scale",
     body: "Your Salesforce org is working but you need a strategic partner to help you grow it alongside your mission. Digital Compass Full Partner gives you ongoing project delivery, priority access to TT's learner teams, and a monthly strategic review.",
   },
@@ -43,17 +47,20 @@ const WHO_CARDS = [
 
 const PROJECT_COLS = [
   {
-    icon: "📋",
+    icon: <ClipboardList size={24} color="#2F6F7E" />,
+    iconBg: "bg-[#E8F3F6]",
     title: "What counts as a project request",
     body: "Configuration-based Salesforce work: adding fields and updating page layouts, building flows to automate a process, setting up reports and dashboards, configuring permission sets, building a web-to-case intake form, data cleanup and deduplication, and more. Always declarative — no Apex code, no custom development.",
   },
   {
-    icon: "👥",
+    icon: <Users size={24} color="#2F6F7E" />,
+    iconBg: "bg-[#E8F3F6]",
     title: "Who does the work",
     body: "Project requests are delivered by TT coaches and, where appropriate, matched to Guided Trail or Trail of Mastery learner teams under coach supervision. Full Partner members receive priority matching to learner teams — giving them both faster delivery and the benefit of supporting TT's learner pipeline.",
   },
   {
-    icon: "⚡",
+    icon: <Zap size={24} color="#2F6B3F" />,
+    iconBg: "bg-[#EBF3EE]",
     title: "Scope and timeline",
     body: "TT reviews every project request for scope before beginning. Requests that fall within the membership model are delivered within an agreed timeline. Requests that are too large in scope for the membership model will be flagged — TT will advise on options including a dedicated project engagement.",
   },
@@ -175,10 +182,12 @@ export default function DigitalCompass() {
             {WHO_CARDS.map(c => (
               <div
                 key={c.title}
-                className="bg-white border border-[#E2E4E1] rounded-xl p-7"
+                className="bg-white border border-[#E2E4E1] rounded-xl p-7 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200"
                 style={{ borderLeft: "4px solid #2F6F7E" }}
               >
-                <div className="text-[28px] mb-3">{c.icon}</div>
+                <div className={`w-10 h-10 rounded-lg ${c.iconBg} flex items-center justify-center mb-3`}>
+                  {c.icon}
+                </div>
                 <h3 className="font-['Open_Sans'] font-bold text-[15px] text-[#2F6F7E] mb-2">{c.title}</h3>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">{c.body}</p>
               </div>
@@ -219,15 +228,13 @@ export default function DigitalCompass() {
             {UNIVERSAL_BENEFITS.map(b => (
               <div
                 key={b.title}
-                className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden"
-                style={{ borderTop: "4px solid #2F6F7E" }}
+                className="bg-white border border-[#E2E4E1] rounded-xl p-7 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200"
               >
-                <div className="p-7">
-                  <div className="text-[28px] mb-3">{b.icon}</div>
-                  <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">{b.title}</h3>
-                  <span className="inline-block font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase text-[#2F6F7E] bg-[#E0F0F3] px-2 py-0.5 rounded mb-3">{b.badge}</span>
-                  <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">{b.body}</p>
+                <div className={`w-10 h-10 rounded-lg ${b.iconBg} flex items-center justify-center mb-3`}>
+                  {b.icon}
                 </div>
+                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-3">{b.title}</h3>
+                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">{b.body}</p>
               </div>
             ))}
           </div>
@@ -420,8 +427,10 @@ export default function DigitalCompass() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {PROJECT_COLS.map(c => (
-              <div key={c.title} className="p-7 rounded-xl border border-[#E2E4E1]">
-                <div className="text-[28px] mb-4">{c.icon}</div>
+              <div key={c.title} className="p-7 rounded-xl border border-[#E2E4E1] shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
+                <div className={`w-10 h-10 rounded-lg ${c.iconBg} flex items-center justify-center mb-4`}>
+                  {c.icon}
+                </div>
                 <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-3">{c.title}</h3>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">{c.body}</p>
               </div>

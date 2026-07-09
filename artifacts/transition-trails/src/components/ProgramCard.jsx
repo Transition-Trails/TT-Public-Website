@@ -8,9 +8,6 @@ export function ProgramCard({ program, height = "standard" }) {
 
   return (
     <div className={`${wrapperClass} ${borderClass}`}>
-      {/* Top Accent Bar */}
-      <div className="h-[5px] w-full" style={{ backgroundColor: program.accent }} />
-      
       {isFeatured && (
         <div className="absolute top-[5px] right-0 bg-[#F5A623] text-[#2A2E2C] text-[10px] font-bold font-['Poppins'] px-2 py-1 rounded-bl-lg">
           MOST POPULAR

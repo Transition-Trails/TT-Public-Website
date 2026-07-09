@@ -78,7 +78,7 @@ export default function FoundationsTrail() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8 flex gap-5">
+            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8 flex gap-5 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
               <MonitorPlay className="w-8 h-8 text-[#2F6B3F] shrink-0" />
               <div>
                 <h3 className="font-['Poppins'] font-bold text-[18px] text-[#2A2E2C] mb-2">Build With Me Videos</h3>
@@ -88,7 +88,7 @@ export default function FoundationsTrail() {
               </div>
             </div>
             
-            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8 flex gap-5">
+            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8 flex gap-5 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
               <Sparkles className="w-8 h-8 text-[#2F6B3F] shrink-0" />
               <div>
                 <h3 className="font-['Poppins'] font-bold text-[18px] text-[#2A2E2C] mb-2">AI-Assisted Learning Tools</h3>
@@ -98,7 +98,7 @@ export default function FoundationsTrail() {
               </div>
             </div>
             
-            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8 flex gap-5">
+            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8 flex gap-5 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
               <Users className="w-8 h-8 text-[#2F6B3F] shrink-0" />
               <div>
                 <h3 className="font-['Poppins'] font-bold text-[18px] text-[#2A2E2C] mb-2">Weekly Office Hours</h3>
@@ -108,7 +108,7 @@ export default function FoundationsTrail() {
               </div>
             </div>
             
-            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8 flex gap-5">
+            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8 flex gap-5 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
               <Calendar className="w-8 h-8 text-[#2F6B3F] shrink-0" />
               <div>
                 <h3 className="font-['Poppins'] font-bold text-[18px] text-[#2A2E2C] mb-2">2 Private Coaching Sessions</h3>
