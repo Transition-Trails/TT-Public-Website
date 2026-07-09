@@ -24,7 +24,7 @@ export default function FoundationsTrail() {
               The certification is the door. The Foundations Trail is how you prove you can walk through it.
             </p>
             <p className="font-['Open_Sans'] text-[18px] text-white/80 leading-[1.6] mb-8">
-              You have completed your Salesforce Platform Foundations certification and are working toward your Salesforce Platform Administrator certification — and you want to come out the other side with more than a test result. The Foundations Trail is a 12-week guided practicum: Build With Me videos walk you through each configuration step, every task and module is directly aligned to the topics and domains Salesforce tests you on, and you finish with a complete Salesforce implementation for Horizon Community Hub that employers can actually review. This is not a study guide. It's the portfolio that proves you're ready.
+              You have completed your Salesforce Platform Foundations certification and are working toward your Salesforce Platform Administrator certification. The goal of Foundations Trail is to earn that certification. The capstone project is aligned to the 9 Salesforce Admin exam domains — working through it reinforces exactly what you need to know for the exam. Build With Me videos guide you through each build step so you develop both the practical skill and the exam confidence to pass.
             </p>
             <div className="inline-flex items-center gap-3 px-4 py-3 rounded-lg" style={{ background: "rgba(127,175,198,0.15)", border: "1px solid rgba(127,175,198,0.4)" }}>
               <Check className="w-5 h-5 shrink-0" style={{ color: "#7FAFC6" }} />
@@ -49,7 +49,7 @@ export default function FoundationsTrail() {
                 "Build With Me videos + AI-assisted learning",
                 "Weekly Office Hours included",
                 "2 private coaching sessions",
-                "Horizon Community Hub capstone",
+                "Structured capstone project",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2.5">
                   <Check className="w-4 h-4 mt-0.5 shrink-0 text-[#2F6F7E]" />
@@ -125,14 +125,14 @@ export default function FoundationsTrail() {
         <div className="max-w-[1024px] mx-auto flex flex-col md:flex-row gap-12 items-center">
           <div className="flex-1">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">THE CAPSTONE</div>
-            <h2 className="font-['Poppins'] font-bold text-[36px] text-[#2A2E2C] mb-6">The Horizon Community Hub Build</h2>
+            <h2 className="font-['Poppins'] font-bold text-[36px] text-[#2A2E2C] mb-6">The Structured Capstone Project</h2>
             <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] leading-[1.65] mb-6">
-              You won't just be doing platform modules. You'll be building out a complete org for Horizon Community Hub — a simulated nonprofit with real-world complexity.
+              You won't just be doing platform modules. You'll be building out a complete org through a structured capstone project aligned to the 9 Salesforce Admin exam domains — working through it reinforces exactly what you need to know for the exam.
             </p>
             <ul className="space-y-4 font-['Open_Sans'] text-[15px] text-[#4A4F4D]">
-              <li className="flex gap-3 items-start"><Check className="w-5 h-5 text-[#2F6B3F] shrink-0 mt-0.5" /> <strong>Guided, not live:</strong> This is the exact same org our Guided Trail learners build for live clients, but in a safe sandbox environment.</li>
+              <li className="flex gap-3 items-start"><Check className="w-5 h-5 text-[#2F6B3F] shrink-0 mt-0.5" /> <strong>Build WITH guidance:</strong> In Foundations Trail, Build With Me videos guide you through each build step — you develop both the practical skill and the exam confidence to pass.</li>
               <li className="flex gap-3 items-start"><Check className="w-5 h-5 text-[#2F6B3F] shrink-0 mt-0.5" /> <strong>End-to-end:</strong> From discovery documentation to security models, flows, and final dashboards.</li>
-              <li className="flex gap-3 items-start"><Check className="w-5 h-5 text-[#2F6B3F] shrink-0 mt-0.5" /> <strong>Portfolio ready:</strong> Complete the 12 weeks and you have a demonstrable build to show employers.</li>
+              <li className="flex gap-3 items-start"><Check className="w-5 h-5 text-[#2F6B3F] shrink-0 mt-0.5" /> <strong>Guided Trail uses the same capstone — independently:</strong> In Guided Trail, learners solve the same project with no step-by-step guidance. Guided Trail proves you can do the work on your own.</li>
             </ul>
           </div>
           
