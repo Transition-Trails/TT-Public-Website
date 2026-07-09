@@ -119,7 +119,7 @@ export default function ExplorersTrail() {
               <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-[#7FAFC6] mb-2">CAREER STARTERS</div>
               <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-3">Not sure yet. That's okay.</h3>
               <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65]">
-                You know Salesforce is worth exploring. You are not ready to commit to a full certification program or a 12-week cohort. Explorer's Trail is where you come to figure out if this is the right path — with real community, real events, and no pressure to move faster than you are ready to.
+                You know Salesforce is worth exploring. You are not ready to commit to a full certification program. Explorer's Trail is where you come to figure out if this is the right path — with real community, real events, and no pressure to move faster than you are ready to.
               </p>
             </div>
 
@@ -129,7 +129,7 @@ export default function ExplorersTrail() {
               <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-[#2F6B3F] mb-2">CAREER BUILDERS</div>
               <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-3">Building toward your first role or your next one.</h3>
               <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65]">
-                You have your Salesforce certification or are close to earning it. You want to stay connected to the TT community, access coaching, and build toward your first role or your next one. Explorer's Trail gives you the community, the content, and the coaching access to keep moving — and priority placement when the next Guided Trail cohort opens.
+                You have your Salesforce certification or are close to earning it. You want to stay connected to the TT community, access coaching, and build toward your first role or your next one. Explorer's Trail gives you the community, the content, and the coaching access to keep moving — and priority access to Guided Trail enrollment when it opens.
               </p>
             </div>
 
@@ -139,7 +139,7 @@ export default function ExplorersTrail() {
               <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-[#2F6F7E] mb-2">PROGRAM ALUMNI</div>
               <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-3">You finished a program. Now what?</h3>
               <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65]">
-                Graduates of the Guided Trail receive one year of Explorer's Trail membership included with their program. Explorer's Trail is how you stay connected to the TT ecosystem after your cohort ends — for the events, the community, the ongoing coaching discounts, and the people who are going through what you already went through.
+                Graduates of the Guided Trail receive one year of Explorer's Trail membership included with their program. Explorer's Trail is how you stay connected to the TT ecosystem after you complete a program — for the events, the community, the ongoing coaching discounts, and the people who are going through what you already went through.
               </p>
             </div>
 
@@ -383,7 +383,7 @@ export default function ExplorersTrail() {
                     "Monthly Trail Stamp (digital completion badge — fills your trail map)",
                     "ET member coaching rate ($100/hr vs. $150/hr standard)",
                     "Locked-in rate guarantee at renewal",
-                    "Annual member recognition + Founding Year badge for first-cohort members",
+                    "Annual member recognition + Founding Year badge for charter members",
                     "First access to new Trail Missions before Community Pass members",
                   ].map(item => (
                     <li key={item} className="flex gap-2.5 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
@@ -685,66 +685,6 @@ export default function ExplorersTrail() {
           <p className="font-['Open_Sans'] italic text-[13px] text-[#4A4F4D] text-center mt-10 max-w-[720px] mx-auto">
             Two pathways into coaching: TT program graduates (Guided Trail + 6 months employed) and external Salesforce professionals (2–3 years experience) who want to build leadership skills. Both pathways are welcome.
           </p>
-        </div>
-      </section>
-
-      {/* SECTION: Trail Navigator */}
-      <section className="bg-white py-20 px-5 md:px-10">
-        <div className="max-w-[1100px] mx-auto">
-          <div className="mb-12">
-            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">THE TRAIL NAVIGATOR</div>
-            <h2 className="font-['Poppins'] font-bold text-[32px] text-[#2A2E2C] mb-4">Earned. Never purchased.</h2>
-            <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] max-w-[680px] leading-[1.65]">
-              Every Guided Trail graduate receives a Trail Navigator at program completion — a physical artifact of the work they did and the community they joined. Choose the one that fits you:
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-            {/* Option A */}
-            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8">
-              <div className="text-[36px] mb-4">🧥</div>
-              <h3 className="font-['Poppins'] font-semibold text-[18px] text-[#2A2E2C] mb-3">The Trail Hoodie</h3>
-              <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65] mb-5">
-                A custom embroidered zip-up hoodie with velcro patch zones for every milestone you earn — program completions, coaching stints, tenure badges. Cohort-specific accent color embroidered into the design. Cohort 1 accent color: Sun Amber. Wear it to a Salesforce meetup. People will ask about it.
-              </p>
-              <span className="inline-block bg-[#1E4A2A] text-white font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-3 py-1 rounded">GUIDED TRAIL GRADUATES ONLY · NEVER SOLD SEPARATELY</span>
-            </div>
-            {/* Option B */}
-            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8">
-              <div className="text-[36px] mb-4">📓</div>
-              <h3 className="font-['Poppins'] font-semibold text-[18px] text-[#2A2E2C] mb-3">The Trail Journal</h3>
-              <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65] mb-5">
-                A custom-designed journal with a patch-compatible fabric cover. Same badge system. Same cohort-specific design. For members who prefer a non-wearable alternative — equally earned, equally honored.
-              </p>
-              <span className="inline-block bg-[#1E4A2A] text-white font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-3 py-1 rounded">GUIDED TRAIL GRADUATES ONLY · NEVER SOLD SEPARATELY</span>
-            </div>
-          </div>
-
-          {/* Patch progression */}
-          <div className="bg-white border border-[#E2E4E1] rounded-xl p-6 mb-6">
-            <div className="font-['Open_Sans'] font-semibold text-[11px] tracking-[1.5px] uppercase text-[#4A4F4D] mb-4">PATCH PROGRESSION</div>
-            <div className="flex flex-wrap gap-2 items-center font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
-              {["Guided Trail", "Foundations Trail", "Trail of Mastery (BA/PO/Admin Lead)", "Coach's Assistant", "Associate Coach", "Advanced TT Coach", "Lifetime"].map((patch, i, arr) => (
-                <span key={patch} className="flex items-center gap-2">
-                  <span className="bg-[#E6F3EA] text-[#2F6B3F] px-3 py-1 rounded-full text-[12px] font-semibold">{patch}</span>
-                  {i < arr.length - 1 && <span className="text-[#8C8882]">→</span>}
-                </span>
-              ))}
-            </div>
-            <p className="font-['Open_Sans'] italic text-[12px] text-[#8C8882] mt-4">
-              Patches are velcro — earned at each milestone, carried across every program. Digital credentials issued via Credly for LinkedIn at every milestone.
-            </p>
-          </div>
-
-          {/* Cohort 1 callout */}
-          <div className="bg-[#FEF3DB] border border-[#F5A623] rounded-xl p-7">
-            <p className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-2">
-              Cohort 1 members receive something no future cohort will. We'll share more when the waitlist closes.
-            </p>
-            <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] mb-4">Join the waitlist now to secure your Cohort 1 status.</p>
-            <a href="https://form.jotform.com/261684070494058" target="_blank" rel="noopener noreferrer" className="inline-flex items-center font-['Poppins'] font-semibold text-[14px] text-[#2A2E2C] hover:text-[#1E4A2A] transition-colors">
-              Join the Cohort 1 Waitlist →
-            </a>
-          </div>
         </div>
       </section>
 
