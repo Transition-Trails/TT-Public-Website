@@ -19,6 +19,14 @@ function Divider() {
   return <div className="h-px bg-[#E2E4E1] my-1" role="separator" />;
 }
 
+function GroupLabel({ children }) {
+  return (
+    <div className="font-['Open_Sans'] font-semibold text-[10px] tracking-[1.5px] uppercase text-[#A8A39D] px-5 pt-3 pb-1">
+      {children}
+    </div>
+  );
+}
+
 export function Nav() {
   const [location] = useLocation();
   const [mobile, setMobile] = useState(false);
@@ -87,10 +95,13 @@ export function Nav() {
             </button>
             {programsOpen && (
               <div id="programs-menu" role="menu" aria-label="Programs" className={`${dropdownBase} left-0 w-[320px]`}>
-                <DropItem href="/programs" label="All Programs" desc="Explorer's, Foundations, Guided & Trail of Mastery" onClick={() => setProgramsOpen(false)} />
-                <DropItem href="/programs" label="Tuition & Scholarships" desc="Transparent pricing and what's included" onClick={() => setProgramsOpen(false)} />
+                <GroupLabel>Featured</GroupLabel>
+                <DropItem href="/programs/guided-trail" label={<span className="flex items-center gap-2">Guided Trail <span className="inline-block bg-[#FEF3DC] text-[#D4890A] font-['Open_Sans'] font-bold text-[10px] tracking-[0.5px] uppercase px-1.5 py-0.5 rounded">Flagship</span></span>} desc="Our flagship program — real nonprofit clients" onClick={() => setProgramsOpen(false)} />
+                <DropItem href="/scholarship-application" label="Trail Forward Scholarship" desc="Need-based funding for Guided Trail" onClick={() => setProgramsOpen(false)} />
                 <Divider />
-                <DropItem href="/scholarship-application" label="Trail Forward Scholarship" desc="Need-based awards for Guided Trail" onClick={() => setProgramsOpen(false)} />
+                <GroupLabel>All Programs</GroupLabel>
+                <DropItem href="/programs" label="All Programs" desc="Explorer's Trail, Foundations, Guided & Trail of Mastery" onClick={() => setProgramsOpen(false)} />
+                <DropItem href="/programs/digital-compass" label="Digital Compass" desc="Salesforce support & membership for nonprofits" onClick={() => setProgramsOpen(false)} />
               </div>
             )}
           </div>
@@ -199,9 +210,15 @@ export function Nav() {
               <ChevronDown className={`w-5 h-5 transition-transform ${openDropdown === "programs" ? "rotate-180" : ""}`} />
             </button>
             <div className={`flex flex-col pl-4 overflow-hidden transition-all duration-300 ${openDropdown === "programs" ? "mt-4 max-h-[400px]" : "max-h-0"}`}>
+              <div className="font-['Open_Sans'] font-semibold text-[10px] tracking-[1.5px] uppercase text-white/40 pb-1">Featured</div>
+              <Link href="/programs/guided-trail" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2 flex items-center gap-2">
+                Guided Trail <span className="bg-[#FEF3DC] text-[#D4890A] font-bold text-[10px] uppercase px-1.5 py-0.5 rounded">Flagship</span>
+              </Link>
+              <Link href="/scholarship-application" onClick={closeMenu} className="text-[#6BBF85] font-['Open_Sans'] font-semibold text-[16px] py-2">Trail Forward Scholarship</Link>
+              <div className="h-px bg-white/10 my-2" />
+              <div className="font-['Open_Sans'] font-semibold text-[10px] tracking-[1.5px] uppercase text-white/40 pb-1">All Programs</div>
               <Link href="/programs" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">All Programs</Link>
-              <Link href="/programs" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">Tuition & Scholarships</Link>
-              <Link href="/scholarship-application" onClick={closeMenu} className="text-[#6BBF85] font-['Open_Sans'] font-semibold text-[16px] py-2">🏅 Trail Forward Scholarship</Link>
+              <Link href="/programs/digital-compass" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">Digital Compass</Link>
             </div>
           </div>
 
