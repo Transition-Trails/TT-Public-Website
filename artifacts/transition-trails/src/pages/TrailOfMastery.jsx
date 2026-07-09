@@ -402,14 +402,6 @@ export default function TrailOfMastery() {
                 The Customized Path is not self-selected. It is recommended by an advanced TT coach based on a skills assessment and a one-on-one coaching conversation. If no defined track fits where you are and where you're going, your coach will design a path that does.
               </p>
             </div>
-            <div className="shrink-0">
-              <a
-                href={LINKS.waitlist}
-                className="h-[48px] px-7 rounded-[8px] border border-white text-white font-['Poppins'] font-semibold text-[14px] flex items-center justify-center hover:bg-white/10 transition-colors whitespace-nowrap"
-              >
-                Request a Skills Assessment →
-              </a>
-            </div>
           </div>
         </div>
       </section>
@@ -679,7 +671,7 @@ export default function TrailOfMastery() {
             <div className="flex gap-4 items-start">
               <span className="text-[24px] shrink-0">🎯</span>
               <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65]">
-                Experienced Salesforce professionals with 2–3 years of field experience can apply to coach TT cohorts — <span className="font-semibold text-[#2A2E2C]">no program completion required</span>. Coach's Assistant and Associate Coach roles available now for Cohort 1.
+                Associate Coach roles are open for Cohort 1. Coach's Assistant roles are coming soon. Experienced Salesforce professionals with 2–3 years of field experience are welcome to apply — no program completion required.
               </p>
             </div>
             <a href="/coaches" className="font-['Open_Sans'] font-semibold text-[13px] text-[#2F6B3F] hover:underline whitespace-nowrap shrink-0">
