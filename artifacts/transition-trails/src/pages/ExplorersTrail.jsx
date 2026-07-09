@@ -43,7 +43,7 @@ export default function ExplorersTrail() {
                 <p>Whether you are just discovering Salesforce, preparing to join a TT program, or a graduate staying connected after your program ends — Explorer's Trail is where the TT ecosystem lives between programs.</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <CTAButton href={LINKS.waitlist} variant="dark" size="lg">
+                <CTAButton href="https://form.jotform.com/261684070494058" target="_blank" rel="noopener noreferrer" variant="dark" size="lg">
                   Join the Waitlist →
                 </CTAButton>
                 <a
@@ -78,6 +78,28 @@ export default function ExplorersTrail() {
                 <div className="font-['Open_Sans'] text-[12px] text-white/55">Full Membership + 4 quarterly coaching sessions</div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION: Pre-launch Banner */}
+      <section style={{ background: 'linear-gradient(135deg, #2F6F7E 0%, #2F6B3F 100%)' }} className="py-10 px-5 md:px-10">
+        <div className="max-w-[1100px] mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-12">
+          <div className="flex-1">
+            <div className="font-['Open_Sans'] font-bold text-[11px] tracking-[2px] uppercase text-[#7FAFC6] mb-2">LAUNCHING OCTOBER 1, 2026</div>
+            <p className="font-['Open_Sans'] text-[16px] text-white leading-[1.6]">
+              Explorer's Trail opens October 1. Join the waitlist and we'll reach out with everything you need to get started.
+            </p>
+          </div>
+          <div className="shrink-0">
+            <a
+              href="https://form.jotform.com/261684070494058"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="h-[48px] px-7 rounded-[8px] bg-[#F5A623] text-[#2A2E2C] font-['Poppins'] font-bold text-[15px] flex items-center justify-center hover:opacity-90 transition-opacity whitespace-nowrap"
+            >
+              Join the Waitlist →
+            </a>
           </div>
         </div>
       </section>
@@ -323,8 +345,8 @@ export default function ExplorersTrail() {
                     <span className="font-bold">GT Enrollment Credit:</span> $27 off GT tuition if you enroll in Guided Trail while active.
                   </p>
                 </div>
-                <a href={LINKS.waitlist} className="w-full h-[44px] rounded-[8px] font-['Poppins'] font-semibold text-[14px] flex items-center justify-center transition-colors hover:opacity-90" style={{ background: "#E0F0F7", color: "#7FAFC6" }}>
-                  Join the Community
+                <a href="https://form.jotform.com/261684070494058" target="_blank" rel="noopener noreferrer" className="w-full h-[44px] rounded-[8px] font-['Poppins'] font-semibold text-[14px] flex items-center justify-center transition-colors hover:opacity-90" style={{ background: "#E0F0F7", color: "#7FAFC6" }}>
+                  Join the Waitlist →
                 </a>
               </div>
             </div>
@@ -376,11 +398,11 @@ export default function ExplorersTrail() {
                   </p>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <a href={LINKS.waitlist} className="w-full h-[44px] rounded-[8px] font-['Poppins'] font-semibold text-[14px] flex items-center justify-center text-[#2A2E2C] transition-colors hover:opacity-90" style={{ background: "#F5A623" }}>
-                    Join Full — Pay in Full
+                  <a href="https://form.jotform.com/261684070494058" target="_blank" rel="noopener noreferrer" className="w-full h-[44px] rounded-[8px] font-['Poppins'] font-semibold text-[14px] flex items-center justify-center text-[#2A2E2C] transition-colors hover:opacity-90" style={{ background: "#F5A623" }}>
+                    Join the Waitlist →
                   </a>
-                  <a href={LINKS.waitlist} className="w-full h-[44px] rounded-[8px] border-2 border-[#2F6B3F] text-[#2F6B3F] font-['Poppins'] font-semibold text-[14px] flex items-center justify-center hover:bg-[#E6F3EA] transition-colors">
-                    Join Full — 3 Payments
+                  <a href="https://form.jotform.com/261684070494058" target="_blank" rel="noopener noreferrer" className="w-full h-[44px] rounded-[8px] border-2 border-[#2F6B3F] text-[#2F6B3F] font-['Poppins'] font-semibold text-[14px] flex items-center justify-center hover:bg-[#E6F3EA] transition-colors">
+                    Join the Waitlist →
                   </a>
                 </div>
               </div>
@@ -428,11 +450,11 @@ export default function ExplorersTrail() {
                   </p>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <a href={LINKS.waitlist} className="w-full h-[44px] rounded-[8px] font-['Poppins'] font-semibold text-[14px] flex items-center justify-center text-white transition-colors hover:opacity-90" style={{ background: "#2F6F7E" }}>
-                    Join Full + Coaching — Pay in Full
+                  <a href="https://form.jotform.com/261684070494058" target="_blank" rel="noopener noreferrer" className="w-full h-[44px] rounded-[8px] font-['Poppins'] font-semibold text-[14px] flex items-center justify-center text-white transition-colors hover:opacity-90" style={{ background: "#2F6F7E" }}>
+                    Join the Waitlist →
                   </a>
-                  <a href={LINKS.waitlist} className="w-full h-[44px] rounded-[8px] border-2 font-['Poppins'] font-semibold text-[14px] flex items-center justify-center transition-colors hover:opacity-90" style={{ borderColor: "#2F6F7E", color: "#2F6F7E" }}>
-                    Join Full + Coaching — 3 Payments
+                  <a href="https://form.jotform.com/261684070494058" target="_blank" rel="noopener noreferrer" className="w-full h-[44px] rounded-[8px] border-2 font-['Poppins'] font-semibold text-[14px] flex items-center justify-center transition-colors hover:opacity-90" style={{ borderColor: "#2F6F7E", color: "#2F6F7E" }}>
+                    Join the Waitlist →
                   </a>
                 </div>
               </div>
@@ -719,7 +741,7 @@ export default function ExplorersTrail() {
               Cohort 1 members receive something no future cohort will. We'll share more when the waitlist closes.
             </p>
             <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] mb-4">Join the waitlist now to secure your Cohort 1 status.</p>
-            <a href={LINKS.waitlist} className="inline-flex items-center font-['Poppins'] font-semibold text-[14px] text-[#2A2E2C] hover:text-[#1E4A2A] transition-colors">
+            <a href="https://form.jotform.com/261684070494058" target="_blank" rel="noopener noreferrer" className="inline-flex items-center font-['Poppins'] font-semibold text-[14px] text-[#2A2E2C] hover:text-[#1E4A2A] transition-colors">
               Join the Cohort 1 Waitlist →
             </a>
           </div>
@@ -815,7 +837,9 @@ export default function ExplorersTrail() {
           </div>
           <div className="shrink-0">
             <a
-              href={LINKS.waitlist}
+              href="https://form.jotform.com/261684070494058"
+              target="_blank"
+              rel="noopener noreferrer"
               className="h-[52px] px-8 rounded-[8px] bg-[#1E4A2A] text-white font-['Poppins'] font-bold text-[15px] flex items-center justify-center hover:bg-[#163820] transition-colors whitespace-nowrap"
             >
               Join the Waitlist →
