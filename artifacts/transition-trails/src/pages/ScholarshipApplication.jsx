@@ -27,7 +27,7 @@ export default function ScholarshipApplication() {
 
       {/* ── HERO ── */}
       <section className="pt-24 pb-16 px-5 md:px-10 bg-[#1E4A2A]">
-        <div className="max-w-[860px] mx-auto text-center">
+        <div className="max-w-[1100px] mx-auto text-center">
           <div className="font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] text-[#F5A623] mb-6">
             The Trail Forward Scholarship
           </div>
@@ -49,7 +49,7 @@ export default function ScholarshipApplication() {
 
       {/* ── WHAT IT IS ── */}
       <section className="bg-[#FAFAF7] py-20 px-5 md:px-10">
-        <div className="max-w-[800px] mx-auto">
+        <div className="max-w-[1100px] mx-auto">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <h2 className="font-['Fraunces'] font-bold text-[36px] text-[#2A2E2C] mb-6">
               What is the Trail Forward Scholarship?
@@ -68,7 +68,7 @@ export default function ScholarshipApplication() {
 
       {/* ── WHY IT EXISTS ── */}
       <section className="bg-white py-20 px-5 md:px-10">
-        <div className="max-w-[800px] mx-auto">
+        <div className="max-w-[1100px] mx-auto">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <h2 className="font-['Fraunces'] font-bold text-[36px] text-[#2A2E2C] mb-6">
               Why does this scholarship exist?
@@ -85,7 +85,7 @@ export default function ScholarshipApplication() {
 
       {/* ── WHO IS ELIGIBLE ── */}
       <section className="bg-[#FAFAF7] py-20 px-5 md:px-10">
-        <div className="max-w-[900px] mx-auto">
+        <div className="max-w-[1100px] mx-auto">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mb-12">
             <h2 className="font-['Fraunces'] font-bold text-[36px] text-[#2A2E2C] mb-2">
               Who is eligible?
@@ -156,7 +156,7 @@ export default function ScholarshipApplication() {
 
       {/* ── COHORT 1 NOTICE ── */}
       <section className="bg-white py-16 px-5 md:px-10">
-        <div className="max-w-[800px] mx-auto">
+        <div className="max-w-[1100px] mx-auto">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
             className="bg-[#FEF3DB] border border-[#F5A623] rounded-xl px-7 py-7">
             <div className="font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] text-[#D4890A] mb-4">
@@ -175,7 +175,7 @@ export default function ScholarshipApplication() {
 
       {/* ── HOW TO APPLY ── */}
       <section className="bg-white py-20 px-5 md:px-10 border-t border-[#E2E4E1]">
-        <div className="max-w-[900px] mx-auto">
+        <div className="max-w-[1100px] mx-auto">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mb-12 text-center">
             <h2 className="font-['Fraunces'] font-bold text-[36px] text-[#2A2E2C]">
               How to apply
@@ -227,7 +227,7 @@ export default function ScholarshipApplication() {
 
       {/* ── HOW IT IS FUNDED ── */}
       <section className="bg-[#FAFAF7] py-20 px-5 md:px-10 border-t border-[#E2E4E1]">
-        <div className="max-w-[800px] mx-auto">
+        <div className="max-w-[1100px] mx-auto">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <h2 className="font-['Fraunces'] font-bold text-[36px] text-[#2A2E2C] mb-6">
               How is the scholarship funded?
