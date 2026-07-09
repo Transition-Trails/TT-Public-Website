@@ -7,6 +7,19 @@ import { LINKS } from "../constants/links";
 import { motion } from "framer-motion";
 import { PageMeta } from "../components/PageMeta";
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.55 } }
+};
+const fadeUpChild = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+};
+const stagger = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.15 } }
+};
+
 export default function Programs() {
   const [certStatus, setCertStatus] = useState(null); // 'yes', 'no', 'inprogress'
   const [empStatus, setEmpStatus] = useState(null); // 'yes', 'no'
@@ -170,26 +183,42 @@ export default function Programs() {
       {/* Path to Coach */}
       <section className="bg-white py-20 px-5 md:px-10 border-t border-[#E2E4E1]">
         <div className="max-w-[1100px] mx-auto">
-          <div className="mb-10 text-center">
-            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">WHERE THE TRAIL LEADS</div>
-            <h2 className="font-['Fraunces'] font-bold text-[28px] text-[#2A2E2C]">The coaching pathway is open to Guided Trail graduates (6+ months employed) and external Salesforce professionals with 2–3 years of field experience. Two pathways in. One community.</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-            <div className="bg-[#E0F0F7] border border-[#7FAFC6]/40 rounded-xl p-6 text-center">
-              <div className="font-['Poppins'] font-bold text-[16px] text-[#2A2E2C] mb-2">Coach's Assistant</div>
-              <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D]">6 months after your first role post-Guided Trail</p>
-            </div>
-            <div className="bg-[#E6F3EA] border border-[#2F6B3F]/40 rounded-xl p-6 text-center">
-              <div className="font-['Poppins'] font-bold text-[16px] text-[#2A2E2C] mb-2">Associate Coach</div>
-              <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D]">2–3 years field experience</p>
-            </div>
-            <div className="bg-[#d4e8d8] border border-[#1E4A2A]/40 rounded-xl p-6 text-center">
-              <div className="font-['Poppins'] font-bold text-[16px] text-[#2A2E2C] mb-2">Advanced TT Coach + Lifetime Membership</div>
-              <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D]">6 completed cohorts</p>
-            </div>
-          </div>
+          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mb-12 text-center">
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">GET INVOLVED</div>
+            <h2 className="font-['Fraunces'] font-bold text-[36px] text-[#2A2E2C] mb-4">Ready to give back?</h2>
+            <p className="font-['Open_Sans'] text-[18px] text-[#4A4F4D] max-w-[680px] mx-auto">
+              If you have your Salesforce Platform Administrator certification and 2–3 years of field experience, coaching with Transition Trails is a meaningful way to build your leadership skills, strengthen your community, and stay sharp.
+            </p>
+          </motion.div>
+
+          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            <motion.div variants={fadeUpChild} className="bg-[#E0F0F7] border border-[#7FAFC6]/40 rounded-xl p-6 text-center">
+              <div className="font-['Poppins'] font-bold text-[16px] text-[#2A2E2C] mb-3">Coach's Assistant</div>
+              <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.6] mb-4">
+                Support a lead coach and learn the coaching process from the inside. A great first step for anyone who wants to contribute without taking the lead.
+              </p>
+              <div className="font-['Open_Sans'] font-semibold text-[12px] text-[#2F6F7E]">2–4 hrs/week per cohort</div>
+            </motion.div>
+
+            <motion.div variants={fadeUpChild} className="bg-[#E6F3EA] border border-[#2F6B3F]/40 rounded-xl p-6 text-center">
+              <div className="font-['Poppins'] font-bold text-[16px] text-[#2A2E2C] mb-3">Associate Coach</div>
+              <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.6] mb-4">
+                Lead a cohort as the primary coach. You set the tone, guide the learners, and own the outcomes — with full TT support behind you.
+              </p>
+              <div className="font-['Open_Sans'] font-semibold text-[12px] text-[#2F6B3F]">4–6 hrs/week per cohort</div>
+            </motion.div>
+
+            <motion.div variants={fadeUpChild} className="bg-[#d4e8d8] border border-[#1E4A2A]/40 rounded-xl p-6 text-center">
+              <div className="font-['Poppins'] font-bold text-[16px] text-[#2A2E2C] mb-3">Advanced TT Coach</div>
+              <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.6] mb-4">
+                Senior coaching role, earned through sustained contribution. Invitation only after 6 completed cohorts.
+              </p>
+              <div className="font-['Open_Sans'] font-semibold text-[12px] text-[#1E4A2A]">Lifetime Explorer's Trail membership</div>
+            </motion.div>
+          </motion.div>
+
           <p className="font-['Open_Sans'] italic text-[13px] text-[#4A4F4D] text-center">
-            The coaching pathway is open to Guided Trail graduates and external Salesforce professionals with 2–3 years experience. Two pathways in. One community.
+            Coaching is open to Guided Trail graduates with 6+ months of employment, and to external Salesforce professionals with 2–3 years of field experience. No Transition Trails program completion required.
           </p>
         </div>
       </section>
