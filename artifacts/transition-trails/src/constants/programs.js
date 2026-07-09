@@ -23,7 +23,7 @@ export const PROGRAMS = [
     accent: "#7FAFC6",
     tier: "AWARENESS TIER",
     price: "$27/mo",
-    priceNote: "Community Pass · or $1,164/yr Full Membership · $1,464/yr Full + Coaching",
+    priceNote: "Community Pass · or $1,164/yr Full Membership",
     highlight: "Community · Skill Building · Monthly Missions",
     cta: "Learn More",
     ctaHref: "/programs/explorers-trail",
@@ -42,7 +42,7 @@ export const PROGRAMS = [
     cta: "Learn More",
     ctaHref: "/programs/foundations-trail",
     ctaAmber: false,
-    whoFor: "Working toward or recently earned your Salesforce Platform Administrator cert",
+    whoFor: "You have completed your Salesforce Platform Foundations certification and are working toward your Salesforce Platform Administrator certification.",
   },
   {
     slug: "guided-trail",

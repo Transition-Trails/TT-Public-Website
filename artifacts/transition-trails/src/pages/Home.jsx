@@ -272,9 +272,9 @@ export default function Home() {
                     <GraduationCap className="w-6 h-6 text-[#2F6B3F]" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <div className="font-['Open_Sans'] text-[13px] text-[#8C8882] mb-1">I have my Salesforce Platform Administrator certification</div>
+                    <div className="font-['Open_Sans'] text-[13px] text-[#8C8882] mb-1">I have my Salesforce Platform Foundations certification and I'm working toward my Administrator cert</div>
                     <div className="font-['Poppins'] font-bold text-[16px] text-[#2A2E2C] mb-1 group-hover:text-[#2F6B3F] transition-colors">Foundations Trail</div>
-                    <div className="font-['Open_Sans'] text-[12px] text-[#8C8882]">Real org build + portfolio after cert</div>
+                    <div className="font-['Open_Sans'] text-[12px] text-[#8C8882]">Real org build + portfolio while you complete your Admin cert</div>
                   </div>
                   <ArrowRight className="w-4 h-4 text-[#2F6B3F] opacity-0 group-hover:opacity-100 transition-opacity mt-1 shrink-0" />
                 </Link>

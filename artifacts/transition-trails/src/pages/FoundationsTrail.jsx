@@ -24,11 +24,11 @@ export default function FoundationsTrail() {
               The certification is the door. The Foundations Trail is how you prove you can walk through it.
             </p>
             <p className="font-['Open_Sans'] text-[18px] text-white/80 leading-[1.6] mb-8">
-              You're working toward your Salesforce Administrator certification — and you want to come out the other side with more than a test result. The Foundations Trail is a 12-week guided practicum: Build With Me videos walk you through each configuration step, every task and module is directly aligned to the topics and domains Salesforce tests you on, and you finish with a complete Salesforce implementation for Horizon Community Hub that employers can actually review. This is not a study guide. It's the portfolio that proves you're ready.
+              You have completed your Salesforce Platform Foundations certification and are working toward your Salesforce Platform Administrator certification — and you want to come out the other side with more than a test result. The Foundations Trail is a 12-week guided practicum: Build With Me videos walk you through each configuration step, every task and module is directly aligned to the topics and domains Salesforce tests you on, and you finish with a complete Salesforce implementation for Horizon Community Hub that employers can actually review. This is not a study guide. It's the portfolio that proves you're ready.
             </p>
             <div className="inline-flex items-center gap-3 px-4 py-3 rounded-lg" style={{ background: "rgba(127,175,198,0.15)", border: "1px solid rgba(127,175,198,0.4)" }}>
               <Check className="w-5 h-5 shrink-0" style={{ color: "#7FAFC6" }} />
-              <span className="font-['Open_Sans'] text-sm font-semibold" style={{ color: "#7FAFC6" }}>Prerequisite: Salesforce Platform Foundations cert — or currently enrolled and preparing for it</span>
+              <span className="font-['Open_Sans'] text-sm font-semibold" style={{ color: "#7FAFC6" }}>Prerequisite: Salesforce Platform Foundations certification completed · Salesforce Platform Administrator certification in progress</span>
             </div>
           </div>
 
