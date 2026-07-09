@@ -220,6 +220,18 @@ export default function Programs() {
           <p className="font-['Open_Sans'] italic text-[13px] text-[#4A4F4D] text-center">
             Coaching is open to Guided Trail graduates with 6+ months of employment, and to external Salesforce professionals with 2–3 years of field experience. No Transition Trails program completion required.
           </p>
+
+          <div className="mt-12">
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4 text-center">APPLY TO COACH</div>
+            <div className="bg-white border border-[#E2E4E1] rounded-xl shadow-sm overflow-hidden">
+              <iframe
+                src="https://form.jotform.com/261876005299062"
+                title="Coach Application Form"
+                width="100%"
+                style={{ minHeight: "600px", border: "none", display: "block" }}
+              />
+            </div>
+          </div>
         </div>
       </section>
 
