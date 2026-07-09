@@ -477,68 +477,85 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 9: Social Proof — Hugh's Journey + Quotes */}
-      <section className="bg-white py-20 px-5 md:px-10">
+      {/* Section 9: Real Outcomes */}
+      <section className="bg-[#E6F3EA] py-24 px-5 md:px-10">
         <div className="max-w-[1024px] mx-auto">
 
-          {/* Hugh's Story Timeline */}
-          <div className="bg-[#E6F3EA] border border-[#2F6B3F]/20 rounded-2xl p-6 md:p-10 mb-12">
-            <h3 className="font-['Poppins'] font-semibold text-[20px] text-[#1E4A2A] mb-12 text-center md:text-left">Hugh's Journey</h3>
-
-            <div className="relative">
-              <div className="absolute top-[28px] left-0 right-0 h-[2px] bg-[#2F6B3F]/25 hidden md:block" />
-
-              <div className="grid grid-cols-2 md:grid-cols-6 gap-y-12 md:gap-y-0 relative z-10">
-                {[
-                  { label: "16 years", desc: "Truck Driver & Military Vet", bg: "bg-gray-400" },
-                  { label: "2020", desc: "Admin Cert Earned", bg: "bg-[#2F6B3F]" },
-                  { label: "47 jobs", desc: "Applications Sent", bg: "bg-[#BF2E2E]" },
-                  { label: "1 project", desc: "Real Nonprofit Implementation", bg: "bg-[#F5A623]" },
-                  { label: "Hired", desc: "Business Analyst at Salesforce", bg: "bg-[#1E4A2A]" },
-                  { label: "5 years", desc: "Co-Founder & CTO · Solutions Architect", bg: "bg-[#1E4A2A]" }
-                ].map((node, i) => (
-                  <div key={i} className="flex flex-col items-center text-center px-2">
-                    <div className="font-['Poppins'] font-bold text-[13px] text-[#2A2E2C] h-6 mb-2 flex items-end">{node.label}</div>
-                    <div className={`w-[36px] h-[36px] rounded-full ${node.bg} border-[4px] border-[#E6F3EA] shrink-0 mb-3`} />
-                    <div className="font-['Open_Sans'] text-[11px] text-[#4A4F4D] max-w-[120px]">{node.desc}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <p className="font-['Open_Sans'] italic text-[13px] text-[#4A4F4D] mt-10 text-center md:text-left">
-              Hugh Richardson · Solutions Architect at Salesforce · TT Co-Founder & CTO · This is the story Transition Trails was built from.
+          {/* Section Header */}
+          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mb-14">
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">REAL OUTCOMES</div>
+            <h2 className="font-['Fraunces'] font-bold text-[36px] text-[#2A2E2C] mb-4">The proof is in the journey.</h2>
+            <p className="font-['Open_Sans'] text-[18px] text-[#4A4F4D] max-w-[640px]">
+              Hugh's story is the reason Transition Trails exists. Here's what he — and the learners who followed — have to say.
             </p>
-          </div>
+          </motion.div>
 
-          {/* Hugh's Quote Card */}
-          <div className="bg-[#E6F3EA] border border-[#2F6B3F]/20 rounded-2xl p-8 md:p-12 relative mb-12">
-            <div className="absolute top-4 left-6 font-['Poppins'] text-[120px] text-[#2F6B3F]/30 leading-none select-none">"</div>
-            <p className="font-['Poppins'] font-medium text-[19px] text-[#2A2E2C] leading-[1.65] relative z-10 mb-8 max-w-3xl">
-              I spent 16 years driving trucks. I studied Salesforce between loads during the pandemic — and still couldn't get hired without experience. One real project with a real nonprofit changed everything. I joined Salesforce as a Business Analyst. Five years later I'm a Solutions Architect.
-            </p>
-            <div className="flex items-center gap-4 relative z-10">
-              <div className="w-[44px] h-[44px] rounded-full bg-[#2F6B3F] text-white flex items-center justify-center font-['Poppins'] font-bold">HR</div>
-              <div>
-                <div className="font-['Poppins'] font-semibold text-[14px] text-[#2A2E2C]">Hugh Richardson</div>
-                <div className="font-['Open_Sans'] text-[13px] text-[#4A4F4D]">Co-Founder & CTO · Transition Trails · Solutions Architect</div>
-              </div>
-            </div>
-          </div>
+          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="flex flex-col gap-6">
 
-          <div className="bg-[#E6F3EA] border border-[#2F6B3F]/20 rounded-2xl p-8 md:p-12 relative">
-            <div className="absolute top-4 left-6 font-['Poppins'] text-[100px] text-[#2F6B3F]/25 leading-none select-none">"</div>
-            <p className="font-['Poppins'] font-medium text-[18px] text-[#2A2E2C] leading-[1.65] relative z-10 mb-8 max-w-3xl">
-              I had the Admin cert for eight months and couldn't get past the "no experience" wall. Every job listing said entry-level but wanted two years. After completing the Guided Trail, I had a real Salesforce implementation I could walk any hiring manager through — screenshots, architecture decisions, the whole thing. I landed a Salesforce Admin role at a Dallas nonprofit within six weeks of finishing the program.
-            </p>
-            <div className="flex items-center gap-4 relative z-10">
-              <div className="w-[44px] h-[44px] rounded-full bg-[#2F6B3F] text-white flex items-center justify-center font-['Poppins'] font-bold">MC</div>
-              <div>
-                <div className="font-['Poppins'] font-semibold text-[14px] text-[#2A2E2C]">M. Chen</div>
-                <div className="font-['Open_Sans'] text-[13px] text-[#4A4F4D]">Guided Trail Graduate · Cohort 0 · Dec. 2025 · Dallas, TX</div>
+            {/* Hugh's Story Timeline */}
+            <motion.div variants={fadeUpChild} className="bg-white border border-[#2F6B3F]/15 rounded-2xl p-6 md:p-10">
+              <h3 className="font-['Poppins'] font-semibold text-[20px] text-[#1E4A2A] mb-12 text-center md:text-left">Hugh's Journey</h3>
+
+              <div className="relative">
+                <div className="absolute top-[28px] left-0 right-0 h-[2px] bg-[#2F6B3F]/25 hidden md:block" />
+
+                <div className="grid grid-cols-2 md:grid-cols-6 gap-y-12 md:gap-y-0 relative z-10">
+                  {[
+                    { label: "16 years", desc: "Truck Driver & Military Vet", bg: "bg-gray-400" },
+                    { label: "2020", desc: "Admin Cert Earned", bg: "bg-[#2F6B3F]" },
+                    { label: "47 jobs", desc: "Applications Sent", bg: "bg-[#BF2E2E]" },
+                    { label: "1 project", desc: "Real Nonprofit Implementation", bg: "bg-[#F5A623]" },
+                    { label: "Hired", desc: "Business Analyst at Salesforce", bg: "bg-[#1E4A2A]" },
+                    { label: "5 years", desc: "Co-Founder & CTO · Solutions Architect", bg: "bg-[#1E4A2A]" }
+                  ].map((node, i) => (
+                    <div key={i} className="flex flex-col items-center text-center px-2">
+                      <div className="font-['Poppins'] font-bold text-[13px] text-[#2A2E2C] h-6 mb-2 flex items-end">{node.label}</div>
+                      <div className={`w-[36px] h-[36px] rounded-full ${node.bg} border-[4px] border-white shrink-0 mb-3`} />
+                      <div className="font-['Open_Sans'] text-[11px] text-[#4A4F4D] max-w-[120px]">{node.desc}</div>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-          </div>
+
+              <p className="font-['Open_Sans'] italic text-[13px] text-[#4A4F4D] mt-10 text-center md:text-left">
+                Hugh Richardson · Solutions Architect at Salesforce · TT Co-Founder & CTO · This is the story Transition Trails was built from.
+              </p>
+            </motion.div>
+
+            {/* Divider */}
+            <div className="h-px bg-[#2F6B3F]/20 w-full" />
+
+            {/* Hugh's Quote Card */}
+            <motion.div variants={fadeUpChild} className="bg-white border border-[#2F6B3F]/15 rounded-2xl p-8 md:p-12 relative">
+              <div className="absolute top-4 left-6 font-['Poppins'] text-[120px] text-[#2F6B3F]/30 leading-none select-none">"</div>
+              <p className="font-['Poppins'] font-medium text-[19px] text-[#2A2E2C] leading-[1.65] relative z-10 mb-8 max-w-3xl">
+                I spent 16 years driving trucks. I studied Salesforce between loads during the pandemic — and still couldn't get hired without experience. One real project with a real nonprofit changed everything. I joined Salesforce as a Business Analyst. Five years later I'm a Solutions Architect.
+              </p>
+              <div className="flex items-center gap-4 relative z-10">
+                <div className="w-[44px] h-[44px] rounded-full bg-[#2F6B3F] text-white flex items-center justify-center font-['Poppins'] font-bold">HR</div>
+                <div>
+                  <div className="font-['Poppins'] font-semibold text-[14px] text-[#2A2E2C]">Hugh Richardson</div>
+                  <div className="font-['Open_Sans'] text-[13px] text-[#4A4F4D]">Co-Founder & CTO · Transition Trails · Solutions Architect</div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* M. Chen Quote Card */}
+            <motion.div variants={fadeUpChild} className="bg-white border border-[#2F6B3F]/15 rounded-2xl p-8 md:p-12 relative">
+              <div className="absolute top-4 left-6 font-['Poppins'] text-[100px] text-[#2F6B3F]/25 leading-none select-none">"</div>
+              <p className="font-['Poppins'] font-medium text-[18px] text-[#2A2E2C] leading-[1.65] relative z-10 mb-8 max-w-3xl">
+                I had the Admin cert for eight months and couldn't get past the "no experience" wall. Every job listing said entry-level but wanted two years. After completing the Guided Trail, I had a real Salesforce implementation I could walk any hiring manager through — screenshots, architecture decisions, the whole thing. I landed a Salesforce Admin role at a Dallas nonprofit within six weeks of finishing the program.
+              </p>
+              <div className="flex items-center gap-4 relative z-10">
+                <div className="w-[44px] h-[44px] rounded-full bg-[#2F6B3F] text-white flex items-center justify-center font-['Poppins'] font-bold">MC</div>
+                <div>
+                  <div className="font-['Poppins'] font-semibold text-[14px] text-[#2A2E2C]">M. Chen</div>
+                  <div className="font-['Open_Sans'] text-[13px] text-[#4A4F4D]">Guided Trail Graduate · Cohort 0 · Dec. 2025 · Dallas, TX</div>
+                </div>
+              </div>
+            </motion.div>
+
+          </motion.div>
         </div>
       </section>
 
@@ -603,14 +620,6 @@ export default function Home() {
       {/* Section 11 (cont): Testimonials */}
       <section className="bg-white py-20 px-5 md:px-10">
         <div className="max-w-[1100px] mx-auto">
-          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-14">
-            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">WHAT PEOPLE ARE SAYING</div>
-            <h2 className="font-['Fraunces'] font-bold text-[32px] text-[#2A2E2C] mb-4">Real voices. Honest outcomes.</h2>
-            <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] max-w-[640px] mx-auto">
-              These reflections are from our Cohort 0 pilot (Dec. 2025) and our nonprofit network. Cohort 1 is now enrolling.
-            </p>
-          </motion.div>
-
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
             <motion.div variants={fadeUpChild} className="flex flex-col">
               <div className="font-['Poppins'] text-[56px] leading-none mb-2 select-none" style={{ color: "rgba(47,111,126,0.3)" }}>"</div>
