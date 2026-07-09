@@ -261,7 +261,7 @@ export default function TrailOfMastery() {
               >
                 ADVANCEMENT TIER  ·  TEAM APPRENTICESHIP  ·  REAL CLIENT DELIVERY
               </div>
-              <h1 className="font-['Poppins'] font-bold text-[52px] text-white tracking-[-1.5px] leading-[1.1] mb-5">
+              <h1 className="font-['Fraunces'] font-bold text-[52px] text-white tracking-[-1.5px] leading-[1.1] mb-5">
                 Trail of Mastery.
               </h1>
               <p className="font-['Poppins'] font-semibold text-[22px] text-[#7FAFC6] mb-6 leading-[1.3]">
