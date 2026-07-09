@@ -4,6 +4,7 @@ import { PROGRAMS } from "../constants/programs";
 import { ProgramCard } from "../components/ProgramCard";
 import { CTAButton } from "../components/CTAButton";
 import { LINKS } from "../constants/links";
+import { motion } from "framer-motion";
 import { PageMeta } from "../components/PageMeta";
 
 export default function Programs() {
@@ -25,7 +26,12 @@ export default function Programs() {
       />
       <section className="bg-[#2A2E2C] py-20 px-5 md:px-10">
         <div className="max-w-[1280px] mx-auto text-center">
-          <h1 className="font-['Poppins'] font-bold text-[48px] md:text-[56px] text-white mb-4">Find your trail.</h1>
+          <motion.h1
+            className="font-['Fraunces'] font-bold text-[48px] md:text-[56px] text-white mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >Find your trail.</motion.h1>
           <p className="font-['Open_Sans'] text-[18px] md:text-[20px] text-white/80 max-w-2xl mx-auto">
             Five programs. One ecosystem. Built for every stage of the Salesforce journey.
           </p>
@@ -64,7 +70,7 @@ export default function Programs() {
 
       <section className="bg-[#FAFAF7] py-16 px-5 border-b border-[#E2E4E1]">
         <div className="max-w-[800px] mx-auto bg-white rounded-2xl border border-[#E2E4E1] shadow-sm p-8 md:p-12">
-          <h2 className="font-['Poppins'] font-semibold text-[24px] text-[#2A2E2C] text-center mb-8">Which program is right for you?</h2>
+          <h2 className="font-['Fraunces'] font-bold text-[24px] text-[#2A2E2C] text-center mb-8">Which program is right for you?</h2>
           
           <div className="space-y-8">
             <div>
@@ -166,7 +172,7 @@ export default function Programs() {
         <div className="max-w-[1100px] mx-auto">
           <div className="mb-10 text-center">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">WHERE THE TRAIL LEADS</div>
-            <h2 className="font-['Poppins'] font-bold text-[28px] text-[#2A2E2C]">The coaching pathway is open to Guided Trail graduates (6+ months employed) and external Salesforce professionals with 2–3 years of field experience. Two pathways in. One community.</h2>
+            <h2 className="font-['Fraunces'] font-bold text-[28px] text-[#2A2E2C]">The coaching pathway is open to Guided Trail graduates (6+ months employed) and external Salesforce professionals with 2–3 years of field experience. Two pathways in. One community.</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
             <div className="bg-[#E0F0F7] border border-[#7FAFC6]/40 rounded-xl p-6 text-center">
@@ -191,7 +197,7 @@ export default function Programs() {
       <section className="bg-white py-20 px-5 border-t border-[#E2E4E1]">
         <div className="max-w-[800px] mx-auto bg-gradient-to-br from-[#1E4F5C] to-[#2F6F7E] rounded-2xl p-10 md:p-14 text-center">
           <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#F5A623] mb-4">FOR NONPROFIT ORGANIZATIONS</div>
-          <h2 className="font-['Poppins'] font-bold text-[32px] md:text-[40px] text-white mb-6">Need Salesforce support?</h2>
+          <h2 className="font-['Fraunces'] font-bold text-[32px] md:text-[40px] text-white mb-6">Need Salesforce support?</h2>
           <p className="font-['Open_Sans'] text-[18px] text-white/80 max-w-xl mx-auto mb-8">
             Digital Compass provides ongoing Salesforce support for nonprofits starting at $149/mo. We match your projects with our learners to create real impact.
           </p>

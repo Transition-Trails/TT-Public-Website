@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { CTAButton } from "../components/CTAButton";
 import { LINKS } from "../constants/links";
+import { motion } from "framer-motion";
 import { PageMeta } from "../components/PageMeta";
 
 export default function About() {
@@ -13,9 +14,14 @@ export default function About() {
       />
       <section className="bg-[#FAFAF7] py-20 px-5 md:px-10 border-b border-[#E2E4E1]">
         <div className="max-w-[1024px] mx-auto text-center">
-          <h1 className="font-['Poppins'] font-bold text-[40px] md:text-[48px] text-[#2A2E2C] leading-tight max-w-3xl mx-auto mb-8">
+          <motion.h1
+            className="font-['Fraunces'] font-bold text-[40px] md:text-[48px] text-[#2A2E2C] leading-tight max-w-3xl mx-auto mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
             Built by people who know what it costs to break in.
-          </h1>
+          </motion.h1>
         </div>
       </section>
 
@@ -82,7 +88,7 @@ export default function About() {
       <section className="bg-white py-20 px-5">
         <div className="max-w-[1024px] mx-auto flex flex-col md:flex-row gap-16 items-center">
           <div className="flex-1">
-            <h2 className="font-['Poppins'] font-bold text-[32px] text-[#2A2E2C] mb-6">The Origin Story</h2>
+            <h2 className="font-['Fraunces'] font-bold text-[32px] text-[#2A2E2C] mb-6">The Origin Story</h2>
             <div className="font-['Open_Sans'] text-[17px] text-[#4A4F4D] leading-[1.7] space-y-6">
               <p>
                 Hugh Richardson spent 16 years driving trucks. During the pandemic, he studied Salesforce between loads, eventually earning his Admin certification. He sent out 47 applications. He received zero offers.
@@ -121,7 +127,7 @@ export default function About() {
         <div className="max-w-[1024px] mx-auto">
           <div className="text-center mb-12">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">WHAT PEOPLE ARE SAYING</div>
-            <h2 className="font-['Poppins'] font-bold text-[32px] text-[#2A2E2C] mb-3">Real outcomes. Real voices.</h2>
+            <h2 className="font-['Fraunces'] font-bold text-[32px] text-[#2A2E2C] mb-3">Real outcomes. Real voices.</h2>
             <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] max-w-[580px] mx-auto">
               From the nonprofits we serve and the learners who have done the work.
             </p>
@@ -141,7 +147,7 @@ export default function About() {
 
       <section className="bg-white py-20 px-5 text-center">
         <div className="max-w-[800px] mx-auto">
-          <h2 className="font-['Poppins'] font-bold text-[36px] text-[#2A2E2C] mb-8">Want to be part of the story?</h2>
+          <h2 className="font-['Fraunces'] font-bold text-[36px] text-[#2A2E2C] mb-8">Want to be part of the story?</h2>
           <CTAButton href={LINKS.angelaCalendar} variant="amber" size="lg" external>
             Schedule time with us
           </CTAButton>

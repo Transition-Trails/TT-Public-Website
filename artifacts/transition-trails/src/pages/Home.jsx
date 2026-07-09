@@ -1,11 +1,33 @@
 import { Link } from "wouter";
-import { Check, Clipboard, RefreshCw, Target, Database, Users, DollarSign } from "lucide-react";
+import { motion } from "framer-motion";
+import { Check, Database, Users, DollarSign, BookOpen, GraduationCap, Map, TrendingUp, Heart, Briefcase, UserCheck, Gift, ArrowRight } from "lucide-react";
 import { PageMeta } from "../components/PageMeta";
 import { CTAButton } from "../components/CTAButton";
 import { ProgramCard } from "../components/ProgramCard";
 import { PROGRAMS } from "../constants/programs";
 import { FOUNDERS } from "../constants/founders";
 import { LINKS } from "../constants/links";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.55 } }
+};
+const fadeUpChild = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+};
+const stagger = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.15 } }
+};
+const slideLeft = {
+  hidden: { opacity: 0, x: -30 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.55 } }
+};
+const slideRight = {
+  hidden: { opacity: 0, x: 30 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.55 } }
+};
 
 export default function Home() {
   return (
@@ -15,30 +37,41 @@ export default function Home() {
         description="Transition Trails connects certified Salesforce professionals with real nonprofit client work. Five programs. Real experience. 501(c)(3) nonprofit. Dallas, TX."
         path="/"
       />
+
       {/* Section 2: Hero */}
       <section className="bg-gradient-to-r from-[#1E4A2A] via-[#2F6B3F] to-[#2F6F7E] min-h-[640px] flex items-center">
         <div className="max-w-[1280px] mx-auto px-5 md:px-10 py-20 w-full flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-          <div className="flex-1 max-w-[640px]">
-            <div className="inline-flex items-center justify-center bg-[#F5A623]/15 border border-[#F5A623]/30 text-[#F5A623] font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-6">
-              SALESFORCE CAREER DEVELOPMENT • DALLAS, TX
+          <motion.div
+            className="flex-1 max-w-[640px]"
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.65 }}
+          >
+            <div className="inline-flex items-center justify-center bg-[#7FAFC6]/20 border border-[#7FAFC6]/40 text-[#7FAFC6] font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-6">
+              For Career Starters · Career Builders · Career Pivoters
             </div>
-            <h1 className="font-['Poppins'] font-bold text-[36px] md:text-[56px] text-white tracking-[-1.5px] leading-[1.15] mb-6">
-              You passed the exam. Now get the experience.
+            <h1 className="font-['Fraunces'] font-bold text-[42px] md:text-[62px] text-white tracking-[-1px] leading-[1.1] mb-6">
+              Every Career Has a Trail.
             </h1>
             <p className="font-['Open_Sans'] text-[18px] md:text-[20px] text-white/90 leading-[1.6] mb-10">
-              Whether you are just discovering Salesforce, turning your certification into your first role, or pivoting from a completely different career — Transition Trails gives you real project experience, real clients, and a professional delivery methodology that makes you stand out. Five programs. One ecosystem. Built for every stage of the journey.
+              Whether you're a Career Starter, Career Builder, or Career Pivoter, Transition Trails connects you with the learning, experience, and community that move careers forward — while expanding nonprofit capacity.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <CTAButton href={LINKS.waitlist} size="lg">
-                Join the Waitlist
+              <CTAButton href="/programs" size="lg">
+                Find Your Trail
               </CTAButton>
-              <CTAButton href="/programs/digital-compass" variant="outline" size="lg" className="text-white hover:bg-white/10">
-                For Nonprofits
+              <CTAButton href="/nonprofit-assessment" variant="outline" size="lg" className="text-white hover:bg-white/10">
+                Partner With Us
               </CTAButton>
             </div>
-          </div>
-          
-          <div className="bg-white/10 border border-white/15 rounded-2xl w-full max-w-[380px] p-8 lg:p-10 backdrop-blur-sm shrink-0">
+          </motion.div>
+
+          <motion.div
+            className="bg-white/10 border border-white/15 rounded-2xl w-full max-w-[380px] p-8 lg:p-10 backdrop-blur-sm shrink-0"
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.65, delay: 0.15 }}
+          >
             <div className="flex flex-col gap-6">
               <div>
                 <div className="font-['Poppins'] font-bold text-[28px] text-[#F5A623] leading-none mb-1">12 weeks</div>
@@ -60,7 +93,7 @@ export default function Home() {
                 <div className="font-['Open_Sans'] text-[15px] text-white/85">Cost of one scholarship seat</div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -84,9 +117,9 @@ export default function Home() {
       {/* Section 4: The Experience Gap */}
       <section className="bg-[#FAFAF7] py-20 px-5 md:px-10">
         <div className="max-w-[1280px] mx-auto flex flex-col xl:flex-row gap-16 items-center xl:items-start">
-          <div className="flex-1 max-w-[560px]">
+          <motion.div variants={slideLeft} initial="hidden" whileInView="visible" viewport={{ once: true }} className="flex-1 max-w-[560px]">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">THE EXPERIENCE GAP</div>
-            <h2 className="font-['Poppins'] font-bold text-[36px] md:text-[40px] text-[#2A2E2C] tracking-[-0.8px] leading-tight mb-4">
+            <h2 className="font-['Fraunces'] font-bold text-[36px] md:text-[40px] text-[#2A2E2C] leading-tight mb-4">
               Certified. Qualified. Still waiting for a chance.
             </h2>
             <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] mb-6">
@@ -102,9 +135,9 @@ export default function Home() {
             <p className="font-['Open_Sans'] text-[17px] text-[#4A4F4D] leading-[1.65] mt-4">
               It is not too late. The gap is not your fault. And Transition Trails exists to close it — for all three of you.
             </p>
-          </div>
-          
-          <div className="flex flex-col sm:flex-row gap-6 w-full xl:w-auto overflow-x-auto pb-4 sm:pb-0">
+          </motion.div>
+
+          <motion.div variants={slideRight} initial="hidden" whileInView="visible" viewport={{ once: true }} className="flex flex-col sm:flex-row gap-6 w-full xl:w-auto overflow-x-auto pb-4 sm:pb-0">
             <div className="bg-white border border-[#E2E4E1] rounded-xl w-[260px] sm:w-[220px] h-auto p-6 shrink-0 flex flex-col">
               <div className="text-[28px] mb-3">🧭</div>
               <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-[#7FAFC6] mb-2">CAREER STARTERS</div>
@@ -129,17 +162,19 @@ export default function Home() {
                 Hugh drove trucks for 16 years. He is now a Solutions Architect at Salesforce. The pivot is possible — and Transition Trails was built specifically to make it happen for people who are willing to do the work.
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Section 5: Program Ecosystem */}
       <section className="bg-[#FAFAF7] py-20 px-5 md:px-10 relative overflow-hidden">
         <div className="max-w-[1280px] mx-auto">
-          <div className="w-16 h-[5px] bg-[#2F6B3F] mb-8" />
-          <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">FIVE PROGRAMS. ONE ECOSYSTEM.</div>
-          <h2 className="font-['Poppins'] font-bold text-[36px] text-[#2A2E2C] mb-12">Find your trail.</h2>
-          
+          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+            <div className="w-16 h-[5px] bg-[#2F6B3F] mb-8" />
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">FIVE PROGRAMS. ONE ECOSYSTEM.</div>
+            <h2 className="font-['Fraunces'] font-bold text-[36px] text-[#2A2E2C] mb-12">Find your trail.</h2>
+          </motion.div>
+
           <div className="flex gap-6 overflow-x-auto pb-8 items-end snap-x snap-mandatory">
             {PROGRAMS.map(program => (
               <div key={program.slug} className="snap-start shrink-0">
@@ -153,10 +188,10 @@ export default function Home() {
               Not sure which trail is yours?
             </div>
             <div className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] text-center lg:text-left hidden md:block">
-              No cert yet → Explorer's Trail <span className="mx-2 text-[#2F6B3F]">•</span> 
-              Working toward cert → Foundations Trail <span className="mx-2 text-[#2F6B3F]">•</span> 
-              Certified, not hired → Guided Trail <span className="mx-2 text-[#2F6B3F]">•</span> 
-              Employed admin → Trail of Mastery <span className="mx-2 text-[#2F6B3F]">•</span> 
+              No cert yet → Explorer's Trail <span className="mx-2 text-[#2F6B3F]">•</span>
+              Working toward cert → Foundations Trail <span className="mx-2 text-[#2F6B3F]">•</span>
+              Certified, not hired → Guided Trail <span className="mx-2 text-[#2F6B3F]">•</span>
+              Employed admin → Trail of Mastery <span className="mx-2 text-[#2F6B3F]">•</span>
               Nonprofit org → Digital Compass
             </div>
             <div className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] text-center lg:text-left md:hidden flex flex-col gap-2">
@@ -173,15 +208,15 @@ export default function Home() {
       {/* Section 5b: Dual Impact Bridge */}
       <section className="bg-[#FAFAF7] py-10 px-5">
         <div className="max-w-[1024px] mx-auto flex flex-col md:flex-row gap-6 items-stretch">
-          <div className="flex-1 bg-[#2F6B3F]/10 border border-[#2F6B3F]/20 rounded-xl p-8 flex flex-col justify-center">
+          <motion.div variants={slideLeft} initial="hidden" whileInView="visible" viewport={{ once: true }} className="flex-1 bg-[#2F6B3F]/10 border border-[#2F6B3F]/20 rounded-xl p-8 flex flex-col justify-center">
             <div className="font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] text-[#2F6B3F] mb-3">LEARNERS NEED</div>
             <div className="font-['Poppins'] font-bold text-[18px] text-[#1E4A2A]">Real nonprofit projects to build their portfolio</div>
-          </div>
-          
+          </motion.div>
+
           <div className="hidden md:flex items-center justify-center">
             <div className="font-['Poppins'] text-[#E2E4E1] text-3xl">→</div>
           </div>
-          
+
           <div className="flex-[1.2] bg-[#2A2E2C] border-t-4 border-t-[#F5A623] rounded-xl p-8 flex flex-col justify-center items-center text-center">
             <div className="font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] text-[#F5A623] mb-3">THE DUAL IMPACT MODEL</div>
             <div className="font-['Poppins'] font-bold text-[17px] text-white">Learners need your projects. You need their work. That's the model.</div>
@@ -191,9 +226,114 @@ export default function Home() {
             <div className="font-['Poppins'] text-[#E2E4E1] text-3xl">→</div>
           </div>
 
-          <div className="flex-1 bg-[#2F6F7E]/10 border border-[#2F6F7E]/25 rounded-xl p-8 flex flex-col justify-center">
+          <motion.div variants={slideRight} initial="hidden" whileInView="visible" viewport={{ once: true }} className="flex-1 bg-[#2F6F7E]/10 border border-[#2F6F7E]/25 rounded-xl p-8 flex flex-col justify-center">
             <div className="font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] text-[#2F6F7E] mb-3">NONPROFITS NEED</div>
             <div className="font-['Poppins'] font-bold text-[18px] text-[#1a3440]">Salesforce support they couldn't afford to hire</div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Section 5c: Trailhead Self-Selector */}
+      <section className="bg-[#FAFAF7] py-20 px-5 md:px-10 border-t border-[#E2E4E1]">
+        <div className="max-w-[1280px] mx-auto">
+          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mb-16">
+            <h2 className="font-['Fraunces'] font-bold text-[40px] text-[#2A2E2C] mb-4">Where Are You Today?</h2>
+            <p className="font-['Open_Sans'] text-[18px] text-[#4A4F4D] max-w-[640px]">
+              Transition Trails is not a single linear curriculum. Find your trailhead — where you begin depends on where you are right now.
+            </p>
+          </motion.div>
+
+          {/* Learner Pathways */}
+          <div className="mb-14">
+            <div className="flex items-center gap-4 mb-8">
+              <span className="font-['Open_Sans'] font-bold text-[12px] tracking-[2px] uppercase text-[#4A4F4D] shrink-0">Learner Pathways</span>
+              <div className="flex-1 h-px bg-[#E2E4E1]" />
+            </div>
+            <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+              <motion.div variants={fadeUpChild}>
+                <Link href="/programs/explorers-trail" className="group flex gap-5 bg-white border border-[#E2E4E1] rounded-xl p-6 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 block">
+                  <div className="w-12 h-12 rounded-xl bg-[#E6F3EA] flex items-center justify-center shrink-0 mt-0.5">
+                    <BookOpen className="w-6 h-6 text-[#2F6B3F]" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="font-['Open_Sans'] text-[13px] text-[#8C8882] mb-1">I'm exploring Salesforce</div>
+                    <div className="font-['Poppins'] font-bold text-[16px] text-[#2A2E2C] mb-1 group-hover:text-[#2F6B3F] transition-colors">Explorer's Trail · Community Membership</div>
+                    <div className="font-['Open_Sans'] text-[12px] text-[#8C8882]">Open to everyone — no prerequisites required</div>
+                  </div>
+                  <ArrowRight className="w-4 h-4 text-[#2F6B3F] opacity-0 group-hover:opacity-100 transition-opacity mt-1 shrink-0" />
+                </Link>
+              </motion.div>
+
+              <motion.div variants={fadeUpChild}>
+                <Link href="/programs/foundations-trail" className="group flex gap-5 bg-white border border-[#E2E4E1] rounded-xl p-6 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 block">
+                  <div className="w-12 h-12 rounded-xl bg-[#E6F3EA] flex items-center justify-center shrink-0 mt-0.5">
+                    <GraduationCap className="w-6 h-6 text-[#2F6B3F]" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="font-['Open_Sans'] text-[13px] text-[#8C8882] mb-1">I have my Salesforce Platform Administrator certification</div>
+                    <div className="font-['Poppins'] font-bold text-[16px] text-[#2A2E2C] mb-1 group-hover:text-[#2F6B3F] transition-colors">Foundations Trail</div>
+                    <div className="font-['Open_Sans'] text-[12px] text-[#8C8882]">Real org build + portfolio after cert</div>
+                  </div>
+                  <ArrowRight className="w-4 h-4 text-[#2F6B3F] opacity-0 group-hover:opacity-100 transition-opacity mt-1 shrink-0" />
+                </Link>
+              </motion.div>
+
+              <motion.div variants={fadeUpChild}>
+                <Link href="/programs/guided-trail" className="group flex gap-5 bg-[#2F6B3F] border-2 border-[#2F6B3F] rounded-xl p-6 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 block">
+                  <div className="w-12 h-12 rounded-xl bg-[#F5A623] flex items-center justify-center shrink-0 mt-0.5">
+                    <Map className="w-6 h-6 text-[#2A2E2C]" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="font-['Open_Sans'] text-[13px] text-white/65 mb-1">I'm Salesforce certified but not yet employed as an admin</div>
+                    <div className="flex items-center gap-2 mb-1 flex-wrap">
+                      <span className="font-['Poppins'] font-bold text-[16px] text-white">Guided Trail</span>
+                      <span className="bg-[#F5A623] text-[#2A2E2C] font-['Open_Sans'] font-bold text-[9px] uppercase tracking-[1px] px-2 py-0.5 rounded">Flagship</span>
+                    </div>
+                    <div className="font-['Open_Sans'] text-[12px] text-white/60">12-week supervised nonprofit project · Our most popular program</div>
+                  </div>
+                  <ArrowRight className="w-4 h-4 text-[#F5A623] opacity-0 group-hover:opacity-100 transition-opacity mt-1 shrink-0" />
+                </Link>
+              </motion.div>
+
+              <motion.div variants={fadeUpChild}>
+                <Link href="/programs/trail-of-mastery" className="group flex gap-5 bg-white border border-[#E2E4E1] rounded-xl p-6 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 block">
+                  <div className="w-12 h-12 rounded-xl bg-[#FFF8E8] flex items-center justify-center shrink-0 mt-0.5">
+                    <TrendingUp className="w-6 h-6 text-[#D4890A]" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="font-['Open_Sans'] text-[13px] text-[#8C8882] mb-1">I've been a Salesforce Admin for 6+ months and want to advance</div>
+                    <div className="font-['Poppins'] font-bold text-[16px] text-[#2A2E2C] mb-1 group-hover:text-[#2F6B3F] transition-colors">Trail of Mastery</div>
+                    <div className="font-['Open_Sans'] text-[12px] text-[#8C8882]">Advanced specialization and apprenticeship for working admins</div>
+                  </div>
+                  <ArrowRight className="w-4 h-4 text-[#2F6B3F] opacity-0 group-hover:opacity-100 transition-opacity mt-1 shrink-0" />
+                </Link>
+              </motion.div>
+            </motion.div>
+          </div>
+
+          {/* Partners & Supporters */}
+          <div>
+            <div className="flex items-center gap-4 mb-8">
+              <span className="font-['Open_Sans'] font-bold text-[12px] tracking-[2px] uppercase text-[#4A4F4D] shrink-0">Partners & Supporters</span>
+              <div className="flex-1 h-px bg-[#E2E4E1]" />
+            </div>
+            <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                { icon: <Heart className="w-5 h-5 text-[#2F6B3F]" />, question: "I represent a nonprofit", trail: "Digital Compass", href: "/programs/digital-compass" },
+                { icon: <Briefcase className="w-5 h-5 text-[#2F6B3F]" />, question: "I hire or recruit Salesforce talent", trail: "Recruiters & Employers", href: "/partners/recruiters" },
+                { icon: <UserCheck className="w-5 h-5 text-[#2F6B3F]" />, question: "I want to volunteer or mentor", trail: "Volunteer & Mentor", href: "/volunteer" },
+                { icon: <Gift className="w-5 h-5 text-[#2F6B3F]" />, question: "I want to fund access", trail: "Trail Forward Scholarship", href: "/scholarship-application" },
+              ].map(({ icon, question, trail, href }) => (
+                <motion.div key={trail} variants={fadeUpChild}>
+                  <Link href={href} className="group flex flex-col items-center text-center bg-white border border-[#E2E4E1] rounded-xl p-6 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 block h-full">
+                    <div className="w-10 h-10 rounded-full bg-[#E6F3EA] flex items-center justify-center mb-3">{icon}</div>
+                    <div className="font-['Open_Sans'] text-[13px] text-[#8C8882] mb-2">{question}</div>
+                    <div className="font-['Poppins'] font-bold text-[14px] text-[#2F6B3F] group-hover:underline">{trail}</div>
+                  </Link>
+                </motion.div>
+              ))}
+            </motion.div>
           </div>
         </div>
       </section>
@@ -201,37 +341,39 @@ export default function Home() {
       {/* Section 6: For Nonprofits */}
       <section className="bg-gradient-to-br from-[#1E4F5C] to-[#2F6F7E] py-20 px-5 md:px-10">
         <div className="max-w-[1280px] mx-auto">
-          <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#F5A623] mb-4">FOR NONPROFITS</div>
-          <h2 className="font-['Poppins'] font-bold text-[36px] md:text-[44px] text-white mb-6 max-w-2xl">
-            Your mission deserves technology that works.
-          </h2>
-          <p className="font-['Open_Sans'] text-[18px] text-white/75 leading-[1.65] max-w-3xl mb-16">
-            You have the Power of Us grant. You have a team that cares. What you may not have: the expertise to implement Salesforce and keep it running. That's not a failure — it's the gap we exist to close.
-          </p>
+          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#F5A623] mb-4">FOR NONPROFITS</div>
+            <h2 className="font-['Fraunces'] font-bold text-[36px] md:text-[44px] text-white mb-6 max-w-2xl">
+              Your mission deserves technology that works.
+            </h2>
+            <p className="font-['Open_Sans'] text-[18px] text-white/75 leading-[1.65] max-w-3xl mb-16">
+              You have the Power of Us grant. You have a team that cares. What you may not have: the expertise to implement Salesforce and keep it running. That's not a failure — it's the gap we exist to close.
+            </p>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            <div className="bg-white/5 border border-white/10 rounded-xl p-7">
+          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            <motion.div variants={fadeUpChild} className="bg-white/5 border border-white/10 rounded-xl p-7">
               <Database className="w-8 h-8 text-[#7FAFC6] mb-5" />
               <h3 className="font-['Poppins'] font-bold text-[16px] text-white mb-3">You have Salesforce. You're not using it.</h3>
               <p className="font-['Open_Sans'] text-[14px] text-white/70 leading-[1.6]">
                 You invested in the platform. Without implementation expertise, adoption stalls and the grant feels wasted.
               </p>
-            </div>
-            <div className="bg-white/5 border border-white/10 rounded-xl p-7">
+            </motion.div>
+            <motion.div variants={fadeUpChild} className="bg-white/5 border border-white/10 rounded-xl p-7">
               <Users className="w-8 h-8 text-[#7FAFC6] mb-5" />
               <h3 className="font-['Poppins'] font-bold text-[16px] text-white mb-3">Your team is the accidental tech lead.</h3>
               <p className="font-['Open_Sans'] text-[14px] text-white/70 leading-[1.6]">
                 Someone on staff inherited Salesforce without training. They're doing their best, but they need support.
               </p>
-            </div>
-            <div className="bg-white/5 border border-white/10 rounded-xl p-7">
+            </motion.div>
+            <motion.div variants={fadeUpChild} className="bg-white/5 border border-white/10 rounded-xl p-7">
               <DollarSign className="w-8 h-8 text-[#7FAFC6] mb-5" />
               <h3 className="font-['Poppins'] font-bold text-[16px] text-white mb-3">Consulting rates are out of reach.</h3>
               <p className="font-['Open_Sans'] text-[14px] text-white/70 leading-[1.6]">
                 Traditional Salesforce consulting runs $1,000–$3,000/month. Digital Compass starts at $149.
               </p>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           <div style={{ maxWidth: '680px', margin: '0 auto', padding: '48px 0', textAlign: 'center' }}>
             <p style={{ fontFamily: 'Open Sans, sans-serif', fontSize: '16px', color: 'rgba(255,255,255,0.80)', lineHeight: '1.65', marginBottom: '32px' }}>
@@ -255,14 +397,14 @@ export default function Home() {
       {/* Section 7: Founding Team */}
       <section className="bg-[#2A2E2C] py-20 px-5">
         <div className="max-w-[1280px] mx-auto">
-          <div className="text-center mb-12">
+          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-12">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#F5A623] mb-4">CO-FOUNDED IN 2020</div>
-            <h2 className="font-['Poppins'] font-bold text-[36px] text-white">Meet the founding team.</h2>
-          </div>
-          
-          <div className="flex flex-wrap justify-center gap-4">
+            <h2 className="font-['Fraunces'] font-bold text-[36px] text-white">Meet the founding team.</h2>
+          </motion.div>
+
+          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="flex flex-wrap justify-center gap-4">
             {FOUNDERS.map(founder => (
-              <div key={founder.key} className="bg-[#2E3330] border border-white/10 rounded-xl overflow-hidden flex items-center gap-4 p-5 w-full sm:w-[296px]">
+              <motion.div variants={fadeUpChild} key={founder.key} className="bg-[#2E3330] border border-white/10 rounded-xl overflow-hidden flex items-center gap-4 p-5 w-full sm:w-[296px]">
                 <div
                   className="w-[52px] h-[52px] rounded-full shrink-0 flex items-center justify-center"
                   style={{ backgroundColor: founder.accent }}
@@ -276,9 +418,9 @@ export default function Home() {
                     {founder.role}
                   </span>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
           <div className="flex justify-center mt-10">
             <a
               href="/about/team"
@@ -293,15 +435,14 @@ export default function Home() {
       {/* Section 8: Social Proof */}
       <section className="bg-white py-20 px-5 md:px-10">
         <div className="max-w-[1024px] mx-auto">
-          
+
           {/* Hugh's Story Timeline */}
           <div className="bg-[#E6F3EA] border border-[#2F6B3F]/20 rounded-2xl p-6 md:p-10 mb-12">
             <h3 className="font-['Poppins'] font-semibold text-[20px] text-[#1E4A2A] mb-12 text-center md:text-left">Hugh's Journey</h3>
-            
+
             <div className="relative">
-              {/* Connecting line */}
               <div className="absolute top-[28px] left-0 right-0 h-[2px] bg-[#2F6B3F]/25 hidden md:block" />
-              
+
               <div className="grid grid-cols-2 md:grid-cols-6 gap-y-12 md:gap-y-0 relative z-10">
                 {[
                   { label: "16 years", desc: "Truck Driver & Military Vet", bg: "bg-gray-400" },
@@ -319,7 +460,7 @@ export default function Home() {
                 ))}
               </div>
             </div>
-            
+
             <p className="font-['Open_Sans'] italic text-[13px] text-[#4A4F4D] mt-10 text-center md:text-left">
               Hugh Richardson · Solutions Architect at Salesforce · TT Co-Founder & CTO · This is the story Transition Trails was built from.
             </p>
@@ -379,17 +520,16 @@ export default function Home() {
       {/* Section 9.5: Testimonials */}
       <section className="bg-white py-20 px-5 md:px-10">
         <div className="max-w-[1100px] mx-auto">
-          <div className="text-center mb-14">
+          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-14">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">WHAT PEOPLE ARE SAYING</div>
-            <h2 className="font-['Poppins'] font-bold text-[32px] text-[#2A2E2C] mb-4">Real voices. Honest outcomes.</h2>
+            <h2 className="font-['Fraunces'] font-bold text-[32px] text-[#2A2E2C] mb-4">Real voices. Honest outcomes.</h2>
             <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] max-w-[640px] mx-auto">
               These reflections are from our Cohort 0 pilot (Dec. 2025) and our nonprofit network. Cohort 1 is now enrolling.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
-            {/* Nonprofit Partner */}
-            <div className="flex flex-col">
+          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
+            <motion.div variants={fadeUpChild} className="flex flex-col">
               <div className="font-['Poppins'] text-[56px] leading-none mb-2 select-none" style={{ color: "rgba(47,111,126,0.3)" }}>"</div>
               <p className="font-['Poppins'] font-medium italic text-[16px] text-[#2A2E2C] leading-[1.65] mb-5 flex-1">
                 Transition Trails Salesforce Experts go beyond! After working with the team, our productivity and data accuracy soared — and we felt supported every step of the way.
@@ -398,10 +538,9 @@ export default function Home() {
                 <div className="font-['Open_Sans'] font-semibold text-[14px] text-[#2F6F7E]">Hartford Promises</div>
                 <div className="font-['Open_Sans'] text-[12px] text-[#8C8882]">Nonprofit Partner · Digital Compass Member · Hartford, CT</div>
               </div>
-            </div>
+            </motion.div>
 
-            {/* Cohort 0 — learner 1 */}
-            <div className="flex flex-col">
+            <motion.div variants={fadeUpChild} className="flex flex-col">
               <div className="font-['Poppins'] text-[56px] leading-none mb-2 select-none" style={{ color: "rgba(47,107,63,0.25)" }}>"</div>
               <p className="font-['Poppins'] font-medium italic text-[16px] text-[#2A2E2C] leading-[1.65] mb-5 flex-1">
                 The hands-on experience and the team environment were what I valued most. Working on a real project made everything click in a way that self-study never could.
@@ -410,10 +549,9 @@ export default function Home() {
                 <div className="font-['Open_Sans'] font-semibold text-[14px] text-[#2F6B3F]">Cohort 0 Participant</div>
                 <div className="font-['Open_Sans'] text-[12px] text-[#8C8882]">Guided Trail · Dec. 2025 Retrospective</div>
               </div>
-            </div>
+            </motion.div>
 
-            {/* Cohort 0 — learner 2 */}
-            <div className="flex flex-col">
+            <motion.div variants={fadeUpChild} className="flex flex-col">
               <div className="font-['Poppins'] text-[56px] leading-none mb-2 select-none" style={{ color: "rgba(47,107,63,0.25)" }}>"</div>
               <p className="font-['Poppins'] font-medium italic text-[16px] text-[#2A2E2C] leading-[1.65] mb-5 flex-1">
                 This program teaches you how to think like a professional — not just how to pass a test. The coaching and real-world exposure gave me a completely different kind of confidence.
@@ -422,8 +560,8 @@ export default function Home() {
                 <div className="font-['Open_Sans'] font-semibold text-[14px] text-[#2F6B3F]">Cohort 0 Participant</div>
                 <div className="font-['Open_Sans'] text-[12px] text-[#8C8882]">Guided Trail · Dec. 2025 Retrospective</div>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
@@ -431,7 +569,7 @@ export default function Home() {
       <section className="bg-[#2F6B3F] py-16 px-5 md:px-10">
         <div className="max-w-[1024px] mx-auto flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
           <div className="flex-1">
-            <h2 className="font-['Poppins'] font-bold text-[32px] md:text-[40px] text-white mb-2 leading-tight">
+            <h2 className="font-['Fraunces'] font-bold text-[32px] md:text-[40px] text-white mb-2 leading-tight">
               Your trail starts with one real project.
             </h2>
             <p className="font-['Open_Sans'] text-[18px] text-white/80">
