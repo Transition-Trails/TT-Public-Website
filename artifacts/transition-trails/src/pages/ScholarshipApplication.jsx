@@ -154,25 +154,6 @@ export default function ScholarshipApplication() {
         </div>
       </section>
 
-      {/* ── COHORT 1 NOTICE ── */}
-      <section className="bg-white py-16 px-5 md:px-10">
-        <div className="max-w-[1100px] mx-auto">
-          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
-            className="bg-[#FEF3DB] border border-[#F5A623] rounded-xl px-7 py-7">
-            <div className="font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] text-[#D4890A] mb-4">
-              Cohort 1 — Important
-            </div>
-            <p className="font-['Open_Sans'] text-[16px] text-[#2A2E2C] leading-[1.7] mb-6">
-              The Trail Forward Scholarship for Cohort 1 is available to applicants who are already on the Guided Trail waitlist. If you have not yet joined the waitlist, please do that first — then return here to apply.
-            </p>
-            <Link href="/waitlist"
-              className="inline-flex items-center justify-center h-[48px] px-7 rounded-[8px] bg-[#2F6B3F] text-white font-['Poppins'] font-bold text-[14px] hover:bg-[#265a34] transition-colors">
-              Join the Guided Trail Waitlist First
-            </Link>
-          </motion.div>
-        </div>
-      </section>
-
       {/* ── HOW TO APPLY ── */}
       <section className="bg-white py-20 px-5 md:px-10 border-t border-[#E2E4E1]">
         <div className="max-w-[1100px] mx-auto">
