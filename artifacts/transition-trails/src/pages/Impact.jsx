@@ -16,6 +16,9 @@ const phases = [
     title: "Foundation.",
     description: "Before we launched anything publicly, we built the base. Four founders, all working full-time Salesforce careers, spending nights, weekends, and early mornings figuring out what would actually work.",
     items: [
+      "First client: CLYLP — the organization that started everything. We still support them every year.",
+      "Second client: Hartford Promise joined in 2022 — an active partner we continue to support today.",
+      "Third client: Global One Urban Farming came on in March 2026 and became the foundation for how the Digital Compass program was designed.",
       "Testing began in 2022 with small groups — before any public program existed",
       "Developed Guided Trail and ran Cohort 0 in August 2025",
       "Built Foundations Trail from what Cohort 0 revealed",
@@ -140,6 +143,9 @@ export default function Impact() {
                         <div className="flex items-center gap-2"><CheckCircle size={14} stroke="#2F6B3F" /><span className="font-['Open_Sans'] text-[12px] text-[#6B7280]">501(c)(3) certified · EIN 88-2746412</span></div>
                         <div className="flex items-center gap-2"><CheckCircle size={14} stroke="#2F6B3F" /><span className="font-['Open_Sans'] text-[12px] text-[#6B7280]">Founded 2020 · Effective May 15, 2022</span></div>
                         <div className="flex items-center gap-2"><CheckCircle size={14} stroke="#2F6B3F" /><span className="font-['Open_Sans'] text-[12px] text-[#6B7280]">Guided Trail Cohort 0 completed August 2025</span></div>
+                        <div className="flex items-center gap-2"><CheckCircle size={14} stroke="#2F6B3F" /><span className="font-['Open_Sans'] text-[12px] text-[#6B7280]">First client: CLYLP · 2022 · Ongoing</span></div>
+                        <div className="flex items-center gap-2"><CheckCircle size={14} stroke="#2F6B3F" /><span className="font-['Open_Sans'] text-[12px] text-[#6B7280]">Second client: Hartford Promise · 2022 · Ongoing</span></div>
+                        <div className="flex items-center gap-2"><CheckCircle size={14} stroke="#2F6B3F" /><span className="font-['Open_Sans'] text-[12px] text-[#6B7280]">Third client: Global One Urban Farming · March 2026 · Ongoing</span></div>
                       </div>
                     </>
                   ) : (
