@@ -1,7 +1,22 @@
 import { useState, useEffect } from "react";
+import DOMPurify from "dompurify";
+import { env } from "../config/env";
 
-const RSS_URL = "https://transitiontrails.substack.com/feed";
-const API_URL = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(RSS_URL)}`;
+const ALLOWED_TAGS = ['p', 'br', 'strong', 'em', 'a', 'ul', 'ol', 'li', 'blockquote', 'h2', 'h3'];
+const ALLOWED_ATTR = ['href', 'target', 'rel'];
+
+function sanitizeHtml(dirty) {
+  if (!dirty || typeof dirty !== 'string') return '';
+  return DOMPurify.sanitize(dirty, { ALLOWED_TAGS, ALLOWED_ATTR });
+}
+
+function sanitizeText(dirty) {
+  if (!dirty || typeof dirty !== 'string') return '';
+  return DOMPurify.sanitize(dirty, { ALLOWED_TAGS: [], ALLOWED_ATTR: [] });
+}
+
+const RSS_URL = env.substackFeedUrl;
+const API_URL = `${env.rss2jsonUrl}?rss_url=${encodeURIComponent(RSS_URL)}`;
 
 function inferCategory(title, content) {
   const text = (title + " " + content).toLowerCase();
@@ -87,19 +102,22 @@ export function useSubstackFeed() {
               }
             }
           }
+
+          const rawDescription = item.description
+            ? item.description.replace(/<[^>]*>/g, "").slice(0, 200).trim() + "\u2026"
+            : "";
+
           return {
             id: slugify(item.title),
-            title: item.title,
-            excerpt: item.description
-              ? item.description.replace(/<[^>]*>/g, "").slice(0, 200).trim() + "\u2026"
-              : "",
+            title: sanitizeText(item.title),
+            excerpt: sanitizeText(rawDescription),
             category: inferCategory(item.title, item.content || item.description || ""),
-            author: item.author || "Transition Trails",
+            author: sanitizeText(item.author || "Transition Trails"),
             date: item.pubDate ? item.pubDate.split(" ")[0] : "",
             readTime: estimateReadTime(item.content || item.description || ""),
             image,
-            content: item.content || item.description || "",
-            substackUrl: item.link,
+            content: sanitizeHtml(item.content || item.description || ""),
+            substackUrl: sanitizeText(item.link),
           };
         });
 
