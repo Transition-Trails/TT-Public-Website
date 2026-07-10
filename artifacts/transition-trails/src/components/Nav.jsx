@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X, ChevronDown } from "lucide-react";
-import ttLogoWhite from "../assets/TT_Stacked_White_NoTag.png";
+import ttLogoWhite from "../assets/TT_Horizontal_White_600px.png";
 
 function DropItem({ href, label, desc, variant = "default", onClick }) {
   return (
@@ -72,7 +72,7 @@ export function Nav() {
 
         {/* Logo */}
         <Link href="/" onClick={closeMenu} className="z-50 flex items-center shrink-0">
-          <img src={ttLogoWhite} alt="Transition Trails" style={{ height: "46px", width: "auto" }} />
+          <img src={ttLogoWhite} alt="Transition Trails" style={{ height: "40px", width: "auto" }} />
         </Link>
 
         {/* ── Desktop Nav ── */}
