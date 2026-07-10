@@ -1,0 +1,64 @@
+{
+  "explorersTrail": {
+    "status": "launching",
+    "launchDate": "October 1, 2026",
+    "tier": "AWARENESS TIER",
+    "name": "Explorer's Trail",
+    "tagline": "Everyone — any stage of your Salesforce journey. Just starting out or years in.",
+    "price": "$27/mo",
+    "priceNote": "Community Pass · or $1,164/yr Full Membership · Launching October 1, 2026",
+    "highlight": "Community · Skill Building · Monthly Missions",
+    "path": "/programs/explorers-trail",
+    "isFeatured": false,
+    "waitlistOpen": true
+  },
+  "foundationsTrail": {
+    "status": "cohort0",
+    "tier": "ENTRY TIER",
+    "name": "Foundations Trail",
+    "tagline": "You have completed your Salesforce Platform Foundations certification and are working toward your Salesforce Platform Administrator certification.",
+    "price": "$997",
+    "priceNote": "or 3 payments of $367 · Currently in Cohort 0 testing",
+    "highlight": "12 weeks · Real org build · Portfolio",
+    "path": "/programs/foundations-trail",
+    "isFeatured": false,
+    "waitlistOpen": true
+  },
+  "guidedTrail": {
+    "status": "waitlist",
+    "tier": "BRIDGE TIER",
+    "name": "Guided Trail",
+    "tagline": "Salesforce certified and ready to turn it into a career",
+    "price": "$1,497",
+    "priceNote": "or 3 payments of $549 · Trail Forward Scholarship available",
+    "highlight": "Real nonprofit client · 12 weeks · Portfolio",
+    "path": "/programs/guided-trail",
+    "isFeatured": true,
+    "featuredBadge": "MOST POPULAR",
+    "waitlistOpen": true
+  },
+  "trailOfMastery": {
+    "status": "development",
+    "tier": "ADVANCEMENT TIER",
+    "name": "Trail of Mastery",
+    "tagline": "Employed Salesforce professionals ready to advance — Cohort 0 coming H1 2027",
+    "price": "Coming 2027",
+    "priceNote": "Cohort 0 · Applications open soon",
+    "highlight": "Apprenticeship · 5 Tracks · Cohort 0 · Q2 2027",
+    "path": "/programs/trail-of-mastery",
+    "isFeatured": false,
+    "waitlistOpen": true
+  },
+  "digitalCompass": {
+    "status": "live",
+    "tier": "NONPROFIT MEMBERSHIP",
+    "name": "Digital Compass",
+    "tagline": "Nonprofits at any stage of their Salesforce journey",
+    "price": "$149/mo",
+    "priceNote": "$3,490/yr Mid · $7,490/yr Full Partner — annual service contracts",
+    "highlight": "Weekly Office Hours · Project Delivery",
+    "path": "/programs/digital-compass",
+    "isFeatured": false,
+    "waitlistOpen": false
+  }
+}

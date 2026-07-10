@@ -1,0 +1,88 @@
+{
+  "founders": [
+    {
+      "key": "AL",
+      "initials": "AL",
+      "photo": null,
+      "name": "Angela Landrith",
+      "title": "Co-Founder & CEO",
+      "role": "The Visionary",
+      "color": "#2F6B3F",
+      "calendarUrl": "https://calendar.app.google/t1THqhnCWacFyCu2A",
+      "bio": [
+        "Angela brings twenty-two years of corporate product management experience across mortgage, financial services, and technology — and the kind of pattern recognition that comes from watching the same gap appear across every industry she worked in: capable people, blocked by a system that required experience to get experience.",
+        "She left corporate eighteen months ago to commit to Transition Trails full-time. The nonprofit was already running alongside her day job. Once she chose, she chose fully."
+      ],
+      "skills": [
+        "Salesforce Product Management",
+        "Career Progression Coaching",
+        "CRM Business Strategy",
+        "Vision and Roadmapping",
+        "AI Adoption and Usage",
+        "RESOLVE Trainer"
+      ]
+    },
+    {
+      "key": "KB",
+      "initials": "KB",
+      "photo": null,
+      "name": "Kim Barnes",
+      "title": "Co-Founder & COO",
+      "role": "The Builder",
+      "color": "#2F6F7E",
+      "email": "hello@transitiontrails.org",
+      "bio": [
+        "Kim is the person who figures out how the thing actually gets built. Where Angela sees the vision, Kim sees the system required to deliver it — the architecture, the process, the nonprofit technology stack that makes the model scalable.",
+        "She has been part of Transition Trails from the beginning, working alongside Angela through every iteration of what the programs needed to be before they were ready for learners."
+      ],
+      "skills": [
+        "Salesforce Solution Design",
+        "Business Analysis",
+        "Nonprofit Technology",
+        "Salesforce Architectural Practices",
+        "Zapier & Automation",
+        "RESOLVE Trainer"
+      ]
+    },
+    {
+      "key": "HR",
+      "initials": "HR",
+      "photo": null,
+      "name": "Hugh Richardson",
+      "title": "Co-Founder & CTO · Solutions Architect",
+      "role": "The Champion",
+      "color": "#2F6B3F",
+      "bio": [
+        "Hugh is the proof of concept. The first CLYLP project — the one that became the blueprint for Guided Trail — was his. He learned while doing, delivered real work for a real client, and came out the other side with the experience that the job market had been telling him he needed to get first.",
+        "That experience is now what he helps every Guided Trail learner build. He knows exactly what it costs to break in because he paid it himself."
+      ],
+      "skills": [
+        "Solution Design & Architecture",
+        "Security and Sharing Models",
+        "Requirements and Process Mapping",
+        "AI Integration",
+        "Interview Prep & Mentoring",
+        "RESOLVE Trainer"
+      ]
+    },
+    {
+      "key": "KL",
+      "initials": "KL",
+      "photo": null,
+      "name": "Kel Landrith",
+      "title": "Co-Founder & Finance Director",
+      "role": "The Steward",
+      "color": "#7FAFC6",
+      "bio": [
+        "Kel joined Transition Trails to build the foundation that lets everything else stand. When it came time to formalize the nonprofit — navigate the IRS, establish the books, set up the financial infrastructure — Kel brought the nonprofit accounting and compliance experience to do it right.",
+        "He is not a Salesforce practitioner. He is the reason the organization can operate with the integrity that grant funders and partners expect."
+      ],
+      "skills": [
+        "Nonprofit Startup Specialist",
+        "Account and Donation Management",
+        "Financial Stewardship",
+        "Business Development"
+      ]
+    }
+  ]
+}

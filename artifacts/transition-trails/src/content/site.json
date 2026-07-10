@@ -1,0 +1,29 @@
+{
+  "actionBanner": {
+    "heading": "Your trail starts with one real project.",
+    "body": "Explorer's Trail opens October 1. Guided Trail Cohort 1 waitlist is now open — 8 to 12 seats, application required.",
+    "ctaText": "Join the Waitlist",
+    "ctaPath": "/waitlist"
+  },
+  "trustStrip": [
+    { "label": "501(c)(3) Nonprofit", "detail": "EIN 88-2746412" },
+    { "label": "Dallas, TX", "detail": "Founded 2020" },
+    { "label": "Salesforce Ecosystem", "detail": "Platform certified" },
+    { "label": "Dual Impact Model", "detail": "Learners + Nonprofits" },
+    { "label": "Real Project Experience", "detail": "Not simulations" }
+  ],
+  "nav": {
+    "joinWaitlistText": "Join the Waitlist",
+    "donateText": "Donate"
+  },
+  "footer": {
+    "mission": "Empowering nonprofits and building digital careers — Together.",
+    "address": "1228 Hollywood Ave",
+    "city": "Dallas, TX 75208",
+    "email": "hello@transitiontrails.org"
+  },
+  "contact": {
+    "generalEmail": "hello@transitiontrails.org",
+    "mailingAddress": "1228 Hollywood Ave, Dallas, TX 75208"
+  }
+}

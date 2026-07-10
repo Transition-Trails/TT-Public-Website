@@ -1,0 +1,52 @@
+{
+  "hero": {
+    "eyebrow": "REAL EXPERIENCE. REAL IMPACT.",
+    "headline": "Every Career Has a Trail.",
+    "subheadline": "Transition Trails connects aspiring Salesforce professionals with real nonprofit client work — and connects nonprofits with the expertise they need to thrive.",
+    "stats": [
+      { "value": "3", "label": "Nonprofit clients served" },
+      { "value": "2025", "label": "Guided Trail Cohort 0" },
+      { "value": "501(c)(3)", "label": "Tax-exempt nonprofit" }
+    ]
+  },
+  "experienceGap": {
+    "eyebrow": "THE PROBLEM WE SOLVE",
+    "heading": "The experience gap is real. We close it.",
+    "workforceGap": {
+      "title": "The Workforce Gap",
+      "body": "Thousands of career changers earn Salesforce certifications every year, but encounter a wall: entry-level jobs require 1-2 years of real experience. Without a first job, they can't get experience; without experience, they can't get the first job. The trail stops abruptly."
+    },
+    "capacityGap": {
+      "title": "The Capacity Gap",
+      "body": "Nonprofits are given powerful software licenses for free, but lack the budgets to hire implementation partners. Without proper configuration, the software becomes a burden rather than an accelerator. Their trail is overgrown."
+    },
+    "bridge": {
+      "title": "The Bridge",
+      "body": "We connect these two needs. By providing supervised, real-world project environments, learners gain verifiable experience while nonprofits receive custom implementations."
+    }
+  },
+  "nonprofitSection": {
+    "heading": "Your mission deserves technology that works.",
+    "body": "You have the Power of Us grant. You have a team that cares. What you may not have: the expertise to implement Salesforce and keep it running. That's not a failure — it's the gap we exist to close.",
+    "problems": [
+      {
+        "title": "You have Salesforce. You're not using it.",
+        "body": "You invested in the platform. Without implementation expertise, adoption stalls and the grant feels wasted."
+      },
+      {
+        "title": "Your team is the accidental admin.",
+        "body": "Someone on staff inherited Salesforce without training. They're doing their best, but they need support."
+      },
+      {
+        "title": "Consulting rates are out of reach.",
+        "body": "Traditional Salesforce consulting runs $1,000–$3,000/month. Digital Compass starts at $149."
+      }
+    ],
+    "ctaHeading": "Digital Compass is how we support nonprofits.",
+    "ctaBody": "Digital Compass is our nonprofit Salesforce membership — weekly office hours, project delivery, and expert guidance from $149/month. No consulting retainer. No long-term contract.",
+    "primaryCta": "Book a Free Assessment",
+    "primaryCtaPath": "/nonprofit-assessment",
+    "secondaryCta": "Learn About Digital Compass",
+    "secondaryCtaPath": "/programs/digital-compass"
+  }
+}

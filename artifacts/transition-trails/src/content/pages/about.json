@@ -1,0 +1,32 @@
+{
+  "hero": {
+    "eyebrow": "OUR STORY",
+    "headline": "Built by people who know what it costs to break in.",
+    "subheadline": "Four founders. One mission. Built from a phone call that turned into a proof of concept — and a proof of concept that became a nonprofit."
+  },
+  "originStory": {
+    "heading": "The Origin Story",
+    "paragraphs": [
+      "It started with a phone call. A college friend of Angela's reached out about the nonprofit he served on the board — CLYLP — and they wanted to implement Salesforce NPSP. The ask was simple. The timing turned out to be everything.",
+      "Kim and Angela had already been talking about the gap they kept seeing in the Salesforce ecosystem — people with certifications but no experience, and nonprofits with powerful software they couldn't fully use. Hugh was in that exact position. Certified, capable, and stuck behind the experience wall.",
+      "So they put him on the project. Hugh learned while doing — working through the implementation, solving real problems for a real client, and delivering his first Salesforce project to CLYLP. Along the way, he automated an intensive annual process that the organization had been running manually. Hugh now had the experience he needed. And the three of them had proof that the model worked.",
+      "When it came time to make it official, Kel joined to build the foundation. With nonprofit accounting and IRS experience, Kel established Transition Trails as a 501(c)(3) — handling the books, records, and compliance infrastructure that would let the mission scale responsibly.",
+      "That first project with CLYLP became the blueprint. Real client. Real stakes. Real delivery. We have been building on that model ever since."
+    ],
+    "timeline": [
+      { "year": "2019", "event": "First call. CLYLP reaches out about Salesforce NPSP implementation." },
+      { "year": "2019–2022", "event": "First project delivered. Hugh builds real experience. The model proves itself." },
+      { "year": "2022", "event": "Transition Trails incorporated as a 501(c)(3). Kel establishes the legal and financial foundation." },
+      { "year": "2022", "event": "Hartford Promise becomes our second client. Testing begins on how to best deliver our program." },
+      { "year": "2025", "event": "Guided Trail Cohort 0 completes. The program is ready." },
+      { "year": "2026", "event": "Global One Urban Farming becomes our third client. Digital Compass launches as our nonprofit membership program." }
+    ]
+  },
+  "mission": {
+    "heading": "Our Mission.",
+    "statement": "To assist people in transitioning to the digital economy through education, mentoring and training. Our primary focus is within the Salesforce ecosystem, providing a system of online and real world education and experience.",
+    "ein": "EIN 88-2746412",
+    "status": "501(c)(3) Nonprofit",
+    "effective": "Effective May 15, 2022"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "testimonials": [
+    {
+      "id": "hartford-promise",
+      "quote": "Transition Trails Salesforce Experts go beyond! After working with the team, our productivity and data accuracy soared — and we felt supported every step of the way.",
+      "name": "Hartford Promise",
+      "attribution": "Nonprofit Partner · Digital Compass Member · Hartford, CT",
+      "type": "nonprofit"
+    },
+    {
+      "id": "cohort0-a",
+      "quote": "The hands-on experience and the team environment were what I valued most. Working on a real project made everything click in a way that self-study never could.",
+      "name": "Cohort 0 Participant A",
+      "attribution": "Guided Trail · Dec. 2025 Retrospective",
+      "type": "learner"
+    },
+    {
+      "id": "cohort0-b",
+      "quote": "This program teaches you how to think like a professional — not just how to pass a test. The coaching and real-world exposure gave me a completely different kind of confidence.",
+      "name": "Cohort 0 Participant B",
+      "attribution": "Guided Trail · Dec. 2025 Retrospective",
+      "type": "learner"
+    }
+  ]
+}
