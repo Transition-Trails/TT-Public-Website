@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "wouter";
-import wordmark from "../assets/TT_Stacked_Navy_NoTag.png"; // replace with Wordmark.jpg once uploaded
+import wordmark from "../assets/Wordmark.jpg";
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar, Clock, Loader } from "lucide-react";
 import { CATEGORIES } from "../data/blogPosts";
