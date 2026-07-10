@@ -161,6 +161,7 @@ export function Nav() {
               <div id="about-menu" role="menu" aria-label="About" className={`${dropdownBase} left-0 w-[240px]`}>
                 <DropItem href="/about" label="Our Story" onClick={() => setAboutOpen(false)} />
                 <DropItem href="/about/team" label="Meet the Team" onClick={() => setAboutOpen(false)} />
+                <DropItem href="/impact" label="Vision & Impact" onClick={() => setAboutOpen(false)} />
               </div>
             )}
           </div>
@@ -266,6 +267,7 @@ export function Nav() {
             <div className={`flex flex-col pl-4 overflow-hidden transition-all duration-300 ${openDropdown === "about" ? "mt-4 max-h-[200px]" : "max-h-0"}`}>
               <Link href="/about" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">Our Story</Link>
               <Link href="/about/team" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">Meet the Team</Link>
+              <Link href="/impact" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">Vision & Impact</Link>
             </div>
           </div>
 
