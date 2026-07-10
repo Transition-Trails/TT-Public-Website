@@ -408,7 +408,7 @@ export default function Home() {
             </motion.div>
             <motion.div variants={fadeUpChild} className="bg-white/5 border border-white/10 rounded-xl p-7">
               <Users className="w-8 h-8 text-[#7FAFC6] mb-5" />
-              <h3 className="font-['Poppins'] font-bold text-[16px] text-white mb-3">Your team is the accidental tech lead.</h3>
+              <h3 className="font-['Poppins'] font-bold text-[16px] text-white mb-3">Your team is the accidental admin.</h3>
               <p className="font-['Open_Sans'] text-[14px] text-white/70 leading-[1.6]">
                 Someone on staff inherited Salesforce without training. They're doing their best, but they need support.
               </p>

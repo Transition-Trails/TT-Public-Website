@@ -147,7 +147,7 @@ export function Nav() {
           </div>
 
           {/* About ↓ */}
-          <div className="relative h-full flex items-center" onBlur={blurHandler(setAboutOpen)}>
+          <div className="relative h-full flex items-center" tabIndex={0} onBlur={blurHandler(setAboutOpen)}>
             <button className={`${desktopNavClass(isAbout)} px-3`}
               aria-haspopup="true" aria-expanded={aboutOpen} aria-controls="about-menu"
               onClick={() => { setAboutOpen(v => !v); setProgramsOpen(false); setNonprofitOpen(false); setInvolvedOpen(false); }}
