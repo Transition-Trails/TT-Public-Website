@@ -1,0 +1,24 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/artifacts/transition-trails"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "America/Chicago"
+    open-pull-requests-limit: 5
+    versioning-strategy: increase-if-necessary
+    ignore:
+      # Don't auto-update major versions - review manually
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+    labels:
+      - "dependencies"
+      - "automated"
+    commit-message:
+      prefix: "chore(deps)"
+      include: "scope"
+    # 7-day minimum age before accepting - defense against supply chain attacks
+    # Note: Dependabot doesn't have minimumReleaseAge natively, but reviewing
+    # PRs after a week achieves the same effect. Add Renovate for this feature.
