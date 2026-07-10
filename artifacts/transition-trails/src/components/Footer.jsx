@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { LINKS } from "../constants/links";
-import ttLogoWhite from "../assets/TT_Stacked_White_NoTag.png";
+import ttLogoWhite from "../assets/TT_Horizontal_White_600px.png";
 
 export function Footer() {
   return (
@@ -8,7 +8,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12 mb-16">
         <div className="min-w-[280px] max-w-[300px]">
           <Link href="/" className="block">
-            <img src={ttLogoWhite} alt="Transition Trails" className="h-20 w-auto mb-6 object-contain" />
+            <img src={ttLogoWhite} alt="Transition Trails" className="h-14 w-auto mb-6 object-contain" />
           </Link>
           <p className="font-['Open_Sans'] text-[13px] text-white/65">
             Empowering nonprofits and building digital careers — Together.
