@@ -79,21 +79,6 @@ export default function NonprofitAssessment() {
             ))}
           </div>
 
-          {/* Attribution */}
-          <div
-            className="font-['Open_Sans'] text-[13px] italic"
-            style={{ color: "rgba(255,255,255,0.55)" }}
-          >
-            Digital Compass is led by{" "}
-            <span className="font-semibold not-italic text-white/80">Kim Barnes</span>, Co-Founder &amp;
-            COO ·{" "}
-            <a
-              href="mailto:kim@transitiontrails.org"
-              className="text-white/70 hover:text-white underline underline-offset-2"
-            >
-              kim@transitiontrails.org
-            </a>
-          </div>
         </div>
       </section>
 
@@ -104,8 +89,7 @@ export default function NonprofitAssessment() {
             FREE SALESFORCE ASSESSMENT
           </div>
           <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] text-center mb-8 max-w-xl mx-auto">
-            Tell us about your organization and your current Salesforce situation. Kim or a member
-            of the TT team will be in touch within 2 business days to schedule your session.
+            Tell us about your organization and your current Salesforce situation. A member of the TT team will be in touch within 2 business days to schedule your session.
           </p>
 
           <iframe
@@ -149,7 +133,7 @@ export default function NonprofitAssessment() {
                 {
                   step: "2",
                   title: "Schedule your session",
-                  desc: "Kim or a TT team member reaches out to book your free assessment call (up to 1 hour).",
+                  desc: "A member of the TT team will reach out to book your free assessment call (up to 1 hour).",
                 },
                 {
                   step: "3",
