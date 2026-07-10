@@ -185,3 +185,15 @@
     font-family: 'Poppins', sans-serif;
   }
 }
+
+/* Accessible focus rings — never hide focus for keyboard users */
+:focus-visible {
+  outline: 2px solid #2F6B3F;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Remove outline only for pointer/mouse users */
+:focus:not(:focus-visible) {
+  outline: none;
+}

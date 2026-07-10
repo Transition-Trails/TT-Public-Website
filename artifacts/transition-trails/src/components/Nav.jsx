@@ -87,7 +87,7 @@ export function Nav() {
           {/* Programs ↓ */}
           <div className="relative h-full flex items-center" onBlur={blurHandler(setProgramsOpen)}>
             <button className={`${desktopNavClass(isPrograms)} px-3`}
-              aria-haspopup="true" aria-expanded={programsOpen} aria-controls="programs-menu"
+              aria-haspopup="true" aria-expanded={programsOpen} aria-controls="programs-menu" aria-label="Programs menu"
               onClick={() => { setProgramsOpen(v => !v); setNonprofitOpen(false); setInvolvedOpen(false); setAboutOpen(false); }}
               onKeyDown={(e) => { if (e.key === "Escape") setProgramsOpen(false); }}>
               Programs
@@ -111,7 +111,7 @@ export function Nav() {
           {/* For Nonprofits ↓ */}
           <div className="relative h-full flex items-center" onBlur={blurHandler(setNonprofitOpen)}>
             <button className={`${desktopNavClass(isNonprofit)} px-3`}
-              aria-haspopup="true" aria-expanded={nonprofitOpen} aria-controls="nonprofit-menu"
+              aria-haspopup="true" aria-expanded={nonprofitOpen} aria-controls="nonprofit-menu" aria-label="For Nonprofits menu"
               onClick={() => { setNonprofitOpen(v => !v); setProgramsOpen(false); setInvolvedOpen(false); setAboutOpen(false); }}
               onKeyDown={(e) => { if (e.key === "Escape") setNonprofitOpen(false); }}>
               For Nonprofits
@@ -130,7 +130,7 @@ export function Nav() {
           {/* Get Involved ↓ */}
           <div className="relative h-full flex items-center" onBlur={blurHandler(setInvolvedOpen)}>
             <button className={`${desktopNavClass(isInvolved)} px-3`}
-              aria-haspopup="true" aria-expanded={involvedOpen} aria-controls="involved-menu"
+              aria-haspopup="true" aria-expanded={involvedOpen} aria-controls="involved-menu" aria-label="Get Involved menu"
               onClick={() => { setInvolvedOpen(v => !v); setProgramsOpen(false); setNonprofitOpen(false); setAboutOpen(false); }}
               onKeyDown={(e) => { if (e.key === "Escape") setInvolvedOpen(false); }}>
               Get Involved
@@ -151,7 +151,7 @@ export function Nav() {
           {/* About ↓ */}
           <div className="relative h-full flex items-center" onBlur={blurHandler(setAboutOpen)}>
             <button className={`${desktopNavClass(isAbout)} px-3`}
-              aria-haspopup="true" aria-expanded={aboutOpen} aria-controls="about-menu"
+              aria-haspopup="true" aria-expanded={aboutOpen} aria-controls="about-menu" aria-label="About menu"
               onClick={() => { setAboutOpen(v => !v); setProgramsOpen(false); setNonprofitOpen(false); setInvolvedOpen(false); }}
               onKeyDown={(e) => { if (e.key === "Escape") setAboutOpen(false); }}>
               About
@@ -188,10 +188,10 @@ export function Nav() {
         <button
           className="lg:hidden text-white p-2 -mr-2 z-50 relative focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 rounded"
           onClick={() => setMobile(!mobile)}
-          aria-label={mobile ? "Close menu" : "Open menu"}
+          aria-label={mobile ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={mobile}
           aria-controls="mobile-menu">
-          {mobile ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          {mobile ? <X className="w-6 h-6" aria-hidden="true" /> : <Menu className="w-6 h-6" aria-hidden="true" />}
         </button>
       </div>
 

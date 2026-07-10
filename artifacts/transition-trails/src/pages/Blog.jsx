@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { ArrowRight, Calendar, Clock, Loader } from "lucide-react";
 import { CATEGORIES } from "../data/blogPosts";
 import { useSubstackFeed } from "../hooks/useSubstackFeed";
+import { FeedErrorBoundary } from "../components/ErrorBoundary";
+import Seo from "../components/Seo";
 
 const fadeUp = { hidden: { opacity: 0, y: 24 }, show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } } };
 const stagger = { show: { transition: { staggerChildren: 0.09 } } };
@@ -26,6 +28,11 @@ export default function Blog() {
 
   return (
     <div className="flex flex-col min-h-screen">
+      <Seo
+        title="The Trail Journal"
+        description="Salesforce career advice, nonprofit technology, program updates, and lessons from building Transition Trails."
+        path="/blog"
+      />
       {/* HERO */}
       <section className="bg-[#2A2E2C] py-20 px-8">
         <motion.div className="max-w-7xl mx-auto" initial="hidden" animate="show" variants={stagger}>
@@ -82,6 +89,7 @@ export default function Blog() {
 
           {/* Posts grid */}
           {!loading && !error && sorted.length > 0 && (
+            <FeedErrorBoundary>
             <motion.div
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
               initial="hidden"
@@ -97,6 +105,10 @@ export default function Blog() {
                           src={post.image}
                           alt={post.title}
                           className="w-full h-48 object-cover"
+                          loading="lazy"
+                          decoding="async"
+                          width="600"
+                          height="192"
                           onError={(e) => {
                             e.currentTarget.parentElement.innerHTML = `<div class="w-full h-48 bg-[#FAFAF7] flex items-center justify-center"><img src="${wordmark}" alt="Transition Trails" class="h-10 w-auto object-contain opacity-50" /></div>`;
                           }}
@@ -131,6 +143,7 @@ export default function Blog() {
                 </motion.div>
               ))}
             </motion.div>
+            </FeedErrorBoundary>
           )}
         </div>
       </section>

@@ -4,8 +4,10 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { LazyMotion, domAnimation, MotionConfig } from "framer-motion";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { ErrorBoundary } from "./components/ErrorBoundary";
 
 import ScrollToTop from "./components/ScrollToTop";
+import RouteAnnouncer from "./components/RouteAnnouncer";
 
 // Layout — loaded eagerly (needed on every page immediately)
 import { Nav } from "./components/Nav";
@@ -89,7 +91,7 @@ function Router() {
         <Route path="/consulting" component={Consulting} />
         <Route path="/impact" component={Impact} />
 
-        {/* Legacy URL redirects from old Salesforce Experience Cloud site */}
+        {/* Legacy URL redirects */}
         <Route path="/contact-us">
           <Redirect to="/contact" />
         </Route>
@@ -116,16 +118,29 @@ function App() {
       <TooltipProvider>
         <MotionConfig reducedMotion="user">
           <LazyMotion features={domAnimation}>
-            <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
-              <ScrollToTop />
-              <div className="flex flex-col min-h-screen">
-                <Nav />
-                <main className="flex-1 flex flex-col">
-                  <Router />
-                </main>
-                <Footer />
-              </div>
-            </WouterRouter>
+            <ErrorBoundary
+              title="Something went wrong"
+              description="We're sorry about that. Try refreshing the page or heading back home."
+            >
+              <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+                <ScrollToTop />
+                <RouteAnnouncer />
+                {/* Skip to main content — keyboard / screen reader accessibility */}
+                <a
+                  href="#main-content"
+                  className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[9999] focus:bg-[#2F6B3F] focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:font-['Open_Sans'] focus:font-bold focus:text-[14px]"
+                >
+                  Skip to main content
+                </a>
+                <div className="flex flex-col min-h-screen">
+                  <Nav />
+                  <main id="main-content" className="flex-1 flex flex-col" tabIndex={-1}>
+                    <Router />
+                  </main>
+                  <Footer />
+                </div>
+              </WouterRouter>
+            </ErrorBoundary>
             <Toaster />
           </LazyMotion>
         </MotionConfig>
