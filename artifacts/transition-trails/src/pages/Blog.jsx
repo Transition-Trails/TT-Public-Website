@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "wouter";
+import wordmark from "../assets/TT_Stacked_Navy_NoTag.png"; // replace with Wordmark.jpg once uploaded
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar, Clock, Loader } from "lucide-react";
 import { CATEGORIES } from "../data/blogPosts";
@@ -91,14 +92,21 @@ export default function Blog() {
                 <motion.div key={post.id} variants={fadeUp}>
                   <Link href={`/blog/${post.id}`}>
                     <div className="bg-white border border-[#E2E4E1] rounded-2xl overflow-hidden shadow-sm hover:shadow-md hover:border-[#2F6B3F] transition-all duration-200 cursor-pointer h-full flex flex-col">
-                      {post.image && (
+                      <div className="w-full h-48 bg-[#FAFAF7] flex items-center justify-center overflow-hidden relative">
+                        {post.image && (
+                          <img
+                            src={post.image}
+                            alt={post.title}
+                            className="absolute inset-0 w-full h-full object-cover"
+                            onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                          />
+                        )}
                         <img
-                          src={post.image}
-                          alt={post.title}
-                          className="w-full h-48 object-cover"
-                          onError={(e) => { e.target.style.display = 'none'; }}
+                          src={wordmark}
+                          alt="Transition Trails"
+                          className="h-12 w-auto object-contain opacity-50 relative z-0"
                         />
-                      )}
+                      </div>
                       <div className="p-7 flex flex-col flex-1">
                         <div className="flex items-center gap-2 mb-4">
                           <span className="text-[11px] font-semibold uppercase tracking-[0.1em] bg-[#EBF3EE] text-[#2F6B3F] px-3 py-1 rounded-full">
