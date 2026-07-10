@@ -6,17 +6,17 @@ export function Footer() {
   return (
     <footer className="bg-[#2F6F7E] pt-16 px-5 md:px-10 mt-auto">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12 mb-16">
-        <div className="max-w-xs">
-          <Link href="/" className="block mb-4">
-            <img src={ttLogoWhite} alt="Transition Trails" style={{ height: "48px", width: "auto" }} />
+        <div className="min-w-[280px] max-w-[300px]">
+          <Link href="/" className="block">
+            <img src={ttLogoWhite} alt="Transition Trails" className="h-20 w-auto mb-6 object-contain" />
           </Link>
-          <p className="font-['Open_Sans'] text-sm text-white/70">
+          <p className="font-['Open_Sans'] text-[13px] text-white/65">
             Empowering nonprofits and building digital careers — Together.
           </p>
-          <p className="font-['Open_Sans'] text-[12px] mt-2" style={{ color: "rgba(255,255,255,0.45)" }}>
+          <p className="font-['Open_Sans'] text-[13px] mt-2 mb-4 text-white/65">
             To assist people in transitioning to the digital economy through education, mentoring and training. Our primary focus is within the Salesforce ecosystem, providing a system of online and real world education and experience.
           </p>
-          <address className="font-['Open_Sans'] text-[12px] not-italic mt-3" style={{ color: "rgba(255,255,255,0.4)" }}>
+          <address className="font-['Open_Sans'] text-[12px] not-italic" style={{ color: "rgba(255,255,255,0.4)" }}>
             1228 Hollywood Ave<br />
             Dallas, TX 75208
           </address>
