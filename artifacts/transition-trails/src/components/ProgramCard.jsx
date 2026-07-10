@@ -2,62 +2,67 @@ import { CTAButton } from "./CTAButton";
 
 export function ProgramCard({ program, height = "standard" }) {
   const isFeatured = height === "featured";
-  const heightClass = isFeatured ? "h-[420px]" : "h-[380px]";
-  const wrapperClass = `w-[232px] ${heightClass} bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden flex flex-col`;
-  const borderClass = isFeatured ? "border-2 border-[#1E4A2A]" : "border border-[#E2E4E1]";
+  const heightClass = isFeatured ? "h-[460px]" : "h-[420px]";
+  const borderClass = isFeatured ? "border-2 border-[#2F6B3F]" : "border border-[#E2E4E1]";
 
   return (
-    <div className={`${wrapperClass} ${borderClass}`}>
+    <div className={`w-[240px] ${heightClass} bg-white rounded-2xl ${borderClass} shadow-sm hover:shadow-md transition-shadow flex flex-col overflow-hidden relative`}>
+
+      {/* 4px top accent bar */}
+      <div className="h-1 w-full shrink-0" style={{ backgroundColor: program.accent }} />
+
+      {/* MOST POPULAR badge */}
       {isFeatured && (
         <div className="absolute top-[5px] right-0 bg-[#F5A623] text-[#2A2E2C] text-[10px] font-bold font-['Poppins'] px-2 py-1 rounded-bl-lg">
           MOST POPULAR
         </div>
       )}
 
-      <div className="p-5 flex flex-col flex-grow">
+      {/* Card body */}
+      <div className="p-6 flex flex-col flex-1 gap-4">
 
-        {/* Top section — grows to fill available space */}
-        <div className="text-[10px] uppercase font-['Open_Sans'] font-semibold tracking-[2px] text-[#4A4F4D] mb-2">
+        {/* a) Tier label */}
+        <div className="text-[10px] font-semibold uppercase tracking-[0.12em] text-[#6B7280]">
           {program.tier}
         </div>
-        <h3 className="font-['Poppins'] font-bold text-[17px] text-[#2A2E2C] leading-tight mb-1">
+
+        {/* b) Program name */}
+        <h3 className="font-['Fraunces'] font-bold text-[20px] text-[#2A2E2C] leading-tight -mt-2">
           {program.name}
         </h3>
-        <p className="text-[12px] font-['Open_Sans'] italic text-[#4A4F4D] flex-1 min-h-[80px]">
+
+        {/* c) Description */}
+        <p className="font-['Open_Sans'] text-[13px] text-[#6B7280] italic leading-relaxed min-h-[60px] flex-none -mt-2">
           {program.whoFor}
         </p>
 
-        {/* Divider — consistent position across all cards */}
-        <div className="h-px w-full bg-[#E2E4E1] my-2" />
+        {/* Spacer — pushes price block to consistent position across all cards */}
+        <div className="flex-1" />
 
-        {/* Price block */}
-        <div className="mb-2">
-          <div className="font-['Poppins'] font-bold text-[24px] text-[#2A2E2C]">
+        {/* d) Price block */}
+        <div className="flex-none">
+          <div className="font-['Fraunces'] font-bold text-[28px] text-[#2A2E2C] leading-none">
             {program.price}
           </div>
-          <div className="text-[11px] font-['Open_Sans'] text-[#4A4F4D]">
+          <div className="font-['Open_Sans'] text-[11px] text-[#6B7280] mt-1 leading-snug">
             {program.priceNote}
           </div>
         </div>
 
-        {/* Divider */}
-        <div className="h-px w-full bg-[#E2E4E1] my-2" />
-
-        {/* Highlight tag + CTA */}
-        <div className="flex flex-col gap-3">
-          <div className="self-start px-2 py-1 bg-[#E6F3EA] text-[#2F6B3F] text-[10px] font-['Open_Sans'] font-semibold rounded-full">
-            {program.highlight}
-          </div>
-
-          <CTAButton
-            href={program.ctaHref}
-            variant={program.ctaAmber ? "amber" : "dark"}
-            className={!program.ctaAmber ? "!bg-[#2F6B3F] hover:!bg-[#1E4A2A] !text-white !h-10 rounded-md whitespace-nowrap" : "!h-10 rounded-md whitespace-nowrap"}
-            external={program.ctaHref.startsWith("http")}
-          >
-            {program.cta}
-          </CTAButton>
+        {/* e) Highlight pill */}
+        <div className="inline-flex self-start bg-[#EBF3EE] text-[#2F6B3F] text-[11px] font-medium px-3 py-1 rounded-full flex-none">
+          {program.highlight}
         </div>
+
+        {/* f) CTA button */}
+        <CTAButton
+          href={program.ctaHref}
+          variant={program.ctaAmber ? "amber" : "dark"}
+          className={!program.ctaAmber ? "!bg-[#2F6B3F] hover:!bg-[#1E4A2A] !text-white rounded-md whitespace-nowrap w-full" : "rounded-md whitespace-nowrap w-full"}
+          external={program.ctaHref.startsWith("http")}
+        >
+          {program.cta}
+        </CTAButton>
 
       </div>
     </div>

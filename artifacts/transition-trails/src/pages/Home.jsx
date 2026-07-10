@@ -363,25 +363,6 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mt-8 bg-[#E6F3EA] border border-[#2F6B3F]/20 rounded-xl p-6 flex flex-col lg:flex-row items-center gap-6 lg:gap-10">
-            <div className="font-['Poppins'] font-semibold text-[15px] text-[#1E4A2A] shrink-0 text-center lg:text-left">
-              Not sure which trail is yours?
-            </div>
-            <div className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] text-center lg:text-left hidden md:block">
-              No cert yet → Explorer's Trail <span className="mx-2 text-[#2F6B3F]">•</span>
-              Working toward cert → Foundations Trail <span className="mx-2 text-[#2F6B3F]">•</span>
-              Certified, not hired → Guided Trail <span className="mx-2 text-[#2F6B3F]">•</span>
-              Employed admin → Trail of Mastery <span className="mx-2 text-[#2F6B3F]">•</span>
-              Nonprofit org → Digital Compass
-            </div>
-            <div className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] text-center lg:text-left md:hidden flex flex-col gap-2">
-              <span>No cert yet → Explorer's Trail</span>
-              <span>Working toward cert → Foundations Trail</span>
-              <span>Certified, not hired → Guided Trail</span>
-              <span>Employed admin → Trail of Mastery</span>
-              <span>Nonprofit org → Digital Compass</span>
-            </div>
-          </div>
         </div>
       </section>
 
