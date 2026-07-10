@@ -1,5 +1,10 @@
 import { Link } from "wouter";
+import { motion } from "framer-motion";
 import { PageMeta } from "../components/PageMeta";
+import { LINKS } from "../constants/links";
+
+const fadeUp = { hidden: { opacity: 0, y: 24 }, show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } } };
+const stagger = { hidden: {}, show: { transition: { staggerChildren: 0.1 } } };
 
 const FOUNDERS = [
   {
@@ -9,21 +14,18 @@ const FOUNDERS = [
     role: "The Visionary",
     color: "#2F6B3F",
     initials: "AL",
+    photo: null,
     bio: [
       "Angela founded Transition Trails after watching talented people get locked out of Salesforce careers not because they lacked ability, but because they lacked access to the right experience. As CEO, she leads program strategy, partner relationships, and the vision for what Transition Trails can become.",
       "She brings deep expertise in Salesforce product management, career development, and building systems that actually serve the people using them. Angela believes the gap between certification and employment is a design problem — and Transition Trails is the solution she wished existed when she was navigating her own career pivot.",
     ],
     skills: [
       "Salesforce Product Management",
-      "Career Progression",
+      "Career Progression Coaching",
       "CRM Business Strategy",
-      "Change Management",
       "Vision and Roadmapping",
-      "Platform Adoption",
-      "Mentoring and Coaching",
-      "RESOLVE Trainer",
       "AI Adoption and Usage",
-      "Requirements and Process Mapping",
+      "RESOLVE Trainer",
     ],
     link: {
       href: "https://calendar.app.google/t1THqhnCWacFyCu2A",
@@ -38,20 +40,18 @@ const FOUNDERS = [
     role: "The Builder",
     color: "#2F6F7E",
     initials: "KB",
+    photo: null,
     bio: [
       "Kim is the operational backbone of Transition Trails. As COO, she leads the Digital Compass program, manages partner relationships with nonprofit clients, and ensures that every learner and organization Transition Trails serves receives a consistently excellent experience.",
       "Kim brings deep expertise in Salesforce solution design and nonprofit technology, with a particular focus on making complex systems work for the people who depend on them. She is the architect of many of Transition Trails' internal processes — and the reason things actually get done.",
     ],
     skills: [
       "Salesforce Solution Design",
-      "Salesforce Architectural Practices",
       "Business Analysis",
       "Nonprofit Technology",
-      "Notion",
-      "ChatGPT",
-      "Zapier",
+      "Salesforce Architectural Practices",
+      "Zapier & Automation",
       "RESOLVE Trainer",
-      "Salesforce Troubleshooting",
     ],
     link: {
       href: "mailto:hello@transitiontrails.org",
@@ -64,22 +64,19 @@ const FOUNDERS = [
     name: "Hugh Richardson",
     title: "Co-Founder & CTO · Solutions Architect",
     role: "The Champion",
-    color: "#2A5C3F",
+    color: "#2F6B3F",
     initials: "HR",
+    photo: null,
     bio: [
       "Hugh is Transition Trails' proof of concept. He made the pivot himself — from a non-technical career into Salesforce — and now serves as CTO and Solutions Architect for Transition Trails' technology infrastructure. He built the Trail OS platform, oversees the DevOps pipeline, and brings the technical credibility that makes Transition Trails' programs defensible to employers.",
       "Hugh coaches from lived experience. When he tells a learner that the path from certification to employment is real and navigable, he means it — because he walked it.",
     ],
     skills: [
-      "Solution Design",
+      "Solution Design & Architecture",
+      "Security and Sharing Models",
       "Requirements and Process Mapping",
-      "Security and Sharing",
-      "Architectural Best Practices",
       "AI Integration",
-      "Troubleshooting",
-      "Resume Writing",
-      "Interview Prep",
-      "Mentoring and Coaching",
+      "Interview Prep & Mentoring",
       "RESOLVE Trainer",
     ],
     link: null,
@@ -91,6 +88,7 @@ const FOUNDERS = [
     role: "The Steward",
     color: "#7FAFC6",
     initials: "KL",
+    photo: null,
     bio: [
       "Kel keeps Transition Trails financially grounded and mission-focused. As Finance Director, he oversees financial stewardship, nonprofit compliance, and business development — ensuring that every dollar Transition Trails spends is working toward the mission.",
       "He brings specialist expertise in nonprofit startup operations, account and donation management, and the financial structures that allow a young nonprofit to grow without losing its integrity. Kel does not offer individual coaching — his focus is on the organizational health that makes everything else possible.",
@@ -98,8 +96,8 @@ const FOUNDERS = [
     skills: [
       "Nonprofit Startup Specialist",
       "Account and Donation Management",
-      "Business Development",
       "Financial Stewardship",
+      "Business Development",
     ],
     link: null,
   },
@@ -109,42 +107,49 @@ function FounderSection({ founder, index }) {
   const initialsLeft = index % 2 === 0;
 
   const avatar = (
-    <div className="shrink-0 flex justify-center md:justify-start">
-      <div
-        className="w-[120px] h-[120px] rounded-full flex items-center justify-center"
-        style={{ backgroundColor: founder.color }}
-      >
-        <span className="font-['Poppins'] font-bold text-white text-[38px] leading-none">
+    <motion.div variants={fadeUp} className="shrink-0 flex justify-center md:justify-start">
+      {founder.photo ? (
+        <img
+          src={founder.photo}
+          alt={founder.name}
+          className="w-[120px] h-[120px] rounded-full object-cover flex-shrink-0"
+        />
+      ) : (
+        <div
+          className="w-[120px] h-[120px] rounded-full flex items-center justify-center flex-shrink-0 font-['Poppins'] font-bold text-[38px] text-white"
+          style={{ backgroundColor: founder.color }}
+        >
           {founder.initials}
-        </span>
-      </div>
-    </div>
+        </div>
+      )}
+    </motion.div>
   );
 
   const content = (
     <div className="flex-1 min-w-0">
-      <h2 className="font-['Poppins'] font-bold text-[34px] md:text-[40px] text-[#2A2E2C] leading-tight mb-1">
+      <motion.h2 variants={fadeUp} className="font-['Fraunces'] font-bold text-[34px] md:text-[40px] text-[#2A2E2C] leading-tight mb-1">
         {founder.name}
-      </h2>
-      <p className="font-['Open_Sans'] font-semibold text-[16px] mb-4" style={{ color: founder.color }}>
+      </motion.h2>
+      <motion.p variants={fadeUp} className="font-['Open_Sans'] font-semibold text-[16px] mb-4" style={{ color: founder.color }}>
         {founder.title}
-      </p>
-      <span
+      </motion.p>
+      <motion.span
+        variants={fadeUp}
         className="inline-block px-4 py-1.5 rounded-full font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-wider text-white mb-8"
         style={{ backgroundColor: founder.color }}
       >
         {founder.role}
-      </span>
+      </motion.span>
 
-      <div className="space-y-5 mb-8">
+      <motion.div variants={stagger} className="space-y-5 mb-8">
         {founder.bio.map((para, i) => (
-          <p key={i} className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] leading-[1.75]">
+          <motion.p key={i} variants={fadeUp} className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] leading-[1.75]">
             {para}
-          </p>
+          </motion.p>
         ))}
-      </div>
+      </motion.div>
 
-      <div className="mb-7">
+      <motion.div variants={fadeUp} className="mb-7">
         <div className="font-['Open_Sans'] font-semibold text-[11px] tracking-[2px] uppercase text-[#8C8882] mb-3">
           Areas of Focus
         </div>
@@ -159,36 +164,44 @@ function FounderSection({ founder, index }) {
             </span>
           ))}
         </div>
-      </div>
+      </motion.div>
 
       {founder.link && (
-        founder.link.external ? (
-          <a
-            href={founder.link.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center font-['Open_Sans'] font-semibold text-[14px] hover:underline transition-colors"
-            style={{ color: founder.color }}
-          >
-            {founder.link.label} →
-          </a>
-        ) : (
-          <a
-            href={founder.link.href}
-            className="inline-flex items-center font-['Open_Sans'] font-semibold text-[14px] hover:underline transition-colors"
-            style={{ color: founder.color }}
-          >
-            {founder.link.label} →
-          </a>
-        )
+        <motion.div variants={fadeUp}>
+          {founder.link.external ? (
+            <a
+              href={founder.link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center font-['Open_Sans'] font-semibold text-[14px] hover:underline transition-colors"
+              style={{ color: founder.color }}
+            >
+              {founder.link.label} →
+            </a>
+          ) : (
+            <a
+              href={founder.link.href}
+              className="inline-flex items-center font-['Open_Sans'] font-semibold text-[14px] hover:underline transition-colors"
+              style={{ color: founder.color }}
+            >
+              {founder.link.label} →
+            </a>
+          )}
+        </motion.div>
       )}
     </div>
   );
 
   return (
     <section className="bg-white py-16 md:py-20 px-5 md:px-10">
-      <div className="max-w-[960px] mx-auto">
-        <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-start">
+      <div className="max-w-7xl mx-auto">
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={stagger}
+          className="flex flex-col md:flex-row gap-10 md:gap-16 items-start"
+        >
           {initialsLeft ? (
             <>
               {avatar}
@@ -200,7 +213,7 @@ function FounderSection({ founder, index }) {
               <div className="md:order-1 flex-1 min-w-0">{content}</div>
             </>
           )}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
@@ -217,16 +230,18 @@ export default function AboutTeam() {
 
       {/* Hero */}
       <section className="bg-[#1E4A2A] py-20 px-5 md:px-10">
-        <div className="max-w-[800px] mx-auto text-center">
-          <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#F5A623] mb-4">
-            THE FOUNDING TEAM
-          </div>
-          <h1 className="font-['Poppins'] font-bold text-[40px] md:text-[48px] text-white leading-tight mb-5">
-            Built by people who've walked the trail.
-          </h1>
-          <p className="font-['Open_Sans'] text-[17px] leading-[1.65]" style={{ color: "rgba(255,255,255,0.75)" }}>
-            Four co-founders. One mission. Real experience on both sides of the desk.
-          </p>
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div initial="hidden" animate="show" variants={stagger}>
+            <motion.div variants={fadeUp} className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#F5A623] mb-4">
+              THE FOUNDING TEAM
+            </motion.div>
+            <motion.h1 variants={fadeUp} className="font-['Fraunces'] font-bold text-[40px] md:text-[48px] text-white leading-tight mb-5">
+              Built by people who've walked the trail.
+            </motion.h1>
+            <motion.p variants={fadeUp} className="font-['Open_Sans'] text-[17px] leading-[1.65]" style={{ color: "rgba(255,255,255,0.75)" }}>
+              Four co-founders. One mission. Real experience on both sides of the desk.
+            </motion.p>
+          </motion.div>
         </div>
       </section>
 
@@ -235,7 +250,7 @@ export default function AboutTeam() {
         <div key={founder.key}>
           {index > 0 && (
             <div className="bg-white">
-              <div className="max-w-[960px] mx-auto px-5 md:px-10">
+              <div className="max-w-7xl mx-auto px-5 md:px-10">
                 <div className="border-t border-[#E2E4E1]" />
               </div>
             </div>
@@ -246,20 +261,23 @@ export default function AboutTeam() {
 
       {/* Footer CTA */}
       <section className="bg-[#2F6B3F] py-20 px-5 text-center">
-        <div className="max-w-[700px] mx-auto">
-          <h2 className="font-['Poppins'] font-bold text-[36px] text-white mb-4">
-            Ready to start your trail?
-          </h2>
-          <p className="font-['Open_Sans'] text-[17px] mb-10" style={{ color: "rgba(255,255,255,0.8)" }}>
-            Join our waitlist and be the first to know when the next cohort opens.
-          </p>
-          <Link
-            href="/waitlist"
-            className="inline-flex items-center justify-center h-[52px] px-10 rounded-[8px] font-['Poppins'] font-bold text-[15px] transition-colors hover:brightness-95"
-            style={{ backgroundColor: "#F5A623", color: "#2A2E2C" }}
-          >
-            Join the Waitlist
-          </Link>
+        <div className="max-w-7xl mx-auto">
+          <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={stagger}>
+            <motion.h2 variants={fadeUp} className="font-['Fraunces'] font-bold text-[36px] text-white mb-4">
+              Ready to start your trail?
+            </motion.h2>
+            <motion.p variants={fadeUp} className="font-['Open_Sans'] text-[17px] mb-10" style={{ color: "rgba(255,255,255,0.8)" }}>
+              Join our waitlist and be the first to know when the next cohort opens.
+            </motion.p>
+            <motion.div variants={fadeUp}>
+              <Link
+                href="/waitlist"
+                className="inline-flex items-center gap-2 bg-[#F5A623] text-[#2A2E2C] font-['Open_Sans'] font-bold text-[15px] px-8 py-4 rounded-lg hover:bg-[#D4890A] transition-colors duration-200"
+              >
+                Join the Waitlist →
+              </Link>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
     </div>
