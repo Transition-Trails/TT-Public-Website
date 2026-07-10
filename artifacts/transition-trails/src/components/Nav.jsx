@@ -148,7 +148,7 @@ export function Nav() {
           </div>
 
           {/* About ↓ */}
-          <div className="relative h-full flex items-center" tabIndex={0} onBlur={blurHandler(setAboutOpen)}>
+          <div className="relative h-full flex items-center" onBlur={blurHandler(setAboutOpen)}>
             <button className={`${desktopNavClass(isAbout)} px-3`}
               aria-haspopup="true" aria-expanded={aboutOpen} aria-controls="about-menu"
               onClick={() => { setAboutOpen(v => !v); setProgramsOpen(false); setNonprofitOpen(false); setInvolvedOpen(false); }}
@@ -157,7 +157,7 @@ export function Nav() {
               <ChevronDown className={`w-4 h-4 opacity-70 transition-transform ${aboutOpen ? "rotate-180" : ""}`} aria-hidden="true" />
             </button>
             {aboutOpen && (
-              <div id="about-menu" role="menu" aria-label="About" className={`${dropdownBase} left-1/2 -translate-x-1/2 w-[220px]`}>
+              <div id="about-menu" role="menu" aria-label="About" className={`${dropdownBase} left-0 w-[240px]`}>
                 <DropItem href="/about" label="Our Story" onClick={() => setAboutOpen(false)} />
                 <DropItem href="/about/team" label="Meet the Team" onClick={() => setAboutOpen(false)} />
               </div>
