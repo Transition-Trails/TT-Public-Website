@@ -3,6 +3,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
+import ScrollToTop from "./components/ScrollToTop";
+
 // Layout
 import { Nav } from "./components/Nav";
 import { Footer } from "./components/Footer";
@@ -98,6 +100,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+          <ScrollToTop />
           <div className="flex flex-col min-h-screen">
             <Nav />
             <main className="flex-1 flex flex-col">
