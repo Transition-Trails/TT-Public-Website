@@ -412,7 +412,7 @@ export default function Consulting() {
 
             <motion.div
               variants={fadeUp}
-              className="bg-white rounded-2xl max-w-2xl mx-auto"
+              className="bg-white rounded-2xl"
               style={{ border: "1px solid #E2E4E1", padding: "40px" }}
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
