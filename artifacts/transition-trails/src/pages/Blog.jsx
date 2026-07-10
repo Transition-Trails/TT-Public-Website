@@ -1,210 +1,105 @@
 import { useState } from "react";
-import { CTAButton } from "../components/CTAButton";
+import { Link } from "wouter";
+import { motion } from "framer-motion";
+import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { PageMeta } from "../components/PageMeta";
-import { LINKS } from "../constants/links";
-import { ArrowRight } from "lucide-react";
+import { blogPosts, CATEGORIES } from "../data/blogPosts";
 
-const ARTICLES = [
-  {
-    slug: "hugh-richardson-salesforce-story",
-    category: "Program Stories",
-    date: "May 2025",
-    title: "From 47 Rejections to Solutions Architect: Hugh Richardson's Salesforce Story",
-    excerpt:
-      "Hugh spent 16 years driving trucks and studied Salesforce between loads during the pandemic. After earning his Admin certification, he applied to 47 jobs and heard nothing. What changed wasn't his resume — it was getting one real implementation project with a real nonprofit client. Five years later he's a Solutions Architect at Salesforce and co-founder of Transition Trails.",
-    readTime: "6 min read",
-    accent: "#2F6B3F",
-  },
-  {
-    slug: "experience-gap-salesforce-job-market",
-    category: "Career Pivots",
-    date: "April 2025",
-    title: "The Experience Gap: Why the Salesforce Job Market Is Broken for New Admins",
-    excerpt:
-      "You passed the Administrator exam. You built flows in a developer org. You can explain object relationships in your sleep. And you still can't get an entry-level Salesforce job. Here's why that's a structural problem — and what Transition Trails built to fix it. The answer isn't more certifications. It's one real project.",
-    readTime: "8 min read",
-    accent: "#1E4A2A",
-  },
-  {
-    slug: "salesforce-admin-exam-90-days",
-    category: "Salesforce Exam",
-    date: "March 2025",
-    title: "How to Pass the Salesforce Administrator Exam in 90 Days (Without Quitting Your Job)",
-    excerpt:
-      "The Admin exam covers 60+ topics across six domains. Most candidates fail not because they don't know the material — they fail because they don't know how to study it efficiently. Here's the study framework we teach inside Foundations Trail: how to prioritize domains by weight, which topics to drill vs. skim, and how to use practice exams without memorizing answers.",
-    readTime: "10 min read",
-    accent: "#2F6F7E",
-  },
-  {
-    slug: "what-nonprofits-need-from-salesforce",
-    category: "Nonprofit Tech",
-    date: "February 2025",
-    title: "What Nonprofits Actually Need From Salesforce (That Consultants Don't Tell Them)",
-    excerpt:
-      "The Power of Us grant gives eligible nonprofits access to Salesforce. But access is not the same as adoption. Seventeen months after implementation, the average nonprofit is using 23% of the features they were set up with. Here's what we've learned from serving Hartford Promises, CLYLP, and KC Global One about what nonprofits actually need — and why ongoing support matters more than perfect setup.",
-    readTime: "7 min read",
-    accent: "#7FAFC6",
-  },
-  {
-    slug: "inside-the-guided-trail",
-    category: "Program Stories",
-    date: "January 2025",
-    title: "Inside the Guided Trail: What a 12-Week Real-Client Salesforce Practicum Looks Like",
-    excerpt:
-      "The Guided Trail isn't a simulation. You are assigned a real nonprofit that needs actual Salesforce work done. Week 1 is discovery calls and requirements gathering. Week 4 is architecture review with our senior advisors. Week 12 is a live handoff to a client who depends on what you built. Here's a week-by-week breakdown of what happens in between — and why it changes how hiring managers see your resume.",
-    readTime: "9 min read",
-    accent: "#1E4A2A",
-  },
-  {
-    slug: "career-change-into-salesforce",
-    category: "Career Pivots",
-    date: "December 2024",
-    title: "Making a Career Change into Salesforce? Here's What Nobody Tells You",
-    excerpt:
-      "Whether you're coming from sales, nonprofit program management, teaching, or the military — the Salesforce career transition has predictable obstacles that most blog posts gloss over. We've watched hundreds of career changers navigate this path. Here's the honest guide: which certifications actually matter for your background, how long it realistically takes, and what the experience gap problem looks like from the inside.",
-    readTime: "11 min read",
-    accent: "#2F6B3F",
-  },
-];
+const fadeUp = { hidden: { opacity: 0, y: 24 }, show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } } };
+const stagger = { show: { transition: { staggerChildren: 0.09 } } };
 
-const CATEGORIES = ["All", "Career Pivots", "Salesforce Exam", "Nonprofit Tech", "Program Stories"];
+function formatDate(dateStr) {
+  return new Date(dateStr).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+}
 
 export default function Blog() {
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [activeCategory, setActiveCategory] = useState("all");
 
-  const filtered =
-    activeCategory === "All"
-      ? ARTICLES
-      : ARTICLES.filter((a) => a.category === activeCategory);
+  const filtered = activeCategory === "all"
+    ? blogPosts
+    : blogPosts.filter(p => p.category === activeCategory);
+
+  const sorted = [...filtered].sort((a, b) => new Date(b.date) - new Date(a.date));
 
   return (
     <div className="flex flex-col min-h-screen">
       <PageMeta
-        title="Blog | Salesforce Career Insights | Transition Trails"
-        description="Salesforce career guides, nonprofit technology insights, and stories from the trail. Resources for aspiring and working Salesforce professionals."
+        title="The Trail Journal | Transition Trails Blog"
+        description="Salesforce career advice, nonprofit technology, program updates, and lessons from building Transition Trails — published weekly."
         path="/blog"
-        robots="noindex, nofollow"
       />
 
-      {/* Hero */}
-      <section className="bg-[#2A2E2C] pt-24 pb-16 px-5 md:px-10">
-        <div className="max-w-[1024px] mx-auto">
-          <div className="inline-block bg-[#F5A623]/20 border border-[#F5A623]/30 text-[#F5A623] font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-6">
-            FROM THE TRAIL
-          </div>
-          <h1 className="font-['Poppins'] font-bold text-[40px] md:text-[52px] text-white tracking-[-1px] leading-tight mb-4 max-w-3xl">
-            Insights, guides, and stories from the trail.
-          </h1>
-          <p className="font-['Open_Sans'] text-[18px] text-white/70 max-w-2xl leading-[1.6]">
-            Career pivots, exam prep, nonprofit technology, and real stories from the Salesforce ecosystem. Written by practitioners who've been through it.
-          </p>
-        </div>
+      {/* HERO */}
+      <section className="bg-[#2A2E2C] py-20 px-8">
+        <motion.div className="max-w-7xl mx-auto" initial="hidden" animate="show" variants={stagger}>
+          <motion.p variants={fadeUp} className="font-['Open_Sans'] text-xs font-semibold uppercase tracking-[0.15em] text-[#F5A623] mb-3">THE TRAIL JOURNAL</motion.p>
+          <motion.h1 variants={fadeUp} className="font-['Fraunces'] font-bold text-[clamp(2.5rem,5vw,3.75rem)] text-white leading-tight mb-4 max-w-3xl">Insights from the trail.</motion.h1>
+          <motion.p variants={fadeUp} className="font-['Open_Sans'] text-[17px] text-white/70 leading-relaxed max-w-2xl">Salesforce career advice, nonprofit technology, program updates, and lessons from building Transition Trails — published weekly.</motion.p>
+        </motion.div>
       </section>
 
-      {/* Category Filters */}
-      <section className="bg-white border-b border-[#E2E4E1] px-5 md:px-10 sticky top-[80px] z-10">
-        <div className="max-w-[1024px] mx-auto py-4 flex gap-2 overflow-x-auto pb-4 -mb-px">
-          {CATEGORIES.map((cat) => (
+      {/* CATEGORY FILTER */}
+      <section className="bg-white border-b border-[#E2E4E1] sticky top-[80px] z-10">
+        <div className="max-w-7xl mx-auto px-8 py-4 flex items-center gap-2 overflow-x-auto">
+          {CATEGORIES.map(cat => (
             <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className={`whitespace-nowrap font-['Open_Sans'] font-semibold text-[13px] px-4 py-2 rounded-lg transition-colors shrink-0 ${
-                activeCategory === cat
+              key={cat.id}
+              onClick={() => setActiveCategory(cat.id)}
+              className={`flex-shrink-0 font-['Open_Sans'] text-[13px] font-semibold px-4 py-2 rounded-full transition-colors duration-200 ${
+                activeCategory === cat.id
                   ? "bg-[#2F6B3F] text-white"
-                  : "bg-[#FAFAF7] text-[#4A4F4D] hover:bg-[#E6F3EA] hover:text-[#2F6B3F] border border-[#E2E4E1]"
+                  : "bg-[#F3F4F6] text-[#6B7280] hover:bg-[#EBF3EE] hover:text-[#2F6B3F]"
               }`}
             >
-              {cat}
+              {cat.label}
             </button>
           ))}
         </div>
       </section>
 
-      {/* Article Grid */}
-      <section className="bg-[#FAFAF7] flex-1 py-16 px-5 md:px-10">
-        <div className="max-w-[1024px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {filtered.map((article) => (
-              <article
-                key={article.slug}
-                className="bg-white border border-[#E2E4E1] rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col"
-              >
-                <div
-                  className="h-[6px] w-full"
-                  style={{ backgroundColor: article.accent }}
-                />
-                <div className="p-8 flex flex-col flex-1">
-                  <div className="flex items-center justify-between mb-4">
-                    <span
-                      className="font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[1.5px] px-2 py-1 rounded"
-                      style={{
-                        color: article.accent,
-                        backgroundColor: `${article.accent}15`,
-                      }}
-                    >
-                      {article.category}
-                    </span>
-                    <span className="font-['Open_Sans'] text-[12px] text-[#4A4F4D]/60">
-                      {article.date} · {article.readTime}
-                    </span>
-                  </div>
-
-                  <h2 className="font-['Poppins'] font-bold text-[20px] text-[#2A2E2C] mb-4 leading-[1.3]">
-                    {article.title}
-                  </h2>
-
-                  <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.7] mb-6 flex-1">
-                    {article.excerpt}
-                  </p>
-
-                  <a
-                    href={`#${article.slug}`}
-                    className="inline-flex items-center gap-2 font-['Open_Sans'] font-semibold text-[14px] transition-colors"
-                    style={{ color: article.accent }}
-                  >
-                    Read article <ArrowRight className="w-4 h-4" />
-                  </a>
-                </div>
-              </article>
-            ))}
-          </div>
-
-          {filtered.length === 0 && (
-            <div className="text-center py-20">
-              <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D]">
-                No articles in this category yet. Check back soon.
-              </p>
+      {/* POSTS GRID */}
+      <section className="bg-[#FAFAF7] py-16 px-8 flex-1">
+        <div className="max-w-7xl mx-auto">
+          {sorted.length === 0 ? (
+            <div className="text-center py-24">
+              <p className="font-['Open_Sans'] text-[16px] text-[#6B7280]">No posts in this category yet. Check back soon.</p>
             </div>
-          )}
-        </div>
-      </section>
-
-      {/* Newsletter Strip */}
-      <section className="bg-[#2F6B3F] py-16 px-5 md:px-10">
-        <div className="max-w-[800px] mx-auto text-center">
-          <div className="font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] text-[#F5A623] mb-4">
-            STAY CONNECTED
-          </div>
-          <h2 className="font-['Poppins'] font-bold text-[28px] md:text-[36px] text-white mb-4">
-            Get Salesforce career insights in your inbox.
-          </h2>
-          <p className="font-['Open_Sans'] text-[17px] text-white/75 mb-8 max-w-xl mx-auto leading-[1.6]">
-            We write about career pivots, exam prep, nonprofit technology, and program updates. Follow us on Substack to get every post.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <CTAButton href={LINKS.substack} variant="amber" size="lg" external>
-              Follow Transition Trails
-            </CTAButton>
-            <CTAButton
-              href={LINKS.substackCompass}
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white/10"
-              external
+          ) : (
+            <motion.div
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+              initial="hidden"
+              animate="show"
+              variants={stagger}
             >
-              Follow The Compass (Nonprofits)
-            </CTAButton>
-          </div>
+              {sorted.map(post => (
+                <motion.div key={post.id} variants={fadeUp}>
+                  <Link href={`/blog/${post.id}`}>
+                    <div className="bg-white border border-[#E2E4E1] rounded-2xl overflow-hidden shadow-sm hover:shadow-md hover:border-[#2F6B3F] transition-all duration-200 cursor-pointer h-full flex flex-col">
+                      {post.image && (
+                        <img src={post.image} alt={post.title} className="w-full h-48 object-cover" />
+                      )}
+                      <div className="p-7 flex flex-col flex-1">
+                        <div className="flex items-center gap-2 mb-4">
+                          <span className="font-['Open_Sans'] text-[11px] font-semibold uppercase tracking-[0.1em] bg-[#EBF3EE] text-[#2F6B3F] px-3 py-1 rounded-full">
+                            {CATEGORIES.find(c => c.id === post.category)?.label}
+                          </span>
+                        </div>
+                        <h2 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] leading-snug mb-3 flex-1">{post.title}</h2>
+                        <p className="font-['Open_Sans'] text-[13px] text-[#6B7280] leading-relaxed mb-5">{post.excerpt}</p>
+                        <div className="flex items-center justify-between pt-4 border-t border-[#E2E4E1]">
+                          <div className="flex items-center gap-3 text-[#6B7280]">
+                            <span className="flex items-center gap-1 font-['Open_Sans'] text-[12px]"><Calendar size={12} />{formatDate(post.date)}</span>
+                            <span className="flex items-center gap-1 font-['Open_Sans'] text-[12px]"><Clock size={12} />{post.readTime}</span>
+                          </div>
+                          <span className="text-[#2F6B3F]"><ArrowRight size={16} /></span>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                </motion.div>
+              ))}
+            </motion.div>
+          )}
         </div>
       </section>
     </div>

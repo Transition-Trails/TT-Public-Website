@@ -25,6 +25,7 @@ import BoardApplication from "./pages/BoardApplication";
 import Donate from "./pages/Donate";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import Waitlist from "./pages/Waitlist";
@@ -60,6 +61,7 @@ function Router() {
       <Route path="/board-application" component={BoardApplication} />
       <Route path="/donate" component={Donate} />
       <Route path="/contact" component={Contact} />
+      <Route path="/blog/:id" component={BlogPost} />
       <Route path="/blog" component={Blog} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/terms-of-service" component={TermsOfService} />
