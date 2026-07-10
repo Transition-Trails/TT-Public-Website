@@ -102,6 +102,8 @@ export function Nav() {
                 <GroupLabel>All Programs</GroupLabel>
                 <DropItem href="/programs" label="All Programs" desc="Explorer's Trail, Foundations, Guided & Trail of Mastery" onClick={() => setProgramsOpen(false)} />
                 <DropItem href="/programs/digital-compass" label="Digital Compass" desc="Salesforce support & membership for nonprofits" onClick={() => setProgramsOpen(false)} />
+                <Divider />
+                <DropItem href="/waitlist" label="Join the Waitlist" desc="Apply for the next cohort" onClick={() => setProgramsOpen(false)} />
               </div>
             )}
           </div>
@@ -136,7 +138,6 @@ export function Nav() {
             </button>
             {involvedOpen && (
               <div id="involved-menu" role="menu" aria-label="Get Involved" className={`${dropdownBase} left-0 w-[320px]`}>
-                <DropItem href="/waitlist" label="Join the Waitlist" desc="Apply for the next cohort" onClick={() => setInvolvedOpen(false)} />
                 <DropItem href="/volunteer" label="Volunteer & Mentor" desc="Coaches, assistants, and nonprofit technologists" onClick={() => setInvolvedOpen(false)} />
                 <DropItem href="/partners/recruiters" label="Recruiters & Employers" desc="Connect with project-verified Salesforce talent" onClick={() => setInvolvedOpen(false)} />
                 <DropItem href="/board-application" label="Board Membership" desc="Join the Transition Trails board" onClick={() => setInvolvedOpen(false)} />
@@ -219,6 +220,8 @@ export function Nav() {
               <div className="font-['Open_Sans'] font-semibold text-[10px] tracking-[1.5px] uppercase text-white/40 pb-1">All Programs</div>
               <Link href="/programs" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">All Programs</Link>
               <Link href="/programs/digital-compass" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">Digital Compass</Link>
+              <div className="h-px bg-white/10 my-2" />
+              <Link href="/waitlist" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">Join the Waitlist</Link>
             </div>
           </div>
 
@@ -244,7 +247,6 @@ export function Nav() {
               <ChevronDown className={`w-5 h-5 transition-transform ${openDropdown === "involved" ? "rotate-180" : ""}`} />
             </button>
             <div className={`flex flex-col pl-4 overflow-hidden transition-all duration-300 ${openDropdown === "involved" ? "mt-4 max-h-[400px]" : "max-h-0"}`}>
-              <Link href="/waitlist" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">Join the Waitlist</Link>
               <Link href="/volunteer" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">Volunteer & Mentor</Link>
               <Link href="/partners/recruiters" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">Recruiters & Employers</Link>
               <Link href="/board-application" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">Board Membership</Link>
