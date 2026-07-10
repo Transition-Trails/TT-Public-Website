@@ -162,6 +162,7 @@ export function Nav() {
                 <DropItem href="/about" label="Our Story" onClick={() => setAboutOpen(false)} />
                 <DropItem href="/about/team" label="Meet the Team" onClick={() => setAboutOpen(false)} />
                 <DropItem href="/impact" label="Vision & Impact" onClick={() => setAboutOpen(false)} />
+                <DropItem href="/expedition" label="The Expedition" onClick={() => setAboutOpen(false)} />
               </div>
             )}
           </div>
@@ -268,6 +269,7 @@ export function Nav() {
               <Link href="/about" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">Our Story</Link>
               <Link href="/about/team" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">Meet the Team</Link>
               <Link href="/impact" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">Vision & Impact</Link>
+              <Link href="/expedition" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">The Expedition</Link>
             </div>
           </div>
 
