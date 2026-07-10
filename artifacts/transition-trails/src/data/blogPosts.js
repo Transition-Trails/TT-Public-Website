@@ -15,7 +15,7 @@ export const blogPosts = [
     author: "Angela Landrith",
     date: "2026-07-05",
     readTime: "8 min read",
-    image: null,
+    image: "https://substackcdn.com/image/fetch/$s_!dWce!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F60c6020a-4c12-4058-9549-85341c2430cf_1200x1200.png",
     content: `
       <p>In November of 1996, I answered a job listing and started work at a mortgage company scheduling appraisals across the country. It was my first real job out of college. I was sitting in a cube, making calls, processing paperwork, doing exactly what the role description said.</p>
       <p>And I kept looking at the piles.</p>
@@ -108,7 +108,7 @@ export const blogPosts = [
     author: "Angela Landrith",
     date: "2026-06-22",
     readTime: "8 min read",
-    image: null,
+    image: "https://substackcdn.com/image/fetch/$s_!RSw_!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff8cf6f77-5882-446e-96c8-dc326538ad58_3635x3635.jpeg",
     content: `
       <p>Eighteen months ago I made two bets at the same time.</p>
       <p>The first was on a house. The second was on myself. They happened to coincide, and I've been thinking ever since about whether that was a coincidence or whether they were always the same decision wearing different clothes.</p>
@@ -148,7 +148,7 @@ export const blogPosts = [
     author: "Angela Landrith",
     date: "2026-06-14",
     readTime: "5 min read",
-    image: null,
+    image: "https://substackcdn.com/image/fetch/$s_!esA3!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F57f97fa2-1e9e-43ba-a017-37700a564939_1536x1024.png",
     content: `
       <p>There's a point where clarity isn't the problem anymore.</p>
       <p>You understand the gap. You see the path. You know what real experience looks like.</p>
