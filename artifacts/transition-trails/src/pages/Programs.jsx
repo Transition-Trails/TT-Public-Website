@@ -127,7 +127,7 @@ export default function Programs() {
               <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.6] mb-4">
                 Senior coaching role, earned through sustained contribution. Invitation only after 6 completed cohorts.
               </p>
-              <div className="font-['Open_Sans'] font-semibold text-[12px] text-[#1E4A2A]">Lifetime Explorer's Trail membership</div>
+              <div className="font-['Open_Sans'] font-semibold text-[12px] text-[#1E4A2A]">8–10 hrs/week per cohort</div>
             </motion.div>
           </motion.div>
 
