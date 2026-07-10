@@ -1,7 +1,11 @@
-import { Check, MonitorPlay, Users, Calendar, Sparkles } from "lucide-react";
+import { motion } from "framer-motion";
+import { Check, MonitorPlay, Users, Calendar } from "lucide-react";
 import { CTAButton } from "../components/CTAButton";
 import { LINKS } from "../constants/links";
 import { PageMeta } from "../components/PageMeta";
+
+const fadeUp = { hidden: { opacity: 0, y: 24 }, show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } } };
+const stagger = { hidden: {}, show: { transition: { staggerChildren: 0.1 } } };
 
 export default function FoundationsTrail() {
   return (
@@ -11,13 +15,15 @@ export default function FoundationsTrail() {
         description="A 12-week guided Salesforce build program. Implement a complete org for a simulated nonprofit client. Portfolio-ready. Admin cert required. Starting at $997."
         path="/programs/foundations-trail"
       />
+
+      {/* HERO */}
       <section className="bg-gradient-to-br from-[#2F6B3F] via-[#2F6F7E] to-[#1E4F5C] pt-24 pb-20 px-5 md:px-10">
-        <div className="max-w-[1024px] mx-auto flex flex-col md:flex-row gap-12 items-center">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-center">
           <div className="flex-1">
             <div className="inline-block font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-6 backdrop-blur-sm" style={{ background: "rgba(127,175,198,0.15)", border: "1px solid rgba(127,175,198,0.4)", color: "#7FAFC6" }}>
               ENTRY TIER · EARN YOUR CERT · BUILD YOUR FIRST PROJECT
             </div>
-            <h1 className="font-['Poppins'] font-bold text-[48px] md:text-[56px] text-white tracking-[-1.5px] leading-[1.15] mb-6">
+            <h1 className="font-['Fraunces'] font-bold text-[48px] md:text-[56px] text-white tracking-[-1.5px] leading-[1.15] mb-6">
               Foundations Trail.
             </h1>
             <p className="font-['Poppins'] font-medium text-[24px] text-[#7FAFC6] mb-6">
@@ -58,93 +64,93 @@ export default function FoundationsTrail() {
               ))}
             </ul>
 
-            <CTAButton href={LINKS.waitlist} variant="dark" className="w-full !bg-[#7FAFC6] hover:!bg-[#6A9DB5] !text-[#1A2E38]" size="lg">
+            <CTAButton href={LINKS.waitlist} variant="dark" className="w-full" size="lg">
               Join the Waitlist
             </CTAButton>
-            <p className="text-center font-['Open_Sans'] text-[11px] text-[#8A9A9A] mt-3">
-              ⚙ Enrollment form coming soon — waitlist opens cohort when ready
-            </p>
+            <p className="font-['Open_Sans'] text-[11px] text-[#6B7280] mt-3 text-center">Cohort 0 currently in testing · Waitlist opening October 1, 2026</p>
           </div>
         </div>
       </section>
 
+      {/* WHAT'S INCLUDED */}
       <section className="bg-[#FAFAF7] py-20 px-5 border-b border-[#E2E4E1]">
-        <div className="max-w-[1024px] mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="font-['Poppins'] font-bold text-[36px] text-[#2A2E2C] mb-4">What's Included</h2>
-            <p className="font-['Open_Sans'] text-[18px] text-[#4A4F4D] max-w-2xl mx-auto">
-              Everything you need to complete your first end-to-end Salesforce implementation in a safe environment.
-            </p>
-          </div>
+        <div className="max-w-7xl mx-auto">
+          <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={stagger}>
+            <motion.div variants={fadeUp} className="text-center mb-16">
+              <h2 className="font-['Fraunces'] font-bold text-[36px] text-[#2A2E2C] mb-4">What's Included</h2>
+              <p className="font-['Open_Sans'] text-[18px] text-[#4A4F4D] max-w-2xl mx-auto">
+                Everything you need to complete your first end-to-end Salesforce implementation in a safe environment.
+              </p>
+            </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8 flex gap-5 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
-              <MonitorPlay className="w-8 h-8 text-[#2F6B3F] shrink-0" />
-              <div>
-                <h3 className="font-['Poppins'] font-bold text-[18px] text-[#2A2E2C] mb-2">Build With Me Videos</h3>
-                <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.6]">
-                  Step-by-step guidance on how to implement each feature. Watch the architect do it, then replicate the pattern.
-                </p>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <motion.div variants={fadeUp} className="bg-white border border-[#E2E4E1] rounded-xl p-8 flex gap-5 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-[#E8F3F6]">
+                  <MonitorPlay size={22} stroke="#2F6F7E" />
+                </div>
+                <div>
+                  <h3 className="font-['Poppins'] font-bold text-[18px] text-[#2A2E2C] mb-2">Build With Me Videos</h3>
+                  <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.6]">
+                    Step-by-step guidance on how to implement each feature. Watch the architect do it, then replicate the pattern.
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div variants={fadeUp} className="bg-white border border-[#E2E4E1] rounded-xl p-8 flex gap-5 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-[#E8F3F6]">
+                  <Users size={22} stroke="#2F6F7E" />
+                </div>
+                <div>
+                  <h3 className="font-['Poppins'] font-bold text-[18px] text-[#2A2E2C] mb-2">Weekly Office Hours</h3>
+                  <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.6]">
+                    Live weekly sessions with Transition Trails architects to review work and ask questions.
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div variants={fadeUp} className="bg-white border border-[#E2E4E1] rounded-xl p-8 flex gap-5 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-[#E8F3F6]">
+                  <Calendar size={22} stroke="#2F6F7E" />
+                </div>
+                <div>
+                  <h3 className="font-['Poppins'] font-bold text-[18px] text-[#2A2E2C] mb-2">2 Private Coaching Sessions</h3>
+                  <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.6]">
+                    1-on-1 time to review your capstone build and ensure you're developing the right technical habits.
+                  </p>
+                </div>
+              </motion.div>
             </div>
-            
-            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8 flex gap-5 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
-              <Sparkles className="w-8 h-8 text-[#2F6B3F] shrink-0" />
-              <div>
-                <h3 className="font-['Poppins'] font-bold text-[18px] text-[#2A2E2C] mb-2">AI-Assisted Learning Tools</h3>
-                <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.6]">
-                  AI-assisted learning support to help you work through the material and stay unblocked throughout the 12 weeks.
-                </p>
-              </div>
-            </div>
-            
-            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8 flex gap-5 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
-              <Users className="w-8 h-8 text-[#2F6B3F] shrink-0" />
-              <div>
-                <h3 className="font-['Poppins'] font-bold text-[18px] text-[#2A2E2C] mb-2">Weekly Office Hours</h3>
-                <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.6]">
-                  Live weekly sessions with Transition Trails architects to review work and ask questions.
-                </p>
-              </div>
-            </div>
-            
-            <div className="bg-white border border-[#E2E4E1] rounded-xl p-8 flex gap-5 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
-              <Calendar className="w-8 h-8 text-[#2F6B3F] shrink-0" />
-              <div>
-                <h3 className="font-['Poppins'] font-bold text-[18px] text-[#2A2E2C] mb-2">2 Private Coaching Sessions</h3>
-                <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.6]">
-                  1-on-1 time to review your capstone build and ensure you're developing the right technical habits.
-                </p>
-              </div>
-            </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
+      {/* THE CAPSTONE */}
       <section className="bg-white py-20 px-5">
-        <div className="max-w-[1024px] mx-auto flex flex-col md:flex-row gap-12 items-center">
-          <div className="flex-1">
-            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">THE CAPSTONE</div>
-            <h2 className="font-['Poppins'] font-bold text-[36px] text-[#2A2E2C] mb-6">The Structured Capstone Project</h2>
-            <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] leading-[1.65] mb-6">
-              You won't just be doing platform modules. You'll be building out a complete org through a structured capstone project aligned to the 9 Salesforce Admin exam domains — working through it reinforces exactly what you need to know for the exam.
-            </p>
-            <ul className="space-y-4 font-['Open_Sans'] text-[15px] text-[#4A4F4D]">
-              <li className="flex gap-3 items-start"><Check className="w-5 h-5 text-[#2F6B3F] shrink-0 mt-0.5" /> <strong>Build WITH guidance:</strong> In Foundations Trail, Build With Me videos guide you through each build step — you develop both the practical skill and the exam confidence to pass.</li>
-              <li className="flex gap-3 items-start"><Check className="w-5 h-5 text-[#2F6B3F] shrink-0 mt-0.5" /> <strong>End-to-end:</strong> From discovery documentation to security models, flows, and final dashboards.</li>
-              <li className="flex gap-3 items-start"><Check className="w-5 h-5 text-[#2F6B3F] shrink-0 mt-0.5" /> <strong>Guided Trail uses the same capstone — independently:</strong> In Guided Trail, learners solve the same project with no step-by-step guidance. Guided Trail proves you can do the work on your own.</li>
-            </ul>
-          </div>
-          
-          <div className="w-full md:w-1/2 bg-[#FAFAF7] rounded-2xl p-10 border border-[#E2E4E1] text-center">
-            <h3 className="font-['Poppins'] font-bold text-[24px] text-[#2A2E2C] mb-4">Ready to start building?</h3>
-            <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] mb-8">
-              Foundations Trail is self-paced but structured over 12 weeks. Enroll today and get immediate access to Week 1.
-            </p>
-            <CTAButton href={LINKS.waitlist} variant="dark" className="w-full !bg-[#2F6B3F] hover:!bg-[#1E4A2A]">
-              Join the Waitlist
-            </CTAButton>
-          </div>
+        <div className="max-w-7xl mx-auto">
+          <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={stagger} className="flex flex-col md:flex-row gap-12 items-center">
+            <div className="flex-1">
+              <motion.div variants={fadeUp} className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">THE CAPSTONE</motion.div>
+              <motion.h2 variants={fadeUp} className="font-['Fraunces'] font-bold text-[36px] text-[#2A2E2C] mb-6">The Structured Capstone Project</motion.h2>
+              <motion.p variants={fadeUp} className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] leading-[1.65] mb-6">
+                You won't just be doing platform modules. You'll be building out a complete org through a structured capstone project aligned to the 9 Salesforce Admin exam domains — working through it reinforces exactly what you need to know for the exam.
+              </motion.p>
+              <motion.ul variants={stagger} className="space-y-4 font-['Open_Sans'] text-[15px] text-[#4A4F4D]">
+                <motion.li variants={fadeUp} className="flex gap-3 items-start"><Check className="w-5 h-5 text-[#2F6B3F] shrink-0 mt-0.5" /> <strong>Build WITH guidance:</strong> In Foundations Trail, Build With Me videos guide you through each build step — you develop both the practical skill and the exam confidence to pass.</motion.li>
+                <motion.li variants={fadeUp} className="flex gap-3 items-start"><Check className="w-5 h-5 text-[#2F6B3F] shrink-0 mt-0.5" /> <strong>End-to-end:</strong> From discovery documentation to security models, flows, and final dashboards.</motion.li>
+                <motion.li variants={fadeUp} className="flex gap-3 items-start"><Check className="w-5 h-5 text-[#2F6B3F] shrink-0 mt-0.5" /> <strong>Guided Trail uses the same capstone — independently:</strong> In Guided Trail, learners solve the same project with no step-by-step guidance. Guided Trail proves you can do the work on your own.</motion.li>
+              </motion.ul>
+            </div>
+
+            <motion.div variants={fadeUp} className="w-full md:w-1/2 bg-[#FAFAF7] rounded-2xl p-10 border border-[#E2E4E1] text-center">
+              <h3 className="font-['Poppins'] font-bold text-[24px] text-[#2A2E2C] mb-4">Ready to start building?</h3>
+              <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] mb-8">
+                Foundations Trail is self-paced but structured over 12 weeks. Enroll today and get immediate access to Week 1.
+              </p>
+              <CTAButton href={LINKS.waitlist} variant="dark" className="w-full !bg-[#2F6B3F] hover:!bg-[#1E4A2A]">
+                Join the Waitlist
+              </CTAButton>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
     </div>
