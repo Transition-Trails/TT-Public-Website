@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "wouter";
 import { PageMeta } from "../components/PageMeta";
+import { Check } from "lucide-react";
 
 export default function NonprofitAssessment() {
   useEffect(() => {
@@ -72,7 +73,7 @@ export default function NonprofitAssessment() {
               "Specific to your org's Salesforce setup",
             ].map((point) => (
               <div key={point} className="flex items-center gap-2">
-                <span className="text-[#F5A623] font-bold text-[16px]">✓</span>
+                <Check size={16} color="#F5A623" className="shrink-0" />
                 <span className="font-['Open_Sans'] text-[15px] text-white/90">{point}</span>
               </div>
             ))}

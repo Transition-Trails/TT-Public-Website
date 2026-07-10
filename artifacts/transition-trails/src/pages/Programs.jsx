@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Link } from "wouter";
 import { PROGRAMS } from "../constants/programs";
 import { ProgramCard } from "../components/ProgramCard";
@@ -6,6 +5,7 @@ import { CTAButton } from "../components/CTAButton";
 import { LINKS } from "../constants/links";
 import { motion } from "framer-motion";
 import { PageMeta } from "../components/PageMeta";
+import { ArrowRight, User, TrendingUp, Compass, Award } from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -21,15 +21,6 @@ const stagger = {
 };
 
 export default function Programs() {
-  const [certStatus, setCertStatus] = useState(null); // 'yes', 'no', 'inprogress'
-  const [empStatus, setEmpStatus] = useState(null); // 'yes', 'no'
-
-  let recommendation = null;
-  if (certStatus === 'no') recommendation = "explorers-trail";
-  if (certStatus === 'inprogress') recommendation = "foundations-trail";
-  if (certStatus === 'yes' && empStatus === 'no') recommendation = "guided-trail";
-  if (certStatus === 'yes' && empStatus === 'yes') recommendation = "trail-of-mastery";
-
   return (
     <div className="flex flex-col min-h-screen">
       <PageMeta
@@ -56,7 +47,7 @@ export default function Programs() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-10 sm:gap-16">
             <div className="flex flex-col items-center text-center gap-1.5">
               <div className="flex items-center gap-2">
-                <span className="text-[18px]">🧭</span>
+                <User size={18} color="#7FAFC6" />
                 <span className="font-['Open_Sans'] font-semibold text-[14px] text-[#7FAFC6]">Career Starters</span>
               </div>
               <span className="font-['Open_Sans'] text-[12px] text-[#4A4F4D]">New to Salesforce or working toward your first cert</span>
@@ -64,7 +55,7 @@ export default function Programs() {
             <div className="hidden sm:block w-px h-8 bg-[#E2E4E1]" />
             <div className="flex flex-col items-center text-center gap-1.5">
               <div className="flex items-center gap-2">
-                <span className="text-[18px]">🎯</span>
+                <TrendingUp size={18} color="#2F6B3F" />
                 <span className="font-['Open_Sans'] font-semibold text-[14px] text-[#2F6B3F]">Career Builders</span>
               </div>
               <span className="font-['Open_Sans'] text-[12px] text-[#4A4F4D]">Certified and ready to turn it into a career</span>
@@ -72,7 +63,7 @@ export default function Programs() {
             <div className="hidden sm:block w-px h-8 bg-[#E2E4E1]" />
             <div className="flex flex-col items-center text-center gap-1.5">
               <div className="flex items-center gap-2">
-                <span className="text-[18px]">🔄</span>
+                <Compass size={18} color="#1E4A2A" />
                 <span className="font-['Open_Sans'] font-semibold text-[14px] text-[#1E4A2A]">Career Pivoters</span>
               </div>
               <span className="font-['Open_Sans'] text-[12px] text-[#4A4F4D]">Changing careers — every trail is open to you</span>
@@ -81,84 +72,9 @@ export default function Programs() {
         </div>
       </section>
 
-      <section className="bg-[#FAFAF7] py-16 px-5 border-b border-[#E2E4E1]">
-        <div className="max-w-[800px] mx-auto bg-white rounded-2xl border border-[#E2E4E1] shadow-sm p-8 md:p-12">
-          <h2 className="font-['Fraunces'] font-bold text-[24px] text-[#2A2E2C] text-center mb-8">Which program is right for you?</h2>
-          
-          <div className="space-y-8">
-            <div>
-              <p className="font-['Open_Sans'] font-semibold text-[16px] text-[#2A2E2C] mb-4">1. Do you have a Salesforce certification?</p>
-              <div className="flex flex-wrap gap-3">
-                <button 
-                  onClick={() => setCertStatus('yes')}
-                  className={`px-6 py-3 rounded-lg font-['Open_Sans'] font-semibold text-[14px] transition-all ${certStatus === 'yes' ? 'bg-[#2F6B3F] text-white' : 'bg-[#FAFAF7] border border-[#E2E4E1] text-[#4A4F4D] hover:border-[#2F6B3F]'}`}
-                >
-                  Yes, I'm certified
-                </button>
-                <button 
-                  onClick={() => setCertStatus('inprogress')}
-                  className={`px-6 py-3 rounded-lg font-['Open_Sans'] font-semibold text-[14px] transition-all ${certStatus === 'inprogress' ? 'bg-[#2F6B3F] text-white' : 'bg-[#FAFAF7] border border-[#E2E4E1] text-[#4A4F4D] hover:border-[#2F6B3F]'}`}
-                >
-                  Studying for it now
-                </button>
-                <button 
-                  onClick={() => { setCertStatus('no'); setEmpStatus(null); }}
-                  className={`px-6 py-3 rounded-lg font-['Open_Sans'] font-semibold text-[14px] transition-all ${certStatus === 'no' ? 'bg-[#2F6B3F] text-white' : 'bg-[#FAFAF7] border border-[#E2E4E1] text-[#4A4F4D] hover:border-[#2F6B3F]'}`}
-                >
-                  No certification yet
-                </button>
-              </div>
-            </div>
-
-            {certStatus === 'yes' && (
-              <div className="animate-in fade-in slide-in-from-top-4">
-                <p className="font-['Open_Sans'] font-semibold text-[16px] text-[#2A2E2C] mb-4">2. Are you currently employed in a Salesforce role?</p>
-                <div className="flex flex-wrap gap-3">
-                  <button 
-                    onClick={() => setEmpStatus('yes')}
-                    className={`px-6 py-3 rounded-lg font-['Open_Sans'] font-semibold text-[14px] transition-all ${empStatus === 'yes' ? 'bg-[#2F6B3F] text-white' : 'bg-[#FAFAF7] border border-[#E2E4E1] text-[#4A4F4D] hover:border-[#2F6B3F]'}`}
-                  >
-                    Yes, I am
-                  </button>
-                  <button 
-                    onClick={() => setEmpStatus('no')}
-                    className={`px-6 py-3 rounded-lg font-['Open_Sans'] font-semibold text-[14px] transition-all ${empStatus === 'no' ? 'bg-[#2F6B3F] text-white' : 'bg-[#FAFAF7] border border-[#E2E4E1] text-[#4A4F4D] hover:border-[#2F6B3F]'}`}
-                  >
-                    No, not yet
-                  </button>
-                </div>
-              </div>
-            )}
-          </div>
-
-          {recommendation && (
-            <div className="mt-10 p-6 bg-[#E6F3EA] border border-[#2F6B3F]/20 rounded-xl animate-in fade-in zoom-in-95 duration-300">
-              <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-2">RECOMMENDED FOR YOU</div>
-              <div className="flex flex-col md:flex-row items-center gap-6">
-                <div className="flex-1">
-                  <h3 className="font-['Poppins'] font-bold text-[24px] text-[#1E4A2A] mb-2">
-                    {PROGRAMS.find(p => p.slug === recommendation).name}
-                  </h3>
-                  <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] mb-4">
-                    {PROGRAMS.find(p => p.slug === recommendation).whoFor}
-                  </p>
-                  <CTAButton 
-                    href={PROGRAMS.find(p => p.slug === recommendation).ctaHref}
-                    variant={recommendation === 'guided-trail' ? 'amber' : 'dark'}
-                    className={recommendation !== 'guided-trail' ? '!bg-[#2F6B3F] hover:!bg-[#1E4A2A]' : ''}
-                  >
-                    {PROGRAMS.find(p => p.slug === recommendation).cta}
-                  </CTAButton>
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
-      </section>
-
       <div className="bg-[#E6F3EA] border-y border-[#2F6B3F]/20 py-4 px-5 md:px-10">
         <div className="max-w-[1280px] mx-auto flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-center sm:text-left">
-          <span className="text-[18px]">🏅</span>
+          <Award size={18} color="#2F6B3F" />
           <p className="font-['Open_Sans'] text-[13px] text-[#2A2E2C] leading-[1.6]">
             <span className="font-semibold text-[#1E4A2A]">The Trail Forward Scholarship</span> — one fully funded Guided Trail seat per cohort for historically underserved populations in technology. No membership required to apply.
           </p>
@@ -172,8 +88,8 @@ export default function Programs() {
         <div className="max-w-[1280px] mx-auto">
           <div className="flex gap-6 overflow-x-auto pb-8 items-end snap-x snap-mandatory">
             {PROGRAMS.map(program => (
-              <div key={program.slug} className={`snap-start shrink-0 transition-opacity duration-300 ${recommendation && recommendation !== program.slug ? 'opacity-50 hover:opacity-100' : 'opacity-100'}`}>
-                <ProgramCard program={program} height={program.slug === recommendation || program.mostPopular ? "featured" : "standard"} />
+              <div key={program.slug} className="snap-start shrink-0">
+                <ProgramCard program={program} height={program.mostPopular ? "featured" : "standard"} />
               </div>
             ))}
           </div>

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { CTAButton } from "../components/CTAButton";
 import { PageMeta } from "../components/PageMeta";
+import { Check } from "lucide-react";
 
 export default function Donate() {
   useEffect(() => {
@@ -54,7 +55,7 @@ export default function Donate() {
               "As Cohort 1 launches, we will report scholarship and project outcomes transparently",
             ].map(item => (
               <li key={item} className="flex items-start gap-3">
-                <span className="font-bold text-[#2F6B3F] mt-0.5">✓</span>
+                <Check size={16} color="#2F6B3F" className="shrink-0 mt-0.5" />
                 <span className="font-['Open_Sans'] text-[14px] text-[#4A4F4D]">{item}</span>
               </li>
             ))}

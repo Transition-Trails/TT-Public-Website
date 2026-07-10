@@ -2,23 +2,24 @@ import { Link } from "wouter";
 import { CTAButton } from "../components/CTAButton";
 import { LINKS } from "../constants/links";
 import { PageMeta } from "../components/PageMeta";
+import { Award, Globe, Rocket } from "lucide-react";
 
 const ELIGIBILITY_CARDS = [
   {
     border: "#2F6B3F",
-    icon: "🎖️",
+    icon: <Award size={22} color="#2F6B3F" />,
     title: "Military Community",
     body: "Active duty military transitioning to civilian careers, veterans of any branch, and military spouses facing career disruption due to relocation or service commitment. Salesforce careers offer the stability and remote-work flexibility that the military community deserves.",
   },
   {
     border: "#2F6F7E",
-    icon: "🌎",
+    icon: <Globe size={22} color="#2F6F7E" />,
     title: "Underrepresented Groups in Tech",
     body: "Black and African American, Hispanic and Latino, Native American and Alaska Native, and Native Hawaiian and Pacific Islander individuals who are underrepresented in technology careers at every level — including within the Salesforce ecosystem.",
   },
   {
     border: "#7FAFC6",
-    icon: "🚀",
+    icon: <Rocket size={22} color="#7FAFC6" />,
     title: "Economic Barriers to Tech Entry",
     body: "First-generation college students and non-traditional learners, individuals experiencing unemployment or underemployment, and people in the process of career transition from low-wage industries. Cost should not be the reason someone cannot access a high-demand tech career.",
   },
@@ -151,7 +152,7 @@ export default function Scholarships() {
                 style={{ borderLeft: `4px solid ${card.border}` }}
               >
                 <div className="p-7">
-                  <div className="text-[26px] mb-3">{card.icon}</div>
+                  <div className="w-10 h-10 rounded-lg bg-[#EBF3EE] flex items-center justify-center mb-3">{card.icon}</div>
                   <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-3">{card.title}</h3>
                   <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">{card.body}</p>
                 </div>

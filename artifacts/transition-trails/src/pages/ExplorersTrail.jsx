@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { CTAButton } from "../components/CTAButton";
 import { LINKS } from "../constants/links";
 import { PageMeta } from "../components/PageMeta";
-import { Users, Target, BookOpen, MessageCircle, Mic, Zap, Gift, UserCheck, Compass, ClipboardList, Award, Briefcase, Star, TrendingUp, Calendar } from "lucide-react";
+import { Users, Target, BookOpen, MessageCircle, Mic, Zap, Gift, UserCheck, Compass, ClipboardList, Award, Briefcase, Star, TrendingUp, Calendar, Check, X } from "lucide-react";
 
 export default function ExplorersTrail() {
   return (
@@ -330,7 +330,7 @@ export default function ExplorersTrail() {
                     "Merch access (members-only items)",
                   ].map(item => (
                     <li key={item} className="flex gap-2.5 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
-                      <span className="text-[#7FAFC6] shrink-0 font-bold">✓</span>
+                      <Check size={16} color="#7FAFC6" className="shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -343,7 +343,7 @@ export default function ExplorersTrail() {
                     "Live webinars beyond Trail Talk",
                   ].map(item => (
                     <li key={item} className="flex gap-2.5 font-['Open_Sans'] text-[12px] text-[#8C8882]">
-                      <span className="shrink-0">×</span>
+                      <X size={16} color="#8C8882" className="shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -394,7 +394,7 @@ export default function ExplorersTrail() {
                     "First access to new Trail Missions before Community Pass members",
                   ].map(item => (
                     <li key={item} className="flex gap-2.5 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
-                      <span className="text-[#2F6B3F] shrink-0 font-bold">✓</span>
+                      <Check size={16} color="#2F6B3F" className="shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -441,7 +441,7 @@ export default function ExplorersTrail() {
                     "Available to anyone: current learner, GT graduate, ToM participant, or working admin at any career stage",
                   ].map(item => (
                     <li key={item} className="flex gap-2.5 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
-                      <span className="text-[#2F6F7E] shrink-0 font-bold">✓</span>
+                      <Check size={16} color="#2F6F7E" className="shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -646,9 +646,9 @@ export default function ExplorersTrail() {
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.6] mb-5">Support the lead coach, assist learners, participate in sessions, learn the coaching process from the inside.</p>
                 <div className="font-['Open_Sans'] font-semibold text-[11px] tracking-[1px] uppercase text-[#4A4F4D] mb-2">What you get</div>
                 <ul className="space-y-1.5 font-['Open_Sans'] text-[13px] text-[#2A2E2C] mb-5">
-                  <li className="flex gap-2"><span className="text-[#2F6B3F] shrink-0 font-bold">✓</span>1 month Explorer's Trail credit per cohort</li>
-                  <li className="flex gap-2"><span className="text-[#2F6B3F] shrink-0 font-bold">✓</span>Resume-worthy leadership experience</li>
-                  <li className="flex gap-2"><span className="text-[#2F6B3F] shrink-0 font-bold">✓</span>Stay connected to TT while building field experience</li>
+                  <li className="flex gap-2"><Check size={16} color="#2F6B3F" className="shrink-0 mt-0.5" />1 month Explorer's Trail credit per cohort</li>
+                  <li className="flex gap-2"><Check size={16} color="#2F6B3F" className="shrink-0 mt-0.5" />Resume-worthy leadership experience</li>
+                  <li className="flex gap-2"><Check size={16} color="#2F6B3F" className="shrink-0 mt-0.5" />Stay connected to TT while building field experience</li>
                 </ul>
                 <p className="font-['Open_Sans'] italic text-[12px] text-[#8C8882] leading-[1.6]">Trail of Mastery is not required — Coach's Assistant is available after Guided Trail completion.</p>
               </div>
@@ -668,8 +668,8 @@ export default function ExplorersTrail() {
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.6] mb-5">Lead a 12-week cohort with support. Primary responsibility for learner outcomes.</p>
                 <div className="font-['Open_Sans'] font-semibold text-[11px] tracking-[1px] uppercase text-[#4A4F4D] mb-2">What you get</div>
                 <ul className="space-y-1.5 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
-                  <li className="flex gap-2"><span className="text-[#2F6B3F] shrink-0 font-bold">✓</span>3 months Explorer's Trail credit per cohort</li>
-                  <li className="flex gap-2"><span className="text-[#2F6B3F] shrink-0 font-bold">✓</span>Future coaching stipend (coming soon)</li>
+                  <li className="flex gap-2"><Check size={16} color="#2F6B3F" className="shrink-0 mt-0.5" />3 months Explorer's Trail credit per cohort</li>
+                  <li className="flex gap-2"><Check size={16} color="#2F6B3F" className="shrink-0 mt-0.5" />Future coaching stipend (coming soon)</li>
                 </ul>
               </div>
             </div>
@@ -689,8 +689,8 @@ export default function ExplorersTrail() {
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.6] mb-5">Lead cohorts independently · Mentor Coach's Assistants · Lead RESOLVE Practitioner Series sessions</p>
                 <div className="font-['Open_Sans'] font-semibold text-[11px] tracking-[1px] uppercase text-[#4A4F4D] mb-2">What you get</div>
                 <ul className="space-y-1.5 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
-                  <li className="flex gap-2"><span className="text-[#2F6B3F] shrink-0 font-bold">✓</span>Compensation model in development</li>
-                  <li className="flex gap-2"><span className="text-[#2F6B3F] shrink-0 font-bold">✓</span>Complete 6 total cohorts → Lifetime Full Membership</li>
+                  <li className="flex gap-2"><Check size={16} color="#2F6B3F" className="shrink-0 mt-0.5" />Compensation model in development</li>
+                  <li className="flex gap-2"><Check size={16} color="#2F6B3F" className="shrink-0 mt-0.5" />Complete 6 total cohorts → Lifetime Full Membership</li>
                 </ul>
               </div>
             </div>

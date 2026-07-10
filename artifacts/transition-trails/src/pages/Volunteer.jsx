@@ -1,11 +1,12 @@
 import { Link } from "wouter";
 import { PageMeta } from "../components/PageMeta";
+import { Target, Users, BarChart2, Award, Leaf } from "lucide-react";
 
 const POSITIONS = [
   {
     accent: "#2F6B3F",
     badgeColor: "#2F6B3F",
-    icon: "🎯",
+    icon: <Target size={24} color="#2F6B3F" />,
     title: "Associate Coach",
     badge: "COACHING · VOLUNTEER",
     commitment: "⏱ 4–6 hrs/week · 12-week cohort commitment",
@@ -26,7 +27,7 @@ const POSITIONS = [
   {
     accent: "#7FAFC6",
     badgeColor: "#7FAFC6",
-    icon: "🤝",
+    icon: <Users size={24} color="#7FAFC6" />,
     title: "Coach's Assistant",
     badge: "COACHING · ENTRY LEVEL",
     commitment: "⏱ 2–4 hrs/week · 12-week cohort commitment",
@@ -47,7 +48,7 @@ const POSITIONS = [
   {
     accent: "#2F6F7E",
     badgeColor: "#2F6F7E",
-    icon: "📊",
+    icon: <BarChart2 size={24} color="#2F6F7E" />,
     title: "Volunteer CPA",
     badge: "FINANCE · NONPROFIT GOVERNANCE",
     commitment: "⏱ Flexible · Project-based · Remote",
@@ -75,17 +76,17 @@ const POSITIONS = [
 
 const WHY_CARDS = [
   {
-    icon: "🏅",
+    icon: <Award size={24} color="#2F6B3F" />,
     title: "Real credentials",
     body: "TT volunteer roles are structured, specific, and verifiable. Add them to your LinkedIn as a coaching, mentorship, or advisory role with a real organization doing real work.",
   },
   {
-    icon: "🌱",
+    icon: <Leaf size={24} color="#2F6B3F" />,
     title: "Community connection",
     body: "Volunteers become part of the TT ecosystem — connected to founders, coaches, program learners, and the broader Salesforce community. The relationships built here are the ones that matter in a Salesforce career.",
   },
   {
-    icon: "🎯",
+    icon: <Target size={24} color="#2F6B3F" />,
     title: "Direct mission impact",
     body: "Every coaching cohort you support puts someone closer to a career they could not access before. Every hour you contribute is a direct investment in economic mobility for Career Starters, Career Builders, and Career Pivoters.",
   },
@@ -159,7 +160,7 @@ export default function Volunteer() {
                   >
                     {pos.badge}
                   </div>
-                  <div className="text-[32px] mb-3">{pos.icon}</div>
+                  <div className="w-10 h-10 rounded-lg bg-[#EBF3EE] flex items-center justify-center mb-3">{pos.icon}</div>
                   <h3 className="font-['Poppins'] font-bold text-[22px] text-[#2A2E2C] mb-2">{pos.title}</h3>
                   <p className="font-['Open_Sans'] font-semibold text-[13px] text-[#4A4F4D] mb-5">{pos.commitment}</p>
 
@@ -216,7 +217,7 @@ export default function Volunteer() {
                 className="bg-white border border-[#E2E4E1] rounded-xl p-7"
                 style={{ borderLeft: "4px solid #2F6B3F" }}
               >
-                <div className="text-[26px] mb-3">{card.icon}</div>
+                <div className="w-10 h-10 rounded-lg bg-[#EBF3EE] flex items-center justify-center mb-3">{card.icon}</div>
                 <h3 className="font-['Open_Sans'] font-bold text-[15px] text-[#2F6B3F] mb-3">{card.title}</h3>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">{card.body}</p>
               </div>

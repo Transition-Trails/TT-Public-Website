@@ -1,12 +1,13 @@
 import { Link } from "wouter";
 import { PageMeta } from "../components/PageMeta";
 import { LINKS } from "../constants/links";
+import { Search, Settings, Wrench, Building2, Briefcase, Rocket, Check } from "lucide-react";
 
 const SERVICES = [
   {
     accent: "#2F6B3F",
     badge: "START HERE · FREE",
-    icon: "🔍",
+    icon: <Search size={24} color="#2F6B3F" />,
     title: "Free Org Assessment",
     tagline: "You know your system could do more. We help you see exactly where to start.",
     problem: "You know your Salesforce org could be doing more — but you do not know where the gaps are, what to prioritize, or what it would take to fix.",
@@ -19,7 +20,7 @@ const SERVICES = [
   {
     accent: "#2F6F7E",
     badge: "RETAINER · ONGOING",
-    icon: "⚙️",
+    icon: <Settings size={24} color="#2F6F7E" />,
     title: "Salesforce Administration Support",
     tagline: "Your team should focus on the mission — not the software.",
     problem: "Your team is too busy to manage updates, user permissions, data quality, and report building. Things are falling through the cracks and your Salesforce org is not keeping up with your organization.",
@@ -32,7 +33,7 @@ const SERVICES = [
   {
     accent: "#1E4A2A",
     badge: "PROJECT-BASED",
-    icon: "🏗️",
+    icon: <Wrench size={24} color="#1E4A2A" />,
     title: "Solution Design",
     tagline: "Build it right the first time.",
     problem: "You are outgrowing your current tools, facing a complex implementation, or need specific functionality built from scratch. You need someone who can think architecturally — not just configure what you ask for.",
@@ -195,7 +196,7 @@ export default function Consulting() {
               style={{ borderTop: "5px solid #2F6B3F" }}
             >
               <div className="p-8 flex flex-col flex-1">
-                <div className="text-[32px] mb-4">🏢</div>
+                <div className="w-10 h-10 rounded-lg bg-[#EBF3EE] flex items-center justify-center mb-4"><Building2 size={24} color="#2F6B3F" /></div>
                 <h3 className="font-['Poppins'] font-bold text-[22px] text-[#2A2E2C] mb-4">Nonprofits</h3>
                 <div className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65] space-y-4 mb-5 flex-1">
                   <p>Mission-driven organizations that need Salesforce to work better — whether you are starting from scratch, cleaning up a messy org, or designing a solution for a complex program.</p>
@@ -213,7 +214,7 @@ export default function Consulting() {
               style={{ borderTop: "5px solid #2F6F7E" }}
             >
               <div className="p-8 flex flex-col flex-1">
-                <div className="text-[32px] mb-4">💼</div>
+                <div className="w-10 h-10 rounded-lg bg-[#E8F3F6] flex items-center justify-center mb-4"><Briefcase size={24} color="#2F6F7E" /></div>
                 <h3 className="font-['Poppins'] font-bold text-[22px] text-[#2A2E2C] mb-4">Small to Midsize Businesses</h3>
                 <div className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65] space-y-4">
                   <p>Growing businesses that have outgrown their current Salesforce setup — or are implementing Salesforce for the first time — and need an experienced consulting partner who understands how to build solutions that scale with the organization.</p>
@@ -358,7 +359,7 @@ export default function Consulting() {
             className="rounded-xl p-7 md:p-8 flex flex-col md:flex-row gap-5"
             style={{ background: "#E6F3EA", borderLeft: "5px solid #2F6B3F" }}
           >
-            <div className="text-[28px] shrink-0">🚀</div>
+            <div className="w-10 h-10 rounded-lg bg-[#EBF3EE] flex items-center justify-center shrink-0"><Rocket size={22} color="#2F6B3F" /></div>
             <div>
               <h3 className="font-['Poppins'] font-semibold text-[16px] mb-3" style={{ color: "#1E4A2A" }}>Building our consulting team.</h3>
               <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65] mb-3">
@@ -396,7 +397,7 @@ export default function Consulting() {
                 <ul className="space-y-2.5 mb-5">
                   {ASSESSMENT_COVERS.map(item => (
                     <li key={item} className="flex gap-2 font-['Open_Sans'] text-[13px] text-[#4A4F4D]">
-                      <span className="font-bold text-[#2F6B3F] shrink-0">✓</span>{item}
+                      <Check size={16} color="#2F6B3F" className="shrink-0" />{item}
                     </li>
                   ))}
                 </ul>

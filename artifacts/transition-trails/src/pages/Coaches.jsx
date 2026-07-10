@@ -1,35 +1,36 @@
 import { useEffect } from "react";
 import { Link } from "wouter";
 import { PageMeta } from "../components/PageMeta";
+import { Briefcase, Lightbulb, ClipboardList, Leaf, Users, Sparkles, Target, Award, Check } from "lucide-react";
 
 const BENEFITS = [
   {
-    icon: "💼",
+    icon: <Briefcase size={24} color="#2F6B3F" />,
     title: "Leadership experience",
     body: "Managing a cohort of learners through 12 weeks of real project work develops team leadership, facilitation, and accountability skills that transfer directly to senior Salesforce roles.",
   },
   {
-    icon: "🧠",
+    icon: <Lightbulb size={24} color="#2F6B3F" />,
     title: "Deeper technical thinking",
     body: "Explaining why something works — not just how — forces a level of technical understanding that few professional development experiences match. Coaches consistently report that teaching makes them better at their own jobs.",
   },
   {
-    icon: "📋",
+    icon: <ClipboardList size={24} color="#2F6B3F" />,
     title: "Resume and LinkedIn credentials",
     body: "Coaching with TT is a verifiable, structured professional experience. Add it to your LinkedIn as a coaching and mentorship role with a real organization, real program, and real outcomes.",
   },
   {
-    icon: "🌱",
+    icon: <Leaf size={24} color="#2F6B3F" />,
     title: "Explorer's Trail membership",
     body: "Every coaching cohort earns membership credit — 1 month for Coach's Assistants, 3 months for Associate Coaches. Six cohorts earns Lifetime Annual membership. The community you are coaching in stays your community.",
   },
   {
-    icon: "🤝",
+    icon: <Users size={24} color="#2F6B3F" />,
     title: "The TT coaching community",
     body: "Coaches are part of TT's inner circle — connected to the founders, to other coaches, and to the broader TT professional ecosystem. The relationships built here are the ones that matter in a Salesforce career.",
   },
   {
-    icon: "🔮",
+    icon: <Sparkles size={24} color="#2F6B3F" />,
     title: "What is coming",
     body: "TT is developing a coaching stipend for committed coaches — a financial recognition that reflects the value coaches bring to the program. We will share details when the time is right.",
     dim: true,
@@ -205,7 +206,7 @@ export default function Coaches() {
             <div className="bg-white border-[1.5px] border-[#E2E4E1] rounded-2xl overflow-hidden flex flex-col" style={{ borderTop: "6px solid #2F6B3F" }}>
               <div className="p-8 flex flex-col flex-1">
                 <span className="font-['Open_Sans'] font-bold text-[11px] tracking-[1px] uppercase text-[#2F6B3F] mb-4">ENTRY LEVEL</span>
-                <div className="text-[32px] mb-4">🤝</div>
+                <div className="w-10 h-10 rounded-lg bg-[#EBF3EE] flex items-center justify-center mb-4"><Users size={24} color="#2F6B3F" /></div>
                 <h3 className="font-['Poppins'] font-bold text-[24px] text-[#2A2E2C] mb-2">Coach's Assistant</h3>
                 <p className="font-['Open_Sans'] font-semibold text-[15px] text-[#2F6B3F] mb-5">Support a lead coach through a 12-week Guided Trail cohort.</p>
                 <div className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65] space-y-4 mb-6 flex-1">
@@ -224,7 +225,7 @@ export default function Coaches() {
                       "Ready to commit to a full 12-week cohort",
                     ].map(item => (
                       <li key={item} className="flex gap-2 font-['Open_Sans'] text-[13px] text-[#4A4F4D]">
-                        <span className="text-[#2F6B3F] font-bold shrink-0">✓</span>{item}
+                        <Check size={16} color="#2F6B3F" className="shrink-0" />{item}
                       </li>
                     ))}
                   </ul>
@@ -240,7 +241,7 @@ export default function Coaches() {
                       "Ready to commit to a full 12-week cohort",
                     ].map(item => (
                       <li key={item} className="flex gap-2 font-['Open_Sans'] text-[13px] text-[#4A4F4D]">
-                        <span className="text-[#2F6B3F] font-bold shrink-0">✓</span>{item}
+                        <Check size={16} color="#2F6B3F" className="shrink-0" />{item}
                       </li>
                     ))}
                   </ul>
@@ -258,7 +259,7 @@ export default function Coaches() {
             <div className="bg-white border-[1.5px] border-[#E2E4E1] rounded-2xl overflow-hidden flex flex-col" style={{ borderTop: "6px solid #1E4A2A" }}>
               <div className="p-8 flex flex-col flex-1">
                 <span className="font-['Open_Sans'] font-bold text-[11px] tracking-[1px] uppercase text-[#1E4A2A] mb-4">EXPERIENCED</span>
-                <div className="text-[32px] mb-4">🎯</div>
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style={{background:"rgba(30,74,42,0.08)"}}><Target size={24} color="#1E4A2A" /></div>
                 <h3 className="font-['Poppins'] font-bold text-[24px] text-[#2A2E2C] mb-2">Associate Coach</h3>
                 <p className="font-['Open_Sans'] font-semibold text-[15px] text-[#1E4A2A] mb-5">Lead a 12-week cohort as the primary coach.</p>
                 <div className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65] space-y-4 mb-6 flex-1">
@@ -278,7 +279,7 @@ export default function Coaches() {
                       "Ready to commit to a full 12-week cohort",
                     ].map(item => (
                       <li key={item} className="flex gap-2 font-['Open_Sans'] text-[13px] text-[#4A4F4D]">
-                        <span className="font-bold shrink-0" style={{ color: "#1E4A2A" }}>✓</span>{item}
+                        <Check size={16} className="shrink-0" style={{ color: "#1E4A2A" }} />{item}
                       </li>
                     ))}
                   </ul>
@@ -296,7 +297,7 @@ export default function Coaches() {
 
           {/* Lifetime callout */}
           <div className="bg-[#2A2E2C] rounded-xl p-7 text-center">
-            <div className="text-[24px] mb-3">🏅</div>
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-3 mx-auto" style={{background:"rgba(255,255,255,0.12)"}}><Award size={22} color="rgba(255,255,255,0.80)" /></div>
             <p className="font-['Poppins'] font-semibold text-[16px] text-white mb-2">Complete 6 coaching cohorts → Lifetime Annual Explorer's Trail membership</p>
             <p className="font-['Open_Sans'] text-[13px]" style={{ color: "rgba(255,255,255,0.55)" }}>Our highest recognition. Reserved for coaches who have given sustained commitment back to the TT community.</p>
           </div>
@@ -319,7 +320,7 @@ export default function Coaches() {
                 style={{ borderTop: "4px solid #2F6B3F", opacity: b.dim ? 0.75 : 1 }}
               >
                 <div className="p-7">
-                  <div className="text-[28px] mb-3">{b.icon}</div>
+                  <div className="w-10 h-10 rounded-lg bg-[#EBF3EE] flex items-center justify-center mb-3">{b.icon}</div>
                   <h3 className="font-['Open_Sans'] font-bold text-[15px] text-[#2A2E2C] mb-2">{b.title}</h3>
                   <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">{b.body}</p>
                 </div>

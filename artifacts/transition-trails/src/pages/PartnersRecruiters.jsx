@@ -1,29 +1,30 @@
 import { useEffect } from "react";
 import { Link } from "wouter";
 import { PageMeta } from "../components/PageMeta";
+import { FolderOpen, Settings, Compass, Users, ClipboardList, Rocket, MessageCircle, Target, RefreshCw, MapPin } from "lucide-react";
 
 const DIFFERENTIATOR_CARDS = [
   {
     accent: "#2F6B3F",
-    icon: "🗂️",
+    icon: <FolderOpen size={24} color="#2F6B3F" />,
     title: "Real deliverables. Real client names.",
     body: "TT graduates have worked on real Salesforce implementations for real nonprofit organizations — not sandbox exercises. Every graduate has documented deliverables: user stories, release notes, test results, and post-production validation records. A hiring manager can review the actual work, not just the certification.",
   },
   {
     accent: "#2F6F7E",
-    icon: "⚙️",
+    icon: <Settings size={24} color="#2F6F7E" />,
     title: "CI/CD pipeline experience.",
     body: "Trail of Mastery graduates have worked inside a professional CI/CD pipeline — Salesforce DevOps Center and GitHub. They understand sandbox discipline, version control, pull request approval processes, and deployment gates. This is experience most certified admins have never had.",
   },
   {
     accent: "#2F6B3F",
-    icon: "🧭",
+    icon: <Compass size={24} color="#2F6B3F" />,
     title: "RESOLVE methodology training.",
     body: "Every TT graduate is trained in RESOLVE — TT's proprietary delivery methodology covering requirements, solution design, build, testing, and post-production validation. They arrive knowing how professional software delivery works — not just how to configure Salesforce.",
   },
   {
     accent: "#2F6F7E",
-    icon: "👥",
+    icon: <Users size={24} color="#2F6F7E" />,
     title: "Team role experience.",
     body: "Trail of Mastery graduates have worked in defined team roles — BA, PO, Admin, Advanced Admin, or Solutions Consultant — delivering solutions alongside other professionals. They understand handoffs, approval gates, and cross-role dependencies. They are immediately useful on a real Salesforce team.",
   },
@@ -31,22 +32,22 @@ const DIFFERENTIATOR_CARDS = [
 
 const BENEFITS = [
   {
-    icon: "📋",
+    icon: <ClipboardList size={24} color="#2F6B3F" />,
     title: "Graduate pipeline access",
     body: "Access to TT graduates who have opted into the recruiter network — available to any TT program graduate regardless of membership status. Candidates have self-selected into visibility, so every profile represents someone actively open to opportunities.",
   },
   {
-    icon: "🚀",
+    icon: <Rocket size={24} color="#2F6B3F" />,
     title: "Advance cohort notification",
     body: "Partner recruiters receive notification when a TT cohort is graduating — before candidates begin their public job search. First access to freshly trained, actively looking talent.",
   },
   {
-    icon: "🗂️",
+    icon: <FolderOpen size={24} color="#2F6B3F" />,
     title: "Portfolio access — candidate consented",
     body: "TT graduates who opt into the network can make their portfolio available to partner recruiters — specific projects, what they built, what role they played, what the outcome was. Review actual work product before making first contact.",
   },
   {
-    icon: "💬",
+    icon: <MessageCircle size={24} color="#2F6B3F" />,
     title: "Coach reference — candidate consented",
     body: "With candidate consent, an advanced TT coach who worked directly with the candidate can provide a professional reference — what was observed during the program, how the candidate handled real challenges, and what role they are best suited for. More specific and more credible than a LinkedIn endorsement.",
   },
@@ -54,17 +55,17 @@ const BENEFITS = [
 
 const CANDIDATE_PROFILES = [
   {
-    icon: "🧭",
+    icon: <Compass size={24} color="rgba(255,255,255,0.80)" />,
     title: "Career Starters",
     body: "Entry-level candidates who have earned their Salesforce certification through a structured program that included real project work. They are not just exam-ready — they have built something. Ideal for organizations looking to grow talent internally.",
   },
   {
-    icon: "🎯",
+    icon: <Target size={24} color="rgba(255,255,255,0.80)" />,
     title: "Career Builders",
     body: "Certified Salesforce professionals who have completed advanced program work — including CI/CD pipeline experience, team delivery, and real client engagements. Ready to contribute to a Salesforce team from day one without extensive onboarding.",
   },
   {
-    icon: "🔄",
+    icon: <RefreshCw size={24} color="rgba(255,255,255,0.80)" />,
     title: "Career Pivoters",
     body: "Professionals transitioning from other industries who bring significant prior career experience alongside their new Salesforce credentials. Many bring project management, client service, or domain expertise that makes them immediately effective in BA, PO, or consulting roles.",
   },
@@ -173,7 +174,7 @@ export default function PartnersRecruiters() {
                 style={{ borderTop: `5px solid ${card.accent}` }}
               >
                 <div className="p-7">
-                  <div className="text-[28px] mb-3">{card.icon}</div>
+                  <div className="w-10 h-10 rounded-lg bg-[#EBF3EE] flex items-center justify-center mb-3">{card.icon}</div>
                   <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-3">{card.title}</h3>
                   <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">{card.body}</p>
                 </div>
@@ -201,7 +202,7 @@ export default function PartnersRecruiters() {
                 className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden p-7"
                 style={{ borderLeft: "4px solid #2F6B3F" }}
               >
-                <div className="text-[24px] mb-3">{b.icon}</div>
+                <div className="w-10 h-10 rounded-lg bg-[#EBF3EE] flex items-center justify-center mb-3">{b.icon}</div>
                 <h3 className="font-['Open_Sans'] font-bold text-[15px] text-[#2F6B3F] mb-2">{b.title}</h3>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">{b.body}</p>
               </div>
@@ -213,7 +214,7 @@ export default function PartnersRecruiters() {
             className="rounded-xl p-6 flex gap-4 items-start"
             style={{ background: "#FEF3DB", border: "1px solid #F5A623" }}
           >
-            <span className="text-[24px] shrink-0">📌</span>
+            <MapPin size={20} color="#F5A623" className="shrink-0 mt-1" />
             <div>
               <p className="font-['Open_Sans'] font-bold text-[14px] text-[#2A2E2C] mb-1">Explorer's Trail Job Board — Coming Soon</p>
               <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65] mb-1">
@@ -253,7 +254,7 @@ export default function PartnersRecruiters() {
                 className="rounded-xl p-7"
                 style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)" }}
               >
-                <div className="text-[28px] mb-4">{p.icon}</div>
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style={{background:"rgba(255,255,255,0.08)"}}>{p.icon}</div>
                 <h3 className="font-['Poppins'] font-semibold text-[16px] text-white mb-3">{p.title}</h3>
                 <p className="font-['Open_Sans'] text-[13px] leading-[1.65]" style={{ color: "rgba(255,255,255,0.70)" }}>{p.body}</p>
               </div>

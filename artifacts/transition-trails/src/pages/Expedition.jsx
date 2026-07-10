@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 import { PageMeta } from "../components/PageMeta";
+import { Building2, Users, Package, Zap, Rocket, Target, Eye, Bell, Lock, Smartphone, Check } from "lucide-react";
 
 const STAGES = [
   {
     n: 1,
-    icon: "🏢",
+    icon: <Building2 size={24} color="#fff" />,
     color: "#2F6B3F",
     title: "Nonprofits are nominated",
     body: "Trail of Mastery and Guided Trail learners nominate nonprofits facing significant Salesforce challenges. The TT community votes on the shortlist. One organization is selected per Expedition.",
@@ -12,7 +13,7 @@ const STAGES = [
   },
   {
     n: 2,
-    icon: "👥",
+    icon: <Users size={24} color="#fff" />,
     color: "#2F6F7E",
     title: "Teams are assembled",
     body: "Guided Trail and Trail of Mastery participants register. Teams are formed across roles — BA, PO, Admin, Advanced Admin, Solutions Consultant — mirroring a real Salesforce delivery team.",
@@ -20,7 +21,7 @@ const STAGES = [
   },
   {
     n: 3,
-    icon: "📦",
+    icon: <Package size={24} color="#fff" />,
     color: "#F5A623",
     title: "The Trail Box ships",
     body: "Your collector's edition Expedition Trail Box arrives before the weekend. Everything inside is yours to open — except the sealed Expedition Brief. That waits.",
@@ -28,7 +29,7 @@ const STAGES = [
   },
   {
     n: 4,
-    icon: "⚡",
+    icon: <Zap size={24} color="#fff" />,
     color: "#2F6B3F",
     title: "72 hours. Clock starts Friday.",
     body: "Opening ceremony Friday evening — the Brief is opened together. Discovery begins. Saturday is the build — observers welcome. Sunday afternoon, every team presents their solution to the nonprofit, the sponsors, and the community. The nonprofit selects what gets implemented.",
@@ -36,7 +37,7 @@ const STAGES = [
   },
   {
     n: 5,
-    icon: "🚀",
+    icon: <Rocket size={24} color="#fff" />,
     color: "#2F6F7E",
     title: "The solution ships",
     body: "The selected solution goes into implementation. The nonprofit gets real Salesforce work completed. Every participant adds a documented Expedition deliverable to their portfolio. The Expedition patch is earned.",
@@ -47,28 +48,28 @@ const STAGES = [
 const PARTICIPANTS = [
   {
     accent: "#2F6B3F",
-    icon: "🎯",
+    icon: <Target size={24} color="#2F6B3F" />,
     title: "Learners",
     body: "Guided Trail graduates and Trail of Mastery learners form the build teams. You work in your role — BA, PO, Admin, Advanced Admin, or Solutions Consultant — delivering a real solution for a real nonprofit under a real time constraint. The most intense portfolio experience in any TT program.",
     badge: "GUIDED TRAIL + TRAIL OF MASTERY",
   },
   {
     accent: "#F5A623",
-    icon: "🏢",
+    icon: <Building2 size={24} color="#F5A623" />,
     title: "Nonprofits",
     body: "Apply to have your Salesforce challenge tackled by a coached team over a weekend. One organization selected per Expedition. The work that gets done is real — not a prototype, not a pitch deck. A solution designed for implementation.",
     badge: "APPLY TO BE SELECTED",
   },
   {
     accent: "#2F6F7E",
-    icon: "🤝",
+    icon: <Users size={24} color="#2F6F7E" />,
     title: "Sponsors",
     body: "The TT Expedition Series is built for sponsorship — a virtual event with a measurable nonprofit outcome, a documented participant community, and social sharing built into the experience from the moment the Trail Box ships. Get in early.",
     badge: "PRESENTING SPONSOR AVAILABLE",
   },
   {
     accent: "#7FAFC6",
-    icon: "👀",
+    icon: <Eye size={24} color="#7FAFC6" />,
     title: "Observers",
     body: "Explorer's Trail members, alumni, and the broader TT community are welcome to observe Saturday's build session and attend Sunday's closing presentations. Watch professional Salesforce delivery happen in real time.",
     badge: "EXPLORER'S TRAIL COMMUNITY",
@@ -135,7 +136,7 @@ const SPONSOR_TIERS = [
 
 const CTA_CARDS = [
   {
-    icon: "🔔",
+    icon: <Bell size={24} color="#F5A623" />,
     title: "Get Notified",
     body: "Be the first to know when Expedition I applications open — for learners, nonprofits, and sponsors.",
     buttonLabel: "Notify Me →",
@@ -143,7 +144,7 @@ const CTA_CARDS = [
     href: "mailto:hello@transitiontrails.org?subject=TT%20Expedition%20Series%20-%20Notify%20Me",
   },
   {
-    icon: "🏢",
+    icon: <Building2 size={24} color="#2F6B3F" />,
     title: "Nominate a Nonprofit",
     body: "Know a nonprofit facing a significant Salesforce challenge? Nominate them for Expedition I consideration.",
     buttonLabel: "Submit a Nomination →",
@@ -151,7 +152,7 @@ const CTA_CARDS = [
     href: "mailto:hello@transitiontrails.org?subject=TT%20Expedition%20-%20Nonprofit%20Nomination",
   },
   {
-    icon: "🤝",
+    icon: <Users size={24} color="#2F6F7E" />,
     title: "Sponsorship Inquiry",
     body: "Interested in sponsoring The TT Expedition Series? We are building the sponsorship program now and welcoming early conversations.",
     buttonLabel: "Inquire About Sponsorship →",
@@ -290,7 +291,7 @@ export default function Expedition() {
             className="max-w-[480px] mx-auto mb-10 text-center rounded-xl px-8 py-6"
             style={{ background: "rgba(245,166,35,0.08)", border: "1px solid rgba(245,166,35,0.25)" }}
           >
-            <div className="text-[28px] mb-3">🔒</div>
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-3 mx-auto" style={{background:"rgba(255,255,255,0.08)"}}><Lock size={22} color="rgba(255,255,255,0.70)" /></div>
             <h3 className="font-['Poppins'] font-semibold text-[16px] text-white mb-2">The Sealed Expedition Brief</h3>
             <p className="font-['Open_Sans'] text-[13px] leading-[1.65]" style={{ color: "rgba(255,255,255,0.55)" }}>
               Inside: the nonprofit. The challenge. The constraints. Opens at the ceremony — and then the clock starts.
@@ -302,7 +303,7 @@ export default function Expedition() {
             className="rounded-xl p-6 max-w-[640px] mx-auto text-center"
             style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.10)" }}
           >
-            <div className="text-[24px] mb-3">📱</div>
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-3 mx-auto" style={{background:"rgba(255,255,255,0.08)"}}><Smartphone size={22} color="rgba(255,255,255,0.70)" /></div>
             <p className="font-['Open_Sans'] text-[14px] leading-[1.65] mb-2" style={{ color: "rgba(255,255,255,0.55)" }}>
               Trail Box unboxings happen the week before each Expedition. When yours arrives — share it. Tag us. The community opens their boxes together.
             </p>
@@ -392,7 +393,7 @@ export default function Expedition() {
                 style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.10)", borderTop: `4px solid ${p.accent}` }}
               >
                 <div className="p-7 flex-1">
-                  <div className="text-[28px] mb-4">{p.icon}</div>
+                  <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style={{background: `${p.accent}20`}}>{p.icon}</div>
                   <h3 className="font-['Poppins'] font-semibold text-[16px] text-white mb-3">{p.title}</h3>
                   <p className="font-['Open_Sans'] text-[13px] leading-[1.65] mb-4" style={{ color: "rgba(255,255,255,0.60)" }}>{p.body}</p>
                   <span
@@ -447,7 +448,7 @@ export default function Expedition() {
                 <ul className="space-y-1.5 flex-1">
                   {tier.items.map(item => (
                     <li key={item} className="flex gap-2 font-['Open_Sans'] text-[12px]" style={{ color: "rgba(255,255,255,0.60)" }}>
-                      <span style={{ color: tier.border }} className="shrink-0 font-bold">✓</span>
+                      <Check size={12} className="shrink-0 mt-0.5" style={{ color: tier.border }} />
                       {item}
                     </li>
                   ))}
@@ -478,7 +479,7 @@ export default function Expedition() {
                 className="rounded-xl p-8 flex flex-col"
                 style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.10)" }}
               >
-                <div className="text-[32px] mb-4">{card.icon}</div>
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style={{background:"rgba(255,255,255,0.08)"}}>{card.icon}</div>
                 <h3 className="font-['Poppins'] font-semibold text-[16px] text-white mb-3">{card.title}</h3>
                 <p className="font-['Open_Sans'] text-[14px] leading-[1.65] flex-1" style={{ color: "rgba(255,255,255,0.55)" }}>{card.body}</p>
               </div>

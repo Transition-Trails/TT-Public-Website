@@ -1,32 +1,33 @@
 import { Link } from "wouter";
 import { PageMeta } from "../components/PageMeta";
 import { LINKS } from "../constants/links";
+import { Compass, Target, RefreshCw, Building2, Search, MessageCircle, Calendar, Rocket, Star, Check, Users, Mail } from "lucide-react";
 
 const WHO_CARDS = [
   {
     color: "#7FAFC6",
-    icon: "🧭",
+    icon: <Compass size={24} color="#7FAFC6" />,
     title: "Career Starters",
     subtitle: "Finding your direction",
     body: "Not sure if Salesforce is the right path for you? A coaching session helps you understand what a Salesforce career actually looks like, what it takes to get there, and whether it fits your goals, background, and timeline. No commitment required — just clarity.",
   },
   {
     color: "#2F6B3F",
-    icon: "🎯",
+    icon: <Target size={24} color="#2F6B3F" />,
     title: "Career Builders",
     subtitle: "Advancing your career",
     body: "You have the cert but the job search is not going the way you expected. Or you are in a role and want to move up. Coaching gives you a clear plan — resume review, interview prep, portfolio feedback, or technical skill development — whatever you need most right now.",
   },
   {
     color: "#1E4A2A",
-    icon: "🔄",
+    icon: <RefreshCw size={24} color="#1E4A2A" />,
     title: "Career Pivoters",
     subtitle: "Making the pivot",
     body: "You are coming from another career and the path forward is not obvious. Coaching helps you map your existing skills to Salesforce roles, identify the fastest route to job-ready, and build the confidence to make the transition with a plan behind you.",
   },
   {
     color: "#2F6F7E",
-    icon: "🏢",
+    icon: <Building2 size={24} color="#2F6F7E" />,
     title: "Nonprofit Professionals",
     subtitle: "Nonprofit technology leadership",
     body: "You lead a nonprofit and need Salesforce guidance — strategy, implementation direction, or just a sounding board for decisions your team is facing. Coaching with the TT team gives you expert nonprofit Salesforce perspective without a consulting retainer.",
@@ -36,7 +37,7 @@ const WHO_CARDS = [
 const PACKAGES = [
   {
     accent: "#2F6B3F",
-    icon: "🔍",
+    icon: <Search size={24} color="#2F6B3F" />,
     title: "Discovery Call",
     price: "Free",
     sub: "30 minutes · No commitment",
@@ -55,7 +56,7 @@ const PACKAGES = [
   },
   {
     accent: "#2F6F7E",
-    icon: "💬",
+    icon: <MessageCircle size={24} color="#2F6F7E" />,
     title: "Single Session",
     price: "$150",
     priceSuffix: "/hr",
@@ -78,7 +79,7 @@ const PACKAGES = [
   {
     accent: "#2F6B3F",
     badge: "POPULAR",
-    icon: "🗓️",
+    icon: <Calendar size={24} color="#2F6B3F" />,
     title: "3-Session Bundle",
     price: "$400",
     sub: "3 hours · Save $50 vs single sessions",
@@ -99,7 +100,7 @@ const PACKAGES = [
   },
   {
     accent: "#1E4A2A",
-    icon: "🚀",
+    icon: <Rocket size={24} color="#1E4A2A" />,
     title: "6-Session Bundle",
     price: "$750",
     sub: "6 hours · Best value · Save $150 vs single sessions",
@@ -289,7 +290,7 @@ export default function Coaching() {
                 className="bg-white border border-[#E2E4E1] rounded-xl p-7 flex flex-col"
                 style={{ borderLeft: `4px solid ${card.color}` }}
               >
-                <div className="text-[28px] mb-3">{card.icon}</div>
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-3" style={{background: `${card.color}15`}}>{card.icon}</div>
                 <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">{card.title}</h3>
                 <p className="font-['Open_Sans'] font-semibold text-[13px] mb-3" style={{ color: card.color }}>{card.subtitle}</p>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">{card.body}</p>
@@ -311,7 +312,7 @@ export default function Coaching() {
             className="max-w-[760px] mx-auto flex items-start gap-3 rounded-lg mb-10"
             style={{ background: "#FEF3DB", border: "1px solid #F5A623", padding: "16px 24px" }}
           >
-            <span className="text-[18px] shrink-0">⭐</span>
+            <Star size={18} color="#F5A623" className="shrink-0" />
             <p className="font-['Open_Sans'] text-[14px] text-[#2A2E2C] leading-[1.6]">
               Explorer's Trail members receive discounted coaching rates on all packages. Annual + Coaching members ($597/yr) receive one quarterly coaching session included with their membership.{" "}
               <Link href="/programs/explorers-trail" className="font-semibold text-[#2F6B3F] hover:underline">Learn about Explorer's Trail →</Link>
@@ -352,7 +353,7 @@ export default function Coaching() {
                   <ul className="space-y-2 mb-6">
                     {pkg.expect.map(item => (
                       <li key={item} className="flex gap-2 font-['Open_Sans'] text-[13px] text-[#4A4F4D]">
-                        <span className="font-bold shrink-0" style={{ color: pkg.accent }}>✓</span>{item}
+                        <Check size={16} className="shrink-0" style={{ color: pkg.accent }} />{item}
                       </li>
                     ))}
                   </ul>
@@ -469,7 +470,7 @@ export default function Coaching() {
               <ul className="space-y-3">
                 {WORKSHOP_TOPICS.map(item => (
                   <li key={item} className="flex gap-2 font-['Open_Sans'] text-[13px] text-[#4A4F4D]">
-                    <span className="text-[#2F6B3F] font-bold shrink-0">✓</span>{item}
+                    <Check size={16} color="#2F6B3F" className="shrink-0" />{item}
                   </li>
                 ))}
               </ul>
@@ -524,7 +525,7 @@ export default function Coaching() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
             {[
               {
-                icon: "📅",
+                icon: <Calendar size={24} color="#2F6B3F" />,
                 title: "Book with Angela",
                 body: "Career strategy, leadership development, big-picture roadmapping, and career progression.",
                 cta: "Schedule →",
@@ -532,7 +533,7 @@ export default function Coaching() {
                 bg: "#2F6B3F",
               },
               {
-                icon: "📧",
+                icon: <Mail size={24} color="#2F6F7E" />,
                 title: "Book with Kim or Hugh",
                 body: "Technical coaching, solution design, career pivot support, resume and interview prep, nonprofit Salesforce.",
                 cta: "Contact Us →",
@@ -540,7 +541,7 @@ export default function Coaching() {
                 bg: "#2F6F7E",
               },
               {
-                icon: "🤝",
+                icon: <Users size={24} color="rgba(255,255,255,0.70)" />,
                 title: "Not sure who to book with?",
                 body: "Tell us a little about your situation and we will match you with the right coach.",
                 cta: "Get Matched →",
@@ -553,7 +554,7 @@ export default function Coaching() {
                 className="rounded-xl p-7 flex flex-col"
                 style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)" }}
               >
-                <div className="text-[24px] mb-3">{opt.icon}</div>
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-3" style={{background:"rgba(255,255,255,0.12)"}}>{opt.icon}</div>
                 <h3 className="font-['Poppins'] font-semibold text-[15px] text-white mb-2">{opt.title}</h3>
                 <p className="font-['Open_Sans'] text-[13px] leading-[1.6] mb-6 flex-1" style={{ color: "rgba(255,255,255,0.60)" }}>{opt.body}</p>
                 <a

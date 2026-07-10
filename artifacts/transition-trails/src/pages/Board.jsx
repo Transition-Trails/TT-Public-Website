@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { FOUNDERS } from "../constants/founders";
 import { PageMeta } from "../components/PageMeta";
+import { Leaf, Users, ClipboardList, Check } from "lucide-react";
 
 const GOVERNANCE_CARDS = [
   {
@@ -41,17 +42,17 @@ const INVOLVEMENT_LIST = [
 
 const VALUE_CARDS = [
   {
-    icon: "🌱",
+    icon: <Leaf size={24} color="rgba(255,255,255,0.80)" />,
     title: "Ground-floor governance",
     body: "Join before the structure is set. Your expertise helps shape how TT grows — not just whether it grows.",
   },
   {
-    icon: "🤝",
+    icon: <Users size={24} color="rgba(255,255,255,0.80)" />,
     title: "Real mission alignment",
     body: "Workforce development, digital equity, nonprofit technology access — if these matter to you professionally and personally, TT's mission is worth governing.",
   },
   {
-    icon: "📋",
+    icon: <ClipboardList size={24} color="rgba(255,255,255,0.80)" />,
     title: "Professional development",
     body: "Nonprofit board service develops governance, fiduciary, and strategic oversight skills that transfer to every professional context. First-time board members are welcome.",
   },
@@ -190,7 +191,7 @@ export default function Board() {
               <ul className="space-y-3">
                 {EXPERTISE_LIST.map((item) => (
                   <li key={item} className="flex items-start gap-3 font-['Open_Sans'] text-[13px] text-[#4A4F4D]">
-                    <span className="text-[#2F6B3F] font-bold mt-0.5">✓</span>
+                    <Check size={16} color="#2F6B3F" className="shrink-0 mt-0.5" />
                     {item}
                   </li>
                 ))}
@@ -202,7 +203,7 @@ export default function Board() {
               <ul className="space-y-3">
                 {INVOLVEMENT_LIST.map((item) => (
                   <li key={item} className="flex items-start gap-3 font-['Open_Sans'] text-[13px] text-[#4A4F4D]">
-                    <span className="text-[#2F6F7E] font-bold mt-0.5">✓</span>
+                    <Check size={16} color="#2F6F7E" className="shrink-0 mt-0.5" />
                     {item}
                   </li>
                 ))}
@@ -233,7 +234,7 @@ export default function Board() {
                 className="rounded-xl p-7"
                 style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)" }}
               >
-                <div className="text-[26px] mb-3">{card.icon}</div>
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-3" style={{background:"rgba(255,255,255,0.08)"}}>{card.icon}</div>
                 <h3 className="font-['Poppins'] font-semibold text-[15px] text-white mb-3">{card.title}</h3>
                 <p className="font-['Open_Sans'] text-[13px] leading-[1.6]" style={{ color: "rgba(255,255,255,0.60)" }}>{card.body}</p>
               </div>

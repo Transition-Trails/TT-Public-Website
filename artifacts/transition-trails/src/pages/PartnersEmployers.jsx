@@ -1,11 +1,12 @@
 import { useEffect } from "react";
 import { Link } from "wouter";
 import { PageMeta } from "../components/PageMeta";
+import { GraduationCap, Users, Compass, Settings, ClipboardList, Check } from "lucide-react";
 
 const PARTNERSHIP_MODELS = [
   {
     accent: "#2F6B3F",
-    icon: "🎓",
+    icon: <GraduationCap size={24} color="#2F6B3F" />,
     title: "Individual Sponsored Seats",
     body: "Sponsor one or more of your employees or external candidates through any TT program. Employer-sponsored pricing is available for groups of 3 or more seats across Trail of Mastery tracks. We provide the invoice language your HR or L&D team needs to get this approved internally as a professional development investment.",
     pill: "L&D budget eligible · Invoice provided",
@@ -13,14 +14,14 @@ const PARTNERSHIP_MODELS = [
   },
   {
     accent: "#2F6F7E",
-    icon: "👥",
+    icon: <Users size={24} color="#2F6F7E" />,
     title: "Private Employer Cohort",
     body: "Bring a group of your employees through a dedicated TT cohort — a private program run exclusively for your team. Ideal for organizations that want to upskill a Salesforce team in a specific track (Admin, BA, PO, Advanced Admin, or Solutions Consultant) with cohort privacy and scheduling flexibility.\n\nPrivate cohort pricing and scheduling are discussed during a partnership conversation — contact us to explore what this looks like for your team.",
     pill: "Custom pricing · Custom scheduling",
   },
   {
     accent: "#1E4A2A",
-    icon: "🤝",
+    icon: <Users size={24} color="#1E4A2A" />,
     title: "Workforce Development Partnership",
     body: "Organizations committed to expanding technology access for underserved communities can partner with TT to sponsor scholarship seats, co-fund cohorts for specific populations, or structure a formal workforce development pipeline from your organization into Salesforce careers.\n\nThis model is particularly well-suited for nonprofits, government agencies, community foundations, and corporations with DEI workforce commitments. We will work with you to structure a partnership that meets your reporting and impact requirements.",
     pill: "DEI reporting · Impact documentation · Grant-eligible",
@@ -29,22 +30,22 @@ const PARTNERSHIP_MODELS = [
 
 const VALUE_CARDS = [
   {
-    icon: "🧭",
+    icon: <Compass size={24} color="#2F6B3F" />,
     title: "Professional delivery methodology",
     body: "Every TT program teaches RESOLVE — a structured delivery framework covering the full lifecycle from requirements through post-production validation. Your team arrives back with a shared professional language and methodology, not just new platform skills.",
   },
   {
-    icon: "⚙️",
+    icon: <Settings size={24} color="#2F6B3F" />,
     title: "CI/CD and DevOps experience",
     body: "Trail of Mastery graduates have worked inside a professional CI/CD pipeline — Salesforce DevOps Center and GitHub. If your team is moving toward a DevOps model or already operates one, TT graduates arrive pipeline-ready.",
   },
   {
-    icon: "📋",
+    icon: <ClipboardList size={24} color="#2F6B3F" />,
     title: "Real project portfolio",
     body: "Every TT graduate completes real project work — not simulations. Your sponsored employee returns with documented deliverables from real client engagements that demonstrate capability to any internal stakeholder.",
   },
   {
-    icon: "👥",
+    icon: <Users size={24} color="#2F6B3F" />,
     title: "Team role clarity",
     body: "Trail of Mastery cohorts are built around real team composition — BA, PO, Admin, Advanced Admin, Solutions Consultant. If you are sponsoring multiple employees across different roles, they will learn how their roles interact within a professional delivery team.",
   },
@@ -150,7 +151,7 @@ export default function PartnersEmployers() {
                 style={{ borderTop: `5px solid ${model.accent}` }}
               >
                 <div className="p-7 flex-1">
-                  <div className="text-[28px] mb-4">{model.icon}</div>
+                  <div className="w-10 h-10 rounded-lg bg-[#EBF3EE] flex items-center justify-center mb-4">{model.icon}</div>
                   <h3 className="font-['Poppins'] font-semibold text-[18px] text-[#2A2E2C] mb-4">{model.title}</h3>
                   <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65] whitespace-pre-line mb-5">{model.body}</p>
                   <span
@@ -193,7 +194,7 @@ export default function PartnersEmployers() {
                 className="bg-white border border-[#E2E4E1] rounded-xl p-7"
                 style={{ borderLeft: "4px solid #2F6B3F" }}
               >
-                <div className="text-[24px] mb-3">{card.icon}</div>
+                <div className="w-10 h-10 rounded-lg bg-[#EBF3EE] flex items-center justify-center mb-3">{card.icon}</div>
                 <h3 className="font-['Open_Sans'] font-bold text-[15px] text-[#2F6B3F] mb-2">{card.title}</h3>
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">{card.body}</p>
               </div>
@@ -217,7 +218,7 @@ export default function PartnersEmployers() {
                 "Employer-sponsored pricing for groups of 3 or more seats across Trail of Mastery tracks",
               ].map(item => (
                 <li key={item} className="flex gap-2">
-                  <span className="text-[#2F6B3F] font-bold shrink-0">✓</span>
+                  <Check size={16} color="#2F6B3F" className="shrink-0" />
                   {item}
                 </li>
               ))}

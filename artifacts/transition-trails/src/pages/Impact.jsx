@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { CTAButton } from "../components/CTAButton";
 import { PageMeta } from "../components/PageMeta";
 import { LINKS } from "../constants/links";
+import { User, Award, Building2, GraduationCap, BarChart2, Briefcase, Check } from "lucide-react";
 
 export default function Impact() {
   return (
@@ -72,10 +73,10 @@ export default function Impact() {
           <div className="mt-10 rounded-xl border-l-4 border-[#2F6B3F] bg-white p-8">
             <div className="font-['Poppins'] font-bold text-[18px] text-[#2A2E2C] mb-4">What makes Cohort 1 significant</div>
             <ul className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.7] space-y-2">
-              <li className="flex gap-3"><span className="text-[#2F6B3F] font-bold mt-0.5">✓</span> First full-scale delivery of the Guided Trail practicum</li>
-              <li className="flex gap-3"><span className="text-[#2F6B3F] font-bold mt-0.5">✓</span> First cohort with named, paying learners and formal scholarship seats</li>
-              <li className="flex gap-3"><span className="text-[#2F6B3F] font-bold mt-0.5">✓</span> First cohort with volunteer coaches and a nonprofit client project</li>
-              <li className="flex gap-3"><span className="text-[#2F6B3F] font-bold mt-0.5">✓</span> First cohort from which we will publish verifiable outcomes</li>
+              <li className="flex gap-3"><Check size={16} color="#2F6B3F" className="shrink-0 mt-0.5" /> First full-scale delivery of the Guided Trail practicum</li>
+              <li className="flex gap-3"><Check size={16} color="#2F6B3F" className="shrink-0 mt-0.5" /> First cohort with named, paying learners and formal scholarship seats</li>
+              <li className="flex gap-3"><Check size={16} color="#2F6B3F" className="shrink-0 mt-0.5" /> First cohort with volunteer coaches and a nonprofit client project</li>
+              <li className="flex gap-3"><Check size={16} color="#2F6B3F" className="shrink-0 mt-0.5" /> First cohort from which we will publish verifiable outcomes</li>
             </ul>
           </div>
 
@@ -97,15 +98,15 @@ export default function Impact() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {[
-              { icon: "👤", label: "Learners Supported", desc: "Total participants enrolled, by cohort" },
-              { icon: "🏅", label: "Scholarships Awarded", desc: "Number of scholarship seats and total value funded" },
-              { icon: "🏢", label: "Nonprofit Projects Completed", desc: "Real client projects delivered by cohort learners" },
-              { icon: "🎓", label: "Volunteer Coaches", desc: "Practitioners contributing time as project coaches" },
-              { icon: "📊", label: "Salesforce Skills Gained", desc: "Certifications and skills completed during the program" },
-              { icon: "💼", label: "Career Outcomes", desc: "Job placement and career progression — tracked at 90 days and 1 year post-graduation" },
+              { icon: <User size={24} color="#2F6B3F" />, label: "Learners Supported", desc: "Total participants enrolled, by cohort" },
+              { icon: <Award size={24} color="#2F6B3F" />, label: "Scholarships Awarded", desc: "Number of scholarship seats and total value funded" },
+              { icon: <Building2 size={24} color="#2F6B3F" />, label: "Nonprofit Projects Completed", desc: "Real client projects delivered by cohort learners" },
+              { icon: <GraduationCap size={24} color="#2F6B3F" />, label: "Volunteer Coaches", desc: "Practitioners contributing time as project coaches" },
+              { icon: <BarChart2 size={24} color="#2F6B3F" />, label: "Salesforce Skills Gained", desc: "Certifications and skills completed during the program" },
+              { icon: <Briefcase size={24} color="#2F6B3F" />, label: "Career Outcomes", desc: "Job placement and career progression — tracked at 90 days and 1 year post-graduation" },
             ].map(({ icon, label, desc }) => (
               <div key={label} className="flex gap-4 p-5 bg-[#FAFAF7] rounded-xl border border-[#E2E4E1]">
-                <div className="text-[24px] mt-0.5 shrink-0">{icon}</div>
+                <div className="w-10 h-10 rounded-lg bg-[#EBF3EE] flex items-center justify-center shrink-0">{icon}</div>
                 <div>
                   <div className="font-['Poppins'] font-semibold text-[15px] text-[#2A2E2C] mb-1">{label}</div>
                   <div className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.5]">{desc}</div>
