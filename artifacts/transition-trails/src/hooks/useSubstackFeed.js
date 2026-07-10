@@ -43,32 +43,46 @@ export function useSubstackFeed() {
           // Try to get image from enclosure, thumbnail, or content
           let image = null;
 
-          // Try enclosure first (most reliable)
+          // Try enclosure first (most reliable for actual post images)
           if (item.enclosure && item.enclosure.link && item.enclosure.type && item.enclosure.type.startsWith("image/")) {
             image = item.enclosure.link;
           } else if (item.thumbnail && item.thumbnail !== "") {
-            // Reject Substack default fallbacks - twitter cards, subscribe cards, logo/badge images
+            const thumb = item.thumbnail;
+
+            // Reject ALL Substack default/fallback images
             const isDefaultFallback =
-              item.thumbnail.includes("twitter.jpg") ||
-              item.thumbnail.includes("subscribe-card") ||
-              item.thumbnail.includes("twitter-card") ||
-              item.thumbnail.includes("substack.com/twitter") ||
-              item.thumbnail.includes("avatars") ||
-              item.thumbnail.includes("AppIcon") ||
-              item.thumbnail.includes("Badge");
+              thumb.includes("twitter.jpg") ||
+              thumb.includes("subscribe-card") ||
+              thumb.includes("twitter-card") ||
+              thumb.includes("substack.com/twitter") ||
+              thumb.includes("avatars") ||
+              thumb.includes("AppIcon") ||
+              thumb.includes("Badge") ||
+              thumb.includes("post_preview") ||
+              thumb.includes("/twitter/") ||
+              thumb.includes("version=") ||
+              thumb.includes("subscribe");
 
             if (!isDefaultFallback) {
-              image = item.thumbnail;
+              // Only use if it's a real media image (from substack-post-media or similar)
+              const isRealPostImage =
+                thumb.includes("substack-post-media") ||
+                thumb.includes("amazonaws.com") ||
+                thumb.includes("uploadthing") ||
+                (thumb.includes("substackcdn.com") && thumb.includes("public%2Fimages"));
+
+              if (isRealPostImage) {
+                image = thumb;
+              }
             }
           }
 
-          // If we have a Substack CDN proxied URL, extract the original image URL
-          if (image && image.includes("substackcdn.com/image/fetch")) {
+          // If we have a Substack CDN proxied URL pointing to a real S3 image, extract the original
+          if (image && image.includes("substackcdn.com/image/fetch") && image.includes("substack-post-media")) {
             const encodedPart = image.split("https%3A%2F%2F");
             if (encodedPart.length > 1) {
               const decoded = "https://" + decodeURIComponent(encodedPart[encodedPart.length - 1]);
-              // Only use if it looks like a real image URL
-              if (decoded.match(/\.(jpg|jpeg|png|webp|gif)($|\?)/i)) {
+              if (decoded.match(/\.(jpg|jpeg|png|webp|gif|avif)($|\?)/i)) {
                 image = decoded;
               }
             }
