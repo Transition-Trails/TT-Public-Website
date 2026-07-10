@@ -225,27 +225,6 @@ export default function Volunteer() {
           </div>
         </div>
       </section>
-
-      {/* Board callout */}
-      <section className="bg-[#2A2E2C] py-[60px] px-5 md:px-10">
-        <div className="max-w-[800px] mx-auto text-center flex flex-col items-center">
-          <div className="font-['Open_Sans'] font-semibold text-[11px] tracking-[2px] uppercase mb-4" style={{ color: "rgba(255,255,255,0.45)" }}>
-            BOARD MEMBERSHIP
-          </div>
-          <h2 className="font-['Poppins'] font-bold text-[28px] text-white mb-5">
-            Looking to make a deeper commitment?
-          </h2>
-          <p className="font-['Open_Sans'] text-[16px] leading-[1.65] max-w-[680px] mb-8" style={{ color: "rgba(255,255,255,0.70)" }}>
-            Transition Trails is actively recruiting board members who can help advance our mission, strengthen our governance, and bring new perspectives to our leadership. If you are a senior professional with nonprofit governance experience, legal, financial, or technology expertise — we would love to talk.
-          </p>
-          <Link
-            href="/board"
-            className="inline-flex items-center justify-center h-12 px-7 rounded-lg font-['Open_Sans'] font-semibold text-[15px] bg-[#F5A623] text-[#2A2E2C] hover:bg-[#D4890A] transition-colors"
-          >
-            Learn about joining our board →
-          </Link>
-        </div>
-      </section>
     </div>
   );
 }
