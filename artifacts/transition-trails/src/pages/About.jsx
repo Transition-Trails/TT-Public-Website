@@ -146,8 +146,9 @@ export default function About() {
                     "2019 — First call. CLYLP reaches out about Salesforce NPSP implementation.",
                     "2019–2022 — First project delivered. Hugh builds real experience. The model proves itself.",
                     "2022 — Transition Trails incorporated as a 501(c)(3). Kel establishes the legal and financial foundation.",
-                    "2022 — Hartford Promise becomes our second client. The network begins.",
+                    "2022 — Hartford Promise becomes our second client. Testing begins on how to best deliver our program.",
                     "2025 — Guided Trail Cohort 0 completes. The program is ready.",
+                    "2026 — Global One Urban Farming becomes our third client. Digital Compass launches as our nonprofit membership program.",
                   ].map((item) => (
                     <div key={item} className="flex gap-3">
                       <div className="w-2 h-2 rounded-full bg-[#2F6B3F] mt-2 flex-shrink-0" />
