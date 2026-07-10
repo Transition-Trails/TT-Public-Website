@@ -87,7 +87,7 @@ export default function DigitalCompass() {
     <div className="flex flex-col min-h-screen">
       <PageMeta
         title="Digital Compass | Nonprofit Salesforce Support Membership | Transition Trails"
-        description="Ongoing Salesforce support for nonprofits. Weekly office hours, project delivery, and expert guidance from $149/month. Led by Kim Barnes, Co-Founder of Transition Trails. Free assessment available."
+        description="Ongoing Salesforce support for nonprofits. Weekly office hours, project delivery, and expert guidance from $149/month. Free assessment available."
         path="/programs/digital-compass"
       />
 
@@ -126,7 +126,6 @@ export default function DigitalCompass() {
 
               <div className="font-['Open_Sans'] text-[17px] leading-[1.65] max-w-[720px] space-y-4 mb-10" style={{ color: "rgba(255,255,255,0.72)" }}>
                 <p>Traditional Salesforce consulting runs $75–$150 per hour, or $1,000–$3,000 per month in retainer fees. Digital Compass delivers consistent, expert-level Salesforce support for a fraction of that cost — with weekly access, real project delivery, and a team that understands how nonprofits actually work.</p>
-                <p>Digital Compass is led by Kim Barnes, Co-Founder and COO of Transition Trails.</p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -193,19 +192,10 @@ export default function DigitalCompass() {
             ))}
           </div>
 
-          {/* ROI callout */}
-          <div
-            className="rounded-xl p-7 flex flex-col md:flex-row items-center gap-8"
-            style={{ background: "#E0F0F3" }}
-          >
-            <div className="shrink-0 text-center md:text-left">
-              <div className="font-['Poppins'] font-bold text-[28px] text-[#2F6F7E]">1/7th the cost</div>
-              <div className="font-['Open_Sans'] text-[14px] text-[#4A4F4D]">of the cheapest traditional Salesforce consulting retainer</div>
-            </div>
-            <div className="hidden md:block w-px h-12 bg-[#2F6F7E]/20 shrink-0" />
-            <p className="font-['Open_Sans'] italic text-[14px] text-[#4A4F4D] leading-[1.65] max-w-[480px]">
-              Full Partner at $749/mo vs. a freelance Salesforce consultant at $45–$150/hr × 10hrs/month = $450–$1,500. Digital Compass delivers more consistent value at lower or comparable cost.
-            </p>
+          <div className="mt-8 bg-[#E0F0F3] rounded-xl p-8 text-center">
+            <p className="font-['Open_Sans'] text-[13px] font-semibold uppercase tracking-[0.12em] text-[#2F6F7E] mb-3">WHAT $149 GETS YOU</p>
+            <p className="font-['Fraunces'] font-bold text-[clamp(1.5rem,3vw,2rem)] text-[#1E4F5C] leading-tight mb-4">"Less than a single hour of traditional Salesforce consulting — and you get ongoing access all month."</p>
+            <p className="font-['Open_Sans'] text-[14px] text-[#2F6F7E]">Traditional Salesforce consulting runs $150–$300/hr. At Digital Compass Entry tier, $149/month gives your team consistent, expert support without the retainer.</p>
           </div>
 
           <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65] mt-8">
@@ -396,20 +386,6 @@ export default function DigitalCompass() {
             </div>
           </div>
 
-          {/* Annual savings callout */}
-          <div className="rounded-xl p-6 text-center" style={{ background: "#E6F3EA" }}>
-            <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] mb-4">The Community tier is available month-to-month at $149/mo. The Guided and Full Partner tiers are annual service contracts at $3,490/yr and $7,490/yr respectively.</p>
-            <div className="flex flex-wrap justify-center gap-3">
-              {["Entry: $1,490/yr", "Guided: $3,490/yr", "Full Partner: $7,490/yr"].map(p => (
-                <span
-                  key={p}
-                  className="bg-white border border-[#E2E4E1] font-['Open_Sans'] font-semibold text-[13px] text-[#2A2E2C] rounded-lg px-4 py-1.5"
-                >
-                  {p}
-                </span>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 
@@ -439,7 +415,7 @@ export default function DigitalCompass() {
         </div>
       </section>
 
-      {/* Hartford Promises Testimonial */}
+      {/* Hartford Promise Testimonial */}
       <section className="bg-white px-5 md:px-10 py-12">
         <div className="max-w-[1100px] mx-auto">
           <div
@@ -460,7 +436,7 @@ export default function DigitalCompass() {
             >
               Transition Trails Salesforce Experts go beyond! After working with the team, our productivity and data accuracy soared — and we felt supported every step of the way.
             </p>
-            <div className="font-['Open_Sans'] font-semibold text-[14px] text-[#2F6F7E]">Hartford Promises</div>
+            <div className="font-['Open_Sans'] font-semibold text-[14px] text-[#2F6F7E]">Hartford Promise</div>
             <div className="font-['Open_Sans'] text-[12px] text-[#4A4F4D]">Nonprofit Partner · Digital Compass Member · Hartford, CT</div>
           </div>
         </div>
