@@ -42,13 +42,36 @@ export function useSubstackFeed() {
         const mapped = data.items.map(item => {
           // Try to get image from enclosure, thumbnail, or content
           let image = null;
-          if (item.enclosure && item.enclosure.link) {
+
+          // Try enclosure first (most reliable)
+          if (item.enclosure && item.enclosure.link && item.enclosure.type && item.enclosure.type.startsWith("image/")) {
             image = item.enclosure.link;
-          } else if (item.thumbnail && item.thumbnail !== "" && !item.thumbnail.includes("substack.com/twitter")) {
-            image = item.thumbnail;
-          } else {
-            const imgMatch = (item.content || "").match(/<img[^>]+src="([^"]+)"/);
-            if (imgMatch) image = imgMatch[1];
+          } else if (item.thumbnail && item.thumbnail !== "") {
+            // Reject Substack default fallbacks - twitter cards, subscribe cards, logo/badge images
+            const isDefaultFallback =
+              item.thumbnail.includes("twitter.jpg") ||
+              item.thumbnail.includes("subscribe-card") ||
+              item.thumbnail.includes("twitter-card") ||
+              item.thumbnail.includes("substack.com/twitter") ||
+              item.thumbnail.includes("avatars") ||
+              item.thumbnail.includes("AppIcon") ||
+              item.thumbnail.includes("Badge");
+
+            if (!isDefaultFallback) {
+              image = item.thumbnail;
+            }
+          }
+
+          // If we have a Substack CDN proxied URL, extract the original image URL
+          if (image && image.includes("substackcdn.com/image/fetch")) {
+            const encodedPart = image.split("https%3A%2F%2F");
+            if (encodedPart.length > 1) {
+              const decoded = "https://" + decodeURIComponent(encodedPart[encodedPart.length - 1]);
+              // Only use if it looks like a real image URL
+              if (decoded.match(/\.(jpg|jpeg|png|webp|gif)($|\?)/i)) {
+                image = decoded;
+              }
+            }
           }
           return {
             id: slugify(item.title),
