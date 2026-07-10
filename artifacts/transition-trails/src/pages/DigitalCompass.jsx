@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { motion } from "framer-motion";
 import { PageMeta } from "../components/PageMeta";
 import { LINKS } from "../constants/links";
 import { Calendar, BookOpen, Users, Lightbulb, TrendingUp, Rocket, ClipboardList, Zap, Check, X } from "lucide-react";
@@ -213,18 +214,24 @@ export default function DigitalCompass() {
             <h2 className="font-['Poppins'] font-bold text-[34px] text-[#2A2E2C]">Every Digital Compass member gets this.</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {UNIVERSAL_BENEFITS.map(b => (
-              <div
+          <div className="max-w-4xl mx-auto">
+            {UNIVERSAL_BENEFITS.map((b, i) => (
+              <motion.div
                 key={b.title}
-                className="bg-white border border-[#E2E4E1] rounded-xl p-7 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.07 }}
+                className={`grid grid-cols-[auto_1fr] gap-x-6 items-start py-6${i < UNIVERSAL_BENEFITS.length - 1 ? " border-b border-[#E2E4E1]" : ""}`}
               >
-                <div className={`w-10 h-10 rounded-lg ${b.iconBg} flex items-center justify-center mb-3`}>
+                <div className="w-12 h-12 rounded-lg flex items-center justify-center bg-[#E8F3F6] shrink-0">
                   {b.icon}
                 </div>
-                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-3">{b.title}</h3>
-                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">{b.body}</p>
-              </div>
+                <div className="flex flex-col gap-1">
+                  <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C]">{b.title}</h3>
+                  <p className="font-['Open_Sans'] text-[14px] text-[#6B7280] leading-relaxed">{b.body}</p>
+                </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -241,101 +248,38 @@ export default function DigitalCompass() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-6">
-            {/* Tier 1 — Entry Community */}
-            <div className="bg-white border-[1.5px] border-[#E2E4E1] rounded-2xl overflow-hidden flex flex-col" style={{ borderTop: "6px solid #2F6F7E" }}>
-              <div className="p-8 flex flex-col flex-1">
-                <span className="font-['Open_Sans'] font-bold text-[11px] tracking-[1px] uppercase text-[#2F6F7E] mb-3">ENTRY</span>
-                <h3 className="font-['Poppins'] font-bold text-[24px] text-[#2A2E2C] mb-4">Community</h3>
-                <div className="flex items-baseline gap-1 mb-1">
-                  <span className="font-['Poppins'] font-bold text-[36px] text-[#2F6F7E]">$149</span>
-                  <span className="font-['Open_Sans'] text-[14px] text-[#4A4F4D]">/month</span>
+          <div className="flex flex-col gap-4 max-w-4xl mx-auto">
+
+            {/* Entry — Community */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0 }}
+              className="bg-white rounded-2xl shadow-sm"
+              style={{ border: "1.5px solid #E2E4E1", borderLeft: "4px solid #7FAFC6" }}
+            >
+              <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr_180px_160px] gap-6 items-center p-6">
+                <div>
+                  <div className="text-[10px] font-semibold uppercase tracking-[0.12em] text-[#6B7280] mb-1">ENTRY</div>
+                  <div className="font-['Fraunces'] font-bold text-[20px] text-[#2A2E2C]">Community</div>
                 </div>
-                <p className="font-['Open_Sans'] text-[12px] text-[#8C8882] mb-6">$1,490/yr — 2 months free</p>
-
-                <div className="h-px bg-[#E2E4E1] mb-5" />
-
-                <ul className="space-y-2.5 mb-5 flex-1">
+                <ul className="space-y-2">
                   {[
+                    "Up to 3 team members included",
                     "Weekly group Office Hours session (shared)",
                     "TrailKit content library",
                     "Members-only Slack community",
-                    "Month-to-month — cancel anytime",
-                  ].map(item => (
-                    <li key={item} className="flex gap-2 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
-                      <CheckMark />{item}
+                  ].map(f => (
+                    <li key={f} className="flex items-start gap-2 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
+                      <Check size={14} color="#2F6B3F" className="shrink-0 mt-0.5" />{f}
                     </li>
                   ))}
                 </ul>
-
-                <div className="h-px bg-[#E2E4E1] mb-4" />
-
-                <ul className="space-y-2 mb-6">
-                  {[
-                    "Private office hours session",
-                    "Project requests",
-                    "Priority learner team matching",
-                    "Monthly strategic review call",
-                  ].map(item => (
-                    <li key={item} className="flex gap-2 font-['Open_Sans'] text-[12px] text-[#8C8882]">
-                      <CrossMark />{item}
-                    </li>
-                  ))}
-                </ul>
-
-                <Link
-                  href="/nonprofit-assessment"
-                  className="w-full h-[44px] rounded-[8px] font-['Open_Sans'] font-semibold text-[14px] flex items-center justify-center transition-colors"
-                  style={{ background: "#E0F0F3", color: "#2F6F7E" }}
-                >
-                  Get Started →
-                </Link>
-                <p className="font-['Open_Sans'] text-[12px] text-center text-[#4A4F4D] mt-3">
-                  <Link href="/nonprofit-assessment" className="text-[#2F6F7E] hover:underline">Start with a free assessment →</Link>
-                </p>
-              </div>
-            </div>
-
-            {/* Tier 2 — Mid Guided */}
-            <div className="bg-white border-[2px] border-[#2F6B3F] rounded-2xl overflow-hidden flex flex-col" style={{ borderTop: "6px solid #2F6B3F" }}>
-              <div className="p-8 flex flex-col flex-1">
-                <span className="font-['Open_Sans'] font-bold text-[11px] tracking-[1px] uppercase text-[#2F6B3F] mb-3">MID · GUIDED</span>
-                <h3 className="font-['Poppins'] font-bold text-[24px] text-[#2A2E2C] mb-4">Guided</h3>
-                <div className="flex items-baseline gap-1 mb-1">
-                  <span className="font-['Poppins'] font-bold text-[36px] text-[#2F6B3F]">$3,490</span>
-                  <span className="font-['Open_Sans'] text-[14px] text-[#4A4F4D]">/year</span>
+                <div className="text-center">
+                  <div className="font-['Fraunces'] font-bold text-[26px] text-[#2A2E2C]">$149</div>
+                  <div className="font-['Open_Sans'] text-[11px] text-[#6B7280] mt-1">/month · or $1,490/yr</div>
                 </div>
-                <p className="font-['Open_Sans'] text-[12px] text-[#8C8882] mb-6">Annual service contract — billed yearly</p>
-
-                <div className="h-px bg-[#E2E4E1] mb-5" />
-
-                <ul className="space-y-2.5 mb-5 flex-1">
-                  {[
-                    "Everything in Community",
-                    "Weekly group Office Hours session (shared)",
-                    "1 monthly private Office Hours session — your team only",
-                    "1 project request per quarter — must fit within standard quarterly project scope. Requests exceeding scope will be discussed as a consulting engagement.",
-                  ].map(item => (
-                    <li key={item} className="flex gap-2 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
-                      <CheckMark />{item}
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="h-px bg-[#E2E4E1] mb-4" />
-
-                <ul className="space-y-2 mb-6">
-                  {[
-                    "Unlimited project requests",
-                    "Priority learner team matching",
-                    "Monthly strategic review call",
-                  ].map(item => (
-                    <li key={item} className="flex gap-2 font-['Open_Sans'] text-[12px] text-[#8C8882]">
-                      <CrossMark />{item}
-                    </li>
-                  ))}
-                </ul>
-
                 <Link
                   href="/nonprofit-assessment"
                   className="w-full h-[44px] rounded-[8px] font-['Open_Sans'] font-semibold text-[14px] flex items-center justify-center text-white transition-colors hover:opacity-90"
@@ -344,47 +288,93 @@ export default function DigitalCompass() {
                   Get Started →
                 </Link>
               </div>
-            </div>
+            </motion.div>
 
-            {/* Tier 3 — Full Partner */}
-            <div className="bg-white border-[1.5px] border-[#E2E4E1] rounded-2xl overflow-hidden flex flex-col" style={{ borderTop: "6px solid #1E4A2A" }}>
-              <div className="p-8 flex flex-col flex-1">
-                <span className="font-['Open_Sans'] font-bold text-[11px] tracking-[1px] uppercase text-[#1E4A2A] mb-3">FULL PARTNER</span>
-                <h3 className="font-['Poppins'] font-bold text-[24px] text-[#2A2E2C] mb-4">Full Partner</h3>
-                <div className="flex items-baseline gap-1 mb-1">
-                  <span className="font-['Poppins'] font-bold text-[36px] text-[#1E4A2A]">$7,490</span>
-                  <span className="font-['Open_Sans'] text-[14px] text-[#4A4F4D]">/year</span>
+            {/* Mid — Guided (featured) */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="bg-white rounded-2xl shadow-md"
+              style={{ border: "2px solid #2F6B3F", borderLeft: "4px solid #2F6B3F" }}
+            >
+              <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr_180px_160px] gap-6 items-center p-6">
+                <div>
+                  <div className="text-[10px] font-semibold uppercase tracking-[0.12em] text-[#6B7280] mb-1">MID · GUIDED</div>
+                  <div className="font-['Fraunces'] font-bold text-[20px] text-[#2A2E2C]">Guided</div>
                 </div>
-                <p className="font-['Open_Sans'] text-[12px] text-[#8C8882] mb-6">Annual service contract — billed yearly</p>
-
-                <div className="h-px bg-[#E2E4E1] mb-5" />
-
-                <ul className="space-y-2.5 mb-5 flex-1">
+                <ul className="space-y-2">
                   {[
-                    "Everything in Guided",
-                    "Weekly private Office Hours session — your team only (no group session needed)",
-                    "Unlimited project requests*",
-                    "Priority matching to Guided Trail and Trail of Mastery learner teams",
-                    "Monthly strategic review call with TT leadership",
-                  ].map(item => (
-                    <li key={item} className="flex gap-2 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
-                      <CheckMark />{item}
+                    "Everything in Community",
+                    "1 monthly private Office Hours session — your team only",
+                    "1 project request per quarter",
+                    "Annual service contract",
+                  ].map(f => (
+                    <li key={f} className="flex items-start gap-2 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
+                      <Check size={14} color="#2F6B3F" className="shrink-0 mt-0.5" />{f}
                     </li>
                   ))}
                 </ul>
-
-                <p className="font-['Open_Sans'] italic text-[11px] text-[#8C8882] mb-4">*TT reserves the right to scope-gate requests that require a dedicated project engagement beyond the membership model.</p>
-
+                <div className="text-center">
+                  <div className="font-['Fraunces'] font-bold text-[26px] text-[#2A2E2C]">$3,490</div>
+                  <div className="font-['Open_Sans'] text-[11px] text-[#6B7280] mt-1">/year</div>
+                </div>
                 <Link
                   href="/nonprofit-assessment"
-                  className="w-full h-[44px] rounded-[8px] font-['Open_Sans'] font-semibold text-[14px] flex items-center justify-center text-white transition-colors hover:opacity-90"
-                  style={{ background: "#1E4A2A" }}
+                  className="w-full h-[44px] rounded-[8px] font-['Open_Sans'] font-bold text-[14px] flex items-center justify-center transition-colors hover:opacity-90 text-[#2A2E2C]"
+                  style={{ background: "#F5A623" }}
                 >
                   Get Started →
                 </Link>
               </div>
-            </div>
+            </motion.div>
+
+            {/* Full Partner */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-white rounded-2xl shadow-sm"
+              style={{ border: "1.5px solid #E2E4E1", borderLeft: "4px solid #2F6F7E" }}
+            >
+              <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr_180px_160px] gap-6 items-center p-6">
+                <div>
+                  <div className="text-[10px] font-semibold uppercase tracking-[0.12em] text-[#6B7280] mb-1">FULL PARTNER</div>
+                  <div className="font-['Fraunces'] font-bold text-[20px] text-[#2A2E2C]">Full Partner</div>
+                </div>
+                <ul className="space-y-2">
+                  {[
+                    "Everything in Guided",
+                    "Weekly private Office Hours session — your team only",
+                    "Unlimited project requests*",
+                    "Monthly strategic review call with TT leadership",
+                  ].map(f => (
+                    <li key={f} className="flex items-start gap-2 font-['Open_Sans'] text-[13px] text-[#2A2E2C]">
+                      <Check size={14} color="#2F6B3F" className="shrink-0 mt-0.5" />{f}
+                    </li>
+                  ))}
+                </ul>
+                <div className="text-center">
+                  <div className="font-['Fraunces'] font-bold text-[26px] text-[#2A2E2C]">$7,490</div>
+                  <div className="font-['Open_Sans'] text-[11px] text-[#6B7280] mt-1">/year</div>
+                </div>
+                <Link
+                  href="/nonprofit-assessment"
+                  className="w-full h-[44px] rounded-[8px] font-['Open_Sans'] font-semibold text-[14px] flex items-center justify-center text-white transition-colors hover:opacity-90"
+                  style={{ background: "#2F6B3F" }}
+                >
+                  Get Started →
+                </Link>
+              </div>
+            </motion.div>
+
           </div>
+
+          <p className="text-[12px] font-['Open_Sans'] text-[#6B7280] text-center italic mt-4">
+            Entry tier is month-to-month. Mid and Full Partner tiers are annual service contracts.
+          </p>
 
         </div>
       </section>
