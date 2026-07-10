@@ -86,11 +86,9 @@ export default function Programs() {
 
       <section className="bg-[#FAFAF7] py-20 px-5">
         <div className="max-w-[1280px] mx-auto">
-          <div className="flex gap-6 overflow-x-auto pb-8 items-end snap-x snap-mandatory">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 mt-8">
             {PROGRAMS.map(program => (
-              <div key={program.slug} className="snap-start shrink-0">
-                <ProgramCard program={program} height={program.mostPopular ? "featured" : "standard"} />
-              </div>
+              <ProgramCard key={program.slug} program={program} height={program.mostPopular ? "featured" : "standard"} />
             ))}
           </div>
         </div>
@@ -156,6 +154,29 @@ export default function Programs() {
             Explore Digital Compass
           </CTAButton>
         </div>
+      </section>
+
+      {/* BUILD. TEST. IMPROVE. REPEAT. */}
+      <section className="bg-[#2A2E2C] py-24">
+        <motion.div
+          className="max-w-[900px] mx-auto px-6"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[#F5A623] mb-4">OUR APPROACH</p>
+          <h2 className="font-['Fraunces'] font-bold text-[clamp(2rem,4vw,2.75rem)] text-white leading-tight mb-10">Build. Test. Improve. Repeat.</h2>
+          <div className="font-['Open_Sans'] text-[16px] text-white/75 leading-[1.8] space-y-6">
+            <p>Before we launched a single program publicly, we spent years figuring out what actually works. Starting in 2022 — while all four of us were working full time in our Salesforce careers, fitting this in on nights, weekends, and early mornings — we began testing with small groups. Not because we had something to sell. Because we needed to know whether what we were building would actually deliver.</p>
+            <p>Guided Trail was our first full program. We developed it carefully, ran Cohort 0 in August 2025, and watched closely. What worked? What didn't? Where did learners get stuck? Where did they surprise us? We took everything we learned, made it better, and now we are ready for Cohort 1. The waitlist is open.</p>
+            <p>Out of that testing process came Foundations Trail — a program that didn't exist in our original plans, but became necessary when we saw the gap between where learners were starting and where Guided Trail required them to be. Foundations Trail is currently completing its own Cohort 0 test and will be ready for launch after October 1, 2026. The waitlist is open.</p>
+            <p>Trail of Mastery is in design now. We are being just as deliberate. Cohort 0 testing begins in Q4 2026. If you join the interest list, you are not just signing up to be notified — you are joining the process. Your feedback will shape what this program becomes.</p>
+            <p>We also had to build Digital Compass. Not as an afterthought, but as a requirement. If we were going to give learners real project experience — real clients, real stakes, real deliverables — we needed real nonprofit clients to work with. Digital Compass is how we create that pipeline. It is not a side offering. It is the other half of the model.</p>
+            <p>Every program we build is designed around three questions: Is this beneficial to the learner? Is it focused on the right outcomes? Does it deliver a superior experience? We ask those questions at every stage, test the answers with real people, and improve before we open the door. That rigor is also how we build programs that qualify for workforce development grant funding — so that cost is never the reason someone cannot access this training.</p>
+          </div>
+          <p className="mt-12 text-[18px] font-['Poppins'] font-semibold text-white leading-relaxed">We are not in a hurry. We are building something that works.</p>
+        </motion.div>
       </section>
     </div>
   );
