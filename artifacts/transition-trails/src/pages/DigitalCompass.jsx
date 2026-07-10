@@ -169,7 +169,7 @@ export default function DigitalCompass() {
 
       {/* SECTION 3: Who It Serves */}
       <section className="bg-white py-20 px-5 md:px-10">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="mb-12">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6F7E] mb-4">WHO IT SERVES</div>
             <h2 className="font-['Poppins'] font-bold text-[34px] text-[#2A2E2C] mb-4">Built for nonprofits that run on Salesforce — or want to.</h2>
@@ -208,7 +208,7 @@ export default function DigitalCompass() {
 
       {/* SECTION 4: Universal Benefits */}
       <section className="bg-[#FAFAF7] py-20 px-5 md:px-10">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="mb-12">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6F7E] mb-4">UNIVERSAL BENEFITS</div>
             <h2 className="font-['Poppins'] font-bold text-[34px] text-[#2A2E2C]">Every Digital Compass member gets this.</h2>
@@ -239,7 +239,7 @@ export default function DigitalCompass() {
 
       {/* SECTION 5: Membership Tiers */}
       <section id="tiers" className="bg-white py-20 px-5 md:px-10">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="mb-12">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6F7E] mb-4">MEMBERSHIP TIERS</div>
             <h2 className="font-['Poppins'] font-bold text-[34px] text-[#2A2E2C] mb-4">Choose the level of support your organization needs.</h2>
@@ -381,7 +381,7 @@ export default function DigitalCompass() {
 
       {/* SECTION 7: Project Requests */}
       <section className="bg-[#FAFAF7] py-20 px-5 md:px-10">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="mb-12">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6F7E] mb-4">PROJECT DELIVERY</div>
             <h2 className="font-['Poppins'] font-bold text-[34px] text-[#2A2E2C] mb-4">Real Salesforce work. Delivered by real people.</h2>
@@ -407,7 +407,7 @@ export default function DigitalCompass() {
 
       {/* Hartford Promise Testimonial */}
       <section className="bg-white px-5 md:px-10 py-12">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div
             className="relative"
             style={{
@@ -434,7 +434,7 @@ export default function DigitalCompass() {
 
       {/* SECTION 8: Free Assessment */}
       <section className="bg-[#2A2E2C] py-20 px-5 md:px-10">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase mb-4" style={{ color: "rgba(255,255,255,0.45)" }}>START HERE</div>
             <h2 className="font-['Poppins'] font-bold text-[34px] text-white mb-5">Not sure where to start? That is what the free assessment is for.</h2>

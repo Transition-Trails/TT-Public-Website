@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Link } from "wouter";
 import { PageMeta } from "../components/PageMeta";
 import { Briefcase, Lightbulb, ClipboardList, Leaf, Users, Sparkles, Target, Award, Check } from "lucide-react";
@@ -79,27 +78,7 @@ const PATHWAY_STEPS = [
   },
 ];
 
-const HANDLER_SRC = "https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js";
-const IFRAME_ID = "JotFormIFrame-261876005299062";
-
 export default function Coaches() {
-  useEffect(() => {
-    const callHandler = () => {
-      if (typeof window.jotformEmbedHandler === "function") {
-        window.jotformEmbedHandler(`iframe[id='${IFRAME_ID}']`, "https://form.jotform.com/");
-      }
-    };
-    const existing = document.querySelector(`script[src="${HANDLER_SRC}"]`);
-    if (existing) {
-      callHandler();
-    } else {
-      const s = document.createElement("script");
-      s.src = HANDLER_SRC;
-      s.async = true;
-      s.onload = callHandler;
-      document.body.appendChild(s);
-    }
-  }, []);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -189,7 +168,7 @@ export default function Coaches() {
 
       {/* SECTION 3: Two Coaching Roles */}
       <section className="bg-white py-20 px-5 md:px-10">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="mb-12">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">THE TWO ROLES</div>
             <h2 className="font-['Poppins'] font-bold text-[34px] text-[#2A2E2C] mb-4">Start where you are. Grow from there.</h2>
@@ -306,7 +285,7 @@ export default function Coaches() {
 
       {/* SECTION 4: What Coaches Get */}
       <section id="benefits" className="bg-[#FAFAF7] py-20 px-5 md:px-10">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="mb-12">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">WHAT YOU GET OUT OF IT</div>
             <h2 className="font-['Poppins'] font-bold text-[34px] text-[#2A2E2C]">This is not just giving back. It is building forward.</h2>
@@ -332,7 +311,7 @@ export default function Coaches() {
 
       {/* SECTION 5: The Coaching Experience */}
       <section className="bg-white py-20 px-5 md:px-10">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="mb-10">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">WHAT COACHING LOOKS LIKE</div>
             <h2 className="font-['Poppins'] font-bold text-[34px] text-[#2A2E2C] mb-6">Twelve weeks. Real learners. Real work.</h2>
@@ -360,7 +339,7 @@ export default function Coaches() {
 
       {/* SECTION 6: Coaching Pathway */}
       <section className="bg-[#2A2E2C] py-20 px-5 md:px-10">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase mb-4" style={{ color: "rgba(255,255,255,0.45)" }}>THE COACHING PATHWAY</div>
             <h2 className="font-['Poppins'] font-bold text-[34px] text-white">Where coaching takes you.</h2>
@@ -428,25 +407,10 @@ export default function Coaches() {
           </p>
         </div>
 
-        <div className="bg-white rounded-xl max-w-[860px] mx-auto px-8 md:px-14 py-14">
-          <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-6 text-center">COACH APPLICATION</div>
-
-          <iframe
-            id={IFRAME_ID}
-            title="TT Coach Application"
-            onLoad={() => window.parent.scrollTo(0, 0)}
-            allowTransparency="true"
-            allow="geolocation; microphone; camera; fullscreen; payment"
-            src="https://form.jotform.com/261876005299062"
-            frameBorder="0"
-            style={{ minWidth: "100%", maxWidth: "100%", height: "539px", border: "none" }}
-            scrolling="no"
-          />
-
-          <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] text-center mt-6 leading-[1.65]">
-            Applications are reviewed within 5 business days. We will reach out to schedule a brief conversation before making a decision.{" "}
-            <a href="mailto:hello@transitiontrails.org" className="text-[#2F6B3F] hover:underline font-semibold">Questions? Email hello@transitiontrails.org</a>
-          </p>
+        <div className="max-w-2xl mx-auto text-center flex flex-col items-center gap-6 py-12">
+          <p className="font-['Open_Sans'] text-[15px] text-[#6B7280] leading-relaxed">Tell us about your Salesforce experience, your background, and why you want to coach with Transition Trails. A member of the TT team will be in touch within 5 business days.</p>
+          <a href="https://form.jotform.com/261876005299062" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#2F6B3F] text-white font-['Open_Sans'] font-bold text-[15px] px-8 py-4 rounded-lg hover:bg-[#1E4A2A] transition-colors duration-200">Apply to Coach →</a>
+          <p className="font-['Open_Sans'] text-[12px] text-[#6B7280] italic">Questions? Email <a href="mailto:hello@transitiontrails.org" className="text-[#2F6B3F] hover:underline">hello@transitiontrails.org</a></p>
         </div>
       </section>
     </div>

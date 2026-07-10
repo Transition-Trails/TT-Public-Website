@@ -466,7 +466,7 @@ export default function Home() {
 
       {/* Section 9: Real Outcomes */}
       <section className="bg-[#E6F3EA] py-24 px-5 md:px-10">
-        <div className="max-w-[1024px] mx-auto">
+        <div className="max-w-7xl mx-auto">
 
           {/* Section Header */}
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mb-14">
@@ -586,7 +586,7 @@ export default function Home() {
 
       {/* Section 11: Nonprofit Partners */}
       <section className="bg-white border-y border-[#E2E4E1] py-10 px-5">
-        <div className="max-w-[1024px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#4A4F4D] text-center mb-8">
             NONPROFITS IN OUR NETWORK
           </div>
@@ -606,7 +606,7 @@ export default function Home() {
 
       {/* Section 11 (cont): Testimonials */}
       <section className="bg-white py-20 px-5 md:px-10">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
             <motion.div variants={fadeUpChild} className="flex flex-col">
               <div className="font-['Poppins'] text-[56px] leading-none mb-2 select-none" style={{ color: "rgba(47,111,126,0.3)" }}>"</div>
@@ -646,7 +646,7 @@ export default function Home() {
 
       {/* Section 12: Action Banner */}
       <section className="bg-[#2F6B3F] py-16 px-5 md:px-10">
-        <div className="max-w-[1024px] mx-auto flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
           <div className="flex-1">
             <h2 className="font-['Fraunces'] font-bold text-[32px] md:text-[40px] text-white mb-2 leading-tight">
               Your trail starts with one real project.

@@ -133,7 +133,7 @@ export default function Scholarships() {
 
       {/* SECTION 3: Who This Is For */}
       <section className="bg-white py-20 px-5 md:px-10">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="mb-12">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">ELIGIBILITY</div>
             <h2 className="font-['Poppins'] font-bold text-[34px] text-[#2A2E2C] mb-4 max-w-[800px]">
@@ -168,7 +168,7 @@ export default function Scholarships() {
 
       {/* SECTION 4: What the Scholarship Covers */}
       <section className="bg-[#E6F3EA] py-16 px-5 md:px-10 border-y border-[#2F6B3F]/20">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="mb-10">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">WHAT IS COVERED</div>
             <h2 className="font-['Poppins'] font-bold text-[28px] text-[#1E4A2A] mb-2">This is not a discount. It is a complete award.</h2>
@@ -327,7 +327,7 @@ export default function Scholarships() {
 
       {/* SECTION 8: Apply + Support */}
       <section className="bg-[#2A2E2C] py-20 px-5 md:px-10">
-        <div className="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Left — Apply */}
           <div>
             <div className="font-['Open_Sans'] font-semibold text-[11px] tracking-[2px] uppercase mb-4" style={{ color: "rgba(255,255,255,0.45)" }}>

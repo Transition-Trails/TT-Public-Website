@@ -1,32 +1,8 @@
-import { useEffect } from "react";
 import { Link } from "wouter";
 import { PageMeta } from "../components/PageMeta";
 import { Check } from "lucide-react";
 
 export default function NonprofitAssessment() {
-  useEffect(() => {
-    const handlerSrc = "https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js";
-
-    const callHandler = () => {
-      if (typeof window.jotformEmbedHandler === "function") {
-        window.jotformEmbedHandler(
-          "iframe[id='JotFormIFrame-261683366693066']",
-          "https://form.jotform.com/"
-        );
-      }
-    };
-
-    const existing = document.querySelector(`script[src="${handlerSrc}"]`);
-    if (existing) {
-      callHandler();
-    } else {
-      const s = document.createElement("script");
-      s.src = handlerSrc;
-      s.async = true;
-      s.onload = callHandler;
-      document.body.appendChild(s);
-    }
-  }, []);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -82,41 +58,14 @@ export default function NonprofitAssessment() {
         </div>
       </section>
 
-      {/* JotForm embed */}
+      {/* CTA */}
       <section className="bg-white py-[60px] px-5">
         <div className="max-w-[860px] mx-auto">
-          <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6F7E] mb-3 text-center">
-            FREE SALESFORCE ASSESSMENT
+          <div className="max-w-2xl mx-auto text-center flex flex-col items-center gap-6 py-12">
+            <p className="font-['Open_Sans'] text-[15px] text-[#6B7280] leading-relaxed">Tell us about your organization and your current Salesforce situation. A member of the TT team will be in touch within 2 business days to schedule your free session.</p>
+            <a href="https://form.jotform.com/261683366693066" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#2F6B3F] text-white font-['Open_Sans'] font-bold text-[15px] px-8 py-4 rounded-lg hover:bg-[#1E4A2A] transition-colors duration-200">Book Your Free Assessment →</a>
+            <p className="font-['Open_Sans'] text-[12px] text-[#6B7280] italic">Free — no cost, no commitment. Up to 1 hour with a real expert.</p>
           </div>
-          <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] text-center mb-8 max-w-xl mx-auto">
-            Tell us about your organization and your current Salesforce situation. A member of the TT team will be in touch within 2 business days to schedule your session.
-          </p>
-
-          <iframe
-            id="JotFormIFrame-261683366693066"
-            title="Get Your Free Salesforce Assessment — Digital Compass"
-            onLoad={() => window.parent.scrollTo(0, 0)}
-            allowTransparency={true}
-            allow="geolocation; microphone; camera; fullscreen; payment"
-            src="https://form.jotform.com/261683366693066"
-            frameBorder="0"
-            style={{
-              minWidth: "100%",
-              maxWidth: "100%",
-              height: "539px",
-              border: "none",
-              display: "block",
-            }}
-            scrolling="no"
-          />
-
-          <p className="font-['Open_Sans'] text-[13px] text-[#6B7280] text-center mt-6">
-            Your information is only used to contact you about this assessment. We do not sell or
-            share your data.{" "}
-            <Link href="/privacy-policy" className="text-[#2F6F7E] hover:underline">
-              See our Privacy Policy.
-            </Link>
-          </p>
 
           {/* What happens next */}
           <div className="mt-14 bg-[#F8FAFA] border border-[#D0E8ED] rounded-2xl p-8 md:p-10">

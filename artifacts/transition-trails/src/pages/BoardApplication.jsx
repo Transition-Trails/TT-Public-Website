@@ -1,30 +1,7 @@
-import { useEffect } from "react";
 import { Link } from "wouter";
 import { PageMeta } from "../components/PageMeta";
 
 export default function BoardApplication() {
-  useEffect(() => {
-    const handlerSrc = "https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js";
-    const callHandler = () => {
-      if (typeof window.jotformEmbedHandler === "function") {
-        window.jotformEmbedHandler(
-          "iframe[id='JotFormIFrame-261884676222061']",
-          "https://form.jotform.com/"
-        );
-      }
-    };
-    const existing = document.querySelector(`script[src="${handlerSrc}"]`);
-    if (existing) {
-      callHandler();
-    } else {
-      const s = document.createElement("script");
-      s.src = handlerSrc;
-      s.async = true;
-      s.onload = callHandler;
-      document.body.appendChild(s);
-    }
-  }, []);
-
   return (
     <div className="flex flex-col min-h-screen">
       <PageMeta
@@ -72,30 +49,14 @@ export default function BoardApplication() {
         </div>
       </section>
 
-      {/* JotForm embed */}
+      {/* CTA */}
       <section className="bg-white py-[60px] px-5">
         <div className="max-w-[860px] mx-auto">
-          <iframe
-            id="JotFormIFrame-261884676222061"
-            title="TT Board Member Interest"
-            onLoad={() => window.parent.scrollTo(0, 0)}
-            allowTransparency={true}
-            allow="geolocation; microphone; camera; fullscreen; payment"
-            src="https://form.jotform.com/261884676222061"
-            frameBorder="0"
-            style={{
-              minWidth: "100%",
-              maxWidth: "100%",
-              height: "539px",
-              border: "none",
-              display: "block",
-            }}
-            scrolling="no"
-          />
-
-          <p className="font-['Open_Sans'] text-[13px] text-[#8C8882] italic text-center mt-6">
-            Questions? Email hello@transitiontrails.org · Board inquiries are handled directly by Angela Landrith, Co-Founder & CEO
-          </p>
+          <div className="max-w-2xl mx-auto text-center flex flex-col items-center gap-6 py-12">
+            <p className="font-['Open_Sans'] text-[15px] text-[#6B7280] leading-relaxed">Share your background, experience, and interest in board service. A member of the TT team will be in touch within 5 business days.</p>
+            <a href="https://form.jotform.com/261884676222061" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#2F6B3F] text-white font-['Open_Sans'] font-bold text-[15px] px-8 py-4 rounded-lg hover:bg-[#1E4A2A] transition-colors duration-200">Submit Board Interest Form →</a>
+            <p className="font-['Open_Sans'] text-[12px] text-[#6B7280] italic">Questions? Email <a href="mailto:hello@transitiontrails.org" className="text-[#2F6B3F] hover:underline">hello@transitiontrails.org</a></p>
+          </div>
 
           <div className="text-center mt-6">
             <Link

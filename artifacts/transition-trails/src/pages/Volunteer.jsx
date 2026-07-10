@@ -202,7 +202,7 @@ export default function Volunteer() {
 
       {/* What volunteers get */}
       <section className="bg-white py-20 px-5 md:px-10">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="mb-12">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">
               WHY VOLUNTEER WITH TT

@@ -165,7 +165,7 @@ export default function TrailOfMastery() {
 
       {/* SECTION 2: What This Is */}
       <section className="bg-white py-20 px-5 md:px-10">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             variants={fadeUp}
             initial="hidden"
@@ -208,7 +208,7 @@ export default function TrailOfMastery() {
 
       {/* SECTION 3: The Five Tracks */}
       <section className="bg-[#FAFAF7] py-20 px-5 md:px-10 border-y border-[#E2E4E1]">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             variants={fadeUp}
             initial="hidden"

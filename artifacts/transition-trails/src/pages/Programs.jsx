@@ -43,7 +43,7 @@ export default function Programs() {
       </section>
 
       <section className="bg-white border-b border-[#E2E4E1] py-6 px-5 md:px-20">
-        <div className="max-w-[1024px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-10 sm:gap-16">
             <div className="flex flex-col items-center text-center gap-1.5">
               <div className="flex items-center gap-2">
@@ -96,7 +96,7 @@ export default function Programs() {
 
       {/* Path to Coach */}
       <section className="bg-white py-20 px-5 md:px-10 border-t border-[#E2E4E1]">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mb-12 text-center">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">GET INVOLVED</div>
             <h2 className="font-['Fraunces'] font-bold text-[36px] text-[#2A2E2C] mb-4">Ready to give back?</h2>

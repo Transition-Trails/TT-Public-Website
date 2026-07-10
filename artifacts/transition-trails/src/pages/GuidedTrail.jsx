@@ -12,7 +12,7 @@ export default function GuidedTrail() {
         path="/programs/guided-trail"
       />
       <section className="bg-gradient-to-br from-[#1E4A2A] to-[#2F6B3F] pt-24 pb-20 px-5 md:px-10">
-        <div className="max-w-[1024px] mx-auto flex flex-col md:flex-row gap-12 items-center">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-center">
           <div className="flex-1">
             <div className="inline-block bg-[#F5A623]/20 border border-[#F5A623]/30 text-[#F5A623] font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-6 backdrop-blur-sm">
               BRIDGE TIER · COHORT-BASED · REAL CLIENT WORK
@@ -72,7 +72,7 @@ export default function GuidedTrail() {
       </section>
 
       <section className="bg-white py-20 px-5">
-        <div className="max-w-[1024px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <span className="inline-block bg-[#2F6B3F] text-white font-['Open_Sans'] font-bold text-[11px] tracking-[1.5px] uppercase px-3 py-1 rounded mb-5">FOR CAREER STARTERS & CAREER PIVOTERS</span>
             <h2 className="font-['Poppins'] font-bold text-[36px] text-[#2A2E2C]">Prerequisites</h2>
@@ -102,7 +102,7 @@ export default function GuidedTrail() {
       </section>
 
       <section className="bg-[#FAFAF7] py-20 px-5 border-y border-[#E2E4E1]">
-        <div className="max-w-[1024px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-['Poppins'] font-bold text-[36px] text-[#2A2E2C] mb-4">Your Portfolio Framework</h2>
             <p className="font-['Open_Sans'] text-[18px] text-[#4A4F4D] max-w-2xl mx-auto">
@@ -133,7 +133,7 @@ export default function GuidedTrail() {
       </section>
 
       <section className="bg-white py-20 px-5">
-        <div className="max-w-[1024px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-['Poppins'] font-bold text-[36px] text-[#2A2E2C] mb-4">12 Weeks. 3 Sprints. One Real Implementation.</h2>
           </div>
@@ -176,7 +176,7 @@ export default function GuidedTrail() {
       </section>
 
       <section className="bg-[#2A2E2C] py-20 px-5 text-white">
-        <div className="max-w-[1024px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             <div>
               <h3 className="font-['Poppins'] font-bold text-[32px] mb-8">Weekly Rhythm</h3>
@@ -263,7 +263,7 @@ export default function GuidedTrail() {
 
       {/* Cohort 0 Testimonials */}
       <section className="bg-white py-16 px-5 md:px-10 border-y border-[#E2E4E1]">
-        <div className="max-w-[1024px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="mb-10">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-3">FROM COHORT 0</div>
             <h2 className="font-['Poppins'] font-bold text-[24px] text-[#2A2E2C] mb-2">In their own words.</h2>

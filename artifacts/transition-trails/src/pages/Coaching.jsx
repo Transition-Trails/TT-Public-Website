@@ -277,7 +277,7 @@ export default function Coaching() {
 
       {/* SECTION 3: Who Coaching Is For */}
       <section className="bg-white py-20 px-5 md:px-10">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="mb-12">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">WHO IT SERVES</div>
             <h2 className="font-['Poppins'] font-bold text-[34px] text-[#2A2E2C]">Coaching meets you exactly where you are.</h2>
@@ -302,7 +302,7 @@ export default function Coaching() {
 
       {/* SECTION 4: Coaching Packages */}
       <section id="packages" className="bg-[#FAFAF7] py-20 px-5 md:px-10">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="mb-8 text-center">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">COACHING PACKAGES</div>
             <h2 className="font-['Poppins'] font-bold text-[34px] text-[#2A2E2C]">Choose the support that fits where you are.</h2>
@@ -381,7 +381,7 @@ export default function Coaching() {
 
       {/* SECTION 5: Meet Your Coaches */}
       <section className="bg-white py-20 px-5 md:px-10">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="mb-4">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">YOUR COACHES</div>
             <h2 className="font-['Poppins'] font-bold text-[34px] text-[#2A2E2C] mb-4">Three coaches. Real experience. Different specializations.</h2>
@@ -455,7 +455,7 @@ export default function Coaching() {
 
       {/* SECTION 6: Group Workshops */}
       <section className="bg-[#FAFAF7] py-20 px-5 md:px-10">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="mb-12">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">GROUP WORKSHOPS</div>
             <h2 className="font-['Poppins'] font-bold text-[34px] text-[#2A2E2C] mb-4">Learn alongside others who are on the same path.</h2>
@@ -512,7 +512,7 @@ export default function Coaching() {
 
       {/* SECTION 7: Discovery Call */}
       <section id="discovery" className="bg-[#2A2E2C] py-20 px-5 md:px-10">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="mb-12">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase mb-4" style={{ color: "rgba(255,255,255,0.45)" }}>START HERE</div>
             <h2 className="font-['Poppins'] font-bold text-[34px] text-white mb-5">Not sure where to start? That is what the discovery call is for.</h2>
@@ -580,7 +580,7 @@ export default function Coaching() {
 
       {/* SECTION 8: Explorer's Trail Coaching Benefit */}
       <section className="py-16 px-5 md:px-10" style={{ background: "#E6F3EA" }}>
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="mb-10">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#1E4A2A] mb-3">EXPLORER'S TRAIL MEMBERS</div>
             <h2 className="font-['Poppins'] font-bold text-[28px] text-[#1E4A2A]">Members save on every coaching package.</h2>

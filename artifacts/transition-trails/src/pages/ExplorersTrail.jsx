@@ -85,7 +85,7 @@ export default function ExplorersTrail() {
 
       {/* SECTION: Pre-launch Banner */}
       <section style={{ background: 'linear-gradient(135deg, #2F6F7E 0%, #2F6B3F 100%)' }} className="py-10 px-5 md:px-10">
-        <div className="max-w-[1100px] mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-12">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-12">
           <div className="flex-1">
             <div className="font-['Open_Sans'] font-bold text-[11px] tracking-[2px] uppercase text-[#7FAFC6] mb-2">LAUNCHING OCTOBER 1, 2026</div>
             <p className="font-['Open_Sans'] text-[16px] text-white leading-[1.6]">
@@ -304,7 +304,7 @@ export default function ExplorersTrail() {
 
       {/* SECTION: Membership Tiers */}
       <section id="membership-tiers" className="bg-white py-20 px-5 md:px-10">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="mb-12">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">CHOOSE YOUR TIER</div>
             <h2 className="font-['Poppins'] font-bold text-[32px] text-[#2A2E2C]">Start where you are. Upgrade when you're ready.</h2>
@@ -482,7 +482,7 @@ export default function ExplorersTrail() {
 
       {/* SECTION: Earned Membership */}
       <section className="bg-[#FAFAF7] py-20 px-5 md:px-10 border-y border-[#E2E4E1]">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="mb-12">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">EARNED MEMBERSHIP</div>
             <h2 className="font-['Poppins'] font-bold text-[32px] text-[#2A2E2C]">Some memberships are earned, not purchased.</h2>
@@ -536,7 +536,7 @@ export default function ExplorersTrail() {
 
       {/* SECTION: Monthly Rhythm */}
       <section className="bg-white py-20 px-5 md:px-10">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="mb-12">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">WHAT TO EXPECT</div>
             <h2 className="font-['Poppins'] font-bold text-[32px] text-[#2A2E2C]">Your Monthly Rhythm</h2>
@@ -623,7 +623,7 @@ export default function ExplorersTrail() {
 
       {/* SECTION: The Coaching Pathway */}
       <section className="bg-[#FAFAF7] py-20 px-5 md:px-10 border-y border-[#E2E4E1]">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="mb-4">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">THE COACHING PATHWAY</div>
             <h2 className="font-['Poppins'] font-bold text-[32px] text-[#2A2E2C] mb-3">From learner to coach. The path is open.</h2>
@@ -704,7 +704,7 @@ export default function ExplorersTrail() {
 
       {/* SECTION: Community Identity */}
       <section className="bg-[#FAFAF7] py-20 px-5 md:px-10 border-y border-[#E2E4E1]">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="mb-12">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">COMMUNITY IDENTITY</div>
             <h2 className="font-['Poppins'] font-bold text-[32px] text-[#2A2E2C]">More than a membership.</h2>
@@ -758,7 +758,7 @@ export default function ExplorersTrail() {
 
       {/* SECTION: Community Preview */}
       <section className="bg-[#2A2E2C] py-20 px-5 md:px-10">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-white/45 mb-4">THE COMMUNITY</div>
           <h2 className="font-['Poppins'] font-bold text-[30px] text-white mb-6">You will not figure this out alone.</h2>
           <p className="font-['Open_Sans'] text-[16px] text-white/75 leading-[1.65] max-w-[680px] mb-12">
@@ -788,7 +788,7 @@ export default function ExplorersTrail() {
 
       {/* SECTION: CTA Banner */}
       <section className="bg-[#7FAFC6] py-16 px-5 md:px-10">
-        <div className="max-w-[1100px] mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-16">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-16">
           <div className="flex-1">
             <h2 className="font-['Poppins'] font-bold text-[36px] text-[#1E4A2A] leading-tight mb-4">
               The trail does not have a finish line. Come find your pace.
