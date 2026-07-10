@@ -1,5 +1,5 @@
-import { useEffect } from "react";
 import { Link } from "wouter";
+import { motion } from "framer-motion";
 import { PageMeta } from "../components/PageMeta";
 
 const PROGRAM_PILLS = [
@@ -7,33 +7,11 @@ const PROGRAM_PILLS = [
   { name: "Foundations Trail", tier: "Entry", color: "#2F6B3F", bg: "#E6F3EA" },
   { name: "Guided Trail", tier: "Bridge", color: "#1E4A2A", bg: "#E6F3EA" },
   { name: "Trail of Mastery", tier: "Advancement", color: "#2F6F7E", bg: "#E0F0F3" },
-  { name: "Digital Compass", tier: "Nonprofit", color: "#2F6F7E", bg: "#E0F0F3" },
 ];
 
 export default function Waitlist() {
-  useEffect(() => {
-    const handlerSrc = "https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js";
-
-    const callHandler = () => {
-      if (typeof window.jotformEmbedHandler === "function") {
-        window.jotformEmbedHandler(
-          "iframe[id='JotFormIFrame-261684070494058']",
-          "https://form.jotform.com/"
-        );
-      }
-    };
-
-    const existing = document.querySelector(`script[src="${handlerSrc}"]`);
-    if (existing) {
-      callHandler();
-    } else {
-      const s = document.createElement("script");
-      s.src = handlerSrc;
-      s.async = true;
-      s.onload = callHandler;
-      document.body.appendChild(s);
-    }
-  }, []);
+  const fadeUp = { hidden: { opacity: 0, y: 24 }, show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } } };
+  const stagger = { hidden: {}, show: { transition: { staggerChildren: 0.1 } } };
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -43,102 +21,93 @@ export default function Waitlist() {
         path="/waitlist"
       />
 
-      {/* Hero */}
+      {/* HERO */}
       <section
         className="pt-24 pb-20 px-5 md:px-10"
         style={{
           background: "linear-gradient(135deg, #1E4A2A 0%, #2F6B3F 55%, #2F6F7E 100%)",
         }}
       >
-        <div className="max-w-[860px] mx-auto text-center">
-          <div className="inline-block bg-[#F5A623]/20 border border-[#F5A623]/30 text-[#F5A623] font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-6 backdrop-blur-sm">
-            JOIN THE TRAIL
-          </div>
-
-          <h1 className="font-['Poppins'] font-bold text-[48px] md:text-[56px] text-white tracking-[-1.5px] leading-[1.1] mb-6">
-            Reserve your spot.
-          </h1>
-
-          <p
-            className="font-['Open_Sans'] text-[18px] leading-[1.6] mb-10 max-w-2xl mx-auto"
-            style={{ color: "rgba(255,255,255,0.75)" }}
-          >
-            All five programs are currently building their first cohorts. Join the waitlist and
-            we'll reach out when your program is ready to launch. One form. All trails.
-          </p>
-
-          {/* Program pills */}
-          <div className="flex flex-wrap justify-center gap-3 mb-10">
-            {PROGRAM_PILLS.map((p) => (
-              <div
-                key={p.name}
-                className="flex items-center gap-2 px-4 py-2 rounded-full font-['Open_Sans'] text-[13px] font-semibold"
-                style={{ backgroundColor: p.bg, color: p.color }}
-              >
-                <span
-                  className="text-[10px] uppercase tracking-[1px] font-bold opacity-70"
-                  style={{ color: p.color }}
-                >
-                  {p.tier}
-                </span>
-                <span>·</span>
-                <span>{p.name}</span>
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div initial="hidden" animate="show" variants={stagger}>
+            <motion.div variants={fadeUp}>
+              <div className="inline-block bg-[#F5A623]/20 border border-[#F5A623]/30 text-[#F5A623] font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-6 backdrop-blur-sm">
+                JOIN THE TRAIL
               </div>
-            ))}
-          </div>
+            </motion.div>
 
-          {/* Cohort 1 callout */}
-          <div
-            className="max-w-[640px] mx-auto rounded-[8px] px-7 py-5 text-left"
-            style={{ backgroundColor: "#FEF3DB", border: "1px solid #F5A623" }}
-          >
-            <p className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">
-              Cohort 1 members receive something no future cohort will. We'll share more when the waitlist closes.
-            </p>
-            <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D]">
-              Join the waitlist now to secure your Cohort 1 status.
-            </p>
-          </div>
+            <motion.h1 variants={fadeUp} className="font-['Fraunces'] font-bold text-[48px] md:text-[56px] text-white tracking-[-1.5px] leading-[1.1] mb-6">
+              Reserve your spot.
+            </motion.h1>
+
+            <motion.p
+              variants={fadeUp}
+              className="font-['Open_Sans'] text-[18px] leading-[1.6] mb-10 max-w-2xl mx-auto"
+              style={{ color: "rgba(255,255,255,0.75)" }}
+            >
+              All five programs are currently building their first cohorts. Join the waitlist and
+              we'll reach out when your program is ready to launch. One form. All trails.
+            </motion.p>
+
+            <motion.div variants={fadeUp} className="flex flex-wrap justify-center gap-3 mb-10">
+              {PROGRAM_PILLS.map((p) => (
+                <div
+                  key={p.name}
+                  className="flex items-center gap-2 px-4 py-2 rounded-full font-['Open_Sans'] text-[13px] font-semibold"
+                  style={{ backgroundColor: p.bg, color: p.color }}
+                >
+                  <span
+                    className="text-[10px] uppercase tracking-[1px] font-bold opacity-70"
+                    style={{ color: p.color }}
+                  >
+                    {p.tier}
+                  </span>
+                  <span>·</span>
+                  <span>{p.name}</span>
+                </div>
+              ))}
+            </motion.div>
+
+            <motion.div
+              variants={fadeUp}
+              className="max-w-[640px] mx-auto rounded-[8px] px-7 py-5 text-left"
+              style={{ backgroundColor: "#FEF3DB", border: "1px solid #F5A623" }}
+            >
+              <p className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">
+                Programs launching October 1, 2026
+              </p>
+              <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D]">
+                Explorer's Trail opens October 1. Guided Trail Cohort 1 waitlist is now open — 8 to 12 seats, application required. Foundations Trail opens after October 1. Trail of Mastery interest list is open for Cohort 0 in Q2 2027.
+              </p>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
-      {/* JotForm embed */}
+      {/* SECTION 2 — Waitlist CTA */}
       <section className="bg-white py-[60px] px-5">
-        <div className="max-w-[860px] mx-auto">
-          <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-3 text-center">
-            PROGRAM WAITLIST
-          </div>
-          <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] text-center mb-8 max-w-xl mx-auto">
-            Select your program of interest in the form. We'll be in touch with cohort details,
-            pricing, and scholarship availability.
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={fadeUp}
+          className="max-w-2xl mx-auto text-center flex flex-col items-center gap-6 py-12"
+        >
+          <p className="font-['Open_Sans'] text-[13px] font-semibold uppercase tracking-[0.12em] text-[#2F6B3F]">PROGRAM WAITLIST</p>
+          <p className="font-['Open_Sans'] text-[15px] text-[#6B7280] leading-relaxed max-w-xl">Join the waitlist for any Transition Trails program. Share your details and a member of the TT team will be in touch when enrollment opens.</p>
+          <a
+            href="https://form.jotform.com/261684070494058"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-[#2F6B3F] text-white font-['Open_Sans'] font-bold text-[15px] px-8 py-4 rounded-lg hover:bg-[#1E4A2A] transition-colors duration-200"
+          >
+            Join the Waitlist →
+          </a>
+          <p className="font-['Open_Sans'] text-[12px] text-[#6B7280] italic">
+            Your information is kept private and never shared.{" "}
+            <Link href="/privacy-policy" className="text-[#2F6B3F] hover:underline">Privacy Policy</Link>
           </p>
-
-          <iframe
-            id="JotFormIFrame-261684070494058"
-            title="Join the Trail — Program Waitlist"
-            onLoad={() => window.parent.scrollTo(0, 0)}
-            allowTransparency={true}
-            allow="geolocation; microphone; camera; fullscreen; payment"
-            src="https://form.jotform.com/261684070494058"
-            frameBorder="0"
-            style={{
-              minWidth: "100%",
-              maxWidth: "100%",
-              height: "539px",
-              border: "none",
-              display: "block",
-            }}
-            scrolling="no"
-          />
-
-          <p className="font-['Open_Sans'] text-[13px] text-[#6B7280] text-center mt-6">
-            Your information is only used to notify you about Transition Trails programs. We do not
-            sell or share your data.{" "}
-            <Link href="/privacy-policy" className="text-[#2F6B3F] hover:underline">
-              See our Privacy Policy.
-            </Link>
-          </p>
-        </div>
+        </motion.div>
       </section>
     </div>
   );
