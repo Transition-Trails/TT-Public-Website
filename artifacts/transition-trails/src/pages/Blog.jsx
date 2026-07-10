@@ -92,7 +92,12 @@ export default function Blog() {
                   <Link href={`/blog/${post.id}`}>
                     <div className="bg-white border border-[#E2E4E1] rounded-2xl overflow-hidden shadow-sm hover:shadow-md hover:border-[#2F6B3F] transition-all duration-200 cursor-pointer h-full flex flex-col">
                       {post.image && (
-                        <img src={post.image} alt={post.title} className="w-full h-48 object-cover" />
+                        <img
+                          src={post.image}
+                          alt={post.title}
+                          className="w-full h-48 object-cover"
+                          onError={(e) => { e.target.style.display = 'none'; }}
+                        />
                       )}
                       <div className="p-7 flex flex-col flex-1">
                         <div className="flex items-center gap-2 mb-4">

@@ -76,7 +76,12 @@ export default function BlogPost() {
       <section className="bg-white py-16 px-8 flex-1">
         <div className="max-w-4xl mx-auto">
           {post.image && (
-            <img src={post.image} alt={post.title} className="w-full rounded-2xl mb-12 object-cover max-h-[480px]" />
+            <img
+              src={post.image}
+              alt={post.title}
+              className="w-full rounded-2xl mb-12 object-cover max-h-[480px]"
+              onError={(e) => { e.target.style.display = 'none'; }}
+            />
           )}
           <div
             className="prose prose-lg max-w-none font-['Open_Sans'] text-[#2A2E2C]

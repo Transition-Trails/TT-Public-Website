@@ -39,20 +39,32 @@ export function useSubstackFeed() {
         const data = await res.json();
         if (data.status !== "ok") throw new Error("Feed returned error");
 
-        const mapped = data.items.map(item => ({
-          id: slugify(item.title),
-          title: item.title,
-          excerpt: item.description
-            ? item.description.replace(/<[^>]*>/g, "").slice(0, 200).trim() + "\u2026"
-            : "",
-          category: inferCategory(item.title, item.content || item.description || ""),
-          author: item.author || "Transition Trails",
-          date: item.pubDate ? item.pubDate.split(" ")[0] : "",
-          readTime: estimateReadTime(item.content || item.description || ""),
-          image: item.thumbnail && item.thumbnail !== "" ? item.thumbnail : null,
-          content: item.content || item.description || "",
-          substackUrl: item.link,
-        }));
+        const mapped = data.items.map(item => {
+          // Try to get image from enclosure, thumbnail, or content
+          let image = null;
+          if (item.enclosure && item.enclosure.link) {
+            image = item.enclosure.link;
+          } else if (item.thumbnail && item.thumbnail !== "" && !item.thumbnail.includes("substack.com/twitter")) {
+            image = item.thumbnail;
+          } else {
+            const imgMatch = (item.content || "").match(/<img[^>]+src="([^"]+)"/);
+            if (imgMatch) image = imgMatch[1];
+          }
+          return {
+            id: slugify(item.title),
+            title: item.title,
+            excerpt: item.description
+              ? item.description.replace(/<[^>]*>/g, "").slice(0, 200).trim() + "\u2026"
+              : "",
+            category: inferCategory(item.title, item.content || item.description || ""),
+            author: item.author || "Transition Trails",
+            date: item.pubDate ? item.pubDate.split(" ")[0] : "",
+            readTime: estimateReadTime(item.content || item.description || ""),
+            image,
+            content: item.content || item.description || "",
+            substackUrl: item.link,
+          };
+        });
 
         setPosts(mapped);
       } catch (err) {
