@@ -111,10 +111,6 @@ export default function Contact() {
                   <div className="text-white/60 text-[12px] uppercase tracking-wider font-semibold mb-1">General Inquiries</div>
                   <a href="mailto:hello@transitiontrails.org" className="hover:underline">hello@transitiontrails.org</a>
                 </div>
-                <div>
-                  <div className="text-white/60 text-[12px] uppercase tracking-wider font-semibold mb-1">Nonprofit Services</div>
-                  <a href="mailto:kim@transitiontrails.org" className="hover:underline">kim@transitiontrails.org</a>
-                </div>
                 <div className="pt-4 border-t border-white/20">
                   <div className="text-white/60 text-[12px] uppercase tracking-wider font-semibold mb-1">Mailing Address</div>
                   <div>1228 Hollywood Ave<br />Dallas, TX 75208</div>
