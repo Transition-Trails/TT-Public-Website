@@ -141,7 +141,7 @@ export function Nav() {
                 <DropItem href="/volunteer" label="Volunteer & Mentor" desc="Coaches, assistants, and nonprofit technologists" onClick={() => setInvolvedOpen(false)} />
                 <DropItem href="/partners/recruiters" label="Recruiters" desc="Hire certified, project-ready Salesforce graduates" onClick={() => setInvolvedOpen(false)} />
                 <DropItem href="/partners/employers" label="Employers" desc="Sponsor, upskill, or hire Salesforce talent" onClick={() => setInvolvedOpen(false)} />
-                <DropItem href="/board-application" label="Board Membership" desc="Join the Transition Trails board" onClick={() => setInvolvedOpen(false)} />
+                <DropItem href="/board" label="Board Membership" desc="Join the Transition Trails board" onClick={() => setInvolvedOpen(false)} />
                 <Divider />
                 <DropItem href="/donate" label="Donate / Fund a Scholarship →" variant="accent" onClick={() => setInvolvedOpen(false)} />
               </div>
@@ -252,7 +252,7 @@ export function Nav() {
               <Link href="/volunteer" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">Volunteer & Mentor</Link>
               <Link href="/partners/recruiters" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">Recruiters</Link>
               <Link href="/partners/employers" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">Employers</Link>
-              <Link href="/board-application" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">Board Membership</Link>
+              <Link href="/board" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">Board Membership</Link>
               <Link href="/donate" onClick={closeMenu} className="text-[#F5A623] font-['Open_Sans'] font-semibold text-[16px] py-2">Donate / Fund a Scholarship →</Link>
             </div>
           </div>
