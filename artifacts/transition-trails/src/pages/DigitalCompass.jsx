@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { PageMeta } from "../components/PageMeta";
 import { LINKS } from "../constants/links";
 import { Calendar, BookOpen, Users, Lightbulb, TrendingUp, Rocket, ClipboardList, Zap, Check, X } from "lucide-react";
+import testimonialContent from "../content/testimonials.json";
 
 const UNIVERSAL_BENEFITS = [
   {
@@ -84,6 +85,7 @@ function CrossMark() {
 }
 
 export default function DigitalCompass() {
+  const hartfordTestimonial = testimonialContent.testimonials.find(t => t.id === "hartford-promise");
   return (
     <div className="flex flex-col min-h-screen">
       <PageMeta
@@ -424,10 +426,10 @@ export default function DigitalCompass() {
               className="font-['Poppins'] font-medium italic leading-[1.6] mb-5 relative z-10 max-w-[840px]"
               style={{ fontSize: "18px", color: "#1E4F5C" }}
             >
-              Transition Trails Salesforce Experts go beyond! After working with the team, our productivity and data accuracy soared — and we felt supported every step of the way.
+              {hartfordTestimonial.quote}
             </p>
-            <div className="font-['Open_Sans'] font-semibold text-[14px] text-[#2F6F7E]">Hartford Promise</div>
-            <div className="font-['Open_Sans'] text-[12px] text-[#4A4F4D]">Nonprofit Partner · Digital Compass Member · Hartford, CT</div>
+            <div className="font-['Open_Sans'] font-semibold text-[14px] text-[#2F6F7E]">{hartfordTestimonial.name}</div>
+            <div className="font-['Open_Sans'] text-[12px] text-[#4A4F4D]">{hartfordTestimonial.attribution}</div>
           </div>
         </div>
       </section>

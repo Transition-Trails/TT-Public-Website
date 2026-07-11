@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { LINKS } from "../constants/links";
 import ttLogoWhite from "../assets/TT_Horizontal_White_600px.png";
+import siteContent from "../content/site.json";
 
 export function Footer() {
   return (
@@ -11,14 +12,14 @@ export function Footer() {
             <img src={ttLogoWhite} alt="Transition Trails" className="h-14 w-auto mb-6 object-contain" />
           </Link>
           <p className="font-['Open_Sans'] text-[13px] text-white/65">
-            Empowering nonprofits and building digital careers — Together.
+            {siteContent.footer.mission}
           </p>
           <p className="font-['Open_Sans'] text-[13px] mt-2 mb-4 text-white/65">
             To assist people in transitioning to the digital economy through education, mentoring and training. Our primary focus is within the Salesforce ecosystem, providing a system of online and real world education and experience.
           </p>
           <address className="font-['Open_Sans'] text-[12px] not-italic" style={{ color: "rgba(255,255,255,0.4)" }}>
-            1228 Hollywood Ave<br />
-            Dallas, TX 75208
+            {siteContent.footer.address}<br />
+            {siteContent.footer.city}
           </address>
         </div>
 

@@ -2,106 +2,19 @@ import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { PageMeta } from "../components/PageMeta";
 import { LINKS } from "../constants/links";
+import teamContent from "../content/team.json";
 
 const fadeUp = { hidden: { opacity: 0, y: 24 }, show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } } };
 const stagger = { hidden: {}, show: { transition: { staggerChildren: 0.1 } } };
 
-const FOUNDERS = [
-  {
-    key: "AL",
-    name: "Angela Landrith",
-    title: "Co-Founder & CEO",
-    role: "The Visionary",
-    color: "#2F6B3F",
-    initials: "AL",
-    photo: null,
-    bio: [
-      "Angela founded Transition Trails after watching talented people get locked out of Salesforce careers not because they lacked ability, but because they lacked access to the right experience. As CEO, she leads program strategy, partner relationships, and the vision for what Transition Trails can become.",
-      "She brings deep expertise in Salesforce product management, career development, and building systems that actually serve the people using them. Angela believes the gap between certification and employment is a design problem — and Transition Trails is the solution she wished existed when she was navigating her own career pivot.",
-    ],
-    skills: [
-      "Salesforce Product Management",
-      "Career Progression Coaching",
-      "CRM Business Strategy",
-      "Vision and Roadmapping",
-      "AI Adoption and Usage",
-      "RESOLVE Trainer",
-    ],
-    link: {
-      href: "https://calendar.app.google/t1THqhnCWacFyCu2A",
-      label: "Schedule time with Angela",
-      external: true,
-    },
-  },
-  {
-    key: "KB",
-    name: "Kim Barnes",
-    title: "Co-Founder & COO",
-    role: "The Builder",
-    color: "#2F6F7E",
-    initials: "KB",
-    photo: null,
-    bio: [
-      "Kim is the operational backbone of Transition Trails. As COO, she leads the Digital Compass program, manages partner relationships with nonprofit clients, and ensures that every learner and organization Transition Trails serves receives a consistently excellent experience.",
-      "Kim brings deep expertise in Salesforce solution design and nonprofit technology, with a particular focus on making complex systems work for the people who depend on them. She is the architect of many of Transition Trails' internal processes — and the reason things actually get done.",
-    ],
-    skills: [
-      "Salesforce Solution Design",
-      "Business Analysis",
-      "Nonprofit Technology",
-      "Salesforce Architectural Practices",
-      "Zapier & Automation",
-      "RESOLVE Trainer",
-    ],
-    link: {
-      href: "mailto:hello@transitiontrails.org",
-      label: "Contact Kim",
-      external: false,
-    },
-  },
-  {
-    key: "HR",
-    name: "Hugh Richardson",
-    title: "Co-Founder & CTO · Solutions Architect",
-    role: "The Champion",
-    color: "#2F6B3F",
-    initials: "HR",
-    photo: null,
-    bio: [
-      "Hugh is Transition Trails' proof of concept. He made the pivot himself — from a non-technical career into Salesforce — and now serves as CTO and Solutions Architect for Transition Trails' technology infrastructure. He built the Trail OS platform, oversees the DevOps pipeline, and brings the technical credibility that makes Transition Trails' programs defensible to employers.",
-      "Hugh coaches from lived experience. When he tells a learner that the path from certification to employment is real and navigable, he means it — because he walked it.",
-    ],
-    skills: [
-      "Solution Design & Architecture",
-      "Security and Sharing Models",
-      "Requirements and Process Mapping",
-      "AI Integration",
-      "Interview Prep & Mentoring",
-      "RESOLVE Trainer",
-    ],
-    link: null,
-  },
-  {
-    key: "KL",
-    name: "Kel Landrith",
-    title: "Co-Founder & Finance Director",
-    role: "The Steward",
-    color: "#7FAFC6",
-    initials: "KL",
-    photo: null,
-    bio: [
-      "Kel keeps Transition Trails financially grounded and mission-focused. As Finance Director, he oversees financial stewardship, nonprofit compliance, and business development — ensuring that every dollar Transition Trails spends is working toward the mission.",
-      "He brings specialist expertise in nonprofit startup operations, account and donation management, and the financial structures that allow a young nonprofit to grow without losing its integrity. Kel does not offer individual coaching — his focus is on the organizational health that makes everything else possible.",
-    ],
-    skills: [
-      "Nonprofit Startup Specialist",
-      "Account and Donation Management",
-      "Financial Stewardship",
-      "Business Development",
-    ],
-    link: null,
-  },
-];
+const FOUNDERS = teamContent.founders.map(f => ({
+  ...f,
+  link: f.calendarUrl
+    ? { href: f.calendarUrl, label: `Schedule time with ${f.name.split(" ")[0]}`, external: true }
+    : f.email
+    ? { href: `mailto:${f.email}`, label: `Contact ${f.name.split(" ")[0]}`, external: false }
+    : null,
+}));
 
 function FounderSection({ founder, index }) {
   const initialsLeft = index % 2 === 0;

@@ -7,6 +7,9 @@ import { ProgramCard } from "../components/ProgramCard";
 import { PROGRAMS } from "../constants/programs";
 import { FOUNDERS } from "../constants/founders";
 import { LINKS } from "../constants/links";
+import siteContent from "../content/site.json";
+import homeContent from "../content/pages/home.json";
+import testimonialContent from "../content/testimonials.json";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -28,6 +31,12 @@ const slideRight = {
   hidden: { opacity: 0, x: 30 },
   visible: { opacity: 1, x: 0, transition: { duration: 0.55 } }
 };
+
+const PROBLEM_ICONS = [
+  <Database className="w-8 h-8 text-[#7FAFC6] mb-5" />,
+  <Users className="w-8 h-8 text-[#7FAFC6] mb-5" />,
+  <DollarSign className="w-8 h-8 text-[#7FAFC6] mb-5" />,
+];
 
 export default function Home() {
   return (
@@ -372,35 +381,23 @@ export default function Home() {
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#F5A623] mb-4">FOR NONPROFITS</div>
             <h2 className="font-['Fraunces'] font-bold text-[36px] md:text-[44px] text-white mb-6 max-w-2xl">
-              Your mission deserves technology that works.
+              {homeContent.nonprofitSection.heading}
             </h2>
             <p className="font-['Open_Sans'] text-[18px] text-white/75 leading-[1.65] max-w-3xl mb-16">
-              You have the Power of Us grant. You have a team that cares. What you may not have: the expertise to implement Salesforce and keep it running. That's not a failure — it's the gap we exist to close.
+              {homeContent.nonprofitSection.body}
             </p>
           </motion.div>
 
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            <motion.div variants={fadeUpChild} className="bg-white/5 border border-white/10 rounded-xl p-7">
-              <Database className="w-8 h-8 text-[#7FAFC6] mb-5" />
-              <h3 className="font-['Poppins'] font-bold text-[16px] text-white mb-3">You have Salesforce. You're not using it.</h3>
-              <p className="font-['Open_Sans'] text-[14px] text-white/70 leading-[1.6]">
-                You invested in the platform. Without implementation expertise, adoption stalls and the grant feels wasted.
-              </p>
-            </motion.div>
-            <motion.div variants={fadeUpChild} className="bg-white/5 border border-white/10 rounded-xl p-7">
-              <Users className="w-8 h-8 text-[#7FAFC6] mb-5" />
-              <h3 className="font-['Poppins'] font-bold text-[16px] text-white mb-3">Your team is the accidental admin.</h3>
-              <p className="font-['Open_Sans'] text-[14px] text-white/70 leading-[1.6]">
-                Someone on staff inherited Salesforce without training. They're doing their best, but they need support.
-              </p>
-            </motion.div>
-            <motion.div variants={fadeUpChild} className="bg-white/5 border border-white/10 rounded-xl p-7">
-              <DollarSign className="w-8 h-8 text-[#7FAFC6] mb-5" />
-              <h3 className="font-['Poppins'] font-bold text-[16px] text-white mb-3">Consulting rates are out of reach.</h3>
-              <p className="font-['Open_Sans'] text-[14px] text-white/70 leading-[1.6]">
-                Traditional Salesforce consulting runs $1,000–$3,000/month. Digital Compass starts at $149.
-              </p>
-            </motion.div>
+            {homeContent.nonprofitSection.problems.map((problem, i) => (
+              <motion.div key={problem.title} variants={fadeUpChild} className="bg-white/5 border border-white/10 rounded-xl p-7">
+                {PROBLEM_ICONS[i]}
+                <h3 className="font-['Poppins'] font-bold text-[16px] text-white mb-3">{problem.title}</h3>
+                <p className="font-['Open_Sans'] text-[14px] text-white/70 leading-[1.6]">
+                  {problem.body}
+                </p>
+              </motion.div>
+            ))}
           </motion.div>
 
           <div style={{ maxWidth: '680px', margin: '0 auto', padding: '48px 0', textAlign: 'center' }}>
@@ -592,7 +589,7 @@ export default function Home() {
           </div>
           <div className="flex flex-wrap justify-center gap-6">
             <div className="w-[280px] h-[56px] bg-white border border-[#E2E4E1] rounded-lg flex items-center justify-center font-['Open_Sans'] font-semibold text-[14px] text-[#4A4F4D]">
-              Hartford Promises
+              Hartford Promise
             </div>
             <div className="w-[280px] h-[56px] bg-white border border-[#E2E4E1] rounded-lg flex items-center justify-center font-['Open_Sans'] font-semibold text-[14px] text-[#4A4F4D]">
               CLYLP
@@ -608,38 +605,22 @@ export default function Home() {
       <section className="bg-white py-20 px-5 md:px-10">
         <div className="max-w-7xl mx-auto">
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
-            <motion.div variants={fadeUpChild} className="flex flex-col">
-              <div className="font-['Poppins'] text-[56px] leading-none mb-2 select-none" style={{ color: "rgba(47,111,126,0.3)" }}>"</div>
-              <p className="font-['Poppins'] font-medium italic text-[16px] text-[#2A2E2C] leading-[1.65] mb-5 flex-1">
-                Transition Trails Salesforce Experts go beyond! After working with the team, our productivity and data accuracy soared — and we felt supported every step of the way.
-              </p>
-              <div>
-                <div className="font-['Open_Sans'] font-semibold text-[14px] text-[#2F6F7E]">Hartford Promises</div>
-                <div className="font-['Open_Sans'] text-[12px] text-[#8C8882]">Nonprofit Partner · Digital Compass Member · Hartford, CT</div>
-              </div>
-            </motion.div>
-
-            <motion.div variants={fadeUpChild} className="flex flex-col">
-              <div className="font-['Poppins'] text-[56px] leading-none mb-2 select-none" style={{ color: "rgba(47,107,63,0.25)" }}>"</div>
-              <p className="font-['Poppins'] font-medium italic text-[16px] text-[#2A2E2C] leading-[1.65] mb-5 flex-1">
-                The hands-on experience and the team environment were what I valued most. Working on a real project made everything click in a way that self-study never could.
-              </p>
-              <div>
-                <div className="font-['Open_Sans'] font-semibold text-[14px] text-[#2F6B3F]">Cohort 0 Participant</div>
-                <div className="font-['Open_Sans'] text-[12px] text-[#8C8882]">Guided Trail · Dec. 2025 Retrospective</div>
-              </div>
-            </motion.div>
-
-            <motion.div variants={fadeUpChild} className="flex flex-col">
-              <div className="font-['Poppins'] text-[56px] leading-none mb-2 select-none" style={{ color: "rgba(47,107,63,0.25)" }}>"</div>
-              <p className="font-['Poppins'] font-medium italic text-[16px] text-[#2A2E2C] leading-[1.65] mb-5 flex-1">
-                This program teaches you how to think like a professional — not just how to pass a test. The coaching and real-world exposure gave me a completely different kind of confidence.
-              </p>
-              <div>
-                <div className="font-['Open_Sans'] font-semibold text-[14px] text-[#2F6B3F]">Cohort 0 Participant</div>
-                <div className="font-['Open_Sans'] text-[12px] text-[#8C8882]">Guided Trail · Dec. 2025 Retrospective</div>
-              </div>
-            </motion.div>
+            {testimonialContent.testimonials.map((t) => {
+              const quoteColor = t.type === "nonprofit" ? "rgba(47,111,126,0.3)" : "rgba(47,107,63,0.25)";
+              const nameColor = t.type === "nonprofit" ? "#2F6F7E" : "#2F6B3F";
+              return (
+                <motion.div key={t.id} variants={fadeUpChild} className="flex flex-col">
+                  <div className="font-['Poppins'] text-[56px] leading-none mb-2 select-none" style={{ color: quoteColor }}>"</div>
+                  <p className="font-['Poppins'] font-medium italic text-[16px] text-[#2A2E2C] leading-[1.65] mb-5 flex-1">
+                    {t.quote}
+                  </p>
+                  <div>
+                    <div className="font-['Open_Sans'] font-semibold text-[14px]" style={{ color: nameColor }}>{t.name}</div>
+                    <div className="font-['Open_Sans'] text-[12px] text-[#8C8882]">{t.attribution}</div>
+                  </div>
+                </motion.div>
+              );
+            })}
           </motion.div>
         </div>
       </section>
@@ -649,15 +630,15 @@ export default function Home() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
           <div className="flex-1">
             <h2 className="font-['Fraunces'] font-bold text-[32px] md:text-[40px] text-white mb-2 leading-tight">
-              Your trail starts with one real project.
+              {siteContent.actionBanner.heading}
             </h2>
             <p className="font-['Open_Sans'] text-[18px] text-white/80">
-              Guided Trail Cohort 1 waitlist is open. 8–12 seats. Application required.
+              {siteContent.actionBanner.body}
             </p>
           </div>
           <div className="shrink-0">
-            <CTAButton href={LINKS.waitlist} variant="outline" size="lg" className="text-white border-white hover:bg-white/10">
-              Join the Waitlist
+            <CTAButton href={siteContent.actionBanner.ctaPath} variant="outline" size="lg" className="text-white border-white hover:bg-white/10">
+              {siteContent.actionBanner.ctaText}
             </CTAButton>
           </div>
         </div>
