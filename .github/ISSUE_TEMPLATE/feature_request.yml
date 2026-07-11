@@ -1,0 +1,55 @@
+name: Feature Request
+description: Suggest a new page, section, or capability for the site.
+title: "[Feature]: "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have an idea to improve the site? Describe it here.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: What's the user need or gap this addresses?
+      placeholder: "Prospective learners don't know what to expect week-by-week during the Guided Trail."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: What would you build? Feel free to sketch it out or link a mockup.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: audience
+    attributes:
+      label: Who does this serve?
+      multiple: true
+      options:
+        - Career Starters
+        - Career Builders
+        - Career Pivoters
+        - Nonprofit Partners
+        - Donors / Supporters
+        - Recruiters / Employers
+        - Coaches / Volunteers
+        - Internal / Operational
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Any other approaches you thought about?
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Anything else — links, references, examples from other sites.

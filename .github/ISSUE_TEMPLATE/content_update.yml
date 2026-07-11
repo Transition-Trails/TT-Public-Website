@@ -1,0 +1,77 @@
+name: Content Update
+description: Request a copy change, new testimonial, updated team bio, program detail, or other content edit.
+title: "[Content]: "
+labels: ["content", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for copy edits, new testimonials, updated bios, pricing changes, or any other text/data update.
+
+  - type: dropdown
+    id: content_type
+    attributes:
+      label: What kind of content?
+      options:
+        - Copy / marketing text
+        - Team bio or photo
+        - Testimonial (add / update / remove)
+        - Program details (pricing, dates, eligibility)
+        - Partner / nonprofit logo or info
+        - Legal / policy text
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: location
+    attributes:
+      label: Where on the site?
+      multiple: true
+      options:
+        - Home
+        - About
+        - About / Team
+        - Programs (overview)
+        - Explorer's Trail
+        - Foundations Trail
+        - Guided Trail
+        - Trail of Mastery
+        - Digital Compass
+        - Scholarship / Trail Forward
+        - Footer
+        - Multiple pages / site-wide
+        - Not yet on the site
+    validations:
+      required: true
+
+  - type: textarea
+    id: current
+    attributes:
+      label: Current content (if replacing)
+      description: Paste the existing text so we can find and replace it exactly.
+      render: text
+
+  - type: textarea
+    id: new_content
+    attributes:
+      label: New / corrected content
+      description: The approved, final copy. Please proofread before submitting.
+      render: text
+    validations:
+      required: true
+
+  - type: input
+    id: approved_by
+    attributes:
+      label: Approved by
+      description: Who signed off on this copy? (name or Slack handle)
+      placeholder: "Angela L."
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
+      description: Deadline, context, or anything else the dev needs to know.

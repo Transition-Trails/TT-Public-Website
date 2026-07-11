@@ -1,7 +1,8 @@
 version: 2
 updates:
+  # Root pnpm workspace — covers all packages (libs, artifacts, scripts)
   - package-ecosystem: "npm"
-    directory: "/artifacts/transition-trails"
+    directory: "/"
     schedule:
       interval: "weekly"
       day: "monday"
@@ -10,7 +11,6 @@ updates:
     open-pull-requests-limit: 5
     versioning-strategy: increase-if-necessary
     ignore:
-      # Don't auto-update major versions - review manually
       - dependency-name: "*"
         update-types: ["version-update:semver-major"]
     labels:
@@ -19,6 +19,26 @@ updates:
     commit-message:
       prefix: "chore(deps)"
       include: "scope"
-    # 7-day minimum age before accepting - defense against supply chain attacks
-    # Note: Dependabot doesn't have minimumReleaseAge natively, but reviewing
-    # PRs after a week achieves the same effect. Add Renovate for this feature.
+    groups:
+      radix-ui:
+        patterns:
+          - "@radix-ui/*"
+      replit-plugins:
+        patterns:
+          - "@replit/*"
+
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "America/Chicago"
+    labels:
+      - "dependencies"
+      - "automated"
+      - "ci"
+    commit-message:
+      prefix: "chore(ci)"
+      include: "scope"

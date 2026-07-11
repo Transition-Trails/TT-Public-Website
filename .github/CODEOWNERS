@@ -1,0 +1,18 @@
+# Global ownership — all PRs require at least one review from the core team.
+# Replace GitHub usernames with the actual handles for each founder.
+* @Transition-Trails/core
+
+# Content layer — testimonials, program info, team data, site copy
+/artifacts/transition-trails/src/content/ @Transition-Trails/core
+
+# Design & frontend
+/artifacts/transition-trails/src/ @Transition-Trails/core
+
+# API server
+/artifacts/api-server/ @Transition-Trails/core
+
+# Database schema — extra scrutiny; any schema change needs deliberate review
+/lib/db/ @Transition-Trails/core
+
+# CI / GitHub config — changes here affect the whole team
+/.github/ @Transition-Trails/core
