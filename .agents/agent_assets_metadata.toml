@@ -1,0 +1,50 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "bgnUiGJdvRVCAV1FfoxJX"
+uri = "file://screenshots/page-home.jpg"
+type = "image"
+title = "Home"
+
+[[outputs]]
+id = "EudZVbhX-hLwHYaJqtHhE"
+uri = "file://screenshots/page-about.jpg"
+type = "image"
+title = "About"
+
+[[outputs]]
+id = "6LxTbfF1HhuA5uNAEk9uz"
+uri = "file://screenshots/page-about-team.jpg"
+type = "image"
+title = "About / Team"
+
+[[outputs]]
+id = "sA4gHbsMuLwEecxqcC7B0"
+uri = "file://screenshots/page-guided-trail.jpg"
+type = "image"
+title = "Guided Trail"
+
+[[outputs]]
+id = "P_611K6FHjPUzO6R_YALo"
+uri = "file://screenshots/page-digital-compass.jpg"
+type = "image"
+title = "Digital Compass"
+
+[[outputs]]
+id = "cYK2PDQU21RK_3RIpPTm6"
+uri = "file://screenshots/page-explorers-trail.jpg"
+type = "image"
+title = "Explorer's Trail"
+
+[[outputs]]
+id = "7TZj5t_qlVytEznF4l9mc"
+uri = "file://screenshots/page-foundations-trail.jpg"
+type = "image"
+title = "Foundations Trail"
+
+[[outputs]]
+id = "CUDxv5wkeQh1Yhcd_bvdx"
+uri = "file://screenshots/page-trail-of-mastery.jpg"
+type = "image"
+title = "Trail of Mastery"
