@@ -77,7 +77,7 @@ export default function Waitlist() {
                 Programs launching October 1, 2026
               </p>
               <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D]">
-                Explorer's Trail opens October 1. Guided Trail Cohort 1 waitlist is now open — two squads running concurrently, 2, 4 or 6 learners each (always even, because learners test each other's work in pairs). Application required. Foundations Trail opens after October 1. Trail of Mastery interest list is open for Cohort 0 in Q2 2027.
+                Explorer's Trail opens October 1. Guided Trail Cohort 1 waitlist is now open — two squads running concurrently, 2, 4 or 6 learners each (always even, because learners test each other's work in pairs). Application required. Foundations Trail is in Cohort 0 testing now — join the list and we will let you know as soon as dates are set. Trail of Mastery interest list is open for Cohort 0 in 2027.
               </p>
             </motion.div>
           </motion.div>
