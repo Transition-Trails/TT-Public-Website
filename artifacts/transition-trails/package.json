@@ -10,7 +10,8 @@
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "analyze": "ANALYZE=true vite build --config vite.config.ts",
     "lint": "eslint src/ --ext .js,.jsx,.ts,.tsx",
-    "check:tokens": "node src/styles/check-tokens-sync.js"
+    "check:tokens": "node src/styles/check-tokens-sync.js",
+    "check:contrast": "node src/styles/check-nav-contrast.js"
   },
   "devDependencies": {
     "@axe-core/react": "^4.12.1",
