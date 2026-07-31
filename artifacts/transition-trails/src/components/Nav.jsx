@@ -56,7 +56,7 @@ export function Nav() {
 
   const desktopNavClass = (active) =>
     `font-['Open_Sans'] font-semibold text-[15px] flex items-center gap-1 h-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-sm ${
-      active ? "text-white" : "text-white/70 hover:text-white"
+      active ? "text-white" : "text-white/90 hover:text-white"
     }`;
 
   const isPrograms = location.startsWith("/programs") || location === "/scholarship-application" || location === "/scholarships";
@@ -175,7 +175,7 @@ export function Nav() {
 
         {/* Right side */}
         <div className="hidden lg:flex items-center gap-4 shrink-0">
-          <Link href="/donate" className="font-['Open_Sans'] font-semibold text-[15px] text-white/75 hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded">
+          <Link href="/donate" className="font-['Open_Sans'] font-semibold text-[15px] text-white/90 hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded">
             Donate
           </Link>
           <Link href="/waitlist"
@@ -215,16 +215,16 @@ export function Nav() {
             </button>
             <div className={`flex flex-col pl-4 overflow-hidden transition-all duration-300 ${openDropdown === "programs" ? "mt-4 max-h-[400px]" : "max-h-0"}`}>
               <div className="font-['Open_Sans'] font-semibold text-[10px] tracking-[1.5px] uppercase text-white/40 pb-1">Featured</div>
-              <Link href="/programs/guided-trail" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2 flex items-center gap-2">
+              <Link href="/programs/guided-trail" onClick={closeMenu} className="text-white/90 font-['Open_Sans'] text-[16px] py-2 flex items-center gap-2">
                 Guided Trail <span className="bg-amber-100 text-amber-700 font-bold text-[10px] uppercase px-1.5 py-0.5 rounded">Flagship</span>
               </Link>
               <Link href="/scholarship-application" onClick={closeMenu} className="text-dark-accent-green font-['Open_Sans'] font-semibold text-[16px] py-2">Trail Forward Scholarship</Link>
               <div className="h-px bg-white/10 my-2" />
               <div className="font-['Open_Sans'] font-semibold text-[10px] tracking-[1.5px] uppercase text-white/40 pb-1">All Programs</div>
-              <Link href="/programs" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">All Programs</Link>
-              <Link href="/programs/digital-compass" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">Digital Compass</Link>
+              <Link href="/programs" onClick={closeMenu} className="text-white/90 font-['Open_Sans'] text-[16px] py-2">All Programs</Link>
+              <Link href="/programs/digital-compass" onClick={closeMenu} className="text-white/90 font-['Open_Sans'] text-[16px] py-2">Digital Compass</Link>
               <div className="h-px bg-white/10 my-2" />
-              <Link href="/waitlist" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">Join the Waitlist</Link>
+              <Link href="/waitlist" onClick={closeMenu} className="text-white/90 font-['Open_Sans'] text-[16px] py-2">Join the Waitlist</Link>
             </div>
           </div>
 
@@ -236,8 +236,8 @@ export function Nav() {
               <ChevronDown className={`w-5 h-5 transition-transform ${openDropdown === "nonprofit" ? "rotate-180" : ""}`} />
             </button>
             <div className={`flex flex-col pl-4 overflow-hidden transition-all duration-300 ${openDropdown === "nonprofit" ? "mt-4 max-h-[300px]" : "max-h-0"}`}>
-              <Link href="/programs/digital-compass" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">Digital Compass</Link>
-              <Link href="/nonprofit-assessment" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">How Partnerships Work</Link>
+              <Link href="/programs/digital-compass" onClick={closeMenu} className="text-white/90 font-['Open_Sans'] text-[16px] py-2">Digital Compass</Link>
+              <Link href="/nonprofit-assessment" onClick={closeMenu} className="text-white/90 font-['Open_Sans'] text-[16px] py-2">How Partnerships Work</Link>
               <Link href="/nonprofit-assessment" onClick={closeMenu} className="text-sun-amber font-['Open_Sans'] font-semibold text-[16px] py-2">Start Free Assessment →</Link>
             </div>
           </div>
@@ -250,10 +250,10 @@ export function Nav() {
               <ChevronDown className={`w-5 h-5 transition-transform ${openDropdown === "involved" ? "rotate-180" : ""}`} />
             </button>
             <div className={`flex flex-col pl-4 overflow-hidden transition-all duration-300 ${openDropdown === "involved" ? "mt-4 max-h-[400px]" : "max-h-0"}`}>
-              <Link href="/volunteer" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">Volunteer & Mentor</Link>
-              <Link href="/partners/recruiters" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">Recruiters</Link>
-              <Link href="/partners/employers" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">Employers</Link>
-              <Link href="/board" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">Board Membership</Link>
+              <Link href="/volunteer" onClick={closeMenu} className="text-white/90 font-['Open_Sans'] text-[16px] py-2">Volunteer & Mentor</Link>
+              <Link href="/partners/recruiters" onClick={closeMenu} className="text-white/90 font-['Open_Sans'] text-[16px] py-2">Recruiters</Link>
+              <Link href="/partners/employers" onClick={closeMenu} className="text-white/90 font-['Open_Sans'] text-[16px] py-2">Employers</Link>
+              <Link href="/board" onClick={closeMenu} className="text-white/90 font-['Open_Sans'] text-[16px] py-2">Board Membership</Link>
               <Link href="/donate" onClick={closeMenu} className="text-sun-amber font-['Open_Sans'] font-semibold text-[16px] py-2">Donate / Fund a Scholarship →</Link>
             </div>
           </div>
@@ -266,10 +266,10 @@ export function Nav() {
               <ChevronDown className={`w-5 h-5 transition-transform ${openDropdown === "about" ? "rotate-180" : ""}`} />
             </button>
             <div className={`flex flex-col pl-4 overflow-hidden transition-all duration-300 ${openDropdown === "about" ? "mt-4 max-h-[200px]" : "max-h-0"}`}>
-              <Link href="/about" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">Our Story</Link>
-              <Link href="/about/team" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">Meet the Team</Link>
-              <Link href="/impact" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">Vision & Impact</Link>
-              <Link href="/expedition" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">The Expedition</Link>
+              <Link href="/about" onClick={closeMenu} className="text-white/90 font-['Open_Sans'] text-[16px] py-2">Our Story</Link>
+              <Link href="/about/team" onClick={closeMenu} className="text-white/90 font-['Open_Sans'] text-[16px] py-2">Meet the Team</Link>
+              <Link href="/impact" onClick={closeMenu} className="text-white/90 font-['Open_Sans'] text-[16px] py-2">Vision & Impact</Link>
+              <Link href="/expedition" onClick={closeMenu} className="text-white/90 font-['Open_Sans'] text-[16px] py-2">The Expedition</Link>
             </div>
           </div>
 
@@ -280,7 +280,7 @@ export function Nav() {
 
           <div className="flex flex-col gap-3 mt-2">
             <Link href="/donate" onClick={closeMenu}
-              className="font-['Open_Sans'] font-semibold text-[16px] text-white/75 py-2 text-center">
+              className="font-['Open_Sans'] font-semibold text-[16px] text-white/90 py-2 text-center">
               Donate
             </Link>
             <Link href="/waitlist" onClick={closeMenu}
