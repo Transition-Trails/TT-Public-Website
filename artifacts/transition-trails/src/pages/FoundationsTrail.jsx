@@ -30,11 +30,11 @@ export default function FoundationsTrail() {
               The certification is the door. The Foundations Trail is how you prove you can walk through it.
             </p>
             <p className="font-['Open_Sans'] text-[18px] text-white/80 leading-[1.6] mb-8">
-              You have completed your Salesforce Platform Foundations certification and are working toward your Salesforce Platform Administrator certification. The goal of Foundations Trail is to earn that certification. The capstone project is aligned to the 9 Salesforce Admin exam domains — working through it reinforces exactly what you need to know for the exam. Build With Me videos guide you through each build step so you develop both the practical skill and the exam confidence to pass.
+              You have completed your Salesforce Platform Foundations certification and are working toward your Salesforce Certified Administrator certification. The goal of Foundations Trail is to earn that certification. The capstone project is aligned to the 9 Salesforce Admin exam domains — working through it reinforces exactly what you need to know for the exam. Build With Me videos guide you through each build step so you develop both the practical skill and the exam confidence to pass.
             </p>
             <div className="inline-flex items-center gap-3 px-4 py-3 rounded-lg" style={{ background: "rgba(127,175,198,0.15)", border: "1px solid rgba(127,175,198,0.4)" }}>
               <Check className="w-5 h-5 shrink-0" style={{ color: "#7FAFC6" }} />
-              <span className="font-['Open_Sans'] text-sm font-semibold" style={{ color: "#7FAFC6" }}>Prerequisite: Salesforce Platform Foundations certification completed · Salesforce Platform Administrator certification in progress</span>
+              <span className="font-['Open_Sans'] text-sm font-semibold" style={{ color: "#7FAFC6" }}>Prerequisite: Salesforce Platform Foundations certification completed · Salesforce Certified Administrator certification in progress</span>
             </div>
           </div>
 

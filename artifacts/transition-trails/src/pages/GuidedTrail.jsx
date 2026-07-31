@@ -88,7 +88,7 @@ export default function GuidedTrail() {
                 <Check className="w-5 h-5 text-[#2F6B3F]" />
               </div>
               <div className="font-['Open_Sans'] font-semibold text-[16px] text-[#2A2E2C]">
-                Salesforce Platform Administrator Certification — achieved
+                Salesforce Certified Administrator Certification — achieved
               </div>
             </div>
             <div className="bg-[#FAFAF7] border border-[#E2E4E1] p-6 rounded-xl flex gap-4 items-center">
@@ -119,7 +119,7 @@ export default function GuidedTrail() {
             <div className="bg-white border border-[#E2E4E1] rounded-xl p-8">
               <div className="font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] text-[#2F6B3F] mb-3">Layer 1</div>
               <h4 className="font-['Poppins'] font-bold text-[20px] text-[#2A2E2C] mb-3">Structured Capstone Project</h4>
-              <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.7]">You work through a structured capstone project aligned to the Salesforce Platform Administrator exam domains — the same domains you studied for your certification. No Build With Me videos. No step-by-step guidance. You solve it independently, the way an admin would on the job. This is your proof that the basics are cold.</p>
+              <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.7]">You work through a structured capstone project aligned to the Salesforce Certified Administrator exam domains — the same domains you studied for your certification. No Build With Me videos. No step-by-step guidance. You solve it independently, the way an admin would on the job. This is your proof that the basics are cold.</p>
             </div>
 
             <div className="bg-white border border-[#E2E4E1] rounded-xl p-8">
