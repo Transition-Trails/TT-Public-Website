@@ -26,8 +26,10 @@
   /* ── Green ramp ─────────────────────────────────────────────── */
   --tt-green-100: #E6F0EA;
   --tt-green-300: #9FC3AE;
+  --tt-green-400: #4A8A6E;      /* gradient mid-point between green-500 and teal-300 */
   --tt-green-500: #2F6B3F;      /* = --tt-trail-green */
   --tt-green-700: #1E4A2A;
+  --tt-green-mid: var(--tt-green-400); /* alias used in ExplorersTrail gradient */
 
   /* ── Amber ramp ─────────────────────────────────────────────── */
   --tt-amber-100: #FEF3DB;
@@ -46,6 +48,7 @@
   --tt-white:       #FFFFFF;
   --tt-trail-light: #FAFAF7;    /* page background */
   --tt-warm-gray:   #E2E4E1;    /* dividers, borders */
+  --tt-cool-gray:   #6B7280;    /* secondary labels, placeholder text */
   --tt-slate:       #4A4F4D;    /* body text */
   --tt-charcoal:    #2A2E2C;    /* headings, dark sections */
   --tt-muted-text:  #8C8882;    /* captions, secondary text */
@@ -54,8 +57,14 @@
   /* ── Semantic ────────────────────────────────────────────────── */
   --tt-danger:       #A83A2C;
   --tt-danger-tint:  #FBEAE7;
+  --tt-error:        #DC2626;   /* bright red — board/alert indicators */
+  --tt-error-tint:   #FEE2E2;   /* bright red tint */
   --tt-success:      var(--tt-green-500);
   --tt-success-tint: var(--tt-green-100);
+
+  /* ── Expedition / very-dark backgrounds ─────────────────────── */
+  --tt-near-black:   #111111;   /* Expedition alternating dark section */
+  --tt-off-black:    #1A1A1A;   /* Expedition primary dark background */
 
   /* ── Dark-section palette ────────────────────────────────────── */
   /* Used on About, Board, Coaches, Consulting, Guided Trail, Blog  */
@@ -98,8 +107,8 @@
        because :focus-visible requires a CSS rule, not just a custom property. */
 
   /* ── Approved gradients (135deg) ────────────────────────────── */
-  --tt-gradient-green: linear-gradient(135deg, #1E4A2A, #2F6B3F);
-  --tt-gradient-teal:  linear-gradient(135deg, #1E4F5C, #2F6F7E 55%, #1E4A2A);
-  --tt-gradient-deep:  linear-gradient(135deg, #1E4A2A, #2F6B3F 55%, #2F6F7E);
+  --tt-gradient-green: linear-gradient(135deg, var(--tt-green-700), var(--tt-trail-green));
+  --tt-gradient-teal:  linear-gradient(135deg, var(--tt-teal-700), var(--tt-deep-teal) 55%, var(--tt-green-700));
+  --tt-gradient-deep:  linear-gradient(135deg, var(--tt-green-700), var(--tt-trail-green) 55%, var(--tt-deep-teal));
 
 }

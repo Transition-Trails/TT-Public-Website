@@ -26,9 +26,9 @@ export default function ScholarshipApplication() {
       />
 
       {/* ── HERO ── */}
-      <section className="pt-24 pb-16 px-5 md:px-10 bg-[#1E4A2A]">
+      <section className="pt-24 pb-16 px-5 md:px-10 bg-green-700">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] text-[#F5A623] mb-6">
+          <div className="font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] text-sun-amber mb-6">
             The Trail Forward Scholarship
           </div>
           <h1 className="font-['Fraunces'] font-bold text-[48px] md:text-[56px] text-white leading-[1.1] mb-6">
@@ -48,17 +48,17 @@ export default function ScholarshipApplication() {
       </section>
 
       {/* ── WHAT IT IS ── */}
-      <section className="bg-[#FAFAF7] py-20 px-5 md:px-10">
+      <section className="bg-trail-light py-20 px-5 md:px-10">
         <div className="max-w-7xl mx-auto">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-            <h2 className="font-['Fraunces'] font-bold text-[36px] text-[#2A2E2C] mb-6">
+            <h2 className="font-['Fraunces'] font-bold text-[36px] text-charcoal mb-6">
               What is the Trail Forward Scholarship?
             </h2>
-            <p className="font-['Open_Sans'] text-[17px] text-[#4A4F4D] leading-[1.75] mb-8">
+            <p className="font-['Open_Sans'] text-[17px] text-slate leading-[1.75] mb-8">
               The Trail Forward Scholarship is a fully funded seat in the Guided Trail program — Transition Trails' flagship 12-week employment practicum. One scholarship seat is available per cohort. There is no cost to the recipient. Transition Trails covers the full program fee, funded through donor contributions and workforce development grants.
             </p>
-            <div className="bg-[#E6F3EA] border border-[#2F6B3F]/30 rounded-xl px-7 py-6">
-              <p className="font-['Open_Sans'] font-semibold text-[15px] text-[#1E4A2A] leading-[1.65]">
+            <div className="bg-green-100 border border-trail-green/30 rounded-xl px-7 py-6">
+              <p className="font-['Open_Sans'] font-semibold text-[15px] text-green-700 leading-[1.65]">
                 This is not a discount. This is a fully funded seat. The scholarship recipient pays nothing — Transition Trails absorbs the full cost of the program, coaching, and curriculum.
               </p>
             </div>
@@ -70,13 +70,13 @@ export default function ScholarshipApplication() {
       <section className="bg-white py-20 px-5 md:px-10">
         <div className="max-w-7xl mx-auto">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-            <h2 className="font-['Fraunces'] font-bold text-[36px] text-[#2A2E2C] mb-6">
+            <h2 className="font-['Fraunces'] font-bold text-[36px] text-charcoal mb-6">
               Why does this scholarship exist?
             </h2>
-            <p className="font-['Open_Sans'] text-[17px] text-[#4A4F4D] leading-[1.75] mb-5">
+            <p className="font-['Open_Sans'] text-[17px] text-slate leading-[1.75] mb-5">
               The Guided Trail exists to close the experience gap — the wall between Salesforce certification and Salesforce employment. Certified career changers are qualified. They are ready. They simply cannot get hired without project experience, and they cannot get project experience without getting hired first.
             </p>
-            <p className="font-['Open_Sans'] text-[17px] text-[#4A4F4D] leading-[1.75]">
+            <p className="font-['Open_Sans'] text-[17px] text-slate leading-[1.75]">
               The Trail Forward Scholarship breaks that cycle for one learner per cohort — prioritizing those who face the steepest barriers to entering the technology sector.
             </p>
           </motion.div>
@@ -84,18 +84,18 @@ export default function ScholarshipApplication() {
       </section>
 
       {/* ── WHO IS ELIGIBLE ── */}
-      <section className="bg-[#FAFAF7] py-20 px-5 md:px-10">
+      <section className="bg-trail-light py-20 px-5 md:px-10">
         <div className="max-w-7xl mx-auto">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mb-12">
-            <h2 className="font-['Fraunces'] font-bold text-[36px] text-[#2A2E2C] mb-2">
+            <h2 className="font-['Fraunces'] font-bold text-[36px] text-charcoal mb-2">
               Who is eligible?
             </h2>
           </motion.div>
 
           {/* Required for all */}
-          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="bg-white border border-[#E2E4E1] rounded-xl p-7 mb-8 shadow-sm">
-            <div className="font-['Poppins'] font-bold text-[16px] text-[#2A2E2C] mb-1">Required for all applicants</div>
-            <div className="font-['Open_Sans'] text-[14px] text-[#6B7280] mb-5">You must meet ALL of the following:</div>
+          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="bg-white border border-warm-gray rounded-xl p-7 mb-8 shadow-sm">
+            <div className="font-['Poppins'] font-bold text-[16px] text-charcoal mb-1">Required for all applicants</div>
+            <div className="font-['Open_Sans'] text-[14px] text-cool-gray mb-5">You must meet ALL of the following:</div>
             <ul className="flex flex-col gap-4">
               {[
                 "You have earned your Salesforce Certified Platform Administrator certification",
@@ -103,12 +103,12 @@ export default function ScholarshipApplication() {
                 "You are on the Guided Trail waitlist for Cohort 1",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="mt-0.5 shrink-0 w-5 h-5 rounded-full bg-[#E6F3EA] flex items-center justify-center">
-                    <svg className="w-3 h-3 text-[#2F6B3F]" fill="none" viewBox="0 0 12 10" stroke="currentColor" strokeWidth="2.5">
+                  <span className="mt-0.5 shrink-0 w-5 h-5 rounded-full bg-green-100 flex items-center justify-center">
+                    <svg className="w-3 h-3 text-trail-green" fill="none" viewBox="0 0 12 10" stroke="currentColor" strokeWidth="2.5">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M1 5l3.5 3.5L11 1" />
                     </svg>
                   </span>
-                  <span className="font-['Open_Sans'] text-[15px] text-[#2A2E2C] leading-[1.6]">{item}</span>
+                  <span className="font-['Open_Sans'] text-[15px] text-charcoal leading-[1.6]">{item}</span>
                 </li>
               ))}
             </ul>
@@ -116,37 +116,37 @@ export default function ScholarshipApplication() {
 
           {/* Plus at least one */}
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mb-4">
-            <div className="font-['Poppins'] font-bold text-[16px] text-[#2A2E2C] mb-1">Plus at least one of the following</div>
-            <div className="font-['Open_Sans'] text-[14px] text-[#6B7280] mb-6">AND you must belong to at least one of these groups:</div>
+            <div className="font-['Poppins'] font-bold text-[16px] text-charcoal mb-1">Plus at least one of the following</div>
+            <div className="font-['Open_Sans'] text-[14px] text-cool-gray mb-6">AND you must belong to at least one of these groups:</div>
           </motion.div>
 
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <motion.div variants={fadeUpChild} className="bg-white border border-[#E2E4E1] rounded-xl p-6 shadow-sm">
-              <div className="w-10 h-10 rounded-full bg-[#E6F3EA] flex items-center justify-center mb-4">
-                <Shield className="w-5 h-5 text-[#2F6B3F]" />
+            <motion.div variants={fadeUpChild} className="bg-white border border-warm-gray rounded-xl p-6 shadow-sm">
+              <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mb-4">
+                <Shield className="w-5 h-5 text-trail-green" />
               </div>
-              <div className="font-['Poppins'] font-bold text-[15px] text-[#2A2E2C] mb-2">Military Community</div>
-              <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.6]">
+              <div className="font-['Poppins'] font-bold text-[15px] text-charcoal mb-2">Military Community</div>
+              <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.6]">
                 Active duty transitioning service members, veterans, and military spouses.
               </p>
             </motion.div>
 
-            <motion.div variants={fadeUpChild} className="bg-white border border-[#E2E4E1] rounded-xl p-6 shadow-sm">
-              <div className="w-10 h-10 rounded-full bg-[#E6F3EA] flex items-center justify-center mb-4">
-                <Users className="w-5 h-5 text-[#2F6B3F]" />
+            <motion.div variants={fadeUpChild} className="bg-white border border-warm-gray rounded-xl p-6 shadow-sm">
+              <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mb-4">
+                <Users className="w-5 h-5 text-trail-green" />
               </div>
-              <div className="font-['Poppins'] font-bold text-[15px] text-[#2A2E2C] mb-2">Underrepresented in Technology</div>
-              <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.6]">
+              <div className="font-['Poppins'] font-bold text-[15px] text-charcoal mb-2">Underrepresented in Technology</div>
+              <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.6]">
                 Women, non-binary individuals, and members of racial or ethnic groups underrepresented in the technology sector. Diversity of background brings diversity of perspective — and technology is stronger for it.
               </p>
             </motion.div>
 
-            <motion.div variants={fadeUpChild} className="bg-white border border-[#E2E4E1] rounded-xl p-6 shadow-sm">
-              <div className="w-10 h-10 rounded-full bg-[#E6F3EA] flex items-center justify-center mb-4">
-                <DollarSign className="w-5 h-5 text-[#2F6B3F]" />
+            <motion.div variants={fadeUpChild} className="bg-white border border-warm-gray rounded-xl p-6 shadow-sm">
+              <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mb-4">
+                <DollarSign className="w-5 h-5 text-trail-green" />
               </div>
-              <div className="font-['Poppins'] font-bold text-[15px] text-[#2A2E2C] mb-2">Economic Barriers</div>
-              <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.6]">
+              <div className="font-['Poppins'] font-bold text-[15px] text-charcoal mb-2">Economic Barriers</div>
+              <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.6]">
                 Individuals facing documented economic barriers to technology career entry.
               </p>
             </motion.div>
@@ -155,10 +155,10 @@ export default function ScholarshipApplication() {
       </section>
 
       {/* ── HOW TO APPLY ── */}
-      <section className="bg-white py-20 px-5 md:px-10 border-t border-[#E2E4E1]">
+      <section className="bg-white py-20 px-5 md:px-10 border-t border-warm-gray">
         <div className="max-w-7xl mx-auto">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mb-12 text-center">
-            <h2 className="font-['Fraunces'] font-bold text-[36px] text-[#2A2E2C]">
+            <h2 className="font-['Fraunces'] font-bold text-[36px] text-charcoal">
               How to apply
             </h2>
           </motion.div>
@@ -181,12 +181,12 @@ export default function ScholarshipApplication() {
                 body: "Applications are reviewed on a rolling basis. We will contact you within two weeks to schedule a conversation.",
               },
             ].map((step) => (
-              <motion.div key={step.n} variants={fadeUpChild} className="bg-[#FAFAF7] border border-[#E2E4E1] rounded-xl p-6">
-                <div className="w-9 h-9 rounded-full bg-[#2F6B3F] flex items-center justify-center mb-4">
+              <motion.div key={step.n} variants={fadeUpChild} className="bg-trail-light border border-warm-gray rounded-xl p-6">
+                <div className="w-9 h-9 rounded-full bg-trail-green flex items-center justify-center mb-4">
                   <span className="font-['Poppins'] font-bold text-[14px] text-white">{step.n}</span>
                 </div>
-                <div className="font-['Poppins'] font-bold text-[15px] text-[#2A2E2C] mb-2">{step.heading}</div>
-                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.6]">{step.body}</p>
+                <div className="font-['Poppins'] font-bold text-[15px] text-charcoal mb-2">{step.heading}</div>
+                <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.6]">{step.body}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -195,20 +195,20 @@ export default function ScholarshipApplication() {
       </section>
 
       {/* ── HOW IT IS FUNDED ── */}
-      <section className="bg-[#FAFAF7] py-20 px-5 md:px-10 border-t border-[#E2E4E1]">
+      <section className="bg-trail-light py-20 px-5 md:px-10 border-t border-warm-gray">
         <div className="max-w-7xl mx-auto">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-            <h2 className="font-['Fraunces'] font-bold text-[36px] text-[#2A2E2C] mb-6">
+            <h2 className="font-['Fraunces'] font-bold text-[36px] text-charcoal mb-6">
               How is the scholarship funded?
             </h2>
-            <p className="font-['Open_Sans'] text-[17px] text-[#4A4F4D] leading-[1.75] mb-5">
+            <p className="font-['Open_Sans'] text-[17px] text-slate leading-[1.75] mb-5">
               The Trail Forward Scholarship is funded through individual donor contributions and workforce development grants. Every scholarship seat costs Transition Trails approximately $1,547 — the full cost of program delivery, coaching, and curriculum for one learner.
             </p>
-            <p className="font-['Open_Sans'] text-[17px] text-[#4A4F4D] leading-[1.75] mb-8">
+            <p className="font-['Open_Sans'] text-[17px] text-slate leading-[1.75] mb-8">
               If you believe in removing barriers to technology careers, you can help fund the next scholarship seat.
             </p>
             <Link href="/donate"
-              className="inline-flex items-center justify-center h-[48px] px-7 rounded-[8px] border-2 border-[#2F6B3F] text-[#2F6B3F] font-['Poppins'] font-bold text-[14px] hover:bg-[#2F6B3F] hover:text-white transition-colors">
+              className="inline-flex items-center justify-center h-[48px] px-7 rounded-[8px] border-2 border-trail-green text-trail-green font-['Poppins'] font-bold text-[14px] hover:bg-trail-green hover:text-white transition-colors">
               Fund a Scholarship Seat
             </Link>
           </motion.div>

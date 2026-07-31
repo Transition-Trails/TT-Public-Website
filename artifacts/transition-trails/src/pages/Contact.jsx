@@ -19,7 +19,7 @@ export default function Contact() {
       />
 
       {/* HERO */}
-      <section className="bg-[#2A2E2C] pt-24 pb-16 px-5 text-center">
+      <section className="bg-charcoal pt-24 pb-16 px-5 text-center">
         <div className="max-w-7xl mx-auto">
           <motion.div initial="hidden" animate="show" variants={stagger}>
             <motion.h1 variants={fadeUp} className="font-['Fraunces'] font-bold text-[48px] md:text-[56px] text-white">Get in touch.</motion.h1>
@@ -31,7 +31,7 @@ export default function Contact() {
       </section>
 
       {/* MAIN CONTENT */}
-      <section className="bg-[#FAFAF7] py-16 px-5">
+      <section className="bg-trail-light py-16 px-5">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial="hidden"
@@ -43,74 +43,74 @@ export default function Contact() {
             {/* Left Column */}
             <div className="flex-[2]">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
-                <motion.div variants={fadeUp} className="bg-white border border-[#E2E4E1] p-6 rounded-xl">
-                  <div className="w-8 h-8 rounded-lg bg-[#EBF3EE] flex items-center justify-center mb-3">
-                    <GraduationCap size={18} stroke="#2F6B3F" />
+                <motion.div variants={fadeUp} className="bg-white border border-warm-gray p-6 rounded-xl">
+                  <div className="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center mb-3">
+                    <GraduationCap size={18} stroke="var(--tt-trail-green)" />
                   </div>
-                  <h3 className="font-['Poppins'] font-bold text-[18px] text-[#2F6B3F] mb-2">For Learners</h3>
-                  <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D]">Questions about programs, pricing, or enrollment</p>
+                  <h3 className="font-['Poppins'] font-bold text-[18px] text-trail-green mb-2">For Learners</h3>
+                  <p className="font-['Open_Sans'] text-[14px] text-slate">Questions about programs, pricing, or enrollment</p>
                 </motion.div>
 
                 <motion.div variants={fadeUp}>
-                  <Link href="/nonprofit-assessment" className="bg-white border border-[#E2E4E1] p-6 rounded-xl block hover:border-[#2F6F7E] transition-colors h-full">
-                    <div className="w-8 h-8 rounded-lg bg-[#E8F3F6] flex items-center justify-center mb-3">
-                      <Building2 size={18} stroke="#2F6F7E" />
+                  <Link href="/nonprofit-assessment" className="bg-white border border-warm-gray p-6 rounded-xl block hover:border-deep-teal transition-colors h-full">
+                    <div className="w-8 h-8 rounded-lg bg-teal-100 flex items-center justify-center mb-3">
+                      <Building2 size={18} stroke="var(--tt-deep-teal)" />
                     </div>
-                    <h3 className="font-['Poppins'] font-bold text-[18px] text-[#2F6F7E] mb-2">For Nonprofits →</h3>
-                    <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D]">Book a free Digital Compass assessment</p>
+                    <h3 className="font-['Poppins'] font-bold text-[18px] text-deep-teal mb-2">For Nonprofits →</h3>
+                    <p className="font-['Open_Sans'] text-[14px] text-slate">Book a free Digital Compass assessment</p>
                   </Link>
                 </motion.div>
 
-                <motion.div variants={fadeUp} className="bg-white border border-[#E2E4E1] p-6 rounded-xl">
-                  <div className="w-8 h-8 rounded-lg bg-[#FEF3DB] flex items-center justify-center mb-3">
-                    <Briefcase size={18} stroke="#D4890A" />
+                <motion.div variants={fadeUp} className="bg-white border border-warm-gray p-6 rounded-xl">
+                  <div className="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center mb-3">
+                    <Briefcase size={18} stroke="var(--tt-amber-700)" />
                   </div>
-                  <h3 className="font-['Poppins'] font-bold text-[18px] text-[#F5A623] mb-2">For Partners & Employers</h3>
-                  <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D]">Employer sponsorships, corporate partnerships</p>
+                  <h3 className="font-['Poppins'] font-bold text-[18px] text-sun-amber mb-2">For Partners & Employers</h3>
+                  <p className="font-['Open_Sans'] text-[14px] text-slate">Employer sponsorships, corporate partnerships</p>
                 </motion.div>
 
-                <motion.div variants={fadeUp} className="bg-white border border-[#E2E4E1] p-6 rounded-xl">
-                  <div className="w-8 h-8 rounded-lg bg-[#F3F4F6] flex items-center justify-center mb-3">
-                    <MessageCircle size={18} stroke="#6B7280" />
+                <motion.div variants={fadeUp} className="bg-white border border-warm-gray p-6 rounded-xl">
+                  <div className="w-8 h-8 rounded-lg bg-muted-fill flex items-center justify-center mb-3">
+                    <MessageCircle size={18} stroke="var(--tt-cool-gray)" />
                   </div>
-                  <h3 className="font-['Poppins'] font-bold text-[18px] text-[#2A2E2C] mb-2">General</h3>
-                  <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D]">Anything else — we're here</p>
+                  <h3 className="font-['Poppins'] font-bold text-[18px] text-charcoal mb-2">General</h3>
+                  <p className="font-['Open_Sans'] text-[14px] text-slate">Anything else — we're here</p>
                 </motion.div>
               </div>
 
               {/* Contact CTA Card */}
-              <motion.div variants={fadeUp} className="bg-white border border-[#E2E4E1] rounded-2xl p-8 shadow-sm">
+              <motion.div variants={fadeUp} className="bg-white border border-warm-gray rounded-2xl p-8 shadow-sm">
                 <div className="flex flex-col items-start gap-6">
                   <div>
-                    <h2 className="font-['Fraunces'] font-bold text-[22px] text-[#2A2E2C] mb-2">Send us a message.</h2>
-                    <p className="font-['Open_Sans'] text-[15px] text-[#6B7280] leading-relaxed">Share your question and details — we'll reply within 2 business days.</p>
+                    <h2 className="font-['Fraunces'] font-bold text-[22px] text-charcoal mb-2">Send us a message.</h2>
+                    <p className="font-['Open_Sans'] text-[15px] text-cool-gray leading-relaxed">Share your question and details — we'll reply within 2 business days.</p>
                   </div>
                   <a
                     href="https://form.jotform.com/261877821935066"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-[#2F6B3F] text-white font-['Open_Sans'] font-bold text-[15px] px-8 py-4 rounded-lg hover:bg-[#1E4A2A] transition-colors duration-200"
+                    className="inline-flex items-center gap-2 bg-trail-green text-white font-['Open_Sans'] font-bold text-[15px] px-8 py-4 rounded-lg hover:bg-green-700 transition-colors duration-200"
                   >
                     Send Us a Message →
                   </a>
-                  <p className="font-['Open_Sans'] text-[12px] text-[#6B7280] italic">Opens a short form — we respond within 2 business days.</p>
+                  <p className="font-['Open_Sans'] text-[12px] text-cool-gray italic">Opens a short form — we respond within 2 business days.</p>
                 </div>
               </motion.div>
             </div>
 
             {/* Right Column */}
             <div className="flex-1 space-y-6">
-              <motion.div variants={fadeUp} className="bg-white border border-[#E2E4E1] p-8 rounded-2xl flex flex-col items-center text-center shadow-sm">
-                <div className="w-16 h-16 rounded-full bg-[#2F6B3F] text-white flex items-center justify-center font-['Poppins'] font-bold text-[20px] mb-4">
+              <motion.div variants={fadeUp} className="bg-white border border-warm-gray p-8 rounded-2xl flex flex-col items-center text-center shadow-sm">
+                <div className="w-16 h-16 rounded-full bg-trail-green text-white flex items-center justify-center font-['Poppins'] font-bold text-[20px] mb-4">
                   AL
                 </div>
-                <h3 className="font-['Poppins'] font-bold text-[18px] text-[#2A2E2C] mb-6">Let's talk strategy.</h3>
+                <h3 className="font-['Poppins'] font-bold text-[18px] text-charcoal mb-6">Let's talk strategy.</h3>
                 <CTAButton href={LINKS.angelaCalendar} variant="amber" className="w-full" external>
                   Schedule Time With Angela
                 </CTAButton>
               </motion.div>
 
-              <motion.div variants={fadeUp} className="bg-[#2F6F7E] text-white p-8 rounded-2xl">
+              <motion.div variants={fadeUp} className="bg-deep-teal text-white p-8 rounded-2xl">
                 <h3 className="font-['Poppins'] font-bold text-[18px] mb-6">Direct Channels</h3>
                 <div className="space-y-4 font-['Open_Sans'] text-[15px]">
                   <div>
@@ -124,16 +124,16 @@ export default function Contact() {
                 </div>
               </motion.div>
 
-              <motion.div variants={fadeUp} className="bg-white border border-[#E2E4E1] p-8 rounded-2xl">
-                <h3 className="font-['Poppins'] font-bold text-[18px] text-[#2A2E2C] mb-6">Social</h3>
+              <motion.div variants={fadeUp} className="bg-white border border-warm-gray p-8 rounded-2xl">
+                <h3 className="font-['Poppins'] font-bold text-[18px] text-charcoal mb-6">Social</h3>
                 <div className="flex flex-col gap-4 font-['Open_Sans'] text-[15px]">
-                  <a href={LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-[#4A4F4D] hover:text-[#0077b5] transition-colors">
+                  <a href={LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-slate hover:text-[#0077b5] transition-colors">
                     <FaLinkedin className="w-5 h-5" /> LinkedIn
                   </a>
-                  <a href={LINKS.facebook} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-[#4A4F4D] hover:text-[#1877f2] transition-colors">
+                  <a href={LINKS.facebook} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-slate hover:text-[#1877f2] transition-colors">
                     <FaFacebook className="w-5 h-5" /> Facebook
                   </a>
-                  <a href={LINKS.substack} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-[#4A4F4D] hover:text-[#ff6719] transition-colors">
+                  <a href={LINKS.substack} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-slate hover:text-[#ff6719] transition-colors">
                     <div className="w-5 h-5 bg-current rounded-sm flex items-center justify-center shrink-0">
                       <span className="text-white text-[10px] font-bold">S</span>
                     </div>

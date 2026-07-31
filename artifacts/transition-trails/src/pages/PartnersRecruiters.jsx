@@ -24,7 +24,7 @@ export default function PartnersRecruiters() {
       {/* HERO */}
       <section
         className="py-24 px-8"
-        style={{ background: "linear-gradient(135deg, #1E4A2A 0%, #2F6B3F 100%)" }}
+        style={{ background: "linear-gradient(135deg, var(--tt-green-700) 0%, var(--tt-trail-green) 100%)" }}
       >
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -34,7 +34,7 @@ export default function PartnersRecruiters() {
           >
             <motion.div variants={fadeUp}
               className="inline-block font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-8"
-              style={{ color: "#7FAFC6", background: "rgba(127,175,198,0.15)", border: "1px solid rgba(127,175,198,0.35)" }}
+              style={{ color: "var(--tt-teal-300)", background: "rgba(127,175,198,0.15)", border: "1px solid rgba(127,175,198,0.35)" }}
             >
               FOR RECRUITERS
             </motion.div>
@@ -73,7 +73,7 @@ export default function PartnersRecruiters() {
       </section>
 
       {/* SECTION 2 — TWO WAYS TO PARTNER */}
-      <section className="bg-[#FAFAF7] py-20">
+      <section className="bg-trail-light py-20">
         <div className="max-w-6xl mx-auto px-8">
           <motion.div
             initial="hidden"
@@ -83,12 +83,12 @@ export default function PartnersRecruiters() {
             className="mb-12"
           >
             <motion.div variants={fadeUp}
-              className="font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] text-[#2F6B3F] mb-4"
+              className="font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] text-trail-green mb-4"
             >
               TWO WAYS TO PARTNER
             </motion.div>
             <motion.h2 variants={fadeUp}
-              className="font-['Fraunces'] font-bold text-[40px] text-[#2A2E2C] tracking-[-0.5px]"
+              className="font-['Fraunces'] font-bold text-[40px] text-charcoal tracking-[-0.5px]"
             >
               Two ways to work with us.
             </motion.h2>
@@ -103,14 +103,14 @@ export default function PartnersRecruiters() {
           >
             {/* Card 1 — Hire Graduates */}
             <motion.div variants={fadeUp}
-              className="bg-white rounded-2xl border border-[#E2E4E1] p-8 flex flex-col"
+              className="bg-white rounded-2xl border border-warm-gray p-8 flex flex-col"
             >
               <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-5" style={{ background: "rgba(47,111,126,0.12)" }}>
-                <UserCheck className="w-5 h-5" style={{ color: "#2F6F7E" }} />
+                <UserCheck className="w-5 h-5" style={{ color: "var(--tt-deep-teal)" }} />
               </div>
-              <div className="font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[1.5px] text-[#2F6F7E] mb-3">HIRE OUR GRADUATES</div>
-              <h3 className="font-['Poppins'] font-bold text-[22px] text-[#2A2E2C] mb-4">Hire our graduates.</h3>
-              <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.7] mb-6">
+              <div className="font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[1.5px] text-deep-teal mb-3">HIRE OUR GRADUATES</div>
+              <h3 className="font-['Poppins'] font-bold text-[22px] text-charcoal mb-4">Hire our graduates.</h3>
+              <p className="font-['Open_Sans'] text-[15px] text-slate leading-[1.7] mb-6">
                 Guided Trail graduates hold the Salesforce Certified Platform Administrator certification, have completed real project work for nonprofit clients, and have a portfolio that demonstrates they can deliver — not just pass a test. These are not entry-level candidates in the traditional sense. They have done the work.
               </p>
               <ul className="space-y-3 mt-auto">
@@ -121,8 +121,8 @@ export default function PartnersRecruiters() {
                   "Coached by senior Salesforce professionals",
                 ].map(item => (
                   <li key={item} className="flex items-start gap-3">
-                    <Check className="w-4 h-4 mt-0.5 shrink-0 text-[#2F6B3F]" />
-                    <span className="font-['Open_Sans'] text-[14px] text-[#4A4F4D]">{item}</span>
+                    <Check className="w-4 h-4 mt-0.5 shrink-0 text-trail-green" />
+                    <span className="font-['Open_Sans'] text-[14px] text-slate">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -130,14 +130,14 @@ export default function PartnersRecruiters() {
 
             {/* Card 2 — Refer Candidates */}
             <motion.div variants={fadeUp}
-              className="bg-white rounded-2xl border border-[#E2E4E1] p-8 flex flex-col"
+              className="bg-white rounded-2xl border border-warm-gray p-8 flex flex-col"
             >
               <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-5" style={{ background: "rgba(47,107,63,0.12)" }}>
-                <Users className="w-5 h-5" style={{ color: "#2F6B3F" }} />
+                <Users className="w-5 h-5" style={{ color: "var(--tt-trail-green)" }} />
               </div>
-              <div className="font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[1.5px] text-[#2F6B3F] mb-3">REFER CANDIDATES</div>
-              <h3 className="font-['Poppins'] font-bold text-[22px] text-[#2A2E2C] mb-4">Refer candidates to our programs.</h3>
-              <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.7] mb-6">
+              <div className="font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[1.5px] text-trail-green mb-3">REFER CANDIDATES</div>
+              <h3 className="font-['Poppins'] font-bold text-[22px] text-charcoal mb-4">Refer candidates to our programs.</h3>
+              <p className="font-['Open_Sans'] text-[15px] text-slate leading-[1.7] mb-6">
                 Know someone who is Salesforce certified but struggling to land their first role? Refer them to Guided Trail. We will help them build the experience and portfolio they need to compete. When they succeed, your network grows too.
               </p>
               <ul className="space-y-3 mt-auto">
@@ -148,8 +148,8 @@ export default function PartnersRecruiters() {
                   "Build a reputation as someone who opens doors",
                 ].map(item => (
                   <li key={item} className="flex items-start gap-3">
-                    <Check className="w-4 h-4 mt-0.5 shrink-0 text-[#2F6B3F]" />
-                    <span className="font-['Open_Sans'] text-[14px] text-[#4A4F4D]">{item}</span>
+                    <Check className="w-4 h-4 mt-0.5 shrink-0 text-trail-green" />
+                    <span className="font-['Open_Sans'] text-[14px] text-slate">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -169,12 +169,12 @@ export default function PartnersRecruiters() {
             className="mb-12"
           >
             <motion.div variants={fadeUp}
-              className="font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] text-[#2F6B3F] mb-4"
+              className="font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] text-trail-green mb-4"
             >
               WHY PARTNER
             </motion.div>
             <motion.h2 variants={fadeUp}
-              className="font-['Fraunces'] font-bold text-[40px] text-[#2A2E2C] tracking-[-0.5px]"
+              className="font-['Fraunces'] font-bold text-[40px] text-charcoal tracking-[-0.5px]"
             >
               Why recruiters choose Transition Trails.
             </motion.h2>
@@ -189,19 +189,19 @@ export default function PartnersRecruiters() {
           >
             {[
               {
-                icon: <Briefcase className="w-5 h-5" style={{ color: "#2F6B3F" }} />,
+                icon: <Briefcase className="w-5 h-5" style={{ color: "var(--tt-trail-green)" }} />,
                 bg: "rgba(47,107,63,0.10)",
                 title: "Pre-vetted talent",
                 body: "Every graduate has completed a structured program, real client work, and a coaching-supported experience. Less screening time for you.",
               },
               {
-                icon: <Star className="w-5 h-5" style={{ color: "#F5A623" }} />,
+                icon: <Star className="w-5 h-5" style={{ color: "var(--tt-sun-amber)" }} />,
                 bg: "rgba(245,166,35,0.12)",
                 title: "Early access",
                 body: "Partners get visibility into upcoming cohort graduates before they hit the general job market.",
               },
               {
-                icon: <Handshake className="w-5 h-5" style={{ color: "#2F6F7E" }} />,
+                icon: <Handshake className="w-5 h-5" style={{ color: "var(--tt-deep-teal)" }} />,
                 bg: "rgba(47,111,126,0.12)",
                 title: "A growing network",
                 body: "As we scale, so does the pipeline. Cohort after cohort of certified, portfolio-ready Salesforce professionals.",
@@ -213,8 +213,8 @@ export default function PartnersRecruiters() {
                 <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style={{ background: item.bg }}>
                   {item.icon}
                 </div>
-                <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-2">{item.title}</h3>
-                <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.7]">{item.body}</p>
+                <h3 className="font-['Poppins'] font-semibold text-[17px] text-charcoal mb-2">{item.title}</h3>
+                <p className="font-['Open_Sans'] text-[14px] text-slate leading-[1.7]">{item.body}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -222,7 +222,7 @@ export default function PartnersRecruiters() {
       </section>
 
       {/* SECTION 4 — CTA */}
-      <section className="bg-[#2A2E2C] py-20">
+      <section className="bg-charcoal py-20">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -246,7 +246,7 @@ export default function PartnersRecruiters() {
               href="https://form.jotform.com/261877200550050"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center h-12 px-8 rounded-lg font-['Open_Sans'] font-semibold text-[15px] bg-[#F5A623] text-[#2A2E2C] hover:bg-[#D4890A] transition-colors"
+              className="inline-flex items-center justify-center h-12 px-8 rounded-lg font-['Open_Sans'] font-semibold text-[15px] bg-sun-amber text-charcoal hover:bg-amber-700 transition-colors"
             >
               Partner with Us →
             </a>

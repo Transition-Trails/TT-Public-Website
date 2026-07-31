@@ -6,7 +6,7 @@ export function FounderCard({ founder }) {
   const bioLines = Array.isArray(founder.bio) ? founder.bio : [founder.bio];
 
   return (
-    <div className="bg-[#2E3330] border border-white/10 rounded-xl w-[296px] flex flex-col relative overflow-hidden shrink-0">
+    <div className="bg-charcoal border border-white/10 rounded-xl w-[296px] flex flex-col relative overflow-hidden shrink-0">
       <div className="h-1 w-full" style={{ backgroundColor: founder.accent }} />
 
       <div className="p-6 flex flex-col items-center text-center">
@@ -17,7 +17,7 @@ export function FounderCard({ founder }) {
             className="w-16 h-16 rounded-full object-cover mb-4"
           />
         ) : (
-          <div className="w-16 h-16 rounded-full bg-[#2F6B3F] flex items-center justify-center mb-4">
+          <div className="w-16 h-16 rounded-full bg-trail-green flex items-center justify-center mb-4">
             <span className="font-['Poppins'] font-bold text-white text-xl">{founder.initials}</span>
           </div>
         )}
@@ -46,7 +46,7 @@ export function FounderCard({ founder }) {
             <span
               key={i}
               className="font-['Open_Sans'] font-semibold text-[11px] rounded inline-flex items-center"
-              style={{ color: "#2F6B3F", background: "#E6F3EA", padding: "3px 10px", margin: "2px" }}
+              style={{ color: "var(--tt-trail-green)", background: "var(--tt-green-100)", padding: "3px 10px", margin: "2px" }}
             >
               {skill}
             </span>
@@ -57,7 +57,7 @@ export function FounderCard({ founder }) {
           <a
             href={`mailto:${founder.contactEmail}`}
             className="mt-2 font-['Open_Sans'] font-semibold text-[12px] hover:underline transition-colors"
-            style={{ color: "#7FAFC6" }}
+            style={{ color: "var(--tt-teal-300)" }}
           >
             {founder.contactEmail}
           </a>
@@ -68,7 +68,7 @@ export function FounderCard({ founder }) {
             href={LINKS.angelaCalendar}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-3 w-full py-2 px-4 border border-[#F5A623] text-[#F5A623] font-['Open_Sans'] font-semibold text-xs rounded-lg hover:bg-[#F5A623]/10 transition-colors text-center"
+            className="mt-3 w-full py-2 px-4 border border-sun-amber text-sun-amber font-['Open_Sans'] font-semibold text-xs rounded-lg hover:bg-sun-amber/10 transition-colors text-center"
           >
             Schedule Time With Me →
           </a>
@@ -78,7 +78,7 @@ export function FounderCard({ founder }) {
           <a
             href={LINKS.coaching}
             className="mt-2 font-['Open_Sans'] font-semibold text-[11px] hover:underline transition-colors"
-            style={{ color: "#2F6B3F" }}
+            style={{ color: "var(--tt-trail-green)" }}
           >
             Available for individual coaching →
           </a>

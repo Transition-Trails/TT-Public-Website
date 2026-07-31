@@ -13,7 +13,7 @@ export default function BoardApplication() {
       {/* Hero */}
       <section
         className="pt-24 pb-16 px-5 md:px-10"
-        style={{ background: "linear-gradient(135deg, #1E4A2A 0%, #2F6B3F 100%)" }}
+        style={{ background: "linear-gradient(135deg, var(--tt-green-700) 0%, var(--tt-trail-green) 100%)" }}
       >
         <div className="max-w-[860px] mx-auto">
           <div className="font-['Open_Sans'] text-[12px] text-white/50 mb-8 flex items-center gap-2">
@@ -26,7 +26,7 @@ export default function BoardApplication() {
 
           <div
             className="inline-block font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-7"
-            style={{ color: "#F5A623", background: "rgba(245,166,35,0.15)", border: "1px solid rgba(245,166,35,0.4)" }}
+            style={{ color: "var(--tt-sun-amber)", background: "rgba(245,166,35,0.15)", border: "1px solid rgba(245,166,35,0.4)" }}
           >
             BOARD MEMBER INTEREST · TRANSITION TRAILS
           </div>
@@ -53,15 +53,15 @@ export default function BoardApplication() {
       <section className="bg-white py-[60px] px-5">
         <div className="max-w-[860px] mx-auto">
           <div className="max-w-2xl mx-auto text-center flex flex-col items-center gap-6 py-12">
-            <p className="font-['Open_Sans'] text-[15px] text-[#6B7280] leading-relaxed">Share your background, experience, and interest in board service. A member of the TT team will be in touch within 5 business days.</p>
-            <a href="https://form.jotform.com/261884676222061" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#2F6B3F] text-white font-['Open_Sans'] font-bold text-[15px] px-8 py-4 rounded-lg hover:bg-[#1E4A2A] transition-colors duration-200">Submit Board Interest Form →</a>
-            <p className="font-['Open_Sans'] text-[12px] text-[#6B7280] italic">Questions? Email <a href="mailto:hello@transitiontrails.org" className="text-[#2F6B3F] hover:underline">hello@transitiontrails.org</a></p>
+            <p className="font-['Open_Sans'] text-[15px] text-cool-gray leading-relaxed">Share your background, experience, and interest in board service. A member of the TT team will be in touch within 5 business days.</p>
+            <a href="https://form.jotform.com/261884676222061" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-trail-green text-white font-['Open_Sans'] font-bold text-[15px] px-8 py-4 rounded-lg hover:bg-green-700 transition-colors duration-200">Submit Board Interest Form →</a>
+            <p className="font-['Open_Sans'] text-[12px] text-cool-gray italic">Questions? Email <a href="mailto:hello@transitiontrails.org" className="text-trail-green hover:underline">hello@transitiontrails.org</a></p>
           </div>
 
           <div className="text-center mt-6">
             <Link
               href="/board"
-              className="font-['Open_Sans'] font-semibold text-[13px] text-[#2F6B3F] hover:underline"
+              className="font-['Open_Sans'] font-semibold text-[13px] text-trail-green hover:underline"
             >
               ← Back to Join Our Board
             </Link>

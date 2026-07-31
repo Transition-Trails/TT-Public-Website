@@ -18,66 +18,66 @@ const stagger = {
 
 const TRACKS = [
   {
-    icon: <Shield size={24} color="#2F6B3F" />,
-    iconBg: "bg-[#EBF3EE]",
+    icon: <Shield size={24} color="var(--tt-trail-green)" />,
+    iconBg: "bg-green-100",
     name: "Admin Mastery",
     duration: "8 WEEKS",
     body: "Cement your foundation with real client configuration work under an advanced coach.",
-    accent: "#2F6B3F",
+    accent: "var(--tt-trail-green)",
   },
   {
-    icon: <ClipboardList size={24} color="#2F6F7E" />,
-    iconBg: "bg-[#E8F3F6]",
+    icon: <ClipboardList size={24} color="var(--tt-deep-teal)" />,
+    iconBg: "bg-teal-100",
     name: "Business Analyst Mastery",
     duration: "12 WEEKS",
     body: "Develop the discovery, analysis, and requirements skills that make every team more effective.",
-    accent: "#2F6F7E",
+    accent: "var(--tt-deep-teal)",
   },
   {
-    icon: <Layout size={24} color="#2F6F7E" />,
-    iconBg: "bg-[#E8F3F6]",
+    icon: <Layout size={24} color="var(--tt-deep-teal)" />,
+    iconBg: "bg-teal-100",
     name: "Product Owner Mastery",
     duration: "12 WEEKS",
     body: "Own the backlog, write the stories, and hold approval authority over every deployment gate.",
-    accent: "#2F6F7E",
+    accent: "var(--tt-deep-teal)",
   },
   {
-    icon: <Code size={24} color="#1E4A2A" />,
-    iconBg: "bg-[#EBF3EE]",
+    icon: <Code size={24} color="var(--tt-green-700)" />,
+    iconBg: "bg-green-100",
     name: "Advanced Admin Mastery",
     duration: "16 WEEKS",
     body: "Go deeper into automation architecture, security models, and org strategy.",
-    accent: "#1E4A2A",
+    accent: "var(--tt-green-700)",
   },
 ];
 
 const FUTURE_TRACKS = [
   {
-    icon: <Compass size={24} color="#8C8882" />,
-    iconBg: "bg-[#F3F3F1]",
+    icon: <Compass size={24} color="var(--tt-muted-text)" />,
+    iconBg: "bg-muted-fill",
     name: "Solutions Consultant Mastery",
     duration: "16 WEEKS",
     body: "Lead the client, design the solution, and present outcomes — all through RESOLVE.",
-    accent: "#8C8882",
+    accent: "var(--tt-muted-text)",
   },
 ];
 
 const WHAT_CARDS = [
   {
-    icon: <Users size={24} color="#2F6F7E" />,
-    iconBg: "bg-[#E8F3F6]",
+    icon: <Users size={24} color="var(--tt-deep-teal)" />,
+    iconBg: "bg-teal-100",
     title: "Real team. Real roles.",
     body: "4–5 learners per cohort in mixed roles that reflect how real Salesforce teams work.",
   },
   {
-    icon: <TrendingUp size={24} color="#2F6F7E" />,
-    iconBg: "bg-[#E8F3F6]",
+    icon: <TrendingUp size={24} color="var(--tt-deep-teal)" />,
+    iconBg: "bg-teal-100",
     title: "Real pipeline. Real gates.",
     body: "Professional CI/CD pipeline using Salesforce DevOps Center and GitHub. Every deployment goes through formal approval gates.",
   },
   {
-    icon: <Rocket size={24} color="#2F6B3F" />,
-    iconBg: "bg-[#EBF3EE]",
+    icon: <Rocket size={24} color="var(--tt-trail-green)" />,
+    iconBg: "bg-green-100",
     title: "Real clients. Real deliverables.",
     body: "Digital Compass nonprofit clients and internal Trail OS work — always configuration, never code.",
   },
@@ -97,7 +97,7 @@ export default function TrailOfMastery() {
       {/* SECTION 1: Hero */}
       <section
         className="pt-24 pb-20 px-5 md:px-10"
-        style={{ background: "linear-gradient(135deg, #1E4F5C 0%, #2F6F7E 55%, #1E4A2A 100%)" }}
+        style={{ background: "linear-gradient(135deg, var(--tt-teal-700) 0%, var(--tt-deep-teal) 55%, var(--tt-green-700) 100%)" }}
       >
         <div className="max-w-[1280px] mx-auto">
           <div className="font-['Open_Sans'] text-[12px] text-white/50 mb-8 flex items-center gap-2">
@@ -117,7 +117,7 @@ export default function TrailOfMastery() {
               >
                 <div
                   className="inline-block font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-7"
-                  style={{ color: "#2F6B3F", background: "rgba(47,107,63,0.18)", border: "1px solid rgba(47,107,63,0.45)" }}
+                  style={{ color: "var(--tt-trail-green)", background: "rgba(47,107,63,0.18)", border: "1px solid rgba(47,107,63,0.45)" }}
                 >
                   IN DEVELOPMENT · COHORT 0 · 2027
                 </div>
@@ -158,7 +158,7 @@ export default function TrailOfMastery() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.33 }}
               >
-                <div className="font-['Poppins'] font-bold text-[22px] text-[#7FAFC6] leading-tight mb-1">4 tracks · Mixed-role teams</div>
+                <div className="font-['Poppins'] font-bold text-[22px] text-teal-300 leading-tight mb-1">4 tracks · Mixed-role teams</div>
                 <div className="font-['Open_Sans'] text-[13px] text-white/65">Admin · BA · PO · Advanced Admin</div>
               </motion.div>
             </div>
@@ -176,11 +176,11 @@ export default function TrailOfMastery() {
             viewport={{ once: true }}
             className="mb-12"
           >
-            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6F7E] mb-4">THE PROGRAM</div>
-            <h2 className="font-['Fraunces'] font-bold text-[36px] text-[#2A2E2C] mb-5 max-w-[640px]">
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-deep-teal mb-4">THE PROGRAM</div>
+            <h2 className="font-['Fraunces'] font-bold text-[36px] text-charcoal mb-5 max-w-[640px]">
               A supervised team apprenticeship.
             </h2>
-            <p className="font-['Open_Sans'] text-[17px] text-[#4A4F4D] leading-[1.65] max-w-[820px]">
+            <p className="font-['Open_Sans'] text-[17px] text-slate leading-[1.65] max-w-[820px]">
               Trail of Mastery puts you in a mixed-role team of 4–5 learners — BA, PO, Admin, and Advanced Admin. You work in your role, deliver real Salesforce solutions for real nonprofit clients, and operate inside a professional CI/CD pipeline using RESOLVE methodology. You leave with a portfolio that proves it.
             </p>
           </motion.div>
@@ -196,13 +196,13 @@ export default function TrailOfMastery() {
               <motion.div
                 key={card.title}
                 variants={fadeUpChild}
-                className="bg-white border border-[#E2E4E1] rounded-xl p-8 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200"
+                className="bg-white border border-warm-gray rounded-xl p-8 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200"
               >
                 <div className={`w-10 h-10 rounded-lg ${card.iconBg} flex items-center justify-center mb-4`}>
                   {card.icon}
                 </div>
-                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-3">{card.title}</h3>
-                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">{card.body}</p>
+                <h3 className="font-['Poppins'] font-semibold text-[16px] text-charcoal mb-3">{card.title}</h3>
+                <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.65]">{card.body}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -210,7 +210,7 @@ export default function TrailOfMastery() {
       </section>
 
       {/* SECTION 3: The Four Tracks */}
-      <section className="bg-[#FAFAF7] py-20 px-5 md:px-10 border-y border-[#E2E4E1]">
+      <section className="bg-trail-light py-20 px-5 md:px-10 border-y border-warm-gray">
         <div className="max-w-7xl mx-auto">
           <motion.div
             variants={fadeUp}
@@ -219,9 +219,9 @@ export default function TrailOfMastery() {
             viewport={{ once: true }}
             className="mb-12"
           >
-            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6F7E] mb-4">CHOOSE YOUR TRACK</div>
-            <h2 className="font-['Fraunces'] font-bold text-[36px] text-[#2A2E2C] mb-4">Four tracks. One team. One methodology.</h2>
-            <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] max-w-[680px] leading-[1.65]">
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-deep-teal mb-4">CHOOSE YOUR TRACK</div>
+            <h2 className="font-['Fraunces'] font-bold text-[36px] text-charcoal mb-4">Four tracks. One team. One methodology.</h2>
+            <p className="font-['Open_Sans'] text-[16px] text-slate max-w-[680px] leading-[1.65]">
               Each track deepens your specialization while building cross-role fluency. Choose the path that matches where you want to go.
             </p>
           </motion.div>
@@ -237,7 +237,7 @@ export default function TrailOfMastery() {
               <motion.div
                 key={track.name}
                 variants={fadeUpChild}
-                className="bg-white border border-[#E2E4E1] rounded-xl flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200"
+                className="bg-white border border-warm-gray rounded-xl flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200"
               >
                 <div className="p-6 flex flex-col flex-1">
                   <div className="flex items-center gap-3 mb-4">
@@ -251,8 +251,8 @@ export default function TrailOfMastery() {
                       {track.duration}
                     </span>
                   </div>
-                  <h3 className="font-['Poppins'] font-semibold text-[15px] text-[#2A2E2C] mb-2">{track.name}</h3>
-                  <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">{track.body}</p>
+                  <h3 className="font-['Poppins'] font-semibold text-[15px] text-charcoal mb-2">{track.name}</h3>
+                  <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.65]">{track.body}</p>
                 </div>
               </motion.div>
             ))}
@@ -264,27 +264,27 @@ export default function TrailOfMastery() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <div className="font-['Open_Sans'] font-semibold text-[11px] tracking-[2px] uppercase text-[#8C8882] mb-4">TRACKS WE ARE DESIGNING NEXT</div>
-            <p className="font-['Open_Sans'] text-[14px] text-[#6B7280] max-w-[640px] leading-[1.65] mb-6">
+            <div className="font-['Open_Sans'] font-semibold text-[11px] tracking-[2px] uppercase text-muted-text mb-4">TRACKS WE ARE DESIGNING NEXT</div>
+            <p className="font-['Open_Sans'] text-[14px] text-cool-gray max-w-[640px] leading-[1.65] mb-6">
               These role tracks are in active design and not yet offered. If you are interested, your signal helps us prioritize.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-[640px]">
               {FUTURE_TRACKS.map(track => (
                 <div
                   key={track.name}
-                  className="bg-white border border-[#E2E4E1] border-dashed rounded-xl flex flex-col opacity-70"
+                  className="bg-white border border-warm-gray border-dashed rounded-xl flex flex-col opacity-70"
                 >
                   <div className="p-6 flex flex-col flex-1">
                     <div className="flex items-center gap-3 mb-4">
                       <div className={`w-10 h-10 rounded-lg ${track.iconBg} flex items-center justify-center`}>
                         {track.icon}
                       </div>
-                      <span className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase px-2 py-0.5 rounded bg-[#F3F3F1] text-[#8C8882]">
+                      <span className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase px-2 py-0.5 rounded bg-muted-fill text-muted-text">
                         {track.duration}
                       </span>
                     </div>
-                    <h3 className="font-['Poppins'] font-semibold text-[15px] text-[#6B7280] mb-2">{track.name}</h3>
-                    <p className="font-['Open_Sans'] text-[13px] text-[#8C8882] leading-[1.65]">{track.body}</p>
+                    <h3 className="font-['Poppins'] font-semibold text-[15px] text-cool-gray mb-2">{track.name}</h3>
+                    <p className="font-['Open_Sans'] text-[13px] text-muted-text leading-[1.65]">{track.body}</p>
                   </div>
                 </div>
               ))}
@@ -302,9 +302,9 @@ export default function TrailOfMastery() {
             whileInView="visible"
             viewport={{ once: true }}
             className="rounded-2xl p-10 md:p-14 text-center"
-            style={{ background: "linear-gradient(135deg, #1E4F5C 0%, #2F6F7E 100%)" }}
+            style={{ background: "linear-gradient(135deg, var(--tt-teal-700) 0%, var(--tt-deep-teal) 100%)" }}
           >
-            <div className="font-['Open_Sans'] font-semibold text-[11px] tracking-[2px] uppercase text-[#7FAFC6] mb-5">COHORT 0 · 2027</div>
+            <div className="font-['Open_Sans'] font-semibold text-[11px] tracking-[2px] uppercase text-teal-300 mb-5">COHORT 0 · 2027</div>
             <h2 className="font-['Fraunces'] font-bold text-[34px] md:text-[40px] text-white mb-6">
               Be part of building it.
             </h2>
@@ -316,7 +316,7 @@ export default function TrailOfMastery() {
       </section>
 
       {/* SECTION 5: CTA */}
-      <section className="bg-[#FAFAF7] py-20 px-5 md:px-10 border-t border-[#E2E4E1]">
+      <section className="bg-trail-light py-20 px-5 md:px-10 border-t border-warm-gray">
         <div className="max-w-[700px] mx-auto text-center">
           <motion.div
             variants={fadeUp}
@@ -324,10 +324,10 @@ export default function TrailOfMastery() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <h2 className="font-['Fraunces'] font-bold text-[38px] md:text-[44px] text-[#2A2E2C] mb-5 leading-[1.15]">
+            <h2 className="font-['Fraunces'] font-bold text-[38px] md:text-[44px] text-charcoal mb-5 leading-[1.15]">
               Ready to stop collecting certifications?
             </h2>
-            <p className="font-['Open_Sans'] text-[17px] text-[#4A4F4D] leading-[1.65] mb-10">
+            <p className="font-['Open_Sans'] text-[17px] text-slate leading-[1.65] mb-10">
               Join the Trail of Mastery interest list. We'll reach out when Cohort 0 applications open in 2027.
             </p>
             <a
@@ -335,11 +335,11 @@ export default function TrailOfMastery() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center h-[56px] px-10 rounded-[8px] font-['Poppins'] font-bold text-[15px] transition-colors"
-              style={{ background: "#F5A623", color: "#2A2E2C" }}
+              style={{ background: "var(--tt-sun-amber)", color: "var(--tt-charcoal)" }}
             >
               Join the Interest List →
             </a>
-            <p className="font-['Open_Sans'] text-[13px] text-[#8C8882] mt-5">
+            <p className="font-['Open_Sans'] text-[13px] text-muted-text mt-5">
               Cohort 0 · 2027 · Applications open soon
             </p>
           </motion.div>

@@ -6,9 +6,9 @@ import { Search, Settings, Wrench, Building2, Briefcase, Rocket, Check } from "l
 
 const SERVICES = [
   {
-    accent: "#2F6B3F",
+    accent: "var(--tt-trail-green)",
     badge: "START HERE · FREE",
-    icon: <Search size={22} color="#2F6B3F" />,
+    icon: <Search size={22} color="var(--tt-trail-green)" />,
     title: "Free Org Assessment",
     tagline: "You know your system could do more. We help you see exactly where to start.",
     problem: "You know your Salesforce org could be doing more — but you do not know where the gaps are, what to prioritize, or what it would take to fix.",
@@ -19,9 +19,9 @@ const SERVICES = [
     sub: "No commitment. No pitch. Just clarity.",
   },
   {
-    accent: "#2F6F7E",
+    accent: "var(--tt-deep-teal)",
     badge: "RETAINER · ONGOING",
-    icon: <Settings size={22} color="#2F6F7E" />,
+    icon: <Settings size={22} color="var(--tt-deep-teal)" />,
     title: "Salesforce Administration Support",
     tagline: "Your team should focus on the mission — not the software.",
     problem: "Your team is too busy to manage updates, user permissions, data quality, and report building. Things are falling through the cracks and your Salesforce org is not keeping up with your organization.",
@@ -32,9 +32,9 @@ const SERVICES = [
     sub: "Pricing based on org size and scope — contact us to discuss.",
   },
   {
-    accent: "#1E4A2A",
+    accent: "var(--tt-green-700)",
     badge: "PROJECT-BASED",
-    icon: <Wrench size={22} color="#1E4A2A" />,
+    icon: <Wrench size={22} color="var(--tt-green-700)" />,
     title: "Solution Design",
     tagline: "Build it right the first time.",
     problem: "You are outgrowing your current tools, facing a complex implementation, or need specific functionality built from scratch. You need someone who can think architecturally — not just configure what you ask for.",
@@ -59,7 +59,7 @@ const RESOLVE_PHASES = [
 const CONSULTANTS = [
   {
     key: "AL",
-    accent: "#2F6B3F",
+    accent: "var(--tt-trail-green)",
     initials: "AL",
     name: "Angela Landrith",
     title: "Co-Founder & CEO",
@@ -68,7 +68,7 @@ const CONSULTANTS = [
   },
   {
     key: "KB",
-    accent: "#2F6F7E",
+    accent: "var(--tt-deep-teal)",
     initials: "KB",
     name: "Kim Barnes",
     title: "Co-Founder & COO",
@@ -77,7 +77,7 @@ const CONSULTANTS = [
   },
   {
     key: "HR",
-    accent: "#1E4A2A",
+    accent: "var(--tt-green-700)",
     initials: "HR",
     name: "Hugh Richardson",
     title: "Co-Founder & CTO",
@@ -111,7 +111,7 @@ export default function Consulting() {
       {/* HERO */}
       <section
         className="pt-24 pb-20 px-5 md:px-10"
-        style={{ background: "linear-gradient(135deg, #1E4F5C 0%, #2F6F7E 55%, #1E4A2A 100%)" }}
+        style={{ background: "linear-gradient(135deg, var(--tt-teal-700) 0%, var(--tt-deep-teal) 55%, var(--tt-green-700) 100%)" }}
       >
         <div className="max-w-7xl mx-auto">
           <div className="font-['Open_Sans'] text-[12px] text-white/50 mb-8 flex items-center gap-2">
@@ -127,7 +127,7 @@ export default function Consulting() {
               <motion.div
                 variants={fadeUp}
                 className="inline-block font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-7"
-                style={{ color: "#F5A623", background: "rgba(245,166,35,0.15)", border: "1px solid rgba(245,166,35,0.4)" }}
+                style={{ color: "var(--tt-sun-amber)", background: "rgba(245,166,35,0.15)", border: "1px solid rgba(245,166,35,0.4)" }}
               >
                 SALESFORCE CONSULTING  ·  NONPROFITS AND SMALL BUSINESS  ·  RESOLVE METHODOLOGY
               </motion.div>
@@ -153,9 +153,9 @@ export default function Consulting() {
                 <a
                   href="#assessment"
                   className="h-[52px] px-7 rounded-[8px] font-['Poppins'] font-semibold text-[15px] inline-flex items-center justify-center transition-colors"
-                  style={{ background: "#F5A623", color: "#2A2E2C" }}
-                  onMouseEnter={e => e.currentTarget.style.background = "#D4890A"}
-                  onMouseLeave={e => e.currentTarget.style.background = "#F5A623"}
+                  style={{ background: "var(--tt-sun-amber)", color: "var(--tt-charcoal)" }}
+                  onMouseEnter={e => e.currentTarget.style.background = "var(--tt-amber-700)"}
+                  onMouseLeave={e => e.currentTarget.style.background = "var(--tt-sun-amber)"}
                 >
                   Get a Free Assessment →
                 </a>
@@ -170,9 +170,9 @@ export default function Consulting() {
 
             <motion.div variants={stagger} className="flex flex-row xl:flex-col gap-4 w-full xl:w-[240px]">
               {[
-                { value: "Free", label: "Org Assessment — Strategic Discovery Summary included", color: "#2F6B3F" },
-                { value: "RESOLVE", label: "Governs every engagement", color: "#2F6F7E" },
-                { value: "Market rates", label: "Nonprofit discount available — ask us", color: "#7FAFC6" },
+                { value: "Free", label: "Org Assessment — Strategic Discovery Summary included", color: "var(--tt-trail-green)" },
+                { value: "RESOLVE", label: "Governs every engagement", color: "var(--tt-deep-teal)" },
+                { value: "Market rates", label: "Nonprofit discount available — ask us", color: "var(--tt-teal-300)" },
               ].map(s => (
                 <motion.div
                   key={s.label}
@@ -194,35 +194,35 @@ export default function Consulting() {
         <div className="max-w-7xl mx-auto">
           <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={stagger}>
             <motion.div variants={fadeUp} className="mb-12">
-              <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6F7E] mb-4">WHO WE WORK WITH</div>
-              <h2 className="font-['Fraunces'] font-bold text-[34px] text-[#2A2E2C]">Built for organizations that need real Salesforce expertise — not a generic consultant.</h2>
+              <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-deep-teal mb-4">WHO WE WORK WITH</div>
+              <h2 className="font-['Fraunces'] font-bold text-[34px] text-charcoal">Built for organizations that need real Salesforce expertise — not a generic consultant.</h2>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <motion.div variants={fadeUp} className="bg-white border-[1.5px] border-[#E2E4E1] rounded-2xl overflow-hidden flex flex-col">
+              <motion.div variants={fadeUp} className="bg-white border-[1.5px] border-warm-gray rounded-2xl overflow-hidden flex flex-col">
                 <div className="p-8 flex flex-col flex-1">
-                  <div className="w-10 h-10 rounded-lg bg-[#EBF3EE] flex items-center justify-center mb-4">
-                    <Building2 size={24} color="#2F6B3F" />
+                  <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mb-4">
+                    <Building2 size={24} color="var(--tt-trail-green)" />
                   </div>
-                  <h3 className="font-['Poppins'] font-bold text-[22px] text-[#2A2E2C] mb-4">Nonprofits</h3>
-                  <div className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65] space-y-4 mb-5 flex-1">
+                  <h3 className="font-['Poppins'] font-bold text-[22px] text-charcoal mb-4">Nonprofits</h3>
+                  <div className="font-['Open_Sans'] text-[14px] text-slate leading-[1.65] space-y-4 mb-5 flex-1">
                     <p>Mission-driven organizations that need Salesforce to work better — whether you are starting from scratch, cleaning up a messy org, or designing a solution for a complex program.</p>
                     <p>TT consulting is distinct from Digital Compass membership. Digital Compass is an ongoing community membership for nonprofits who want consistent, accessible support. Consulting is for organizations with a specific project, implementation, or architectural challenge that needs dedicated expert attention.</p>
                     <p>Not sure which is right for you? Start with a free assessment and we will point you in the right direction.</p>
                   </div>
-                  <Link href="/programs/digital-compass" className="font-['Open_Sans'] font-semibold text-[13px] hover:underline" style={{ color: "#2F6B3F" }}>
+                  <Link href="/programs/digital-compass" className="font-['Open_Sans'] font-semibold text-[13px] hover:underline" style={{ color: "var(--tt-trail-green)" }}>
                     Learn about Digital Compass →
                   </Link>
                 </div>
               </motion.div>
 
-              <motion.div variants={fadeUp} className="bg-white border-[1.5px] border-[#E2E4E1] rounded-2xl overflow-hidden flex flex-col">
+              <motion.div variants={fadeUp} className="bg-white border-[1.5px] border-warm-gray rounded-2xl overflow-hidden flex flex-col">
                 <div className="p-8 flex flex-col flex-1">
-                  <div className="w-10 h-10 rounded-lg bg-[#E8F3F6] flex items-center justify-center mb-4">
-                    <Briefcase size={24} color="#2F6F7E" />
+                  <div className="w-10 h-10 rounded-lg bg-teal-100 flex items-center justify-center mb-4">
+                    <Briefcase size={24} color="var(--tt-deep-teal)" />
                   </div>
-                  <h3 className="font-['Poppins'] font-bold text-[22px] text-[#2A2E2C] mb-4">Small to Midsize Businesses</h3>
-                  <div className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65] space-y-4">
+                  <h3 className="font-['Poppins'] font-bold text-[22px] text-charcoal mb-4">Small to Midsize Businesses</h3>
+                  <div className="font-['Open_Sans'] text-[14px] text-slate leading-[1.65] space-y-4">
                     <p>Growing businesses that have outgrown their current Salesforce setup — or are implementing Salesforce for the first time — and need an experienced consulting partner who understands how to build solutions that scale with the organization.</p>
                     <p>TT brings the same RESOLVE methodology and professional delivery standards to business clients as we do to nonprofit partners. The process is the same. The outcome is the same. A Salesforce environment that works the way your team needs it to.</p>
                   </div>
@@ -234,13 +234,13 @@ export default function Consulting() {
       </section>
 
       {/* THREE SERVICES */}
-      <section id="services" className="bg-[#FAFAF7] py-20 px-5 md:px-10">
+      <section id="services" className="bg-trail-light py-20 px-5 md:px-10">
         <div className="max-w-7xl mx-auto">
           <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={stagger}>
             <motion.div variants={fadeUp} className="mb-12">
-              <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6F7E] mb-4">OUR SERVICES</div>
-              <h2 className="font-['Fraunces'] font-bold text-[34px] text-[#2A2E2C] mb-4">Three ways we help.</h2>
-              <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] max-w-[760px] leading-[1.65]">
+              <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-deep-teal mb-4">OUR SERVICES</div>
+              <h2 className="font-['Fraunces'] font-bold text-[34px] text-charcoal mb-4">Three ways we help.</h2>
+              <p className="font-['Open_Sans'] text-[16px] text-slate max-w-[760px] leading-[1.65]">
                 Every engagement starts with a free org assessment. From there, we recommend the right service based on what your organization actually needs.
               </p>
             </motion.div>
@@ -250,7 +250,7 @@ export default function Consulting() {
                 <motion.div
                   key={svc.title}
                   variants={fadeUp}
-                  className="bg-white border-[1.5px] border-[#E2E4E1] rounded-2xl overflow-hidden flex flex-col"
+                  className="bg-white border-[1.5px] border-warm-gray rounded-2xl overflow-hidden flex flex-col"
                 >
                   <div className="p-8 flex flex-col flex-1">
                     <span
@@ -265,13 +265,13 @@ export default function Consulting() {
                     >
                       {svc.icon}
                     </div>
-                    <h3 className="font-['Poppins'] font-bold text-[22px] text-[#2A2E2C] mb-2">{svc.title}</h3>
+                    <h3 className="font-['Poppins'] font-bold text-[22px] text-charcoal mb-2">{svc.title}</h3>
                     <p className="font-['Open_Sans'] font-semibold text-[14px] mb-5" style={{ color: svc.accent }}>{svc.tagline}</p>
 
-                    <div className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65] space-y-3 mb-6 flex-1">
-                      <p><span className="font-bold text-[#2A2E2C]">The Problem: </span>{svc.problem}</p>
-                      <p><span className="font-bold text-[#2A2E2C]">The Process: </span>{svc.process}</p>
-                      <p><span className="font-bold text-[#2A2E2C]">The Outcome: </span>{svc.outcome}</p>
+                    <div className="font-['Open_Sans'] text-[13px] text-slate leading-[1.65] space-y-3 mb-6 flex-1">
+                      <p><span className="font-bold text-charcoal">The Problem: </span>{svc.problem}</p>
+                      <p><span className="font-bold text-charcoal">The Process: </span>{svc.process}</p>
+                      <p><span className="font-bold text-charcoal">The Outcome: </span>{svc.outcome}</p>
                     </div>
 
                     <a
@@ -281,13 +281,13 @@ export default function Consulting() {
                     >
                       {svc.cta}
                     </a>
-                    <p className="text-center font-['Open_Sans'] italic text-[12px] mt-3 text-[#8C8882]">{svc.sub}</p>
+                    <p className="text-center font-['Open_Sans'] italic text-[12px] mt-3 text-muted-text">{svc.sub}</p>
                   </div>
                 </motion.div>
               ))}
             </div>
 
-            <motion.p variants={fadeUp} className="text-center font-['Open_Sans'] italic text-[13px] text-[#4A4F4D]">
+            <motion.p variants={fadeUp} className="text-center font-['Open_Sans'] italic text-[13px] text-slate">
               Prepackaged solutions with defined scope and pricing are coming. Contact us for current availability and to discuss your specific needs.
             </motion.p>
           </motion.div>
@@ -295,7 +295,7 @@ export default function Consulting() {
       </section>
 
       {/* RESOLVE METHODOLOGY */}
-      <section className="bg-[#2A2E2C] py-20 px-5 md:px-10">
+      <section className="bg-charcoal py-20 px-5 md:px-10">
         <div className="max-w-7xl mx-auto">
           <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={stagger} className="grid grid-cols-1 lg:grid-cols-2 gap-14">
             <div>
@@ -315,7 +315,7 @@ export default function Consulting() {
                   <motion.div key={phase.name} variants={fadeUp} className="flex items-center gap-4">
                     <div
                       className="w-7 h-7 rounded-full flex items-center justify-center shrink-0"
-                      style={{ background: "#2F6F7E" }}
+                      style={{ background: "var(--tt-deep-teal)" }}
                     >
                       <span className="font-['Poppins'] font-bold text-white text-[14px]">{phase.letter}</span>
                     </div>
@@ -336,9 +336,9 @@ export default function Consulting() {
         <div className="max-w-7xl mx-auto">
           <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={stagger}>
             <motion.div variants={fadeUp} className="mb-12">
-              <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6F7E] mb-4">WHO DELIVERS IT</div>
-              <h2 className="font-['Fraunces'] font-bold text-[34px] text-[#2A2E2C] mb-4">Led by practitioners. Not account managers.</h2>
-              <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] max-w-[760px] leading-[1.65]">
+              <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-deep-teal mb-4">WHO DELIVERS IT</div>
+              <h2 className="font-['Fraunces'] font-bold text-[34px] text-charcoal mb-4">Led by practitioners. Not account managers.</h2>
+              <p className="font-['Open_Sans'] text-[16px] text-slate max-w-[760px] leading-[1.65]">
                 TT consulting engagements are led by TT founders — people who have delivered real Salesforce solutions for real organizations, not consultants who manage projects from a distance.
               </p>
             </motion.div>
@@ -349,7 +349,7 @@ export default function Consulting() {
                   key={c.key}
                   variants={fadeUp}
                   className="bg-white rounded-xl overflow-hidden flex flex-col"
-                  style={{ border: "1px solid #E2E4E1" }}
+                  style={{ border: "1px solid var(--tt-warm-gray)" }}
                 >
                   <div className="p-7 flex flex-col flex-1">
                     <div
@@ -358,12 +358,12 @@ export default function Consulting() {
                     >
                       <span className="font-['Poppins'] font-bold text-white text-lg">{c.initials}</span>
                     </div>
-                    <h3 className="font-['Poppins'] font-bold text-[18px] text-[#2A2E2C] mb-1">{c.name}</h3>
+                    <h3 className="font-['Poppins'] font-bold text-[18px] text-charcoal mb-1">{c.name}</h3>
                     <p className="font-['Open_Sans'] font-semibold text-[13px] mb-4" style={{ color: c.accent }}>{c.title}</p>
-                    <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65] mb-4">{c.specialties}</p>
+                    <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.65] mb-4">{c.specialties}</p>
                     <div className="mt-auto">
                       <p className="font-['Open_Sans'] font-bold text-[11px] mb-1.5" style={{ color: c.accent, letterSpacing: "1px" }}>BEST FOR</p>
-                      <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.6]">{c.bestFor}</p>
+                      <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.6]">{c.bestFor}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -373,22 +373,22 @@ export default function Consulting() {
             <motion.div
               variants={fadeUp}
               className="rounded-xl p-7 md:p-8 flex flex-col md:flex-row gap-5"
-              style={{ background: "#E6F3EA" }}
+              style={{ background: "var(--tt-green-100)" }}
             >
-              <div className="w-10 h-10 rounded-lg bg-[#EBF3EE] flex items-center justify-center shrink-0">
-                <Rocket size={22} color="#2F6B3F" />
+              <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center shrink-0">
+                <Rocket size={22} color="var(--tt-trail-green)" />
               </div>
               <div>
-                <h3 className="font-['Poppins'] font-semibold text-[16px] mb-3" style={{ color: "#1E4A2A" }}>Building our consulting team.</h3>
-                <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65] mb-3">
+                <h3 className="font-['Poppins'] font-semibold text-[16px] mb-3" style={{ color: "var(--tt-green-700)" }}>Building our consulting team.</h3>
+                <p className="font-['Open_Sans'] text-[14px] text-slate leading-[1.65] mb-3">
                   Our consulting practice is led by TT founders today. As our practice grows, we will be hiring associate consultants directly from our program graduates — creating a direct pathway from TT program completion to professional Salesforce consulting work. This is one of the ways TT connects program outcomes to real career placement.
                 </p>
-                <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65] mb-4">
+                <p className="font-['Open_Sans'] text-[14px] text-slate leading-[1.65] mb-4">
                   Interested in becoming an associate consultant? Complete the Guided Trail or Trail of Mastery — then watch for opportunities as our consulting practice expands.
                 </p>
                 <Link
                   href="/programs"
-                  className="inline-flex items-center gap-2 bg-[#2F6B3F] text-white font-['Open_Sans'] font-bold text-[14px] px-6 py-3 rounded-lg hover:bg-[#1E4A2A] transition-colors duration-200"
+                  className="inline-flex items-center gap-2 bg-trail-green text-white font-['Open_Sans'] font-bold text-[14px] px-6 py-3 rounded-lg hover:bg-green-700 transition-colors duration-200"
                 >
                   Learn about TT programs →
                 </Link>
@@ -399,13 +399,13 @@ export default function Consulting() {
       </section>
 
       {/* FREE ASSESSMENT CTA */}
-      <section id="assessment" className="bg-[#FAFAF7] py-20 px-5 md:px-10">
+      <section id="assessment" className="bg-trail-light py-20 px-5 md:px-10">
         <div className="max-w-7xl mx-auto">
           <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={stagger}>
             <motion.div variants={fadeUp} className="mb-12 text-center">
-              <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6F7E] mb-4">GET STARTED</div>
-              <h2 className="font-['Fraunces'] font-bold text-[34px] text-[#2A2E2C] mb-5">Start with a free assessment.</h2>
-              <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] max-w-[680px] mx-auto leading-[1.65]">
+              <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-deep-teal mb-4">GET STARTED</div>
+              <h2 className="font-['Fraunces'] font-bold text-[34px] text-charcoal mb-5">Start with a free assessment.</h2>
+              <p className="font-['Open_Sans'] text-[16px] text-slate max-w-[680px] mx-auto leading-[1.65]">
                 Not sure where to begin or which service is right for your organization? Start here. A free assessment (up to 1 hour) gives you a clear picture of where your Salesforce org stands and what would actually help.
               </p>
             </motion.div>
@@ -413,29 +413,29 @@ export default function Consulting() {
             <motion.div
               variants={fadeUp}
               className="bg-white rounded-2xl"
-              style={{ border: "1px solid #E2E4E1", padding: "40px" }}
+              style={{ border: "1px solid var(--tt-warm-gray)", padding: "40px" }}
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div>
-                  <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-4">What the free assessment covers:</h3>
+                  <h3 className="font-['Poppins'] font-semibold text-[17px] text-charcoal mb-4">What the free assessment covers:</h3>
                   <ul className="space-y-2.5 mb-5">
                     {ASSESSMENT_COVERS.map(item => (
-                      <li key={item} className="flex gap-2 font-['Open_Sans'] text-[13px] text-[#4A4F4D]">
-                        <Check size={16} color="#2F6B3F" className="shrink-0" />{item}
+                      <li key={item} className="flex gap-2 font-['Open_Sans'] text-[13px] text-slate">
+                        <Check size={16} color="var(--tt-trail-green)" className="shrink-0" />{item}
                       </li>
                     ))}
                   </ul>
-                  <p className="font-['Open_Sans'] font-semibold text-[13px] text-[#2A2E2C]">Up to 1 hour · Delivered within 3 business days</p>
+                  <p className="font-['Open_Sans'] font-semibold text-[13px] text-charcoal">Up to 1 hour · Delivered within 3 business days</p>
                 </div>
 
                 <div>
-                  <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C] mb-4">Request your assessment:</h3>
-                  <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65] mb-6">
+                  <h3 className="font-['Poppins'] font-semibold text-[17px] text-charcoal mb-4">Request your assessment:</h3>
+                  <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.65] mb-6">
                     Tell us a little about your organization and your Salesforce situation. We will schedule a session (up to 1 hour) and deliver your Strategic Discovery Summary within 3 business days.
                   </p>
                   <Link
                     href="/nonprofit-assessment"
-                    className="w-full inline-flex items-center justify-center gap-2 bg-[#2F6B3F] text-white font-['Open_Sans'] font-bold text-[15px] px-8 py-4 rounded-lg hover:bg-[#1E4A2A] transition-colors duration-200"
+                    className="w-full inline-flex items-center justify-center gap-2 bg-trail-green text-white font-['Open_Sans'] font-bold text-[15px] px-8 py-4 rounded-lg hover:bg-green-700 transition-colors duration-200"
                   >
                     Book a Free Assessment →
                   </Link>

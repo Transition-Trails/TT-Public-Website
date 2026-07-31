@@ -6,20 +6,20 @@ import { Award, Globe, Rocket } from "lucide-react";
 
 const ELIGIBILITY_CARDS = [
   {
-    border: "#2F6B3F",
-    icon: <Award size={22} color="#2F6B3F" />,
+    border: "var(--tt-trail-green)",
+    icon: <Award size={22} color="var(--tt-trail-green)" />,
     title: "Military Community",
     body: "Active duty military transitioning to civilian careers, veterans of any branch, and military spouses facing career disruption due to relocation or service commitment. Salesforce careers offer the stability and remote-work flexibility that the military community deserves.",
   },
   {
-    border: "#2F6F7E",
-    icon: <Globe size={22} color="#2F6F7E" />,
+    border: "var(--tt-deep-teal)",
+    icon: <Globe size={22} color="var(--tt-deep-teal)" />,
     title: "Underrepresented Groups in Tech",
     body: "Black and African American, Hispanic and Latino, Native American and Alaska Native, and Native Hawaiian and Pacific Islander individuals who are underrepresented in technology careers at every level — including within the Salesforce ecosystem.",
   },
   {
-    border: "#7FAFC6",
-    icon: <Rocket size={22} color="#7FAFC6" />,
+    border: "var(--tt-teal-300)",
+    icon: <Rocket size={22} color="var(--tt-teal-300)" />,
     title: "Economic Barriers to Tech Entry",
     body: "First-generation college students and non-traditional learners, individuals experiencing unemployment or underemployment, and people in the process of career transition from low-wage industries. Cost should not be the reason someone cannot access a high-demand tech career.",
   },
@@ -80,7 +80,7 @@ export default function Scholarships() {
       {/* SECTION 2: Hero */}
       <section
         className="pt-24 pb-20 px-5 md:px-10"
-        style={{ background: "linear-gradient(135deg, #1E4A2A 0%, #2F6B3F 55%, #2F6F7E 100%)" }}
+        style={{ background: "linear-gradient(135deg, var(--tt-green-700) 0%, var(--tt-trail-green) 55%, var(--tt-deep-teal) 100%)" }}
       >
         <div className="max-w-[1280px] mx-auto">
           {/* Breadcrumb */}
@@ -95,7 +95,7 @@ export default function Scholarships() {
             <div className="flex-1 max-w-[720px]">
               <div
                 className="inline-block font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-7"
-                style={{ color: "#F5A623", background: "rgba(245,166,35,0.15)", border: "1px solid rgba(245,166,35,0.4)" }}
+                style={{ color: "var(--tt-sun-amber)", background: "rgba(245,166,35,0.15)", border: "1px solid rgba(245,166,35,0.4)" }}
               >
                 THE TRAIL FORWARD SCHOLARSHIP  ·  FULLY FUNDED  ·  ONE SEAT PER COHORT
               </div>
@@ -114,16 +114,16 @@ export default function Scholarships() {
 
             {/* Right: stat boxes */}
             <div className="flex flex-col gap-4 w-full xl:w-[260px] shrink-0">
-              <div className="bg-white/10 border border-[#2F6B3F]/60 rounded-xl p-6 backdrop-blur-sm">
+              <div className="bg-white/10 border border-trail-green/60 rounded-xl p-6 backdrop-blur-sm">
                 <div className="font-['Poppins'] font-bold text-[44px] text-white leading-none mb-1">$0</div>
                 <div className="font-['Open_Sans'] text-[14px] text-white/70">Cost to scholarship recipient</div>
               </div>
-              <div className="bg-white/10 border border-[#2F6F7E]/60 rounded-xl p-6 backdrop-blur-sm">
+              <div className="bg-white/10 border border-deep-teal/60 rounded-xl p-6 backdrop-blur-sm">
                 <div className="font-['Poppins'] font-bold text-[28px] text-white leading-tight mb-1">1 seat</div>
                 <div className="font-['Open_Sans'] text-[14px] text-white/70">Reserved per Guided Trail cohort</div>
               </div>
-              <div className="bg-white/10 border border-[#F5A623]/40 rounded-xl p-6 backdrop-blur-sm">
-                <div className="font-['Poppins'] font-bold text-[28px] text-[#F5A623] leading-tight mb-1">$1,547</div>
+              <div className="bg-white/10 border border-sun-amber/40 rounded-xl p-6 backdrop-blur-sm">
+                <div className="font-['Poppins'] font-bold text-[28px] text-sun-amber leading-tight mb-1">$1,547</div>
                 <div className="font-['Open_Sans'] text-[14px] text-white/70">Full program cost — covered by TT</div>
               </div>
             </div>
@@ -135,11 +135,11 @@ export default function Scholarships() {
       <section className="bg-white py-20 px-5 md:px-10">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12">
-            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">ELIGIBILITY</div>
-            <h2 className="font-['Poppins'] font-bold text-[34px] text-[#2A2E2C] mb-4 max-w-[800px]">
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-trail-green mb-4">ELIGIBILITY</div>
+            <h2 className="font-['Poppins'] font-bold text-[34px] text-charcoal mb-4 max-w-[800px]">
               The Trail Forward Scholarship is for historically underserved populations in technology.
             </h2>
-            <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] max-w-[760px] leading-[1.65]">
+            <p className="font-['Open_Sans'] text-[16px] text-slate max-w-[760px] leading-[1.65]">
               You do not need to prove hardship with documents at application. Eligibility is confirmed through a signed self-attestation. The application process is designed to be accessible — not a barrier in itself.
             </p>
           </div>
@@ -148,30 +148,30 @@ export default function Scholarships() {
             {ELIGIBILITY_CARDS.map(card => (
               <div
                 key={card.title}
-                className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden"
+                className="bg-white border border-warm-gray rounded-xl overflow-hidden"
                 style={{ borderLeft: `4px solid ${card.border}` }}
               >
                 <div className="p-7">
-                  <div className="w-10 h-10 rounded-lg bg-[#EBF3EE] flex items-center justify-center mb-3">{card.icon}</div>
-                  <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-3">{card.title}</h3>
-                  <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">{card.body}</p>
+                  <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mb-3">{card.icon}</div>
+                  <h3 className="font-['Poppins'] font-semibold text-[16px] text-charcoal mb-3">{card.title}</h3>
+                  <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.65]">{card.body}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          <p className="font-['Open_Sans'] italic text-[13px] text-[#4A4F4D] text-center">
+          <p className="font-['Open_Sans'] italic text-[13px] text-slate text-center">
             Applicants may belong to more than one eligible category. Eligibility in any one category qualifies you to apply.
           </p>
         </div>
       </section>
 
       {/* SECTION 4: What the Scholarship Covers */}
-      <section className="bg-[#E6F3EA] py-16 px-5 md:px-10 border-y border-[#2F6B3F]/20">
+      <section className="bg-green-100 py-16 px-5 md:px-10 border-y border-trail-green/20">
         <div className="max-w-7xl mx-auto">
           <div className="mb-10">
-            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">WHAT IS COVERED</div>
-            <h2 className="font-['Poppins'] font-bold text-[28px] text-[#1E4A2A] mb-2">This is not a discount. It is a complete award.</h2>
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-trail-green mb-4">WHAT IS COVERED</div>
+            <h2 className="font-['Poppins'] font-bold text-[28px] text-green-700 mb-2">This is not a discount. It is a complete award.</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
             {[
@@ -191,14 +191,14 @@ export default function Scholarships() {
               <div
                 key={item.title}
                 className="bg-white rounded-xl p-7"
-                style={{ borderLeft: "4px solid #2F6B3F" }}
+                style={{ borderLeft: "4px solid var(--tt-trail-green)" }}
               >
-                <h3 className="font-['Open_Sans'] font-bold text-[15px] text-[#2F6B3F] mb-3">{item.title}</h3>
-                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">{item.body}</p>
+                <h3 className="font-['Open_Sans'] font-bold text-[15px] text-trail-green mb-3">{item.title}</h3>
+                <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.65]">{item.body}</p>
               </div>
             ))}
           </div>
-          <p className="font-['Open_Sans'] italic text-[13px] text-[#1E4A2A] text-center max-w-[760px] mx-auto">
+          <p className="font-['Open_Sans'] italic text-[13px] text-green-700 text-center max-w-[760px] mx-auto">
             The Trail Forward Scholarship currently covers one seat per Guided Trail cohort. As additional funding becomes available through grants, donations, and corporate partnerships, we intend to expand scholarship availability to other TT programs.
           </p>
         </div>
@@ -208,42 +208,42 @@ export default function Scholarships() {
       <section className="bg-white py-20 px-5 md:px-10">
         <div className="max-w-[860px] mx-auto">
           <div className="mb-12">
-            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">HOW TO APPLY</div>
-            <h2 className="font-['Poppins'] font-bold text-[34px] text-[#2A2E2C] mb-4">Five steps. Designed to be accessible.</h2>
-            <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] max-w-[760px] leading-[1.65]">
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-trail-green mb-4">HOW TO APPLY</div>
+            <h2 className="font-['Poppins'] font-bold text-[34px] text-charcoal mb-4">Five steps. Designed to be accessible.</h2>
+            <p className="font-['Open_Sans'] text-[16px] text-slate max-w-[760px] leading-[1.65]">
               The application process is structured to assess genuine readiness and motivation — not to create additional barriers. If you need any accommodation in the application process, contact us at{" "}
-              <a href="mailto:hello@transitiontrails.org" className="text-[#2F6B3F] hover:underline">hello@transitiontrails.org</a>{" "}
+              <a href="mailto:hello@transitiontrails.org" className="text-trail-green hover:underline">hello@transitiontrails.org</a>{" "}
               and we will work with you.
             </p>
           </div>
 
           <div className="relative">
             {/* Vertical timeline line */}
-            <div className="absolute left-[19px] top-6 bottom-6 w-[2px] bg-[#E2E4E1]" />
+            <div className="absolute left-[19px] top-6 bottom-6 w-[2px] bg-warm-gray" />
 
             <div className="space-y-8">
               {APPLICATION_STEPS.map((step) => (
                 <div key={step.n} className="flex gap-6">
                   {/* Step number */}
                   <div
-                    className="w-10 h-10 rounded-full bg-[#2F6B3F] text-white font-['Poppins'] font-bold text-[15px] flex items-center justify-center shrink-0 z-10"
+                    className="w-10 h-10 rounded-full bg-trail-green text-white font-['Poppins'] font-bold text-[15px] flex items-center justify-center shrink-0 z-10"
                   >
                     {step.n}
                   </div>
                   {/* Content */}
                   <div className="flex-1 pb-2">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4 mb-2">
-                      <h3 className="font-['Poppins'] font-semibold text-[17px] text-[#2A2E2C]">{step.title}</h3>
-                      <span className="font-['Open_Sans'] text-[11px] font-semibold uppercase tracking-[1px] text-[#2F6F7E] bg-[#E0F0F7] px-2 py-0.5 rounded mt-1 sm:mt-0 self-start sm:self-auto">
+                      <h3 className="font-['Poppins'] font-semibold text-[17px] text-charcoal">{step.title}</h3>
+                      <span className="font-['Open_Sans'] text-[11px] font-semibold uppercase tracking-[1px] text-deep-teal bg-teal-100 px-2 py-0.5 rounded mt-1 sm:mt-0 self-start sm:self-auto">
                         {step.timeline}
                       </span>
                     </div>
-                    <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.65] whitespace-pre-line">{step.body}</p>
+                    <p className="font-['Open_Sans'] text-[14px] text-slate leading-[1.65] whitespace-pre-line">{step.body}</p>
                     {step.bullets && (
                       <ul className="mt-3 space-y-2">
                         {step.bullets.map((b, i) => (
-                          <li key={i} className="flex gap-2 font-['Open_Sans'] text-[14px] text-[#4A4F4D]">
-                            <span className="text-[#2F6B3F] shrink-0 font-bold">
+                          <li key={i} className="flex gap-2 font-['Open_Sans'] text-[14px] text-slate">
+                            <span className="text-trail-green shrink-0 font-bold">
                               {step.n === 2 ? `${["①","②","③"][i]}` : "•"}
                             </span>
                             {b}
@@ -260,13 +260,13 @@ export default function Scholarships() {
       </section>
 
       {/* SECTION 6: Replacement Policy */}
-      <section className="bg-[#FAFAF7] py-16 px-5 md:px-10 border-y border-[#E2E4E1]">
+      <section className="bg-trail-light py-16 px-5 md:px-10 border-y border-warm-gray">
         <div className="max-w-[860px] mx-auto">
           <div className="mb-6">
-            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">ALTERNATE SELECTION</div>
-            <h2 className="font-['Poppins'] font-bold text-[24px] text-[#2A2E2C] mb-6">One alternate is selected alongside every scholarship recipient.</h2>
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-trail-green mb-4">ALTERNATE SELECTION</div>
+            <h2 className="font-['Poppins'] font-bold text-[24px] text-charcoal mb-6">One alternate is selected alongside every scholarship recipient.</h2>
           </div>
-          <div className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] max-w-[760px] leading-[1.65] space-y-4">
+          <div className="font-['Open_Sans'] text-[16px] text-slate max-w-[760px] leading-[1.65] space-y-4">
             <p>At the time of scholarship award, TT also selects one alternate recipient. If the primary scholarship recipient withdraws before the cohort begins, the alternate is offered the seat immediately.</p>
             <p>If a scholarship recipient must withdraw after the cohort has started, we hope that does not happen — and we will do everything we can to support recipients through challenges that arise. If withdrawal does occur after the cohort start date, the scholarship seat for that cohort cannot be filled. The alternate offer expires when the cohort begins.</p>
             <p>If you are selected as an alternate, you will be notified. You are encouraged to apply again for a future cohort.</p>
@@ -278,14 +278,14 @@ export default function Scholarships() {
       <section className="bg-white py-20 px-5 md:px-10">
         <div className="max-w-[860px] mx-auto">
           <div className="mb-8">
-            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">HOW YOUR STORY CONTRIBUTES</div>
-            <h2 className="font-['Poppins'] font-bold text-[28px] text-[#2A2E2C] mb-6">Every scholarship outcome helps fund the next one.</h2>
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-trail-green mb-4">HOW YOUR STORY CONTRIBUTES</div>
+            <h2 className="font-['Poppins'] font-bold text-[28px] text-charcoal mb-6">Every scholarship outcome helps fund the next one.</h2>
           </div>
-          <div className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] max-w-[760px] leading-[1.65] space-y-6">
+          <div className="font-['Open_Sans'] text-[16px] text-slate max-w-[760px] leading-[1.65] space-y-6">
             <p>The Trail Forward Scholarship is funded through grants, individual donations, and corporate partnerships. Every grant application TT submits requires evidence of impact — real outcomes for real people. Your participation in anonymized impact reporting directly supports TT's ability to fund future scholarship seats.</p>
 
             <div>
-              <p className="font-semibold text-[#2A2E2C] mb-3">What is tracked — required for all recipients:</p>
+              <p className="font-semibold text-charcoal mb-3">What is tracked — required for all recipients:</p>
               <ul className="space-y-2">
                 {[
                   "Program completion (yes or no)",
@@ -296,16 +296,16 @@ export default function Scholarships() {
                   "Geographic location (city/state)",
                 ].map(item => (
                   <li key={item} className="flex gap-2 text-[14px]">
-                    <span className="text-[#2F6B3F] shrink-0">•</span>
+                    <span className="text-trail-green shrink-0">•</span>
                     {item}
                   </li>
                 ))}
               </ul>
-              <p className="text-[13px] text-[#4A4F4D] italic mt-3">Tracked at: program completion, 6 months post-completion, 12 months post-completion.</p>
+              <p className="text-[13px] text-slate italic mt-3">Tracked at: program completion, 6 months post-completion, 12 months post-completion.</p>
             </div>
 
             <div>
-              <p className="font-semibold text-[#2A2E2C] mb-3">What is optional — your choice, never a condition:</p>
+              <p className="font-semibold text-charcoal mb-3">What is optional — your choice, never a condition:</p>
               <ul className="space-y-2">
                 {[
                   "Sharing your name and story for TT social media, grant narratives, or marketing",
@@ -313,7 +313,7 @@ export default function Scholarships() {
                   "Serving as a future alumni mentor for Explorer's Trail members",
                 ].map(item => (
                   <li key={item} className="flex gap-2 text-[14px]">
-                    <span className="text-[#7FAFC6] shrink-0">•</span>
+                    <span className="text-teal-300 shrink-0">•</span>
                     {item}
                   </li>
                 ))}
@@ -326,7 +326,7 @@ export default function Scholarships() {
       </section>
 
       {/* SECTION 8: Apply + Support */}
-      <section className="bg-[#2A2E2C] py-20 px-5 md:px-10">
+      <section className="bg-charcoal py-20 px-5 md:px-10">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Left — Apply */}
           <div>
@@ -335,30 +335,30 @@ export default function Scholarships() {
             </div>
 
             <div className="bg-white rounded-xl p-8 max-w-[560px] mx-auto lg:mx-0">
-              <h3 className="font-['Poppins'] font-semibold text-[20px] text-[#2A2E2C] mb-4">
+              <h3 className="font-['Poppins'] font-semibold text-[20px] text-charcoal mb-4">
                 Applications are open on a rolling basis.
               </h3>
-              <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.65] mb-5">
+              <p className="font-['Open_Sans'] text-[15px] text-slate leading-[1.65] mb-5">
                 Applications are reviewed for each upcoming Guided Trail cohort. There is no single deadline — apply when you are ready and we will review your application against the next available cohort. The earlier you apply, the more time you have for the screening call and selection process.
               </p>
 
               <div
                 className="rounded-[8px] px-5 py-4 mb-6"
-                style={{ backgroundColor: "#E6F3EA", borderLeft: "3px solid #2F6B3F" }}
+                style={{ backgroundColor: "var(--tt-green-100)", borderLeft: "3px solid var(--tt-trail-green)" }}
               >
-                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D]">
+                <p className="font-['Open_Sans'] text-[13px] text-slate">
                   Eligibility requires a Salesforce Certified Platform Administrator certification and not being currently employed in a Salesforce role.
                 </p>
               </div>
 
               <Link
                 href={LINKS.scholarshipApplication}
-                className="w-full h-[52px] rounded-[8px] bg-[#2F6B3F] hover:bg-[#1E4A2A] text-white font-['Poppins'] font-bold text-[15px] flex items-center justify-center transition-colors"
+                className="w-full h-[52px] rounded-[8px] bg-trail-green hover:bg-green-700 text-white font-['Poppins'] font-bold text-[15px] flex items-center justify-center transition-colors"
               >
                 Apply for the Trail Forward Scholarship →
               </Link>
 
-              <p className="font-['Open_Sans'] text-[12px] text-[#8C8882] italic text-center mt-4">
+              <p className="font-['Open_Sans'] text-[12px] text-muted-text italic text-center mt-4">
                 Questions about eligibility or the process? Email hello@transitiontrails.org
               </p>
             </div>
@@ -377,7 +377,7 @@ export default function Scholarships() {
             </p>
             <Link
               href="/donate"
-              className="h-[52px] px-7 rounded-[8px] bg-[#2F6B3F] hover:bg-[#1E4A2A] text-white font-['Poppins'] font-semibold text-[15px] inline-flex items-center justify-center transition-colors"
+              className="h-[52px] px-7 rounded-[8px] bg-trail-green hover:bg-green-700 text-white font-['Poppins'] font-semibold text-[15px] inline-flex items-center justify-center transition-colors"
             >
               Donate to the Scholarship Fund →
             </Link>

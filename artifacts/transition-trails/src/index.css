@@ -90,31 +90,46 @@
      bg-tt-teal-500        bg-dark-fill           font-display
    ───────────────────────────────────────────────────────────────── */
 @theme {
-  /* Green palette — semantic alias + tt- prefixed scale */
+  /* Green palette — semantic alias + full scale (both prefixed and bare names) */
   --color-trail-green:       var(--tt-green-500);
+  --color-green-100:         var(--tt-green-100);
   --color-tt-green-100:      var(--tt-green-100);
+  --color-green-300:         var(--tt-green-300);
   --color-tt-green-300:      var(--tt-green-300);
+  --color-green-400:         var(--tt-green-400);
+  --color-green-mid:         var(--tt-green-mid);
+  --color-green-500:         var(--tt-green-500);
   --color-tt-green-500:      var(--tt-green-500);
+  --color-green-700:         var(--tt-green-700);
   --color-tt-green-700:      var(--tt-green-700);
 
-  /* Teal palette — semantic alias + tt- prefixed scale */
+  /* Teal palette — semantic alias + full scale (both prefixed and bare names) */
   --color-deep-teal:         var(--tt-teal-500);
+  --color-teal-100:          var(--tt-teal-100);
   --color-tt-teal-100:       var(--tt-teal-100);
+  --color-teal-300:          var(--tt-teal-300);
   --color-tt-teal-300:       var(--tt-teal-300);
+  --color-teal-500:          var(--tt-teal-500);
   --color-tt-teal-500:       var(--tt-teal-500);
+  --color-teal-700:          var(--tt-teal-700);
   --color-tt-teal-700:       var(--tt-teal-700);
   --color-sky-tint:          var(--tt-sky-tint);
 
-  /* Amber palette — semantic alias + tt- prefixed scale */
+  /* Amber palette — semantic alias + full scale (both prefixed and bare names) */
   --color-sun-amber:         var(--tt-amber-500);
+  --color-amber-100:         var(--tt-amber-100);
   --color-tt-amber-100:      var(--tt-amber-100);
+  --color-amber-300:         var(--tt-amber-300);
   --color-tt-amber-300:      var(--tt-amber-300);
+  --color-amber-500:         var(--tt-amber-500);
   --color-tt-amber-500:      var(--tt-amber-500);
+  --color-amber-700:         var(--tt-amber-700);
   --color-tt-amber-700:      var(--tt-amber-700);
 
   /* Neutrals */
   --color-trail-light:    var(--tt-trail-light);
   --color-warm-gray:      var(--tt-warm-gray);
+  --color-cool-gray:      var(--tt-cool-gray);
   --color-slate:          var(--tt-slate);
   --color-charcoal:       var(--tt-charcoal);
   --color-muted-text:     var(--tt-muted-text);
@@ -123,8 +138,14 @@
   /* Semantic */
   --color-danger:         var(--tt-danger);
   --color-danger-tint:    var(--tt-danger-tint);
+  --color-error:          var(--tt-error);
+  --color-error-tint:     var(--tt-error-tint);
   --color-success:        var(--tt-success);
   --color-success-tint:   var(--tt-success-tint);
+
+  /* Expedition dark backgrounds */
+  --color-near-black:     var(--tt-near-black);
+  --color-off-black:      var(--tt-off-black);
 
   /* Dark-section palette */
   --color-dark-surface:        var(--tt-dark-surface);

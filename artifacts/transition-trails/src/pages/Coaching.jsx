@@ -5,29 +5,29 @@ import { Compass, Target, RefreshCw, Building2, Search, MessageCircle, Calendar,
 
 const WHO_CARDS = [
   {
-    color: "#7FAFC6",
-    icon: <Compass size={24} color="#7FAFC6" />,
+    color: "var(--tt-teal-300)",
+    icon: <Compass size={24} color="var(--tt-teal-300)" />,
     title: "Career Starters",
     subtitle: "Finding your direction",
     body: "Not sure if Salesforce is the right path for you? A coaching session helps you understand what a Salesforce career actually looks like, what it takes to get there, and whether it fits your goals, background, and timeline. No commitment required — just clarity.",
   },
   {
-    color: "#2F6B3F",
-    icon: <Target size={24} color="#2F6B3F" />,
+    color: "var(--tt-trail-green)",
+    icon: <Target size={24} color="var(--tt-trail-green)" />,
     title: "Career Builders",
     subtitle: "Advancing your career",
     body: "You have the cert but the job search is not going the way you expected. Or you are in a role and want to move up. Coaching gives you a clear plan — resume review, interview prep, portfolio feedback, or technical skill development — whatever you need most right now.",
   },
   {
-    color: "#1E4A2A",
-    icon: <RefreshCw size={24} color="#1E4A2A" />,
+    color: "var(--tt-green-700)",
+    icon: <RefreshCw size={24} color="var(--tt-green-700)" />,
     title: "Career Pivoters",
     subtitle: "Making the pivot",
     body: "You are coming from another career and the path forward is not obvious. Coaching helps you map your existing skills to Salesforce roles, identify the fastest route to job-ready, and build the confidence to make the transition with a plan behind you.",
   },
   {
-    color: "#2F6F7E",
-    icon: <Building2 size={24} color="#2F6F7E" />,
+    color: "var(--tt-deep-teal)",
+    icon: <Building2 size={24} color="var(--tt-deep-teal)" />,
     title: "Nonprofit Professionals",
     subtitle: "Nonprofit technology leadership",
     body: "You lead a nonprofit and need Salesforce guidance — strategy, implementation direction, or just a sounding board for decisions your team is facing. Coaching with the TT team gives you expert nonprofit Salesforce perspective without a consulting retainer.",
@@ -36,8 +36,8 @@ const WHO_CARDS = [
 
 const PACKAGES = [
   {
-    accent: "#2F6B3F",
-    icon: <Search size={24} color="#2F6B3F" />,
+    accent: "var(--tt-trail-green)",
+    icon: <Search size={24} color="var(--tt-trail-green)" />,
     title: "Discovery Call",
     price: "Free",
     sub: "30 minutes · No commitment",
@@ -55,8 +55,8 @@ const PACKAGES = [
     etNote: "Free for everyone — no membership required",
   },
   {
-    accent: "#2F6F7E",
-    icon: <MessageCircle size={24} color="#2F6F7E" />,
+    accent: "var(--tt-deep-teal)",
+    icon: <MessageCircle size={24} color="var(--tt-deep-teal)" />,
     title: "Single Session",
     price: "$150",
     priceSuffix: "/hr",
@@ -77,9 +77,9 @@ const PACKAGES = [
     etLink: "/programs/explorers-trail",
   },
   {
-    accent: "#2F6B3F",
+    accent: "var(--tt-trail-green)",
     badge: "POPULAR",
-    icon: <Calendar size={24} color="#2F6B3F" />,
+    icon: <Calendar size={24} color="var(--tt-trail-green)" />,
     title: "3-Session Bundle",
     price: "$400",
     sub: "3 hours · Save $50 vs single sessions",
@@ -99,8 +99,8 @@ const PACKAGES = [
     etNote: "Members save $125 on this bundle",
   },
   {
-    accent: "#1E4A2A",
-    icon: <Rocket size={24} color="#1E4A2A" />,
+    accent: "var(--tt-green-700)",
+    icon: <Rocket size={24} color="var(--tt-green-700)" />,
     title: "6-Session Bundle",
     price: "$750",
     sub: "6 hours · Best value · Save $150 vs single sessions",
@@ -124,7 +124,7 @@ const PACKAGES = [
 const COACHES = [
   {
     key: "AL",
-    accent: "#2F6B3F",
+    accent: "var(--tt-trail-green)",
     initials: "AL",
     name: "Angela Landrith",
     title: "Co-Founder & CEO",
@@ -135,11 +135,11 @@ const COACHES = [
     contactLabel: "Schedule directly →",
     contactHref: LINKS.angelaCalendar,
     external: true,
-    pillBg: "#E6F3EA",
+    pillBg: "var(--tt-green-100)",
   },
   {
     key: "KB",
-    accent: "#2F6F7E",
+    accent: "var(--tt-deep-teal)",
     initials: "KB",
     name: "Kim Barnes",
     title: "Co-Founder & COO · Digital Compass Lead",
@@ -150,11 +150,11 @@ const COACHES = [
     contactLabel: "kim@transitiontrails.org",
     contactHref: "mailto:kim@transitiontrails.org",
     external: true,
-    pillBg: "#E0F0F3",
+    pillBg: "var(--tt-teal-100)",
   },
   {
     key: "HR",
-    accent: "#1E4A2A",
+    accent: "var(--tt-green-700)",
     initials: "HR",
     name: "Hugh Richardson",
     title: "Co-Founder & CTO · Solutions Architect",
@@ -200,7 +200,7 @@ export default function Coaching() {
       {/* SECTION 2: Hero */}
       <section
         className="pt-24 pb-20 px-5 md:px-10"
-        style={{ background: "linear-gradient(135deg, #1E4A2A 0%, #2F6B3F 55%, #2F6F7E 100%)" }}
+        style={{ background: "linear-gradient(135deg, var(--tt-green-700) 0%, var(--tt-trail-green) 55%, var(--tt-deep-teal) 100%)" }}
       >
         <div className="max-w-[1280px] mx-auto">
           <div className="font-['Open_Sans'] text-[12px] text-white/50 mb-8 flex items-center gap-2">
@@ -215,7 +215,7 @@ export default function Coaching() {
             <div className="flex-1 max-w-[700px]">
               <div
                 className="inline-block font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-7"
-                style={{ color: "#F5A623", background: "rgba(245,166,35,0.15)", border: "1px solid rgba(245,166,35,0.4)" }}
+                style={{ color: "var(--tt-sun-amber)", background: "rgba(245,166,35,0.15)", border: "1px solid rgba(245,166,35,0.4)" }}
               >
                 INDIVIDUAL COACHING  ·  1-ON-1  ·  EXPERT COACHES
               </div>
@@ -240,9 +240,9 @@ export default function Coaching() {
                 <a
                   href="#discovery"
                   className="h-[52px] px-7 rounded-[8px] font-['Poppins'] font-semibold text-[15px] inline-flex items-center justify-center transition-colors"
-                  style={{ background: "#F5A623", color: "#2A2E2C" }}
-                  onMouseEnter={e => e.currentTarget.style.background = "#D4890A"}
-                  onMouseLeave={e => e.currentTarget.style.background = "#F5A623"}
+                  style={{ background: "var(--tt-sun-amber)", color: "var(--tt-charcoal)" }}
+                  onMouseEnter={e => e.currentTarget.style.background = "var(--tt-amber-700)"}
+                  onMouseLeave={e => e.currentTarget.style.background = "var(--tt-sun-amber)"}
                 >
                   Book a Discovery Call →
                 </a>
@@ -257,9 +257,9 @@ export default function Coaching() {
 
             <div className="flex flex-row xl:flex-col gap-4 w-full xl:w-[240px]">
               {[
-                { value: "Free", label: "Discovery call — 30 minutes", color: "#2F6B3F" },
-                { value: "$150/hr", label: "Standard 1-on-1 rate", color: "#2F6F7E" },
-                { value: "$100/hr", label: "Explorer's Trail member rate", color: "#7FAFC6" },
+                { value: "Free", label: "Discovery call — 30 minutes", color: "var(--tt-trail-green)" },
+                { value: "$150/hr", label: "Standard 1-on-1 rate", color: "var(--tt-deep-teal)" },
+                { value: "$100/hr", label: "Explorer's Trail member rate", color: "var(--tt-teal-300)" },
               ].map(s => (
                 <div
                   key={s.label}
@@ -279,21 +279,21 @@ export default function Coaching() {
       <section className="bg-white py-20 px-5 md:px-10">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12">
-            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">WHO IT SERVES</div>
-            <h2 className="font-['Poppins'] font-bold text-[34px] text-[#2A2E2C]">Coaching meets you exactly where you are.</h2>
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-trail-green mb-4">WHO IT SERVES</div>
+            <h2 className="font-['Poppins'] font-bold text-[34px] text-charcoal">Coaching meets you exactly where you are.</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {WHO_CARDS.map(card => (
               <div
                 key={card.title}
-                className="bg-white border border-[#E2E4E1] rounded-xl p-7 flex flex-col"
+                className="bg-white border border-warm-gray rounded-xl p-7 flex flex-col"
                 style={{ borderLeft: `4px solid ${card.color}` }}
               >
                 <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-3" style={{background: `${card.color}15`}}>{card.icon}</div>
-                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">{card.title}</h3>
+                <h3 className="font-['Poppins'] font-semibold text-[16px] text-charcoal mb-1">{card.title}</h3>
                 <p className="font-['Open_Sans'] font-semibold text-[13px] mb-3" style={{ color: card.color }}>{card.subtitle}</p>
-                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">{card.body}</p>
+                <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.65]">{card.body}</p>
               </div>
             ))}
           </div>
@@ -301,21 +301,21 @@ export default function Coaching() {
       </section>
 
       {/* SECTION 4: Coaching Packages */}
-      <section id="packages" className="bg-[#FAFAF7] py-20 px-5 md:px-10">
+      <section id="packages" className="bg-trail-light py-20 px-5 md:px-10">
         <div className="max-w-7xl mx-auto">
           <div className="mb-8 text-center">
-            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">COACHING PACKAGES</div>
-            <h2 className="font-['Poppins'] font-bold text-[34px] text-[#2A2E2C]">Choose the support that fits where you are.</h2>
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-trail-green mb-4">COACHING PACKAGES</div>
+            <h2 className="font-['Poppins'] font-bold text-[34px] text-charcoal">Choose the support that fits where you are.</h2>
           </div>
 
           <div
             className="max-w-[760px] mx-auto flex items-start gap-3 rounded-lg mb-10"
-            style={{ background: "#FEF3DB", border: "1px solid #F5A623", padding: "16px 24px" }}
+            style={{ background: "var(--tt-amber-100)", border: "1px solid var(--tt-sun-amber)", padding: "16px 24px" }}
           >
-            <Star size={18} color="#F5A623" className="shrink-0" />
-            <p className="font-['Open_Sans'] text-[14px] text-[#2A2E2C] leading-[1.6]">
+            <Star size={18} color="var(--tt-sun-amber)" className="shrink-0" />
+            <p className="font-['Open_Sans'] text-[14px] text-charcoal leading-[1.6]">
               Explorer's Trail members receive discounted coaching rates on all packages. Annual + Coaching members ($597/yr) receive one quarterly coaching session included with their membership.{" "}
-              <Link href="/programs/explorers-trail" className="font-semibold text-[#2F6B3F] hover:underline">Learn about Explorer's Trail →</Link>
+              <Link href="/programs/explorers-trail" className="font-semibold text-trail-green hover:underline">Learn about Explorer's Trail →</Link>
             </p>
           </div>
 
@@ -323,36 +323,36 @@ export default function Coaching() {
             {PACKAGES.map(pkg => (
               <div
                 key={pkg.title}
-                className="bg-white border border-[#E2E4E1] rounded-xl overflow-hidden flex flex-col relative"
+                className="bg-white border border-warm-gray rounded-xl overflow-hidden flex flex-col relative"
                 style={{ borderTop: `5px solid ${pkg.accent}` }}
               >
                 {pkg.badge && (
                   <span
                     className="absolute top-4 right-4 font-['Open_Sans'] font-bold text-[10px] px-2 py-1 rounded"
-                    style={{ background: "#F5A623", color: "#2A2E2C" }}
+                    style={{ background: "var(--tt-sun-amber)", color: "var(--tt-charcoal)" }}
                   >
                     {pkg.badge}
                   </span>
                 )}
                 <div className="p-8 flex flex-col flex-1">
                   <div className="text-[32px] mb-3">{pkg.icon}</div>
-                  <h3 className="font-['Poppins'] font-bold text-[22px] text-[#2A2E2C] mb-2">{pkg.title}</h3>
+                  <h3 className="font-['Poppins'] font-bold text-[22px] text-charcoal mb-2">{pkg.title}</h3>
                   <div className="font-['Poppins'] font-bold text-[32px] leading-none mb-2" style={{ color: pkg.accent }}>
-                    {pkg.price}{pkg.priceSuffix && <span className="font-['Open_Sans'] font-normal text-[15px] text-[#4A4F4D]">{pkg.priceSuffix}</span>}
+                    {pkg.price}{pkg.priceSuffix && <span className="font-['Open_Sans'] font-normal text-[15px] text-slate">{pkg.priceSuffix}</span>}
                   </div>
-                  <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] mb-1">{pkg.sub}</p>
+                  <p className="font-['Open_Sans'] text-[13px] text-slate mb-1">{pkg.sub}</p>
                   {pkg.etPrice && (
-                    <p className="font-['Open_Sans'] font-semibold text-[14px] mb-4" style={{ color: "#7FAFC6" }}>{pkg.etPrice}</p>
+                    <p className="font-['Open_Sans'] font-semibold text-[14px] mb-4" style={{ color: "var(--tt-teal-300)" }}>{pkg.etPrice}</p>
                   )}
-                  <div className={`h-px bg-[#E2E4E1] ${pkg.etPrice ? "mb-5" : "mt-2 mb-5"}`} />
+                  <div className={`h-px bg-warm-gray ${pkg.etPrice ? "mb-5" : "mt-2 mb-5"}`} />
 
-                  <div className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65] space-y-3 mb-5">
+                  <div className="font-['Open_Sans'] text-[13px] text-slate leading-[1.65] space-y-3 mb-5">
                     {pkg.body.map((p, i) => <p key={i}>{p}</p>)}
                   </div>
 
                   <ul className="space-y-2 mb-6">
                     {pkg.expect.map(item => (
-                      <li key={item} className="flex gap-2 font-['Open_Sans'] text-[13px] text-[#4A4F4D]">
+                      <li key={item} className="flex gap-2 font-['Open_Sans'] text-[13px] text-slate">
                         <Check size={16} className="shrink-0" style={{ color: pkg.accent }} />{item}
                       </li>
                     ))}
@@ -366,11 +366,11 @@ export default function Coaching() {
                     {pkg.cta}
                   </a>
                   {pkg.etLink ? (
-                    <Link href={pkg.etLink} className="text-center font-['Open_Sans'] text-[12px] mt-3 hover:underline" style={{ color: "#2F6B3F" }}>
+                    <Link href={pkg.etLink} className="text-center font-['Open_Sans'] text-[12px] mt-3 hover:underline" style={{ color: "var(--tt-trail-green)" }}>
                       {pkg.etNote}
                     </Link>
                   ) : (
-                    <p className="text-center font-['Open_Sans'] italic text-[12px] mt-3 text-[#8C8882]">{pkg.etNote}</p>
+                    <p className="text-center font-['Open_Sans'] italic text-[12px] mt-3 text-muted-text">{pkg.etNote}</p>
                   )}
                 </div>
               </div>
@@ -383,9 +383,9 @@ export default function Coaching() {
       <section className="bg-white py-20 px-5 md:px-10">
         <div className="max-w-7xl mx-auto">
           <div className="mb-4">
-            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">YOUR COACHES</div>
-            <h2 className="font-['Poppins'] font-bold text-[34px] text-[#2A2E2C] mb-4">Three coaches. Real experience. Different specializations.</h2>
-            <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] max-w-[760px] leading-[1.65] mb-12">
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-trail-green mb-4">YOUR COACHES</div>
+            <h2 className="font-['Poppins'] font-bold text-[34px] text-charcoal mb-4">Three coaches. Real experience. Different specializations.</h2>
+            <p className="font-['Open_Sans'] text-[16px] text-slate max-w-[760px] leading-[1.65] mb-12">
               Every TT coach has real Salesforce implementation experience and real client delivery experience. Choose the coach whose expertise matches what you need most — or let us recommend the right fit on your discovery call.
             </p>
           </div>
@@ -395,7 +395,7 @@ export default function Coaching() {
               <div
                 key={coach.key}
                 className="bg-white rounded-2xl overflow-hidden flex flex-col"
-                style={{ border: "1.5px solid #E2E4E1" }}
+                style={{ border: "1.5px solid var(--tt-warm-gray)" }}
               >
                 <div className="h-1.5 w-full" style={{ background: coach.accent }} />
                 <div className="p-7 flex flex-col flex-1">
@@ -405,9 +405,9 @@ export default function Coaching() {
                   >
                     <span className="font-['Poppins'] font-bold text-white text-xl">{coach.initials}</span>
                   </div>
-                  <h3 className="font-['Poppins'] font-bold text-[20px] text-[#2A2E2C] mb-1">{coach.name}</h3>
+                  <h3 className="font-['Poppins'] font-bold text-[20px] text-charcoal mb-1">{coach.name}</h3>
                   <p className="font-['Open_Sans'] font-semibold text-[14px] mb-3" style={{ color: coach.accent }}>{coach.title}</p>
-                  <p className="font-['Open_Sans'] italic text-[13px] text-[#4A4F4D] leading-[1.6] mb-4">{coach.tagline}</p>
+                  <p className="font-['Open_Sans'] italic text-[13px] text-slate leading-[1.6] mb-4">{coach.tagline}</p>
 
                   <div className="flex flex-wrap gap-1.5 mb-5">
                     {coach.skills.map(skill => (
@@ -423,7 +423,7 @@ export default function Coaching() {
 
                   <div className="mb-6">
                     <p className="font-['Open_Sans'] font-bold text-[12px] mb-2" style={{ color: coach.accent, letterSpacing: "1px" }}>BEST FOR</p>
-                    <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">{coach.bestFor}</p>
+                    <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.65]">{coach.bestFor}</p>
                   </div>
 
                   <a
@@ -447,50 +447,50 @@ export default function Coaching() {
             ))}
           </div>
 
-          <p className="text-center font-['Open_Sans'] italic text-[13px] text-[#4A4F4D]">
+          <p className="text-center font-['Open_Sans'] italic text-[13px] text-slate">
             Not sure which coach is the right fit? Book a discovery call and we will help you find the best match for your goals.
           </p>
         </div>
       </section>
 
       {/* SECTION 6: Group Workshops */}
-      <section className="bg-[#FAFAF7] py-20 px-5 md:px-10">
+      <section className="bg-trail-light py-20 px-5 md:px-10">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12">
-            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">GROUP WORKSHOPS</div>
-            <h2 className="font-['Poppins'] font-bold text-[34px] text-[#2A2E2C] mb-4">Learn alongside others who are on the same path.</h2>
-            <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] max-w-[760px] leading-[1.65]">
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-trail-green mb-4">GROUP WORKSHOPS</div>
+            <h2 className="font-['Poppins'] font-bold text-[34px] text-charcoal mb-4">Learn alongside others who are on the same path.</h2>
+            <p className="font-['Open_Sans'] text-[16px] text-slate max-w-[760px] leading-[1.65]">
               TT group workshops are live, interactive sessions on specific Salesforce topics, career skills, and professional development. Explorer's Trail members attend free or at reduced rates — workshops are a core part of the community experience.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-white rounded-xl p-8" style={{ borderLeft: "4px solid #2F6B3F" }}>
-              <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2F6B3F] mb-5">Workshop topics include:</h3>
+            <div className="bg-white rounded-xl p-8" style={{ borderLeft: "4px solid var(--tt-trail-green)" }}>
+              <h3 className="font-['Poppins'] font-semibold text-[16px] text-trail-green mb-5">Workshop topics include:</h3>
               <ul className="space-y-3">
                 {WORKSHOP_TOPICS.map(item => (
-                  <li key={item} className="flex gap-2 font-['Open_Sans'] text-[13px] text-[#4A4F4D]">
-                    <Check size={16} color="#2F6B3F" className="shrink-0" />{item}
+                  <li key={item} className="flex gap-2 font-['Open_Sans'] text-[13px] text-slate">
+                    <Check size={16} color="var(--tt-trail-green)" className="shrink-0" />{item}
                   </li>
                 ))}
               </ul>
             </div>
 
             <div>
-              <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-5">Workshop access</h3>
+              <h3 className="font-['Poppins'] font-semibold text-[16px] text-charcoal mb-5">Workshop access</h3>
               <div className="space-y-5">
                 <div>
-                  <p className="font-['Open_Sans'] font-semibold text-[14px] text-[#2F6B3F] mb-1">Explorer's Trail members</p>
-                  <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.6]">Free or significantly reduced — workshops are part of your membership. Check the community calendar for upcoming sessions.</p>
+                  <p className="font-['Open_Sans'] font-semibold text-[14px] text-trail-green mb-1">Explorer's Trail members</p>
+                  <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.6]">Free or significantly reduced — workshops are part of your membership. Check the community calendar for upcoming sessions.</p>
                 </div>
                 <div>
-                  <p className="font-['Open_Sans'] font-semibold text-[14px] text-[#2A2E2C] mb-1">Non-members</p>
-                  <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.6]">$75 per workshop session</p>
+                  <p className="font-['Open_Sans'] font-semibold text-[14px] text-charcoal mb-1">Non-members</p>
+                  <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.6]">$75 per workshop session</p>
                 </div>
                 <div>
-                  <p className="font-['Open_Sans'] font-semibold text-[14px] text-[#2F6F7E] mb-1">Organizations</p>
-                  <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.6] mb-1">Private workshop for your team — contact us for pricing.</p>
-                  <a href="mailto:hello@transitiontrails.org?subject=Private%20Workshop%20Inquiry" className="font-['Open_Sans'] font-semibold text-[13px] text-[#2F6F7E] hover:underline">→ hello@transitiontrails.org</a>
+                  <p className="font-['Open_Sans'] font-semibold text-[14px] text-deep-teal mb-1">Organizations</p>
+                  <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.6] mb-1">Private workshop for your team — contact us for pricing.</p>
+                  <a href="mailto:hello@transitiontrails.org?subject=Private%20Workshop%20Inquiry" className="font-['Open_Sans'] font-semibold text-[13px] text-deep-teal hover:underline">→ hello@transitiontrails.org</a>
                 </div>
               </div>
             </div>
@@ -499,19 +499,19 @@ export default function Coaching() {
           <div className="text-center">
             <Link
               href="/programs/explorers-trail"
-              className="inline-flex items-center justify-center h-[52px] px-7 rounded-[8px] border-[1.5px] border-[#2F6B3F] text-[#2F6B3F] font-['Poppins'] font-semibold text-[15px] hover:bg-[#2F6B3F]/5 transition-colors mb-3"
+              className="inline-flex items-center justify-center h-[52px] px-7 rounded-[8px] border-[1.5px] border-trail-green text-trail-green font-['Poppins'] font-semibold text-[15px] hover:bg-trail-green/5 transition-colors mb-3"
             >
               Join Explorer's Trail to get workshop access →
             </Link>
-            <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D]">
-              Or <a href="mailto:hello@transitiontrails.org?subject=Workshop%20Interest" className="text-[#2F6B3F] font-semibold hover:underline">contact us about the next public workshop →</a>
+            <p className="font-['Open_Sans'] text-[13px] text-slate">
+              Or <a href="mailto:hello@transitiontrails.org?subject=Workshop%20Interest" className="text-trail-green font-semibold hover:underline">contact us about the next public workshop →</a>
             </p>
           </div>
         </div>
       </section>
 
       {/* SECTION 7: Discovery Call */}
-      <section id="discovery" className="bg-[#2A2E2C] py-20 px-5 md:px-10">
+      <section id="discovery" className="bg-charcoal py-20 px-5 md:px-10">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase mb-4" style={{ color: "rgba(255,255,255,0.45)" }}>START HERE</div>
@@ -525,20 +525,20 @@ export default function Coaching() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
             {[
               {
-                icon: <Calendar size={24} color="#2F6B3F" />,
+                icon: <Calendar size={24} color="var(--tt-trail-green)" />,
                 title: "Book with Angela",
                 body: "Career strategy, leadership development, big-picture roadmapping, and career progression.",
                 cta: "Schedule →",
                 href: LINKS.angelaCalendar,
-                bg: "#2F6B3F",
+                bg: "var(--tt-trail-green)",
               },
               {
-                icon: <Mail size={24} color="#2F6F7E" />,
+                icon: <Mail size={24} color="var(--tt-deep-teal)" />,
                 title: "Book with Kim or Hugh",
                 body: "Technical coaching, solution design, career pivot support, resume and interview prep, nonprofit Salesforce.",
                 cta: "Contact Us →",
                 href: "mailto:hello@transitiontrails.org?subject=Coaching%20Discovery%20Call%20Request",
-                bg: "#2F6F7E",
+                bg: "var(--tt-deep-teal)",
               },
               {
                 icon: <Users size={24} color="rgba(255,255,255,0.70)" />,
@@ -579,18 +579,18 @@ export default function Coaching() {
       </section>
 
       {/* SECTION 8: Explorer's Trail Coaching Benefit */}
-      <section className="py-16 px-5 md:px-10" style={{ background: "#E6F3EA" }}>
+      <section className="py-16 px-5 md:px-10" style={{ background: "var(--tt-green-100)" }}>
         <div className="max-w-7xl mx-auto">
           <div className="mb-10">
-            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#1E4A2A] mb-3">EXPLORER'S TRAIL MEMBERS</div>
-            <h2 className="font-['Poppins'] font-bold text-[28px] text-[#1E4A2A]">Members save on every coaching package.</h2>
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-green-700 mb-3">EXPLORER'S TRAIL MEMBERS</div>
+            <h2 className="font-['Poppins'] font-bold text-[28px] text-green-700">Members save on every coaching package.</h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-            <div className="rounded-xl overflow-hidden border border-[#2F6B3F]/20">
+            <div className="rounded-xl overflow-hidden border border-trail-green/20">
               <table className="w-full font-['Open_Sans'] text-[13px]">
                 <thead>
-                  <tr style={{ background: "#2F6B3F" }}>
+                  <tr style={{ background: "var(--tt-trail-green)" }}>
                     <th className="text-left py-3 px-4 text-white font-semibold">Package</th>
                     <th className="text-left py-3 px-4 text-white font-semibold">Standard</th>
                     <th className="text-left py-3 px-4 text-white font-semibold">ET Member</th>
@@ -598,10 +598,10 @@ export default function Coaching() {
                 </thead>
                 <tbody>
                   {PRICING_ROWS.map((row, i) => (
-                    <tr key={row.label} style={{ background: i % 2 === 0 ? "white" : "#E6F3EA" }}>
-                      <td className="py-3 px-4 text-[#2A2E2C] font-semibold">{row.label}</td>
-                      <td className="py-3 px-4 text-[#4A4F4D]">{row.standard}</td>
-                      <td className="py-3 px-4 text-[#2F6B3F] font-semibold">{row.member}</td>
+                    <tr key={row.label} style={{ background: i % 2 === 0 ? "white" : "var(--tt-green-100)" }}>
+                      <td className="py-3 px-4 text-charcoal font-semibold">{row.label}</td>
+                      <td className="py-3 px-4 text-slate">{row.standard}</td>
+                      <td className="py-3 px-4 text-trail-green font-semibold">{row.member}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -609,12 +609,12 @@ export default function Coaching() {
             </div>
 
             <div>
-              <h3 className="font-['Poppins'] font-semibold text-[18px] text-[#1E4A2A] mb-3">Annual + Coaching members get even more.</h3>
-              <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.6] mb-5">
+              <h3 className="font-['Poppins'] font-semibold text-[18px] text-green-700 mb-3">Annual + Coaching members get even more.</h3>
+              <p className="font-['Open_Sans'] text-[14px] text-slate leading-[1.6] mb-5">
                 Explorer's Trail Annual + Coaching members ($597/yr) receive one quarterly coaching session included with their membership — at no additional cost. That is up to $600 in coaching value included in your annual membership.
               </p>
-              <div className="bg-white rounded-lg p-4 mb-6" style={{ borderLeft: "4px solid #2F6B3F" }}>
-                <p className="font-['Open_Sans'] text-[13px] text-[#2A2E2C] leading-[1.7]">
+              <div className="bg-white rounded-lg p-4 mb-6" style={{ borderLeft: "4px solid var(--tt-trail-green)" }}>
+                <p className="font-['Open_Sans'] text-[13px] text-charcoal leading-[1.7]">
                   4 quarterly sessions × $150/hr = $600 coaching value<br />
                   Annual + Coaching membership = $597/yr<br />
                   <span className="font-semibold">You come out ahead before your first renewal.</span>
@@ -622,7 +622,7 @@ export default function Coaching() {
               </div>
               <Link
                 href="/programs/explorers-trail"
-                className="inline-flex items-center justify-center h-[48px] px-7 rounded-[8px] bg-[#2F6B3F] text-white font-['Poppins'] font-semibold text-[14px] hover:bg-[#245530] transition-colors"
+                className="inline-flex items-center justify-center h-[48px] px-7 rounded-[8px] bg-trail-green text-white font-['Poppins'] font-semibold text-[14px] hover:bg-green-700 transition-colors"
               >
                 Join Explorer's Trail →
               </Link>

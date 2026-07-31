@@ -4,9 +4,9 @@ import { Target, Users, BarChart2, Award, Leaf } from "lucide-react";
 
 const POSITIONS = [
   {
-    accent: "#2F6B3F",
-    badgeColor: "#2F6B3F",
-    icon: <Target size={24} color="#2F6B3F" />,
+    accent: "var(--tt-trail-green)",
+    badgeColor: "var(--tt-trail-green)",
+    icon: <Target size={24} color="var(--tt-trail-green)" />,
     title: "Associate Coach",
     badge: "COACHING · VOLUNTEER",
     commitment: "⏱ 4–6 hrs/week · 12-week cohort commitment",
@@ -20,14 +20,14 @@ const POSITIONS = [
       {
         label: "Apply Now →",
         href: "https://form.jotform.com/261876005299062?role=Associate%20Coach",
-        style: { background: "#2F6B3F", color: "#FFFFFF" },
+        style: { background: "var(--tt-trail-green)", color: "var(--tt-white)" },
       },
     ],
   },
   {
-    accent: "#7FAFC6",
-    badgeColor: "#7FAFC6",
-    icon: <Users size={24} color="#7FAFC6" />,
+    accent: "var(--tt-teal-300)",
+    badgeColor: "var(--tt-teal-300)",
+    icon: <Users size={24} color="var(--tt-teal-300)" />,
     title: "Coach's Assistant",
     badge: "COACHING · ENTRY LEVEL",
     commitment: "⏱ 2–4 hrs/week · 12-week cohort commitment",
@@ -41,14 +41,14 @@ const POSITIONS = [
       {
         label: "Apply Now →",
         href: "https://form.jotform.com/261876005299062?role=Coach%27s%20Assistant",
-        style: { background: "#E0F0F7", color: "#7FAFC6", border: "1.5px solid #7FAFC6" },
+        style: { background: "var(--tt-teal-100)", color: "var(--tt-teal-300)", border: "1.5px solid var(--tt-teal-300)" },
       },
     ],
   },
   {
-    accent: "#2F6F7E",
-    badgeColor: "#2F6F7E",
-    icon: <BarChart2 size={24} color="#2F6F7E" />,
+    accent: "var(--tt-deep-teal)",
+    badgeColor: "var(--tt-deep-teal)",
+    icon: <BarChart2 size={24} color="var(--tt-deep-teal)" />,
     title: "Volunteer CPA",
     badge: "FINANCE · NONPROFIT GOVERNANCE",
     commitment: "⏱ Flexible · Project-based · Remote",
@@ -62,12 +62,12 @@ const POSITIONS = [
       {
         label: "Apply Now →",
         href: "https://form.jotform.com/261885593929074?position=Volunteer%20CPA",
-        style: { background: "#2F6F7E", color: "#FFFFFF" },
+        style: { background: "var(--tt-deep-teal)", color: "var(--tt-white)" },
       },
       {
         label: "View on Idealist →",
         href: "https://www.idealist.org/admin/8b10ce8870b246f8a0d65687d51a9e79/volops/a5df3df502b34d9e8b71b8a8e2ee6c6e",
-        style: { background: "#FFFFFF", color: "#2F6F7E", border: "1.5px solid #2F6F7E" },
+        style: { background: "var(--tt-white)", color: "var(--tt-deep-teal)", border: "1.5px solid var(--tt-deep-teal)" },
         external: true,
       },
     ],
@@ -76,17 +76,17 @@ const POSITIONS = [
 
 const WHY_CARDS = [
   {
-    icon: <Award size={24} color="#2F6B3F" />,
+    icon: <Award size={24} color="var(--tt-trail-green)" />,
     title: "Real credentials",
     body: "TT volunteer roles are structured, specific, and verifiable. Add them to your LinkedIn as a coaching, mentorship, or advisory role with a real organization doing real work.",
   },
   {
-    icon: <Leaf size={24} color="#2F6B3F" />,
+    icon: <Leaf size={24} color="var(--tt-trail-green)" />,
     title: "Community connection",
     body: "Volunteers become part of the TT ecosystem — connected to founders, coaches, program learners, and the broader Salesforce community. The relationships built here are the ones that matter in a Salesforce career.",
   },
   {
-    icon: <Target size={24} color="#2F6B3F" />,
+    icon: <Target size={24} color="var(--tt-trail-green)" />,
     title: "Direct mission impact",
     body: "Every coaching cohort you support puts someone closer to a career they could not access before. Every hour you contribute is a direct investment in economic mobility for Career Starters, Career Builders, and Career Pivoters.",
   },
@@ -104,12 +104,12 @@ export default function Volunteer() {
       {/* Hero */}
       <section
         className="pt-24 pb-20 px-5 md:px-10"
-        style={{ background: "linear-gradient(135deg, #1E4A2A 0%, #2F6B3F 55%, #2F6F7E 100%)" }}
+        style={{ background: "linear-gradient(135deg, var(--tt-green-700) 0%, var(--tt-trail-green) 55%, var(--tt-deep-teal) 100%)" }}
       >
         <div className="max-w-[800px] mx-auto text-center flex flex-col items-center">
           <div
             className="inline-block font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-7"
-            style={{ color: "#F5A623", background: "rgba(245,166,35,0.15)", border: "1px solid rgba(245,166,35,0.4)" }}
+            style={{ color: "var(--tt-sun-amber)", background: "rgba(245,166,35,0.15)", border: "1px solid rgba(245,166,35,0.4)" }}
           >
             VOLUNTEER WITH TRANSITION TRAILS  ·  MAKE A DIRECT IMPACT
           </div>
@@ -134,14 +134,14 @@ export default function Volunteer() {
       </section>
 
       {/* Positions */}
-      <section id="positions" className="bg-[#FAFAF7] py-20 px-5 md:px-10">
+      <section id="positions" className="bg-trail-light py-20 px-5 md:px-10">
         <div className="max-w-[1280px] mx-auto">
           <div className="mb-12">
-            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-trail-green mb-4">
               OPEN VOLUNTEER POSITIONS
             </div>
-            <h2 className="font-['Poppins'] font-bold text-[34px] text-[#2A2E2C] mb-4">Current openings.</h2>
-            <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] max-w-[760px]">
+            <h2 className="font-['Poppins'] font-bold text-[34px] text-charcoal mb-4">Current openings.</h2>
+            <p className="font-['Open_Sans'] text-[16px] text-slate max-w-[760px]">
               All positions are remote-friendly. Applications reviewed within 5 business days.
             </p>
           </div>
@@ -150,7 +150,7 @@ export default function Volunteer() {
             {POSITIONS.map((pos) => (
               <div
                 key={pos.title}
-                className="bg-white border-[1.5px] border-[#E2E4E1] rounded-2xl flex flex-col overflow-hidden"
+                className="bg-white border-[1.5px] border-warm-gray rounded-2xl flex flex-col overflow-hidden"
               >
                 <div className="h-[6px] w-full" style={{ backgroundColor: pos.accent }} />
                 <div className="p-7 flex flex-col flex-1">
@@ -160,23 +160,23 @@ export default function Volunteer() {
                   >
                     {pos.badge}
                   </div>
-                  <div className="w-10 h-10 rounded-lg bg-[#EBF3EE] flex items-center justify-center mb-3">{pos.icon}</div>
-                  <h3 className="font-['Poppins'] font-bold text-[22px] text-[#2A2E2C] mb-2">{pos.title}</h3>
-                  <p className="font-['Open_Sans'] font-semibold text-[13px] text-[#4A4F4D] mb-5">{pos.commitment}</p>
+                  <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mb-3">{pos.icon}</div>
+                  <h3 className="font-['Poppins'] font-bold text-[22px] text-charcoal mb-2">{pos.title}</h3>
+                  <p className="font-['Open_Sans'] font-semibold text-[13px] text-slate mb-5">{pos.commitment}</p>
 
-                  <div className="h-px bg-[#E2E4E1] mb-5" />
+                  <div className="h-px bg-warm-gray mb-5" />
 
                   <div className="space-y-3 mb-5">
                     {pos.body.map((p, i) => (
-                      <p key={i} className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">{p}</p>
+                      <p key={i} className="font-['Open_Sans'] text-[13px] text-slate leading-[1.65]">{p}</p>
                     ))}
                   </div>
 
-                  <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.6] mb-4">
-                    <span className="font-bold text-[#2A2E2C]">What you need: </span>{pos.need}
+                  <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.6] mb-4">
+                    <span className="font-bold text-charcoal">What you need: </span>{pos.need}
                   </p>
-                  <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.6] mb-8">
-                    <span className="font-bold text-[#2A2E2C]">What you get: </span>{pos.get}
+                  <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.6] mb-8">
+                    <span className="font-bold text-charcoal">What you get: </span>{pos.get}
                   </p>
 
                   <div className="mt-auto flex gap-3">
@@ -204,22 +204,22 @@ export default function Volunteer() {
       <section className="bg-white py-20 px-5 md:px-10">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12">
-            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">
+            <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-trail-green mb-4">
               WHY VOLUNTEER WITH TT
             </div>
-            <h2 className="font-['Poppins'] font-bold text-[34px] text-[#2A2E2C]">Your time builds something that lasts.</h2>
+            <h2 className="font-['Poppins'] font-bold text-[34px] text-charcoal">Your time builds something that lasts.</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {WHY_CARDS.map((card) => (
               <div
                 key={card.title}
-                className="bg-white border border-[#E2E4E1] rounded-xl p-7"
-                style={{ borderLeft: "4px solid #2F6B3F" }}
+                className="bg-white border border-warm-gray rounded-xl p-7"
+                style={{ borderLeft: "4px solid var(--tt-trail-green)" }}
               >
-                <div className="w-10 h-10 rounded-lg bg-[#EBF3EE] flex items-center justify-center mb-3">{card.icon}</div>
-                <h3 className="font-['Open_Sans'] font-bold text-[15px] text-[#2F6B3F] mb-3">{card.title}</h3>
-                <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.65]">{card.body}</p>
+                <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mb-3">{card.icon}</div>
+                <h3 className="font-['Open_Sans'] font-bold text-[15px] text-trail-green mb-3">{card.title}</h3>
+                <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.65]">{card.body}</p>
               </div>
             ))}
           </div>

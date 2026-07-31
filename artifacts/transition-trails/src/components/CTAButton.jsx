@@ -18,9 +18,9 @@ export function CTAButton({
   };
 
   const variantClasses = {
-    amber: "bg-[#F5A623] text-[#2A2E2C] hover:bg-[#D4890A]",
-    green: "bg-[#2F6B3F] text-white hover:bg-[#1E4A2A]",
-    dark: "bg-[#2A2E2C] text-white hover:bg-[#1a1e1c]",
+    amber: "bg-sun-amber text-charcoal hover:bg-amber-700",
+    green: "bg-trail-green text-white hover:bg-green-700",
+    dark: "bg-charcoal text-white hover:bg-charcoal",
     outline: "bg-transparent border-[1.5px] border-current hover:bg-white/10",
     ghost: "bg-transparent text-current hover:bg-black/5"
   };

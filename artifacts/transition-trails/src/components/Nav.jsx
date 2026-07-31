@@ -6,22 +6,22 @@ import ttLogoWhite from "../assets/TT_Horizontal_White_600px.png";
 function DropItem({ href, label, desc, variant = "default", onClick }) {
   return (
     <Link href={href} role="menuitem" onClick={onClick}
-      className="group block px-5 py-3.5 hover:bg-[#FAFAF7] focus:outline-none focus:bg-[#FAFAF7] transition-colors">
+      className="group block px-5 py-3.5 hover:bg-trail-light focus:outline-none focus:bg-trail-light transition-colors">
       <div className={`font-['Open_Sans'] font-semibold text-[14px] mb-0.5 transition-colors ${
-        variant === "accent" ? "text-[#D4890A]" : "text-[#2A2E2C] group-hover:text-[#2F6B3F]"
+        variant === "accent" ? "text-amber-700" : "text-charcoal group-hover:text-trail-green"
       }`}>{label}</div>
-      {desc && <div className="font-['Open_Sans'] text-[12px] text-[#8C8882] leading-[1.4]">{desc}</div>}
+      {desc && <div className="font-['Open_Sans'] text-[12px] text-muted-text leading-[1.4]">{desc}</div>}
     </Link>
   );
 }
 
 function Divider() {
-  return <div className="h-px bg-[#E2E4E1] my-1" role="separator" />;
+  return <div className="h-px bg-warm-gray my-1" role="separator" />;
 }
 
 function GroupLabel({ children }) {
   return (
-    <div className="font-['Open_Sans'] font-semibold text-[10px] tracking-[1.5px] uppercase text-[#A8A39D] px-5 pt-3 pb-1">
+    <div className="font-['Open_Sans'] font-semibold text-[10px] tracking-[1.5px] uppercase text-muted-text px-5 pt-3 pb-1">
       {children}
     </div>
   );
@@ -64,10 +64,10 @@ export function Nav() {
   const isInvolved = location === "/waitlist" || location === "/volunteer" || location.startsWith("/partners") || location === "/board" || location === "/board-application" || location === "/donate";
   const isAbout = location === "/about" || location === "/about/team" || location === "/impact";
 
-  const dropdownBase = "absolute top-[80px] bg-white rounded-xl shadow-xl border border-[#E2E4E1] py-2 z-50 min-w-[280px]";
+  const dropdownBase = "absolute top-[80px] bg-white rounded-xl shadow-xl border border-warm-gray py-2 z-50 min-w-[280px]";
 
   return (
-    <nav className="bg-[#2F6F7E] h-[80px] sticky top-0 z-[200] w-full border-b border-white/10" aria-label="Main navigation">
+    <nav className="bg-deep-teal h-[80px] sticky top-0 z-[200] w-full border-b border-white/10" aria-label="Main navigation">
       <div className="max-w-[1440px] h-full mx-auto px-5 md:px-8 flex items-center justify-between gap-4">
 
         {/* Logo */}
@@ -96,7 +96,7 @@ export function Nav() {
             {programsOpen && (
               <div id="programs-menu" role="menu" aria-label="Programs" className={`${dropdownBase} left-0 w-[320px]`}>
                 <GroupLabel>Featured</GroupLabel>
-                <DropItem href="/programs/guided-trail" label={<span className="flex items-center gap-2">Guided Trail <span className="inline-block bg-[#FEF3DC] text-[#D4890A] font-['Open_Sans'] font-bold text-[10px] tracking-[0.5px] uppercase px-1.5 py-0.5 rounded">Flagship</span></span>} desc="Our flagship program — supervised nonprofit work" onClick={() => setProgramsOpen(false)} />
+                <DropItem href="/programs/guided-trail" label={<span className="flex items-center gap-2">Guided Trail <span className="inline-block bg-amber-100 text-amber-700 font-['Open_Sans'] font-bold text-[10px] tracking-[0.5px] uppercase px-1.5 py-0.5 rounded">Flagship</span></span>} desc="Our flagship program — supervised nonprofit work" onClick={() => setProgramsOpen(false)} />
                 <DropItem href="/scholarship-application" label="Trail Forward Scholarship" desc="Need-based funding for Guided Trail" onClick={() => setProgramsOpen(false)} />
                 <Divider />
                 <GroupLabel>All Programs</GroupLabel>
@@ -179,7 +179,7 @@ export function Nav() {
             Donate
           </Link>
           <Link href="/waitlist"
-            className="bg-white hover:bg-[#E8F3F6] text-[#2F6F7E] font-['Open_Sans'] font-bold text-[14px] h-[42px] px-5 rounded-lg flex items-center justify-center transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 whitespace-nowrap">
+            className="bg-white hover:bg-teal-100 text-deep-teal font-['Open_Sans'] font-bold text-[14px] h-[42px] px-5 rounded-lg flex items-center justify-center transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 whitespace-nowrap">
             Join the Waitlist
           </Link>
         </div>
@@ -197,7 +197,7 @@ export function Nav() {
 
       {/* ── Mobile Menu ── */}
       <div id="mobile-menu"
-        className={`fixed inset-0 bg-[#2F6F7E] pt-[80px] px-5 flex flex-col lg:hidden transition-transform duration-300 ease-in-out z-40 ${mobile ? "translate-y-0" : "-translate-y-full"}`}
+        className={`fixed inset-0 bg-deep-teal pt-[80px] px-5 flex flex-col lg:hidden transition-transform duration-300 ease-in-out z-40 ${mobile ? "translate-y-0" : "-translate-y-full"}`}
         aria-hidden={!mobile}>
         <div className="flex flex-col gap-5 pt-6 overflow-y-auto pb-20">
 
@@ -216,9 +216,9 @@ export function Nav() {
             <div className={`flex flex-col pl-4 overflow-hidden transition-all duration-300 ${openDropdown === "programs" ? "mt-4 max-h-[400px]" : "max-h-0"}`}>
               <div className="font-['Open_Sans'] font-semibold text-[10px] tracking-[1.5px] uppercase text-white/40 pb-1">Featured</div>
               <Link href="/programs/guided-trail" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2 flex items-center gap-2">
-                Guided Trail <span className="bg-[#FEF3DC] text-[#D4890A] font-bold text-[10px] uppercase px-1.5 py-0.5 rounded">Flagship</span>
+                Guided Trail <span className="bg-amber-100 text-amber-700 font-bold text-[10px] uppercase px-1.5 py-0.5 rounded">Flagship</span>
               </Link>
-              <Link href="/scholarship-application" onClick={closeMenu} className="text-[#6BBF85] font-['Open_Sans'] font-semibold text-[16px] py-2">Trail Forward Scholarship</Link>
+              <Link href="/scholarship-application" onClick={closeMenu} className="text-dark-accent-green font-['Open_Sans'] font-semibold text-[16px] py-2">Trail Forward Scholarship</Link>
               <div className="h-px bg-white/10 my-2" />
               <div className="font-['Open_Sans'] font-semibold text-[10px] tracking-[1.5px] uppercase text-white/40 pb-1">All Programs</div>
               <Link href="/programs" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">All Programs</Link>
@@ -238,7 +238,7 @@ export function Nav() {
             <div className={`flex flex-col pl-4 overflow-hidden transition-all duration-300 ${openDropdown === "nonprofit" ? "mt-4 max-h-[300px]" : "max-h-0"}`}>
               <Link href="/programs/digital-compass" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">Digital Compass</Link>
               <Link href="/nonprofit-assessment" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">How Partnerships Work</Link>
-              <Link href="/nonprofit-assessment" onClick={closeMenu} className="text-[#F5A623] font-['Open_Sans'] font-semibold text-[16px] py-2">Start Free Assessment →</Link>
+              <Link href="/nonprofit-assessment" onClick={closeMenu} className="text-sun-amber font-['Open_Sans'] font-semibold text-[16px] py-2">Start Free Assessment →</Link>
             </div>
           </div>
 
@@ -254,7 +254,7 @@ export function Nav() {
               <Link href="/partners/recruiters" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">Recruiters</Link>
               <Link href="/partners/employers" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">Employers</Link>
               <Link href="/board" onClick={closeMenu} className="text-white/70 font-['Open_Sans'] text-[16px] py-2">Board Membership</Link>
-              <Link href="/donate" onClick={closeMenu} className="text-[#F5A623] font-['Open_Sans'] font-semibold text-[16px] py-2">Donate / Fund a Scholarship →</Link>
+              <Link href="/donate" onClick={closeMenu} className="text-sun-amber font-['Open_Sans'] font-semibold text-[16px] py-2">Donate / Fund a Scholarship →</Link>
             </div>
           </div>
 
@@ -284,7 +284,7 @@ export function Nav() {
               Donate
             </Link>
             <Link href="/waitlist" onClick={closeMenu}
-              className="bg-white hover:bg-[#E8F3F6] text-[#2F6F7E] font-['Open_Sans'] font-bold text-[16px] h-[54px] rounded-lg flex items-center justify-center w-full transition-colors">
+              className="bg-white hover:bg-teal-100 text-deep-teal font-['Open_Sans'] font-bold text-[16px] h-[54px] rounded-lg flex items-center justify-center w-full transition-colors">
               Join the Waitlist
             </Link>
           </div>

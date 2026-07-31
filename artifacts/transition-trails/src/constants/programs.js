@@ -21,11 +21,11 @@ import programContent from "../content/programs.json";
 // Per-program accent colors — maintained here because they are a visual/brand
 // decision that belongs in code, not in the content JSON.
 const ACCENT_COLORS = {
-  explorersTrail: "#7FAFC6",
-  foundationsTrail: "#2F6B3F",
-  guidedTrail: "#1E4A2A",
-  trailOfMastery: "#2F6F7E",
-  digitalCompass: "#2F6F7E",
+  explorersTrail: "var(--tt-teal-300)",
+  foundationsTrail: "var(--tt-trail-green)",
+  guidedTrail: "var(--tt-green-700)",
+  trailOfMastery: "var(--tt-deep-teal)",
+  digitalCompass: "var(--tt-deep-teal)",
 };
 
 // Map JSON content fields → shape that ProgramCard and other components expect.
@@ -35,7 +35,7 @@ export const PROGRAMS = Object.entries(programContent).map(([key, program]) => (
   // Derive slug from path so URL routing stays consistent
   slug: program.path.replace("/programs/", ""),
   // Visual / brand fields kept in code
-  accent: ACCENT_COLORS[key] ?? "#2F6B3F",
+  accent: ACCENT_COLORS[key] ?? "var(--tt-trail-green)",
   // CTA label is always "Learn More" across program cards
   cta: "Learn More",
   ctaHref: program.path,

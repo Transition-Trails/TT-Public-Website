@@ -40,7 +40,7 @@ function FounderSection({ founder, index }) {
 
   const content = (
     <div className="flex-1 min-w-0">
-      <motion.h2 variants={fadeUp} className="font-['Fraunces'] font-bold text-[34px] md:text-[40px] text-[#2A2E2C] leading-tight mb-1">
+      <motion.h2 variants={fadeUp} className="font-['Fraunces'] font-bold text-[34px] md:text-[40px] text-charcoal leading-tight mb-1">
         {founder.name}
       </motion.h2>
       <motion.p variants={fadeUp} className="font-['Open_Sans'] font-semibold text-[16px] mb-4" style={{ color: founder.color }}>
@@ -56,14 +56,14 @@ function FounderSection({ founder, index }) {
 
       <motion.div variants={stagger} className="space-y-5 mb-8">
         {founder.bio.map((para, i) => (
-          <motion.p key={i} variants={fadeUp} className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] leading-[1.75]">
+          <motion.p key={i} variants={fadeUp} className="font-['Open_Sans'] text-[16px] text-slate leading-[1.75]">
             {para}
           </motion.p>
         ))}
       </motion.div>
 
       <motion.div variants={fadeUp} className="mb-7">
-        <div className="font-['Open_Sans'] font-semibold text-[11px] tracking-[2px] uppercase text-[#8C8882] mb-3">
+        <div className="font-['Open_Sans'] font-semibold text-[11px] tracking-[2px] uppercase text-muted-text mb-3">
           Areas of Focus
         </div>
         <div className="flex flex-wrap gap-2">
@@ -142,10 +142,10 @@ export default function AboutTeam() {
       />
 
       {/* Hero */}
-      <section className="bg-[#1E4A2A] py-20 px-5 md:px-10">
+      <section className="bg-green-700 py-20 px-5 md:px-10">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div initial="hidden" animate="show" variants={stagger}>
-            <motion.div variants={fadeUp} className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#F5A623] mb-4">
+            <motion.div variants={fadeUp} className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-sun-amber mb-4">
               THE FOUNDING TEAM
             </motion.div>
             <motion.h1 variants={fadeUp} className="font-['Fraunces'] font-bold text-[40px] md:text-[48px] text-white leading-tight mb-5">
@@ -164,7 +164,7 @@ export default function AboutTeam() {
           {index > 0 && (
             <div className="bg-white">
               <div className="max-w-7xl mx-auto px-5 md:px-10">
-                <div className="border-t border-[#E2E4E1]" />
+                <div className="border-t border-warm-gray" />
               </div>
             </div>
           )}
@@ -173,7 +173,7 @@ export default function AboutTeam() {
       ))}
 
       {/* Footer CTA */}
-      <section className="bg-[#2F6B3F] py-20 px-5 text-center">
+      <section className="bg-trail-green py-20 px-5 text-center">
         <div className="max-w-7xl mx-auto">
           <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={stagger}>
             <motion.h2 variants={fadeUp} className="font-['Fraunces'] font-bold text-[36px] text-white mb-4">
@@ -185,7 +185,7 @@ export default function AboutTeam() {
             <motion.div variants={fadeUp}>
               <Link
                 href="/waitlist"
-                className="inline-flex items-center gap-2 bg-[#F5A623] text-[#2A2E2C] font-['Open_Sans'] font-bold text-[15px] px-8 py-4 rounded-lg hover:bg-[#D4890A] transition-colors duration-200"
+                className="inline-flex items-center gap-2 bg-sun-amber text-charcoal font-['Open_Sans'] font-bold text-[15px] px-8 py-4 rounded-lg hover:bg-amber-700 transition-colors duration-200"
               >
                 Join the Waitlist →
               </Link>

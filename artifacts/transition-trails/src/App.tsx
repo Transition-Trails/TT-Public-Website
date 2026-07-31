@@ -48,10 +48,10 @@ const NotFound = lazy(() => import("./pages/not-found"));
 const queryClient = new QueryClient();
 
 const PageLoader = () => (
-  <div className="min-h-screen bg-[#FAFAF7] flex items-center justify-center">
+  <div className="min-h-screen bg-trail-light flex items-center justify-center">
     <div className="flex flex-col items-center gap-4">
-      <div className="w-8 h-8 border-2 border-[#2F6B3F] border-t-transparent rounded-full animate-spin" />
-      <p className="font-['Open_Sans'] text-[14px] text-[#6B7280]">Loading…</p>
+      <div className="w-8 h-8 border-2 border-trail-green border-t-transparent rounded-full animate-spin" />
+      <p className="font-['Open_Sans'] text-[14px] text-cool-gray">Loading…</p>
     </div>
   </div>
 );
@@ -128,7 +128,7 @@ function App() {
                 {/* Skip to main content — keyboard / screen reader accessibility */}
                 <a
                   href="#main-content"
-                  className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[9999] focus:bg-[#2F6B3F] focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:font-['Open_Sans'] focus:font-bold focus:text-[14px]"
+                  className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[9999] focus:bg-trail-green focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:font-['Open_Sans'] focus:font-bold focus:text-[14px]"
                 >
                   Skip to main content
                 </a>

@@ -9,22 +9,22 @@ const GOVERNANCE_CARDS = [
     title: "Why now",
     body: "We are entering our growth phase — launching Cohort 1, pursuing grants, and building the infrastructure that will scale our programs. This is the right moment to strengthen governance.",
     icon: Clock,
-    iconBg: "#EBF3EE",
-    iconColor: "#2F6B3F",
+    iconBg: "var(--tt-green-100)",
+    iconColor: "var(--tt-trail-green)",
   },
   {
     title: "What we are looking for",
     body: "Professionals with expertise in nonprofit governance, legal, finance, technology, fundraising, DEI, or workforce development who bring perspectives the founding team does not have.",
     icon: UserCheck,
-    iconBg: "#EBF3EE",
-    iconColor: "#2F6B3F",
+    iconBg: "var(--tt-green-100)",
+    iconColor: "var(--tt-trail-green)",
   },
   {
     title: "What this is not",
     body: "A rubber-stamp board. We are looking for people who will engage meaningfully — ask questions, contribute expertise, and take governance seriously.",
     icon: X,
-    iconBg: "#FEE2E2",
-    iconColor: "#DC2626",
+    iconBg: "var(--tt-error-tint)",
+    iconColor: "var(--tt-error)",
   },
 ];
 
@@ -90,7 +90,7 @@ export default function Board() {
       {/* HERO */}
       <section
         className="pt-24 pb-20 px-5 md:px-10"
-        style={{ background: "linear-gradient(135deg, #1E4A2A 0%, #2F6B3F 100%)" }}
+        style={{ background: "linear-gradient(135deg, var(--tt-green-700) 0%, var(--tt-trail-green) 100%)" }}
       >
         <div className="max-w-7xl mx-auto">
           <div className="font-['Open_Sans'] text-[12px] text-white/50 mb-8 flex items-center gap-2">
@@ -103,7 +103,7 @@ export default function Board() {
             <motion.div variants={fadeUp}>
               <div
                 className="inline-block font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-7"
-                style={{ color: "#F5A623", background: "rgba(245,166,35,0.15)", border: "1px solid rgba(245,166,35,0.4)" }}
+                style={{ color: "var(--tt-sun-amber)", background: "rgba(245,166,35,0.15)", border: "1px solid rgba(245,166,35,0.4)" }}
               >
                 BOARD RECRUITMENT  ·  NONPROFIT GOVERNANCE  ·  MISSION-DRIVEN LEADERSHIP
               </div>
@@ -122,7 +122,7 @@ export default function Board() {
             <motion.div variants={fadeUp}>
               <Link
                 href="/board-application"
-                className="inline-flex items-center gap-2 bg-[#F5A623] text-[#2A2E2C] font-['Open_Sans'] font-bold text-[15px] px-8 py-4 rounded-lg hover:bg-[#D4890A] transition-colors duration-200"
+                className="inline-flex items-center gap-2 bg-sun-amber text-charcoal font-['Open_Sans'] font-bold text-[15px] px-8 py-4 rounded-lg hover:bg-amber-700 transition-colors duration-200"
               >
                 Express Board Interest →
               </Link>
@@ -136,9 +136,9 @@ export default function Board() {
         <div className="max-w-7xl mx-auto">
           <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={stagger}>
             <motion.div variants={fadeUp} className="mb-10">
-              <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">WHY THIS MATTERS</div>
-              <h2 className="font-['Fraunces'] font-bold text-[34px] text-[#2A2E2C] mb-6">Strong governance makes everything else possible.</h2>
-              <div className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] leading-[1.65] max-w-[860px] space-y-4">
+              <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-trail-green mb-4">WHY THIS MATTERS</div>
+              <h2 className="font-['Fraunces'] font-bold text-[34px] text-charcoal mb-6">Strong governance makes everything else possible.</h2>
+              <div className="font-['Open_Sans'] text-[16px] text-slate leading-[1.65] max-w-[860px] space-y-4">
                 <p>Grant makers, institutional funders, and Candid certification all look at board composition as a signal of organizational health. A board that is independent from the founding team — with diverse expertise and genuine oversight authority — is one of the most important signals a growing nonprofit can send.</p>
                 <p>We are not recruiting board members to fill a box. We are recruiting people who will ask hard questions, bring networks and expertise we do not have, and hold us accountable to the mission in a way that makes TT stronger.</p>
                 <p>If you have been part of a nonprofit board before, you know what good governance looks like. If this would be your first board role, we will support your development as a board member. What matters most is that you believe in what we are building and are willing to show up for it.</p>
@@ -152,7 +152,7 @@ export default function Board() {
                   <motion.div
                     key={card.title}
                     variants={fadeUp}
-                    className="bg-[#E6F3EA] rounded-xl p-6"
+                    className="bg-green-100 rounded-xl p-6"
                   >
                     <div
                       className="w-10 h-10 rounded-lg flex items-center justify-center mb-4"
@@ -160,8 +160,8 @@ export default function Board() {
                     >
                       <Icon size={22} stroke={card.iconColor} />
                     </div>
-                    <h3 className="font-['Open_Sans'] font-bold text-[14px] text-[#2F6B3F] mb-3">{card.title}</h3>
-                    <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D] leading-[1.6]">{card.body}</p>
+                    <h3 className="font-['Open_Sans'] font-bold text-[14px] text-trail-green mb-3">{card.title}</h3>
+                    <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.6]">{card.body}</p>
                   </motion.div>
                 );
               })}
@@ -171,33 +171,33 @@ export default function Board() {
       </section>
 
       {/* SECTION 3 — Current board */}
-      <section className="bg-[#FAFAF7] py-20 px-5 md:px-10">
+      <section className="bg-trail-light py-20 px-5 md:px-10">
         <div className="max-w-7xl mx-auto">
           <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={stagger}>
             <motion.div variants={fadeUp} className="mb-12">
-              <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">CURRENT BOARD</div>
-              <h2 className="font-['Fraunces'] font-bold text-[34px] text-[#2A2E2C] mb-4">The founding team currently serves as the board.</h2>
-              <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] max-w-[760px] leading-[1.65]">
+              <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-trail-green mb-4">CURRENT BOARD</div>
+              <h2 className="font-['Fraunces'] font-bold text-[34px] text-charcoal mb-4">The founding team currently serves as the board.</h2>
+              <p className="font-['Open_Sans'] text-[16px] text-slate max-w-[760px] leading-[1.65]">
                 Our founding team serves dual roles — running day-to-day operations and serving as board members. This is common in early-stage nonprofits and a governance structure we are actively working to evolve.
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               {FOUNDERS.filter((founder) => founder.key !== "HR").map((founder) => (
-                <motion.div key={founder.key} variants={fadeUp} className="bg-white border border-[#E2E4E1] rounded-xl p-6 flex flex-col items-center text-center">
+                <motion.div key={founder.key} variants={fadeUp} className="bg-white border border-warm-gray rounded-xl p-6 flex flex-col items-center text-center">
                   <div
                     className="w-14 h-14 rounded-full flex items-center justify-center mb-4"
                     style={{ backgroundColor: founder.accent }}
                   >
                     <span className="font-['Poppins'] font-semibold text-white text-[15px]">{founder.initials}</span>
                   </div>
-                  <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-1">{founder.name}</h3>
+                  <h3 className="font-['Poppins'] font-semibold text-[16px] text-charcoal mb-1">{founder.name}</h3>
                   <p className="font-['Open_Sans'] text-[13px]" style={{ color: founder.accent }}>{BOARD_ROLES[founder.key]}</p>
                 </motion.div>
               ))}
             </div>
 
-            <motion.p variants={fadeUp} className="font-['Open_Sans'] italic text-[14px] text-[#4A4F4D] text-center">
+            <motion.p variants={fadeUp} className="font-['Open_Sans'] italic text-[14px] text-slate text-center">
               We are actively recruiting independent board members to broaden our governance, strengthen oversight, and bring new expertise to our leadership.
             </motion.p>
           </motion.div>
@@ -209,32 +209,32 @@ export default function Board() {
         <div className="max-w-7xl mx-auto">
           <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={stagger}>
             <motion.div variants={fadeUp} className="mb-12">
-              <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">BOARD MEMBER PROFILE</div>
-              <h2 className="font-['Fraunces'] font-bold text-[34px] text-[#2A2E2C] mb-4">We are looking for people who bring what we do not already have.</h2>
-              <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] max-w-[760px] leading-[1.65]">
+              <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-trail-green mb-4">BOARD MEMBER PROFILE</div>
+              <h2 className="font-['Fraunces'] font-bold text-[34px] text-charcoal mb-4">We are looking for people who bring what we do not already have.</h2>
+              <p className="font-['Open_Sans'] text-[16px] text-slate max-w-[760px] leading-[1.65]">
                 We are not looking for one type of board member. We are looking for a mix of expertise, perspective, and lived experience that makes TT's governance stronger than any single founder.
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <motion.div variants={fadeUp} className="bg-white border border-[#E2E4E1] rounded-xl p-8">
-                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2F6B3F] mb-5">Expertise we are actively seeking:</h3>
+              <motion.div variants={fadeUp} className="bg-white border border-warm-gray rounded-xl p-8">
+                <h3 className="font-['Poppins'] font-semibold text-[16px] text-trail-green mb-5">Expertise we are actively seeking:</h3>
                 <ul className="space-y-3">
                   {EXPERTISE_LIST.map((item) => (
-                    <li key={item} className="flex items-start gap-3 font-['Open_Sans'] text-[13px] text-[#4A4F4D]">
-                      <Check size={16} color="#2F6B3F" className="shrink-0 mt-0.5" />
+                    <li key={item} className="flex items-start gap-3 font-['Open_Sans'] text-[13px] text-slate">
+                      <Check size={16} color="var(--tt-trail-green)" className="shrink-0 mt-0.5" />
                       {item}
                     </li>
                   ))}
                 </ul>
               </motion.div>
 
-              <motion.div variants={fadeUp} className="bg-white border border-[#E2E4E1] rounded-xl p-8">
-                <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2F6F7E] mb-5">What board membership involves:</h3>
+              <motion.div variants={fadeUp} className="bg-white border border-warm-gray rounded-xl p-8">
+                <h3 className="font-['Poppins'] font-semibold text-[16px] text-deep-teal mb-5">What board membership involves:</h3>
                 <ul className="space-y-3">
                   {INVOLVEMENT_LIST.map((item) => (
-                    <li key={item} className="flex items-start gap-3 font-['Open_Sans'] text-[13px] text-[#4A4F4D]">
-                      <Check size={16} color="#2F6F7E" className="shrink-0 mt-0.5" />
+                    <li key={item} className="flex items-start gap-3 font-['Open_Sans'] text-[13px] text-slate">
+                      <Check size={16} color="var(--tt-deep-teal)" className="shrink-0 mt-0.5" />
                       {item}
                     </li>
                   ))}
@@ -246,7 +246,7 @@ export default function Board() {
       </section>
 
       {/* SECTION 5 — Why join TT's board */}
-      <section className="bg-[#2A2E2C] py-20 px-5 md:px-10">
+      <section className="bg-charcoal py-20 px-5 md:px-10">
         <div className="max-w-7xl mx-auto">
           <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={stagger}>
             <motion.div variants={fadeUp} className="mb-10">
@@ -279,7 +279,7 @@ export default function Board() {
       </section>
 
       {/* SECTION 6 — Apply */}
-      <section id="apply" className="bg-[#FAFAF7] py-20 px-5 md:px-10">
+      <section id="apply" className="bg-trail-light py-20 px-5 md:px-10">
         <div className="max-w-[560px] mx-auto text-center flex flex-col items-center">
           <motion.div
             initial="hidden"
@@ -288,22 +288,22 @@ export default function Board() {
             variants={stagger}
             className="w-full flex flex-col items-center"
           >
-            <motion.div variants={fadeUp} className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">EXPRESS INTEREST</motion.div>
-            <motion.h2 variants={fadeUp} className="font-['Fraunces'] font-bold text-[20px] text-[#2A2E2C] mb-6">Tell us about yourself.</motion.h2>
-            <motion.p variants={fadeUp} className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.65] mb-8">
+            <motion.div variants={fadeUp} className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-trail-green mb-4">EXPRESS INTEREST</motion.div>
+            <motion.h2 variants={fadeUp} className="font-['Fraunces'] font-bold text-[20px] text-charcoal mb-6">Tell us about yourself.</motion.h2>
+            <motion.p variants={fadeUp} className="font-['Open_Sans'] text-[15px] text-slate leading-[1.65] mb-8">
               Board recruitment is led by our founding team. We review every application and respond within 5 business days to schedule an introductory conversation. There is no formal deadline — we are recruiting on a rolling basis.
             </motion.p>
             <motion.div variants={fadeUp} className="w-full">
               <Link
                 href="/board-application"
-                className="inline-flex items-center gap-2 bg-[#2F6B3F] text-white font-['Open_Sans'] font-bold text-[15px] px-8 py-4 rounded-lg hover:bg-[#1E4A2A] transition-colors duration-200 w-full justify-center"
+                className="inline-flex items-center gap-2 bg-trail-green text-white font-['Open_Sans'] font-bold text-[15px] px-8 py-4 rounded-lg hover:bg-green-700 transition-colors duration-200 w-full justify-center"
               >
                 Express Board Interest →
               </Link>
             </motion.div>
-            <motion.p variants={fadeUp} className="font-['Open_Sans'] text-[12px] text-[#8C8882] italic mt-4">
+            <motion.p variants={fadeUp} className="font-['Open_Sans'] text-[12px] text-muted-text italic mt-4">
               Questions? Email{" "}
-              <a href="mailto:hello@transitiontrails.org" className="text-[#2F6B3F] hover:underline">hello@transitiontrails.org</a>
+              <a href="mailto:hello@transitiontrails.org" className="text-trail-green hover:underline">hello@transitiontrails.org</a>
             </motion.p>
           </motion.div>
         </div>

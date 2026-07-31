@@ -5,7 +5,7 @@ import siteContent from "../content/site.json";
 
 export function Footer() {
   return (
-    <footer className="bg-[#2F6F7E] pt-16 px-5 md:px-10 mt-auto">
+    <footer className="bg-deep-teal pt-16 px-5 md:px-10 mt-auto">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12 mb-16">
         <div className="min-w-[280px] max-w-[300px]">
           <Link href="/" className="block">

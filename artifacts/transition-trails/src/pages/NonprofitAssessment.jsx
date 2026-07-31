@@ -16,15 +16,15 @@ export default function NonprofitAssessment() {
       <section
         className="pt-24 pb-20 px-5 md:px-10"
         style={{
-          background: "linear-gradient(135deg, #1E4F5C 0%, #2F6F7E 100%)",
+          background: "linear-gradient(135deg, var(--tt-teal-700) 0%, var(--tt-deep-teal) 100%)",
         }}
       >
         <div className="max-w-[860px] mx-auto text-center">
-          <div className="inline-block bg-[#F5A623]/20 border border-[#F5A623]/30 text-[#F5A623] font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-4 backdrop-blur-sm">
+          <div className="inline-block bg-sun-amber/20 border border-sun-amber/30 text-sun-amber font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-4 backdrop-blur-sm">
             FOR NONPROFITS
           </div>
 
-          <div className="font-['Open_Sans'] font-bold text-[13px] tracking-[2px] uppercase text-[#F5A623] mb-5">
+          <div className="font-['Open_Sans'] font-bold text-[13px] tracking-[2px] uppercase text-sun-amber mb-5">
             DIGITAL COMPASS
           </div>
 
@@ -49,7 +49,7 @@ export default function NonprofitAssessment() {
               "Specific to your org's Salesforce setup",
             ].map((point) => (
               <div key={point} className="flex items-center gap-2">
-                <Check size={16} color="#F5A623" className="shrink-0" />
+                <Check size={16} color="var(--tt-sun-amber)" className="shrink-0" />
                 <span className="font-['Open_Sans'] text-[15px] text-white/90">{point}</span>
               </div>
             ))}
@@ -62,14 +62,14 @@ export default function NonprofitAssessment() {
       <section className="bg-white py-[60px] px-5">
         <div className="max-w-[860px] mx-auto">
           <div className="max-w-2xl mx-auto text-center flex flex-col items-center gap-6 py-12">
-            <p className="font-['Open_Sans'] text-[15px] text-[#6B7280] leading-relaxed">Tell us about your organization and your current Salesforce situation. A member of the TT team will be in touch within 2 business days to schedule your free session.</p>
-            <a href="https://form.jotform.com/261683366693066" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#2F6B3F] text-white font-['Open_Sans'] font-bold text-[15px] px-8 py-4 rounded-lg hover:bg-[#1E4A2A] transition-colors duration-200">Book Your Free Assessment →</a>
-            <p className="font-['Open_Sans'] text-[12px] text-[#6B7280] italic">Free — no cost, no commitment. Up to 1 hour with a real expert.</p>
+            <p className="font-['Open_Sans'] text-[15px] text-cool-gray leading-relaxed">Tell us about your organization and your current Salesforce situation. A member of the TT team will be in touch within 2 business days to schedule your free session.</p>
+            <a href="https://form.jotform.com/261683366693066" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-trail-green text-white font-['Open_Sans'] font-bold text-[15px] px-8 py-4 rounded-lg hover:bg-green-700 transition-colors duration-200">Book Your Free Assessment →</a>
+            <p className="font-['Open_Sans'] text-[12px] text-cool-gray italic">Free — no cost, no commitment. Up to 1 hour with a real expert.</p>
           </div>
 
           {/* What happens next */}
-          <div className="mt-14 bg-[#F8FAFA] border border-[#D0E8ED] rounded-2xl p-8 md:p-10">
-            <h2 className="font-['Poppins'] font-bold text-[22px] text-[#2A2E2C] mb-8 text-center">
+          <div className="mt-14 bg-trail-light border border-teal-100 rounded-2xl p-8 md:p-10">
+            <h2 className="font-['Poppins'] font-bold text-[22px] text-charcoal mb-8 text-center">
               What happens next?
             </h2>
             <div className="flex flex-col md:flex-row gap-8">
@@ -92,13 +92,13 @@ export default function NonprofitAssessment() {
                 },
               ].map((item) => (
                 <div key={item.step} className="flex-1 flex flex-col items-center text-center">
-                  <div className="w-10 h-10 rounded-full bg-[#2F6F7E] text-white font-['Poppins'] font-bold text-[16px] flex items-center justify-center mb-4 shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-deep-teal text-white font-['Poppins'] font-bold text-[16px] flex items-center justify-center mb-4 shrink-0">
                     {item.step}
                   </div>
-                  <h3 className="font-['Poppins'] font-semibold text-[16px] text-[#2A2E2C] mb-2">
+                  <h3 className="font-['Poppins'] font-semibold text-[16px] text-charcoal mb-2">
                     {item.title}
                   </h3>
-                  <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.6]">
+                  <p className="font-['Open_Sans'] text-[14px] text-slate leading-[1.6]">
                     {item.desc}
                   </p>
                 </div>

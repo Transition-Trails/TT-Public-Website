@@ -6,7 +6,7 @@ const STAGES = [
   {
     n: 1,
     icon: <Building2 size={24} color="#fff" />,
-    color: "#2F6B3F",
+    color: "var(--tt-trail-green)",
     title: "Nonprofits are nominated",
     body: "Trail of Mastery and Guided Trail learners nominate nonprofits facing significant Salesforce challenges. The TT community votes on the shortlist. One organization is selected per Expedition.",
     when: "60-90 days before",
@@ -14,7 +14,7 @@ const STAGES = [
   {
     n: 2,
     icon: <Users size={24} color="#fff" />,
-    color: "#2F6F7E",
+    color: "var(--tt-deep-teal)",
     title: "Teams are assembled",
     body: "Guided Trail and Trail of Mastery participants register. Teams are formed across roles — BA, PO, Admin, Advanced Admin, Solutions Consultant — mirroring a real Salesforce delivery team.",
     when: "2-3 weeks before",
@@ -22,7 +22,7 @@ const STAGES = [
   {
     n: 3,
     icon: <Package size={24} color="#fff" />,
-    color: "#F5A623",
+    color: "var(--tt-sun-amber)",
     title: "The Trail Box ships",
     body: "Your collector's edition Expedition Trail Box arrives before the weekend. Everything inside is yours to open — except the sealed Expedition Brief. That waits.",
     when: "Week before",
@@ -30,7 +30,7 @@ const STAGES = [
   {
     n: 4,
     icon: <Zap size={24} color="#fff" />,
-    color: "#2F6B3F",
+    color: "var(--tt-trail-green)",
     title: "72 hours. Clock starts Friday.",
     body: "Opening ceremony Friday evening — the Brief is opened together. Discovery begins. Saturday is the build — observers welcome. Sunday afternoon, every team presents their solution to the nonprofit, the sponsors, and the community. The nonprofit selects what gets implemented.",
     when: "The weekend",
@@ -38,7 +38,7 @@ const STAGES = [
   {
     n: 5,
     icon: <Rocket size={24} color="#fff" />,
-    color: "#2F6F7E",
+    color: "var(--tt-deep-teal)",
     title: "The solution ships",
     body: "The selected solution goes into implementation. The nonprofit gets real Salesforce work completed. Every participant adds a documented Expedition deliverable to their portfolio. The Expedition patch is earned.",
     when: "After",
@@ -47,29 +47,29 @@ const STAGES = [
 
 const PARTICIPANTS = [
   {
-    accent: "#2F6B3F",
-    icon: <Target size={24} color="#2F6B3F" />,
+    accent: "var(--tt-trail-green)",
+    icon: <Target size={24} color="var(--tt-trail-green)" />,
     title: "Learners",
     body: "Guided Trail graduates and Trail of Mastery learners form the build teams. You work in your role — BA, PO, Admin, Advanced Admin, or Solutions Consultant — delivering a real solution for a real nonprofit under a real time constraint. The most intense portfolio experience in any TT program.",
     badge: "GUIDED TRAIL + TRAIL OF MASTERY",
   },
   {
-    accent: "#F5A623",
-    icon: <Building2 size={24} color="#F5A623" />,
+    accent: "var(--tt-sun-amber)",
+    icon: <Building2 size={24} color="var(--tt-sun-amber)" />,
     title: "Nonprofits",
     body: "Apply to have your Salesforce challenge tackled by a coached team over a weekend. One organization selected per Expedition. The work that gets done is real — not a prototype, not a pitch deck. A solution designed for implementation.",
     badge: "APPLY TO BE SELECTED",
   },
   {
-    accent: "#2F6F7E",
-    icon: <Users size={24} color="#2F6F7E" />,
+    accent: "var(--tt-deep-teal)",
+    icon: <Users size={24} color="var(--tt-deep-teal)" />,
     title: "Sponsors",
     body: "The TT Expedition Series is built for sponsorship — a virtual event with a measurable nonprofit outcome, a documented participant community, and social sharing built into the experience from the moment the Trail Box ships. Get in early.",
     badge: "PRESENTING SPONSOR AVAILABLE",
   },
   {
-    accent: "#7FAFC6",
-    icon: <Eye size={24} color="#7FAFC6" />,
+    accent: "var(--tt-teal-300)",
+    icon: <Eye size={24} color="var(--tt-teal-300)" />,
     title: "Observers",
     body: "Explorer's Trail members, alumni, and the broader TT community are welcome to observe Saturday's build session and attend Sunday's closing presentations. Watch professional Salesforce delivery happen in real time.",
     badge: "EXPLORER'S TRAIL COMMUNITY",
@@ -78,12 +78,12 @@ const PARTICIPANTS = [
 
 const SPONSOR_TIERS = [
   {
-    border: "#F5A623",
+    border: "var(--tt-sun-amber)",
     borderWidth: "2px",
-    badge: { text: "AVAILABLE", color: "#F5A623" },
+    badge: { text: "AVAILABLE", color: "var(--tt-sun-amber)" },
     title: "Presenting Sponsor",
     amount: "Contact us",
-    amountColor: "#F5A623",
+    amountColor: "var(--tt-sun-amber)",
     items: [
       "The TT Expedition, presented by [Your Organization]",
       "Logo on Trail Box and all event materials",
@@ -95,11 +95,11 @@ const SPONSOR_TIERS = [
     ],
   },
   {
-    border: "#2F6B3F",
+    border: "var(--tt-trail-green)",
     borderWidth: "1px",
     title: "Summit Sponsor",
     amount: "Contact us",
-    amountColor: "#6BBF85",
+    amountColor: "var(--tt-dark-accent-green)",
     items: [
       "Logo on event materials",
       "Recognition in all communications",
@@ -108,11 +108,11 @@ const SPONSOR_TIERS = [
     ],
   },
   {
-    border: "#2F6F7E",
+    border: "var(--tt-deep-teal)",
     borderWidth: "1px",
     title: "Basecamp Sponsor",
     amount: "Contact us",
-    amountColor: "#7FAFC6",
+    amountColor: "var(--tt-teal-300)",
     items: [
       "Logo on event program",
       "Recognition in communications",
@@ -120,11 +120,11 @@ const SPONSOR_TIERS = [
     ],
   },
   {
-    border: "#7FAFC6",
+    border: "var(--tt-teal-300)",
     borderWidth: "1px",
     title: "Trail Box Sponsor",
     amount: "Contact us",
-    amountColor: "#7FAFC6",
+    amountColor: "var(--tt-teal-300)",
     body: "Contribute a branded item to the Expedition Trail Box. Your product in the hands of every participant — unboxed, photographed, shared.",
     items: [
       "Product in Trail Box",
@@ -136,27 +136,27 @@ const SPONSOR_TIERS = [
 
 const CTA_CARDS = [
   {
-    icon: <Bell size={24} color="#F5A623" />,
+    icon: <Bell size={24} color="var(--tt-sun-amber)" />,
     title: "Get Notified",
     body: "Be the first to know when Expedition I applications open — for learners, nonprofits, and sponsors.",
     buttonLabel: "Notify Me →",
-    buttonStyle: { background: "#F5A623", color: "#2A2E2C" },
+    buttonStyle: { background: "var(--tt-sun-amber)", color: "var(--tt-charcoal)" },
     href: "mailto:hello@transitiontrails.org?subject=TT%20Expedition%20Series%20-%20Notify%20Me",
   },
   {
-    icon: <Building2 size={24} color="#2F6B3F" />,
+    icon: <Building2 size={24} color="var(--tt-trail-green)" />,
     title: "Nominate a Nonprofit",
     body: "Know a nonprofit facing a significant Salesforce challenge? Nominate them for Expedition I consideration.",
     buttonLabel: "Submit a Nomination →",
-    buttonStyle: { background: "#2F6B3F", color: "#ffffff" },
+    buttonStyle: { background: "var(--tt-trail-green)", color: "var(--tt-white)" },
     href: "mailto:hello@transitiontrails.org?subject=TT%20Expedition%20-%20Nonprofit%20Nomination",
   },
   {
-    icon: <Users size={24} color="#2F6F7E" />,
+    icon: <Users size={24} color="var(--tt-deep-teal)" />,
     title: "Sponsorship Inquiry",
     body: "Interested in sponsoring The TT Expedition Series? We are building the sponsorship program now and welcoming early conversations.",
     buttonLabel: "Inquire About Sponsorship →",
-    buttonStyle: { background: "#2F6F7E", color: "#ffffff" },
+    buttonStyle: { background: "var(--tt-deep-teal)", color: "var(--tt-white)" },
     href: "mailto:hello@transitiontrails.org?subject=TT%20Expedition%20-%20Sponsorship%20Inquiry",
   },
 ];
@@ -166,7 +166,7 @@ export default function Expedition() {
   const stagger = { hidden: {}, show: { transition: { staggerChildren: 0.1 } } };
 
   return (
-    <div className="flex flex-col min-h-screen" style={{ background: "#1A1A1A" }}>
+    <div className="flex flex-col min-h-screen" style={{ background: "var(--tt-off-black)" }}>
       <PageMeta
         title="The TT Expedition Series | Coming Fall 2027 | Transition Trails"
         description="Twice yearly, a team of Salesforce professionals solves a real nonprofit challenge over 72 hours. Trail Box included. Collector's edition patches. Launching Fall 2027. Get notified."
@@ -178,7 +178,7 @@ export default function Expedition() {
         className="pt-28 pb-24 px-5 md:px-10 flex flex-col items-center text-center"
         style={{
           background: "radial-gradient(ellipse at center, rgba(47,107,63,0.25) 0%, rgba(26,26,26,1) 70%)",
-          backgroundColor: "#1A1A1A",
+          backgroundColor: "var(--tt-off-black)",
         }}
       >
         <div className="max-w-7xl mx-auto w-full flex flex-col items-center">
@@ -187,7 +187,7 @@ export default function Expedition() {
               <div
                 className="inline-block font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-4 py-2 mb-8"
                 style={{
-                  color: "#F5A623",
+                  color: "var(--tt-sun-amber)",
                   background: "rgba(245,166,35,0.15)",
                   border: "1px solid rgba(245,166,35,0.40)",
                   borderRadius: "99px",
@@ -205,7 +205,7 @@ export default function Expedition() {
               The TT Expedition Series.
             </motion.h1>
 
-            <motion.p variants={fadeUp} className="font-['Poppins'] font-semibold text-[22px] text-[#7FAFC6] mb-8 leading-[1.5]">
+            <motion.p variants={fadeUp} className="font-['Poppins'] font-semibold text-[22px] text-teal-300 mb-8 leading-[1.5]">
               A weekend. A nonprofit. A team. A solution that ships.
             </motion.p>
 
@@ -227,7 +227,7 @@ export default function Expedition() {
                   className="flex-1 flex flex-col items-center px-8 py-6 rounded-xl"
                   style={{ background: "rgba(245,166,35,0.08)", border: "1px solid rgba(245,166,35,0.25)" }}
                 >
-                  <span className="font-['Poppins'] font-bold text-[28px] leading-none mb-1" style={{ color: "#F5A623" }}>{stat.value}</span>
+                  <span className="font-['Poppins'] font-bold text-[28px] leading-none mb-1" style={{ color: "var(--tt-sun-amber)" }}>{stat.value}</span>
                   <span className="font-['Open_Sans'] text-[13px]" style={{ color: "rgba(255,255,255,0.55)" }}>{stat.label}</span>
                 </div>
               ))}
@@ -236,7 +236,7 @@ export default function Expedition() {
             <motion.div variants={fadeUp}>
               <a
                 href="#interest-form"
-                className="inline-flex items-center gap-2 bg-[#F5A623] text-[#2A2E2C] font-['Open_Sans'] font-bold text-[15px] px-8 py-4 rounded-lg hover:bg-[#D4890A] transition-colors duration-200 mb-4"
+                className="inline-flex items-center gap-2 bg-sun-amber text-charcoal font-['Open_Sans'] font-bold text-[15px] px-8 py-4 rounded-lg hover:bg-amber-700 transition-colors duration-200 mb-4"
               >
                 Get Notified →
               </a>
@@ -250,7 +250,7 @@ export default function Expedition() {
       </section>
 
       {/* SECTION 2: The Trail Box */}
-      <section className="py-20 px-5 md:px-10" style={{ background: "#111111" }}>
+      <section className="py-20 px-5 md:px-10" style={{ background: "var(--tt-near-black)" }}>
         <div className="max-w-7xl mx-auto">
           <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={stagger}>
             <motion.div variants={fadeUp} className="text-center mb-12">
@@ -305,7 +305,7 @@ export default function Expedition() {
       </section>
 
       {/* SECTION 3: How It Works */}
-      <section className="py-20 px-5 md:px-10" style={{ background: "#1A1A1A" }}>
+      <section className="py-20 px-5 md:px-10" style={{ background: "var(--tt-off-black)" }}>
         <div className="max-w-7xl mx-auto">
           <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={stagger}>
             <motion.div variants={fadeUp} className="text-center mb-14">
@@ -367,7 +367,7 @@ export default function Expedition() {
       </section>
 
       {/* SECTION 4: Who Participates */}
-      <section className="py-20 px-5 md:px-10" style={{ background: "#111111" }}>
+      <section className="py-20 px-5 md:px-10" style={{ background: "var(--tt-near-black)" }}>
         <div className="max-w-7xl mx-auto">
           <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={stagger}>
             <motion.div variants={fadeUp} className="text-center mb-12">
@@ -402,7 +402,7 @@ export default function Expedition() {
       </section>
 
       {/* SECTION 5: Sponsorship */}
-      <section className="py-20 px-5 md:px-10" style={{ background: "#1A1A1A" }}>
+      <section className="py-20 px-5 md:px-10" style={{ background: "var(--tt-off-black)" }}>
         <div className="max-w-7xl mx-auto">
           <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={stagger}>
             <motion.div variants={fadeUp} className="text-center mb-12">
@@ -459,7 +459,7 @@ export default function Expedition() {
       </section>
 
       {/* SECTION 6: Get Involved */}
-      <section id="interest-form" className="py-20 px-5 md:px-10" style={{ background: "#111111" }}>
+      <section id="interest-form" className="py-20 px-5 md:px-10" style={{ background: "var(--tt-near-black)" }}>
         <div className="max-w-7xl mx-auto">
           <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={stagger}>
             <motion.div variants={fadeUp} className="text-center mb-12">
@@ -496,7 +496,7 @@ export default function Expedition() {
                 href="https://form.jotform.com/261877267351062"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#F5A623] text-[#2A2E2C] font-['Open_Sans'] font-bold text-[15px] px-8 py-4 rounded-lg hover:bg-[#D4890A] transition-colors duration-200"
+                className="inline-flex items-center gap-2 bg-sun-amber text-charcoal font-['Open_Sans'] font-bold text-[15px] px-8 py-4 rounded-lg hover:bg-amber-700 transition-colors duration-200"
               >
                 Join the Interest List →
               </a>
