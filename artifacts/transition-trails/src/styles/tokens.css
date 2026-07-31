@@ -1,0 +1,105 @@
+/*
+ * ─────────────────────────────────────────────────────────────────
+ *  TRANSITION TRAILS — DESIGN SYSTEM TOKENS
+ *  Single source of truth for all brand values.
+ *
+ *  Naming convention: --tt-<category>-<scale>
+ *  All values are CSS custom properties so they are:
+ *    • Accessible at runtime in JS (getComputedStyle)
+ *    • Usable in inline styles
+ *    • Referenceable inside Tailwind's @theme block
+ *
+ *  DO NOT write raw hex values in components.
+ *  Reference these tokens directly, or use the Tailwind utilities
+ *  registered from them in index.css.
+ * ─────────────────────────────────────────────────────────────────
+ */
+
+:root {
+
+  /* ── Core brand ─────────────────────────────────────────────── */
+  --tt-trail-green:  #2F6B3F;   /* primary brand green */
+  --tt-deep-teal:    #2F6F7E;   /* navigation, secondary brand */
+  --tt-sky-blue:     #7FAFC6;   /* light accent / eyebrows */
+  --tt-sun-amber:    #F5A623;   /* primary CTA — one per screen */
+
+  /* ── Green ramp ─────────────────────────────────────────────── */
+  --tt-green-100: #E6F0EA;
+  --tt-green-300: #9FC3AE;
+  --tt-green-500: #2F6B3F;      /* = --tt-trail-green */
+  --tt-green-700: #1E4A2A;
+
+  /* ── Amber ramp ─────────────────────────────────────────────── */
+  --tt-amber-100: #FEF3DB;
+  --tt-amber-300: #FFD08A;
+  --tt-amber-500: #F5A623;      /* = --tt-sun-amber */
+  --tt-amber-700: #D4890A;
+
+  /* ── Teal ramp (new) ─────────────────────────────────────────  */
+  --tt-teal-100: #E0F0F3;
+  --tt-teal-300: #7FAFC6;       /* = --tt-sky-blue */
+  --tt-teal-500: #2F6F7E;       /* = --tt-deep-teal */
+  --tt-teal-700: #1E4F5C;
+  --tt-sky-tint: #EDF5F8;       /* lightest teal wash */
+
+  /* ── Neutrals ───────────────────────────────────────────────── */
+  --tt-white:       #FFFFFF;
+  --tt-trail-light: #FAFAF7;    /* page background */
+  --tt-warm-gray:   #E2E4E1;    /* dividers, borders */
+  --tt-slate:       #4A4F4D;    /* body text */
+  --tt-charcoal:    #2A2E2C;    /* headings, dark sections */
+  --tt-muted-text:  #8C8882;    /* captions, secondary text */
+  --tt-muted-fill:  #F3F2EF;    /* subtle backgrounds */
+
+  /* ── Semantic ────────────────────────────────────────────────── */
+  --tt-danger:       #A83A2C;
+  --tt-danger-tint:  #FBEAE7;
+  --tt-success:      var(--tt-green-500);
+  --tt-success-tint: var(--tt-green-100);
+
+  /* ── Dark-section palette ────────────────────────────────────── */
+  /* Used on About, Board, Coaches, Consulting, Guided Trail, Blog  */
+  --tt-dark-surface:       var(--tt-charcoal);
+  --tt-dark-text-primary:  rgba(255, 255, 255, 0.92);
+  --tt-dark-text-muted:    rgba(255, 255, 255, 0.68);
+  --tt-dark-text-faint:    rgba(255, 255, 255, 0.45);
+  --tt-dark-rule:          rgba(255, 255, 255, 0.16);
+  --tt-dark-fill:          rgba(255, 255, 255, 0.08);
+  --tt-dark-accent-green:  #6BBF85;     /* green readable on charcoal */
+  --tt-dark-accent-amber:  var(--tt-amber-300); /* amber readable on charcoal */
+
+  /* ── Typography ──────────────────────────────────────────────── */
+  --tt-font-display: 'Fraunces', Georgia, serif;   /* H1, H2 only */
+  --tt-font-heading: 'Poppins', sans-serif;         /* H3–H4, buttons, labels */
+  --tt-font-body:    'Open Sans', Roboto, sans-serif;
+  --tt-font-accent:  'Caveat', cursive;
+
+  /* ── Spacing (8px scale) ─────────────────────────────────────── */
+  --tt-space-1:  4px;
+  --tt-space-2:  8px;
+  --tt-space-4:  16px;
+  --tt-space-6:  24px;
+  --tt-space-8:  32px;
+  --tt-space-12: 48px;
+  --tt-space-16: 64px;
+
+  /* ── Radius ──────────────────────────────────────────────────── */
+  --tt-radius-sm:   8px;
+  --tt-radius-md:   14px;
+  --tt-radius-lg:   22px;
+  --tt-radius-pill: 9999px;
+
+  /* ── Elevation ───────────────────────────────────────────────── */
+  --tt-shadow-card:       0 12px 28px rgba(42, 46, 44, 0.10);
+  --tt-shadow-soft:       0 6px  16px rgba(42, 46, 44, 0.08);
+  --tt-shadow-amber-glow: 0 2px  8px  rgba(245, 166, 35, 0.35);
+  /*   Focus ring: 2px solid trail-green / 2px offset
+       Kept here as documentation; the actual rule is in index.css @layer base
+       because :focus-visible requires a CSS rule, not just a custom property. */
+
+  /* ── Approved gradients (135deg) ────────────────────────────── */
+  --tt-gradient-green: linear-gradient(135deg, #1E4A2A, #2F6B3F);
+  --tt-gradient-teal:  linear-gradient(135deg, #1E4F5C, #2F6F7E 55%, #1E4A2A);
+  --tt-gradient-deep:  linear-gradient(135deg, #1E4A2A, #2F6B3F 55%, #2F6F7E);
+
+}

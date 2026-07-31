@@ -1,10 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+/*
+ * Entry stylesheet — load order matters for Tailwind v4:
+ *   1. Design-system tokens  (--tt-* CSS custom properties)
+ *   2. Tailwind framework    (@theme utilities wired to those tokens)
+ *   3. Animation helpers
+ *   4. Typography plugin
+ *   5. Component base layer
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700&family=Poppins:wght@400;500;600;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import "./styles/tokens.css";
 @import "tailwindcss";
 @import "tw-animate-css";
 @plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
 
+/* ─────────────────────────────────────────────────────────────────
+   TAILWIND THEME — shadcn/ui semantic tokens (unchanged)
+   These map shadcn component names → HSL vars defined in :root.
+   ───────────────────────────────────────────────────────────────── */
 @theme inline {
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
@@ -67,53 +81,131 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-:root {
-  /* Brand colors */
-  --trail-green: #2F6B3F;
-  --trail-green-dark: #1E4A2A;
-  --trail-green-light: #E6F3EA;
-  --deep-teal: #2F6F7E;
-  --deep-teal-light: #E0F0F3;
-  --sky-blue: #7FAFC6;
-  --sky-blue-light: #E0F0F7;
-  --sun-amber: #F5A623;
-  --sun-amber-dark: #D4890A;
-  --off-white: #FAFAF7;
-  --stone: #E2E4E1;
-  --charcoal: #2A2E2C;
-  --slate: #4A4F4D;
+/* ─────────────────────────────────────────────────────────────────
+   TAILWIND THEME — Transition Trails brand utilities
+   Wired to --tt-* tokens so named classes stay in sync with tokens.
+   Usage examples:
+     bg-trail-green        text-sun-amber         shadow-card
+     bg-green-700          text-muted-text         rounded-tt-md
+     bg-teal-500           bg-dark-fill            font-display
+   ───────────────────────────────────────────────────────────────── */
+@theme {
+  /* Green palette */
+  --color-trail-green:    var(--tt-green-500);
+  --color-green-100:      var(--tt-green-100);
+  --color-green-300:      var(--tt-green-300);
+  --color-green-500:      var(--tt-green-500);
+  --color-green-700:      var(--tt-green-700);
 
-  /* Theme colors - mapped from brand colors where applicable */
-  --background: 250 25% 98%; /* off-white #FAFAF7 */
-  --foreground: 145 5% 16%; /* charcoal #2A2E2C */
-  
-  --card: 0 0% 100%; /* white */
-  --card-foreground: 145 5% 16%; /* charcoal */
-  --card-border: 120 3% 88%; /* stone #E2E4E1 */
-  
+  /* Teal palette */
+  --color-deep-teal:      var(--tt-teal-500);
+  --color-teal-100:       var(--tt-teal-100);
+  --color-teal-300:       var(--tt-teal-300);
+  --color-teal-500:       var(--tt-teal-500);
+  --color-teal-700:       var(--tt-teal-700);
+  --color-sky-tint:       var(--tt-sky-tint);
+
+  /* Amber palette */
+  --color-sun-amber:      var(--tt-amber-500);
+  --color-amber-100:      var(--tt-amber-100);
+  --color-amber-300:      var(--tt-amber-300);
+  --color-amber-500:      var(--tt-amber-500);
+  --color-amber-700:      var(--tt-amber-700);
+
+  /* Neutrals */
+  --color-trail-light:    var(--tt-trail-light);
+  --color-warm-gray:      var(--tt-warm-gray);
+  --color-slate:          var(--tt-slate);
+  --color-charcoal:       var(--tt-charcoal);
+  --color-muted-text:     var(--tt-muted-text);
+  --color-muted-fill:     var(--tt-muted-fill);
+
+  /* Semantic */
+  --color-danger:         var(--tt-danger);
+  --color-danger-tint:    var(--tt-danger-tint);
+  --color-success:        var(--tt-success);
+  --color-success-tint:   var(--tt-success-tint);
+
+  /* Dark-section palette */
+  --color-dark-surface:        var(--tt-dark-surface);
+  --color-dark-text-primary:   var(--tt-dark-text-primary);
+  --color-dark-text-muted:     var(--tt-dark-text-muted);
+  --color-dark-text-faint:     var(--tt-dark-text-faint);
+  --color-dark-rule:           var(--tt-dark-rule);
+  --color-dark-fill:           var(--tt-dark-fill);
+  --color-dark-accent-green:   var(--tt-dark-accent-green);
+  --color-dark-accent-amber:   var(--tt-dark-accent-amber);
+
+  /* Typography */
+  --font-display: var(--tt-font-display);
+  --font-heading: var(--tt-font-heading);
+  --font-body:    var(--tt-font-body);
+  --font-accent:  var(--tt-font-accent);
+
+  /* Elevation */
+  --shadow-card:       var(--tt-shadow-card);
+  --shadow-soft:       var(--tt-shadow-soft);
+  --shadow-amber-glow: var(--tt-shadow-amber-glow);
+
+  /* Radius */
+  --radius-tt-sm:   var(--tt-radius-sm);
+  --radius-tt-md:   var(--tt-radius-md);
+  --radius-tt-lg:   var(--tt-radius-lg);
+  --radius-tt-pill: var(--tt-radius-pill);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   :root — legacy brand variable aliases + shadcn/ui HSL vars
+   Brand vars now point at --tt-* tokens instead of raw hex.
+   Resulting values are identical — no visual change.
+   ───────────────────────────────────────────────────────────────── */
+:root {
+  /* ── Brand color aliases (same names, now pointing at tokens) ── */
+  --trail-green:       var(--tt-green-500);
+  --trail-green-dark:  var(--tt-green-700);
+  --trail-green-light: var(--tt-green-100);
+  --deep-teal:         var(--tt-teal-500);
+  --deep-teal-light:   var(--tt-teal-100);
+  --sky-blue:          var(--tt-teal-300);
+  --sky-blue-light:    #E0F0F7;             /* kept as hex — no exact token */
+  --sun-amber:         var(--tt-amber-500);
+  --sun-amber-dark:    var(--tt-amber-700);
+  --off-white:         var(--tt-trail-light);
+  --stone:             var(--tt-warm-gray);
+  --charcoal:          var(--tt-charcoal);
+  --slate:             var(--tt-slate);
+
+  /* ── shadcn/ui HSL semantic vars (unchanged) ───────────────────  */
+  --background: 250 25% 98%;
+  --foreground: 145 5% 16%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 145 5% 16%;
+  --card-border: 120 3% 88%;
+
   --popover: 0 0% 100%;
   --popover-foreground: 145 5% 16%;
   --popover-border: 120 3% 88%;
-  
-  --primary: 141 39% 30%; /* trail-green #2F6B3F */
+
+  --primary: 141 39% 30%;
   --primary-foreground: 0 0% 100%;
-  
-  --secondary: 191 46% 34%; /* deep-teal #2F6F7E */
+
+  --secondary: 191 46% 34%;
   --secondary-foreground: 0 0% 100%;
-  
-  --muted: 120 3% 88%; /* stone #E2E4E1 */
-  --muted-foreground: 150 3% 30%; /* slate #4A4F4D */
-  
-  --accent: 37 91% 55%; /* sun-amber #F5A623 */
-  --accent-foreground: 145 5% 16%; /* charcoal #2A2E2C */
-  
+
+  --muted: 120 3% 88%;
+  --muted-foreground: 150 3% 30%;
+
+  --accent: 37 91% 55%;
+  --accent-foreground: 145 5% 16%;
+
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
-  
-  --border: 120 3% 88%; /* stone #E2E4E1 */
+
+  --border: 120 3% 88%;
   --input: 120 3% 88%;
   --ring: 141 39% 30%;
-  
+
   --sidebar: 250 25% 98%;
   --sidebar-foreground: 145 5% 16%;
   --sidebar-border: 120 3% 88%;
@@ -129,46 +221,52 @@
   --chart-4: 200 37% 64%;
   --chart-5: 141 43% 20%;
 
-  --app-font-sans: 'Open Sans', sans-serif;
+  /* ── App font vars (used by @theme inline above) ─────────────── */
+  --app-font-sans:  'Open Sans', sans-serif;
   --app-font-serif: Georgia, serif;
-  --app-font-mono: Menlo, monospace;
+  --app-font-mono:  Menlo, monospace;
+
+  /* ── Misc ─────────────────────────────────────────────────────── */
   --radius: .5rem;
 
   --shadow-sm: 0px 2px 4px rgba(0,0,0,0.05);
-  --shadow: 0px 4px 8px rgba(0,0,0,0.08);
+  --shadow:    0px 4px 8px rgba(0,0,0,0.08);
   --shadow-md: 0px 8px 16px rgba(0,0,0,0.1);
   --shadow-lg: 0px 12px 24px rgba(0,0,0,0.12);
 }
 
 .dark {
-  --background: 145 5% 16%; /* charcoal */
-  --foreground: 250 25% 98%; /* off-white */
-  
+  --background: 145 5% 16%;
+  --foreground: 250 25% 98%;
+
   --card: 150 5% 20%;
   --card-foreground: 250 25% 98%;
   --card-border: 150 3% 30%;
-  
+
   --popover: 150 5% 20%;
   --popover-foreground: 250 25% 98%;
   --popover-border: 150 3% 30%;
-  
+
   --primary: 141 39% 40%;
   --primary-foreground: 0 0% 100%;
-  
+
   --secondary: 191 46% 44%;
   --secondary-foreground: 0 0% 100%;
-  
+
   --muted: 150 5% 25%;
   --muted-foreground: 120 3% 88%;
-  
+
   --accent: 37 91% 55%;
   --accent-foreground: 145 5% 16%;
-  
+
   --border: 150 3% 30%;
   --input: 150 3% 30%;
   --ring: 141 39% 40%;
 }
 
+/* ─────────────────────────────────────────────────────────────────
+   BASE LAYER
+   ───────────────────────────────────────────────────────────────── */
 @layer base {
   * {
     @apply border-border;
@@ -186,14 +284,17 @@
   }
 }
 
-/* Accessible focus rings — never hide focus for keyboard users */
+/* ─────────────────────────────────────────────────────────────────
+   FOCUS RINGS — accessible, overrides brand-book spec
+   2px solid trail-green / 2px offset is more accessible than the
+   soft amber glow the brand book specifies. System follows the site.
+   ───────────────────────────────────────────────────────────────── */
 :focus-visible {
-  outline: 2px solid #2F6B3F;
+  outline: 2px solid var(--tt-green-500);
   outline-offset: 2px;
   border-radius: 4px;
 }
 
-/* Remove outline only for pointer/mouse users */
 :focus:not(:focus-visible) {
   outline: none;
 }
