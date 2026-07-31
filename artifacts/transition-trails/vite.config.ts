@@ -4,6 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 import { visualizer } from "rollup-plugin-visualizer";
+import { tokenImportsPlugin } from "./src/styles/vite-plugin-token-imports.js";
 
 const rawPort = process.env.PORT;
 
@@ -30,6 +31,7 @@ if (!basePath) {
 export default defineConfig({
   base: basePath,
   plugins: [
+    tokenImportsPlugin(),
     react(),
     tailwindcss(),
     runtimeErrorOverlay(),
