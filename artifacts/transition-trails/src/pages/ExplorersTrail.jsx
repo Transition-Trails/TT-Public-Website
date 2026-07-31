@@ -14,7 +14,7 @@ export default function ExplorersTrail() {
       />
 
       {/* SECTION: Hero */}
-      <section className="pt-24 pb-20 px-5 md:px-10" style={{ background: 'linear-gradient(135deg, var(--tt-trail-green) 0%, var(--tt-green-mid) 50%, var(--tt-teal-300) 100%)' }}>
+      <section className="bg-gradient-explorer pt-24 pb-20 px-5 md:px-10">
         <div className="max-w-[1280px] mx-auto">
 
           {/* Breadcrumb */}
@@ -84,7 +84,7 @@ export default function ExplorersTrail() {
       </section>
 
       {/* SECTION: Pre-launch Banner */}
-      <section style={{ background: 'linear-gradient(135deg, var(--tt-deep-teal) 0%, var(--tt-trail-green) 100%)' }} className="py-10 px-5 md:px-10">
+      <section className="bg-gradient-teal-to-green py-10 px-5 md:px-10">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-12">
           <div className="flex-1">
             <div className="font-['Open_Sans'] font-bold text-[11px] tracking-[2px] uppercase text-teal-300 mb-2">LAUNCHING OCTOBER 1, 2026</div>

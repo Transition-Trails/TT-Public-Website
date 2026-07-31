@@ -13,12 +13,7 @@ export default function NonprofitAssessment() {
       />
 
       {/* Hero */}
-      <section
-        className="pt-24 pb-20 px-5 md:px-10"
-        style={{
-          background: "linear-gradient(135deg, var(--tt-teal-700) 0%, var(--tt-deep-teal) 100%)",
-        }}
-      >
+      <section className="bg-gradient-teal-simple pt-24 pb-20 px-5 md:px-10">
         <div className="max-w-[860px] mx-auto text-center">
           <div className="inline-block bg-sun-amber/20 border border-sun-amber/30 text-sun-amber font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-4 backdrop-blur-sm">
             FOR NONPROFITS

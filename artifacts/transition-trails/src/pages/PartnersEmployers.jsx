@@ -15,7 +15,7 @@ export default function PartnersEmployers() {
       />
 
       {/* HERO */}
-      <section style={{ background: "linear-gradient(135deg, var(--tt-teal-700) 0%, var(--tt-deep-teal) 100%)" }} className="py-24 px-8">
+      <section className="bg-gradient-teal-simple py-24 px-8">
         <motion.div className="max-w-7xl mx-auto" initial="hidden" animate="show" variants={stagger}>
           <motion.p variants={fadeUp} className="font-['Open_Sans'] text-xs font-semibold uppercase tracking-[0.15em] text-sun-amber mb-3">FOR EMPLOYERS</motion.p>
           <motion.h1 variants={fadeUp} className="font-['Fraunces'] font-bold text-[clamp(2.5rem,5vw,3.75rem)] text-white leading-tight mb-6 max-w-3xl">Invest in your Salesforce team.</motion.h1>

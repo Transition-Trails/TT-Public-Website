@@ -107,8 +107,14 @@
        because :focus-visible requires a CSS rule, not just a custom property. */
 
   /* ── Approved gradients (135deg) ────────────────────────────── */
-  --tt-gradient-green: linear-gradient(135deg, var(--tt-green-700), var(--tt-trail-green));
-  --tt-gradient-teal:  linear-gradient(135deg, var(--tt-teal-700), var(--tt-deep-teal) 55%, var(--tt-green-700));
-  --tt-gradient-deep:  linear-gradient(135deg, var(--tt-green-700), var(--tt-trail-green) 55%, var(--tt-deep-teal));
+  --tt-gradient-green:         linear-gradient(135deg, var(--tt-green-700), var(--tt-trail-green));
+  --tt-gradient-teal:          linear-gradient(135deg, var(--tt-teal-700), var(--tt-deep-teal) 55%, var(--tt-green-700));
+  --tt-gradient-deep:          linear-gradient(135deg, var(--tt-green-700), var(--tt-trail-green) 55%, var(--tt-deep-teal));
+  /* 2-stop teal: teal-700 → deep-teal (PartnersEmployers hero, TrailOfMastery callout) */
+  --tt-gradient-teal-simple:   linear-gradient(135deg, var(--tt-teal-700), var(--tt-deep-teal));
+  /* Explorer hero: trail-green → green-mid → teal-300 */
+  --tt-gradient-explorer:      linear-gradient(135deg, var(--tt-trail-green), var(--tt-green-mid) 50%, var(--tt-teal-300));
+  /* Explorer banner: deep-teal → trail-green */
+  --tt-gradient-teal-to-green: linear-gradient(135deg, var(--tt-deep-teal), var(--tt-trail-green));
 
 }

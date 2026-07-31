@@ -10,7 +10,7 @@ function DropItem({ href, label, desc, variant = "default", onClick }) {
       <div className={`font-['Open_Sans'] font-semibold text-[14px] mb-0.5 transition-colors ${
         variant === "accent" ? "text-amber-700" : "text-charcoal group-hover:text-trail-green"
       }`}>{label}</div>
-      {desc && <div className="font-['Open_Sans'] text-[12px] text-muted-text leading-[1.4]">{desc}</div>}
+      {desc && <div className="font-['Open_Sans'] text-[12px] text-cool-gray leading-[1.4]">{desc}</div>}
     </Link>
   );
 }
@@ -21,7 +21,7 @@ function Divider() {
 
 function GroupLabel({ children }) {
   return (
-    <div className="font-['Open_Sans'] font-semibold text-[10px] tracking-[1.5px] uppercase text-muted-text px-5 pt-3 pb-1">
+    <div className="font-['Open_Sans'] font-semibold text-[10px] tracking-[1.5px] uppercase text-cool-gray px-5 pt-3 pb-1">
       {children}
     </div>
   );
@@ -214,13 +214,13 @@ export function Nav() {
               <ChevronDown className={`w-5 h-5 transition-transform ${openDropdown === "programs" ? "rotate-180" : ""}`} />
             </button>
             <div className={`flex flex-col pl-4 overflow-hidden transition-all duration-300 ${openDropdown === "programs" ? "mt-4 max-h-[400px]" : "max-h-0"}`}>
-              <div className="font-['Open_Sans'] font-semibold text-[10px] tracking-[1.5px] uppercase text-white/40 pb-1">Featured</div>
+              <div className="font-['Open_Sans'] font-semibold text-[10px] tracking-[1.5px] uppercase text-white/90 pb-1">Featured</div>
               <Link href="/programs/guided-trail" onClick={closeMenu} className="text-white/90 font-['Open_Sans'] text-[16px] py-2 flex items-center gap-2">
                 Guided Trail <span className="bg-amber-100 text-amber-700 font-bold text-[10px] uppercase px-1.5 py-0.5 rounded">Flagship</span>
               </Link>
-              <Link href="/scholarship-application" onClick={closeMenu} className="text-dark-accent-green font-['Open_Sans'] font-semibold text-[16px] py-2">Trail Forward Scholarship</Link>
+              <Link href="/scholarship-application" onClick={closeMenu} className="text-white/90 font-['Open_Sans'] font-semibold text-[16px] py-2">Trail Forward Scholarship</Link>
               <div className="h-px bg-white/10 my-2" />
-              <div className="font-['Open_Sans'] font-semibold text-[10px] tracking-[1.5px] uppercase text-white/40 pb-1">All Programs</div>
+              <div className="font-['Open_Sans'] font-semibold text-[10px] tracking-[1.5px] uppercase text-white/90 pb-1">All Programs</div>
               <Link href="/programs" onClick={closeMenu} className="text-white/90 font-['Open_Sans'] text-[16px] py-2">All Programs</Link>
               <Link href="/programs/digital-compass" onClick={closeMenu} className="text-white/90 font-['Open_Sans'] text-[16px] py-2">Digital Compass</Link>
               <div className="h-px bg-white/10 my-2" />
@@ -238,7 +238,7 @@ export function Nav() {
             <div className={`flex flex-col pl-4 overflow-hidden transition-all duration-300 ${openDropdown === "nonprofit" ? "mt-4 max-h-[300px]" : "max-h-0"}`}>
               <Link href="/programs/digital-compass" onClick={closeMenu} className="text-white/90 font-['Open_Sans'] text-[16px] py-2">Digital Compass</Link>
               <Link href="/nonprofit-assessment" onClick={closeMenu} className="text-white/90 font-['Open_Sans'] text-[16px] py-2">How Partnerships Work</Link>
-              <Link href="/nonprofit-assessment" onClick={closeMenu} className="text-sun-amber font-['Open_Sans'] font-semibold text-[16px] py-2">Start Free Assessment →</Link>
+              <Link href="/nonprofit-assessment" onClick={closeMenu} className="text-white/90 font-['Open_Sans'] font-semibold text-[16px] py-2">Start Free Assessment →</Link>
             </div>
           </div>
 
@@ -254,7 +254,7 @@ export function Nav() {
               <Link href="/partners/recruiters" onClick={closeMenu} className="text-white/90 font-['Open_Sans'] text-[16px] py-2">Recruiters</Link>
               <Link href="/partners/employers" onClick={closeMenu} className="text-white/90 font-['Open_Sans'] text-[16px] py-2">Employers</Link>
               <Link href="/board" onClick={closeMenu} className="text-white/90 font-['Open_Sans'] text-[16px] py-2">Board Membership</Link>
-              <Link href="/donate" onClick={closeMenu} className="text-sun-amber font-['Open_Sans'] font-semibold text-[16px] py-2">Donate / Fund a Scholarship →</Link>
+              <Link href="/donate" onClick={closeMenu} className="text-white/90 font-['Open_Sans'] font-semibold text-[16px] py-2">Donate / Fund a Scholarship →</Link>
             </div>
           </div>
 

@@ -11,10 +11,7 @@ export default function BoardApplication() {
       />
 
       {/* Hero */}
-      <section
-        className="pt-24 pb-16 px-5 md:px-10"
-        style={{ background: "linear-gradient(135deg, var(--tt-green-700) 0%, var(--tt-trail-green) 100%)" }}
-      >
+      <section className="bg-gradient-green pt-24 pb-16 px-5 md:px-10">
         <div className="max-w-[860px] mx-auto">
           <div className="font-['Open_Sans'] text-[12px] text-white/50 mb-8 flex items-center gap-2">
             <Link href="/" className="hover:text-white/80 transition-colors">Home</Link>

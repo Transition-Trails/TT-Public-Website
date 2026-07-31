@@ -57,10 +57,8 @@ const DEEP_TEAL        = resolveToken("--tt-deep-teal");    // #2F6F7E  — nav 
 const WHITE            = resolveToken("--tt-white");         // #FFFFFF
 const TRAIL_LIGHT      = resolveToken("--tt-trail-light");   // #FAFAF7  — dropdown hover bg
 const CHARCOAL         = resolveToken("--tt-charcoal");      // #2A2E2C  — dropdown item label
-const MUTED_TEXT       = resolveToken("--tt-muted-text");    // #8C8882  — captions/descs
+const COOL_GRAY        = resolveToken("--tt-cool-gray");     // #6B7280  — dropdown descs/labels (WCAG-safe on white)
 const TRAIL_GREEN      = resolveToken("--tt-trail-green");   // #2F6B3F  — hover label colour
-const SUN_AMBER        = resolveToken("--tt-sun-amber");     // #F5A623  — mobile accent links
-const DARK_ACCENT_GREEN = resolveToken("--tt-dark-accent-green"); // #6BBF85 — mobile green link
 
 // Tailwind built-in colours used directly in Nav (not in tokens.css):
 const TW_AMBER_100 = "#FEF3C7"; // bg-amber-100  (Flagship badge bg)
@@ -123,8 +121,6 @@ function contrastRatio(hex1, hex2) {
 
 // text-white/90  = rgba(255,255,255,0.9) blended on deep-teal nav bar
 const WHITE_90_ON_TEAL  = blendAlpha(WHITE, 0.90, DEEP_TEAL);
-// text-white/40  = rgba(255,255,255,0.4) blended on deep-teal nav bar
-const WHITE_40_ON_TEAL  = blendAlpha(WHITE, 0.40, DEEP_TEAL);
 
 // ── 5. Text-size helpers ──────────────────────────────────────────
 //
@@ -211,17 +207,17 @@ const PAIRS = [
     pxSize:  14, weight: 600,
   },
   {
-    label: "Dropdown: item description (text-muted-text on white)",
+    label: "Dropdown: item description (text-cool-gray on white)",
     state: "desktop-dropdown",
-    textHex: MUTED_TEXT,
+    textHex: COOL_GRAY,
     bgHex:   WHITE,
     pxSize:  12, weight: 400,
     note: "12px body text — requires ≥ 4.5:1",
   },
   {
-    label: "Dropdown: group label (text-muted-text on white) — 'FEATURED', 'ALL PROGRAMS'",
+    label: "Dropdown: group label (text-cool-gray on white) — 'FEATURED', 'ALL PROGRAMS'",
     state: "desktop-dropdown",
-    textHex: MUTED_TEXT,
+    textHex: COOL_GRAY,
     bgHex:   WHITE,
     pxSize:  10, weight: 600,
     note: "10px uppercase label — requires ≥ 4.5:1",
@@ -258,24 +254,23 @@ const PAIRS = [
     pxSize:  16, weight: 400,
   },
   {
-    label: "Mobile: section label (text-white/40 on deep-teal) — 'FEATURED', 'ALL PROGRAMS'",
+    label: "Mobile: section label (text-white/90 on deep-teal) — 'FEATURED', 'ALL PROGRAMS'",
     state: "mobile",
-    textHex: WHITE_40_ON_TEAL,
+    textHex: WHITE_90_ON_TEAL,
     bgHex:   DEEP_TEAL,
     pxSize:  10, weight: 600,
-    note: "Decorative section divider label — still audited for WCAG",
   },
   {
-    label: "Mobile: scholarship link (text-dark-accent-green on deep-teal) — 'Trail Forward Scholarship'",
+    label: "Mobile: scholarship link (text-white/90 on deep-teal) — 'Trail Forward Scholarship'",
     state: "mobile",
-    textHex: DARK_ACCENT_GREEN,
+    textHex: WHITE_90_ON_TEAL,
     bgHex:   DEEP_TEAL,
     pxSize:  16, weight: 600,
   },
   {
-    label: "Mobile: accent link (text-sun-amber on deep-teal) — 'Start Free Assessment', 'Donate'",
+    label: "Mobile: accent link (text-white/90 on deep-teal) — 'Start Free Assessment', 'Donate'",
     state: "mobile",
-    textHex: SUN_AMBER,
+    textHex: WHITE_90_ON_TEAL,
     bgHex:   DEEP_TEAL,
     pxSize:  16, weight: 600,
   },

@@ -95,10 +95,7 @@ export default function TrailOfMastery() {
       />
 
       {/* SECTION 1: Hero */}
-      <section
-        className="pt-24 pb-20 px-5 md:px-10"
-        style={{ background: "linear-gradient(135deg, var(--tt-teal-700) 0%, var(--tt-deep-teal) 55%, var(--tt-green-700) 100%)" }}
-      >
+      <section className="bg-gradient-teal pt-24 pb-20 px-5 md:px-10">
         <div className="max-w-[1280px] mx-auto">
           <div className="font-['Open_Sans'] text-[12px] text-white/50 mb-8 flex items-center gap-2">
             <Link href="/" className="hover:text-white/80 transition-colors">Home</Link>
@@ -301,8 +298,7 @@ export default function TrailOfMastery() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="rounded-2xl p-10 md:p-14 text-center"
-            style={{ background: "linear-gradient(135deg, var(--tt-teal-700) 0%, var(--tt-deep-teal) 100%)" }}
+            className="bg-gradient-teal-simple rounded-2xl p-10 md:p-14 text-center"
           >
             <div className="font-['Open_Sans'] font-semibold text-[11px] tracking-[2px] uppercase text-teal-300 mb-5">COHORT 0 · 2027</div>
             <h2 className="font-['Fraunces'] font-bold text-[34px] md:text-[40px] text-white mb-6">

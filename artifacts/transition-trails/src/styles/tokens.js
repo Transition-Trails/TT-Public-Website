@@ -106,6 +106,9 @@ export const TT_SHADOW_SOFT       = "var(--tt-shadow-soft)";
 export const TT_SHADOW_AMBER_GLOW = "var(--tt-shadow-amber-glow)";
 
 // ── Approved gradients (135deg) ─────────────────────
-export const TT_GRADIENT_GREEN = "var(--tt-gradient-green)";
-export const TT_GRADIENT_TEAL  = "var(--tt-gradient-teal)";
-export const TT_GRADIENT_DEEP  = "var(--tt-gradient-deep)";
+export const TT_GRADIENT_GREEN         = "var(--tt-gradient-green)";
+export const TT_GRADIENT_TEAL          = "var(--tt-gradient-teal)";
+export const TT_GRADIENT_DEEP          = "var(--tt-gradient-deep)";
+export const TT_GRADIENT_TEAL_SIMPLE   = "var(--tt-gradient-teal-simple)";
+export const TT_GRADIENT_EXPLORER      = "var(--tt-gradient-explorer)";
+export const TT_GRADIENT_TEAL_TO_GREEN = "var(--tt-gradient-teal-to-green)";

@@ -22,12 +22,7 @@ export default function Waitlist() {
       />
 
       {/* HERO */}
-      <section
-        className="pt-24 pb-20 px-5 md:px-10"
-        style={{
-          background: "linear-gradient(135deg, var(--tt-green-700) 0%, var(--tt-trail-green) 55%, var(--tt-deep-teal) 100%)",
-        }}
-      >
+      <section className="bg-gradient-deep pt-24 pb-20 px-5 md:px-10">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div initial="hidden" animate="show" variants={stagger}>
             <motion.div variants={fadeUp}>
