@@ -2,11 +2,10 @@ import { CTAButton } from "./CTAButton";
 
 export function ProgramCard({ program, height = "standard" }) {
   const isFeatured = height === "featured";
-  const heightClass = isFeatured ? "h-[460px]" : "h-[420px]";
   const borderClass = isFeatured ? "border-2 border-[#2F6B3F]" : "border border-[#E2E4E1]";
 
   return (
-    <div className={`w-[240px] ${heightClass} bg-white rounded-2xl ${borderClass} shadow-sm hover:shadow-md transition-shadow flex flex-col overflow-hidden relative`}>
+    <div className={`bg-white rounded-2xl ${borderClass} shadow-sm hover:shadow-md transition-shadow flex flex-col overflow-hidden relative`}>
 
       {/* 4px top accent bar */}
       <div className="h-1 w-full shrink-0" style={{ backgroundColor: program.accent }} />
@@ -19,32 +18,30 @@ export function ProgramCard({ program, height = "standard" }) {
       )}
 
       {/* Card body */}
-      <div className="p-6 flex flex-col flex-1 gap-4">
+      <div className="p-6 flex flex-col flex-1 gap-3">
 
         {/* a) Tier label */}
-        <div className="text-[10px] font-semibold uppercase tracking-[0.12em] text-[#6B7280]">
+        <div className="text-[10px] font-semibold uppercase tracking-[0.12em] text-[#6B7280] flex-none">
           {program.tier}
         </div>
 
         {/* b) Program name */}
-        <h3 className="font-['Fraunces'] font-bold text-[20px] text-[#2A2E2C] leading-tight -mt-2">
+        <h3 className="font-['Fraunces'] font-bold text-[20px] text-[#2A2E2C] leading-tight flex-none -mt-1">
           {program.name}
         </h3>
 
-        {/* c) Description */}
-        <p className="font-['Open_Sans'] text-[13px] text-[#6B7280] italic leading-relaxed min-h-[60px] flex-none -mt-2">
+        {/* c) Description — min-h holds space for the longest card */}
+        <p className="font-['Open_Sans'] text-[13px] text-[#6B7280] italic leading-relaxed flex-none min-h-[80px] -mt-1">
           {program.whoFor}
         </p>
 
-        {/* Spacer — pushes price block to consistent position across all cards */}
-        <div className="flex-1" />
-
-        {/* d) Price block */}
-        <div className="flex-none">
+        {/* d) Price block — mt-auto pins it and everything below to the bottom */}
+        <div className="flex-none mt-auto">
           <div className="font-['Fraunces'] font-bold text-[28px] text-[#2A2E2C] leading-none">
             {program.price}
           </div>
-          <div className="font-['Open_Sans'] text-[11px] text-[#6B7280] mt-1 leading-snug">
+          {/* min-h keeps the highlight + button rows level across all cards */}
+          <div className="font-['Open_Sans'] text-[11px] text-[#6B7280] mt-1 leading-snug min-h-[52px]">
             {program.priceNote}
           </div>
         </div>
