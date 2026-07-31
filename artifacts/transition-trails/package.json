@@ -10,6 +10,7 @@
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "analyze": "ANALYZE=true vite build --config vite.config.ts",
     "lint": "eslint src/ --ext .js,.jsx,.ts,.tsx",
+    "generate:tokens": "node src/styles/generate-tokens.js",
     "check:tokens": "node src/styles/check-tokens-sync.js",
     "check:imports": "node src/styles/check-token-imports.js",
     "check:contrast": "node src/styles/check-nav-contrast.js"
