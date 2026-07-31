@@ -71,3 +71,34 @@ export const TT_DARK_RULE          = "var(--tt-dark-rule)";
 export const TT_DARK_FILL          = "var(--tt-dark-fill)";
 export const TT_DARK_ACCENT_GREEN  = "var(--tt-dark-accent-green)";
 export const TT_DARK_ACCENT_AMBER  = "var(--tt-dark-accent-amber)";
+
+// ── Typography ───────────────────────────────────────────────────
+export const TT_FONT_DISPLAY = "var(--tt-font-display)";  // H1, H2 only
+export const TT_FONT_HEADING = "var(--tt-font-heading)";  // H3–H4, buttons, labels
+export const TT_FONT_BODY    = "var(--tt-font-body)";
+export const TT_FONT_ACCENT  = "var(--tt-font-accent)";
+
+// ── Spacing (8px scale) ──────────────────────────────────────────
+export const TT_SPACE_1  = "var(--tt-space-1)";
+export const TT_SPACE_2  = "var(--tt-space-2)";
+export const TT_SPACE_4  = "var(--tt-space-4)";
+export const TT_SPACE_6  = "var(--tt-space-6)";
+export const TT_SPACE_8  = "var(--tt-space-8)";
+export const TT_SPACE_12 = "var(--tt-space-12)";
+export const TT_SPACE_16 = "var(--tt-space-16)";
+
+// ── Radius ───────────────────────────────────────────────────────
+export const TT_RADIUS_SM   = "var(--tt-radius-sm)";
+export const TT_RADIUS_MD   = "var(--tt-radius-md)";
+export const TT_RADIUS_LG   = "var(--tt-radius-lg)";
+export const TT_RADIUS_PILL = "var(--tt-radius-pill)";
+
+// ── Elevation ────────────────────────────────────────────────────
+export const TT_SHADOW_CARD       = "var(--tt-shadow-card)";
+export const TT_SHADOW_SOFT       = "var(--tt-shadow-soft)";
+export const TT_SHADOW_AMBER_GLOW = "var(--tt-shadow-amber-glow)";
+
+// ── Approved gradients ───────────────────────────────────────────
+export const TT_GRADIENT_GREEN = "var(--tt-gradient-green)";
+export const TT_GRADIENT_TEAL  = "var(--tt-gradient-teal)";
+export const TT_GRADIENT_DEEP  = "var(--tt-gradient-deep)";
