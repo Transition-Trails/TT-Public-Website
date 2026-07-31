@@ -48,7 +48,7 @@ export default function PartnersEmployers() {
                   <h3 className="font-['Poppins'] font-semibold text-[20px] text-[#2A2E2C] mb-3">Hire Guided Trail graduates.</h3>
                   <p className="font-['Open_Sans'] text-[15px] text-[#6B7280] leading-relaxed mb-4">Guided Trail graduates are Salesforce Platform Administrator certified with real nonprofit client project experience and a documented portfolio. Skip the resume lottery — hire professionals who have already proven they can deliver in a Salesforce environment.</p>
                   <div className="flex flex-col gap-2">
-                    {["Platform Administrator certified", "Real nonprofit client project experience", "Documented portfolio of deliverables", "Coaching-supported throughout the program"].map(f => (
+                    {["Platform Administrator certified", "Supervised nonprofit project delivery — sandbox-based", "Documented portfolio of deliverables", "Coaching-supported throughout the program"].map(f => (
                       <div key={f} className="flex items-center gap-2"><Check size={14} stroke="#2F6B3F" /><span className="font-['Open_Sans'] text-[13px] text-[#2A2E2C]">{f}</span></div>
                     ))}
                   </div>

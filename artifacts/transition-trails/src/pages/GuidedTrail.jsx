@@ -9,8 +9,8 @@ export default function GuidedTrail() {
   return (
     <div className="flex flex-col min-h-screen">
       <PageMeta
-        title="Guided Trail | Real-Client Salesforce Practicum | Transition Trails"
-        description="Close the experience gap. Work with a real nonprofit client, build a job-ready portfolio piece, and get hired. Guided Trail Cohort 1 waitlist open. Starting at $1,497."
+        title="Guided Trail | Supervised Salesforce Practicum | Transition Trails"
+        description="Close the experience gap. Work real nonprofit requirements in a sandbox with a coach beside you, build a job-ready portfolio piece, and get hired. Guided Trail Cohort 1 waitlist open. Starting at $1,497."
         path="/programs/guided-trail"
       />
       <section className="bg-gradient-to-br from-[#1E4A2A] to-[#2F6B3F] pt-24 pb-20 px-5 md:px-10">
@@ -26,7 +26,7 @@ export default function GuidedTrail() {
               Certified. Now prove it.
             </p>
             <p className="font-['Open_Sans'] text-[18px] text-white/90 leading-[1.6] mb-8">
-              You passed the Admin cert. You've applied to dozens of jobs. You keep getting rejected for lack of experience. That cycle ends here. Guided Trail pairs you with a real nonprofit client for a real 12-week Salesforce implementation — and you walk away with a portfolio piece employers actually care about.
+              You passed the Admin cert. You've applied to dozens of jobs. You keep getting rejected for lack of experience. That cycle ends here. Guided Trail puts you on real nonprofit work for twelve weeks, in a sandbox, with an Associate Coach holding the client relationship — and you walk away with a portfolio piece employers actually care about.
             </p>
           </div>
           
@@ -128,7 +128,7 @@ export default function GuidedTrail() {
             <div className="bg-white border border-[#E2E4E1] rounded-xl p-8">
               <div className="font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] text-[#2F6B3F] mb-3">Layer 3</div>
               <h4 className="font-['Poppins'] font-bold text-[20px] text-[#2A2E2C] mb-3">Digital Compass Client Opportunities</h4>
-              <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.7]">Depending on your cohort workload and demonstrated experience, you may have the opportunity to work directly with Digital Compass nonprofit clients — real organizations with real Salesforce needs. Not every learner reaches this level in 12 weeks, but when you do, it is the most compelling portfolio entry of all.</p>
+              <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.7]">Depending on your cohort workload and demonstrated experience, you may be assigned work from a Digital Compass nonprofit client — real organizations with real Salesforce needs. You build in a sandbox, and your Associate Coach carries requirements from the client to you and results back to the client, so any corrections happen in private rather than in front of the organization being served. Not every learner reaches this level in 12 weeks, but when you do, it is the most compelling portfolio entry of all.</p>
             </div>
           </div>
         </div>

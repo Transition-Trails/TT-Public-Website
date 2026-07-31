@@ -116,7 +116,7 @@ export default function PartnersRecruiters() {
               <ul className="space-y-3 mt-auto">
                 {[
                   "Platform Administrator certified",
-                  "Real nonprofit client project experience",
+                  "Supervised nonprofit project delivery — sandbox-based",
                   "Portfolio of documented deliverables",
                   "Coached by senior Salesforce professionals",
                 ].map(item => (

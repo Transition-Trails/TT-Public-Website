@@ -96,7 +96,7 @@ export function Nav() {
             {programsOpen && (
               <div id="programs-menu" role="menu" aria-label="Programs" className={`${dropdownBase} left-0 w-[320px]`}>
                 <GroupLabel>Featured</GroupLabel>
-                <DropItem href="/programs/guided-trail" label={<span className="flex items-center gap-2">Guided Trail <span className="inline-block bg-[#FEF3DC] text-[#D4890A] font-['Open_Sans'] font-bold text-[10px] tracking-[0.5px] uppercase px-1.5 py-0.5 rounded">Flagship</span></span>} desc="Our flagship program — real nonprofit clients" onClick={() => setProgramsOpen(false)} />
+                <DropItem href="/programs/guided-trail" label={<span className="flex items-center gap-2">Guided Trail <span className="inline-block bg-[#FEF3DC] text-[#D4890A] font-['Open_Sans'] font-bold text-[10px] tracking-[0.5px] uppercase px-1.5 py-0.5 rounded">Flagship</span></span>} desc="Our flagship program — supervised nonprofit work" onClick={() => setProgramsOpen(false)} />
                 <DropItem href="/scholarship-application" label="Trail Forward Scholarship" desc="Need-based funding for Guided Trail" onClick={() => setProgramsOpen(false)} />
                 <Divider />
                 <GroupLabel>All Programs</GroupLabel>

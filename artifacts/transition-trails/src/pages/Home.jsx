@@ -200,7 +200,7 @@ export default function Home() {
               </div>
               <h3 className="font-['Poppins'] font-bold text-[22px] text-[#2A2E2C] mb-4">Learners</h3>
               <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] leading-[1.65] mb-6">
-                Whether you're just discovering Salesforce, working toward your certification, or certified and ready to build real experience — Transition Trails meets you where you are. Under the guidance of experienced coaches, you will work on real Salesforce solutions for real nonprofit clients, earning the portfolio proof that moves careers forward.
+                Whether you're just discovering Salesforce, working toward your certification, or certified and ready to build real experience — Transition Trails meets you where you are. Under the guidance of experienced coaches, you will work on real Salesforce solutions for nonprofit organizations, earning the portfolio proof that moves careers forward.
               </p>
               <ul className="flex flex-col gap-3 mb-8">
                 {[

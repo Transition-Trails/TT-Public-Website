@@ -316,7 +316,7 @@ export default function Coaches() {
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">WHAT COACHING LOOKS LIKE</div>
             <h2 className="font-['Poppins'] font-bold text-[34px] text-[#2A2E2C] mb-6">Twelve weeks. Real learners. Real work.</h2>
             <div className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] max-w-[860px] leading-[1.65] space-y-4">
-              <p>TT coaches work with cohorts of learners through the Guided Trail — 12 weeks of structured Salesforce project work delivered to real nonprofit clients using the RESOLVE methodology.</p>
+              <p>TT coaches work with cohorts of learners through the Guided Trail — 12 weeks of structured Salesforce project work for real nonprofit organizations using the RESOLVE methodology. The coach holds every client relationship: learners build in sandboxes and never face the client directly, which means a coach can stop a learner mid-decision and correct them without an audience.</p>
               <p>Every cohort has a defined structure. Every session has a purpose. Coaches are not left to figure out the curriculum — TT provides the framework, the capstone project, and the client relationship. Your role is to guide learners through the work, push their thinking, and help them produce deliverables they are proud of.</p>
               <p>You will work with learners who are Career Starters figuring out if Salesforce is for them, Career Builders who have the cert and need the experience, and Career Pivoters who left something else behind to build something new. Their success is your measure.</p>
             </div>
