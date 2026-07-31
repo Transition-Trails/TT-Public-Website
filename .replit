@@ -24,6 +24,10 @@ args = "tokens-sync"
 task = "workflow.run"
 args = "contrast-audit"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "token-imports"
+
 [[workflows.workflow]]
 name = "tokens-sync"
 author = "agent"
@@ -42,6 +46,17 @@ author = "agent"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "pnpm --filter @workspace/transition-trails run check:contrast"
+
+[workflows.workflow.metadata]
+isValidation = true
+
+[[workflows.workflow]]
+name = "token-imports"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "pnpm --filter @workspace/transition-trails run check:imports"
 
 [workflows.workflow.metadata]
 isValidation = true

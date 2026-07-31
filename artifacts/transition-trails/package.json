@@ -11,6 +11,7 @@
     "analyze": "ANALYZE=true vite build --config vite.config.ts",
     "lint": "eslint src/ --ext .js,.jsx,.ts,.tsx",
     "check:tokens": "node src/styles/check-tokens-sync.js",
+    "check:imports": "node src/styles/check-token-imports.js",
     "check:contrast": "node src/styles/check-nav-contrast.js"
   },
   "devDependencies": {
