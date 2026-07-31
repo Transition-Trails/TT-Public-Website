@@ -89,8 +89,7 @@ export default function Board() {
 
       {/* HERO */}
       <section
-        className="pt-24 pb-20 px-5 md:px-10"
-        style={{ background: "linear-gradient(135deg, var(--tt-green-700) 0%, var(--tt-trail-green) 100%)" }}
+        className="pt-24 pb-20 px-5 md:px-10 bg-gradient-green"
       >
         <div className="max-w-7xl mx-auto">
           <div className="font-['Open_Sans'] text-[12px] text-white/50 mb-8 flex items-center gap-2">

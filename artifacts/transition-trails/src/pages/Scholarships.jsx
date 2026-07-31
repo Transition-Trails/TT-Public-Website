@@ -79,8 +79,7 @@ export default function Scholarships() {
 
       {/* SECTION 2: Hero */}
       <section
-        className="pt-24 pb-20 px-5 md:px-10"
-        style={{ background: "linear-gradient(135deg, var(--tt-green-700) 0%, var(--tt-trail-green) 55%, var(--tt-deep-teal) 100%)" }}
+        className="pt-24 pb-20 px-5 md:px-10 bg-gradient-deep"
       >
         <div className="max-w-[1280px] mx-auto">
           {/* Breadcrumb */}

@@ -23,8 +23,7 @@ export default function PartnersRecruiters() {
 
       {/* HERO */}
       <section
-        className="py-24 px-8"
-        style={{ background: "linear-gradient(135deg, var(--tt-green-700) 0%, var(--tt-trail-green) 100%)" }}
+        className="py-24 px-8 bg-gradient-green"
       >
         <div className="max-w-7xl mx-auto">
           <motion.div

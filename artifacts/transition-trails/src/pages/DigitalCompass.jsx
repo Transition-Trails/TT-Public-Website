@@ -96,8 +96,7 @@ export default function DigitalCompass() {
 
       {/* SECTION 2: Hero */}
       <section
-        className="pt-24 pb-20 px-5 md:px-10"
-        style={{ background: "linear-gradient(135deg, var(--tt-teal-700) 0%, var(--tt-deep-teal) 55%, var(--tt-green-700) 100%)" }}
+        className="pt-24 pb-20 px-5 md:px-10 bg-gradient-teal"
       >
         <div className="max-w-[1280px] mx-auto">
           <div className="font-['Open_Sans'] text-[12px] text-white/50 mb-8 flex items-center gap-2">

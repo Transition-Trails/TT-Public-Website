@@ -173,6 +173,11 @@
   --radius-tt-md:   var(--tt-radius-md);
   --radius-tt-lg:   var(--tt-radius-lg);
   --radius-tt-pill: var(--tt-radius-pill);
+
+  /* Gradients — wired to approved tokens so bg-gradient-* classes stay in sync */
+  --background-image-gradient-green: var(--tt-gradient-green);
+  --background-image-gradient-teal:  var(--tt-gradient-teal);
+  --background-image-gradient-deep:  var(--tt-gradient-deep);
 }
 
 /* ─────────────────────────────────────────────────────────────────
