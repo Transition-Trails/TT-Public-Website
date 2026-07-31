@@ -1,3 +1,5 @@
+import { TT_TRAIL_GREEN, TT_DEEP_TEAL } from "../styles/tokens.js";
+
 // FOUNDER_PHOTOS — swap file paths when headshots are provided
 export const FOUNDER_PHOTOS = {
   AL: null, // TODO: import ALPhoto from '@assets/AL.jpg'
@@ -12,7 +14,7 @@ export const FOUNDERS = [
     name: "Angela Landrith",
     title: "Co-Founder & CEO",
     role: "The Visionary",
-    accent: "var(--tt-trail-green)",
+    accent: TT_TRAIL_GREEN,
     initials: "AL",
     bio: [
       "Angela spent more than 20 years leading Salesforce transformations for top financial institutions. Her journey from self-taught SQL analyst to Senior Vice President and Salesforce product visionary taught her the value of self-education, mentorship, and creating pathways for others.",
@@ -39,7 +41,7 @@ export const FOUNDERS = [
     name: "Kim Barnes",
     title: "Co-Founder & COO",
     role: "The Builder",
-    accent: "var(--tt-deep-teal)",
+    accent: TT_DEEP_TEAL,
     initials: "KB",
     bio: [
       "Kim brings a deep background in technical leadership and nonprofit training. As a Salesforce Solutions Architect and educator, she's passionate about helping others build confidence through systems thinking and structured learning.",
@@ -65,7 +67,7 @@ export const FOUNDERS = [
     name: "Hugh Richardson",
     title: "Co-Founder & CTO · Solutions Architect",
     role: "The Champion",
-    accent: "var(--tt-trail-green)",
+    accent: TT_TRAIL_GREEN,
     initials: "HR",
     bio: [
       "Hugh Richardson is the proof that the pivot is possible. After 16 years as a truck driver, Hugh made the leap into technology — with Angela as his mentor — and is now a Solutions Architect who leads teams and guides multiple clients through complex Salesforce implementations.",
@@ -91,7 +93,7 @@ export const FOUNDERS = [
     name: "Kel Landrith",
     title: "Co-Founder & Finance Director",
     role: "The Steward",
-    accent: "var(--tt-deep-teal)",
+    accent: TT_DEEP_TEAL,
     initials: "KL",
     bio: [
       "With extensive experience supporting nonprofit organizations and a degree in business from the University of Oklahoma, Kel brings operational excellence and fiscal stewardship to Transition Trails. A lifelong supporter of Angela's work and the nonprofit mission, Kel ensures the organization remains financially sustainable and aligned with its core values.",
