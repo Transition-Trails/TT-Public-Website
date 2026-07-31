@@ -4,32 +4,32 @@ import { Briefcase, Lightbulb, ClipboardList, Leaf, Users, Sparkles, Target, Awa
 
 const BENEFITS = [
   {
-    icon: <Briefcase size={24} color="var(--tt-trail-green)" />,
+    icon: <Briefcase size={24} className="text-trail-green" />,
     title: "Leadership experience",
     body: "Managing a cohort of learners through 12 weeks of real project work develops team leadership, facilitation, and accountability skills that transfer directly to senior Salesforce roles.",
   },
   {
-    icon: <Lightbulb size={24} color="var(--tt-trail-green)" />,
+    icon: <Lightbulb size={24} className="text-trail-green" />,
     title: "Deeper technical thinking",
     body: "Explaining why something works — not just how — forces a level of technical understanding that few professional development experiences match. Coaches consistently report that teaching makes them better at their own jobs.",
   },
   {
-    icon: <ClipboardList size={24} color="var(--tt-trail-green)" />,
+    icon: <ClipboardList size={24} className="text-trail-green" />,
     title: "Resume and LinkedIn credentials",
     body: "Coaching with TT is a verifiable, structured professional experience. Add it to your LinkedIn as a coaching and mentorship role with a real organization, real program, and real outcomes.",
   },
   {
-    icon: <Leaf size={24} color="var(--tt-trail-green)" />,
+    icon: <Leaf size={24} className="text-trail-green" />,
     title: "Explorer's Trail membership",
     body: "Every coaching cohort earns membership credit — 1 month for Coach's Assistants, 3 months for Associate Coaches. Six cohorts earns Lifetime Annual membership. The community you are coaching in stays your community.",
   },
   {
-    icon: <Users size={24} color="var(--tt-trail-green)" />,
+    icon: <Users size={24} className="text-trail-green" />,
     title: "The TT coaching community",
     body: "Coaches are part of TT's inner circle — connected to the founders, to other coaches, and to the broader TT professional ecosystem. The relationships built here are the ones that matter in a Salesforce career.",
   },
   {
-    icon: <Sparkles size={24} color="var(--tt-trail-green)" />,
+    icon: <Sparkles size={24} className="text-trail-green" />,
     title: "What is coming",
     body: "TT is developing a coaching stipend for committed coaches — a financial recognition that reflects the value coaches bring to the program. We will share details when the time is right.",
     dim: true,
@@ -184,7 +184,7 @@ export default function Coaches() {
             <div className="bg-white border-[1.5px] border-warm-gray rounded-2xl overflow-hidden flex flex-col border-t-[6px] border-t-trail-green">
               <div className="p-8 flex flex-col flex-1">
                 <span className="font-['Open_Sans'] font-bold text-[11px] tracking-[1px] uppercase text-trail-green mb-4">ENTRY LEVEL</span>
-                <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mb-4"><Users size={24} color="var(--tt-trail-green)" /></div>
+                <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mb-4"><Users size={24} className="text-trail-green" /></div>
                 <h3 className="font-['Poppins'] font-bold text-[24px] text-charcoal mb-2">Coach's Assistant</h3>
                 <p className="font-['Open_Sans'] font-semibold text-[15px] text-trail-green mb-5">Support a lead coach through a 12-week Guided Trail cohort.</p>
                 <div className="font-['Open_Sans'] text-[14px] text-slate leading-[1.65] space-y-4 mb-6 flex-1">
@@ -203,7 +203,7 @@ export default function Coaches() {
                       "Ready to commit to a full 12-week cohort",
                     ].map(item => (
                       <li key={item} className="flex gap-2 font-['Open_Sans'] text-[13px] text-slate">
-                        <Check size={16} color="var(--tt-trail-green)" className="shrink-0" />{item}
+                        <Check size={16} className="text-trail-green shrink-0" />{item}
                       </li>
                     ))}
                   </ul>
@@ -219,7 +219,7 @@ export default function Coaches() {
                       "Ready to commit to a full 12-week cohort",
                     ].map(item => (
                       <li key={item} className="flex gap-2 font-['Open_Sans'] text-[13px] text-slate">
-                        <Check size={16} color="var(--tt-trail-green)" className="shrink-0" />{item}
+                        <Check size={16} className="text-trail-green shrink-0" />{item}
                       </li>
                     ))}
                   </ul>
@@ -237,7 +237,7 @@ export default function Coaches() {
             <div className="bg-white border-[1.5px] border-warm-gray rounded-2xl overflow-hidden flex flex-col border-t-[6px] border-t-green-700">
               <div className="p-8 flex flex-col flex-1">
                 <span className="font-['Open_Sans'] font-bold text-[11px] tracking-[1px] uppercase text-green-700 mb-4">EXPERIENCED</span>
-                <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style={{background:"rgba(30,74,42,0.08)"}}><Target size={24} color="var(--tt-green-700)" /></div>
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style={{background:"rgba(30,74,42,0.08)"}}><Target size={24} className="text-green-700" /></div>
                 <h3 className="font-['Poppins'] font-bold text-[24px] text-charcoal mb-2">Associate Coach</h3>
                 <p className="font-['Open_Sans'] font-semibold text-[15px] text-green-700 mb-5">Lead a 12-week cohort as the primary coach.</p>
                 <div className="font-['Open_Sans'] text-[14px] text-slate leading-[1.65] space-y-4 mb-6 flex-1">
@@ -275,7 +275,7 @@ export default function Coaches() {
 
           {/* Lifetime callout */}
           <div className="bg-charcoal rounded-xl p-7 text-center">
-            <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-3 mx-auto" style={{background:"rgba(255,255,255,0.12)"}}><Award size={22} color="rgba(255,255,255,0.80)" /></div>
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-3 mx-auto" style={{background:"rgba(255,255,255,0.12)"}}><Award size={22} className="text-white/80" /></div>
             <p className="font-['Poppins'] font-semibold text-[16px] text-white mb-2">Complete 6 coaching cohorts → Lifetime Annual Explorer's Trail membership</p>
             <p className="font-['Open_Sans'] text-[13px]" style={{ color: "rgba(255,255,255,0.55)" }}>Our highest recognition. Reserved for coaches who have given sustained commitment back to the TT community.</p>
           </div>

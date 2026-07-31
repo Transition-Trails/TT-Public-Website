@@ -7,19 +7,19 @@ import testimonialContent from "../content/testimonials.json";
 
 const UNIVERSAL_BENEFITS = [
   {
-    icon: <Calendar size={24} color="var(--tt-deep-teal)" />,
+    icon: <Calendar size={24} className="text-deep-teal" />,
     iconBg: "bg-teal-100",
     title: "Weekly Office Hours",
     body: "Live weekly group sessions with the TT team — bring your Salesforce questions, challenges, and roadblocks. Entry members join the shared weekly group session. Mid members get the weekly group session plus one private monthly session with their team. Full Partner members have their own dedicated weekly private session.",
   },
   {
-    icon: <BookOpen size={24} color="var(--tt-deep-teal)" />,
+    icon: <BookOpen size={24} className="text-deep-teal" />,
     iconBg: "bg-teal-100",
     title: "TrailKit Content Library",
     body: "Access to TT's library of Salesforce how-to content — guides, walkthroughs, and resources built specifically for nonprofits navigating the Salesforce ecosystem.",
   },
   {
-    icon: <Users size={24} color="var(--tt-deep-teal)" />,
+    icon: <Users size={24} className="text-deep-teal" />,
     iconBg: "bg-teal-100",
     title: "Slack Community",
     body: "A members-only Slack workspace connecting Digital Compass nonprofits with the TT team, TT coaches, and each other. Ask questions between sessions, share what you're learning, and tap into the collective expertise of the community.",
@@ -28,19 +28,19 @@ const UNIVERSAL_BENEFITS = [
 
 const WHO_CARDS = [
   {
-    icon: <Lightbulb size={24} color="var(--tt-deep-teal)" />,
+    icon: <Lightbulb size={24} className="text-deep-teal" />,
     iconBg: "bg-teal-100",
     title: "Just getting started",
     body: "Your nonprofit has Salesforce — or is about to get it through the Power of Us grant — but you do not have dedicated Salesforce staff. Digital Compass gives you expert guidance and support without the cost of a full-time admin or a consulting retainer.",
   },
   {
-    icon: <TrendingUp size={24} color="var(--tt-deep-teal)" />,
+    icon: <TrendingUp size={24} className="text-deep-teal" />,
     iconBg: "bg-teal-100",
     title: "Growing and stuck",
     body: "You have been using Salesforce for a while but it is not doing what you need it to do. Data is inconsistent. Processes are manual. Reports do not reflect reality. Digital Compass helps you diagnose what is wrong and fix it systematically.",
   },
   {
-    icon: <Rocket size={24} color="var(--tt-trail-green)" />,
+    icon: <Rocket size={24} className="text-trail-green" />,
     iconBg: "bg-green-100",
     title: "Ready to scale",
     body: "Your Salesforce org is working but you need a strategic partner to help you grow it alongside your mission. Digital Compass Full Partner gives you ongoing project delivery, priority access to TT's learner teams, and a monthly strategic review.",
@@ -49,19 +49,19 @@ const WHO_CARDS = [
 
 const PROJECT_COLS = [
   {
-    icon: <ClipboardList size={24} color="var(--tt-deep-teal)" />,
+    icon: <ClipboardList size={24} className="text-deep-teal" />,
     iconBg: "bg-teal-100",
     title: "What counts as a project request",
     body: "Configuration-based Salesforce work: adding fields and updating page layouts, building flows to automate a process, setting up reports and dashboards, configuring permission sets, building a web-to-case intake form, data cleanup and deduplication, and more. Always declarative — no Apex code, no custom development.",
   },
   {
-    icon: <Users size={24} color="var(--tt-deep-teal)" />,
+    icon: <Users size={24} className="text-deep-teal" />,
     iconBg: "bg-teal-100",
     title: "Who does the work",
     body: "Project requests are delivered by TT coaches and, where appropriate, matched to Guided Trail or Trail of Mastery learner teams under coach supervision. Full Partner members receive priority matching to learner teams — giving them both faster delivery and the benefit of supporting TT's learner pipeline.",
   },
   {
-    icon: <Zap size={24} color="var(--tt-trail-green)" />,
+    icon: <Zap size={24} className="text-trail-green" />,
     iconBg: "bg-green-100",
     title: "Scope and timeline",
     body: "TT reviews every project request for scope before beginning. Requests that fall within the membership model are delivered within an agreed timeline. Requests that are too large in scope for the membership model will be flagged — TT will advise on options including a dedicated project engagement.",
@@ -78,10 +78,10 @@ const ASSESSMENT_COVERS = [
 
 
 function CheckMark() {
-  return <Check size={16} color="var(--tt-trail-green)" className="shrink-0 mt-0.5" />;
+  return <Check size={16} className="text-trail-green shrink-0 mt-0.5" />;
 }
 function CrossMark() {
-  return <X size={16} color="var(--tt-muted-text)" className="shrink-0 mt-0.5" />;
+  return <X size={16} className="text-muted-text shrink-0 mt-0.5" />;
 }
 
 export default function DigitalCompass() {
@@ -272,7 +272,7 @@ export default function DigitalCompass() {
                     "Members-only Slack community",
                   ].map(f => (
                     <li key={f} className="flex items-start gap-2 font-['Open_Sans'] text-[13px] text-charcoal">
-                      <Check size={14} color="var(--tt-trail-green)" className="shrink-0 mt-0.5" />{f}
+                      <Check size={14} className="text-trail-green shrink-0 mt-0.5" />{f}
                     </li>
                   ))}
                 </ul>
@@ -310,7 +310,7 @@ export default function DigitalCompass() {
                     "Annual service contract",
                   ].map(f => (
                     <li key={f} className="flex items-start gap-2 font-['Open_Sans'] text-[13px] text-charcoal">
-                      <Check size={14} color="var(--tt-trail-green)" className="shrink-0 mt-0.5" />{f}
+                      <Check size={14} className="text-trail-green shrink-0 mt-0.5" />{f}
                     </li>
                   ))}
                 </ul>
@@ -348,7 +348,7 @@ export default function DigitalCompass() {
                     "Monthly strategic review call with TT leadership",
                   ].map(f => (
                     <li key={f} className="flex items-start gap-2 font-['Open_Sans'] text-[13px] text-charcoal">
-                      <Check size={14} color="var(--tt-trail-green)" className="shrink-0 mt-0.5" />{f}
+                      <Check size={14} className="text-trail-green shrink-0 mt-0.5" />{f}
                     </li>
                   ))}
                 </ul>

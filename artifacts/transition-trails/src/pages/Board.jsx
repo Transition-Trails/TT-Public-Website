@@ -52,17 +52,17 @@ const INVOLVEMENT_LIST = [
 
 const VALUE_CARDS = [
   {
-    icon: <Leaf size={24} color="rgba(255,255,255,0.80)" />,
+    icon: <Leaf size={24} className="text-white/80" />,
     title: "Ground-floor governance",
     body: "Join before the structure is set. Your expertise helps shape how TT grows — not just whether it grows.",
   },
   {
-    icon: <Users size={24} color="rgba(255,255,255,0.80)" />,
+    icon: <Users size={24} className="text-white/80" />,
     title: "Real mission alignment",
     body: "Workforce development, digital equity, nonprofit technology access — if these matter to you professionally and personally, TT's mission is worth governing.",
   },
   {
-    icon: <ClipboardList size={24} color="rgba(255,255,255,0.80)" />,
+    icon: <ClipboardList size={24} className="text-white/80" />,
     title: "Professional development",
     body: "Nonprofit board service develops governance, fiduciary, and strategic oversight skills that transfer to every professional context. First-time board members are welcome.",
   },
@@ -222,7 +222,7 @@ export default function Board() {
                 <ul className="space-y-3">
                   {EXPERTISE_LIST.map((item) => (
                     <li key={item} className="flex items-start gap-3 font-['Open_Sans'] text-[13px] text-slate">
-                      <Check size={16} color="var(--tt-trail-green)" className="shrink-0 mt-0.5" />
+                      <Check size={16} className="text-trail-green shrink-0 mt-0.5" />
                       {item}
                     </li>
                   ))}
@@ -234,7 +234,7 @@ export default function Board() {
                 <ul className="space-y-3">
                   {INVOLVEMENT_LIST.map((item) => (
                     <li key={item} className="flex items-start gap-3 font-['Open_Sans'] text-[13px] text-slate">
-                      <Check size={16} color="var(--tt-deep-teal)" className="shrink-0 mt-0.5" />
+                      <Check size={16} className="text-deep-teal shrink-0 mt-0.5" />
                       {item}
                     </li>
                   ))}

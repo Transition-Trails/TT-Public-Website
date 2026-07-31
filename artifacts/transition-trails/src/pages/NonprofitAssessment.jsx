@@ -49,7 +49,7 @@ export default function NonprofitAssessment() {
               "Specific to your org's Salesforce setup",
             ].map((point) => (
               <div key={point} className="flex items-center gap-2">
-                <Check size={16} color="var(--tt-sun-amber)" className="shrink-0" />
+                <Check size={16} className="text-sun-amber shrink-0" />
                 <span className="font-['Open_Sans'] text-[15px] text-white/90">{point}</span>
               </div>
             ))}

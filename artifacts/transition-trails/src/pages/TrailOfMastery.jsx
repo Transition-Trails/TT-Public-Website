@@ -18,7 +18,7 @@ const stagger = {
 
 const TRACKS = [
   {
-    icon: <Shield size={24} color="var(--tt-trail-green)" />,
+    icon: <Shield size={24} className="text-trail-green" />,
     iconBg: "bg-green-100",
     name: "Admin Mastery",
     duration: "8 WEEKS",
@@ -26,7 +26,7 @@ const TRACKS = [
     accent: "var(--tt-trail-green)",
   },
   {
-    icon: <ClipboardList size={24} color="var(--tt-deep-teal)" />,
+    icon: <ClipboardList size={24} className="text-deep-teal" />,
     iconBg: "bg-teal-100",
     name: "Business Analyst Mastery",
     duration: "12 WEEKS",
@@ -34,7 +34,7 @@ const TRACKS = [
     accent: "var(--tt-deep-teal)",
   },
   {
-    icon: <Layout size={24} color="var(--tt-deep-teal)" />,
+    icon: <Layout size={24} className="text-deep-teal" />,
     iconBg: "bg-teal-100",
     name: "Product Owner Mastery",
     duration: "12 WEEKS",
@@ -42,7 +42,7 @@ const TRACKS = [
     accent: "var(--tt-deep-teal)",
   },
   {
-    icon: <Code size={24} color="var(--tt-green-700)" />,
+    icon: <Code size={24} className="text-green-700" />,
     iconBg: "bg-green-100",
     name: "Advanced Admin Mastery",
     duration: "16 WEEKS",
@@ -53,7 +53,7 @@ const TRACKS = [
 
 const FUTURE_TRACKS = [
   {
-    icon: <Compass size={24} color="var(--tt-muted-text)" />,
+    icon: <Compass size={24} className="text-muted-text" />,
     iconBg: "bg-muted-fill",
     name: "Solutions Consultant Mastery",
     duration: "16 WEEKS",
@@ -64,19 +64,19 @@ const FUTURE_TRACKS = [
 
 const WHAT_CARDS = [
   {
-    icon: <Users size={24} color="var(--tt-deep-teal)" />,
+    icon: <Users size={24} className="text-deep-teal" />,
     iconBg: "bg-teal-100",
     title: "Real team. Real roles.",
     body: "4–5 learners per cohort in mixed roles that reflect how real Salesforce teams work.",
   },
   {
-    icon: <TrendingUp size={24} color="var(--tt-deep-teal)" />,
+    icon: <TrendingUp size={24} className="text-deep-teal" />,
     iconBg: "bg-teal-100",
     title: "Real pipeline. Real gates.",
     body: "Professional CI/CD pipeline using Salesforce DevOps Center and GitHub. Every deployment goes through formal approval gates.",
   },
   {
-    icon: <Rocket size={24} color="var(--tt-trail-green)" />,
+    icon: <Rocket size={24} className="text-trail-green" />,
     iconBg: "bg-green-100",
     title: "Real clients. Real deliverables.",
     body: "Digital Compass nonprofit clients and internal Trail OS work — always configuration, never code.",

@@ -149,7 +149,7 @@ export default function Home() {
           <motion.div variants={slideRight} initial="hidden" whileInView="visible" viewport={{ once: true }} className="flex flex-col sm:flex-row gap-6 w-full xl:w-auto overflow-x-auto pb-4 sm:pb-0">
             <div className="bg-white border border-warm-gray rounded-xl w-[260px] sm:w-[220px] h-auto p-6 shrink-0 flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
               <div className="w-10 h-10 rounded-lg bg-teal-100 flex items-center justify-center mb-3">
-                <Compass size={24} color="var(--tt-teal-300)" />
+                <Compass size={24} className="text-teal-300" />
               </div>
               <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-teal-300 mb-2">CAREER STARTERS</div>
               <div className="font-['Poppins'] font-bold text-[17px] text-charcoal mb-3">Where do I even begin?</div>
@@ -159,7 +159,7 @@ export default function Home() {
             </div>
             <div className="bg-white border border-warm-gray rounded-xl w-[260px] sm:w-[220px] h-auto p-6 shrink-0 flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
               <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mb-3">
-                <Target size={24} color="var(--tt-trail-green)" />
+                <Target size={24} className="text-trail-green" />
               </div>
               <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-trail-green mb-2">CAREER BUILDERS</div>
               <div className="font-['Poppins'] font-bold text-[17px] text-charcoal mb-3">I have the cert. I cannot get hired.</div>
@@ -169,7 +169,7 @@ export default function Home() {
             </div>
             <div className="bg-white border border-warm-gray rounded-xl w-[260px] sm:w-[220px] h-auto p-6 shrink-0 flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
               <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mb-3">
-                <Briefcase size={24} color="var(--tt-green-700)" />
+                <Briefcase size={24} className="text-green-700" />
               </div>
               <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-green-700 mb-2">CAREER PIVOTERS</div>
               <div className="font-['Poppins'] font-bold text-[17px] text-charcoal mb-3">I am starting over. On purpose.</div>

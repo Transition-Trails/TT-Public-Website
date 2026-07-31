@@ -80,7 +80,7 @@ export default function About() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <motion.div variants={fadeUp} className="bg-white border border-warm-gray rounded-xl p-8 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
                 <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mb-4">
-                  <Compass size={24} color="var(--tt-trail-green)" />
+                  <Compass size={24} className="text-trail-green" />
                 </div>
                 <h3 className="font-['Poppins'] font-bold text-[20px] text-charcoal mb-3">Career Starters</h3>
                 <p className="font-['Open_Sans'] text-[15px] text-slate leading-[1.65]">
@@ -89,7 +89,7 @@ export default function About() {
               </motion.div>
               <motion.div variants={fadeUp} className="bg-white border border-warm-gray rounded-xl p-8 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
                 <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mb-4">
-                  <Target size={24} color="var(--tt-trail-green)" />
+                  <Target size={24} className="text-trail-green" />
                 </div>
                 <h3 className="font-['Poppins'] font-bold text-[20px] text-charcoal mb-3">Career Builders</h3>
                 <p className="font-['Open_Sans'] text-[15px] text-slate leading-[1.65]">
@@ -98,7 +98,7 @@ export default function About() {
               </motion.div>
               <motion.div variants={fadeUp} className="bg-white border border-warm-gray rounded-xl p-8 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
                 <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mb-4">
-                  <Briefcase size={24} color="var(--tt-trail-green)" />
+                  <Briefcase size={24} className="text-trail-green" />
                 </div>
                 <h3 className="font-['Poppins'] font-bold text-[20px] text-charcoal mb-3">Career Pivoters</h3>
                 <p className="font-['Open_Sans'] text-[15px] text-slate leading-[1.65]">

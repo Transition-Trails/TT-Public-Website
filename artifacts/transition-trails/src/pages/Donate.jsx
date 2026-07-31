@@ -62,7 +62,7 @@ export default function Donate() {
                 "As Cohort 1 launches, we will report scholarship and project outcomes transparently",
               ].map(item => (
                 <li key={item} className="flex items-start gap-3">
-                  <Check size={16} color="var(--tt-trail-green)" className="shrink-0 mt-0.5" />
+                  <Check size={16} className="text-trail-green shrink-0 mt-0.5" />
                   <span className="font-['Open_Sans'] text-[14px] text-slate">{item}</span>
                 </li>
               ))}

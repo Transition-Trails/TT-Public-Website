@@ -7,19 +7,19 @@ import { Award, Globe, Rocket } from "lucide-react";
 const ELIGIBILITY_CARDS = [
   {
     borderClass: "border-l-[4px] border-l-trail-green",
-    icon: <Award size={22} color="var(--tt-trail-green)" />,
+    icon: <Award size={22} className="text-trail-green" />,
     title: "Military Community",
     body: "Active duty military transitioning to civilian careers, veterans of any branch, and military spouses facing career disruption due to relocation or service commitment. Salesforce careers offer the stability and remote-work flexibility that the military community deserves.",
   },
   {
     borderClass: "border-l-[4px] border-l-deep-teal",
-    icon: <Globe size={22} color="var(--tt-deep-teal)" />,
+    icon: <Globe size={22} className="text-deep-teal" />,
     title: "Underrepresented Groups in Tech",
     body: "Black and African American, Hispanic and Latino, Native American and Alaska Native, and Native Hawaiian and Pacific Islander individuals who are underrepresented in technology careers at every level — including within the Salesforce ecosystem.",
   },
   {
     borderClass: "border-l-[4px] border-l-teal-300",
-    icon: <Rocket size={22} color="var(--tt-teal-300)" />,
+    icon: <Rocket size={22} className="text-teal-300" />,
     title: "Economic Barriers to Tech Entry",
     body: "First-generation college students and non-traditional learners, individuals experiencing unemployment or underemployment, and people in the process of career transition from low-wage industries. Cost should not be the reason someone cannot access a high-demand tech career.",
   },

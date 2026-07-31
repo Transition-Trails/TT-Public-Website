@@ -117,7 +117,7 @@ export default function ExplorersTrail() {
             {/* Card 1 */}
             <div className="bg-white border border-warm-gray rounded-xl p-8 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
               <div className="w-10 h-10 rounded-lg bg-teal-100 flex items-center justify-center mb-3">
-                <Compass size={24} color="var(--tt-teal-300)" />
+                <Compass size={24} className="text-teal-300" />
               </div>
               <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-teal-300 mb-2">CAREER STARTERS</div>
               <h3 className="font-['Poppins'] font-semibold text-[17px] text-charcoal mb-3">Not sure yet. That's okay.</h3>
@@ -129,7 +129,7 @@ export default function ExplorersTrail() {
             {/* Card 2 */}
             <div className="bg-white border border-warm-gray rounded-xl p-8 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
               <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mb-3">
-                <ClipboardList size={24} color="var(--tt-trail-green)" />
+                <ClipboardList size={24} className="text-trail-green" />
               </div>
               <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-trail-green mb-2">CAREER BUILDERS</div>
               <h3 className="font-['Poppins'] font-semibold text-[17px] text-charcoal mb-3">Building toward your first role or your next one.</h3>
@@ -141,7 +141,7 @@ export default function ExplorersTrail() {
             {/* Card 3 */}
             <div className="bg-white border border-warm-gray rounded-xl p-8 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
               <div className="w-10 h-10 rounded-lg bg-teal-100 flex items-center justify-center mb-3">
-                <Award size={24} color="var(--tt-deep-teal)" />
+                <Award size={24} className="text-deep-teal" />
               </div>
               <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-deep-teal mb-2">PROGRAM ALUMNI</div>
               <h3 className="font-['Poppins'] font-semibold text-[17px] text-charcoal mb-3">You finished a program. Now what?</h3>
@@ -153,7 +153,7 @@ export default function ExplorersTrail() {
             {/* Card 4 */}
             <div className="bg-white border border-warm-gray rounded-xl p-8 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
               <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mb-3">
-                <Briefcase size={24} color="var(--tt-green-700)" />
+                <Briefcase size={24} className="text-green-700" />
               </div>
               <div className="font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase text-green-700 mb-2">CAREER PIVOTERS</div>
               <h3 className="font-['Poppins'] font-semibold text-[17px] text-charcoal mb-3">You are in it for the long haul.</h3>
@@ -179,7 +179,7 @@ export default function ExplorersTrail() {
             <div className="bg-white border border-warm-gray rounded-xl flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
               <div className="p-8 flex flex-col flex-1">
                 <div className="w-10 h-10 rounded-lg bg-teal-100 flex items-center justify-center mb-4">
-                  <Users size={24} color="var(--tt-teal-300)" />
+                  <Users size={24} className="text-teal-300" />
                 </div>
                 <h3 className="font-['Poppins'] font-semibold text-[16px] text-charcoal mb-3">Private Slack Community</h3>
                 <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.65]">
@@ -192,7 +192,7 @@ export default function ExplorersTrail() {
             <div className="bg-white border border-warm-gray rounded-xl flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
               <div className="p-8 flex flex-col flex-1">
                 <div className="w-10 h-10 rounded-lg bg-teal-100 flex items-center justify-center mb-4">
-                  <Target size={24} color="var(--tt-teal-300)" />
+                  <Target size={24} className="text-teal-300" />
                 </div>
                 <h3 className="font-['Poppins'] font-semibold text-[16px] text-charcoal mb-3">Trail Missions</h3>
                 <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.65]">
@@ -205,7 +205,7 @@ export default function ExplorersTrail() {
             <div className="bg-white border border-warm-gray rounded-xl flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
               <div className="p-8 flex flex-col flex-1">
                 <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mb-4">
-                  <BookOpen size={24} color="var(--tt-trail-green)" />
+                  <BookOpen size={24} className="text-trail-green" />
                 </div>
                 <h3 className="font-['Poppins'] font-semibold text-[16px] text-charcoal mb-3">Build With Me / Troubleshoot With Me</h3>
                 <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.65]">
@@ -221,7 +221,7 @@ export default function ExplorersTrail() {
             <div className="bg-white border border-warm-gray rounded-xl flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
               <div className="p-8 flex flex-col flex-1">
                 <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mb-4">
-                  <MessageCircle size={24} color="var(--tt-trail-green)" />
+                  <MessageCircle size={24} className="text-trail-green" />
                 </div>
                 <h3 className="font-['Poppins'] font-semibold text-[16px] text-charcoal mb-3">Coaching Access</h3>
                 <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.65]">
@@ -235,7 +235,7 @@ export default function ExplorersTrail() {
             <div className="bg-white border border-warm-gray rounded-xl flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
               <div className="p-8 flex flex-col flex-1">
                 <div className="w-10 h-10 rounded-lg bg-teal-100 flex items-center justify-center mb-4">
-                  <Mic size={24} color="var(--tt-teal-300)" />
+                  <Mic size={24} className="text-teal-300" />
                 </div>
                 <h3 className="font-['Poppins'] font-semibold text-[16px] text-charcoal mb-3">Monthly Virtual Trail Talk</h3>
                 <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.65]">
@@ -248,7 +248,7 @@ export default function ExplorersTrail() {
             <div className="bg-white border border-warm-gray rounded-xl flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
               <div className="p-8 flex flex-col flex-1">
                 <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mb-4">
-                  <Zap size={24} color="var(--tt-trail-green)" />
+                  <Zap size={24} className="text-trail-green" />
                 </div>
                 <h3 className="font-['Poppins'] font-semibold text-[16px] text-charcoal mb-3">Slack Challenges</h3>
                 <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.65]">
@@ -261,7 +261,7 @@ export default function ExplorersTrail() {
             <div className="bg-white border border-warm-gray rounded-xl flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
               <div className="p-8 flex flex-col flex-1">
                 <div className="w-10 h-10 rounded-lg bg-teal-100 flex items-center justify-center mb-4">
-                  <Gift size={24} color="var(--tt-teal-300)" />
+                  <Gift size={24} className="text-teal-300" />
                 </div>
                 <h3 className="font-['Poppins'] font-semibold text-[16px] text-charcoal mb-3">Member Merchandise &amp; Discounts</h3>
                 <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.65]">
@@ -274,7 +274,7 @@ export default function ExplorersTrail() {
             <div className="bg-white border border-warm-gray rounded-xl flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
               <div className="p-8 flex flex-col flex-1">
                 <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mb-4">
-                  <UserCheck size={24} color="var(--tt-trail-green)" />
+                  <UserCheck size={24} className="text-trail-green" />
                 </div>
                 <h3 className="font-['Poppins'] font-semibold text-[16px] text-charcoal mb-3">Alumni Mentor Matching</h3>
                 <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.65]">
@@ -287,7 +287,7 @@ export default function ExplorersTrail() {
             <div className="bg-white border border-warm-gray rounded-xl flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
               <div className="p-8 flex flex-col flex-1">
                 <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mb-4">
-                  <Compass size={24} color="var(--tt-trail-green)" />
+                  <Compass size={24} className="text-trail-green" />
                 </div>
                 <h3 className="font-['Poppins'] font-semibold text-[16px] text-charcoal mb-3">RESOLVE Practitioner Series</h3>
                 <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.65]">
@@ -330,7 +330,7 @@ export default function ExplorersTrail() {
                     "Merch access (members-only items)",
                   ].map(item => (
                     <li key={item} className="flex gap-2.5 font-['Open_Sans'] text-[13px] text-charcoal">
-                      <Check size={16} color="var(--tt-teal-300)" className="shrink-0" />
+                      <Check size={16} className="text-teal-300 shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -343,7 +343,7 @@ export default function ExplorersTrail() {
                     "Live webinars beyond Trail Talk",
                   ].map(item => (
                     <li key={item} className="flex gap-2.5 font-['Open_Sans'] text-[12px] text-muted-text">
-                      <X size={16} color="var(--tt-muted-text)" className="shrink-0" />
+                      <X size={16} className="text-muted-text shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -394,7 +394,7 @@ export default function ExplorersTrail() {
                     "First access to new Trail Missions before Community Pass members",
                   ].map(item => (
                     <li key={item} className="flex gap-2.5 font-['Open_Sans'] text-[13px] text-charcoal">
-                      <Check size={16} color="var(--tt-trail-green)" className="shrink-0" />
+                      <Check size={16} className="text-trail-green shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -441,7 +441,7 @@ export default function ExplorersTrail() {
                     "Available to anyone: current learner, GT graduate, ToM participant, or working admin at any career stage",
                   ].map(item => (
                     <li key={item} className="flex gap-2.5 font-['Open_Sans'] text-[13px] text-charcoal">
-                      <Check size={16} color="var(--tt-deep-teal)" className="shrink-0" />
+                      <Check size={16} className="text-deep-teal shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -493,7 +493,7 @@ export default function ExplorersTrail() {
             <div className="bg-white border border-warm-gray rounded-xl flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
               <div className="p-7 flex flex-col flex-1">
                 <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mb-4">
-                  <Award size={24} color="var(--tt-trail-green)" />
+                  <Award size={24} className="text-trail-green" />
                 </div>
                 <span className="inline-block bg-green-100 text-trail-green font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2.5 py-1 rounded mb-3">GT GRADUATE</span>
                 <h3 className="font-['Poppins'] font-semibold text-[17px] text-charcoal mb-3">1-Year Full Membership — Complimentary</h3>
@@ -507,7 +507,7 @@ export default function ExplorersTrail() {
             <div className="bg-white border border-warm-gray rounded-xl flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
               <div className="p-7 flex flex-col flex-1">
                 <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mb-4">
-                  <Users size={24} color="var(--tt-trail-green)" />
+                  <Users size={24} className="text-trail-green" />
                 </div>
                 <span className="inline-block bg-green-100 text-trail-green font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2.5 py-1 rounded mb-3">GT ENROLLMENT</span>
                 <h3 className="font-['Poppins'] font-semibold text-[17px] text-charcoal mb-3">ET Included in GT</h3>
@@ -521,7 +521,7 @@ export default function ExplorersTrail() {
             <div className="bg-white border border-warm-gray rounded-xl flex flex-col shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
               <div className="p-7 flex flex-col flex-1">
                 <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mb-4">
-                  <Star size={24} color="var(--tt-green-700)" />
+                  <Star size={24} className="text-green-700" />
                 </div>
                 <span className="inline-block bg-green-100 text-green-700 font-['Open_Sans'] font-bold text-[10px] tracking-[1px] uppercase px-2.5 py-1 rounded mb-3">LIFETIME</span>
                 <h3 className="font-['Poppins'] font-semibold text-[17px] text-charcoal mb-3">Lifetime Full Membership</h3>
@@ -545,7 +545,7 @@ export default function ExplorersTrail() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
               {
-                icon: <Calendar size={18} color="var(--tt-teal-300)" />,
+                icon: <Calendar size={18} className="text-teal-300" />,
                 iconBg: "var(--tt-teal-100)",
                 timing: "1st of the month",
                 title: "New Trail Mission drops",
@@ -555,7 +555,7 @@ export default function ExplorersTrail() {
                 tierBg: "var(--tt-teal-100)",
               },
               {
-                icon: <Mic size={18} color="var(--tt-teal-300)" />,
+                icon: <Mic size={18} className="text-teal-300" />,
                 iconBg: "var(--tt-teal-100)",
                 timing: "First Thursday",
                 title: "Monthly Virtual Trail Talk",
@@ -565,7 +565,7 @@ export default function ExplorersTrail() {
                 tierBg: "var(--tt-teal-100)",
               },
               {
-                icon: <Zap size={18} color="var(--tt-trail-green)" />,
+                icon: <Zap size={18} className="text-trail-green" />,
                 iconBg: "var(--tt-green-100)",
                 timing: "Weekly",
                 title: "Slack Challenge",
@@ -575,7 +575,7 @@ export default function ExplorersTrail() {
                 tierBg: "var(--tt-green-100)",
               },
               {
-                icon: <BookOpen size={18} color="var(--tt-teal-300)" />,
+                icon: <BookOpen size={18} className="text-teal-300" />,
                 iconBg: "var(--tt-teal-100)",
                 timing: "Weekly",
                 title: "Build With Me / Troubleshoot With Me",
@@ -585,7 +585,7 @@ export default function ExplorersTrail() {
                 tierBg: "var(--tt-teal-100)",
               },
               {
-                icon: <MessageCircle size={18} color="var(--tt-deep-teal)" />,
+                icon: <MessageCircle size={18} className="text-deep-teal" />,
                 iconBg: "rgba(47,111,126,0.1)",
                 timing: "Quarterly",
                 title: "1:1 Coaching Session",
@@ -595,7 +595,7 @@ export default function ExplorersTrail() {
                 tierBg: "rgba(47,111,126,0.1)",
               },
               {
-                icon: <Award size={18} color="var(--tt-trail-green)" />,
+                icon: <Award size={18} className="text-trail-green" />,
                 iconBg: "var(--tt-green-100)",
                 timing: "Monthly (active)",
                 title: "Trail Stamp",
@@ -646,9 +646,9 @@ export default function ExplorersTrail() {
                 <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.6] mb-5">Support the lead coach, assist learners, participate in sessions, learn the coaching process from the inside.</p>
                 <div className="font-['Open_Sans'] font-semibold text-[11px] tracking-[1px] uppercase text-slate mb-2">What you get</div>
                 <ul className="space-y-1.5 font-['Open_Sans'] text-[13px] text-charcoal mb-5">
-                  <li className="flex gap-2"><Check size={16} color="var(--tt-trail-green)" className="shrink-0 mt-0.5" />1 month Explorer's Trail credit per cohort</li>
-                  <li className="flex gap-2"><Check size={16} color="var(--tt-trail-green)" className="shrink-0 mt-0.5" />Resume-worthy leadership experience</li>
-                  <li className="flex gap-2"><Check size={16} color="var(--tt-trail-green)" className="shrink-0 mt-0.5" />Stay connected to TT while building field experience</li>
+                  <li className="flex gap-2"><Check size={16} className="text-trail-green shrink-0 mt-0.5" />1 month Explorer's Trail credit per cohort</li>
+                  <li className="flex gap-2"><Check size={16} className="text-trail-green shrink-0 mt-0.5" />Resume-worthy leadership experience</li>
+                  <li className="flex gap-2"><Check size={16} className="text-trail-green shrink-0 mt-0.5" />Stay connected to TT while building field experience</li>
                 </ul>
                 <p className="font-['Open_Sans'] italic text-[12px] text-muted-text leading-[1.6]">Trail of Mastery is not required — Coach's Assistant is available after Guided Trail completion.</p>
               </div>
@@ -668,8 +668,8 @@ export default function ExplorersTrail() {
                 <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.6] mb-5">Lead a 12-week cohort with support. Primary responsibility for learner outcomes.</p>
                 <div className="font-['Open_Sans'] font-semibold text-[11px] tracking-[1px] uppercase text-slate mb-2">What you get</div>
                 <ul className="space-y-1.5 font-['Open_Sans'] text-[13px] text-charcoal">
-                  <li className="flex gap-2"><Check size={16} color="var(--tt-trail-green)" className="shrink-0 mt-0.5" />3 months Explorer's Trail credit per cohort</li>
-                  <li className="flex gap-2"><Check size={16} color="var(--tt-trail-green)" className="shrink-0 mt-0.5" />Future coaching stipend (coming soon)</li>
+                  <li className="flex gap-2"><Check size={16} className="text-trail-green shrink-0 mt-0.5" />3 months Explorer's Trail credit per cohort</li>
+                  <li className="flex gap-2"><Check size={16} className="text-trail-green shrink-0 mt-0.5" />Future coaching stipend (coming soon)</li>
                 </ul>
               </div>
             </div>
@@ -689,8 +689,8 @@ export default function ExplorersTrail() {
                 <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.6] mb-5">Lead cohorts independently · Mentor Coach's Assistants · Lead RESOLVE Practitioner Series sessions</p>
                 <div className="font-['Open_Sans'] font-semibold text-[11px] tracking-[1px] uppercase text-slate mb-2">What you get</div>
                 <ul className="space-y-1.5 font-['Open_Sans'] text-[13px] text-charcoal">
-                  <li className="flex gap-2"><Check size={16} color="var(--tt-trail-green)" className="shrink-0 mt-0.5" />Compensation model in development</li>
-                  <li className="flex gap-2"><Check size={16} color="var(--tt-trail-green)" className="shrink-0 mt-0.5" />Complete 6 total cohorts → Lifetime Full Membership</li>
+                  <li className="flex gap-2"><Check size={16} className="text-trail-green shrink-0 mt-0.5" />Compensation model in development</li>
+                  <li className="flex gap-2"><Check size={16} className="text-trail-green shrink-0 mt-0.5" />Complete 6 total cohorts → Lifetime Full Membership</li>
                 </ul>
               </div>
             </div>
@@ -713,7 +713,7 @@ export default function ExplorersTrail() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white border border-warm-gray rounded-xl p-8 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
               <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mb-3">
-                <Star size={24} color="var(--tt-trail-green)" />
+                <Star size={24} className="text-trail-green" />
               </div>
               <h3 className="font-['Poppins'] font-semibold text-[17px] text-charcoal mb-3">Monthly Member Spotlight</h3>
               <p className="font-['Open_Sans'] text-[14px] text-slate leading-[1.65]">
@@ -727,7 +727,7 @@ export default function ExplorersTrail() {
             </div>
             <div className="bg-white border border-warm-gray rounded-xl p-8 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
               <div className="w-10 h-10 rounded-lg bg-teal-100 flex items-center justify-center mb-3">
-                <Target size={24} color="var(--tt-teal-300)" />
+                <Target size={24} className="text-teal-300" />
               </div>
               <h3 className="font-['Poppins'] font-semibold text-[17px] text-charcoal mb-3">Annual Limited Edition Drop</h3>
               <p className="font-['Open_Sans'] text-[14px] text-slate leading-[1.65]">
@@ -736,7 +736,7 @@ export default function ExplorersTrail() {
             </div>
             <div className="bg-white border border-warm-gray rounded-xl p-8 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
               <div className="w-10 h-10 rounded-lg bg-teal-100 flex items-center justify-center mb-3">
-                <TrendingUp size={24} color="var(--tt-deep-teal)" />
+                <TrendingUp size={24} className="text-deep-teal" />
               </div>
               <h3 className="font-['Poppins'] font-semibold text-[17px] text-charcoal mb-3">Your Trail Dashboard</h3>
               <p className="font-['Open_Sans'] text-[14px] text-slate leading-[1.65]">
@@ -745,7 +745,7 @@ export default function ExplorersTrail() {
             </div>
             <div className="bg-white border border-warm-gray rounded-xl p-8 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-md transition-shadow duration-200">
               <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mb-3">
-                <MessageCircle size={24} color="var(--tt-trail-green)" />
+                <MessageCircle size={24} className="text-trail-green" />
               </div>
               <h3 className="font-['Poppins'] font-semibold text-[17px] text-charcoal mb-3">Tenure Recognition</h3>
               <p className="font-['Open_Sans'] text-[14px] text-slate leading-[1.65]">

@@ -5,7 +5,7 @@ import { Building2, Users, Package, Zap, Rocket, Target, Eye, Bell, Lock, Smartp
 const STAGES = [
   {
     n: 1,
-    icon: <Building2 size={24} color="#fff" />,
+    icon: <Building2 size={24} className="text-white" />,
     color: "var(--tt-trail-green)",
     title: "Nonprofits are nominated",
     body: "Trail of Mastery and Guided Trail learners nominate nonprofits facing significant Salesforce challenges. The TT community votes on the shortlist. One organization is selected per Expedition.",
@@ -13,7 +13,7 @@ const STAGES = [
   },
   {
     n: 2,
-    icon: <Users size={24} color="#fff" />,
+    icon: <Users size={24} className="text-white" />,
     color: "var(--tt-deep-teal)",
     title: "Teams are assembled",
     body: "Guided Trail and Trail of Mastery participants register. Teams are formed across roles — BA, PO, Admin, Advanced Admin, Solutions Consultant — mirroring a real Salesforce delivery team.",
@@ -21,7 +21,7 @@ const STAGES = [
   },
   {
     n: 3,
-    icon: <Package size={24} color="#fff" />,
+    icon: <Package size={24} className="text-white" />,
     color: "var(--tt-sun-amber)",
     title: "The Trail Box ships",
     body: "Your collector's edition Expedition Trail Box arrives before the weekend. Everything inside is yours to open — except the sealed Expedition Brief. That waits.",
@@ -29,7 +29,7 @@ const STAGES = [
   },
   {
     n: 4,
-    icon: <Zap size={24} color="#fff" />,
+    icon: <Zap size={24} className="text-white" />,
     color: "var(--tt-trail-green)",
     title: "72 hours. Clock starts Friday.",
     body: "Opening ceremony Friday evening — the Brief is opened together. Discovery begins. Saturday is the build — observers welcome. Sunday afternoon, every team presents their solution to the nonprofit, the sponsors, and the community. The nonprofit selects what gets implemented.",
@@ -37,7 +37,7 @@ const STAGES = [
   },
   {
     n: 5,
-    icon: <Rocket size={24} color="#fff" />,
+    icon: <Rocket size={24} className="text-white" />,
     color: "var(--tt-deep-teal)",
     title: "The solution ships",
     body: "The selected solution goes into implementation. The nonprofit gets real Salesforce work completed. Every participant adds a documented Expedition deliverable to their portfolio. The Expedition patch is earned.",
@@ -48,28 +48,28 @@ const STAGES = [
 const PARTICIPANTS = [
   {
     accent: "var(--tt-trail-green)",
-    icon: <Target size={24} color="var(--tt-trail-green)" />,
+    icon: <Target size={24} className="text-trail-green" />,
     title: "Learners",
     body: "Guided Trail graduates and Trail of Mastery learners form the build teams. You work in your role — BA, PO, Admin, Advanced Admin, or Solutions Consultant — delivering a real solution for a real nonprofit under a real time constraint. The most intense portfolio experience in any TT program.",
     badge: "GUIDED TRAIL + TRAIL OF MASTERY",
   },
   {
     accent: "var(--tt-sun-amber)",
-    icon: <Building2 size={24} color="var(--tt-sun-amber)" />,
+    icon: <Building2 size={24} className="text-sun-amber" />,
     title: "Nonprofits",
     body: "Apply to have your Salesforce challenge tackled by a coached team over a weekend. One organization selected per Expedition. The work that gets done is real — not a prototype, not a pitch deck. A solution designed for implementation.",
     badge: "APPLY TO BE SELECTED",
   },
   {
     accent: "var(--tt-deep-teal)",
-    icon: <Users size={24} color="var(--tt-deep-teal)" />,
+    icon: <Users size={24} className="text-deep-teal" />,
     title: "Sponsors",
     body: "The TT Expedition Series is built for sponsorship — a virtual event with a measurable nonprofit outcome, a documented participant community, and social sharing built into the experience from the moment the Trail Box ships. Get in early.",
     badge: "PRESENTING SPONSOR AVAILABLE",
   },
   {
     accent: "var(--tt-teal-300)",
-    icon: <Eye size={24} color="var(--tt-teal-300)" />,
+    icon: <Eye size={24} className="text-teal-300" />,
     title: "Observers",
     body: "Explorer's Trail members, alumni, and the broader TT community are welcome to observe Saturday's build session and attend Sunday's closing presentations. Watch professional Salesforce delivery happen in real time.",
     badge: "EXPLORER'S TRAIL COMMUNITY",
@@ -136,7 +136,7 @@ const SPONSOR_TIERS = [
 
 const CTA_CARDS = [
   {
-    icon: <Bell size={24} color="var(--tt-sun-amber)" />,
+    icon: <Bell size={24} className="text-sun-amber" />,
     title: "Get Notified",
     body: "Be the first to know when Expedition I applications open — for learners, nonprofits, and sponsors.",
     buttonLabel: "Notify Me →",
@@ -144,7 +144,7 @@ const CTA_CARDS = [
     href: "mailto:hello@transitiontrails.org?subject=TT%20Expedition%20Series%20-%20Notify%20Me",
   },
   {
-    icon: <Building2 size={24} color="var(--tt-trail-green)" />,
+    icon: <Building2 size={24} className="text-trail-green" />,
     title: "Nominate a Nonprofit",
     body: "Know a nonprofit facing a significant Salesforce challenge? Nominate them for Expedition I consideration.",
     buttonLabel: "Submit a Nomination →",
@@ -152,7 +152,7 @@ const CTA_CARDS = [
     href: "mailto:hello@transitiontrails.org?subject=TT%20Expedition%20-%20Nonprofit%20Nomination",
   },
   {
-    icon: <Users size={24} color="var(--tt-deep-teal)" />,
+    icon: <Users size={24} className="text-deep-teal" />,
     title: "Sponsorship Inquiry",
     body: "Interested in sponsoring The TT Expedition Series? We are building the sponsorship program now and welcoming early conversations.",
     buttonLabel: "Inquire About Sponsorship →",
@@ -278,7 +278,7 @@ export default function Expedition() {
               className="max-w-[480px] mx-auto mb-10 text-center rounded-xl px-8 py-6"
               style={{ background: "rgba(245,166,35,0.08)", border: "1px solid rgba(245,166,35,0.25)" }}
             >
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-3 mx-auto" style={{ background: "rgba(255,255,255,0.08)" }}><Lock size={22} color="rgba(255,255,255,0.70)" /></div>
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-3 mx-auto" style={{ background: "rgba(255,255,255,0.08)" }}><Lock size={22} className="text-white/70" /></div>
               <h3 className="font-['Poppins'] font-semibold text-[16px] text-white mb-2">The Sealed Expedition Brief</h3>
               <p className="font-['Open_Sans'] text-[13px] leading-[1.65]" style={{ color: "rgba(255,255,255,0.55)" }}>
                 Inside: the nonprofit. The challenge. The constraints. Opens at the ceremony — and then the clock starts.
@@ -290,7 +290,7 @@ export default function Expedition() {
               className="rounded-xl p-6 max-w-[640px] mx-auto text-center"
               style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.10)" }}
             >
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-3 mx-auto" style={{ background: "rgba(255,255,255,0.08)" }}><Smartphone size={22} color="rgba(255,255,255,0.70)" /></div>
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-3 mx-auto" style={{ background: "rgba(255,255,255,0.08)" }}><Smartphone size={22} className="text-white/70" /></div>
               <p className="font-['Open_Sans'] text-[14px] leading-[1.65] mb-2" style={{ color: "rgba(255,255,255,0.55)" }}>
                 Trail Box unboxings happen the week before each Expedition. When yours arrives — share it. Tag us. The community opens their boxes together.
               </p>

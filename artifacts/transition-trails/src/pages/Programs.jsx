@@ -47,7 +47,7 @@ export default function Programs() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-10 sm:gap-16">
             <div className="flex flex-col items-center text-center gap-1.5">
               <div className="flex items-center gap-2">
-                <User size={18} color="var(--tt-teal-300)" />
+                <User size={18} className="text-teal-300" />
                 <span className="font-['Open_Sans'] font-semibold text-[14px] text-teal-300">Career Starters</span>
               </div>
               <span className="font-['Open_Sans'] text-[12px] text-slate">New to Salesforce or working toward your first cert</span>
@@ -55,7 +55,7 @@ export default function Programs() {
             <div className="hidden sm:block w-px h-8 bg-warm-gray" />
             <div className="flex flex-col items-center text-center gap-1.5">
               <div className="flex items-center gap-2">
-                <TrendingUp size={18} color="var(--tt-trail-green)" />
+                <TrendingUp size={18} className="text-trail-green" />
                 <span className="font-['Open_Sans'] font-semibold text-[14px] text-trail-green">Career Builders</span>
               </div>
               <span className="font-['Open_Sans'] text-[12px] text-slate">Certified and ready to turn it into a career</span>
@@ -63,7 +63,7 @@ export default function Programs() {
             <div className="hidden sm:block w-px h-8 bg-warm-gray" />
             <div className="flex flex-col items-center text-center gap-1.5">
               <div className="flex items-center gap-2">
-                <Compass size={18} color="var(--tt-green-700)" />
+                <Compass size={18} className="text-green-700" />
                 <span className="font-['Open_Sans'] font-semibold text-[14px] text-green-700">Career Pivoters</span>
               </div>
               <span className="font-['Open_Sans'] text-[12px] text-slate">Changing careers — every trail is open to you</span>
@@ -74,7 +74,7 @@ export default function Programs() {
 
       <div className="bg-green-100 border-y border-trail-green/20 py-4 px-5 md:px-10">
         <div className="max-w-[1280px] mx-auto flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-center sm:text-left">
-          <Award size={18} color="var(--tt-trail-green)" />
+          <Award size={18} className="text-trail-green" />
           <p className="font-['Open_Sans'] text-[13px] text-charcoal leading-[1.6]">
             <span className="font-semibold text-green-700">The Trail Forward Scholarship</span> — one fully funded Guided Trail seat per cohort for historically underserved populations in technology. No membership required to apply.
           </p>

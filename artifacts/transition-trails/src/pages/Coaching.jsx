@@ -8,7 +8,7 @@ const WHO_CARDS = [
     borderClass: "border-l-[4px] border-l-teal-300",
     iconBgClass: "bg-teal-100",
     textClass: "text-teal-300",
-    icon: <Compass size={24} color="var(--tt-teal-300)" />,
+    icon: <Compass size={24} className="text-teal-300" />,
     title: "Career Starters",
     subtitle: "Finding your direction",
     body: "Not sure if Salesforce is the right path for you? A coaching session helps you understand what a Salesforce career actually looks like, what it takes to get there, and whether it fits your goals, background, and timeline. No commitment required — just clarity.",
@@ -17,7 +17,7 @@ const WHO_CARDS = [
     borderClass: "border-l-[4px] border-l-trail-green",
     iconBgClass: "bg-green-100",
     textClass: "text-trail-green",
-    icon: <Target size={24} color="var(--tt-trail-green)" />,
+    icon: <Target size={24} className="text-trail-green" />,
     title: "Career Builders",
     subtitle: "Advancing your career",
     body: "You have the cert but the job search is not going the way you expected. Or you are in a role and want to move up. Coaching gives you a clear plan — resume review, interview prep, portfolio feedback, or technical skill development — whatever you need most right now.",
@@ -26,7 +26,7 @@ const WHO_CARDS = [
     borderClass: "border-l-[4px] border-l-green-700",
     iconBgClass: "bg-green-100",
     textClass: "text-green-700",
-    icon: <RefreshCw size={24} color="var(--tt-green-700)" />,
+    icon: <RefreshCw size={24} className="text-green-700" />,
     title: "Career Pivoters",
     subtitle: "Making the pivot",
     body: "You are coming from another career and the path forward is not obvious. Coaching helps you map your existing skills to Salesforce roles, identify the fastest route to job-ready, and build the confidence to make the transition with a plan behind you.",
@@ -35,7 +35,7 @@ const WHO_CARDS = [
     borderClass: "border-l-[4px] border-l-deep-teal",
     iconBgClass: "bg-teal-100",
     textClass: "text-deep-teal",
-    icon: <Building2 size={24} color="var(--tt-deep-teal)" />,
+    icon: <Building2 size={24} className="text-deep-teal" />,
     title: "Nonprofit Professionals",
     subtitle: "Nonprofit technology leadership",
     body: "You lead a nonprofit and need Salesforce guidance — strategy, implementation direction, or just a sounding board for decisions your team is facing. Coaching with the TT team gives you expert nonprofit Salesforce perspective without a consulting retainer.",
@@ -48,7 +48,7 @@ const PACKAGES = [
     accentBgClass: "bg-trail-green",
     accentTextClass: "text-trail-green",
     checkClass: "text-trail-green",
-    icon: <Search size={24} color="var(--tt-trail-green)" />,
+    icon: <Search size={24} className="text-trail-green" />,
     title: "Discovery Call",
     price: "Free",
     sub: "30 minutes · No commitment",
@@ -70,7 +70,7 @@ const PACKAGES = [
     accentBgClass: "bg-deep-teal",
     accentTextClass: "text-deep-teal",
     checkClass: "text-deep-teal",
-    icon: <MessageCircle size={24} color="var(--tt-deep-teal)" />,
+    icon: <MessageCircle size={24} className="text-deep-teal" />,
     title: "Single Session",
     price: "$150",
     priceSuffix: "/hr",
@@ -96,7 +96,7 @@ const PACKAGES = [
     accentTextClass: "text-trail-green",
     checkClass: "text-trail-green",
     badge: "POPULAR",
-    icon: <Calendar size={24} color="var(--tt-trail-green)" />,
+    icon: <Calendar size={24} className="text-trail-green" />,
     title: "3-Session Bundle",
     price: "$400",
     sub: "3 hours · Save $50 vs single sessions",
@@ -120,7 +120,7 @@ const PACKAGES = [
     accentBgClass: "bg-green-700",
     accentTextClass: "text-green-700",
     checkClass: "text-green-700",
-    icon: <Rocket size={24} color="var(--tt-green-700)" />,
+    icon: <Rocket size={24} className="text-green-700" />,
     title: "6-Session Bundle",
     price: "$750",
     sub: "6 hours · Best value · Save $150 vs single sessions",
@@ -336,7 +336,7 @@ export default function Coaching() {
             className="max-w-[760px] mx-auto flex items-start gap-3 rounded-lg mb-10 bg-amber-100 border border-sun-amber"
             style={{ padding: "16px 24px" }}
           >
-            <Star size={18} color="var(--tt-sun-amber)" className="shrink-0" />
+            <Star size={18} className="text-sun-amber shrink-0" />
             <p className="font-['Open_Sans'] text-[14px] text-charcoal leading-[1.6]">
               Explorer's Trail members receive discounted coaching rates on all packages. Annual + Coaching members ($597/yr) receive one quarterly coaching session included with their membership.{" "}
               <Link href="/programs/explorers-trail" className="font-semibold text-trail-green hover:underline">Learn about Explorer's Trail →</Link>
@@ -485,7 +485,7 @@ export default function Coaching() {
               <ul className="space-y-3">
                 {WORKSHOP_TOPICS.map(item => (
                   <li key={item} className="flex gap-2 font-['Open_Sans'] text-[13px] text-slate">
-                    <Check size={16} color="var(--tt-trail-green)" className="shrink-0" />{item}
+                    <Check size={16} className="text-trail-green shrink-0" />{item}
                   </li>
                 ))}
               </ul>
@@ -540,7 +540,7 @@ export default function Coaching() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
             {[
               {
-                icon: <Calendar size={24} color="var(--tt-trail-green)" />,
+                icon: <Calendar size={24} className="text-trail-green" />,
                 title: "Book with Angela",
                 body: "Career strategy, leadership development, big-picture roadmapping, and career progression.",
                 cta: "Schedule →",
@@ -548,7 +548,7 @@ export default function Coaching() {
                 bgClass: "bg-trail-green",
               },
               {
-                icon: <Mail size={24} color="var(--tt-deep-teal)" />,
+                icon: <Mail size={24} className="text-deep-teal" />,
                 title: "Book with Kim or Hugh",
                 body: "Technical coaching, solution design, career pivot support, resume and interview prep, nonprofit Salesforce.",
                 cta: "Contact Us →",
@@ -556,7 +556,7 @@ export default function Coaching() {
                 bgClass: "bg-deep-teal",
               },
               {
-                icon: <Users size={24} color="rgba(255,255,255,0.70)" />,
+                icon: <Users size={24} className="text-white/70" />,
                 title: "Not sure who to book with?",
                 body: "Tell us a little about your situation and we will match you with the right coach.",
                 cta: "Get Matched →",

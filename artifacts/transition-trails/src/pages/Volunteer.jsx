@@ -6,7 +6,7 @@ const POSITIONS = [
   {
     accentClass: "bg-trail-green",
     badgeClass: "text-trail-green",
-    icon: <Target size={24} color="var(--tt-trail-green)" />,
+    icon: <Target size={24} className="text-trail-green" />,
     title: "Associate Coach",
     badge: "COACHING · VOLUNTEER",
     commitment: "⏱ 4–6 hrs/week · 12-week cohort commitment",
@@ -27,7 +27,7 @@ const POSITIONS = [
   {
     accentClass: "bg-teal-300",
     badgeClass: "text-teal-300",
-    icon: <Users size={24} color="var(--tt-teal-300)" />,
+    icon: <Users size={24} className="text-teal-300" />,
     title: "Coach's Assistant",
     badge: "COACHING · ENTRY LEVEL",
     commitment: "⏱ 2–4 hrs/week · 12-week cohort commitment",
@@ -48,7 +48,7 @@ const POSITIONS = [
   {
     accentClass: "bg-deep-teal",
     badgeClass: "text-deep-teal",
-    icon: <BarChart2 size={24} color="var(--tt-deep-teal)" />,
+    icon: <BarChart2 size={24} className="text-deep-teal" />,
     title: "Volunteer CPA",
     badge: "FINANCE · NONPROFIT GOVERNANCE",
     commitment: "⏱ Flexible · Project-based · Remote",
@@ -76,17 +76,17 @@ const POSITIONS = [
 
 const WHY_CARDS = [
   {
-    icon: <Award size={24} color="var(--tt-trail-green)" />,
+    icon: <Award size={24} className="text-trail-green" />,
     title: "Real credentials",
     body: "TT volunteer roles are structured, specific, and verifiable. Add them to your LinkedIn as a coaching, mentorship, or advisory role with a real organization doing real work.",
   },
   {
-    icon: <Leaf size={24} color="var(--tt-trail-green)" />,
+    icon: <Leaf size={24} className="text-trail-green" />,
     title: "Community connection",
     body: "Volunteers become part of the TT ecosystem — connected to founders, coaches, program learners, and the broader Salesforce community. The relationships built here are the ones that matter in a Salesforce career.",
   },
   {
-    icon: <Target size={24} color="var(--tt-trail-green)" />,
+    icon: <Target size={24} className="text-trail-green" />,
     title: "Direct mission impact",
     body: "Every coaching cohort you support puts someone closer to a career they could not access before. Every hour you contribute is a direct investment in economic mobility for Career Starters, Career Builders, and Career Pivoters.",
   },

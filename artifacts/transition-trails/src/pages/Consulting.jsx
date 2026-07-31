@@ -8,7 +8,7 @@ const SERVICES = [
   {
     accent: "var(--tt-trail-green)",
     badge: "START HERE · FREE",
-    icon: <Search size={22} color="var(--tt-trail-green)" />,
+    icon: <Search size={22} className="text-trail-green" />,
     title: "Free Org Assessment",
     tagline: "You know your system could do more. We help you see exactly where to start.",
     problem: "You know your Salesforce org could be doing more — but you do not know where the gaps are, what to prioritize, or what it would take to fix.",
@@ -21,7 +21,7 @@ const SERVICES = [
   {
     accent: "var(--tt-deep-teal)",
     badge: "RETAINER · ONGOING",
-    icon: <Settings size={22} color="var(--tt-deep-teal)" />,
+    icon: <Settings size={22} className="text-deep-teal" />,
     title: "Salesforce Administration Support",
     tagline: "Your team should focus on the mission — not the software.",
     problem: "Your team is too busy to manage updates, user permissions, data quality, and report building. Things are falling through the cracks and your Salesforce org is not keeping up with your organization.",
@@ -34,7 +34,7 @@ const SERVICES = [
   {
     accent: "var(--tt-green-700)",
     badge: "PROJECT-BASED",
-    icon: <Wrench size={22} color="var(--tt-green-700)" />,
+    icon: <Wrench size={22} className="text-green-700" />,
     title: "Solution Design",
     tagline: "Build it right the first time.",
     problem: "You are outgrowing your current tools, facing a complex implementation, or need specific functionality built from scratch. You need someone who can think architecturally — not just configure what you ask for.",
@@ -201,7 +201,7 @@ export default function Consulting() {
               <motion.div variants={fadeUp} className="bg-white border-[1.5px] border-warm-gray rounded-2xl overflow-hidden flex flex-col">
                 <div className="p-8 flex flex-col flex-1">
                   <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mb-4">
-                    <Building2 size={24} color="var(--tt-trail-green)" />
+                    <Building2 size={24} className="text-trail-green" />
                   </div>
                   <h3 className="font-['Poppins'] font-bold text-[22px] text-charcoal mb-4">Nonprofits</h3>
                   <div className="font-['Open_Sans'] text-[14px] text-slate leading-[1.65] space-y-4 mb-5 flex-1">
@@ -218,7 +218,7 @@ export default function Consulting() {
               <motion.div variants={fadeUp} className="bg-white border-[1.5px] border-warm-gray rounded-2xl overflow-hidden flex flex-col">
                 <div className="p-8 flex flex-col flex-1">
                   <div className="w-10 h-10 rounded-lg bg-teal-100 flex items-center justify-center mb-4">
-                    <Briefcase size={24} color="var(--tt-deep-teal)" />
+                    <Briefcase size={24} className="text-deep-teal" />
                   </div>
                   <h3 className="font-['Poppins'] font-bold text-[22px] text-charcoal mb-4">Small to Midsize Businesses</h3>
                   <div className="font-['Open_Sans'] text-[14px] text-slate leading-[1.65] space-y-4">
@@ -372,7 +372,7 @@ export default function Consulting() {
               className="rounded-xl p-7 md:p-8 flex flex-col md:flex-row gap-5 bg-green-100"
             >
               <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center shrink-0">
-                <Rocket size={22} color="var(--tt-trail-green)" />
+                <Rocket size={22} className="text-trail-green" />
               </div>
               <div>
                 <h3 className="font-['Poppins'] font-semibold text-[16px] mb-3 text-green-700">Building our consulting team.</h3>
@@ -417,7 +417,7 @@ export default function Consulting() {
                   <ul className="space-y-2.5 mb-5">
                     {ASSESSMENT_COVERS.map(item => (
                       <li key={item} className="flex gap-2 font-['Open_Sans'] text-[13px] text-slate">
-                        <Check size={16} color="var(--tt-trail-green)" className="shrink-0" />{item}
+                        <Check size={16} className="text-trail-green shrink-0" />{item}
                       </li>
                     ))}
                   </ul>
