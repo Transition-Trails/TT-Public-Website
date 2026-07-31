@@ -101,7 +101,7 @@ export default function Programs() {
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-[#2F6B3F] mb-4">GET INVOLVED</div>
             <h2 className="font-['Fraunces'] font-bold text-[36px] text-[#2A2E2C] mb-4">Ready to give back?</h2>
             <p className="font-['Open_Sans'] text-[18px] text-[#4A4F4D] max-w-[680px] mx-auto">
-              If you have your Salesforce Certified Administrator certification and 2–3 years of field experience, coaching with Transition Trails is a meaningful way to build your leadership skills, strengthen your community, and stay sharp.
+              If you have your Salesforce Certified Platform Administrator certification and 2–3 years of field experience, coaching with Transition Trails is a meaningful way to build your leadership skills, strengthen your community, and stay sharp.
             </p>
           </motion.div>
 

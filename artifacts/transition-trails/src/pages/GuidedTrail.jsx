@@ -88,7 +88,7 @@ export default function GuidedTrail() {
                 <Check className="w-5 h-5 text-[#2F6B3F]" />
               </div>
               <div className="font-['Open_Sans'] font-semibold text-[16px] text-[#2A2E2C]">
-                Salesforce Certified Administrator Certification — achieved
+                Salesforce Certified Platform Administrator Certification — achieved
               </div>
             </div>
             <div className="bg-[#FAFAF7] border border-[#E2E4E1] p-6 rounded-xl flex gap-4 items-center">

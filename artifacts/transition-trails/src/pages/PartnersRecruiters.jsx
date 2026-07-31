@@ -111,11 +111,11 @@ export default function PartnersRecruiters() {
               <div className="font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[1.5px] text-[#2F6F7E] mb-3">HIRE OUR GRADUATES</div>
               <h3 className="font-['Poppins'] font-bold text-[22px] text-[#2A2E2C] mb-4">Hire our graduates.</h3>
               <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.7] mb-6">
-                Guided Trail graduates hold the Salesforce Certified Administrator certification, have completed real project work for nonprofit clients, and have a portfolio that demonstrates they can deliver — not just pass a test. These are not entry-level candidates in the traditional sense. They have done the work.
+                Guided Trail graduates hold the Salesforce Certified Platform Administrator certification, have completed real project work for nonprofit clients, and have a portfolio that demonstrates they can deliver — not just pass a test. These are not entry-level candidates in the traditional sense. They have done the work.
               </p>
               <ul className="space-y-3 mt-auto">
                 {[
-                  "Salesforce Certified Administrator",
+                  "Salesforce Certified Platform Administrator",
                   "Supervised nonprofit project delivery — sandbox-based",
                   "Portfolio of documented deliverables",
                   "Coached by senior Salesforce professionals",

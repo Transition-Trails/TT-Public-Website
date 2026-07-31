@@ -347,7 +347,7 @@ export default function Scholarships() {
                 style={{ backgroundColor: "#E6F3EA", borderLeft: "3px solid #2F6B3F" }}
               >
                 <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D]">
-                  Eligibility requires a Salesforce Certified Administrator certification and not being currently employed in a Salesforce role.
+                  Eligibility requires a Salesforce Certified Platform Administrator certification and not being currently employed in a Salesforce role.
                 </p>
               </div>
 

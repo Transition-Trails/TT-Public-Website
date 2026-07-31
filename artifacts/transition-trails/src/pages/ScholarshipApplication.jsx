@@ -98,7 +98,7 @@ export default function ScholarshipApplication() {
             <div className="font-['Open_Sans'] text-[14px] text-[#6B7280] mb-5">You must meet ALL of the following:</div>
             <ul className="flex flex-col gap-4">
               {[
-                "You have earned your Salesforce Certified Administrator certification",
+                "You have earned your Salesforce Certified Platform Administrator certification",
                 "You are not currently employed in a Salesforce role",
                 "You are on the Guided Trail waitlist for Cohort 1",
               ].map((item) => (
