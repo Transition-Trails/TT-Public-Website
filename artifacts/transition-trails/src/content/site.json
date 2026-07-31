@@ -7,7 +7,7 @@
   },
   "trustStrip": [
     { "label": "501(c)(3) Nonprofit", "detail": "EIN 88-2746412" },
-    { "label": "Dallas, TX", "detail": "Founded 2020" },
+    { "label": "Dallas, TX", "detail": "501(c)(3) since May 2022" },
     { "label": "Salesforce Ecosystem", "detail": "Platform certified" },
     { "label": "Dual Impact Model", "detail": "Learners + Nonprofits" },
     { "label": "Real Project Experience", "detail": "Not simulations" }
