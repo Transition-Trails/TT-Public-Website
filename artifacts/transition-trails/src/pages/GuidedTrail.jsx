@@ -39,7 +39,10 @@ export default function GuidedTrail() {
             </CTAButton>
             
             <div className="text-center font-['Open_Sans'] text-[12px] text-[#4A4F4D]">
-              Cohort 1 · 8–12 seats · Application required
+              Cohort 1 · two squads · 2, 4 or 6 learners each · Application required
+            </div>
+            <div className="text-center font-['Open_Sans'] text-[11px] text-[#6B7280] mt-1">
+              Squads are always an even number — learners test each other's work in pairs.
             </div>
           </div>
         </div>
@@ -194,7 +197,7 @@ export default function GuidedTrail() {
                   <div className="w-1.5 h-1.5 rounded-full bg-[#F5A623] mt-2 shrink-0" />
                   <div>
                     <strong className="block font-['Poppins'] text-[18px] mb-1">Peer Sessions</strong>
-                    <span className="font-['Open_Sans'] text-[15px] text-white/70">Collaborative problem solving with your cohort</span>
+                    <span className="font-['Open_Sans'] text-[15px] text-white/70">Collaborative problem solving with your cohort. Squads are always an even number so every learner has a dedicated testing partner — if someone leaves mid-cohort, a Coach's Assistant steps in to keep every pair complete.</span>
                   </div>
                 </li>
                 <li className="flex gap-4">

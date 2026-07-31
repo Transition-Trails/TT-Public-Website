@@ -77,11 +77,54 @@ export default function Waitlist() {
                 Programs launching October 1, 2026
               </p>
               <p className="font-['Open_Sans'] text-[13px] text-[#4A4F4D]">
-                Explorer's Trail opens October 1. Guided Trail Cohort 1 waitlist is now open — 8 to 12 seats, application required. Foundations Trail opens after October 1. Trail of Mastery interest list is open for Cohort 0 in Q2 2027.
+                Explorer's Trail opens October 1. Guided Trail Cohort 1 waitlist is now open — two squads running concurrently, 2, 4 or 6 learners each (always even, because learners test each other's work in pairs). Application required. Foundations Trail opens after October 1. Trail of Mastery interest list is open for Cohort 0 in Q2 2027.
               </p>
             </motion.div>
           </motion.div>
         </div>
+      </section>
+
+      {/* ALTERNATES */}
+      <section className="bg-[#F9FAFB] py-[60px] px-5 border-t border-[#E5E7EB]">
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={fadeUp}
+          className="max-w-2xl mx-auto"
+        >
+          <p className="font-['Open_Sans'] text-[13px] font-semibold uppercase tracking-[0.12em] text-[#2F6B3F] mb-4">ABOUT ALTERNATES — GUIDED TRAIL</p>
+          <h2 className="font-['Poppins'] font-bold text-[28px] text-[#2A2E2C] tracking-[-0.5px] leading-[1.2] mb-4">
+            If you're an alternate, you'll know it.
+          </h2>
+          <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.7] mb-8">
+            Each Guided Trail cohort runs two squads concurrently, and squad size is capped to match available client work. That means some applicants who are a strong fit may not receive a squad seat right away — they become named alternates for Cohort 1. We do not leave people on an undifferentiated list wondering. If you are an alternate, we will tell you plainly.
+          </p>
+          <div className="space-y-4">
+            {[
+              {
+                heading: "Your Explorer's Trail membership starts immediately",
+                body: "As an alternate, you receive full Explorer's Trail membership at no cost for the full duration of Cohort 1 — so you are building real skills and staying connected to the community from day one, not sitting idle waiting for a seat.",
+              },
+              {
+                heading: "A seat can open through the end of Week 1",
+                body: "If any squad seat opens before the end of Week 1, it is yours. You are the first call — no re-application, no waiting in line.",
+              },
+              {
+                heading: "Cohort 2 is guaranteed",
+                body: "If no seat opens, you have a confirmed place in Cohort 2 with no reapplication required. You do not go back to the beginning of the process.",
+              },
+            ].map(({ heading, body }) => (
+              <div key={heading} className="flex gap-4 p-5 bg-white rounded-xl border border-[#E5E7EB]">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#2F6B3F] mt-2 shrink-0" />
+                <div>
+                  <strong className="block font-['Poppins'] text-[16px] text-[#2A2E2C] mb-1">{heading}</strong>
+                  <p className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] leading-[1.6]">{body}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </motion.div>
       </section>
 
       {/* SECTION 2 — Waitlist CTA */}
