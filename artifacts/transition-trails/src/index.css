@@ -7,7 +7,7 @@
  *   5. Component base layer
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700&family=Poppins:wght@400;500;600;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Fraunces:opsz,wght@9..144,400;9..144,700&family=Poppins:wght@400;500;600;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 @import "./styles/tokens.css";
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -86,31 +86,31 @@
    Wired to --tt-* tokens so named classes stay in sync with tokens.
    Usage examples:
      bg-trail-green        text-sun-amber         shadow-card
-     bg-green-700          text-muted-text         rounded-tt-md
-     bg-teal-500           bg-dark-fill            font-display
+     bg-tt-green-700       text-muted-text        rounded-tt-md
+     bg-tt-teal-500        bg-dark-fill           font-display
    ───────────────────────────────────────────────────────────────── */
 @theme {
-  /* Green palette */
-  --color-trail-green:    var(--tt-green-500);
-  --color-green-100:      var(--tt-green-100);
-  --color-green-300:      var(--tt-green-300);
-  --color-green-500:      var(--tt-green-500);
-  --color-green-700:      var(--tt-green-700);
+  /* Green palette — semantic alias + tt- prefixed scale */
+  --color-trail-green:       var(--tt-green-500);
+  --color-tt-green-100:      var(--tt-green-100);
+  --color-tt-green-300:      var(--tt-green-300);
+  --color-tt-green-500:      var(--tt-green-500);
+  --color-tt-green-700:      var(--tt-green-700);
 
-  /* Teal palette */
-  --color-deep-teal:      var(--tt-teal-500);
-  --color-teal-100:       var(--tt-teal-100);
-  --color-teal-300:       var(--tt-teal-300);
-  --color-teal-500:       var(--tt-teal-500);
-  --color-teal-700:       var(--tt-teal-700);
-  --color-sky-tint:       var(--tt-sky-tint);
+  /* Teal palette — semantic alias + tt- prefixed scale */
+  --color-deep-teal:         var(--tt-teal-500);
+  --color-tt-teal-100:       var(--tt-teal-100);
+  --color-tt-teal-300:       var(--tt-teal-300);
+  --color-tt-teal-500:       var(--tt-teal-500);
+  --color-tt-teal-700:       var(--tt-teal-700);
+  --color-sky-tint:          var(--tt-sky-tint);
 
-  /* Amber palette */
-  --color-sun-amber:      var(--tt-amber-500);
-  --color-amber-100:      var(--tt-amber-100);
-  --color-amber-300:      var(--tt-amber-300);
-  --color-amber-500:      var(--tt-amber-500);
-  --color-amber-700:      var(--tt-amber-700);
+  /* Amber palette — semantic alias + tt- prefixed scale */
+  --color-sun-amber:         var(--tt-amber-500);
+  --color-tt-amber-100:      var(--tt-amber-100);
+  --color-tt-amber-300:      var(--tt-amber-300);
+  --color-tt-amber-500:      var(--tt-amber-500);
+  --color-tt-amber-700:      var(--tt-amber-700);
 
   /* Neutrals */
   --color-trail-light:    var(--tt-trail-light);
@@ -279,8 +279,12 @@
     color: var(--charcoal);
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', sans-serif;
+  h1, h2 {
+    font-family: var(--tt-font-display);
+  }
+
+  h3, h4, h5, h6 {
+    font-family: var(--tt-font-heading);
   }
 }
 
