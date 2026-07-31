@@ -324,8 +324,8 @@ export default function DigitalCompass() {
                 </div>
                 <Link
                   href="/nonprofit-assessment"
-                  className="w-full h-[44px] rounded-[8px] font-['Open_Sans'] font-bold text-[14px] flex items-center justify-center transition-colors hover:opacity-90 text-[#2A2E2C]"
-                  style={{ background: "#F5A623" }}
+                  className="w-full h-[44px] rounded-[8px] font-['Open_Sans'] font-bold text-[14px] flex items-center justify-center transition-colors hover:opacity-90 text-white"
+                  style={{ background: "#2F6B3F" }}
                 >
                   Get Started →
                 </Link>
@@ -479,7 +479,7 @@ export default function DigitalCompass() {
             <Link
               href="/nonprofit-assessment"
               className="h-[56px] px-10 rounded-[8px] font-['Poppins'] font-bold text-[15px] inline-flex items-center justify-center transition-colors"
-              style={{ background: "#F5A623", color: "#2A2E2C" }}
+              style={{ background: "#2F6B3F", color: "#fff" }}
             >
               Book Your Free Assessment →
             </Link>

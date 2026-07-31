@@ -405,7 +405,7 @@ export default function ExplorersTrail() {
                   </p>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <a href="https://form.jotform.com/261684070494058" target="_blank" rel="noopener noreferrer" className="w-full h-[44px] rounded-[8px] font-['Poppins'] font-semibold text-[14px] flex items-center justify-center text-[#2A2E2C] transition-colors hover:opacity-90" style={{ background: "#F5A623" }}>
+                  <a href="https://form.jotform.com/261684070494058" target="_blank" rel="noopener noreferrer" className="w-full h-[44px] rounded-[8px] font-['Poppins'] font-semibold text-[14px] flex items-center justify-center text-white transition-colors hover:opacity-90" style={{ background: "#2F6B3F" }}>
                     Join the Waitlist →
                   </a>
                   <a href="https://form.jotform.com/261684070494058" target="_blank" rel="noopener noreferrer" className="w-full h-[44px] rounded-[8px] border-2 border-[#2F6B3F] text-[#2F6B3F] font-['Poppins'] font-semibold text-[14px] flex items-center justify-center hover:bg-[#E6F3EA] transition-colors">

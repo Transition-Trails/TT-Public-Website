@@ -34,7 +34,7 @@ export default function GuidedTrail() {
             <div className="font-['Poppins'] font-bold text-[36px] text-[#2A2E2C] mb-2">$1,497</div>
             <div className="font-['Open_Sans'] text-[14px] text-[#4A4F4D] mb-6">or 3 × $549 payment plan</div>
             
-            <CTAButton href={LINKS.waitlist} variant="amber" className="w-full mb-4" size="lg">
+            <CTAButton href={LINKS.waitlist} variant="green" className="w-full mb-4" size="lg">
               Join the Waitlist
             </CTAButton>
             
@@ -293,10 +293,10 @@ export default function GuidedTrail() {
         </div>
       </section>
 
-      <section className="bg-[#F5A623] py-16 px-5 text-center">
+      <section className="bg-[#1E4A2A] py-16 px-5 text-center">
         <div className="max-w-[800px] mx-auto">
-          <h2 className="font-['Poppins'] font-bold text-[36px] text-[#2A2E2C] mb-6">Ready to cross the gap?</h2>
-          <CTAButton href={LINKS.waitlist} variant="dark" size="lg">
+          <h2 className="font-['Poppins'] font-bold text-[36px] text-white mb-6">Ready to cross the gap?</h2>
+          <CTAButton href={LINKS.waitlist} variant="amber" size="lg">
             Join the Waitlist
           </CTAButton>
         </div>

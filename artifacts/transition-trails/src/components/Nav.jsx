@@ -179,7 +179,7 @@ export function Nav() {
             Donate
           </Link>
           <Link href="/waitlist"
-            className="bg-[#F5A623] hover:bg-[#D4890A] text-[#2A2E2C] font-['Open_Sans'] font-bold text-[14px] h-[42px] px-5 rounded-lg flex items-center justify-center transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F5A623] whitespace-nowrap">
+            className="bg-white hover:bg-[#E8F3F6] text-[#2F6F7E] font-['Open_Sans'] font-bold text-[14px] h-[42px] px-5 rounded-lg flex items-center justify-center transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 whitespace-nowrap">
             Join the Waitlist
           </Link>
         </div>
@@ -284,7 +284,7 @@ export function Nav() {
               Donate
             </Link>
             <Link href="/waitlist" onClick={closeMenu}
-              className="bg-[#F5A623] text-[#2A2E2C] font-['Open_Sans'] font-bold text-[16px] h-[54px] rounded-lg flex items-center justify-center w-full">
+              className="bg-white hover:bg-[#E8F3F6] text-[#2F6F7E] font-['Open_Sans'] font-bold text-[16px] h-[54px] rounded-lg flex items-center justify-center w-full transition-colors">
               Join the Waitlist
             </Link>
           </div>
