@@ -110,8 +110,8 @@ export default function DigitalCompass() {
             {/* Left copy */}
             <div className="flex-1 max-w-[700px]">
               <div
-                className="inline-block font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-7"
-                style={{ color: "var(--tt-sun-amber)", background: "rgba(245,166,35,0.15)", border: "1px solid rgba(245,166,35,0.4)" }}
+                className="inline-block font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-7 text-sun-amber"
+                style={{ background: "rgba(245,166,35,0.15)", border: "1px solid rgba(245,166,35,0.4)" }}
               >
                 NONPROFIT MEMBERSHIP  ·  ONGOING SALESFORCE SUPPORT  ·  NO LONG-TERM CONTRACT
               </div>
@@ -134,8 +134,7 @@ export default function DigitalCompass() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/nonprofit-assessment"
-                  className="h-[52px] px-7 rounded-[8px] font-['Poppins'] font-semibold text-[15px] inline-flex items-center justify-center transition-colors"
-                  style={{ background: "var(--tt-sun-amber)", color: "var(--tt-charcoal)" }}
+                  className="h-[52px] px-7 rounded-[8px] font-['Poppins'] font-semibold text-[15px] inline-flex items-center justify-center transition-colors bg-sun-amber text-charcoal"
                 >
                   Book a Free Assessment →
                 </Link>
@@ -258,8 +257,7 @@ export default function DigitalCompass() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0 }}
-              className="bg-white rounded-2xl shadow-sm"
-              style={{ border: "1.5px solid var(--tt-warm-gray)", borderLeft: "4px solid var(--tt-teal-300)" }}
+              className="bg-white rounded-2xl shadow-sm border-[1.5px] border-warm-gray border-l-[4px] border-l-teal-300"
             >
               <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr_180px_160px] gap-6 items-center p-6">
                 <div>
@@ -284,8 +282,7 @@ export default function DigitalCompass() {
                 </div>
                 <Link
                   href="/nonprofit-assessment"
-                  className="w-full h-[44px] rounded-[8px] font-['Open_Sans'] font-semibold text-[14px] flex items-center justify-center text-white transition-colors hover:opacity-90"
-                  style={{ background: "var(--tt-trail-green)" }}
+                  className="w-full h-[44px] rounded-[8px] font-['Open_Sans'] font-semibold text-[14px] flex items-center justify-center text-white transition-colors hover:opacity-90 bg-trail-green"
                 >
                   Get Started →
                 </Link>
@@ -298,8 +295,7 @@ export default function DigitalCompass() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-white rounded-2xl shadow-md"
-              style={{ border: "2px solid var(--tt-trail-green)", borderLeft: "4px solid var(--tt-trail-green)" }}
+              className="bg-white rounded-2xl shadow-md border-2 border-trail-green border-l-[4px] border-l-trail-green"
             >
               <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr_180px_160px] gap-6 items-center p-6">
                 <div>
@@ -324,8 +320,7 @@ export default function DigitalCompass() {
                 </div>
                 <Link
                   href="/nonprofit-assessment"
-                  className="w-full h-[44px] rounded-[8px] font-['Open_Sans'] font-bold text-[14px] flex items-center justify-center transition-colors hover:opacity-90 text-white"
-                  style={{ background: "var(--tt-trail-green)" }}
+                  className="w-full h-[44px] rounded-[8px] font-['Open_Sans'] font-bold text-[14px] flex items-center justify-center transition-colors hover:opacity-90 text-white bg-trail-green"
                 >
                   Get Started →
                 </Link>
@@ -338,8 +333,7 @@ export default function DigitalCompass() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-white rounded-2xl shadow-sm"
-              style={{ border: "1.5px solid var(--tt-warm-gray)", borderLeft: "4px solid var(--tt-deep-teal)" }}
+              className="bg-white rounded-2xl shadow-sm border-[1.5px] border-warm-gray border-l-[4px] border-l-deep-teal"
             >
               <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr_180px_160px] gap-6 items-center p-6">
                 <div>
@@ -364,8 +358,7 @@ export default function DigitalCompass() {
                 </div>
                 <Link
                   href="/nonprofit-assessment"
-                  className="w-full h-[44px] rounded-[8px] font-['Open_Sans'] font-semibold text-[14px] flex items-center justify-center text-white transition-colors hover:opacity-90"
-                  style={{ background: "var(--tt-trail-green)" }}
+                  className="w-full h-[44px] rounded-[8px] font-['Open_Sans'] font-semibold text-[14px] flex items-center justify-center text-white transition-colors hover:opacity-90 bg-trail-green"
                 >
                   Get Started →
                 </Link>
@@ -423,8 +416,8 @@ export default function DigitalCompass() {
               style={{ top: "12px", left: "20px", fontSize: "80px", color: "rgba(47,111,126,0.20)" }}
             >"</div>
             <p
-              className="font-['Poppins'] font-medium italic leading-[1.6] mb-5 relative z-10 max-w-[840px]"
-              style={{ fontSize: "18px", color: "var(--tt-teal-700)" }}
+              className="font-['Poppins'] font-medium italic leading-[1.6] mb-5 relative z-10 max-w-[840px] text-teal-700"
+              style={{ fontSize: "18px" }}
             >
               {hartfordTestimonial.quote}
             </p>
@@ -478,8 +471,7 @@ export default function DigitalCompass() {
           <div className="text-center">
             <Link
               href="/nonprofit-assessment"
-              className="h-[56px] px-10 rounded-[8px] font-['Poppins'] font-bold text-[15px] inline-flex items-center justify-center transition-colors"
-              style={{ background: "var(--tt-trail-green)", color: "#fff" }}
+              className="h-[56px] px-10 rounded-[8px] font-['Poppins'] font-bold text-[15px] inline-flex items-center justify-center transition-colors bg-trail-green text-white"
             >
               Book Your Free Assessment →
             </Link>

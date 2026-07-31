@@ -70,8 +70,7 @@ export default function Waitlist() {
 
             <motion.div
               variants={fadeUp}
-              className="max-w-[640px] mx-auto rounded-[8px] px-7 py-5 text-left"
-              style={{ backgroundColor: "var(--tt-amber-100)", border: "1px solid var(--tt-sun-amber)" }}
+              className="max-w-[640px] mx-auto rounded-[8px] px-7 py-5 text-left bg-amber-100 border border-sun-amber"
             >
               <p className="font-['Poppins'] font-semibold text-[16px] text-charcoal mb-1">
                 Programs launching October 1, 2026

@@ -6,19 +6,19 @@ import { Award, Globe, Rocket } from "lucide-react";
 
 const ELIGIBILITY_CARDS = [
   {
-    border: "var(--tt-trail-green)",
+    borderClass: "border-l-[4px] border-l-trail-green",
     icon: <Award size={22} color="var(--tt-trail-green)" />,
     title: "Military Community",
     body: "Active duty military transitioning to civilian careers, veterans of any branch, and military spouses facing career disruption due to relocation or service commitment. Salesforce careers offer the stability and remote-work flexibility that the military community deserves.",
   },
   {
-    border: "var(--tt-deep-teal)",
+    borderClass: "border-l-[4px] border-l-deep-teal",
     icon: <Globe size={22} color="var(--tt-deep-teal)" />,
     title: "Underrepresented Groups in Tech",
     body: "Black and African American, Hispanic and Latino, Native American and Alaska Native, and Native Hawaiian and Pacific Islander individuals who are underrepresented in technology careers at every level — including within the Salesforce ecosystem.",
   },
   {
-    border: "var(--tt-teal-300)",
+    borderClass: "border-l-[4px] border-l-teal-300",
     icon: <Rocket size={22} color="var(--tt-teal-300)" />,
     title: "Economic Barriers to Tech Entry",
     body: "First-generation college students and non-traditional learners, individuals experiencing unemployment or underemployment, and people in the process of career transition from low-wage industries. Cost should not be the reason someone cannot access a high-demand tech career.",
@@ -94,8 +94,8 @@ export default function Scholarships() {
             {/* Left */}
             <div className="flex-1 max-w-[720px]">
               <div
-                className="inline-block font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-7"
-                style={{ color: "var(--tt-sun-amber)", background: "rgba(245,166,35,0.15)", border: "1px solid rgba(245,166,35,0.4)" }}
+                className="inline-block font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-7 text-sun-amber"
+                style={{ background: "rgba(245,166,35,0.15)", border: "1px solid rgba(245,166,35,0.4)" }}
               >
                 THE TRAIL FORWARD SCHOLARSHIP  ·  FULLY FUNDED  ·  ONE SEAT PER COHORT
               </div>
@@ -148,8 +148,7 @@ export default function Scholarships() {
             {ELIGIBILITY_CARDS.map(card => (
               <div
                 key={card.title}
-                className="bg-white border border-warm-gray rounded-xl overflow-hidden"
-                style={{ borderLeft: `4px solid ${card.border}` }}
+                className={`bg-white border border-warm-gray rounded-xl overflow-hidden ${card.borderClass}`}
               >
                 <div className="p-7">
                   <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mb-3">{card.icon}</div>
@@ -190,8 +189,7 @@ export default function Scholarships() {
             ].map(item => (
               <div
                 key={item.title}
-                className="bg-white rounded-xl p-7"
-                style={{ borderLeft: "4px solid var(--tt-trail-green)" }}
+                className="bg-white rounded-xl p-7 border-l-[4px] border-l-trail-green"
               >
                 <h3 className="font-['Open_Sans'] font-bold text-[15px] text-trail-green mb-3">{item.title}</h3>
                 <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.65]">{item.body}</p>
@@ -343,8 +341,7 @@ export default function Scholarships() {
               </p>
 
               <div
-                className="rounded-[8px] px-5 py-4 mb-6"
-                style={{ backgroundColor: "var(--tt-green-100)", borderLeft: "3px solid var(--tt-trail-green)" }}
+                className="rounded-[8px] px-5 py-4 mb-6 bg-green-100 border-l-[3px] border-l-trail-green"
               >
                 <p className="font-['Open_Sans'] text-[13px] text-slate">
                   Eligibility requires a Salesforce Certified Platform Administrator certification and not being currently employed in a Salesforce role.

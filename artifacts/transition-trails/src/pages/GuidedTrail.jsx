@@ -280,7 +280,7 @@ export default function GuidedTrail() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {learnerTestimonials.map((t) => (
-              <div key={t.id} className="bg-white border border-warm-gray rounded-xl p-7 relative" style={{ borderLeft: "5px solid var(--tt-trail-green)" }}>
+              <div key={t.id} className="bg-white border border-warm-gray rounded-xl p-7 relative border-l-[5px] border-l-trail-green">
                 <div className="absolute top-3 left-4 font-['Poppins'] text-[80px] leading-none select-none" style={{ color: "rgba(47,107,63,0.15)" }}>"</div>
                 <p className="font-['Poppins'] font-medium italic text-[16px] text-charcoal leading-[1.6] mb-4 relative z-10">
                   {t.quote}

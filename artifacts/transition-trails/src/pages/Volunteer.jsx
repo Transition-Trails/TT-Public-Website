@@ -4,8 +4,8 @@ import { Target, Users, BarChart2, Award, Leaf } from "lucide-react";
 
 const POSITIONS = [
   {
-    accent: "var(--tt-trail-green)",
-    badgeColor: "var(--tt-trail-green)",
+    accentClass: "bg-trail-green",
+    badgeClass: "text-trail-green",
     icon: <Target size={24} color="var(--tt-trail-green)" />,
     title: "Associate Coach",
     badge: "COACHING · VOLUNTEER",
@@ -20,13 +20,13 @@ const POSITIONS = [
       {
         label: "Apply Now →",
         href: "https://form.jotform.com/261876005299062?role=Associate%20Coach",
-        style: { background: "var(--tt-trail-green)", color: "var(--tt-white)" },
+        className: "bg-trail-green text-white",
       },
     ],
   },
   {
-    accent: "var(--tt-teal-300)",
-    badgeColor: "var(--tt-teal-300)",
+    accentClass: "bg-teal-300",
+    badgeClass: "text-teal-300",
     icon: <Users size={24} color="var(--tt-teal-300)" />,
     title: "Coach's Assistant",
     badge: "COACHING · ENTRY LEVEL",
@@ -41,13 +41,13 @@ const POSITIONS = [
       {
         label: "Apply Now →",
         href: "https://form.jotform.com/261876005299062?role=Coach%27s%20Assistant",
-        style: { background: "var(--tt-teal-100)", color: "var(--tt-teal-300)", border: "1.5px solid var(--tt-teal-300)" },
+        className: "bg-teal-100 text-teal-300 border-[1.5px] border-teal-300",
       },
     ],
   },
   {
-    accent: "var(--tt-deep-teal)",
-    badgeColor: "var(--tt-deep-teal)",
+    accentClass: "bg-deep-teal",
+    badgeClass: "text-deep-teal",
     icon: <BarChart2 size={24} color="var(--tt-deep-teal)" />,
     title: "Volunteer CPA",
     badge: "FINANCE · NONPROFIT GOVERNANCE",
@@ -62,12 +62,12 @@ const POSITIONS = [
       {
         label: "Apply Now →",
         href: "https://form.jotform.com/261885593929074?position=Volunteer%20CPA",
-        style: { background: "var(--tt-deep-teal)", color: "var(--tt-white)" },
+        className: "bg-deep-teal text-white",
       },
       {
         label: "View on Idealist →",
         href: "https://www.idealist.org/admin/8b10ce8870b246f8a0d65687d51a9e79/volops/a5df3df502b34d9e8b71b8a8e2ee6c6e",
-        style: { background: "var(--tt-white)", color: "var(--tt-deep-teal)", border: "1.5px solid var(--tt-deep-teal)" },
+        className: "bg-white text-deep-teal border-[1.5px] border-deep-teal",
         external: true,
       },
     ],
@@ -108,8 +108,8 @@ export default function Volunteer() {
       >
         <div className="max-w-[800px] mx-auto text-center flex flex-col items-center">
           <div
-            className="inline-block font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-7"
-            style={{ color: "var(--tt-sun-amber)", background: "rgba(245,166,35,0.15)", border: "1px solid rgba(245,166,35,0.4)" }}
+            className="inline-block font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-7 text-sun-amber"
+            style={{ background: "rgba(245,166,35,0.15)", border: "1px solid rgba(245,166,35,0.4)" }}
           >
             VOLUNTEER WITH TRANSITION TRAILS  ·  MAKE A DIRECT IMPACT
           </div>
@@ -152,11 +152,10 @@ export default function Volunteer() {
                 key={pos.title}
                 className="bg-white border-[1.5px] border-warm-gray rounded-2xl flex flex-col overflow-hidden"
               >
-                <div className="h-[6px] w-full" style={{ backgroundColor: pos.accent }} />
+                <div className={`h-[6px] w-full ${pos.accentClass}`} />
                 <div className="p-7 flex flex-col flex-1">
                   <div
-                    className="inline-block font-['Open_Sans'] font-bold text-[11px] uppercase tracking-wider mb-4 w-fit"
-                    style={{ color: pos.badgeColor }}
+                    className={`inline-block font-['Open_Sans'] font-bold text-[11px] uppercase tracking-wider mb-4 w-fit ${pos.badgeClass}`}
                   >
                     {pos.badge}
                   </div>
@@ -186,8 +185,7 @@ export default function Volunteer() {
                         href={cta.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 inline-flex items-center justify-center h-11 px-4 rounded-lg font-['Open_Sans'] font-semibold text-[14px] transition-opacity hover:opacity-90 text-center"
-                        style={cta.style}
+                        className={`flex-1 inline-flex items-center justify-center h-11 px-4 rounded-lg font-['Open_Sans'] font-semibold text-[14px] transition-opacity hover:opacity-90 text-center ${cta.className}`}
                       >
                         {cta.label}
                       </a>
@@ -214,8 +212,7 @@ export default function Volunteer() {
             {WHY_CARDS.map((card) => (
               <div
                 key={card.title}
-                className="bg-white border border-warm-gray rounded-xl p-7"
-                style={{ borderLeft: "4px solid var(--tt-trail-green)" }}
+                className="bg-white border border-warm-gray rounded-xl p-7 border-l-[4px] border-l-trail-green"
               >
                 <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mb-3">{card.icon}</div>
                 <h3 className="font-['Open_Sans'] font-bold text-[15px] text-trail-green mb-3">{card.title}</h3>

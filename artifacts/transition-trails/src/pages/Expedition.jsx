@@ -78,12 +78,12 @@ const PARTICIPANTS = [
 
 const SPONSOR_TIERS = [
   {
-    border: "var(--tt-sun-amber)",
-    borderWidth: "2px",
-    badge: { text: "AVAILABLE", color: "var(--tt-sun-amber)" },
+    borderClass: "border-2 border-sun-amber",
+    badge: { text: "AVAILABLE", textClass: "text-sun-amber", bgClass: "bg-sun-amber/10" },
+    checkClass: "text-sun-amber",
     title: "Presenting Sponsor",
     amount: "Contact us",
-    amountColor: "var(--tt-sun-amber)",
+    amountClass: "text-sun-amber",
     items: [
       "The TT Expedition, presented by [Your Organization]",
       "Logo on Trail Box and all event materials",
@@ -95,11 +95,11 @@ const SPONSOR_TIERS = [
     ],
   },
   {
-    border: "var(--tt-trail-green)",
-    borderWidth: "1px",
+    borderClass: "border border-trail-green",
+    checkClass: "text-trail-green",
     title: "Summit Sponsor",
     amount: "Contact us",
-    amountColor: "var(--tt-dark-accent-green)",
+    amountClass: "text-green-700",
     items: [
       "Logo on event materials",
       "Recognition in all communications",
@@ -108,11 +108,11 @@ const SPONSOR_TIERS = [
     ],
   },
   {
-    border: "var(--tt-deep-teal)",
-    borderWidth: "1px",
+    borderClass: "border border-deep-teal",
+    checkClass: "text-deep-teal",
     title: "Basecamp Sponsor",
     amount: "Contact us",
-    amountColor: "var(--tt-teal-300)",
+    amountClass: "text-teal-300",
     items: [
       "Logo on event program",
       "Recognition in communications",
@@ -120,11 +120,11 @@ const SPONSOR_TIERS = [
     ],
   },
   {
-    border: "var(--tt-teal-300)",
-    borderWidth: "1px",
+    borderClass: "border border-teal-300",
+    checkClass: "text-teal-300",
     title: "Trail Box Sponsor",
     amount: "Contact us",
-    amountColor: "var(--tt-teal-300)",
+    amountClass: "text-teal-300",
     body: "Contribute a branded item to the Expedition Trail Box. Your product in the hands of every participant — unboxed, photographed, shared.",
     items: [
       "Product in Trail Box",
@@ -140,7 +140,7 @@ const CTA_CARDS = [
     title: "Get Notified",
     body: "Be the first to know when Expedition I applications open — for learners, nonprofits, and sponsors.",
     buttonLabel: "Notify Me →",
-    buttonStyle: { background: "var(--tt-sun-amber)", color: "var(--tt-charcoal)" },
+    buttonClass: "bg-sun-amber text-charcoal",
     href: "mailto:hello@transitiontrails.org?subject=TT%20Expedition%20Series%20-%20Notify%20Me",
   },
   {
@@ -148,7 +148,7 @@ const CTA_CARDS = [
     title: "Nominate a Nonprofit",
     body: "Know a nonprofit facing a significant Salesforce challenge? Nominate them for Expedition I consideration.",
     buttonLabel: "Submit a Nomination →",
-    buttonStyle: { background: "var(--tt-trail-green)", color: "var(--tt-white)" },
+    buttonClass: "bg-trail-green text-white",
     href: "mailto:hello@transitiontrails.org?subject=TT%20Expedition%20-%20Nonprofit%20Nomination",
   },
   {
@@ -156,7 +156,7 @@ const CTA_CARDS = [
     title: "Sponsorship Inquiry",
     body: "Interested in sponsoring The TT Expedition Series? We are building the sponsorship program now and welcoming early conversations.",
     buttonLabel: "Inquire About Sponsorship →",
-    buttonStyle: { background: "var(--tt-deep-teal)", color: "var(--tt-white)" },
+    buttonClass: "bg-deep-teal text-white",
     href: "mailto:hello@transitiontrails.org?subject=TT%20Expedition%20-%20Sponsorship%20Inquiry",
   },
 ];
@@ -166,7 +166,7 @@ export default function Expedition() {
   const stagger = { hidden: {}, show: { transition: { staggerChildren: 0.1 } } };
 
   return (
-    <div className="flex flex-col min-h-screen" style={{ background: "var(--tt-off-black)" }}>
+    <div className="flex flex-col min-h-screen bg-off-black">
       <PageMeta
         title="The TT Expedition Series | Coming Fall 2027 | Transition Trails"
         description="Twice yearly, a team of Salesforce professionals solves a real nonprofit challenge over 72 hours. Trail Box included. Collector's edition patches. Launching Fall 2027. Get notified."
@@ -175,19 +175,17 @@ export default function Expedition() {
 
       {/* HERO */}
       <section
-        className="pt-28 pb-24 px-5 md:px-10 flex flex-col items-center text-center"
+        className="pt-28 pb-24 px-5 md:px-10 flex flex-col items-center text-center bg-off-black"
         style={{
           background: "radial-gradient(ellipse at center, rgba(47,107,63,0.25) 0%, rgba(26,26,26,1) 70%)",
-          backgroundColor: "var(--tt-off-black)",
         }}
       >
         <div className="max-w-7xl mx-auto w-full flex flex-col items-center">
           <motion.div initial="hidden" animate="show" variants={stagger} className="flex flex-col items-center text-center w-full">
             <motion.div variants={fadeUp}>
               <div
-                className="inline-block font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-4 py-2 mb-8"
+                className="inline-block font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-4 py-2 mb-8 text-sun-amber"
                 style={{
-                  color: "var(--tt-sun-amber)",
                   background: "rgba(245,166,35,0.15)",
                   border: "1px solid rgba(245,166,35,0.40)",
                   borderRadius: "99px",
@@ -227,7 +225,7 @@ export default function Expedition() {
                   className="flex-1 flex flex-col items-center px-8 py-6 rounded-xl"
                   style={{ background: "rgba(245,166,35,0.08)", border: "1px solid rgba(245,166,35,0.25)" }}
                 >
-                  <span className="font-['Poppins'] font-bold text-[28px] leading-none mb-1" style={{ color: "var(--tt-sun-amber)" }}>{stat.value}</span>
+                  <span className="font-['Poppins'] font-bold text-[28px] leading-none mb-1 text-sun-amber">{stat.value}</span>
                   <span className="font-['Open_Sans'] text-[13px]" style={{ color: "rgba(255,255,255,0.55)" }}>{stat.label}</span>
                 </div>
               ))}
@@ -250,7 +248,7 @@ export default function Expedition() {
       </section>
 
       {/* SECTION 2: The Trail Box */}
-      <section className="py-20 px-5 md:px-10" style={{ background: "var(--tt-near-black)" }}>
+      <section className="py-20 px-5 md:px-10 bg-near-black">
         <div className="max-w-7xl mx-auto">
           <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={stagger}>
             <motion.div variants={fadeUp} className="text-center mb-12">
@@ -305,7 +303,7 @@ export default function Expedition() {
       </section>
 
       {/* SECTION 3: How It Works */}
-      <section className="py-20 px-5 md:px-10" style={{ background: "var(--tt-off-black)" }}>
+      <section className="py-20 px-5 md:px-10 bg-off-black">
         <div className="max-w-7xl mx-auto">
           <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={stagger}>
             <motion.div variants={fadeUp} className="text-center mb-14">
@@ -367,7 +365,7 @@ export default function Expedition() {
       </section>
 
       {/* SECTION 4: Who Participates */}
-      <section className="py-20 px-5 md:px-10" style={{ background: "var(--tt-near-black)" }}>
+      <section className="py-20 px-5 md:px-10 bg-near-black">
         <div className="max-w-7xl mx-auto">
           <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={stagger}>
             <motion.div variants={fadeUp} className="text-center mb-12">
@@ -402,7 +400,7 @@ export default function Expedition() {
       </section>
 
       {/* SECTION 5: Sponsorship */}
-      <section className="py-20 px-5 md:px-10" style={{ background: "var(--tt-off-black)" }}>
+      <section className="py-20 px-5 md:px-10 bg-off-black">
         <div className="max-w-7xl mx-auto">
           <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={stagger}>
             <motion.div variants={fadeUp} className="text-center mb-12">
@@ -418,22 +416,18 @@ export default function Expedition() {
                 <motion.div
                   key={tier.title}
                   variants={fadeUp}
-                  className="rounded-xl p-6 flex flex-col"
-                  style={{
-                    background: "rgba(255,255,255,0.04)",
-                    border: `${tier.borderWidth} solid ${tier.border}`,
-                  }}
+                  className={`rounded-xl p-6 flex flex-col ${tier.borderClass}`}
+                  style={{ background: "rgba(255,255,255,0.04)" }}
                 >
                   {tier.badge && (
                     <span
-                      className="font-['Open_Sans'] font-bold text-[9px] uppercase tracking-[1.5px] px-2 py-1 rounded self-start mb-3"
-                      style={{ background: `${tier.badge.color}20`, color: tier.badge.color }}
+                      className={`font-['Open_Sans'] font-bold text-[9px] uppercase tracking-[1.5px] px-2 py-1 rounded self-start mb-3 ${tier.badge.textClass} ${tier.badge.bgClass}`}
                     >
                       {tier.badge.text}
                     </span>
                   )}
                   <h3 className="font-['Poppins'] font-bold text-[18px] text-white mb-1">{tier.title}</h3>
-                  <div className="font-['Poppins'] font-bold text-[22px] mb-4" style={{ color: tier.amountColor }}>
+                  <div className={`font-['Poppins'] font-bold text-[22px] mb-4 ${tier.amountClass}`}>
                     {tier.amount}
                   </div>
                   {tier.body && (
@@ -442,7 +436,7 @@ export default function Expedition() {
                   <ul className="space-y-1.5 flex-1">
                     {tier.items.map(item => (
                       <li key={item} className="flex gap-2 font-['Open_Sans'] text-[12px]" style={{ color: "rgba(255,255,255,0.60)" }}>
-                        <Check size={12} className="shrink-0 mt-0.5" style={{ color: tier.border }} />
+                        <Check size={12} className={`shrink-0 mt-0.5 ${tier.checkClass}`} />
                         {item}
                       </li>
                     ))}
@@ -459,7 +453,7 @@ export default function Expedition() {
       </section>
 
       {/* SECTION 6: Get Involved */}
-      <section id="interest-form" className="py-20 px-5 md:px-10" style={{ background: "var(--tt-near-black)" }}>
+      <section id="interest-form" className="py-20 px-5 md:px-10 bg-near-black">
         <div className="max-w-7xl mx-auto">
           <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={stagger}>
             <motion.div variants={fadeUp} className="text-center mb-12">
@@ -481,8 +475,7 @@ export default function Expedition() {
                   <p className="font-['Open_Sans'] text-[14px] leading-[1.65] flex-1" style={{ color: "rgba(255,255,255,0.55)" }}>{card.body}</p>
                   <a
                     href={card.href}
-                    className="mt-4 inline-flex items-center gap-2 font-['Open_Sans'] font-bold text-[13px] px-5 py-2.5 rounded-lg transition-colors duration-200"
-                    style={card.buttonStyle}
+                    className={`mt-4 inline-flex items-center gap-2 font-['Open_Sans'] font-bold text-[13px] px-5 py-2.5 rounded-lg transition-colors duration-200 ${card.buttonClass}`}
                   >
                     {card.buttonLabel}
                   </a>

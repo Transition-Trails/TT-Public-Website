@@ -116,8 +116,8 @@ export default function TrailOfMastery() {
                 transition={{ duration: 0.5 }}
               >
                 <div
-                  className="inline-block font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-7"
-                  style={{ color: "var(--tt-trail-green)", background: "rgba(47,107,63,0.18)", border: "1px solid rgba(47,107,63,0.45)" }}
+                  className="inline-block font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-7 text-trail-green"
+                  style={{ background: "rgba(47,107,63,0.18)", border: "1px solid rgba(47,107,63,0.45)" }}
                 >
                   IN DEVELOPMENT · COHORT 0 · 2027
                 </div>
@@ -334,8 +334,7 @@ export default function TrailOfMastery() {
               href={JOTFORM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center h-[56px] px-10 rounded-[8px] font-['Poppins'] font-bold text-[15px] transition-colors"
-              style={{ background: "var(--tt-sun-amber)", color: "var(--tt-charcoal)" }}
+              className="inline-flex items-center justify-center h-[56px] px-10 rounded-[8px] font-['Poppins'] font-bold text-[15px] transition-colors bg-sun-amber text-charcoal"
             >
               Join the Interest List →
             </a>

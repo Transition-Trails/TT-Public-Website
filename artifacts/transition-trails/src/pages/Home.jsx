@@ -405,7 +405,7 @@ export default function Home() {
               Digital Compass is TT's nonprofit Salesforce membership — weekly office hours, project delivery, and expert guidance from $149/month. No consulting retainer. No long-term contract. Just consistent support from people who understand how nonprofits use Salesforce.
             </p>
             <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '16px' }}>
-              <Link href="/nonprofit-assessment" style={{ backgroundColor: 'var(--tt-deep-teal)', color: 'white', fontFamily: 'Poppins, sans-serif', fontWeight: '700', fontSize: '14px', padding: '14px 28px', borderRadius: '8px', textDecoration: 'none', display: 'inline-block' }}>
+              <Link href="/nonprofit-assessment" className="bg-deep-teal text-white" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: '700', fontSize: '14px', padding: '14px 28px', borderRadius: '8px', textDecoration: 'none', display: 'inline-block' }}>
                 Book a Free Assessment →
               </Link>
               <Link href="/programs/digital-compass" style={{ backgroundColor: 'transparent', color: 'white', fontFamily: 'Poppins, sans-serif', fontWeight: '700', fontSize: '14px', padding: '14px 28px', borderRadius: '8px', textDecoration: 'none', border: '2px solid rgba(255,255,255,0.60)', display: 'inline-block' }}>

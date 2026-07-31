@@ -314,7 +314,7 @@ export default function ExplorersTrail() {
             {/* Tier 1: Community Pass */}
             <div className="bg-white border border-warm-gray rounded-xl flex flex-col">
               <div className="p-8 flex flex-col flex-1">
-                <span className="inline-block font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase px-2.5 py-1 rounded mb-3" style={{ background: "var(--tt-teal-100)", color: "var(--tt-teal-300)" }}>GET STARTED</span>
+                <span className="inline-block font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase px-2.5 py-1 rounded mb-3 bg-teal-100 text-teal-300">GET STARTED</span>
                 <h3 className="font-['Poppins'] font-semibold text-[20px] text-charcoal mb-2">Community Pass</h3>
                 <div className="font-['Poppins'] font-bold text-[32px] text-teal-300 leading-none mb-1">$27<span className="font-['Open_Sans'] font-normal text-[15px] text-slate">/mo</span></div>
                 <p className="font-['Open_Sans'] text-[13px] text-slate mb-5">Month-to-month · cancel anytime</p>
@@ -353,7 +353,7 @@ export default function ExplorersTrail() {
                     <span className="font-bold">GT Enrollment Credit:</span> $27 off GT tuition if you enroll in Guided Trail while active.
                   </p>
                 </div>
-                <a href="https://form.jotform.com/261684070494058" target="_blank" rel="noopener noreferrer" className="w-full h-[44px] rounded-[8px] font-['Poppins'] font-semibold text-[14px] flex items-center justify-center transition-colors hover:opacity-90" style={{ background: "var(--tt-teal-100)", color: "var(--tt-teal-300)" }}>
+                <a href="https://form.jotform.com/261684070494058" target="_blank" rel="noopener noreferrer" className="w-full h-[44px] rounded-[8px] font-['Poppins'] font-semibold text-[14px] flex items-center justify-center transition-colors hover:opacity-90 bg-teal-100 text-teal-300">
                   Join the Waitlist →
                 </a>
               </div>
@@ -363,7 +363,7 @@ export default function ExplorersTrail() {
             <div className="bg-white border-2 border-trail-green rounded-xl flex flex-col relative">
               <div className="absolute top-4 right-4 bg-trail-green text-white font-['Poppins'] font-bold text-[9px] uppercase tracking-wide px-2.5 py-1 rounded-sm">MOST POPULAR</div>
               <div className="p-8 flex flex-col flex-1">
-                <span className="inline-block font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase px-2.5 py-1 rounded mb-3" style={{ background: "var(--tt-green-100)", color: "var(--tt-trail-green)" }}>FULL MEMBERSHIP</span>
+                <span className="inline-block font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase px-2.5 py-1 rounded mb-3 bg-green-100 text-trail-green">FULL MEMBERSHIP</span>
                 <h3 className="font-['Poppins'] font-semibold text-[20px] text-charcoal mb-2">Full Membership</h3>
                 <div className="font-['Poppins'] font-bold text-[32px] text-trail-green leading-none mb-1">$97<span className="font-['Open_Sans'] font-normal text-[15px] text-slate">/mo</span></div>
                 <p className="font-['Open_Sans'] text-[13px] text-slate mb-3">$1,164/yr billed annually</p>
@@ -405,7 +405,7 @@ export default function ExplorersTrail() {
                   </p>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <a href="https://form.jotform.com/261684070494058" target="_blank" rel="noopener noreferrer" className="w-full h-[44px] rounded-[8px] font-['Poppins'] font-semibold text-[14px] flex items-center justify-center text-white transition-colors hover:opacity-90" style={{ background: "var(--tt-trail-green)" }}>
+                  <a href="https://form.jotform.com/261684070494058" target="_blank" rel="noopener noreferrer" className="w-full h-[44px] rounded-[8px] font-['Poppins'] font-semibold text-[14px] flex items-center justify-center text-white transition-colors hover:opacity-90 bg-trail-green">
                     Join the Waitlist →
                   </a>
                   <a href="https://form.jotform.com/261684070494058" target="_blank" rel="noopener noreferrer" className="w-full h-[44px] rounded-[8px] border-2 border-trail-green text-trail-green font-['Poppins'] font-semibold text-[14px] flex items-center justify-center hover:bg-green-100 transition-colors">
@@ -419,7 +419,7 @@ export default function ExplorersTrail() {
             <div className="bg-white border border-deep-teal rounded-xl flex flex-col relative">
               <div className="absolute top-4 right-4 bg-sun-amber text-charcoal font-['Poppins'] font-bold text-[9px] uppercase tracking-wide px-2.5 py-1 rounded-sm">BEST VALUE</div>
               <div className="p-8 flex flex-col flex-1">
-                <span className="inline-block font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase px-2.5 py-1 rounded mb-3" style={{ background: "rgba(47,111,126,0.1)", color: "var(--tt-deep-teal)" }}>FULL + COACHING</span>
+                <span className="inline-block font-['Open_Sans'] font-bold text-[10px] tracking-[1.5px] uppercase px-2.5 py-1 rounded mb-3 text-deep-teal" style={{ background: "rgba(47,111,126,0.1)" }}>FULL + COACHING</span>
                 <h3 className="font-['Poppins'] font-semibold text-[20px] text-charcoal mb-2">Full + Coaching</h3>
                 <div className="font-['Poppins'] font-bold text-[32px] text-deep-teal leading-none mb-1">$1,464<span className="font-['Open_Sans'] font-normal text-[15px] text-slate">/yr</span></div>
                 <div className="flex flex-col gap-1.5 mb-5">
@@ -456,10 +456,10 @@ export default function ExplorersTrail() {
                   </p>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <a href="https://form.jotform.com/261684070494058" target="_blank" rel="noopener noreferrer" className="w-full h-[44px] rounded-[8px] font-['Poppins'] font-semibold text-[14px] flex items-center justify-center text-white transition-colors hover:opacity-90" style={{ background: "var(--tt-deep-teal)" }}>
+                  <a href="https://form.jotform.com/261684070494058" target="_blank" rel="noopener noreferrer" className="w-full h-[44px] rounded-[8px] font-['Poppins'] font-semibold text-[14px] flex items-center justify-center text-white transition-colors hover:opacity-90 bg-deep-teal">
                     Join the Waitlist →
                   </a>
-                  <a href="https://form.jotform.com/261684070494058" target="_blank" rel="noopener noreferrer" className="w-full h-[44px] rounded-[8px] border-2 font-['Poppins'] font-semibold text-[14px] flex items-center justify-center transition-colors hover:opacity-90" style={{ borderColor: "var(--tt-deep-teal)", color: "var(--tt-deep-teal)" }}>
+                  <a href="https://form.jotform.com/261684070494058" target="_blank" rel="noopener noreferrer" className="w-full h-[44px] rounded-[8px] border-2 font-['Poppins'] font-semibold text-[14px] flex items-center justify-center transition-colors hover:opacity-90 border-deep-teal text-deep-teal">
                     Join the Waitlist →
                   </a>
                 </div>

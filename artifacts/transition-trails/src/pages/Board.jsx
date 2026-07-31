@@ -102,8 +102,8 @@ export default function Board() {
           <motion.div initial="hidden" animate="show" variants={stagger} className="max-w-7xl">
             <motion.div variants={fadeUp}>
               <div
-                className="inline-block font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-7"
-                style={{ color: "var(--tt-sun-amber)", background: "rgba(245,166,35,0.15)", border: "1px solid rgba(245,166,35,0.4)" }}
+                className="inline-block font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-7 text-sun-amber"
+                style={{ background: "rgba(245,166,35,0.15)", border: "1px solid rgba(245,166,35,0.4)" }}
               >
                 BOARD RECRUITMENT  ·  NONPROFIT GOVERNANCE  ·  MISSION-DRIVEN LEADERSHIP
               </div>

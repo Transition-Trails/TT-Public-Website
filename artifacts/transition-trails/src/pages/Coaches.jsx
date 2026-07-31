@@ -104,8 +104,8 @@ export default function Coaches() {
             {/* Left copy */}
             <div className="flex-1 max-w-[700px]">
               <div
-                className="inline-block font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-7"
-                style={{ color: "var(--tt-sun-amber)", background: "rgba(245,166,35,0.15)", border: "1px solid rgba(245,166,35,0.4)" }}
+                className="inline-block font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-7 text-sun-amber"
+                style={{ background: "rgba(245,166,35,0.15)", border: "1px solid rgba(245,166,35,0.4)" }}
               >
                 COACHING WITH TRANSITION TRAILS  ·  SHAPE THE NEXT GENERATION
               </div>
@@ -129,8 +129,7 @@ export default function Coaches() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href="#apply"
-                  className="h-[52px] px-7 rounded-[8px] font-['Poppins'] font-semibold text-[15px] inline-flex items-center justify-center transition-colors"
-                  style={{ background: "var(--tt-sun-amber)", color: "var(--tt-charcoal)" }}
+                  className="h-[52px] px-7 rounded-[8px] font-['Poppins'] font-semibold text-[15px] inline-flex items-center justify-center transition-colors bg-sun-amber text-charcoal"
                   onMouseEnter={e => e.currentTarget.style.background = "var(--tt-amber-700)"}
                   onMouseLeave={e => e.currentTarget.style.background = "var(--tt-sun-amber)"}
                 >
@@ -182,7 +181,7 @@ export default function Coaches() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             {/* Card 1 — Coach's Assistant */}
-            <div className="bg-white border-[1.5px] border-warm-gray rounded-2xl overflow-hidden flex flex-col" style={{ borderTop: "6px solid var(--tt-trail-green)" }}>
+            <div className="bg-white border-[1.5px] border-warm-gray rounded-2xl overflow-hidden flex flex-col border-t-[6px] border-t-trail-green">
               <div className="p-8 flex flex-col flex-1">
                 <span className="font-['Open_Sans'] font-bold text-[11px] tracking-[1px] uppercase text-trail-green mb-4">ENTRY LEVEL</span>
                 <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mb-4"><Users size={24} color="var(--tt-trail-green)" /></div>
@@ -235,7 +234,7 @@ export default function Coaches() {
             </div>
 
             {/* Card 2 — Associate Coach */}
-            <div className="bg-white border-[1.5px] border-warm-gray rounded-2xl overflow-hidden flex flex-col" style={{ borderTop: "6px solid var(--tt-green-700)" }}>
+            <div className="bg-white border-[1.5px] border-warm-gray rounded-2xl overflow-hidden flex flex-col border-t-[6px] border-t-green-700">
               <div className="p-8 flex flex-col flex-1">
                 <span className="font-['Open_Sans'] font-bold text-[11px] tracking-[1px] uppercase text-green-700 mb-4">EXPERIENCED</span>
                 <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style={{background:"rgba(30,74,42,0.08)"}}><Target size={24} color="var(--tt-green-700)" /></div>
@@ -248,7 +247,7 @@ export default function Coaches() {
                 </div>
 
                 {/* Eligibility */}
-                <div className="rounded-xl p-5 mb-4" style={{ background: "rgba(30,74,42,0.07)", borderLeft: "4px solid var(--tt-green-700)" }}>
+                <div className="rounded-xl p-5 mb-4 border-l-[4px] border-l-green-700" style={{ background: "rgba(30,74,42,0.07)" }}>
                   <p className="font-['Open_Sans'] font-bold text-[13px] text-green-700 mb-3">Eligibility</p>
                   <ul className="space-y-1.5">
                     {[
@@ -258,7 +257,7 @@ export default function Coaches() {
                       "Ready to commit to a full 12-week cohort",
                     ].map(item => (
                       <li key={item} className="flex gap-2 font-['Open_Sans'] text-[13px] text-slate">
-                        <Check size={16} className="shrink-0" style={{ color: "var(--tt-green-700)" }} />{item}
+                        <Check size={16} className="shrink-0 text-green-700" />{item}
                       </li>
                     ))}
                   </ul>
@@ -268,7 +267,7 @@ export default function Coaches() {
                 <div className="rounded-xl p-4" style={{ background: "rgba(30,74,42,0.06)" }}>
                   <p className="font-['Open_Sans'] font-bold text-[12px] text-green-700 mb-1">What you receive</p>
                   <p className="font-['Open_Sans'] text-[13px] text-slate mb-1">3 months Explorer's Trail Annual membership credit per cohort completed</p>
-                  <p className="font-['Open_Sans'] italic text-[11px]" style={{ color: "var(--tt-cool-gray)" }}>Future coaching stipend in development — hint only</p>
+                  <p className="font-['Open_Sans'] italic text-[11px] text-cool-gray">Future coaching stipend in development — hint only</p>
                 </div>
               </div>
             </div>
@@ -295,8 +294,8 @@ export default function Coaches() {
             {BENEFITS.map(b => (
               <div
                 key={b.title}
-                className="bg-white border border-warm-gray rounded-xl overflow-hidden"
-                style={{ borderTop: "4px solid var(--tt-trail-green)", opacity: b.dim ? 0.75 : 1 }}
+                className="bg-white border border-warm-gray rounded-xl overflow-hidden border-t-[4px] border-t-trail-green"
+                style={{ opacity: b.dim ? 0.75 : 1 }}
               >
                 <div className="p-7">
                   <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mb-3">{b.icon}</div>
@@ -326,8 +325,7 @@ export default function Coaches() {
             {REALITY_CARDS.map(card => (
               <div
                 key={card.title}
-                className="rounded-xl p-6"
-                style={{ background: "var(--tt-green-100)", borderLeft: "4px solid var(--tt-trail-green)" }}
+                className="rounded-xl p-6 bg-green-100 border-l-[4px] border-l-trail-green"
               >
                 <h3 className="font-['Open_Sans'] font-bold text-[14px] text-green-700 mb-3">{card.title}</h3>
                 <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.65]">{card.body}</p>

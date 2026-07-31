@@ -158,7 +158,7 @@ export default function About() {
               </p>
             </motion.div>
             <motion.div variants={fadeUp} className="max-w-[600px] mx-auto">
-              <div className="bg-white border border-warm-gray rounded-xl p-7 relative" style={{ borderLeft: "5px solid var(--tt-deep-teal)" }}>
+              <div className="bg-white border border-warm-gray rounded-xl p-7 relative border-l-[5px] border-l-deep-teal">
                 <div className="absolute top-3 left-4 font-['Poppins'] text-[80px] leading-none select-none" style={{ color: "rgba(47,111,126,0.15)" }}>"</div>
                 <p className="font-['Poppins'] font-medium italic text-[16px] text-charcoal leading-[1.6] mb-4 relative z-10">
                   {hartfordTestimonial.quote}

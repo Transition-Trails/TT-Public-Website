@@ -45,8 +45,8 @@ export function FounderCard({ founder }) {
           {founder.skills.map((skill, i) => (
             <span
               key={i}
-              className="font-['Open_Sans'] font-semibold text-[11px] rounded inline-flex items-center"
-              style={{ color: "var(--tt-trail-green)", background: "var(--tt-green-100)", padding: "3px 10px", margin: "2px" }}
+              className="font-['Open_Sans'] font-semibold text-[11px] rounded inline-flex items-center text-trail-green bg-green-100"
+              style={{ padding: "3px 10px", margin: "2px" }}
             >
               {skill}
             </span>
@@ -56,8 +56,7 @@ export function FounderCard({ founder }) {
         {founder.contactEmail && (
           <a
             href={`mailto:${founder.contactEmail}`}
-            className="mt-2 font-['Open_Sans'] font-semibold text-[12px] hover:underline transition-colors"
-            style={{ color: "var(--tt-teal-300)" }}
+            className="mt-2 font-['Open_Sans'] font-semibold text-[12px] hover:underline transition-colors text-teal-300"
           >
             {founder.contactEmail}
           </a>
@@ -77,8 +76,7 @@ export function FounderCard({ founder }) {
         {founder.coachingLink && (
           <a
             href={LINKS.coaching}
-            className="mt-2 font-['Open_Sans'] font-semibold text-[11px] hover:underline transition-colors"
-            style={{ color: "var(--tt-trail-green)" }}
+            className="mt-2 font-['Open_Sans'] font-semibold text-[11px] hover:underline transition-colors text-trail-green"
           >
             Available for individual coaching →
           </a>

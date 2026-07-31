@@ -126,8 +126,8 @@ export default function Consulting() {
             <div className="flex-1 max-w-[700px]">
               <motion.div
                 variants={fadeUp}
-                className="inline-block font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-7"
-                style={{ color: "var(--tt-sun-amber)", background: "rgba(245,166,35,0.15)", border: "1px solid rgba(245,166,35,0.4)" }}
+                className="inline-block font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-7 text-sun-amber"
+                style={{ background: "rgba(245,166,35,0.15)", border: "1px solid rgba(245,166,35,0.4)" }}
               >
                 SALESFORCE CONSULTING  ·  NONPROFITS AND SMALL BUSINESS  ·  RESOLVE METHODOLOGY
               </motion.div>
@@ -152,8 +152,7 @@ export default function Consulting() {
               <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4">
                 <a
                   href="#assessment"
-                  className="h-[52px] px-7 rounded-[8px] font-['Poppins'] font-semibold text-[15px] inline-flex items-center justify-center transition-colors"
-                  style={{ background: "var(--tt-sun-amber)", color: "var(--tt-charcoal)" }}
+                  className="h-[52px] px-7 rounded-[8px] font-['Poppins'] font-semibold text-[15px] inline-flex items-center justify-center transition-colors bg-sun-amber text-charcoal"
                   onMouseEnter={e => e.currentTarget.style.background = "var(--tt-amber-700)"}
                   onMouseLeave={e => e.currentTarget.style.background = "var(--tt-sun-amber)"}
                 >
@@ -210,7 +209,7 @@ export default function Consulting() {
                     <p>TT consulting is distinct from Digital Compass membership. Digital Compass is an ongoing community membership for nonprofits who want consistent, accessible support. Consulting is for organizations with a specific project, implementation, or architectural challenge that needs dedicated expert attention.</p>
                     <p>Not sure which is right for you? Start with a free assessment and we will point you in the right direction.</p>
                   </div>
-                  <Link href="/programs/digital-compass" className="font-['Open_Sans'] font-semibold text-[13px] hover:underline" style={{ color: "var(--tt-trail-green)" }}>
+                  <Link href="/programs/digital-compass" className="font-['Open_Sans'] font-semibold text-[13px] hover:underline text-trail-green">
                     Learn about Digital Compass →
                   </Link>
                 </div>
@@ -314,8 +313,7 @@ export default function Consulting() {
                 {RESOLVE_PHASES.map(phase => (
                   <motion.div key={phase.name} variants={fadeUp} className="flex items-center gap-4">
                     <div
-                      className="w-7 h-7 rounded-full flex items-center justify-center shrink-0"
-                      style={{ background: "var(--tt-deep-teal)" }}
+                      className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 bg-deep-teal"
                     >
                       <span className="font-['Poppins'] font-bold text-white text-[14px]">{phase.letter}</span>
                     </div>
@@ -348,8 +346,7 @@ export default function Consulting() {
                 <motion.div
                   key={c.key}
                   variants={fadeUp}
-                  className="bg-white rounded-xl overflow-hidden flex flex-col"
-                  style={{ border: "1px solid var(--tt-warm-gray)" }}
+                  className="bg-white rounded-xl overflow-hidden flex flex-col border border-warm-gray"
                 >
                   <div className="p-7 flex flex-col flex-1">
                     <div
@@ -372,14 +369,13 @@ export default function Consulting() {
 
             <motion.div
               variants={fadeUp}
-              className="rounded-xl p-7 md:p-8 flex flex-col md:flex-row gap-5"
-              style={{ background: "var(--tt-green-100)" }}
+              className="rounded-xl p-7 md:p-8 flex flex-col md:flex-row gap-5 bg-green-100"
             >
               <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center shrink-0">
                 <Rocket size={22} color="var(--tt-trail-green)" />
               </div>
               <div>
-                <h3 className="font-['Poppins'] font-semibold text-[16px] mb-3" style={{ color: "var(--tt-green-700)" }}>Building our consulting team.</h3>
+                <h3 className="font-['Poppins'] font-semibold text-[16px] mb-3 text-green-700">Building our consulting team.</h3>
                 <p className="font-['Open_Sans'] text-[14px] text-slate leading-[1.65] mb-3">
                   Our consulting practice is led by TT founders today. As our practice grows, we will be hiring associate consultants directly from our program graduates — creating a direct pathway from TT program completion to professional Salesforce consulting work. This is one of the ways TT connects program outcomes to real career placement.
                 </p>
@@ -412,8 +408,8 @@ export default function Consulting() {
 
             <motion.div
               variants={fadeUp}
-              className="bg-white rounded-2xl"
-              style={{ border: "1px solid var(--tt-warm-gray)", padding: "40px" }}
+              className="bg-white rounded-2xl border border-warm-gray"
+              style={{ padding: "40px" }}
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div>

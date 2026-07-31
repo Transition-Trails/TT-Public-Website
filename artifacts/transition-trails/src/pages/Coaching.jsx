@@ -5,28 +5,36 @@ import { Compass, Target, RefreshCw, Building2, Search, MessageCircle, Calendar,
 
 const WHO_CARDS = [
   {
-    color: "var(--tt-teal-300)",
+    borderClass: "border-l-[4px] border-l-teal-300",
+    iconBgClass: "bg-teal-100",
+    textClass: "text-teal-300",
     icon: <Compass size={24} color="var(--tt-teal-300)" />,
     title: "Career Starters",
     subtitle: "Finding your direction",
     body: "Not sure if Salesforce is the right path for you? A coaching session helps you understand what a Salesforce career actually looks like, what it takes to get there, and whether it fits your goals, background, and timeline. No commitment required — just clarity.",
   },
   {
-    color: "var(--tt-trail-green)",
+    borderClass: "border-l-[4px] border-l-trail-green",
+    iconBgClass: "bg-green-100",
+    textClass: "text-trail-green",
     icon: <Target size={24} color="var(--tt-trail-green)" />,
     title: "Career Builders",
     subtitle: "Advancing your career",
     body: "You have the cert but the job search is not going the way you expected. Or you are in a role and want to move up. Coaching gives you a clear plan — resume review, interview prep, portfolio feedback, or technical skill development — whatever you need most right now.",
   },
   {
-    color: "var(--tt-green-700)",
+    borderClass: "border-l-[4px] border-l-green-700",
+    iconBgClass: "bg-green-100",
+    textClass: "text-green-700",
     icon: <RefreshCw size={24} color="var(--tt-green-700)" />,
     title: "Career Pivoters",
     subtitle: "Making the pivot",
     body: "You are coming from another career and the path forward is not obvious. Coaching helps you map your existing skills to Salesforce roles, identify the fastest route to job-ready, and build the confidence to make the transition with a plan behind you.",
   },
   {
-    color: "var(--tt-deep-teal)",
+    borderClass: "border-l-[4px] border-l-deep-teal",
+    iconBgClass: "bg-teal-100",
+    textClass: "text-deep-teal",
     icon: <Building2 size={24} color="var(--tt-deep-teal)" />,
     title: "Nonprofit Professionals",
     subtitle: "Nonprofit technology leadership",
@@ -36,7 +44,10 @@ const WHO_CARDS = [
 
 const PACKAGES = [
   {
-    accent: "var(--tt-trail-green)",
+    borderTopClass: "border-t-[5px] border-t-trail-green",
+    accentBgClass: "bg-trail-green",
+    accentTextClass: "text-trail-green",
+    checkClass: "text-trail-green",
     icon: <Search size={24} color="var(--tt-trail-green)" />,
     title: "Discovery Call",
     price: "Free",
@@ -55,7 +66,10 @@ const PACKAGES = [
     etNote: "Free for everyone — no membership required",
   },
   {
-    accent: "var(--tt-deep-teal)",
+    borderTopClass: "border-t-[5px] border-t-deep-teal",
+    accentBgClass: "bg-deep-teal",
+    accentTextClass: "text-deep-teal",
+    checkClass: "text-deep-teal",
     icon: <MessageCircle size={24} color="var(--tt-deep-teal)" />,
     title: "Single Session",
     price: "$150",
@@ -77,7 +91,10 @@ const PACKAGES = [
     etLink: "/programs/explorers-trail",
   },
   {
-    accent: "var(--tt-trail-green)",
+    borderTopClass: "border-t-[5px] border-t-trail-green",
+    accentBgClass: "bg-trail-green",
+    accentTextClass: "text-trail-green",
+    checkClass: "text-trail-green",
     badge: "POPULAR",
     icon: <Calendar size={24} color="var(--tt-trail-green)" />,
     title: "3-Session Bundle",
@@ -99,7 +116,10 @@ const PACKAGES = [
     etNote: "Members save $125 on this bundle",
   },
   {
-    accent: "var(--tt-green-700)",
+    borderTopClass: "border-t-[5px] border-t-green-700",
+    accentBgClass: "bg-green-700",
+    accentTextClass: "text-green-700",
+    checkClass: "text-green-700",
     icon: <Rocket size={24} color="var(--tt-green-700)" />,
     title: "6-Session Bundle",
     price: "$750",
@@ -124,7 +144,9 @@ const PACKAGES = [
 const COACHES = [
   {
     key: "AL",
-    accent: "var(--tt-trail-green)",
+    accentBgClass: "bg-trail-green",
+    accentTextClass: "text-trail-green",
+    accentBorderClass: "border-trail-green",
     initials: "AL",
     name: "Angela Landrith",
     title: "Co-Founder & CEO",
@@ -135,11 +157,13 @@ const COACHES = [
     contactLabel: "Schedule directly →",
     contactHref: LINKS.angelaCalendar,
     external: true,
-    pillBg: "var(--tt-green-100)",
+    pillBgClass: "bg-green-100",
   },
   {
     key: "KB",
-    accent: "var(--tt-deep-teal)",
+    accentBgClass: "bg-deep-teal",
+    accentTextClass: "text-deep-teal",
+    accentBorderClass: "border-deep-teal",
     initials: "KB",
     name: "Kim Barnes",
     title: "Co-Founder & COO · Digital Compass Lead",
@@ -150,11 +174,13 @@ const COACHES = [
     contactLabel: "kim@transitiontrails.org",
     contactHref: "mailto:kim@transitiontrails.org",
     external: true,
-    pillBg: "var(--tt-teal-100)",
+    pillBgClass: "bg-teal-100",
   },
   {
     key: "HR",
-    accent: "var(--tt-green-700)",
+    accentBgClass: "bg-green-700",
+    accentTextClass: "text-green-700",
+    accentBorderClass: "border-green-700",
     initials: "HR",
     name: "Hugh Richardson",
     title: "Co-Founder & CTO · Solutions Architect",
@@ -165,7 +191,7 @@ const COACHES = [
     contactLabel: "hello@transitiontrails.org",
     contactHref: "mailto:hello@transitiontrails.org?subject=Coaching%20with%20Hugh",
     external: true,
-    pillBg: "rgba(30,74,42,0.08)",
+    pillBgClass: null, // rgba(30,74,42,0.08) has no Tailwind equivalent — kept as inline
   },
 ];
 
@@ -214,8 +240,8 @@ export default function Coaching() {
           <div className="flex flex-col xl:flex-row gap-14 xl:gap-20 items-start">
             <div className="flex-1 max-w-[700px]">
               <div
-                className="inline-block font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-7"
-                style={{ color: "var(--tt-sun-amber)", background: "rgba(245,166,35,0.15)", border: "1px solid rgba(245,166,35,0.4)" }}
+                className="inline-block font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-7 text-sun-amber"
+                style={{ background: "rgba(245,166,35,0.15)", border: "1px solid rgba(245,166,35,0.4)" }}
               >
                 INDIVIDUAL COACHING  ·  1-ON-1  ·  EXPERT COACHES
               </div>
@@ -239,8 +265,7 @@ export default function Coaching() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href="#discovery"
-                  className="h-[52px] px-7 rounded-[8px] font-['Poppins'] font-semibold text-[15px] inline-flex items-center justify-center transition-colors"
-                  style={{ background: "var(--tt-sun-amber)", color: "var(--tt-charcoal)" }}
+                  className="h-[52px] px-7 rounded-[8px] font-['Poppins'] font-semibold text-[15px] inline-flex items-center justify-center transition-colors bg-sun-amber text-charcoal"
                   onMouseEnter={e => e.currentTarget.style.background = "var(--tt-amber-700)"}
                   onMouseLeave={e => e.currentTarget.style.background = "var(--tt-sun-amber)"}
                 >
@@ -257,14 +282,14 @@ export default function Coaching() {
 
             <div className="flex flex-row xl:flex-col gap-4 w-full xl:w-[240px]">
               {[
-                { value: "Free", label: "Discovery call — 30 minutes", color: "var(--tt-trail-green)" },
-                { value: "$150/hr", label: "Standard 1-on-1 rate", color: "var(--tt-deep-teal)" },
-                { value: "$100/hr", label: "Explorer's Trail member rate", color: "var(--tt-teal-300)" },
+                { value: "Free", label: "Discovery call — 30 minutes", borderTopClass: "border-t-[4px] border-t-trail-green" },
+                { value: "$150/hr", label: "Standard 1-on-1 rate", borderTopClass: "border-t-[4px] border-t-deep-teal" },
+                { value: "$100/hr", label: "Explorer's Trail member rate", borderTopClass: "border-t-[4px] border-t-teal-300" },
               ].map(s => (
                 <div
                   key={s.label}
-                  className="flex-1 xl:flex-none rounded-xl p-6"
-                  style={{ background: "rgba(255,255,255,0.08)", borderTop: `4px solid ${s.color}`, border: "1px solid rgba(255,255,255,0.15)" }}
+                  className={`flex-1 xl:flex-none rounded-xl p-6 ${s.borderTopClass}`}
+                  style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.15)" }}
                 >
                   <div className="font-['Poppins'] font-bold text-[24px] text-white mb-1">{s.value}</div>
                   <div className="font-['Open_Sans'] text-[12px]" style={{ color: "rgba(255,255,255,0.60)" }}>{s.label}</div>
@@ -287,12 +312,11 @@ export default function Coaching() {
             {WHO_CARDS.map(card => (
               <div
                 key={card.title}
-                className="bg-white border border-warm-gray rounded-xl p-7 flex flex-col"
-                style={{ borderLeft: `4px solid ${card.color}` }}
+                className={`bg-white border border-warm-gray rounded-xl p-7 flex flex-col ${card.borderClass}`}
               >
-                <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-3" style={{background: `${card.color}15`}}>{card.icon}</div>
+                <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 ${card.iconBgClass}`}>{card.icon}</div>
                 <h3 className="font-['Poppins'] font-semibold text-[16px] text-charcoal mb-1">{card.title}</h3>
-                <p className="font-['Open_Sans'] font-semibold text-[13px] mb-3" style={{ color: card.color }}>{card.subtitle}</p>
+                <p className={`font-['Open_Sans'] font-semibold text-[13px] mb-3 ${card.textClass}`}>{card.subtitle}</p>
                 <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.65]">{card.body}</p>
               </div>
             ))}
@@ -309,8 +333,8 @@ export default function Coaching() {
           </div>
 
           <div
-            className="max-w-[760px] mx-auto flex items-start gap-3 rounded-lg mb-10"
-            style={{ background: "var(--tt-amber-100)", border: "1px solid var(--tt-sun-amber)", padding: "16px 24px" }}
+            className="max-w-[760px] mx-auto flex items-start gap-3 rounded-lg mb-10 bg-amber-100 border border-sun-amber"
+            style={{ padding: "16px 24px" }}
           >
             <Star size={18} color="var(--tt-sun-amber)" className="shrink-0" />
             <p className="font-['Open_Sans'] text-[14px] text-charcoal leading-[1.6]">
@@ -323,13 +347,11 @@ export default function Coaching() {
             {PACKAGES.map(pkg => (
               <div
                 key={pkg.title}
-                className="bg-white border border-warm-gray rounded-xl overflow-hidden flex flex-col relative"
-                style={{ borderTop: `5px solid ${pkg.accent}` }}
+                className={`bg-white border border-warm-gray rounded-xl overflow-hidden flex flex-col relative ${pkg.borderTopClass}`}
               >
                 {pkg.badge && (
                   <span
-                    className="absolute top-4 right-4 font-['Open_Sans'] font-bold text-[10px] px-2 py-1 rounded"
-                    style={{ background: "var(--tt-sun-amber)", color: "var(--tt-charcoal)" }}
+                    className="absolute top-4 right-4 font-['Open_Sans'] font-bold text-[10px] px-2 py-1 rounded bg-sun-amber text-charcoal"
                   >
                     {pkg.badge}
                   </span>
@@ -337,12 +359,12 @@ export default function Coaching() {
                 <div className="p-8 flex flex-col flex-1">
                   <div className="text-[32px] mb-3">{pkg.icon}</div>
                   <h3 className="font-['Poppins'] font-bold text-[22px] text-charcoal mb-2">{pkg.title}</h3>
-                  <div className="font-['Poppins'] font-bold text-[32px] leading-none mb-2" style={{ color: pkg.accent }}>
+                  <div className={`font-['Poppins'] font-bold text-[32px] leading-none mb-2 ${pkg.accentTextClass}`}>
                     {pkg.price}{pkg.priceSuffix && <span className="font-['Open_Sans'] font-normal text-[15px] text-slate">{pkg.priceSuffix}</span>}
                   </div>
                   <p className="font-['Open_Sans'] text-[13px] text-slate mb-1">{pkg.sub}</p>
                   {pkg.etPrice && (
-                    <p className="font-['Open_Sans'] font-semibold text-[14px] mb-4" style={{ color: "var(--tt-teal-300)" }}>{pkg.etPrice}</p>
+                    <p className="font-['Open_Sans'] font-semibold text-[14px] mb-4 text-teal-300">{pkg.etPrice}</p>
                   )}
                   <div className={`h-px bg-warm-gray ${pkg.etPrice ? "mb-5" : "mt-2 mb-5"}`} />
 
@@ -353,20 +375,19 @@ export default function Coaching() {
                   <ul className="space-y-2 mb-6">
                     {pkg.expect.map(item => (
                       <li key={item} className="flex gap-2 font-['Open_Sans'] text-[13px] text-slate">
-                        <Check size={16} className="shrink-0" style={{ color: pkg.accent }} />{item}
+                        <Check size={16} className={`shrink-0 ${pkg.checkClass}`} />{item}
                       </li>
                     ))}
                   </ul>
 
                   <a
                     href="#discovery"
-                    className="mt-auto w-full h-[48px] rounded-[8px] font-['Poppins'] font-semibold text-[14px] flex items-center justify-center text-white transition-colors"
-                    style={{ background: pkg.accent }}
+                    className={`mt-auto w-full h-[48px] rounded-[8px] font-['Poppins'] font-semibold text-[14px] flex items-center justify-center text-white transition-colors ${pkg.accentBgClass}`}
                   >
                     {pkg.cta}
                   </a>
                   {pkg.etLink ? (
-                    <Link href={pkg.etLink} className="text-center font-['Open_Sans'] text-[12px] mt-3 hover:underline" style={{ color: "var(--tt-trail-green)" }}>
+                    <Link href={pkg.etLink} className="text-center font-['Open_Sans'] text-[12px] mt-3 hover:underline text-trail-green">
                       {pkg.etNote}
                     </Link>
                   ) : (
@@ -394,27 +415,23 @@ export default function Coaching() {
             {COACHES.map(coach => (
               <div
                 key={coach.key}
-                className="bg-white rounded-2xl overflow-hidden flex flex-col"
-                style={{ border: "1.5px solid var(--tt-warm-gray)" }}
+                className="bg-white rounded-2xl overflow-hidden flex flex-col border-[1.5px] border-warm-gray"
               >
-                <div className="h-1.5 w-full" style={{ background: coach.accent }} />
+                <div className={`h-1.5 w-full ${coach.accentBgClass}`} />
                 <div className="p-7 flex flex-col flex-1">
-                  <div
-                    className="w-16 h-16 rounded-full flex items-center justify-center mb-4"
-                    style={{ background: coach.accent }}
-                  >
+                  <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-4 ${coach.accentBgClass}`}>
                     <span className="font-['Poppins'] font-bold text-white text-xl">{coach.initials}</span>
                   </div>
                   <h3 className="font-['Poppins'] font-bold text-[20px] text-charcoal mb-1">{coach.name}</h3>
-                  <p className="font-['Open_Sans'] font-semibold text-[14px] mb-3" style={{ color: coach.accent }}>{coach.title}</p>
+                  <p className={`font-['Open_Sans'] font-semibold text-[14px] mb-3 ${coach.accentTextClass}`}>{coach.title}</p>
                   <p className="font-['Open_Sans'] italic text-[13px] text-slate leading-[1.6] mb-4">{coach.tagline}</p>
 
                   <div className="flex flex-wrap gap-1.5 mb-5">
                     {coach.skills.map(skill => (
                       <span
                         key={skill}
-                        className="font-['Open_Sans'] font-semibold text-[10px] rounded px-2 py-1"
-                        style={{ color: coach.accent, background: coach.pillBg }}
+                        className={`font-['Open_Sans'] font-semibold text-[10px] rounded px-2 py-1 ${coach.accentTextClass} ${coach.pillBgClass ?? ""}`}
+                        style={coach.pillBgClass ? undefined : { background: "rgba(30,74,42,0.08)" }}
                       >
                         {skill}
                       </span>
@@ -422,14 +439,13 @@ export default function Coaching() {
                   </div>
 
                   <div className="mb-6">
-                    <p className="font-['Open_Sans'] font-bold text-[12px] mb-2" style={{ color: coach.accent, letterSpacing: "1px" }}>BEST FOR</p>
+                    <p className={`font-['Open_Sans'] font-bold text-[12px] mb-2 ${coach.accentTextClass}`} style={{ letterSpacing: "1px" }}>BEST FOR</p>
                     <p className="font-['Open_Sans'] text-[13px] text-slate leading-[1.65]">{coach.bestFor}</p>
                   </div>
 
                   <a
                     href="#discovery"
-                    className="mt-auto w-full h-[46px] rounded-[8px] font-['Poppins'] font-semibold text-[14px] flex items-center justify-center bg-white transition-colors"
-                    style={{ border: `1.5px solid ${coach.accent}`, color: coach.accent }}
+                    className={`mt-auto w-full h-[46px] rounded-[8px] font-['Poppins'] font-semibold text-[14px] flex items-center justify-center bg-white transition-colors border-[1.5px] ${coach.accentBorderClass} ${coach.accentTextClass}`}
                   >
                     {coach.cta}
                   </a>
@@ -437,8 +453,7 @@ export default function Coaching() {
                     href={coach.contactHref}
                     target={coach.external ? "_blank" : undefined}
                     rel={coach.external ? "noopener noreferrer" : undefined}
-                    className="text-center font-['Open_Sans'] text-[12px] mt-3 hover:underline"
-                    style={{ color: coach.accent }}
+                    className={`text-center font-['Open_Sans'] text-[12px] mt-3 hover:underline ${coach.accentTextClass}`}
                   >
                     {coach.contactLabel}
                   </a>
@@ -465,7 +480,7 @@ export default function Coaching() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-white rounded-xl p-8" style={{ borderLeft: "4px solid var(--tt-trail-green)" }}>
+            <div className="bg-white rounded-xl p-8 border-l-[4px] border-l-trail-green">
               <h3 className="font-['Poppins'] font-semibold text-[16px] text-trail-green mb-5">Workshop topics include:</h3>
               <ul className="space-y-3">
                 {WORKSHOP_TOPICS.map(item => (
@@ -530,7 +545,7 @@ export default function Coaching() {
                 body: "Career strategy, leadership development, big-picture roadmapping, and career progression.",
                 cta: "Schedule →",
                 href: LINKS.angelaCalendar,
-                bg: "var(--tt-trail-green)",
+                bgClass: "bg-trail-green",
               },
               {
                 icon: <Mail size={24} color="var(--tt-deep-teal)" />,
@@ -538,7 +553,7 @@ export default function Coaching() {
                 body: "Technical coaching, solution design, career pivot support, resume and interview prep, nonprofit Salesforce.",
                 cta: "Contact Us →",
                 href: "mailto:hello@transitiontrails.org?subject=Coaching%20Discovery%20Call%20Request",
-                bg: "var(--tt-deep-teal)",
+                bgClass: "bg-deep-teal",
               },
               {
                 icon: <Users size={24} color="rgba(255,255,255,0.70)" />,
@@ -561,10 +576,7 @@ export default function Coaching() {
                   href={opt.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full h-[44px] rounded-[8px] font-['Poppins'] font-semibold text-[14px] flex items-center justify-center transition-colors"
-                  style={opt.outline
-                    ? { background: "rgba(255,255,255,0.12)", border: "1px solid white", color: "white" }
-                    : { background: opt.bg, color: "white" }}
+                  className={`w-full h-[44px] rounded-[8px] font-['Poppins'] font-semibold text-[14px] flex items-center justify-center transition-colors ${opt.outline ? "bg-white/10 border border-white text-white" : `${opt.bgClass} text-white`}`}
                 >
                   {opt.cta}
                 </a>
@@ -579,7 +591,7 @@ export default function Coaching() {
       </section>
 
       {/* SECTION 8: Explorer's Trail Coaching Benefit */}
-      <section className="py-16 px-5 md:px-10" style={{ background: "var(--tt-green-100)" }}>
+      <section className="py-16 px-5 md:px-10 bg-green-100">
         <div className="max-w-7xl mx-auto">
           <div className="mb-10">
             <div className="font-['Open_Sans'] font-semibold text-[12px] tracking-[2px] uppercase text-green-700 mb-3">EXPLORER'S TRAIL MEMBERS</div>
@@ -590,7 +602,7 @@ export default function Coaching() {
             <div className="rounded-xl overflow-hidden border border-trail-green/20">
               <table className="w-full font-['Open_Sans'] text-[13px]">
                 <thead>
-                  <tr style={{ background: "var(--tt-trail-green)" }}>
+                  <tr className="bg-trail-green">
                     <th className="text-left py-3 px-4 text-white font-semibold">Package</th>
                     <th className="text-left py-3 px-4 text-white font-semibold">Standard</th>
                     <th className="text-left py-3 px-4 text-white font-semibold">ET Member</th>
@@ -613,7 +625,7 @@ export default function Coaching() {
               <p className="font-['Open_Sans'] text-[14px] text-slate leading-[1.6] mb-5">
                 Explorer's Trail Annual + Coaching members ($597/yr) receive one quarterly coaching session included with their membership — at no additional cost. That is up to $600 in coaching value included in your annual membership.
               </p>
-              <div className="bg-white rounded-lg p-4 mb-6" style={{ borderLeft: "4px solid var(--tt-trail-green)" }}>
+              <div className="bg-white rounded-lg p-4 mb-6 border-l-[4px] border-l-trail-green">
                 <p className="font-['Open_Sans'] text-[13px] text-charcoal leading-[1.7]">
                   4 quarterly sessions × $150/hr = $600 coaching value<br />
                   Annual + Coaching membership = $597/yr<br />

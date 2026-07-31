@@ -33,8 +33,8 @@ export default function PartnersRecruiters() {
             variants={stagger}
           >
             <motion.div variants={fadeUp}
-              className="inline-block font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-8"
-              style={{ color: "var(--tt-teal-300)", background: "rgba(127,175,198,0.15)", border: "1px solid rgba(127,175,198,0.35)" }}
+              className="inline-block font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] px-3 py-1.5 rounded mb-8 text-teal-300"
+              style={{ background: "rgba(127,175,198,0.15)", border: "1px solid rgba(127,175,198,0.35)" }}
             >
               FOR RECRUITERS
             </motion.div>
@@ -106,7 +106,7 @@ export default function PartnersRecruiters() {
               className="bg-white rounded-2xl border border-warm-gray p-8 flex flex-col"
             >
               <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-5" style={{ background: "rgba(47,111,126,0.12)" }}>
-                <UserCheck className="w-5 h-5" style={{ color: "var(--tt-deep-teal)" }} />
+                <UserCheck className="w-5 h-5 text-deep-teal" />
               </div>
               <div className="font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[1.5px] text-deep-teal mb-3">HIRE OUR GRADUATES</div>
               <h3 className="font-['Poppins'] font-bold text-[22px] text-charcoal mb-4">Hire our graduates.</h3>
@@ -133,7 +133,7 @@ export default function PartnersRecruiters() {
               className="bg-white rounded-2xl border border-warm-gray p-8 flex flex-col"
             >
               <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-5" style={{ background: "rgba(47,107,63,0.12)" }}>
-                <Users className="w-5 h-5" style={{ color: "var(--tt-trail-green)" }} />
+                <Users className="w-5 h-5 text-trail-green" />
               </div>
               <div className="font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[1.5px] text-trail-green mb-3">REFER CANDIDATES</div>
               <h3 className="font-['Poppins'] font-bold text-[22px] text-charcoal mb-4">Refer candidates to our programs.</h3>
@@ -189,19 +189,19 @@ export default function PartnersRecruiters() {
           >
             {[
               {
-                icon: <Briefcase className="w-5 h-5" style={{ color: "var(--tt-trail-green)" }} />,
+                icon: <Briefcase className="w-5 h-5 text-trail-green" />,
                 bg: "rgba(47,107,63,0.10)",
                 title: "Pre-vetted talent",
                 body: "Every graduate has completed a structured program, real client work, and a coaching-supported experience. Less screening time for you.",
               },
               {
-                icon: <Star className="w-5 h-5" style={{ color: "var(--tt-sun-amber)" }} />,
+                icon: <Star className="w-5 h-5 text-sun-amber" />,
                 bg: "rgba(245,166,35,0.12)",
                 title: "Early access",
                 body: "Partners get visibility into upcoming cohort graduates before they hit the general job market.",
               },
               {
-                icon: <Handshake className="w-5 h-5" style={{ color: "var(--tt-deep-teal)" }} />,
+                icon: <Handshake className="w-5 h-5 text-deep-teal" />,
                 bg: "rgba(47,111,126,0.12)",
                 title: "A growing network",
                 body: "As we scale, so does the pipeline. Cohort after cohort of certified, portfolio-ready Salesforce professionals.",
