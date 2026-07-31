@@ -137,7 +137,7 @@ export default function FoundationsTrail() {
               <motion.ul variants={stagger} className="space-y-4 font-['Open_Sans'] text-[15px] text-[#4A4F4D]">
                 <motion.li variants={fadeUp} className="flex gap-3 items-start"><Check className="w-5 h-5 text-[#2F6B3F] shrink-0 mt-0.5" /> <strong>Build WITH guidance:</strong> In Foundations Trail, Build With Me videos guide you through each build step — you develop both the practical skill and the exam confidence to pass.</motion.li>
                 <motion.li variants={fadeUp} className="flex gap-3 items-start"><Check className="w-5 h-5 text-[#2F6B3F] shrink-0 mt-0.5" /> <strong>End-to-end:</strong> From discovery documentation to security models, flows, and final dashboards.</motion.li>
-                <motion.li variants={fadeUp} className="flex gap-3 items-start"><Check className="w-5 h-5 text-[#2F6B3F] shrink-0 mt-0.5" /> <strong>Guided Trail uses the same capstone — independently:</strong> In Guided Trail, learners solve the same project with no step-by-step guidance. Guided Trail proves you can do the work on your own.</motion.li>
+                <motion.li variants={fadeUp} className="flex gap-3 items-start"><Check className="w-5 h-5 text-[#2F6B3F] shrink-0 mt-0.5" /> <strong>Guided Trail is a different skill entirely:</strong> In Guided Trail, you stop building from scratch and start inheriting somebody else's org — undocumented, deliberately seeded with configuration debt, and yours to figure out. That is what most first jobs actually look like.</motion.li>
               </motion.ul>
             </div>
 

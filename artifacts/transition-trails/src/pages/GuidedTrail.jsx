@@ -118,14 +118,14 @@ export default function GuidedTrail() {
           <div className="flex flex-col gap-6">
             <div className="bg-white border border-[#E2E4E1] rounded-xl p-8">
               <div className="font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] text-[#2F6B3F] mb-3">Layer 1</div>
-              <h4 className="font-['Poppins'] font-bold text-[20px] text-[#2A2E2C] mb-3">Structured Capstone Project</h4>
-              <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.7]">You work through a structured capstone project aligned to the Salesforce Certified Administrator exam domains — the same domains you studied for your certification. No Build With Me videos. No step-by-step guidance. You solve it independently, the way an admin would on the job. This is your proof that the basics are cold.</p>
+              <h4 className="font-['Poppins'] font-bold text-[20px] text-[#2A2E2C] mb-3">The Inherited Org</h4>
+              <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.7]">You receive a Salesforce org you did not build. It is seeded with configuration debt — real decisions somebody made years ago that nobody wrote down — and your first deliverable is a findings register: what you inherited, what you flagged, and what you deliberately chose to leave alone, with your reasoning for each. Most first jobs are not a blank org and a clear brief. They are an inherited system full of undocumented decisions. Guided Trail starts you there on purpose. Deciding what not to fix is as much of the skill as fixing things.</p>
             </div>
 
             <div className="bg-white border border-[#E2E4E1] rounded-xl p-8">
               <div className="font-['Open_Sans'] font-semibold text-[11px] uppercase tracking-[2px] text-[#2F6B3F] mb-3">Layer 2</div>
-              <h4 className="font-['Poppins'] font-bold text-[20px] text-[#2A2E2C] mb-3">Trail OS Live Org Projects</h4>
-              <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.7]">You work on real projects inside a live Salesforce org using the Trail OS platform and the RESOLVE methodology. Real requirements, real change management, real deployments. The kind of work that gives you something to walk a hiring manager through.</p>
+              <h4 className="font-['Poppins'] font-bold text-[20px] text-[#2A2E2C] mb-3">Release-gated Deployments</h4>
+              <p className="font-['Open_Sans'] text-[15px] text-[#4A4F4D] leading-[1.7]">You work on real requirements inside a live Salesforce org using the RESOLVE methodology. Every deployment starts with a release request — scoped work, dependency reasoning, and a rollback plan — reviewed by your coach before anything reaches production. You push by hand using change sets. There is no automated pipeline. That is deliberate: most nonprofit orgs run exactly this way, and doing it manually is how you learn what a pipeline is actually for. Automated pipelines come later, in Trail of Mastery.</p>
             </div>
 
             <div className="bg-white border border-[#E2E4E1] rounded-xl p-8">
@@ -150,7 +150,7 @@ export default function GuidedTrail() {
                 <div className="font-['Open_Sans'] font-semibold text-[12px] uppercase tracking-[2px] text-[#2F6B3F] mb-2">Weeks 1–4</div>
                 <h3 className="font-['Poppins'] font-bold text-[24px] text-[#2A2E2C] mb-3">Foundation</h3>
                 <p className="font-['Open_Sans'] text-[16px] text-[#4A4F4D] leading-[1.6]">
-                  Discovery call, org setup, data model design, and stakeholder mapping. We start by understanding exactly what the structured capstone project requires.
+                  You receive a Salesforce org you did not build and spend the first four weeks finding out what is actually in it — what works, what is broken, and what was done deliberately. Discovery, stakeholder mapping, and your first findings register.
                 </p>
               </div>
             </div>
@@ -216,8 +216,10 @@ export default function GuidedTrail() {
                 When you graduate, you don't just have a bullet point on your resume. You walk away with:
               </p>
               <ul className="space-y-4 font-['Open_Sans'] text-[15px] text-white/90">
-                <li className="flex gap-3 items-center"><Check className="w-5 h-5 text-[#2F6B3F] shrink-0" /> A Salesforce Developer Org with your completed capstone configuration</li>
-                <li className="flex gap-3 items-center"><Check className="w-5 h-5 text-[#2F6B3F] shrink-0" /> Trail OS project documentation from a live Salesforce org</li>
+                <li className="flex gap-3 items-center"><Check className="w-5 h-5 text-[#2F6B3F] shrink-0" /> A findings register on an org you inherited cold — what you found, what you flagged, and what you chose to leave alone</li>
+                <li className="flex gap-3 items-center"><Check className="w-5 h-5 text-[#2F6B3F] shrink-0" /> Peer test reports showing evidence of testing and of being tested</li>
+                <li className="flex gap-3 items-center"><Check className="w-5 h-5 text-[#2F6B3F] shrink-0" /> Release requests with dependency reasoning and rollback plans</li>
+                <li className="flex gap-3 items-center"><Check className="w-5 h-5 text-[#2F6B3F] shrink-0" /> Documentation from the org you worked in — what you found, what you changed, and why</li>
                 <li className="flex gap-3 items-center"><Check className="w-5 h-5 text-[#2F6B3F] shrink-0" /> A GitHub portfolio showcasing your metadata and decision log</li>
                 <li className="flex gap-3 items-center"><Check className="w-5 h-5 text-[#2F6B3F] shrink-0" /> A professional case study and Demo Day presentation</li>
                 <li className="flex gap-3 items-center"><Check className="w-5 h-5 text-[#2F6B3F] shrink-0" /> Digital Compass client work artifacts (where applicable)</li>
