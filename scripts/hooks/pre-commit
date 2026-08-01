@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# pre-commit hook — regenerate tokens.js when tokens.css is staged
+#
+# Install once:
+#   cp scripts/hooks/pre-commit .git/hooks/pre-commit
+#   chmod +x .git/hooks/pre-commit
+#
+# Or run the workspace prepare script which installs it automatically:
+#   pnpm install  (runs the "prepare" postinstall)
+#
+# What it does:
+#   If artifacts/transition-trails/src/styles/tokens.css is among the
+#   staged files, regenerates tokens.js from it and re-stages the result
+#   so the two files are always committed together.
+
+set -euo pipefail
+
+TOKENS_CSS="artifacts/transition-trails/src/styles/tokens.css"
+TOKENS_JS="artifacts/transition-trails/src/styles/tokens.js"
+GENERATOR="artifacts/transition-trails/src/styles/generate-tokens.js"
+
+# Check if tokens.css is staged (added, modified, renamed, or copied).
+if git diff --cached --name-only | grep -qF "$TOKENS_CSS"; then
+  echo "→ tokens.css is staged — regenerating tokens.js …"
+  node "$GENERATOR"
+  git add "$TOKENS_JS"
+  echo "✓ tokens.js regenerated and staged."
+fi
