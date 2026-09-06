@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { LINKS } from "../constants/links";
 import ttLogoWhite from "../assets/TT_Horizontal_White_600px.png";
 import siteContent from "../content/site.json";
+import { trackEvent } from "../lib/analytics";
 
 export function Footer() {
   return (
@@ -79,7 +80,20 @@ export function Footer() {
               <li><Link href="/volunteer" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Volunteer</Link></li>
               <li><Link href="/board" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Join Our Board</Link></li>
               <li><Link href="/contact" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Contact Us</Link></li>
-              <li><a href={LINKS.angelaCalendar} target="_blank" rel="noopener noreferrer" className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors">Schedule time with us</a></li>
+              <li>
+                <a
+                  href={LINKS.angelaCalendar}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackEvent("booking_calendar_opened", {
+                    location: "footer",
+                    provider: "google_calendar",
+                  })}
+                  className="font-['Open_Sans'] text-sm text-white/70 hover:text-white transition-colors"
+                >
+                  Schedule time with us
+                </a>
+              </li>
             </ul>
           </div>
         </div>

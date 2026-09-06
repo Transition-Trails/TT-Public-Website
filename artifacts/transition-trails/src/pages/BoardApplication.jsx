@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { trackEvent } from "../lib/analytics";
 import { PageMeta } from "../components/PageMeta";
 
 export default function BoardApplication() {
@@ -51,7 +52,18 @@ export default function BoardApplication() {
         <div className="max-w-[860px] mx-auto">
           <div className="max-w-2xl mx-auto text-center flex flex-col items-center gap-6 py-12">
             <p className="font-['Open_Sans'] text-[15px] text-cool-gray leading-relaxed">Share your background, experience, and interest in board service. A member of the TT team will be in touch within 5 business days.</p>
-            <a href="https://form.jotform.com/261884676222061" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-trail-green text-white font-['Open_Sans'] font-bold text-[15px] px-8 py-4 rounded-lg hover:bg-green-700 transition-colors duration-200">Submit Board Interest Form →</a>
+            <a
+              href="https://form.jotform.com/261884676222061"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackEvent("board_application_form_opened", {
+                location: "board_application_page",
+                provider: "jotform",
+              })}
+              className="inline-flex items-center gap-2 bg-trail-green text-white font-['Open_Sans'] font-bold text-[15px] px-8 py-4 rounded-lg hover:bg-green-700 transition-colors duration-200"
+            >
+              Submit Board Interest Form →
+            </a>
             <p className="font-['Open_Sans'] text-[12px] text-cool-gray italic">Questions? Email <a href="mailto:hello@transitiontrails.org" className="text-trail-green hover:underline">hello@transitiontrails.org</a></p>
           </div>
 

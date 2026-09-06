@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { trackEvent } from "../lib/analytics";
 import { motion } from "framer-motion";
 import { PageMeta } from "../components/PageMeta";
 
@@ -136,6 +137,10 @@ export default function Waitlist() {
             href="https://form.jotform.com/261684070494058"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackEvent("waitlist_form_opened", {
+              location: "waitlist_page",
+              provider: "jotform",
+            })}
             className="inline-flex items-center gap-2 bg-trail-green text-white font-['Open_Sans'] font-bold text-[15px] px-8 py-4 rounded-lg hover:bg-green-700 transition-colors duration-200"
           >
             Join the Waitlist →

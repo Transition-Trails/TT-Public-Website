@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FaLinkedin, FaFacebook } from "react-icons/fa";
 import { GraduationCap, Building2, Briefcase, MessageCircle } from "lucide-react";
 import { CTAButton } from "../components/CTAButton";
+import { trackEvent } from "../lib/analytics";
 import { PageMeta } from "../components/PageMeta";
 import { LINKS } from "../constants/links";
 
@@ -89,6 +90,10 @@ export default function Contact() {
                     href="https://form.jotform.com/261877821935066"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => trackEvent("contact_form_opened", {
+                      location: "contact_page",
+                      provider: "jotform",
+                    })}
                     className="inline-flex items-center gap-2 bg-trail-green text-white font-['Open_Sans'] font-bold text-[15px] px-8 py-4 rounded-lg hover:bg-green-700 transition-colors duration-200"
                   >
                     Send Us a Message →
@@ -105,7 +110,14 @@ export default function Contact() {
                   AL
                 </div>
                 <h3 className="font-['Poppins'] font-bold text-[18px] text-charcoal mb-6">Let's talk strategy.</h3>
-                <CTAButton href={LINKS.angelaCalendar} variant="amber" className="w-full" external>
+                <CTAButton
+                  href={LINKS.angelaCalendar}
+                  variant="amber"
+                  className="w-full"
+                  external
+                  analyticsEvent="booking_calendar_opened"
+                  analyticsData={{ location: "contact_page", provider: "google_calendar" }}
+                >
                   Schedule Time With Angela
                 </CTAButton>
               </motion.div>

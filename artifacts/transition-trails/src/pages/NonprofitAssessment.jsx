@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { PageMeta } from "../components/PageMeta";
 import { Check } from "lucide-react";
+import { trackEvent } from "../lib/analytics";
 
 export default function NonprofitAssessment() {
 
@@ -58,7 +59,19 @@ export default function NonprofitAssessment() {
         <div className="max-w-[860px] mx-auto">
           <div className="max-w-2xl mx-auto text-center flex flex-col items-center gap-6 py-12">
             <p className="font-['Open_Sans'] text-[15px] text-cool-gray leading-relaxed">Tell us about your organization and your current Salesforce situation. A member of the TT team will be in touch within 2 business days to schedule your free session.</p>
-            <a href="https://form.jotform.com/261683366693066" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-trail-green text-white font-['Open_Sans'] font-bold text-[15px] px-8 py-4 rounded-lg hover:bg-green-700 transition-colors duration-200">Book Your Free Assessment →</a>
+            <a
+              href="https://form.jotform.com/261683366693066"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackEvent("assessment_form_opened", {
+                assessment: "digital_compass",
+                location: "assessment_page",
+                provider: "jotform",
+              })}
+              className="inline-flex items-center gap-2 bg-trail-green text-white font-['Open_Sans'] font-bold text-[15px] px-8 py-4 rounded-lg hover:bg-green-700 transition-colors duration-200"
+            >
+              Book Your Free Assessment →
+            </a>
             <p className="font-['Open_Sans'] text-[12px] text-cool-gray italic">Free — no cost, no commitment. Up to 1 hour with a real expert.</p>
           </div>
 

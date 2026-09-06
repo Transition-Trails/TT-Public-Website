@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { trackEvent } from "../lib/analytics";
 
 export function CTAButton({
   href,
@@ -7,6 +8,9 @@ export function CTAButton({
   size = "md",
   external = false,
   className = "",
+  analyticsEvent,
+  analyticsData,
+  onClick,
   ...props
 }) {
   const baseClasses = "inline-flex items-center justify-center font-['Open_Sans'] font-semibold transition-colors duration-150";
@@ -28,6 +32,12 @@ export function CTAButton({
   const classes = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${className}`;
 
   const isExternal = external || href.startsWith("http");
+  const handleClick = (event) => {
+    if (analyticsEvent) {
+      trackEvent(analyticsEvent, analyticsData);
+    }
+    onClick?.(event);
+  };
 
   if (isExternal) {
     return (
@@ -36,6 +46,7 @@ export function CTAButton({
         className={classes}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={handleClick}
         {...props}
       >
         {children}
@@ -44,7 +55,7 @@ export function CTAButton({
   }
 
   return (
-    <Link href={href} className={classes} {...props}>
+    <Link href={href} className={classes} onClick={handleClick} {...props}>
       {children}
     </Link>
   );

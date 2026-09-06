@@ -57,6 +57,12 @@ export function ProgramCard({ program, height = "standard" }) {
           variant={program.ctaAmber ? "amber" : "dark"}
           className={!program.ctaAmber ? "!bg-trail-green hover:!bg-green-700 !text-white rounded-md whitespace-nowrap w-full" : "rounded-md whitespace-nowrap w-full"}
           external={program.ctaHref.startsWith("http")}
+          analyticsEvent="program_cta_selected"
+          analyticsData={{
+            program: program.id ?? program.slug ?? program.name,
+            destination: program.ctaHref.startsWith("http") ? "external" : "internal",
+            location: "program_card",
+          }}
         >
           {program.cta}
         </CTAButton>
