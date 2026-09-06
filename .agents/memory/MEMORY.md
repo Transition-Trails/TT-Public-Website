@@ -1,1 +1,2 @@
 - [Transition Trails pre-existing typecheck errors](transition-trails-typecheck.md) — TS7016 on every .jsx import in App.tsx is repo-wide/pre-existing, not caused by your edits.
+- [Artifact startup health logs](artifact-startup-health-logs.md) — transient /api 500s and SIGTERM lines can be normal during publish; verify the configured health route and live URL.
