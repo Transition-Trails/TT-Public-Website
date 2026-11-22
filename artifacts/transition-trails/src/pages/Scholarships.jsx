@@ -1,5 +1,4 @@
 import { Link } from "wouter";
-import { CTAButton } from "../components/CTAButton";
 import { LINKS } from "../constants/links";
 import { PageMeta } from "../components/PageMeta";
 import { Award, Globe, Rocket } from "lucide-react";

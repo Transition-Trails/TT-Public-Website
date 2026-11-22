@@ -1,6 +1,5 @@
 import { Link } from "wouter";
 import { CTAButton } from "../components/CTAButton";
-import { LINKS } from "../constants/links";
 import { PageMeta } from "../components/PageMeta";
 import { Users, Target, BookOpen, MessageCircle, Mic, Zap, Gift, UserCheck, Compass, ClipboardList, Award, Briefcase, Star, TrendingUp, Calendar, Check, X } from "lucide-react";
 

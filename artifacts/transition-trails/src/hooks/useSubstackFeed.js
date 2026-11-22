@@ -143,7 +143,7 @@ export function useSubstackFeed() {
             // Stale but within max age — continue to revalidate in background
           }
         }
-      } catch (_e) {
+      } catch {
         // sessionStorage unavailable (private browsing, storage quota) — fall through to fetch
       }
 
@@ -163,7 +163,7 @@ export function useSubstackFeed() {
             posts: mapped,
             timestamp: Date.now(),
           }));
-        } catch (_e) {
+        } catch {
           // sessionStorage full or unavailable — continue without caching
         }
       } catch (err) {

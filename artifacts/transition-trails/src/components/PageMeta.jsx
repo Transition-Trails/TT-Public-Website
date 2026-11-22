@@ -24,6 +24,9 @@ function upsertLink(rel, href) {
   el.setAttribute("href", href);
 }
 
+/**
+ * @param {{ title: string, description: string, path?: string, robots?: string }} props
+ */
 export function PageMeta({ title, description, path = "/", robots }) {
   const canonicalUrl = `${DOMAIN}${path}`;
 
