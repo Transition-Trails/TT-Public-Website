@@ -1,7 +1,6 @@
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { PageMeta } from "../components/PageMeta";
-import { LINKS } from "../constants/links";
 import { Search, Settings, Wrench, Building2, Briefcase, Rocket, Check } from "lucide-react";
 
 const SERVICES = [

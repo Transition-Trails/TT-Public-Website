@@ -1,4 +1,7 @@
 import js from "@eslint/js";
+import tsParser from "@typescript-eslint/parser";
+import tsPlugin from "@typescript-eslint/eslint-plugin";
+import globals from "globals";
 import reactPlugin from "eslint-plugin-react";
 import reactHooksPlugin from "eslint-plugin-react-hooks";
 import jsxA11yPlugin from "eslint-plugin-jsx-a11y";
@@ -7,6 +10,9 @@ export default [
   js.configs.recommended,
   {
     files: ["src/**/*.{js,jsx,ts,tsx}"],
+    languageOptions: {
+      parserOptions: { ecmaFeatures: { jsx: true } },
+    },
     plugins: {
       react: reactPlugin,
       "react-hooks": reactHooksPlugin,
@@ -16,6 +22,7 @@ export default [
       // React
       "react/jsx-no-target-blank": ["error", { allowReferrer: false }],
       "react/react-in-jsx-scope": "off",
+      "react/jsx-uses-vars": "error",
 
       // React Hooks
       "react-hooks/rules-of-hooks": "error",
@@ -35,6 +42,26 @@ export default [
       react: {
         version: "detect",
       },
+    },
+  },
+  {
+    files: ["src/**/*.{js,jsx,ts,tsx}"],
+    ignores: ["src/styles/*.js"],
+    languageOptions: { globals: globals.browser },
+  },
+  {
+    files: ["src/styles/*.js"],
+    languageOptions: { globals: globals.node },
+  },
+  {
+    files: ["src/**/*.{ts,tsx}"],
+    languageOptions: { parser: tsParser },
+    plugins: { "@typescript-eslint": tsPlugin },
+    rules: {
+      // TypeScript resolves identifiers and understands type-only references.
+      "no-undef": "off",
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": "error",
     },
   },
 ];

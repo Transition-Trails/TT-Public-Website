@@ -6,7 +6,6 @@ import { CTAButton } from "../components/CTAButton";
 import { ProgramCard } from "../components/ProgramCard";
 import { PROGRAMS } from "../constants/programs";
 import { FOUNDERS } from "../constants/founders";
-import { LINKS } from "../constants/links";
 import siteContent from "../content/site.json";
 import homeContent from "../content/pages/home.json";
 import testimonialContent from "../content/testimonials.json";

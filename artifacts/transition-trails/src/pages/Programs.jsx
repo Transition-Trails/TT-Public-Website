@@ -2,10 +2,9 @@ import { Link } from "wouter";
 import { PROGRAMS } from "../constants/programs";
 import { ProgramCard } from "../components/ProgramCard";
 import { CTAButton } from "../components/CTAButton";
-import { LINKS } from "../constants/links";
 import { motion } from "framer-motion";
 import { PageMeta } from "../components/PageMeta";
-import { ArrowRight, User, TrendingUp, Compass, Award } from "lucide-react";
+import { User, TrendingUp, Compass, Award } from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },

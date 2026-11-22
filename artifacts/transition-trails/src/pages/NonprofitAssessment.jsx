@@ -1,4 +1,3 @@
-import { Link } from "wouter";
 import { PageMeta } from "../components/PageMeta";
 import { Check } from "lucide-react";
 import { trackEvent } from "../lib/analytics";

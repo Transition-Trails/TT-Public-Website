@@ -1,4 +1,3 @@
-import { Link } from "wouter";
 import { PageMeta } from "../components/PageMeta";
 import { Target, Users, BarChart2, Award, Leaf } from "lucide-react";
 

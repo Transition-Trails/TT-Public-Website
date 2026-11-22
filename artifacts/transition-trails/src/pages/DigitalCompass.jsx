@@ -1,8 +1,7 @@
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { PageMeta } from "../components/PageMeta";
-import { LINKS } from "../constants/links";
-import { Calendar, BookOpen, Users, Lightbulb, TrendingUp, Rocket, ClipboardList, Zap, Check, X } from "lucide-react";
+import { Calendar, BookOpen, Users, Lightbulb, TrendingUp, Rocket, ClipboardList, Zap, Check } from "lucide-react";
 import testimonialContent from "../content/testimonials.json";
 
 const UNIVERSAL_BENEFITS = [
@@ -79,9 +78,6 @@ const ASSESSMENT_COVERS = [
 
 function CheckMark() {
   return <Check size={16} className="text-trail-green shrink-0 mt-0.5" />;
-}
-function CrossMark() {
-  return <X size={16} className="text-muted-text shrink-0 mt-0.5" />;
 }
 
 export default function DigitalCompass() {
